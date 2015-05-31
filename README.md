@@ -6,9 +6,11 @@ Authors:
 - Francesca Frontini, Istituto di Linguistica Computazionale A. Zampolli, CNR Pisa
 
 Publications:
+
 Frontini F, Brando C, Ganascia J-G, (2015) Semantic Web based Named Entity Linking for digital humanities and heritage texts, in Proceedings of the First International Workshop Semantic Web for Scientific Heritage
 at the 12th ESWC 2015 Conference, Portorož, Slovenia, June 1st, 2015
 
 Related URLs:
+
 http://obvil.paris-sorbonne.fr/
 
