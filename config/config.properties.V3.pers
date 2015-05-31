@@ -1,0 +1,22 @@
+namedEntityTag= persName
+NERclassName = PER
+baseURIs= http://data.bnf.fr/ark:/12148/, http://dbpedia.org/resource/
+#http://data.bnf.fr/ark:/12148/, http://dbpedia.org/resource/
+#http://data.bnf.fr/ark:/12148/
+#http://dbpedia.org/resource/
+avoidPredicatesBaseURI=
+centralityMeasure=DegreeCentrality
+# BrandesBetweennessCentrality, FreemanClosenessCentrality, DegreeCentrality
+useDicoIndex=true
+indexDir=dico/PER/indexedDictionary
+preferedURIOrder=ALL
+#idref, bnf, dbpedia, ALL (only for evaluation purposes)
+useGlobalCentrality=false
+nameMainFolderDico= dico/PER/dictionary
+rdfData=rdfRawData
+addExplicitInfo=true
+propertyTagRef=ref_auto
+xpathExpresion=//body
+#//body//head|//body//item|//body//l|//body//p -- per (per p) 
+#//body/div -- per div
+#//body -- per body

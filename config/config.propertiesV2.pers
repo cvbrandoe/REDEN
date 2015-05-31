@@ -1,0 +1,21 @@
+#teiFileName = thibaudet_reflexions6.xml
+namedEntityTag= persName
+NERclassName = PER
+baseURIs= http://data.bnf.fr/ark:/12148/, http://dbpedia.org/resource/
+#http://data.bnf.fr/ark:/12148/, http://dbpedia.org/resource/
+#http://data.bnf.fr/ark:/12148/
+#http://dbpedia.org/resource/
+avoidPredicatesBaseURI= http://www.w3.org/2002/07/owl#sameAs, http://dbpedia.org/ontology/wikiPageRedirects
+centralityMeasure=DegreeCentrality
+# BrandesBetweennessCentrality, FreemanClosenessCentrality, DegreeCentrality
+useDicoIndex=true
+indexDir=indexedDictionary
+preferedURIOrder=ALL
+#idref, bnf, dbpedia, ALL (only for evaluation purposes)
+useGlobalCentrality=false
+nameMainFolderDico= dictionary
+rdfData=data
+xpathExpresion= //body//p|//body//item|//body//l
+#//body//p|//body//item|//body//l -- per (per p) 
+#//body//div -- per div
+#//body -- per body
