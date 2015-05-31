@@ -1,6 +1,8 @@
 # REDEN
 Graph-based tool for disambiguation and linking of named entities to Linked Data sets for Digital Humanities and heritage texts.
 
+Java binaries will soon be available!
+
 Authors: 
 - Carmen Brando, Labex OBVIL - Laboratoire d’informatique de Paris 6 - Université Pierre et Marie Curie, Paris
 - Francesca Frontini, Istituto di Linguistica Computazionale A. Zampolli, CNR Pisa
