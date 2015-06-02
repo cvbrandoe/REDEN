@@ -10,7 +10,7 @@ Authors:
 Cite:
 
 Frontini F, Brando C, Ganascia J-G, (2015) Semantic Web based Named Entity Linking for digital humanities and heritage texts, in Proceedings of the First International Workshop Semantic Web for Scientific Heritage
-at the 12th ESWC 2015 Conference, Portorož, Slovenia, June 1st, 2015, URL: http://ceur-ws.org/Vol-1364/paper9.pdf
+at the 12th ESWC 2015 Conference, Portorož, Slovenia, June 1st, 2015, pp. 77-88, URL: http://ceur-ws.org/Vol-1364/paper9.pdf
 
 Related URLs:
 
