@@ -1,0 +1,61 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb370858890#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13341841z>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb13341841z> ;
+        bnf-onto:FRBNF   13341841 ;
+        skos:exactMatch  <http://viaf.org/viaf/41988912> , <http://www.idref.fr/05758995X> ;
+        skos:prefLabel   "Bernard Faguet"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb369986099#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/05758995X> , <http://viaf.org/viaf/41988912> ;
+        foaf:familyName  "Faguet" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Bernard" ;
+        foaf:name        "Bernard Faguet" ;
+        foaf:page        <http://data.bnf.fr/13341841/bernard_faguet/> .
+
+<http://data.bnf.fr/ark:/12148/cb399158103#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40926401b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366992882#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40217664m#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13341841z#foaf:Person> .

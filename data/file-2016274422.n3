@@ -1,0 +1,75 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb40032300d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb144570511>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb144570511> ;
+        bnf-onto:FRBNF   14457051 ;
+        skos:exactMatch  <http://www.idref.fr/076430650> , <http://viaf.org/viaf/231015987> ;
+        skos:note        "Médecin dermatologue. - En poste à l'INSERM U 503, Lyon (en 2003)"@fr ;
+        skos:prefLabel   "Frédéric Bérard"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390292133#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39109492j#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39233812h#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1964 ;
+        rdagroup2elements:biographicalInformation
+                "Médecin dermatologue. - En poste à l'INSERM U 503, Lyon (en 2003)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/231015987> , <http://www.idref.fr/076430650> ;
+        foaf:familyName     "Bérard" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Frédéric" ;
+        foaf:name           "Frédéric Bérard" ;
+        foaf:page           <http://data.bnf.fr/14457051/frederic_berard/> .
+
+<http://data.bnf.fr/ark:/12148/cb38926486j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39201494g#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39990834j#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399494724#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144570511#foaf:Person> .

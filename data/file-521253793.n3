@@ -1,0 +1,62 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Mathématicien. - En poste à la Vrije universiteit, Amsterdam, Pays-Bas (en 1992)" , "Écrit aussi en anglais" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ne#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/dut> ;
+        owl:sameAs       <http://www.idref.fr/031628982> , <http://viaf.org/viaf/61607664> ;
+        foaf:familyName  "Mill" ;
+        foaf:givenName   "Jan Van" ;
+        foaf:name        "Jan Van Mill" ;
+        foaf:page        <http://data.bnf.fr/12280774/jan_van_mill/> .
+
+<http://data.bnf.fr/ark:/12148/cb373589338#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37444890t#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12280774x>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12280774x> ;
+        bnf-onto:FRBNF        12280774 ;
+        isni:identifierValid  "0000000114458520" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114458520> ;
+        skos:editorialNote    "Recent progress in general topology / ed. Jan Van Mill [et al], 1992. - . - LCNA, 1993-03. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000114458520> , <http://viaf.org/viaf/61607664> , <http://www.idref.fr/031628982> ;
+        skos:note             "Mathématicien. - En poste à la Vrije universiteit, Amsterdam, Pays-Bas (en 1992)"@fr , "Écrit aussi en anglais"@fr ;
+        skos:prefLabel        "Jan Van Mill"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37385682j#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38940198p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373586908#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12280774x#foaf:Person> .

@@ -1,0 +1,52 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12357012p#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1937 ;
+        rdagroup2elements:biographicalInformation
+                "Dessinateur, graveur, sculpteur. - Professeur à l'Académie royale des arts visuels de La Haye (1972-1986) puis professeur à l'Académie nationale des arts d'Amsterdam (1986-1996)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ne#> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Art" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/700/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/dut> ;
+        owl:sameAs          <http://viaf.org/viaf/149945272> , <http://www.idref.fr/075555719> ;
+        foaf:familyName     "Vries" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Auke de" ;
+        foaf:name           "Auke de Vries" ;
+        foaf:page           <http://data.bnf.fr/12357012/auke_de_vries/> .
+
+<http://data.bnf.fr/ark:/12148/cb12357012p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12357012p> ;
+        bnf-onto:FRBNF        12357012 ;
+        isni:identifierValid  "0000000100761975" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000100761975> ;
+        skos:altLabel         "Auke De Vries"@fr ;
+        skos:editorialNote    "Auke de Vries : Paris, sculptures et grands projets : [exposition, Paris, Institut néerlandais, 15 mai-23 juin 2002] / [catalogue par Hans Locher, Henk Pröpper et Auke de Vries], cop. 2002. - . - Bénézit, 1999. - . -"@fr , "Auke de Vries : [sculptuur] = [skulptur], Museum Het paleis, Den Haag, [20 december 1997-22 februari 1998], Museum Wiesbaden, [26 april-2 augustus 1998] / [tentoonstelling en catalogus, Franz Kaiser, Auke de Vries, in Wiesbaden, Renate Petzinger], [1998]. - . - Auke de Vries, beelden, sculptures, skulpturen 1980-1987 / Ed. Cor Blok, 1988. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000100761975> , <http://viaf.org/viaf/149945272> , <http://www.idref.fr/075555719> ;
+        skos:note             "Dessinateur, graveur, sculpteur. - Professeur à l'Académie royale des arts visuels de La Haye (1972-1986) puis professeur à l'Académie nationale des arts d'Amsterdam (1986-1996)"@fr ;
+        skos:prefLabel        "Auke de Vries"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12357012p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39046413b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12357012p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12357012p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12357012p#foaf:Person> .
+
+<http://data.bnf.fr/12357012/auke_de_vries/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12357012p#foaf:Person> .

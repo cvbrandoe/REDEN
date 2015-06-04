@@ -1,0 +1,82 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb366896539#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34596491b#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1926 ;
+        rdagroup2elements:biographicalInformation
+                "Psychopédagogue. - Spécialiste de la psychologie enfantine en milieu scolaire" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/030291968> , <http://viaf.org/viaf/64048254> ;
+        foaf:familyName     "Gilbert" ;
+        foaf:givenName      "Roger" ;
+        foaf:name           "Roger Gilbert" ;
+        foaf:page           <http://data.bnf.fr/12173893/roger_gilbert/> .
+
+<http://data.bnf.fr/ark:/12148/cb351393612#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351865430#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12173893t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12173893t> ;
+        bnf-onto:FRBNF        12173893 ;
+        isni:identifierValid  "0000000063058948" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000063058948> ;
+        skos:exactMatch       <http://viaf.org/viaf/64048254> , <http://www.idref.fr/030291968> , <http://isni-url.oclc.nl/isni/0000000063058948> ;
+        skos:note             "Psychopédagogue. - Spécialiste de la psychologie enfantine en milieu scolaire"@fr ;
+        skos:prefLabel        "Roger Gilbert"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43449721g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35373142z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345509218#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35378399p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35186542n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12173893t#foaf:Person> .

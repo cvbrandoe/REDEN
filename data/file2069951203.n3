@@ -1,0 +1,64 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb40049553f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb150054125>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb150054125> ;
+        bnf-onto:FRBNF   15005412 ;
+        skos:altLabel    "Lee Yong Gyu"@fr , "Yeong-Kyoo Li"@fr , "Yōñ-Kyu I"@fr , "Yeung-Gyu Yi"@fr ;
+        skos:exactMatch  <http://viaf.org/viaf/5205533> ;
+        skos:note        "Auteur de manhwa"@fr ;
+        skos:prefLabel   "Yong-Gyu Lee"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401244782#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39999882k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401367657#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Auteur de manhwa" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/kor> ;
+        owl:sameAs       <http://viaf.org/viaf/5205533> ;
+        foaf:familyName  "Lee" ;
+        foaf:givenName   "Yong-Gyu" ;
+        foaf:name        "Yong-Gyu Lee" ;
+        foaf:page        <http://data.bnf.fr/15005412/yong-gyu_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb40037520s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40126500w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150054125#foaf:Person> .

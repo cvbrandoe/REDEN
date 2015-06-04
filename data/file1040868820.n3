@@ -1,0 +1,83 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb436306006#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43630581r#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361609065#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121947053>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb121947053> ;
+        bnf-onto:FRBNF        12194705 ;
+        isni:identifierValid  "0000000107886543" ;
+        owl:sameAs            <http://isni.org/isni/0000000107886543> ;
+        skos:exactMatch       <http://www.idref.fr/030554810> , <http://viaf.org/viaf/121854752> , <http://isni.org/isni/0000000107886543> ;
+        skos:note             "Conservateur au Musée de Bretagne, Rennes (en 1996). - Directeur des Musées de Cholet (en 2010)"@fr ;
+        skos:prefLabel        "Éric Morin (conservateur de musée)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37165536b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370718007#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37077686p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1961 ;
+        rdagroup2elements:biographicalInformation
+                "Conservateur au Musée de Bretagne, Rennes (en 1996). - Directeur des Musées de Cholet (en 2010)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/121854752> , <http://www.idref.fr/030554810> ;
+        foaf:familyName     "Morin" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Éric" ;
+        foaf:name           "Éric Morin" ;
+        foaf:page           <http://data.bnf.fr/12194705/eric_morin/> .
+
+<http://data.bnf.fr/ark:/12148/cb35150529c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43630602w#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43630601j#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121947053#foaf:Person> .

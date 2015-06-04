@@ -1,0 +1,78 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb36496248r#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33796716m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30436215q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33785128h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10700999r>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb10700999r> ;
+        bnf-onto:FRBNF      10700999 ;
+        skos:altLabel       "Charles (évêque du Mans, 1817-1874)"@fr , "Charles Jean Fillion (1817-1874)"@fr , "Charles (évêque de Saint-Claude, 1817-1874)"@fr ;
+        skos:editorialNote  "Érection d'un monument funèbre sur le plateau d'Auvours / [signé, Charles, évêque du Mans], 1872. - . - DBF : FILLION (Charles-Jean). - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/36909466> ;
+        skos:note           "Évêque de Saint-Claude (1858-1862), puis du Mans. - Prêtre du Diocèse du Mans (1840-1858), chanoine honoraire (1845)"@fr ;
+        skos:prefLabel      "Charles Fillion (1817-1874)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb337851484#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304362162#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1817 ;
+        bnf-onto:lastYear               1874 ;
+        rdagroup2elements:biographicalInformation
+                "Évêque de Saint-Claude (1858-1862), puis du Mans. - Prêtre du Diocèse du Mans (1840-1858), chanoine honoraire (1845)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1817/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1874/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Saint-Denis-d'Anjou (Mayenne)" ;
+        bio:birth                       "1817-05-01" ;
+        bio:death                       "1874-07-28" ;
+        owl:sameAs                      <http://viaf.org/viaf/36909466> ;
+        foaf:birthday                   "05-01" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6353282s.thumbnail> ;
+        foaf:familyName                 "Fillion" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Charles" ;
+        foaf:name                       "Charles Fillion" ;
+        foaf:page                       <http://data.bnf.fr/10700999/charles_fillion/> .
+
+<http://data.bnf.fr/10700999/charles_fillion/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb10700999r#foaf:Person> .

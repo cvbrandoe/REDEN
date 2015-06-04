@@ -1,0 +1,62 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12400491c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12400491c> ;
+        bnf-onto:FRBNF        12400491 ;
+        isni:identifierValid  "0000000114658303" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114658303> ;
+        skos:editorialNote    "BLNA, 1999-12. - . - Bibliogr. GB (CD), 2000-06. - . - LC online cat. (http://lcweb.loc.gov), 2000-10-03. - . -"@fr , "Marine technology reference book / ed. by Nina Morgan, 1990. - . - La chimie / Nina Morgan ; [trad. de l'anglais par Rémi Losno et Laurent Gomes], 1996. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000114658303> , <http://viaf.org/viaf/95770> , <http://www.idref.fr/033104719> ;
+        skos:note             "Journaliste scientifique. - Membre de l'ABSW, Association of British science writers"@fr ;
+        skos:prefLabel        "Nina Morgan"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35830474q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste scientifique. - Membre de l'ABSW, Association of British science writers" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://viaf.org/viaf/95770> , <http://www.idref.fr/033104719> ;
+        foaf:familyName  "Morgan" ;
+        foaf:givenName   "Nina" ;
+        foaf:name        "Nina Morgan" ;
+        foaf:page        <http://data.bnf.fr/12400491/nina_morgan/> .
+
+<http://data.bnf.fr/ark:/12148/cb356035304#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43462052j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37426733s#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb371826903#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12400491c#foaf:Person> .

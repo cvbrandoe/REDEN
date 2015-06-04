@@ -1,0 +1,67 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34741398k#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347409818#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Traduit du français en allemand" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        owl:sameAs       <http://www.idref.fr/02714836X> , <http://viaf.org/viaf/93945188> ;
+        foaf:familyName  "Stendhal" ;
+        foaf:givenName   "Renata" ;
+        foaf:name        "Renata Stendhal" ;
+        foaf:page        <http://data.bnf.fr/11925505/renata_stendhal/> .
+
+<http://data.bnf.fr/ark:/12148/cb11925505k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11925505k> ;
+        bnf-onto:FRBNF        11925505 ;
+        isni:identifierValid  "000000011452214X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000011452214X> ;
+        skos:altLabel         "Renate Stendhal"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000011452214X> , <http://www.idref.fr/02714836X> , <http://viaf.org/viaf/93945188> ;
+        skos:note             "Traduit du français en allemand"@fr ;
+        skos:prefLabel        "Renata Stendhal"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34650829x#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34603258j#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346223209#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37515130t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347173732#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925505k#foaf:Person> .

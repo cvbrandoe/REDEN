@@ -1,0 +1,38 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb124782095>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb124782095> ;
+        bnf-onto:FRBNF  12478209 ;
+        skos:note       "Prêtre français"@fr ;
+        skos:prefLabel  "Jean Jourdain (1913-1962)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb124782095#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124782095#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1913 ;
+        bnf-onto:lastYear              1962 ;
+        rdagroup2elements:biographicalInformation
+                "Prêtre français" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1913/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1962/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1913" ;
+        bio:death                      "1962" ;
+        foaf:familyName                "Jourdain" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Jourdain" ;
+        foaf:page                      <http://data.bnf.fr/12478209/jean_jourdain/> .
+
+<http://data.bnf.fr/12478209/jean_jourdain/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb124782095#foaf:Person> .

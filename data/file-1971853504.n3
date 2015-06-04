@@ -1,0 +1,47 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb11947863g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11947863g> , <http://fr.wikipedia.org/wiki/Agnès_Sorel> ;
+        bnf-onto:FRBNF        11947863 ;
+        isni:identifierValid  "0000000118780162" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000118780162> ;
+        skos:editorialNote    "BnF, département des Manuscrits, Français 717 (date : 1448). - . - Agnès Sorel : la première favorite / Françoise Kermina, 2005. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/027436977> , <http://isni-url.oclc.nl/isni/0000000118780162> , <http://fr.wikipedia.org/wiki/Agnès_Sorel> , <http://dbpedia.org/resource/Agnès_Sorel> , <http://viaf.org/viaf/74786876> ;
+        skos:note             "Favorite de Charles VII"@fr ;
+        skos:prefLabel        "Agnès Sorel (1422?-1450)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11947863g#foaf:Person> .
+
+<http://data.bnf.fr/11947863/agnes_sorel/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11947863g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11947863g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1422 ;
+        bnf-onto:lastYear              1450 ;
+        rdagroup2elements:biographicalInformation
+                "Favorite de Charles VII" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1422/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1450/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/frm> ;
+        bio:birth                      "1422" ;
+        bio:death                      "1450" ;
+        owl:sameAs                     <http://www.idref.fr/027436977> , <http://viaf.org/viaf/74786876> , <http://dbpedia.org/resource/Agnès_Sorel> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b6905063x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b77413461.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/AgnesSorel4.jpg?width=300> , <http://gallica.bnf.fr/ark:/12148/btv1b8400167k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69050613.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k6518629q.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69081421.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6905062h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908143f.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k5788371g.thumbnail> ;
+        foaf:familyName                "Sorel" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Agnès" ;
+        foaf:name                      "Agnès Sorel" ;
+        foaf:page                      <http://data.bnf.fr/11947863/agnes_sorel/> .

@@ -1,0 +1,72 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Imprimeur et marchand de cartes" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "16.." ;
+        bio:death                      "17.." ;
+        owl:sameAs                     <http://viaf.org/viaf/17523710> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b5966716f.thumbnail> ;
+        foaf:familyName                "Foster" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "George" ;
+        foaf:name                      "George Foster" ;
+        foaf:page                      <http://data.bnf.fr/15135673/george_foster/> .
+
+<http://data.bnf.fr/ark:/12148/cb410545914#frbr:Expression>
+        bnfroles:r3290       <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb405964284#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40615300r#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> ;
+        bnfroles:r3300       <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb406119202#frbr:Expression>
+        bnfroles:r3300       <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb405911043#frbr:Expression>
+        bnfroles:r3300       <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41090470r#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15135673q>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb15135673q> ;
+        bnf-onto:FRBNF   15135673 ;
+        skos:exactMatch  <http://viaf.org/viaf/17523710> ;
+        skos:note        "Imprimeur et marchand de cartes"@fr ;
+        skos:prefLabel   "George Foster (16..-17..)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb15135673q#foaf:Person> .

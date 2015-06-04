@@ -1,0 +1,115 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/13009971/louis-auguste_boileau/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30120372n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36392558r#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13009971r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13009971r> ;
+        bnf-onto:FRBNF        13009971 ;
+        isni:identifierValid  "0000000066514865" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000066514865> ;
+        skos:editorialNote    "Les Préludes de l'architecture du XXe siècle, et l'Exposition du centenaire, étude appliquée au projet du monument des Tuileries / par L.-A. Boileau. Suivi d'un mémoire de M. Gaston Chaumelin sur l'avènement de l'âge du fer, d'après l'″Histoire critique de l'invention en architecture″ de M. Boileau, 1889. - . - DBF. - . -"@fr , "La querelle du fer : Eugène Viollet-le-Duc contre Louis Auguste Boileau / présentation de Bernard Marrey, 2002. - . - BN cat. gén. : Boileau (Louis-Auguste). - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000066514865> , <http://www.idref.fr/085824283> , <http://viaf.org/viaf/27200205> ;
+        skos:note             "Entrepreneur de menuiserie. - Architecte de l'église de Mattaincourt, Vosges et de l'église Saint-Eugène à Paris"@fr ;
+        skos:prefLabel        "Louis-Auguste Boileau (1812-1896)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1812 ;
+        bnf-onto:lastYear               1896 ;
+        rdagroup2elements:biographicalInformation
+                "Entrepreneur de menuiserie. - Architecte de l'église de Mattaincourt, Vosges et de l'église Saint-Eugène à Paris" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1812/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1896/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        bio:birth                       "1812-03-24" ;
+        bio:death                       "1896-02-14" ;
+        owl:sameAs                      <http://viaf.org/viaf/27200205> , <http://www.idref.fr/085824283> ;
+        foaf:birthday                   "03-24" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k5783468s.thumbnail> ;
+        foaf:familyName                 "Boileau" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Louis-Auguste" ;
+        foaf:name                       "Louis-Auguste Boileau" ;
+        foaf:page                       <http://data.bnf.fr/13009971/louis-auguste_boileau/> .
+
+<http://data.bnf.fr/ark:/12148/cb41626265n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301203761#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30120370z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40403909g#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301203719#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301203730#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30120369r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30120374b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30120375p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30120368d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38936392d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13009971r#foaf:Person> .

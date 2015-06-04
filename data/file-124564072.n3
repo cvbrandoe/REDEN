@@ -1,0 +1,61 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb366522291#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Titulaire d'un doctorat d'État. - Psychiatre et expert-conseil (en 1991)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://www.idref.fr/030927080> , <http://viaf.org/viaf/12359896> ;
+        foaf:familyName  "Bernstein" ;
+        foaf:givenName   "Albert J." ;
+        foaf:name        "Albert J. Bernstein" ;
+        foaf:page        <http://data.bnf.fr/12224524/albert_j__bernstein/> .
+
+<http://data.bnf.fr/ark:/12148/cb41145910m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36660661b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35572249r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12224524j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12224524j> ;
+        bnf-onto:FRBNF        12224524 ;
+        isni:identifierValid  "0000000080914048" ;
+        owl:sameAs            <http://isni.org/isni/0000000080914048> ;
+        skos:exactMatch       <http://viaf.org/viaf/12359896> , <http://www.idref.fr/030927080> , <http://isni.org/isni/0000000080914048> ;
+        skos:note             "Titulaire d'un doctorat d'État. - Psychiatre et expert-conseil (en 1991)"@fr ;
+        skos:prefLabel        "Albert J. Bernstein"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425131700#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224524j#foaf:Person> .

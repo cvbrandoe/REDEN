@@ -1,0 +1,78 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb30086061p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30086063c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb300860621#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10583086z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10583086z> ;
+        bnf-onto:FRBNF        10583086 ;
+        isni:identifierValid  "000000038271181X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000038271181X> ;
+        skos:editorialNote    "Sur le plâtrage des vins : rapport fait à la Chambre de commerce de Montpellier / par MM. Bérard, Chancel et Cauvy, [1856]. - . - DBF. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/266441377> , <http://isni-url.oclc.nl/isni/000000038271181X> , <http://www.idref.fr/118266268> ;
+        skos:note             "Chimiste"@fr ;
+        skos:prefLabel        "Jacques-Étienne Bérard (1789-1869)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb343982014#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1789 ;
+        bnf-onto:lastYear               1869 ;
+        rdagroup2elements:biographicalInformation
+                "Chimiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1789/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1869/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Montpellier (Hérault)" ;
+        bio:birth                       "1789-10-12" ;
+        bio:death                       "1869-06-10" ;
+        owl:sameAs                      <http://www.idref.fr/118266268> , <http://viaf.org/viaf/266441377> ;
+        foaf:birthday                   "10-12" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6102285v.thumbnail> ;
+        foaf:familyName                 "Bérard" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jacques-Étienne" ;
+        foaf:name                       "Jacques-Étienne Bérard" ;
+        foaf:page                       <http://data.bnf.fr/10583086/jacques-etienne_berard/> .
+
+<http://data.bnf.fr/ark:/12148/cb30742158g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30219697z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10583086z#foaf:Person> .

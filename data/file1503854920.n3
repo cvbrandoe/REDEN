@@ -1,0 +1,109 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb38518764n#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14091137f>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14091137f> ;
+        bnf-onto:FRBNF   14091137 ;
+        skos:exactMatch  <http://www.idref.fr/053526740> , <http://viaf.org/viaf/39583064> ;
+        skos:note        "Réalisateur de films documentaires. - Commentateur"@fr ;
+        skos:prefLabel   "Pierrick David"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb409515371#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383727972#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Réalisateur de films documentaires. - Commentateur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://www.idref.fr/053526740> , <http://viaf.org/viaf/39583064> ;
+        foaf:familyName  "David" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Pierrick" ;
+        foaf:name        "Pierrick David" ;
+        foaf:page        <http://data.bnf.fr/14091137/pierrick_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb384189719#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38293824m#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39207259v#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381677595#frbr:Expression>
+        bnfroles:r2255       <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        marcrel:pht          <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382637790#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38446762x#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38587094v#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400239917#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383727732#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399556916#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41079905f#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38547944z#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14091137f#foaf:Person> .

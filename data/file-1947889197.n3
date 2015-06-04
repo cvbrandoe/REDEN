@@ -1,0 +1,60 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb125191468>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb125191468> ;
+        bnf-onto:FRBNF      12519146 ;
+        skos:altLabel       "François Du Plessis de Grenédan (1921-2013)"@fr ;
+        skos:editorialNote  "Ordo administratif. Nanterre 1992. - . - Etat de la Compagnie de Saint-Sulpice, 1956-1957. - . - Monde, 2013-03-19 (faire-part de décès). - . -"@fr , "Ruminer les Psaumes / [choix], trad. et présentation de François du Plessis, 1996. - . - J'ai toujours voulu répondre aux appels : entretiens avec Jean-Robert Quéro / François Du Plessis, cop. 2007. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/51797848> ;
+        skos:note           "Prêtre de Saint-Sulpice (ordonné en 1943). - Professeur au Grand Séminaire de Marseille (1948). - Vicaire à la paroise Saint-Etienne d'Issy-les-Moulineaux (en 1957)"@fr ;
+        skos:prefLabel      "François Du Plessis (1921-2013)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb125191468#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411455873#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125191468#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125191468#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125191468#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125191468#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1921 ;
+        bnf-onto:lastYear              2013 ;
+        rdagroup2elements:biographicalInformation
+                "Prêtre de Saint-Sulpice (ordonné en 1943). - Professeur au Grand Séminaire de Marseille (1948). - Vicaire à la paroise Saint-Etienne d'Issy-les-Moulineaux (en 1957)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1921/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2013/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Religion" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/200/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1921" ;
+        bio:death                      "2013-03-06" ;
+        owl:sameAs                     <http://viaf.org/viaf/51797848> ;
+        foaf:familyName                "Du Plessis" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "François" ;
+        foaf:name                      "François Du Plessis" ;
+        foaf:page                      <http://data.bnf.fr/12519146/francois_du_plessis/> .
+
+<http://data.bnf.fr/ark:/12148/cb35817136m#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb125191468#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb125191468#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125191468#foaf:Person> .
+
+<http://data.bnf.fr/12519146/francois_du_plessis/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb125191468#foaf:Person> .

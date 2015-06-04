@@ -1,0 +1,68 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37644546v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12224125s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12224125s> ;
+        bnf-onto:FRBNF        12224125 ;
+        isni:identifierValid  "0000000066456079" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000066456079> ;
+        skos:editorialNote    "Les billets de banque de la Caraïbe, collection Maurice Muszynski : exposition [Pointe-à-Pitre...1999] / [présentée par] l'Association des retraités des banques et autres établissements financiers de la Guadeloupe ; commissaire de l'exposition, Alain Buffon, [ca 1999]. - . - VIP Antilles Guyane 1989. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/73905135> , <http://isni-url.oclc.nl/isni/0000000066456079> , <http://www.idref.fr/030922089> ;
+        skos:note             "Docteur ès sciences économiques. - Professeur associé à l'université des Antilles et de la Guyane (en 1999). - Président du Conseil de la culture, de l'éducation et de l'environnement de la Région Guadeloupe (en 1999)"@fr ;
+        skos:prefLabel        "Alain Buffon"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1937 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur ès sciences économiques. - Professeur associé à l'université des Antilles et de la Guyane (en 1999). - Président du Conseil de la culture, de l'éducation et de l'environnement de la Région Guadeloupe (en 1999)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gp#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/73905135> , <http://www.idref.fr/030922089> ;
+        foaf:familyName     "Buffon" ;
+        foaf:givenName      "Alain" ;
+        foaf:name           "Alain Buffon" ;
+        foaf:page           <http://data.bnf.fr/12224125/alain_buffon/> .
+
+<http://data.bnf.fr/ark:/12148/cb43523790m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36594750c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370232094#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37674220z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36646344z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224125s#foaf:Person> .

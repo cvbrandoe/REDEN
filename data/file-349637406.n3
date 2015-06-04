@@ -1,0 +1,65 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38919319n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43875994k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412776044#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41453849m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14454864v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14454864v> ;
+        bnf-onto:FRBNF        14454864 ;
+        isni:identifierValid  "0000000078416007" ;
+        owl:sameAs            <http://isni.org/isni/0000000078416007> ;
+        skos:exactMatch       <http://www.idref.fr/132519178> , <http://isni.org/isni/0000000078416007> , <http://viaf.org/viaf/5153489> ;
+        skos:note             "Architecte. - Enseignant à l'École d'architecture de Paris-La Villette jusqu'en 2007. - Spécialiste des architectures durables. - Formateur OFELI, Organisme de formation européen linguistique et informatique (en 2009)"@fr ;
+        skos:prefLabel        "Pierre Lefèvre (1941-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1941 ;
+        rdagroup2elements:biographicalInformation
+                "Architecte. - Enseignant à l'École d'architecture de Paris-La Villette jusqu'en 2007. - Spécialiste des architectures durables. - Formateur OFELI, Organisme de formation européen linguistique et informatique (en 2009)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1941/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs                     <http://www.idref.fr/132519178> , <http://viaf.org/viaf/5153489> ;
+        foaf:birthday                  "05-26" ;
+        foaf:familyName                "Lefèvre" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Pierre" ;
+        foaf:name                      "Pierre Lefèvre" ;
+        foaf:page                      <http://data.bnf.fr/14454864/pierre_lefevre/> .
+
+<http://data.bnf.fr/ark:/12148/cb426917104#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14454864v#foaf:Person> .

@@ -1,0 +1,74 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb38111710b#frbr:Expression>
+        bnfroles:r1567       <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1960 ;
+        rdagroup2elements:biographicalInformation
+                "Multi-instrumentiste. - Compositeur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:placeOfBirth  "Maidstone (GB)" ;
+        owl:sameAs                      <http://dbpedia.org/resource/Guy_Fletcher> , <http://viaf.org/viaf/7650897> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Guy_Fletcher-2.jpg?width=300> ;
+        foaf:familyName                 "Fletcher" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Guy" ;
+        foaf:name                       "Guy Fletcher" ;
+        foaf:page                       <http://data.bnf.fr/14014463/guy_fletcher/> .
+
+<http://data.bnf.fr/ark:/12148/cb14014463w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Guy_Fletcher> , <http://catalogue.bnf.fr/ark:/12148/cb14014463w> ;
+        bnf-onto:FRBNF        14014463 ;
+        isni:identifierValid  "0000000078390089" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000078390089> ;
+        skos:editorialNote    "Last exit to Brooklyn [Enregistrement sonore] / music by Mark Knopfler; Guy Fletcher, dir. Vertigo 8387252. - . - IMDB. - http://us.imdb.com. - 2006-05-31"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Guy_Fletcher> , <http://isni-url.oclc.nl/isni/0000000078390089> , <http://dbpedia.org/resource/Guy_Fletcher> , <http://viaf.org/viaf/7650897> ;
+        skos:note             "Multi-instrumentiste. - Compositeur"@fr ;
+        skos:prefLabel        "Guy Fletcher"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38485243v#frbr:Expression>
+        bnfroles:r1040       <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> ;
+        marcrel:cnd          <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38180984n#frbr:Expression>
+        bnfroles:r1040       <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> ;
+        marcrel:cnd          <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38437644r#frbr:Expression>
+        bnfroles:r1040       <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> ;
+        marcrel:cnd          <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40115465r#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40171851f#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384376453#frbr:Expression>
+        bnfroles:r1040       <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> ;
+        marcrel:cnd          <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14014463w#foaf:Person> .

@@ -1,0 +1,40 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb412464637#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12062852m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12062852m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12062852m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12062852m#foaf:Person>
+        a               foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Professeur émérite d'histoire de l'art, University of California, Berkeley. - Docteur en histoire de l'art (Harvard university, Cambridge, 1980)" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        foaf:gender     "female" ;
+        foaf:givenName  "Anne Middleton" .
+
+<http://data.bnf.fr/ark:/12148/cb34924495g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12062852m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12062852m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12062852m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb375148922#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12062852m#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12062852m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12062852m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427227312#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12062852m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12062852m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12062852m#foaf:Person> .

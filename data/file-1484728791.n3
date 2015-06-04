@@ -1,0 +1,84 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1901 ;
+        bnf-onto:lastYear               1987 ;
+        rdagroup2elements:biographicalInformation
+                "Gouverneur général de la France d'Outre-mer. - Président de la Banque centrale des états de l'Afrique équatoriale et du Cameroun. - A été secrétaire général du Gouvernement de l'Indochine (1941-1943) et résident supérieur au Cambodge (1943)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1901/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1987/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Administration publique" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/350/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Boulogne-sur-Mer (Pas-de-Calais)" ;
+        bio:birth                       "1901-04-11" ;
+        bio:death                       "1987-04-27" ;
+        owl:sameAs                      <http://viaf.org/viaf/49328959> , <http://www.idref.fr/034228764> ;
+        foaf:birthday                   "04-11" ;
+        foaf:familyName                 "Gautier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Georges" ;
+        foaf:name                       "Georges Gautier" ;
+        foaf:page                       <http://data.bnf.fr/12500631/georges_gautier/> .
+
+<http://data.bnf.fr/ark:/12148/cb376952093#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32151539h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> .
+
+<http://data.bnf.fr/12500631/georges_gautier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb321515412#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125006317>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb125006317> ;
+        bnf-onto:FRBNF        12500631 ;
+        isni:identifierValid  "0000000066493654" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000066493654> ;
+        skos:editorialNote    "Monde, 1987-04-30. - . - BN Cat. gén. suppl.. - . -"@fr , "La fin de l'Indochine française : 9 mars 1945, Hanoï au soleil de sang / Georges Gautier, 1978. - . - WW, France 1977-1978. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/034228764> , <http://isni-url.oclc.nl/isni/0000000066493654> , <http://viaf.org/viaf/49328959> ;
+        skos:note             "Gouverneur général de la France d'Outre-mer. - Président de la Banque centrale des états de l'Afrique équatoriale et du Cameroun. - A été secrétaire général du Gouvernement de l'Indochine (1941-1943) et résident supérieur au Cambodge (1943)"@fr ;
+        skos:prefLabel        "Georges Gautier (1901-1987)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb321515385#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33072862g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34652094n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125006317#foaf:Person> .

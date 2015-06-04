@@ -1,0 +1,91 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb33002412c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb339529966#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36625991g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32088446n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366052767#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1916 ;
+        bnf-onto:lastYear              2007 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur émérite de droit constitutionnel à la Faculté d'Aix-Marseille (en 1988)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1916/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2007/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1916-09-29" ;
+        bio:death                      "2007-05-02" ;
+        owl:sameAs                     <http://viaf.org/viaf/59082243> , <http://www.idref.fr/026856387> ;
+        foaf:birthday                  "09-29" ;
+        foaf:familyName                "Fabre" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Michel-Henry" ;
+        foaf:name                      "Michel-Henry Fabre" ;
+        foaf:page                      <http://data.bnf.fr/11902120/michel-henry_fabre/> .
+
+<http://data.bnf.fr/ark:/12148/cb35316915r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119021207>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb119021207> ;
+        bnf-onto:FRBNF        11902120 ;
+        isni:identifierValid  "0000000081376130" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081376130> ;
+        skos:editorialNote    "La République / M.-H. Fabre, 1988. - . - BN Cat. gén. suppl.. - . -"@fr , "BN Cat. gén. 1960-1969. - . - WW, France 1987-1988. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/59082243> , <http://www.idref.fr/026856387> , <http://isni-url.oclc.nl/isni/0000000081376130> ;
+        skos:note             "Professeur émérite de droit constitutionnel à la Faculté d'Aix-Marseille (en 1988)"@fr ;
+        skos:prefLabel        "Michel-Henry Fabre (1916-2007)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb320884470#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347019167#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33191990b#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119021207#foaf:Person> .

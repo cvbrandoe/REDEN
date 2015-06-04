@@ -1,0 +1,41 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14641582c#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xx#> ;
+        owl:sameAs       <http://viaf.org/viaf/56868915> , <http://www.idref.fr/158366808> ;
+        foaf:familyName  "Éva" ;
+        foaf:gender      "female" ;
+        foaf:page        <http://data.bnf.fr/14641582/eva/> .
+
+<http://data.bnf.fr/ark:/12148/cb40103362r#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14641582c#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14641582c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14641582c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14641582c>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb14641582c> ;
+        bnf-onto:FRBNF      14641582 ;
+        skos:editorialNote  "Comme [Enregistrement sonore] / Éva, chant. Atoll music PR005. - . - Atoll music. - http://atollmusic.com/. - 2005-06-30"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/56868915> , <http://www.idref.fr/158366808> ;
+        skos:prefLabel      "Éva (chanteuse de variétés francophones)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb14641582c#foaf:Person> .
+
+<http://data.bnf.fr/14641582/eva/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14641582c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39989961p#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14641582c#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14641582c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14641582c#foaf:Person> .

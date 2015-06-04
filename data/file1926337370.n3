@@ -1,0 +1,78 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb411014949#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388806930#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34987627h#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121268491>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb121268491> ;
+        bnf-onto:FRBNF        12126849 ;
+        isni:identifierValid  "000000003966995X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000003966995X> ;
+        skos:editorialNote    "La Danse en France = Dance in France / J.-M. Adolphe, C. Rodes, 1988. - . - Crise de la représentation : fable de politique-fiction / Jean-Marc Adolphe, 2003. - . - Manufacture du sensible : l'Atelier du Rhin, une aventure partagée / ouvrage collectif sous la direction de Jean-Marc Adolphe, impr. 2008. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000003966995X> , <http://viaf.org/viaf/44288> , <http://www.idref.fr/029700809> ;
+        skos:note             "Directeur de publication de la revue d'actualité culturelle \"Mouvement\" (en 2008)"@fr ;
+        skos:prefLabel        "Jean-Marc Adolphe"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40080046f#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39090811b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412791403#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41024859v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41371696b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121268491#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Directeur de publication de la revue d'actualité culturelle \"Mouvement\" (en 2008)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/029700809> , <http://viaf.org/viaf/44288> ;
+        foaf:familyName  "Adolphe" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Jean-Marc" ;
+        foaf:name        "Jean-Marc Adolphe" ;
+        foaf:page        <http://data.bnf.fr/12126849/jean-marc_adolphe/> .

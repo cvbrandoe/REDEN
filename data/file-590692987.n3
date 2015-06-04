@@ -1,0 +1,44 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14639451j>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14639451j> ;
+        bnf-onto:FRBNF   14639451 ;
+        skos:altLabel    "Guillelmus (saint, 11..-1234)"@la , "Guillelmus Briocensis (saint, 11..-1234)"@la , "Guillaume Pichon (saint, 11..-1234)"@fr , "Guillaume Pinchon (11..-1234)"@fr , "Guillaume (évêque de Saint-Brieuc, 11..-1234)"@fr , "Guillaume Pichon (11..-1234)"@fr , "Guillaume Pinchon (saint, 11..-1234)"@fr ;
+        skos:exactMatch  <http://www.idref.fr/127939350> ;
+        skos:note        "Évêque de Saint-Brieuc (à partir de 1220). - Il s'opposa au duc Pierre de Dreux dit Mauclerc, ce qui lui valut le bannissement. - Il se réfugia à Poitiers en 1227, et y assuma quelque temps les fonctions épiscopales en lieu et place de l'évêque Philippe, malade. - Il se rendit à Rome et obtint l'intervention du pape contre le duc de Bretagne, ce qui lui permit de rentrer dans son diocèse où il reprit la reconstruction de la cathédrale. - Canonisé en 1247 (fête le 29 juillet)"@fr ;
+        skos:prefLabel   "Guillaume (saint, 11..-1234)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14639451j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14639451j#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:lastYear               1234 ;
+        rdagroup2elements:biographicalInformation
+                "Évêque de Saint-Brieuc (à partir de 1220). - Il s'opposa au duc Pierre de Dreux dit Mauclerc, ce qui lui valut le bannissement. - Il se réfugia à Poitiers en 1227, et y assuma quelque temps les fonctions épiscopales en lieu et place de l'évêque Philippe, malade. - Il se rendit à Rome et obtint l'intervention du pape contre le duc de Bretagne, ce qui lui permit de rentrer dans son diocèse où il reprit la reconstruction de la cathédrale. - Canonisé en 1247 (fête le 29 juillet)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1101-1200/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1234/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Religion" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/200/> ;
+        rdagroup2elements:placeOfBirth  "Saint-Alban (Côtes-d'Armor)" ;
+        rdagroup2elements:placeOfDeath  "Saint-Brieuc" ;
+        bio:birth                       "11.." ;
+        bio:death                       "1234-07-29" ;
+        owl:sameAs                      <http://www.idref.fr/127939350> ;
+        foaf:familyName                 "Guillaume" ;
+        foaf:gender                     "male" ;
+        foaf:page                       <http://data.bnf.fr/14639451/guillaume/> .
+
+<http://data.bnf.fr/14639451/guillaume/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14639451j#foaf:Person> .

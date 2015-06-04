@@ -1,0 +1,65 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb42273538b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12388246d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12388246d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12388246d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37420326z#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12388246d#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12388246d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12388246d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34575610d#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12388246d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12388246d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345728060#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12388246d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12388246d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12388246d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35643868g#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12388246d#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12388246d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12388246d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12388246d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12388246d> ;
+        bnf-onto:FRBNF        12388246 ;
+        isni:identifierValid  "0000000108613352" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108613352> ;
+        skos:editorialNote    "Stephen hero : part of the first draft of \"A portrait of the artist as a young man\" / by James Joyce ; ed. with an introd. by Theodore Spencer, 1991 [Reprod. de l'éd. de 1956]. - . - LCNA (CD-OCLC), 1993-12. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000108613352> , <http://viaf.org/viaf/93322> , <http://www.idref.fr/032957912> ;
+        skos:prefLabel        "Theodore Spencer (1902-1949)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12388246d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12388246d#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1902 ;
+        bnf-onto:lastYear              1949 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1902/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1949/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1902" ;
+        bio:death                      "1949" ;
+        owl:sameAs                     <http://www.idref.fr/032957912> , <http://viaf.org/viaf/93322> ;
+        foaf:familyName                "Spencer" ;
+        foaf:givenName                 "Theodore" ;
+        foaf:name                      "Theodore Spencer" ;
+        foaf:page                      <http://data.bnf.fr/12388246/theodore_spencer/> .

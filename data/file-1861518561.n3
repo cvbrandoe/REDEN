@@ -1,0 +1,97 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb13579615r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13579615r> ;
+        bnf-onto:FRBNF        13579615 ;
+        isni:identifierValid  "0000000079834139" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000079834139> ;
+        skos:altLabel         "Elisabeth Lear"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/12475367> , <http://www.idref.fr/057722358> , <http://isni-url.oclc.nl/isni/0000000079834139> ;
+        skos:note             "Traduit de l'anglais en français"@fr ;
+        skos:prefLabel        "Elizabeth Lear"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37208787f#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372087832#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39216856f#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Traduit de l'anglais en français" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/057722358> , <http://viaf.org/viaf/12475367> ;
+        foaf:familyName  "Lear" ;
+        foaf:givenName   "Elizabeth" ;
+        foaf:name        "Elizabeth Lear" ;
+        foaf:page        <http://data.bnf.fr/13579615/elizabeth_lear/> .
+
+<http://data.bnf.fr/ark:/12148/cb38842167q#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37683947w#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43494829b#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43495618c#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37198364c#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb376906315#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37203653n#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb371074009#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38871731r#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13579615r#foaf:Person> .

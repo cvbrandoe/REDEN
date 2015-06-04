@@ -1,0 +1,103 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb325139180#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374117561#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1910 ;
+        bnf-onto:lastYear               1995 ;
+        rdagroup2elements:biographicalInformation
+                "Fut professeur d'histoire à l'Université du Michigan et directeur de la Clements library" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1910/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1995/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Lowell, Mi." ;
+        rdagroup2elements:placeOfDeath  "Henderson, N.C." ;
+        bio:birth                       "1910-07-13" ;
+        bio:death                       "1995-07-06" ;
+        owl:sameAs                      <http://viaf.org/viaf/104055583> , <http://www.idref.fr/030692091> ;
+        foaf:birthday                   "07-13" ;
+        foaf:familyName                 "Peckham" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Howard Henry" ;
+        foaf:name                       "Howard Henry Peckham" ;
+        foaf:page                       <http://data.bnf.fr/12205709/howard_henry_peckham/> .
+
+<http://data.bnf.fr/ark:/12148/cb35133094r#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32513919b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32513917n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122057091>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb122057091> ;
+        bnf-onto:FRBNF        12205709 ;
+        isni:identifierValid  "0000000114965602" ;
+        owl:sameAs            <http://isni.org/isni/0000000114965602> ;
+        skos:editorialNote    "The colonial wars, 1689-1762 / Howard H. Peckham, 1964. - . - LC Authorities. - http://authorities.loc.gov. - 2012-11-16"@fr , "BN Cat. gén. suppl.. - . - BN Cat. gén. 1960-1969. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/104055583> , <http://isni.org/isni/0000000114965602> , <http://www.idref.fr/030692091> ;
+        skos:note             "Fut professeur d'histoire à l'Université du Michigan et directeur de la Clements library"@fr ;
+        skos:prefLabel        "Howard Henry Peckham (1910-1995)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32513920j#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32903519q#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33131036t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35183333d#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35515966r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353412188#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122057091#foaf:Person> .

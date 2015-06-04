@@ -1,0 +1,36 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb16206770w>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16206770w> ;
+        bnf-onto:FRBNF      16206770 ;
+        skos:editorialNote  "Co-fondatrice et membre du collectif \"le-son 666\". - . - Out of the Blue [Spectacle] / direction artistique et chorégraphique Lynda Gaudreau...; .-Festival d'Avignon, 2009. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/122141583> ;
+        skos:note           "Création sonore"@fr ;
+        skos:prefLabel      "Anne-Françoise Jacques"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16206770w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16206770w#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Création sonore" ;
+        owl:sameAs       <http://viaf.org/viaf/122141583> ;
+        foaf:familyName  "Jacques" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Anne-Françoise" ;
+        foaf:name        "Anne-Françoise Jacques" ;
+        foaf:page        <http://data.bnf.fr/16206770/anne-francoise_jacques/> .
+
+<http://data.bnf.fr/ark:/12148/cb422103302#frbr:Expression>
+        bnfroles:r2180       <http://data.bnf.fr/ark:/12148/cb16206770w#foaf:Person> ;
+        marcrel:rce          <http://data.bnf.fr/ark:/12148/cb16206770w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16206770w#foaf:Person> .

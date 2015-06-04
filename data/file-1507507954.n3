@@ -1,0 +1,40 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12239497w#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1738 ;
+        rdagroup2elements:biographicalInformation
+                "Libraire. - Veuve attestée en 1739" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1738/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1708-1738" ;
+        bio:birth                      "16.." ;
+        bio:death                      "1738" ;
+        owl:sameAs                     <http://www.idref.fr/147940001> , <http://viaf.org/viaf/198115588> ;
+        foaf:familyName                "Wolff" ;
+        foaf:givenName                 "Matthias" ;
+        foaf:name                      "Matthias Wolff" ;
+        foaf:page                      <http://data.bnf.fr/12239497/matthias_wolff/> .
+
+<http://data.bnf.fr/ark:/12148/cb12239497w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12239497w> ;
+        bnf-onto:FRBNF        12239497 ;
+        isni:identifierValid  "0000000357430434" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000357430434> ;
+        skos:altLabel         "Matthias Wolf (16..-1738?)"@fr ;
+        skos:exactMatch       <http://www.idref.fr/147940001> , <http://isni-url.oclc.nl/isni/0000000357430434> , <http://viaf.org/viaf/198115588> ;
+        skos:note             "Libraire. - Veuve attestée en 1739"@fr ;
+        skos:prefLabel        "Matthias Wolff (16..-1738?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12239497w#foaf:Person> .

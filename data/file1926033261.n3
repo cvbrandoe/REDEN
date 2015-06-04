@@ -1,0 +1,128 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35146602v#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb348828955#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351463292#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354421997#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1910 ;
+        bnf-onto:lastYear              1985 ;
+        rdagroup2elements:biographicalInformation
+                "Traduit du français en anglais" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1910/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1985/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1910" ;
+        bio:death                      "1985-01-16" ;
+        owl:sameAs                     <http://viaf.org/viaf/100912383> , <http://www.idref.fr/026866013> ;
+        foaf:familyName                "Fitzgerald" ;
+        foaf:givenName                 "Robert" ;
+        foaf:name                      "Robert Fitzgerald" ;
+        foaf:page                      <http://data.bnf.fr/11902850/robert_fitzgerald/> .
+
+<http://data.bnf.fr/ark:/12148/cb35409539b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34610426z#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35409327s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34548884m#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119028503>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb119028503> ;
+        bnf-onto:FRBNF        11902850 ;
+        isni:identifierValid  "0000000122835330" ;
+        owl:sameAs            <http://isni.org/isni/0000000122835330> ;
+        skos:editorialNote    "Birds / St.-John Perse ; translation by Robert Fitzgerald, [1966]. - . - The collected short prose / James Agee ; ed. with a memoir by Robert Fitzgerald, 1968. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000122835330> , <http://viaf.org/viaf/100912383> , <http://www.idref.fr/026866013> ;
+        skos:note             "Traduit du français en anglais"@fr ;
+        skos:prefLabel        "Robert Fitzgerald (1910-1985)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37459100h#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34816771d#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35226187f#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35146617w#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39301929k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37405725h#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370389638#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35146568h#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35449961f#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119028503#foaf:Person> .

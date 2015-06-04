@@ -1,0 +1,83 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39735815w#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb396585240#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39660174q#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39735571j#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39668334z#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1948 ;
+        rdagroup2elements:biographicalInformation
+                "Chanteur de rock" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/jm#> ;
+        owl:sameAs          <http://viaf.org/viaf/100921999> ;
+        foaf:familyName     "Gordon" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Dervan" ;
+        foaf:name           "Dervan Gordon" ;
+        foaf:page           <http://data.bnf.fr/14761691/dervan_gordon/> .
+
+<http://data.bnf.fr/ark:/12148/cb39652527k#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39653762w#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb147616916>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb147616916> ;
+        bnf-onto:FRBNF      14761691 ;
+        skos:editorialNote  "Oh, my love [Musique imprimée] / musique de Dervan Gordon, Eddy Grant ; paroles de Jean Eigel ; interprété par The Equals explosion, 1968. - . - Libération, 201-08-19. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/100921999> ;
+        skos:note           "Chanteur de rock"@fr ;
+        skos:prefLabel      "Dervan Gordon"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39654613n#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39668336n#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147616916#foaf:Person> .

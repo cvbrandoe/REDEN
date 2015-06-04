@@ -1,0 +1,44 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb13611087z#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1823 ;
+        bnf-onto:lastYear              1891 ;
+        rdagroup2elements:biographicalInformation
+                "Fils et successeur de Guillaume 1er, roi de 1864 à 1891" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1823/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1891/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        bio:birth                      "1823-03-06" ;
+        bio:death                      "1891-10-06" ;
+        owl:sameAs                     <http://www.idref.fr/078614473> ;
+        foaf:birthday                  "03-06" ;
+        foaf:familyName                "Charles" ;
+        foaf:page                      <http://data.bnf.fr/13611087/charles_1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13611087z>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb13611087z> ;
+        bnf-onto:FRBNF   13611087 ;
+        skos:altLabel    "Karl I (roi de Wurtemberg, 1823-1891)"@de ;
+        skos:exactMatch  <http://www.idref.fr/078614473> ;
+        skos:note        "Fils et successeur de Guillaume 1er, roi de 1864 à 1891"@fr ;
+        skos:prefLabel   "Charles I (roi de Wurtemberg, 1823-1891)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb13611087z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13611090v>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13611087z#foaf:Person> .
+
+<http://data.bnf.fr/13611087/charles_1/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13611087z#foaf:Person> .

@@ -1,0 +1,104 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31256520b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39351188x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb312565221#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36040405v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb129438284>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb129438284> ;
+        bnf-onto:FRBNF        12943828 ;
+        isni:identifierValid  "0000000082663537" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000082663537> ;
+        skos:editorialNote    "Annales tunisiennes ou Aperçu historique sur la régence de Tunis / par Alphonse Rousseau, 1864. - . - ABF. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/74953835> , <http://www.idref.fr/056943040> , <http://isni-url.oclc.nl/isni/0000000082663537> ;
+        skos:note             "Baron. - Consul de France"@fr ;
+        skos:prefLabel        "Alphonse Rousseau (1820-1870)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39436163j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39436161v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31256523c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1820 ;
+        bnf-onto:lastYear               1870 ;
+        rdagroup2elements:biographicalInformation
+                "Baron. - Consul de France" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1820/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1870/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Alep, Syrie" ;
+        rdagroup2elements:placeOfDeath  "Beyrouth" ;
+        bio:birth                       "1820-05-10" ;
+        bio:death                       "1870-08-10" ;
+        owl:sameAs                      <http://viaf.org/viaf/74953835> , <http://www.idref.fr/056943040> ;
+        foaf:birthday                   "05-10" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6212253d.thumbnail> ;
+        foaf:familyName                 "Rousseau" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Alphonse" ;
+        foaf:name                       "Alphonse Rousseau" ;
+        foaf:page                       <http://data.bnf.fr/12943828/alphonse_rousseau/> .
+
+<http://data.bnf.fr/ark:/12148/cb31256524q#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394361626#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39453763w#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31256521p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129438284#foaf:Person> .

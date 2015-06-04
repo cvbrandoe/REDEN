@@ -1,0 +1,83 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38982409c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392072304#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37455349f#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41028327t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1952 ;
+        rdagroup2elements:biographicalInformation
+                "Dramaturge, comedienne et auteur des livres sur le théâtre" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/79108815> , <http://www.idref.fr/033693315> ;
+        foaf:familyName     "Morgan" ;
+        foaf:givenName      "Fidelis" ;
+        foaf:name           "Fidelis Morgan" ;
+        foaf:page           <http://data.bnf.fr/12453486/fidelis_morgan/> .
+
+<http://data.bnf.fr/ark:/12148/cb40207169r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39179478f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39206837z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12453486j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12453486j> ;
+        bnf-onto:FRBNF        12453486 ;
+        isni:identifierValid  "0000000083968244" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000083968244> ;
+        skos:editorialNote    "The years between : plays by women on the London stage 1900-1950 / Fidelis Morgan, 1994. - . - BLNA, 1994-08. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000083968244> , <http://viaf.org/viaf/79108815> , <http://www.idref.fr/033693315> ;
+        skos:note             "Dramaturge, comedienne et auteur des livres sur le théâtre"@fr ;
+        skos:prefLabel        "Fidelis Morgan"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39229087f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389783367#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12453486j#foaf:Person> .

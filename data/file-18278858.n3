@@ -1,0 +1,88 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb37633841h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39227434g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120528396>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb120528396> ;
+        bnf-onto:FRBNF        12052839 ;
+        isni:identifierValid  "0000000109170637" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109170637> ;
+        skos:editorialNote    "Vaticano e Israele / S. Ferrari, 1991. - . - Law and religion in post-communist Europe / eds. Silvio Ferrari, W. Cole Durham, Jr., associate ed. Elizabeth A. Sewell, 2003. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000109170637> , <http://viaf.org/viaf/76335497> , <http://www.idref.fr/028758358> ;
+        skos:note             "En poste, University of Milan, Italie (en 2003)"@fr ;
+        skos:prefLabel        "Silvio Ferrari"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374749138#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1947 ;
+        rdagroup2elements:biographicalInformation
+                "En poste, University of Milan, Italie (en 2003)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        owl:sameAs          <http://viaf.org/viaf/76335497> , <http://www.idref.fr/028758358> ;
+        foaf:familyName     "Ferrari" ;
+        foaf:givenName      "Silvio" ;
+        foaf:name           "Silvio Ferrari" ;
+        foaf:page           <http://data.bnf.fr/12052839/silvio_ferrari/> .
+
+<http://data.bnf.fr/ark:/12148/cb35586922t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39227432s#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39017320z#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34882130n#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37039449k#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37040855n#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427374084#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120528396#foaf:Person> .

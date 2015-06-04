@@ -1,0 +1,61 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb10232859g#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1834 ;
+        bnf-onto:lastYear               1921 ;
+        rdagroup2elements:biographicalInformation
+                "Homme politique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1834/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1921/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Montluçon (Allier)" ;
+        rdagroup2elements:placeOfDeath  "Néris-les-Bains (Allier)" ;
+        bio:birth                       "1834-11-25" ;
+        bio:death                       "1921-04-26" ;
+        owl:sameAs                      <http://viaf.org/viaf/304441241> ;
+        foaf:birthday                   "11-25" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k5468663p.thumbnail> ;
+        foaf:familyName                 "Boissier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Michel" ;
+        foaf:name                       "Michel Boissier" ;
+        foaf:page                       <http://data.bnf.fr/10232859/michel_boissier/> .
+
+<http://data.bnf.fr/ark:/12148/cb34034395v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10232859g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10232859g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10232859g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10232859g>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb10232859g> ;
+        bnf-onto:FRBNF      10232859 ;
+        skos:editorialNote  "Dialogues anticléricaux / M. Boissier, 1898. - . - DBF. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/304441241> ;
+        skos:note           "Homme politique"@fr ;
+        skos:prefLabel      "Michel Boissier (1834-1921)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb10232859g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30122199m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10232859g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10232859g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10232859g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301222000#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10232859g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10232859g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10232859g#foaf:Person> .

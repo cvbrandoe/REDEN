@@ -1,0 +1,102 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1947 ;
+        rdagroup2elements:biographicalInformation
+                "Ancien professeur d'histoire contemporaine de l'Amérique Latine à Mexico. - Conseiller scientifique en politique de développement auprès de \"Pain pour le Prochain\" (en 1991). - Professeur de sociologie des religions à l'université des sciences humaines de Strasbourg (en 1994)" , "Ecrit aussi en espagnol" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/68969261> , <http://www.idref.fr/030162556> ;
+        foaf:familyName     "Bastian" ;
+        foaf:givenName      "Jean-Pierre" ;
+        foaf:name           "Jean-Pierre Bastian" ;
+        foaf:page           <http://data.bnf.fr/12163477/jean-pierre_bastian/> .
+
+<http://data.bnf.fr/ark:/12148/cb371755534#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41464572r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37650439j#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41024348t#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35573414w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35689519q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41072650r#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36661193t#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb377351657#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366539323#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121634778>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb121634778> ;
+        bnf-onto:FRBNF        12163477 ;
+        isni:identifierValid  "000000010912055X" ;
+        owl:sameAs            <http://isni.org/isni/000000010912055X> ;
+        skos:exactMatch       <http://isni.org/isni/000000010912055X> , <http://www.idref.fr/030162556> , <http://viaf.org/viaf/68969261> ;
+        skos:note             "Ancien professeur d'histoire contemporaine de l'Amérique Latine à Mexico. - Conseiller scientifique en politique de développement auprès de \"Pain pour le Prochain\" (en 1991). - Professeur de sociologie des religions à l'université des sciences humaines de Strasbourg (en 1994)"@fr , "Ecrit aussi en espagnol"@fr ;
+        skos:prefLabel        "Jean-Pierre Bastian"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39954287m#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366425378#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb410656252#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121634778#foaf:Person> .

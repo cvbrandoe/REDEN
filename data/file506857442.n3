@@ -1,0 +1,87 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb314611108#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43156908s#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36573038x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124068494>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb124068494> ;
+        bnf-onto:FRBNF        12406849 ;
+        isni:identifierValid  "0000000059593411" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000059593411> ;
+        skos:altLabel         "Comtesse de Caud (1764-1804)"@fr , "Lucile de Caud (1764-1804)"@fr , "Lucile-Angélique-Jeanne de Chateaubriand (1764-1804)"@fr ;
+        skos:editorialNote    "Oeuvres de Lucile de Chateaubriand, publiées par Louis Thomas, 1912. - . - Lucile ou la nostalgie du génie / M. Diniz, 1984. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/033175365> , <http://viaf.org/viaf/56696187> , <http://isni-url.oclc.nl/isni/0000000059593411> ;
+        skos:note             "Soeur aînée de : Chateaubriand, François-René de  (1768-1848)"@fr ;
+        skos:prefLabel        "Lucile de Chateaubriand (1764-1804)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31934237j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1764 ;
+        bnf-onto:lastYear              1804 ;
+        dcterms:contributor            <http://data.bnf.fr/ark:/12148/cb14783368r#frbr:Work> ;
+        rdagroup2elements:biographicalInformation
+                "Soeur aînée de : Chateaubriand, François-René de  (1768-1848)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1764/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1804/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1764-08-07" ;
+        bio:death                      "1804-11-10" ;
+        owl:sameAs                     <http://www.idref.fr/033175365> , <http://viaf.org/viaf/56696187> ;
+        foaf:birthday                  "08-07" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k5425511k.thumbnail> ;
+        foaf:familyName                "Chateaubriand" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Lucile de" ;
+        foaf:name                      "Lucile de Chateaubriand" ;
+        foaf:page                      <http://data.bnf.fr/12406849/lucile_de_chateaubriand/> .
+
+<http://data.bnf.fr/ark:/12148/cb429437374#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32124061d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> .
+
+<http://data.bnf.fr/12406849/lucile_de_chateaubriand/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30228144z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124068494#foaf:Person> .

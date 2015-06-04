@@ -1,0 +1,54 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb31930712m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12201246w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12201246w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12201246w#foaf:Person> .
+
+<http://data.bnf.fr/12201246/charles_3/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12201246w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12201246w#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1486 ;
+        bnf-onto:lastYear              1553 ;
+        rdagroup2elements:biographicalInformation
+                "Régna à partir de 1504. - Oncle de François Ier et beau-frère de Charles Quint" , "Mort dans la nuit du 16 au 17 août 1553" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1486/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1553/> ;
+        bio:birth                      "1486-10-10" ;
+        bio:death                      "1553-08" ;
+        owl:sameAs                     <http://viaf.org/viaf/41706196> ;
+        foaf:birthday                  "10-10" ;
+        foaf:familyName                "Charles" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/12201246/charles_3/> .
+
+<http://data.bnf.fr/ark:/12148/cb308825902#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12201246w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12201246w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12201246w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12201246w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12201246w> ;
+        bnf-onto:FRBNF        12201246 ;
+        isni:identifierValid  "0000000374038354" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000374038354> ;
+        skos:altLabel         "Carlo il Buono (duc de Savoie, 1486-1553)"@fr , "Charles le Bon (duc de Savoie, 1486-1553)"@fr , "Carlo III (duc de Savoie, 1486-1553)"@fr ;
+        skos:editorialNote    "DBF. - . - Mourre, 1983. - . - Pt Robert 2. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000374038354> , <http://viaf.org/viaf/41706196> ;
+        skos:note             "Mort dans la nuit du 16 au 17 août 1553"@fr , "Régna à partir de 1504. - Oncle de François Ier et beau-frère de Charles Quint"@fr ;
+        skos:prefLabel        "Charles III (duc de Savoie, 1486-1553)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12201246w#foaf:Person> .

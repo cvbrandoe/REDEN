@@ -1,0 +1,54 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42704128k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb165339987#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb165339987#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165339987#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb165339987#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1976 ;
+        rdagroup2elements:biographicalInformation
+                "Écrivain public. - Manager et formatrice pendant plus de 10 ans dans le service client d'un grand groupe de télécommunications, puis associée dans un cabinet de formation professionnelle" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/121900762> , <http://viaf.org/viaf/186022537> ;
+        foaf:familyName     "Jacob" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Hélène" ;
+        foaf:name           "Hélène Jacob" ;
+        foaf:page           <http://data.bnf.fr/16533998/helene_jacob/> .
+
+<http://data.bnf.fr/ark:/12148/cb436680301#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb165339987#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb165339987#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165339987#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb165339987>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb165339987> ;
+        bnf-onto:FRBNF        16533998 ;
+        isni:identifierValid  "0000000139444133" ;
+        owl:sameAs            <http://isni.org/isni/0000000139444133> ;
+        skos:editorialNote    "C'est qui le chef ? Ou comment manager son boss ! / Hélène Jacob, impr., 2011. - . - Pour en finir avec tous ceux qui vous pourrissent la vie ! / Hélène Jacob, impr. 2012. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/186022537> , <http://isni.org/isni/0000000139444133> , <http://www.idref.fr/121900762> ;
+        skos:note             "Écrivain public. - Manager et formatrice pendant plus de 10 ans dans le service client d'un grand groupe de télécommunications, puis associée dans un cabinet de formation professionnelle"@fr ;
+        skos:prefLabel        "Hélène Jacob"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb165339987#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42461559z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb165339987#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb165339987#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165339987#foaf:Person> .

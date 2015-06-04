@@ -1,0 +1,71 @@
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpprop: <http://dbpedia.org/property/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://de.dbpedia.org/resource/Leonard_Darwin>
+        owl:sameAs  <http://dbpedia.org/resource/Leonard_Darwin> .
+
+<http://ru.dbpedia.org/resource/Дарвин,_Леонард>
+        owl:sameAs  <http://dbpedia.org/resource/Leonard_Darwin> .
+
+<http://no.dbpedia.org/resource/Leonard_Darwin>
+        owl:sameAs  <http://dbpedia.org/resource/Leonard_Darwin> .
+
+<http://en.wikipedia.org/wiki/Leonard_Darwin>
+        foaf:primaryTopic  <http://dbpedia.org/resource/Leonard_Darwin> .
+
+<http://dbpedia.org/resource/Ronald_Fisher>
+        dbpedia-owl:influencedBy  <http://dbpedia.org/resource/Leonard_Darwin> ;
+        dbpprop:influences        <http://dbpedia.org/resource/Leonard_Darwin> .
+
+<http://dbpedia.org/resource/Sir_John_Swinburne,_7th_Baronet>
+        dbpprop:after  <http://dbpedia.org/resource/Leonard_Darwin> .
+
+<http://dbpedia.org/resource/Leonard_Darwin>
+        a                               <http://dbpedia.org/class/yago/YagoLegalActor> , <http://dbpedia.org/class/yago/Negotiator110351874> , <http://schema.org/Person> , <http://dbpedia.org/class/yago/YagoLegalActorGeo> , <http://dbpedia.org/class/yago/MilitaryOfficer110317007> , <http://dbpedia.org/class/yago/RoyalEngineersOfficers> , <http://dbpedia.org/class/yago/Communicator109610660> , foaf:Person , <http://dbpedia.org/class/yago/SkilledWorker110605985> , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> , dbpedia-owl:Person , <http://dbpedia.org/class/yago/HeadOfState110164747> , <http://dbpedia.org/class/yago/Representative110522035> , <http://dbpedia.org/class/yago/LivingThing100004258> , <http://dbpedia.org/class/yago/Serviceman110582746> , <http://dbpedia.org/class/yago/Object100002684> , <http://dbpedia.org/class/yago/Person100007846> , <http://dbpedia.org/class/yago/PhysicalEntity100001930> , <http://wikidata.dbpedia.org/resource/Q5> , <http://dbpedia.org/class/yago/PresidentsOfTheRoyalGeographicalSociety> , <http://wikidata.dbpedia.org/resource/Q215627> , <http://dbpedia.org/class/yago/President110467179> , dbpedia-owl:Agent , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> , <http://dbpedia.org/class/yago/CausalAgent100007347> , owl:Thing , <http://dbpedia.org/class/yago/Whole100003553> , <http://dbpedia.org/class/yago/PeopleFromDowne> , <http://dbpedia.org/class/yago/Organism100004475> , <http://dbpedia.org/class/yago/Worker109632518> ;
+        rdfs:comment                    "Major Leonard Darwin (15 January 1850 – 26 March 1943), a son of the English naturalist Charles Darwin, was variously a soldier, politician, economist, eugenicist and mentor of the statistician and evolutionary biologist Ronald Fisher."@en , "Leonard Darwin, né à Down House, Downe, dans le district londonien de Bromley, le 15 janvier 1850, et mort à Londres le 26 mars 1943, est le quatrième fils et huitième enfant du naturaliste anglais Charles Darwin et de sa femme Emma. Il fut soldat, politicien, économiste, eugéniste et mentor du statisticien et biologiste de l'évolution Ronald Fisher."@fr , "Леонард Дарвин (англ. Sir Leonard Darwin; — 15 января 1850, Даун, Кент — 26 марта 1943) — четвертый сын знаменитого естествоиспытателя Чарльза Дарвина. Президент Королевского Геологического общества (1908)."@ru , "Major Leonard Darwin (* 15. Januar 1850 auf Down House in Downe; † 26. März 1943 in London) war britischer Soldat, Politiker, Ökonom, Eugeniker und Mentor von Ronald Aylmer Fisher."@de ;
+        rdfs:label                      "Дарвин, Леонард"@ru , "Leonard Darwin"@fr , "Leonard Darwin"@en , "Leonard Darwin"@de ;
+        dbpedia-owl:abstract            "Leonard Darwin, né à Down House, Downe, dans le district londonien de Bromley, le 15 janvier 1850, et mort à Londres le 26 mars 1943, est le quatrième fils et huitième enfant du naturaliste anglais Charles Darwin et de sa femme Emma. Il fut soldat, politicien, économiste, eugéniste et mentor du statisticien et biologiste de l'évolution Ronald Fisher."@fr , "Major Leonard Darwin (* 15. Januar 1850 auf Down House in Downe; † 26. März 1943 in London) war britischer Soldat, Politiker, Ökonom, Eugeniker und Mentor von Ronald Aylmer Fisher."@de , "Леонард Дарвин (англ. Sir Leonard Darwin; — 15 января 1850, Даун, Кент — 26 марта 1943) — четвертый сын знаменитого естествоиспытателя Чарльза Дарвина. Президент Королевского Геологического общества (1908)."@ru , "Major Leonard Darwin (15 January 1850 – 26 March 1943), a son of the English naturalist Charles Darwin, was variously a soldier, politician, economist, eugenicist and mentor of the statistician and evolutionary biologist Ronald Fisher."@en ;
+        dbpedia-owl:birthDate           "1850-01-15+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:birthYear           "1850+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:deathDate           "1943-03-26+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:deathYear           "1943+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:thumbnail           <http://commons.wikimedia.org/wiki/Special:FilePath/Leonard_Darwin.jpg?width=300> ;
+        dbpedia-owl:viafId              "20529629" ;
+        dbpedia-owl:wikiPageExternalLink
+                <http://www.library.adelaide.edu.au/digitised/fisher/corres/darwinl/index.html> , <http://www.darwinday.org/learn/darwin.html#children> , <http://www.library.adelaide.edu.au/digitised/fisher/corres/keynes/> , <http://www.library.adelaide.edu.au/digitised/fisher/natsel/index.html> , <http://darwin.lib.cam.ac.uk/perl/nav?class=name;term=Darwin%2C%20Leonard;dmode=dr> ;
+        dbpedia-owl:wikiPageID          515133 ;
+        dbpedia-owl:wikiPageRevisionID  602989038 ;
+        dbpprop:after                   <http://dbpedia.org/resource/Henry_Charles_Fulford> ;
+        dbpprop:before                  <http://dbpedia.org/resource/Sir_John_Swinburne,_7th_Baronet> ;
+        dbpprop:dateOfBirth             "1850-01-15+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:dateOfDeath             "1943-03-26+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:hasPhotoCollection      <http://wifo5-03.informatik.uni-mannheim.de/flickrwrappr/photos/Leonard_Darwin> ;
+        dbpprop:name                    "Darwin, Leonard"@en ;
+        dbpprop:shortDescription        "British politician"@en ;
+        dbpprop:title                   "Member of Parliament for Lichfield"@en ;
+        dbpprop:years                   1892 ;
+        dc:description                  "British politician" , "British politician"@en ;
+        dcterms:subject                 <http://dbpedia.org/resource/Category:Members_of_the_United_Kingdom_Parliament_for_English_constituencies> , <http://dbpedia.org/resource/Category:People_from_Downe> , <http://dbpedia.org/resource/Category:1943_deaths> , <http://dbpedia.org/resource/Category:Royal_Engineers_officers> , <http://dbpedia.org/resource/Category:Presidents_of_the_Royal_Geographical_Society> , <http://dbpedia.org/resource/Category:Darwin%E2%80%93Wedgwood_family> , <http://dbpedia.org/resource/Category:English_eugenicists> , <http://dbpedia.org/resource/Category:UK_MPs_1892%E2%80%9395> , <http://dbpedia.org/resource/Category:1850_births> , <http://dbpedia.org/resource/Category:Liberal_Unionist_Party_MPs> ;
+        owl:sameAs                      <http://wikidata.dbpedia.org/resource/Q354352> , <http://dbpedia.org/resource/Leonard_Darwin> , <http://ru.dbpedia.org/resource/Дарвин,_Леонард> , <http://fi.dbpedia.org/resource/Leonard_Darwin> , <http://rdf.freebase.com/ns/m.02kfz6> , <http://yago-knowledge.org/resource/Leonard_Darwin> , <http://de.dbpedia.org/resource/Leonard_Darwin> , <http://no.dbpedia.org/resource/Leonard_Darwin> , <http://fr.dbpedia.org/resource/Leonard_Darwin> , <http://wikidata.org/entity/Q354352> ;
+        prov:wasDerivedFrom             <http://en.wikipedia.org/wiki/Leonard_Darwin?oldid=602989038> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Leonard_Darwin.jpg> ;
+        foaf:givenName                  "Leonard"@en ;
+        foaf:isPrimaryTopicOf           <http://en.wikipedia.org/wiki/Leonard_Darwin> ;
+        foaf:name                       "Darwin, Leonard"@en , "Leonard Darwin"@en ;
+        foaf:surname                    "Darwin"@en .
+
+<http://wikidata.dbpedia.org/resource/Q354352>
+        owl:sameAs  <http://dbpedia.org/resource/Leonard_Darwin> .
+
+<http://fi.dbpedia.org/resource/Leonard_Darwin>
+        owl:sameAs  <http://dbpedia.org/resource/Leonard_Darwin> .
+
+<http://fr.dbpedia.org/resource/Leonard_Darwin>
+        owl:sameAs  <http://dbpedia.org/resource/Leonard_Darwin> .

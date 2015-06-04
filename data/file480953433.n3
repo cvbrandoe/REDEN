@@ -1,0 +1,57 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/13335633/charles_9/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13335633j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13335633j#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1550 ;
+        bnf-onto:lastYear               1611 ;
+        rdagroup2elements:biographicalInformation
+                "Roi de Suéde de 1607 à 1611. - 3ème fils de Gustave Vasa, régent en 1595, il fit déposer son neveu Sigismond en 1607" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/sw#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1550/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1611/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> , <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Stockholm" ;
+        rdagroup2elements:placeOfDeath  "Nyköping (Suède)" ;
+        bio:birth                       "1550-10-04" ;
+        bio:death                       "1611-10-30" ;
+        owl:sameAs                      <http://viaf.org/viaf/61693133> , <http://www.idref.fr/094162263> ;
+        foaf:birthday                   "10-04" ;
+        foaf:familyName                 "Charles" ;
+        foaf:gender                     "male" ;
+        foaf:page                       <http://data.bnf.fr/13335633/charles_9/> .
+
+<http://data.bnf.fr/ark:/12148/cb31930715n#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb13335633j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13335633j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13335633j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13335633j> ;
+        bnf-onto:FRBNF        13335633 ;
+        isni:identifierValid  "0000000079764433" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000079764433> ;
+        skos:altLabel         "Carolus IX (roi de Suède, 1550-1611)"@la , "Karl IX (roi de Suède, 1550-1611)"@sv ;
+        skos:editorialNote    "Avis de Charles, roi de Suède, à son fils Gustave. Précédé de : Instruction pour une reine chrétienne, [s. d.]. - . - Warhafftiger Abdruck der Missiven welche der Durchleuchtigste Fürst und Herr, Herr Carolus der Neunde, der Schweden König an den Durchleuchtigsten, ...., 1608. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/094162263> , <http://isni-url.oclc.nl/isni/0000000079764433> , <http://viaf.org/viaf/61693133> ;
+        skos:note             "Roi de Suéde de 1607 à 1611. - 3ème fils de Gustave Vasa, régent en 1595, il fit déposer son neveu Sigismond en 1607"@fr ;
+        skos:prefLabel        "Charles IX (roi de Suède, 1550-1611)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13335633j#foaf:Person> .

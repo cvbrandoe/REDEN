@@ -1,0 +1,42 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb16212900h>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb16212900h> ;
+        bnf-onto:FRBNF  16212900 ;
+        skos:altLabel   "Jasmy Alvin"@fr , "Léa Jacob"@fr , "Jasmy Van Dongen"@fr , "Jasmy van Dongen"@fr ;
+        skos:note       "Couturière. - Compagne de l'artiste Kees van Dongen (1877-1968)"@fr ;
+        skos:prefLabel  "Jasmy Jacob"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb16212900h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc86449/ca886#frbr:Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb16212900h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16212900h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16212900h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16212900h#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Couturière. - Compagne de l'artiste Kees van Dongen (1877-1968)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "19.." ;
+        foaf:familyName                "Jacob" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Jasmy" ;
+        foaf:name                      "Jasmy Jacob" ;
+        foaf:page                      <http://data.bnf.fr/16212900/jasmy_jacob/> .

@@ -1,0 +1,42 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38244659x#frbr:Expression>
+        bnfroles:r1220       <http://data.bnf.fr/ark:/12148/cb13948664s#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13948664s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13948664s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13948664s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13948664s> ;
+        bnf-onto:FRBNF        13948664 ;
+        isni:identifierValid  "0000000078392324" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000078392324> ;
+        skos:editorialNote    "Kathleen Ferrier [Enregistrement sonore] / tradit., Herbert Hughes, Roger Quilter, Charles Villiers Stanford... [et al.] ; K. Ferrier, A ; Phyllis Spurr, p ; John Newmark, p ; Frederick Stone, p ; Max Gilbert, alto... DECCA AKF1. - . - Who's who in music. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/34648839> , <http://isni-url.oclc.nl/isni/0000000078392324> , <http://www.idref.fr/163828636> ;
+        skos:note             "Altiste"@fr ;
+        skos:prefLabel        "Max Gilbert"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13948664s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13948664s#foaf:Person>
+        owl:sameAs      <http://www.idref.fr/163828636> , <http://viaf.org/viaf/34648839> ;
+        foaf:depiction  <http://gallica.bnf.fr/ark:/12148/bpt6k88030400.thumbnail> .
+
+<http://data.bnf.fr/ark:/12148/cb378450629#frbr:Expression>
+        bnfroles:r1220       <http://data.bnf.fr/ark:/12148/cb13948664s#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13948664s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13948664s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38153683k#frbr:Expression>
+        bnfroles:r1220       <http://data.bnf.fr/ark:/12148/cb13948664s#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13948664s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13948664s#foaf:Person> .

@@ -1,0 +1,67 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1937 ;
+        rdagroup2elements:biographicalInformation
+                "Directeur de production. - Poète" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/51720647> , <http://www.idref.fr/029475678> ;
+        foaf:familyName     "Le Franc" ;
+        foaf:givenName      "Philippe" ;
+        foaf:name           "Philippe Le Franc" ;
+        foaf:page           <http://data.bnf.fr/12109507/philippe_le_franc/> .
+
+<http://data.bnf.fr/ark:/12148/cb424004445#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421597393#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35120036n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35593287z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12109507k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12109507k> ;
+        bnf-onto:FRBNF        12109507 ;
+        isni:identifierValid  "000000000004002X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000000004002X> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000000004002X> , <http://viaf.org/viaf/51720647> , <http://www.idref.fr/029475678> ;
+        skos:note             "Directeur de production. - Poète"@fr ;
+        skos:prefLabel        "Philippe Le Franc"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38817778m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34999383v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12109507k#foaf:Person> .

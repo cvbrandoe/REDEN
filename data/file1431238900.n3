@@ -1,0 +1,74 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40217175w#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42721488z#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb410832503#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37472288r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374722893#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370849562#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb391946170#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1938 ;
+        rdagroup2elements:biographicalInformation
+                "Pseudonyme de Fritz Weigle. - Caricaturiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        owl:sameAs          <http://www.idref.fr/058931538> , <http://dbpedia.org/resource/F._W._Bernstein> , <http://viaf.org/viaf/56715651> ;
+        foaf:depiction      <http://commons.wikimedia.org/wiki/Special:FilePath/FW_Bernstein.jpg?width=300> ;
+        foaf:familyName     "Bernstein" ;
+        foaf:givenName      "F. W." ;
+        foaf:name           "F. W. Bernstein" ;
+        foaf:page           <http://data.bnf.fr/12503999/f__w__bernstein/> .
+
+<http://data.bnf.fr/ark:/12148/cb12503999d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12503999d> , <http://fr.wikipedia.org/wiki/F._W._Bernstein> ;
+        bnf-onto:FRBNF        12503999 ;
+        isni:identifierValid  "000000010904207X" ;
+        owl:sameAs            <http://isni.org/isni/000000010904207X> ;
+        skos:editorialNote    "Eckermann und sein Goethe / Eckhard Henscheid, Bernd Eilert ; ill. von F. W. Bernstein, 1994. - . - Pseudonyme : ein Lexikon, Decknamen der Autoren deutschsprachiger erzählender Literatur, 1991. - . -"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/F._W._Bernstein> , <http://dbpedia.org/resource/F._W._Bernstein> , <http://www.idref.fr/058931538> , <http://viaf.org/viaf/56715651> , <http://isni.org/isni/000000010904207X> ;
+        skos:note             "Pseudonyme de Fritz Weigle. - Caricaturiste"@fr ;
+        skos:prefLabel        "F. W. Bernstein"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12503999d#foaf:Person> .

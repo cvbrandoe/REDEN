@@ -1,0 +1,100 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1956 ;
+        rdagroup2elements:biographicalInformation
+                "Historienne et professeur. - En poste, Loyola College, Baltimore, Md. (en 1992)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://dbpedia.org/resource/Kelly_DeVries> , <http://www.idref.fr/034397914> , <http://viaf.org/viaf/112980851> ;
+        foaf:familyName     "DeVries" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Kelly" ;
+        foaf:name           "Kelly DeVries" ;
+        foaf:page           <http://data.bnf.fr/12515751/kelly_devries/> .
+
+<http://data.bnf.fr/ark:/12148/cb41291549s#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41218608h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12515751j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12515751j> , <http://fr.wikipedia.org/wiki/Kelly_DeVries> ;
+        bnf-onto:FRBNF        12515751 ;
+        isni:identifierValid  "000000012148142X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000012148142X> ;
+        skos:altLabel         "Kelly Robert DeVries"@fr ;
+        skos:editorialNote    "Medieval military technology / Kelly DeVries, 1992. - . - LC Authorities. - http://authorities.loc.gov. - 2014-01-30"@fr ;
+        skos:exactMatch       <http://www.idref.fr/034397914> , <http://isni-url.oclc.nl/isni/000000012148142X> , <http://viaf.org/viaf/112980851> , <http://fr.wikipedia.org/wiki/Kelly_DeVries> , <http://dbpedia.org/resource/Kelly_DeVries> ;
+        skos:note             "Historienne et professeur. - En poste, Loyola College, Baltimore, Md. (en 1992)"@fr ;
+        skos:prefLabel        "Kelly DeVries"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37214456k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43630716v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38904687j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40137768h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37110547r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388920486#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39282050n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39050694g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37489048v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374754959#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12515751j#foaf:Person> .

@@ -1,0 +1,70 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb41302466n#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb413014234#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41186793n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41303400z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14506093v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14506093v> ;
+        bnf-onto:FRBNF        14506093 ;
+        isni:identifierValid  "0000000082047224" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000082047224> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000082047224> , <http://www.idref.fr/074661108> , <http://viaf.org/viaf/19912125> ;
+        skos:note             "Ingénieur. - Consultant en gestion de projet. - Chef de projet d'un groupe pharmaceutique (en 2003)"@fr ;
+        skos:prefLabel        "Tannguy Le Dantec (1966-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1966 ;
+        rdagroup2elements:biographicalInformation
+                "Ingénieur. - Consultant en gestion de projet. - Chef de projet d'un groupe pharmaceutique (en 2003)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1966/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs                     <http://viaf.org/viaf/19912125> , <http://www.idref.fr/074661108> ;
+        foaf:birthday                  "10-02" ;
+        foaf:familyName                "Le Dantec" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Tannguy" ;
+        foaf:name                      "Tannguy Le Dantec" ;
+        foaf:page                      <http://data.bnf.fr/14506093/tannguy_le_dantec/> .
+
+<http://data.bnf.fr/ark:/12148/cb413471049#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39077059d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14506093v#foaf:Person> .

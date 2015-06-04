@@ -1,0 +1,100 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb146563273>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb146563273> ;
+        bnf-onto:FRBNF        14656327 ;
+        isni:identifierValid  "0000000002963063" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000002963063> ;
+        skos:editorialNote    "BNF-ASP. La jarretière de la mariée / EugèneScribe, Jean-Henri Dupin, théâtre des Variétés, 1816; avec Pauline (Henriette). - . - Lyonnet. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000002963063> , <http://viaf.org/viaf/15033090> , <http://www.idref.fr/153685964> ;
+        skos:note             "Pseudonyme de Jeanne Marguerite Nicole Lavrillière. - Actrice du Théâtre des Variétés (1807-1837)"@fr ;
+        skos:prefLabel        "Mademoiselle Pauline (1789-1844)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401676696#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394990230#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394990470#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39499065x#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394990308#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> .
+
+<http://data.bnf.fr/14656327/mademoiselle_pauline/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39499024b#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1789 ;
+        bnf-onto:lastYear               1844 ;
+        rdagroup2elements:biographicalInformation
+                "Pseudonyme de Jeanne Marguerite Nicole Lavrillière. - Actrice du Théâtre des Variétés (1807-1837)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1789/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1844/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Versailles" ;
+        bio:birth                       "1789-11-14" ;
+        bio:death                       "1844-11-20" ;
+        owl:sameAs                      <http://viaf.org/viaf/15033090> , <http://www.idref.fr/153685964> ;
+        foaf:birthday                   "11-14" ;
+        foaf:familyName                 "Pauline" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Mademoiselle" ;
+        foaf:name                       "Mademoiselle Pauline" ;
+        foaf:page                       <http://data.bnf.fr/14656327/mademoiselle_pauline/> .
+
+<http://data.bnf.fr/ark:/12148/cb394990381#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39499004q#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394990459#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394990815#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146563273#foaf:Person> .

@@ -1,0 +1,69 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb345754743#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119093136>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb119093136> ;
+        bnf-onto:FRBNF   11909313 ;
+        skos:exactMatch  <http://www.idref.fr/02694409X> , <http://viaf.org/viaf/56611874> ;
+        skos:note        "Chargé de mission à l'ANPE, en retraite. - Poète"@fr ;
+        skos:prefLabel   "Élie Kahn"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1927 ;
+        rdagroup2elements:biographicalInformation
+                "Chargé de mission à l'ANPE, en retraite. - Poète" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/56611874> , <http://www.idref.fr/02694409X> ;
+        foaf:familyName     "Kahn" ;
+        foaf:givenName      "Élie" ;
+        foaf:name           "Élie Kahn" ;
+        foaf:page           <http://data.bnf.fr/11909313/elie_kahn/> .
+
+<http://data.bnf.fr/ark:/12148/cb39239433t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35774579b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39076791k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35684946h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37101911w#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357341066#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119093136#foaf:Person> .

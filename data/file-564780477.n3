@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35362885q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35566578x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12126199n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12126199n> ;
+        bnf-onto:FRBNF        12126199 ;
+        isni:identifierValid  "0000000081646794" ;
+        owl:sameAs            <http://isni.org/isni/0000000081646794> ;
+        skos:editorialNote    "Le Sceptre et la foudre : Benjamin Franklin à Paris, 1776-1785 / C.-A. Lopez, 1990. - . - LCNA, 1986. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000081646794> , <http://www.idref.fr/029692466> , <http://viaf.org/viaf/92082542> ;
+        skos:note             "Francophone d'origine belge résidant aux Etats-Unis (en 1990)"@fr ;
+        skos:prefLabel        "Claude Anne Lopez"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37496494m#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> .
+
+<http://data.bnf.fr/12126199/claude_anne_lopez/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb350943341#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Francophone d'origine belge résidant aux Etats-Unis (en 1990)" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> , <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/92082542> , <http://www.idref.fr/029692466> ;
+        foaf:familyName  "Lopez" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Claude Anne" ;
+        foaf:name        "Claude Anne Lopez" ;
+        foaf:page        <http://data.bnf.fr/12126199/claude_anne_lopez/> .
+
+<http://data.bnf.fr/ark:/12148/cb38894066m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12126199n#foaf:Person> .

@@ -1,0 +1,81 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1691 ;
+        bnf-onto:lastYear              1771 ;
+        rdagroup2elements:biographicalInformation
+                "Dominicain (selon Cioranescu, Grente, Migne), oratorien (d'après l'une de ses publications). - Docteur de Sorbonne. - Prédicateur ordinaire du Roi" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1691/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1771/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1691" ;
+        bio:death                      "1771-06-20" ;
+        owl:sameAs                     <http://www.idref.fr/164257209> , <http://viaf.org/viaf/76350995> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k5447782h.thumbnail> ;
+        foaf:familyName                "Renaud" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Louis" ;
+        foaf:name                      "Louis Renaud" ;
+        foaf:page                      <http://data.bnf.fr/12131209/louis_renaud/> .
+
+<http://data.bnf.fr/ark:/12148/cb121312094>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb121312094> ;
+        bnf-onto:FRBNF        12131209 ;
+        isni:identifierValid  "0000000000643293" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000000643293> ;
+        skos:altLabel         "P.** de l' Oratoire (1691-1771)"@fr ;
+        skos:editorialNote    "Au Roy à son retour de l' armée / signé : Le P.** de l' Oratoire, 1744. - . - Cioranescu 18 s.. - . -"@fr , "Grente 18 s.. - . - Migne, Orateurs sacrés. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/76350995> , <http://www.idref.fr/164257209> , <http://isni-url.oclc.nl/isni/0000000000643293> ;
+        skos:note             "Dominicain (selon Cioranescu, Grente, Migne), oratorien (d'après l'une de ses publications). - Docteur de Sorbonne. - Prédicateur ordinaire du Roi"@fr ;
+        skos:prefLabel        "Louis Renaud (1691-1771)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36430421k#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31196585k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31196583w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361264308#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311965847#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31196586x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31196582j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121312094#foaf:Person> .

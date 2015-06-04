@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb385800705#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Musicien et auteur de contes pour enfants. - Batteur, percussionniste et compositeur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/17431081> , <http://www.idref.fr/134253418> ;
+        foaf:familyName  "Wolff" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Marc" ;
+        foaf:name        "Marc Wolff" ;
+        foaf:page        <http://data.bnf.fr/14146223/marc_wolff/> .
+
+<http://data.bnf.fr/ark:/12148/cb41209843m#frbr:Expression>
+        bnfroles:r1667       <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42585383t#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> ;
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14146223c>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14146223c> ;
+        bnf-onto:FRBNF   14146223 ;
+        skos:exactMatch  <http://www.idref.fr/134253418> , <http://viaf.org/viaf/17431081> ;
+        skos:note        "Musicien et auteur de contes pour enfants. - Batteur, percussionniste et compositeur"@fr ;
+        skos:prefLabel   "Marc Wolff"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41209927n#frbr:Expression>
+        bnfroles:r1650       <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41209864k#frbr:Expression>
+        bnfroles:r1650       <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414432383#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14146223c#foaf:Person> .

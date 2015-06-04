@@ -1,0 +1,41 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb131923614>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb131923614> ;
+        bnf-onto:FRBNF   13192361 ;
+        skos:exactMatch  <http://www.idref.fr/03548733X> ;
+        skos:note        "Ecrivain, critique, avocat allemand"@fr ;
+        skos:prefLabel   "Max Bernstein (1854-1925)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb131923614#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb131923614#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1854 ;
+        bnf-onto:lastYear              1925 ;
+        rdagroup2elements:biographicalInformation
+                "Ecrivain, critique, avocat allemand" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1854/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1925/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        bio:birth                      "1854" ;
+        bio:death                      "1925" ;
+        owl:sameAs                     <http://www.idref.fr/03548733X> ;
+        foaf:familyName                "Bernstein" ;
+        foaf:givenName                 "Max" ;
+        foaf:name                      "Max Bernstein" ;
+        foaf:page                      <http://data.bnf.fr/13192361/max_bernstein/> .
+
+<http://data.bnf.fr/13192361/max_bernstein/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb131923614#foaf:Person> .

@@ -1,0 +1,100 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34382922c#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1908 ;
+        bnf-onto:lastYear               2000 ;
+        rdagroup2elements:biographicalInformation
+                "Haut-fonctionnaire. - Inspecteur de l'Instruction publique. - Directeur de l'administration générale au Ministère de l'Éducation nationale. - Fondateur de l'Institut national de recherche pédagogique (1950-1960). - Fondateur et délégué général du Comité universitaire d'information pédagogique. - Directeur de l'hebdomadaire \"L'Éducation nationale\", fondé avec Gustave Monod (1944-1970)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1908/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/2000/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Éducation" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/370/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Mende (Lozère)" ;
+        rdagroup2elements:placeOfDeath  "Mesnil-Saint-Denis(Yvelines)" ;
+        bio:birth                       "1908-07-30" ;
+        bio:death                       "2000-01-03" ;
+        owl:sameAs                      <http://viaf.org/viaf/88054126> , <http://www.idref.fr/032331835> ;
+        foaf:birthday                   "07-30" ;
+        foaf:familyName                 "Cros" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Louis" ;
+        foaf:name                       "Louis Cros" ;
+        foaf:page                       <http://data.bnf.fr/12338203/louis_cros/> .
+
+<http://data.bnf.fr/ark:/12148/cb37390854v#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353488267#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37591173s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123382033>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb123382033> ;
+        bnf-onto:FRBNF        12338203 ;
+        isni:identifierValid  "0000000078326271" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000078326271> ;
+        skos:editorialNote    "BN Cat. gén. suppl.. - . - BN Cat. gén. 1960-1970. - . -"@fr , "Les techniques audio-visuelles au service de l'enseignement / sous la dir. de Robert Lefranc ; préf. de Louis Cros ; avant-propos de R. Vettier, 1961. - . - Louis Cros, l'imagination à l'oeuvre / [textes de Robert Mandra, Jean-Louis Crémieux-Brilhac, Alain Blanchard... et al.] ; [publ. par le Comité universitaire d'information pédagogique], 2002. - . -"@fr , "Monde, 2000-01-06. - . - Qui était qui, XXe s. / Béatrice et Michel Wattel, 2005. - . - WW France, 1959-1960. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000078326271> , <http://www.idref.fr/032331835> , <http://viaf.org/viaf/88054126> ;
+        skos:note             "Haut-fonctionnaire. - Inspecteur de l'Instruction publique. - Directeur de l'administration générale au Ministère de l'Éducation nationale. - Fondateur de l'Institut national de recherche pédagogique (1950-1960). - Fondateur et délégué général du Comité universitaire d'information pédagogique. - Directeur de l'hebdomadaire \"L'Éducation nationale\", fondé avec Gustave Monod (1944-1970)"@fr ;
+        skos:prefLabel        "Louis Cros (1908-2000)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34672071d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35387931p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346901034#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc573082/ca874#frbr:Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34666926t#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> .
+
+<http://data.bnf.fr/12338203/louis_cros/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb123382033#foaf:Person> .

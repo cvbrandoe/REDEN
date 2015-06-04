@@ -1,0 +1,102 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb354727149#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40376570f#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35482312q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11914371c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11914371c> ;
+        bnf-onto:FRBNF        11914371 ;
+        isni:identifierValid  "0000000109069125" ;
+        owl:sameAs            <http://isni.org/isni/0000000109069125> ;
+        skos:editorialNote    "Le Corps et son image : photographies du 19e siècle / A. Rouillé, B. Marbot, 1988. - . - Les Multiples inventions de la photographie, 1989. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/61549232> , <http://www.idref.fr/027007278> , <http://isni.org/isni/0000000109069125> ;
+        skos:note             "Conservateur au Département des estampes de la Bibliothèque nationale, Paris (en 1989)"@fr ;
+        skos:prefLabel        "Bernard Marbot"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37652708k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34579593m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34855569w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> .
+
+<http://data.bnf.fr/11914371/bernard_marbot/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34681089f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1937 ;
+        rdagroup2elements:biographicalInformation
+                "Conservateur au Département des estampes de la Bibliothèque nationale, Paris (en 1989)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/027007278> , <http://viaf.org/viaf/61549232> ;
+        foaf:familyName     "Marbot" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Bernard" ;
+        foaf:name           "Bernard Marbot" ;
+        foaf:page           <http://data.bnf.fr/11914371/bernard_marbot/> .
+
+<http://data.bnf.fr/ark:/12148/cb349582914#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347593396#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb358163943#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35771880n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372200781#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914371c#foaf:Person> .

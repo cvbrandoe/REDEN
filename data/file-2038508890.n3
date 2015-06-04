@@ -1,0 +1,70 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb411401257#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31665106b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33224725s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316651081#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13554043q>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13554043q> ;
+        bnf-onto:FRBNF      13554043 ;
+        skos:altLabel       "Pierre B. Wolff"@fr ;
+        skos:editorialNote  "La route d'un musicien : Georges Migot / Pierre Wolff, 1933. - . - Usines USA / Pierre B. Wolff, 1947. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/086116789> , <http://viaf.org/viaf/268504904> ;
+        skos:note           "Docteur en droit (Paris, 1930)"@fr ;
+        skos:prefLabel      "Pierre Wolff (économiste)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en droit (Paris, 1930)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/268504904> , <http://www.idref.fr/086116789> ;
+        foaf:familyName  "Wolff" ;
+        foaf:givenName   "Pierre" ;
+        foaf:name        "Pierre Wolff" ;
+        foaf:page        <http://data.bnf.fr/13554043/pierre_wolff/> .
+
+<http://data.bnf.fr/ark:/12148/cb37154806s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316651050#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31665107p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13554043q#foaf:Person> .

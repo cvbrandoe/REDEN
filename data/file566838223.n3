@@ -1,0 +1,65 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb436347938#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13492742g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13492742g> ;
+        bnf-onto:FRBNF        13492742 ;
+        isni:identifierValid  "0000000121195490" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121195490> ;
+        skos:altLabel         "Andrew John Spencer"@fr ;
+        skos:editorialNote    "The handbook of morphology / ed. by Andrew Spencer and Arnold M. Zwicky, 1998. - . - BLNA, 1997-04. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/050276751> , <http://isni-url.oclc.nl/isni/0000000121195490> , <http://viaf.org/viaf/7542592> ;
+        skos:note             "Docteur en linguistique (University of Essex, GB, 1980). - Professeur, Department of language and linguistics, University of Essex, Colchester, GB (depuis 1999)"@fr ;
+        skos:prefLabel        "Andrew Spencer"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40096077c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356162934#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb375314485#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41322688x#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13492742g#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1953 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en linguistique (University of Essex, GB, 1980). - Professeur, Department of language and linguistics, University of Essex, Colchester, GB (depuis 1999)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/050276751> , <http://viaf.org/viaf/7542592> ;
+        foaf:familyName     "Spencer" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Andrew" ;
+        foaf:name           "Andrew Spencer" ;
+        foaf:page           <http://data.bnf.fr/13492742/andrew_spencer/> .

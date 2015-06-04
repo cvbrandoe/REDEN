@@ -1,0 +1,58 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb13528114r#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en sciences de la communication (Lyon 3, 1997). - Psychologue. - Maître de conférences en sciences de la communication à l'Université de Nice (en 2003). - Mène des recherches sur l'influence des médias et de la publicité au sein du Laboratoire de psychologie sociale, Université de Nice (en 2003)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/050402668> , <http://viaf.org/viaf/54306535> ;
+        foaf:familyName  "Courbet" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Didier" ;
+        foaf:name        "Didier Courbet" ;
+        foaf:page        <http://data.bnf.fr/13528114/didier_courbet/> .
+
+<http://data.bnf.fr/ark:/12148/cb13528114r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13528114r> ;
+        bnf-onto:FRBNF        13528114 ;
+        isni:identifierValid  "0000000019473415" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000019473415> ;
+        skos:editorialNote    "Puissance de la télévision : stratégies de communication et influence des marques / Didier Courbet, 1999. - . - La télévision et ses influences / sous la dir. de Didier Courbet et Marie-Pierre Fourquet, 2003. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/54306535> , <http://www.idref.fr/050402668> , <http://isni-url.oclc.nl/isni/0000000019473415> ;
+        skos:note             "Docteur en sciences de la communication (Lyon 3, 1997). - Psychologue. - Maître de conférences en sciences de la communication à l'Université de Nice (en 2003). - Mène des recherches sur l'influence des médias et de la publicité au sein du Laboratoire de psychologie sociale, Université de Nice (en 2003)"@fr ;
+        skos:prefLabel        "Didier Courbet"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13528114r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437501352#frbr:Expression>
+        bnfroles:r540        <http://data.bnf.fr/ark:/12148/cb13528114r#foaf:Person> ;
+        marcrel:aft          <http://data.bnf.fr/ark:/12148/cb13528114r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13528114r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42380329g#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb13528114r#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb13528114r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13528114r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370400276#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13528114r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13528114r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13528114r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390943813#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb13528114r#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb13528114r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13528114r#foaf:Person> .

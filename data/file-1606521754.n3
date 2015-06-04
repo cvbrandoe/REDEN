@@ -1,0 +1,63 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb42358951m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> .
+
+<http://data.bnf.fr/14007990/charles/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14007990p>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb14007990p> ;
+        bnf-onto:FRBNF  14007990 ;
+        skos:note       "Son Altesse Royale, héritier du Royaume britanique"@fr ;
+        skos:prefLabel  "Charles (prince de Galles)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38385555h#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> ;
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38161338n#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383634707#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> ;
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381623157#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14007990p#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1948 ;
+        rdagroup2elements:biographicalInformation
+                "Son Altesse Royale, héritier du Royaume britanique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        foaf:depiction      <http://gallica.bnf.fr/ark:/12148/btv1b103349112.thumbnail> ;
+        foaf:familyName     "Charles" ;
+        foaf:gender         "male" ;
+        foaf:page           <http://data.bnf.fr/14007990/charles/> .

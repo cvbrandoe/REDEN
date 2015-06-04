@@ -1,0 +1,53 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35147552c#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb121253064#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb121253064#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121253064#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121253064>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb121253064> ;
+        bnf-onto:FRBNF   12125306 ;
+        skos:exactMatch  <http://viaf.org/viaf/44098> ;
+        skos:note        "Auteur et adaptateur d'ouvrages pour la jeunesse"@fr , "Traduit de l'italien en français"@fr ;
+        skos:prefLabel   "Jean Luc Renaud (auteur d'ouvrages pour la jeunesse)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb121253064#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35147550p#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb121253064#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb121253064#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121253064#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121253064#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Traduit de l'italien en français" , "Auteur et adaptateur d'ouvrages pour la jeunesse" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/44098> ;
+        foaf:familyName  "Renaud" ;
+        foaf:givenName   "Jean Luc" ;
+        foaf:name        "Jean Luc Renaud" ;
+        foaf:page        <http://data.bnf.fr/12125306/jean_luc_renaud/> .
+
+<http://data.bnf.fr/ark:/12148/cb35147544r#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb121253064#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb121253064#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121253064#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35151894w#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb121253064#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb121253064#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121253064#foaf:Person> .

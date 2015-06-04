@@ -1,0 +1,71 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb32485644g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13554497r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13554497r> ;
+        bnf-onto:FRBNF        13554497 ;
+        isni:identifierValid  "0000000001322600" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000001322600> ;
+        skos:editorialNote    "Rime e ritmi latini / Anonimo Genovese ; ed. critica a cura di Jean Nicolas, 1994. - . - In memoriam : Jean Nicolas in Revue des études italiennes, 2003, nn. 3-4, p. 227. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000001322600> , <http://viaf.org/viaf/291663696> , <http://www.idref.fr/075542420> ;
+        skos:note             "Italianiste. - Professeur émérite, Université de Nice-Sophia Antipolis"@fr ;
+        skos:prefLabel        "Jean Nicolas (1925-2003)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1925 ;
+        bnf-onto:lastYear              2003 ;
+        rdagroup2elements:biographicalInformation
+                "Italianiste. - Professeur émérite, Université de Nice-Sophia Antipolis" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1925/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2003/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1925-05-29" ;
+        bio:death                      "2003" ;
+        owl:sameAs                     <http://viaf.org/viaf/291663696> , <http://www.idref.fr/075542420> ;
+        foaf:birthday                  "05-29" ;
+        foaf:familyName                "Nicolas" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Nicolas" ;
+        foaf:page                      <http://data.bnf.fr/13554497/jean_nicolas/> .
+
+<http://data.bnf.fr/ark:/12148/cb40123059f#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32485645t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb369742868#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb375227915#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13554497r#foaf:Person> .

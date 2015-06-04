@@ -1,0 +1,62 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb36190747t#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb130003472>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb130003472> ;
+        bnf-onto:FRBNF        13000347 ;
+        isni:identifierValid  "0000000035727294" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000035727294> ;
+        skos:editorialNote    "Le rôle de l'orientation et du conseil pour les adultes sur un marché du travail en évolution. Rapport final sur l'EUROCOUNSEL : programme de recherche-action sur le conseil et le chômage de longue durée / Fondation européenne pour l'amélioration des conditions de vie et de travail ; [rapport réd. par] Glenys Watt, 1997. - . - BLNA, 1997-12. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/033689490> , <http://isni-url.oclc.nl/isni/0000000035727294> , <http://viaf.org/viaf/40057507> ;
+        skos:note             "Coordinatrice technique du programme Eurocounsel et directrice de la société de conseil Blake Stevenson Ltd., Édimbourg, Écosse (en 1997)"@fr ;
+        skos:prefLabel        "Glenys Watt"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35748113n#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Coordinatrice technique du programme Eurocounsel et directrice de la société de conseil Blake Stevenson Ltd., Édimbourg, Écosse (en 1997)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://www.idref.fr/033689490> , <http://viaf.org/viaf/40057507> ;
+        foaf:familyName  "Watt" ;
+        foaf:givenName   "Glenys" ;
+        foaf:name        "Glenys Watt" ;
+        foaf:page        <http://data.bnf.fr/13000347/glenys_watt/> .
+
+<http://data.bnf.fr/ark:/12148/cb35748210w#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357421585#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37177226w#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb130003472#foaf:Person> .

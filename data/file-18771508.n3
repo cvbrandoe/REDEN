@@ -1,0 +1,71 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40043016d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39006217b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390025830#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14532160t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14532160t> ;
+        bnf-onto:FRBNF        14532160 ;
+        isni:identifierValid  "0000000109978273" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109978273> ;
+        skos:altLabel         "Lawrence Wolff (1957-....)"@fr ;
+        skos:editorialNote    "Le mirage russe au XVIIIe siècle / textes publ. par Sergueï Karp & Larry Wolff, 2001. - . - The idea of Galicia : history and fantasy in Habsburg political culture / Larry Wolff, 2010. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/064814432> , <http://viaf.org/viaf/91736367> , <http://isni-url.oclc.nl/isni/0000000109978273> ;
+        skos:note             "Historien spécialiste des relations culturelles entre l'Europe de l'Ouest et le monde slave à l'époque des Lumières. - Professeur d'histoire, Boston College (en 2001) ; University of New York (en 2010)"@fr , "Ecrit aussi en français"@fr ;
+        skos:prefLabel        "Larry Wolff (1957-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412323795#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42254970r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1957 ;
+        rdagroup2elements:biographicalInformation
+                "Ecrit aussi en français" , "Historien spécialiste des relations culturelles entre l'Europe de l'Ouest et le monde slave à l'époque des Lumières. - Professeur d'histoire, Boston College (en 2001) ; University of New York (en 2010)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1957/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs                     <http://viaf.org/viaf/91736367> , <http://www.idref.fr/064814432> ;
+        foaf:familyName                "Wolff" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Larry" ;
+        foaf:name                      "Larry Wolff" ;
+        foaf:page                      <http://data.bnf.fr/14532160/larry_wolff/> .
+
+<http://data.bnf.fr/ark:/12148/cb435195564#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14532160t#foaf:Person> .

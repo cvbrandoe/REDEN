@@ -1,0 +1,27 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14841691z#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Danseur américain actif à Broadway pendant les années 1920-30" ;
+        foaf:familyName  "Scott" ;
+        foaf:givenName   "J. Blake" ;
+        foaf:name        "J. Blake Scott" ;
+        foaf:page        <http://data.bnf.fr/14841691/j__blake_scott/> .
+
+<http://data.bnf.fr/ark:/12148/cb14841691z>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb14841691z> ;
+        bnf-onto:FRBNF  14841691 ;
+        skos:note       "Danseur américain actif à Broadway pendant les années 1920-30"@fr ;
+        skos:prefLabel  "J. Blake Scott (danseur)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb14841691z#foaf:Person> .
+
+<http://data.bnf.fr/14841691/j__blake_scott/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14841691z#foaf:Person> .

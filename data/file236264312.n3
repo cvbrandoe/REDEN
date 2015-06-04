@@ -1,0 +1,42 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13332428p#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1905 ;
+        bnf-onto:lastYear              1966 ;
+        rdagroup2elements:biographicalInformation
+                "Poète et religieux français" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1905/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1966/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1905" ;
+        bio:death                      "1966-03-11" ;
+        owl:sameAs                     <http://www.idref.fr/035729074> ;
+        foaf:familyName                "Bourgoint" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Bourgoint" ;
+        foaf:page                      <http://data.bnf.fr/13332428/jean_bourgoint/> .
+
+<http://data.bnf.fr/13332428/jean_bourgoint/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13332428p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13332428p>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb13332428p> ;
+        bnf-onto:FRBNF   13332428 ;
+        skos:altLabel    "Pascal Bourgoint (1905-1966)"@fr , "Pascal (trappiste, 1905-1966)"@fr ;
+        skos:exactMatch  <http://www.idref.fr/035729074> ;
+        skos:note        "Poète et religieux français"@fr ;
+        skos:prefLabel   "Jean Bourgoint (1905-1966)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb13332428p#foaf:Person> .

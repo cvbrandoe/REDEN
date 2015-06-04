@@ -1,0 +1,48 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb16131042z#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1697 ;
+        bnf-onto:lastYear              1797 ;
+        rdagroup2elements:biographicalInformation
+                "Imprimeur-libraire. - Succède en 1720 à sa mère, veuve de l'imprimeur-libraire de Lyon François Barbier. S'attribue sans qualité pour cela le titre d'\"imprimeur et libraire ordinaire du Roi\" de son père. Cesse en 1726 d'imprimer la \"Gazette\" jusque-là imprimée par son père. Dit à tort âgé de 70 ans lors de l'enquête royale de 1764. Doyen de sa corporation à partir de 1767. Encore en activité en 1788. Décédé à Lyon en fév. 1797" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1697/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1797/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1720-1788" ;
+        bio:birth                      "1697-11-13" ;
+        bio:death                      "1797-02-02" ;
+        owl:sameAs                     <http://viaf.org/viaf/100344409> ;
+        foaf:birthday                  "11-13" ;
+        foaf:familyName                "Barbier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jacques-Joseph" ;
+        foaf:name                      "Jacques-Joseph Barbier" ;
+        foaf:page                      <http://data.bnf.fr/16131042/jacques-joseph_barbier/> .
+
+<http://data.bnf.fr/ark:/12148/cb367879514#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb16131042z#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb16131042z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16131042z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16131042z>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16131042z> ;
+        bnf-onto:FRBNF      16131042 ;
+        skos:editorialNote  "Vingtrinier. - . - Audin, M. Lyon, Impr. du Roi. - . - Feyel. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/100344409> ;
+        skos:note           "Imprimeur-libraire. - Succède en 1720 à sa mère, veuve de l'imprimeur-libraire de Lyon François Barbier. S'attribue sans qualité pour cela le titre d'\"imprimeur et libraire ordinaire du Roi\" de son père. Cesse en 1726 d'imprimer la \"Gazette\" jusque-là imprimée par son père. Dit à tort âgé de 70 ans lors de l'enquête royale de 1764. Doyen de sa corporation à partir de 1767. Encore en activité en 1788. Décédé à Lyon en fév. 1797"@fr ;
+        skos:prefLabel      "Jacques-Joseph Barbier (1697-1797)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16131042z#foaf:Person> .

@@ -1,0 +1,77 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13163526s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13163526s> ;
+        bnf-onto:FRBNF        13163526 ;
+        isni:identifierValid  "0000000081060793" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081060793> ;
+        skos:editorialNote    "Trésor de la chapelle des ducs de Savoie aux XVe et XVIe siècles, étude historique et archéologique / par A. Fabre, 1868. - . - DBF : Fabre (Louis-A̲d̲o̲l̲p̲h̲e̲). - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/121268446> , <http://viaf.org/viaf/27203745> , <http://isni-url.oclc.nl/isni/0000000081060793> ;
+        skos:note             "Président du tribunal de Chambéry puis de Saint-Étienne. - Auteur de monographies régionales et d'études sur l'histoire du droit"@fr ;
+        skos:prefLabel        "Adolphe Fabre (1819-1886)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30413260d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30413254g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1819 ;
+        bnf-onto:lastYear              1886 ;
+        rdagroup2elements:biographicalInformation
+                "Président du tribunal de Chambéry puis de Saint-Étienne. - Auteur de monographies régionales et d'études sur l'histoire du droit" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1819/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1886/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1819-08-31" ;
+        bio:death                      "1886-08-07" ;
+        owl:sameAs                     <http://www.idref.fr/121268446> , <http://viaf.org/viaf/27203745> ;
+        foaf:birthday                  "08-31" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k74140w.thumbnail> ;
+        foaf:familyName                "Fabre" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Adolphe" ;
+        foaf:name                      "Adolphe Fabre" ;
+        foaf:page                      <http://data.bnf.fr/13163526/adolphe_fabre/> .
+
+<http://data.bnf.fr/ark:/12148/cb30413266g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34065374r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304132565#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb312050482#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13163526s#foaf:Person> .

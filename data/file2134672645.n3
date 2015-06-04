@@ -1,0 +1,32 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb149747865#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1701-1800/> ;
+        bio:birth                      "17.." ;
+        bio:death                      "17.." ;
+        foaf:familyName                "Giraud" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean Jacques" ;
+        foaf:name                      "Jean Jacques Giraud" ;
+        foaf:page                      <http://data.bnf.fr/14974786/jean_jacques_giraud/> .
+
+<http://data.bnf.fr/14974786/jean_jacques_giraud/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb149747865#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149747865>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb149747865> ;
+        bnf-onto:FRBNF  14974786 ;
+        skos:prefLabel  "Jean Jacques Giraud (peintre, 17..-17.. )"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb149747865#foaf:Person> .

@@ -1,0 +1,48 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb11157294x>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11157294x> ;
+        bnf-onto:FRBNF        11157294 ;
+        isni:identifierValid  "0000000000800666" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000000800666> ;
+        skos:editorialNote    "Portés disparus / Bertrand Mézières, 1958. - . - Le Figaro magazine, 2003-01-04. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/24594632> , <http://isni-url.oclc.nl/isni/0000000000800666> ;
+        skos:prefLabel        "Bertrand Mézières (1929-2006)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11157294x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11157294x#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1929 ;
+        bnf-onto:lastYear              2006 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1929/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2006/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1929-02-10" ;
+        bio:death                      "2006-11-14" ;
+        owl:sameAs                     <http://viaf.org/viaf/24594632> ;
+        foaf:birthday                  "02-10" ;
+        foaf:familyName                "Mézières" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Bertrand" ;
+        foaf:name                      "Bertrand Mézières" ;
+        foaf:page                      <http://data.bnf.fr/11157294/bertrand_mezieres/> .
+
+<http://data.bnf.fr/ark:/12148/cb324477103#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11157294x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11157294x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11157294x#foaf:Person> .

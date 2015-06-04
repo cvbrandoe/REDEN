@@ -1,0 +1,99 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb377584071#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42484431f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37556754j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36961964z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb358454326#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37079856s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb352957592#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1958 ;
+        bnf-onto:lastYear              2002 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur d'histoire de l'art à l'université de Chicago" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1958/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2002/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1958" ;
+        bio:death                      "2002-04-29" ;
+        owl:sameAs                     <http://viaf.org/viaf/233229065> , <http://www.idref.fr/030427886> ;
+        foaf:familyName                "Camille" ;
+        foaf:givenName                 "Michael" ;
+        foaf:name                      "Michael Camille" ;
+        foaf:page                      <http://data.bnf.fr/12184373/michael_camille/> .
+
+<http://data.bnf.fr/ark:/12148/cb36163984p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121843738>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb121843738> ;
+        bnf-onto:FRBNF        12184373 ;
+        isni:identifierValid  "000000036695837X" ;
+        owl:sameAs            <http://isni.org/isni/000000036695837X> ;
+        skos:editorialNote    "Le monde gothique / Michael Camille [trad. de l'anglais par Isabelle Leymarie et Claire Rouyer], 1996. - . - Monde, 2002-05-16/17 (article nécrologique). - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/233229065> , <http://www.idref.fr/030427886> , <http://isni.org/isni/000000036695837X> ;
+        skos:note             "Professeur d'histoire de l'art à l'université de Chicago"@fr ;
+        skos:prefLabel        "Michael Camille (1958-2002)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb355632980#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb358465708#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38944134d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121843738#foaf:Person> .

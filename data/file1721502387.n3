@@ -1,0 +1,63 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb30511538r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106168409#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106168409#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106168409#foaf:Person> .
+
+<http://data.bnf.fr/10616840/jean_baptiste_giraud/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb106168409#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb106168409#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1752 ;
+        bnf-onto:lastYear              1830 ;
+        rdagroup2elements:biographicalInformation
+                "Sculpteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1752/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1830/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Sculpture" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/730/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1752" ;
+        bio:death                      "1830" ;
+        owl:sameAs                     <http://viaf.org/viaf/230011676> , <http://dbpedia.org/resource/Jean-Baptiste_Giraud_(sculpteur)> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k6216876q.thumbnail> ;
+        foaf:familyName                "Giraud" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean Baptiste" ;
+        foaf:name                      "Jean Baptiste Giraud" ;
+        foaf:page                      <http://data.bnf.fr/10616840/jean_baptiste_giraud/> .
+
+<http://data.bnf.fr/ark:/12148/cb305115393#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106168409#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106168409#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106168409#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb106168409>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Jean-Baptiste_Giraud_(sculpteur)> , <http://catalogue.bnf.fr/ark:/12148/cb106168409> ;
+        bnf-onto:FRBNF        10616840 ;
+        isni:identifierValid  "0000000366343826" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000366343826> ;
+        skos:editorialNote    "Appendice à l'ouvrage intitulé : ″Recherches sur l'art statuaire des Grecs″, ou Lettre de M. Giraud à M. Émeric-David, an XIII [1805]. - . - ABF. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000366343826> , <http://viaf.org/viaf/230011676> , <http://fr.wikipedia.org/wiki/Jean-Baptiste_Giraud_(sculpteur)> , <http://dbpedia.org/resource/Jean-Baptiste_Giraud_(sculpteur)> ;
+        skos:note             "Sculpteur"@fr ;
+        skos:prefLabel        "Jean Baptiste Giraud (1752-1830)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb106168409#foaf:Person> .

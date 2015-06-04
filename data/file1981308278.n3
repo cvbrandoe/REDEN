@@ -1,0 +1,86 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37089591p#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Photographe" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/034800360> , <http://viaf.org/viaf/59198601> ;
+        foaf:familyName  "Amiel" ;
+        foaf:givenName   "Jean-Claude" ;
+        foaf:name        "Jean-Claude Amiel" ;
+        foaf:page        <http://data.bnf.fr/12551631/jean-claude_amiel/> .
+
+<http://data.bnf.fr/ark:/12148/cb37206579s#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12551631h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12551631h> ;
+        bnf-onto:FRBNF        12551631 ;
+        isni:identifierValid  "0000000047076513" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000047076513> ;
+        skos:exactMatch       <http://viaf.org/viaf/59198601> , <http://isni-url.oclc.nl/isni/0000000047076513> , <http://www.idref.fr/034800360> ;
+        skos:note             "Photographe"@fr ;
+        skos:prefLabel        "Jean-Claude Amiel"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42115912t#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37096592h#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42636210q#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37043177r#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37645409m#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37198284q#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39171602t#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35860354f#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12551631h#foaf:Person> .

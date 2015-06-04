@@ -1,0 +1,65 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1938 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/029424089> , <http://viaf.org/viaf/227711739> ;
+        foaf:familyName     "Boissard" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jérôme de" ;
+        foaf:name           "Jérôme de Boissard" ;
+        foaf:page           <http://data.bnf.fr/12105430/jerome_de_boissard/> .
+
+<http://data.bnf.fr/ark:/12148/cb389129993#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349562502#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40167376n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35526577r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388734840#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12105430v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12105430v> ;
+        bnf-onto:FRBNF        12105430 ;
+        isni:identifierValid  "0000000363364103" ;
+        owl:sameAs            <http://isni.org/isni/0000000363364103> ;
+        skos:exactMatch       <http://isni.org/isni/0000000363364103> , <http://viaf.org/viaf/227711739> , <http://www.idref.fr/029424089> ;
+        skos:prefLabel        "Jérôme de Boissard"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370930823#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12105430v#foaf:Person> .

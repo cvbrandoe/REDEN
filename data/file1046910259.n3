@@ -1,0 +1,65 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb423976114#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14614373z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14614373z> ;
+        bnf-onto:FRBNF        14614373 ;
+        isni:identifierValid  "0000000009256820" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000009256820> ;
+        skos:altLabel         "Françoise Cros de Fabrique"@fr ;
+        skos:editorialNote    "Le coeur au milieu / Françoise Cros de Fabrique, réal., cop. 1999. - . - Balades insolites en Normandie / texte et photos de Anna Piot et Françoise Cros de Fabrique, 2005. - . - Prénoms ! / Françoise Cros, impr. 2013. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000009256820> , <http://viaf.org/viaf/17476262> ;
+        skos:note             "Journaliste, réalisatrice"@fr ;
+        skos:prefLabel        "Francoise Cros"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414679779#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42397643r#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437014651#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399345631#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14614373z#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1969 ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste, réalisatrice" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/17476262> ;
+        foaf:familyName     "Cros" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Francoise" ;
+        foaf:name           "Francoise Cros" ;
+        foaf:page           <http://data.bnf.fr/14614373/francoise_cros/> .

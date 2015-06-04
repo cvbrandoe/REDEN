@@ -1,0 +1,72 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb37212334h#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36698285s#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> .
+
+<http://data.bnf.fr/13178977/david_lefranc/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39277719f#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43671521z#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390948804#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37058098v#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1965 ;
+        rdagroup2elements:biographicalInformation
+                "Photographe et journaliste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/035283440> , <http://viaf.org/viaf/14911773> ;
+        foaf:familyName     "Lefranc" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "David" ;
+        foaf:name           "David Lefranc" ;
+        foaf:page           <http://data.bnf.fr/13178977/david_lefranc/> .
+
+<http://data.bnf.fr/ark:/12148/cb131789776>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb131789776> ;
+        bnf-onto:FRBNF        13178977 ;
+        isni:identifierValid  "0000000037533071" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000037533071> ;
+        skos:editorialNote    "La magie du whisky / textes, Patrick Mahé ; photogr., David Lefranc, 1997. - . - Whisky / Patrick Mahé ; photogr., David Lefranc, 2004. - . - New York créations / photogr., David Lefranc ; texte, Christophe Tronchet, 1999. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/14911773> , <http://isni-url.oclc.nl/isni/0000000037533071> , <http://www.idref.fr/035283440> ;
+        skos:note             "Photographe et journaliste"@fr ;
+        skos:prefLabel        "David Lefranc"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb131789776#foaf:Person> .

@@ -1,0 +1,69 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14592264q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14592264q> ;
+        bnf-onto:FRBNF        14592264 ;
+        isni:identifierValid  "0000000116455980" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000116455980> ;
+        skos:editorialNote    "Für eure und unsere Freiheit ? / Marion Brandt, 2002. - . - Die deutsche Nationalbibliothek. - http://www.ddb.de. - 2004-12-22"@fr ;
+        skos:exactMatch       <http://www.idref.fr/059072156> , <http://isni-url.oclc.nl/isni/0000000116455980> , <http://viaf.org/viaf/54395716> ;
+        skos:note             "Professeur de littérature à l'université de Gdańsk, Pologne (en 2006)"@fr ;
+        skos:prefLabel        "Marion Brandt"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37320956c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42013270d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39079707k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42664014p#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de littérature à l'université de Gdańsk, Pologne (en 2006)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        owl:sameAs                     <http://www.idref.fr/059072156> , <http://viaf.org/viaf/54395716> ;
+        foaf:familyName                "Brandt" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Marion" ;
+        foaf:name                      "Marion Brandt" ;
+        foaf:page                      <http://data.bnf.fr/14592264/marion_brandt/> .
+
+<http://data.bnf.fr/ark:/12148/cb43821688t#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40157739b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14592264q#foaf:Person> .

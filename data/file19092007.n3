@@ -1,0 +1,81 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb374920878#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1911 ;
+        rdagroup2elements:biographicalInformation
+                "Spécialiste de H. L. Mencken, écrivain américain" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/91264195> , <http://www.idref.fr/033478902> ;
+        foaf:familyName     "Bode" ;
+        foaf:givenName      "Carl" ;
+        foaf:name           "Carl Bode" ;
+        foaf:page           <http://data.bnf.fr/12434090/carl_bode/> .
+
+<http://data.bnf.fr/ark:/12148/cb35440445n#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36960471m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35339870r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374377604#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12434090h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12434090h> ;
+        bnf-onto:FRBNF        12434090 ;
+        isni:identifierValid  "0000000109239358" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109239358> ;
+        skos:editorialNote    "Mencken / by Carl Bode, 1986. - . - LCNA (CD OCLC), 1994-09. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000109239358> , <http://www.idref.fr/033478902> , <http://viaf.org/viaf/91264195> ;
+        skos:note             "Spécialiste de H. L. Mencken, écrivain américain"@fr ;
+        skos:prefLabel        "Carl Bode"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35262924m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36642559k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351305634#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35362938g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12434090h#foaf:Person> .

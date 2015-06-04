@@ -1,0 +1,58 @@
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpprop: <http://dbpedia.org/property/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://dbpedia.org/resource/Jessica_Blandy>
+        dbpprop:artists  <http://dbpedia.org/resource/Renaud_Denauw> .
+
+<http://wikidata.dbpedia.org/resource/Q3424867>
+        owl:sameAs  <http://dbpedia.org/resource/Renaud_Denauw> .
+
+<http://en.wikipedia.org/wiki/Renaud_Denauw>
+        foaf:primaryTopic  <http://dbpedia.org/resource/Renaud_Denauw> .
+
+<http://fr.dbpedia.org/resource/Renaud_Denauw>
+        owl:sameAs  <http://dbpedia.org/resource/Renaud_Denauw> .
+
+<http://dbpedia.org/resource/Renaud_Denauw>
+        a                               <http://dbpedia.org/class/yago/YagoLegalActorGeo> , <http://dbpedia.org/class/yago/YagoLegalActor> , <http://dbpedia.org/class/yago/LivingThing100004258> , owl:Thing , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> , <http://dbpedia.org/class/yago/Writer110794014> , <http://dbpedia.org/class/yago/PeopleFromMouscron> , <http://dbpedia.org/class/yago/Organism100004475> , <http://dbpedia.org/class/yago/Communicator109610660> , dbpedia-owl:Person , <http://dbpedia.org/class/yago/LivingPeople> , dbpedia-owl:Agent , <http://dbpedia.org/class/yago/Object100002684> , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> , <http://dbpedia.org/class/yago/Person100007846> , <http://wikidata.dbpedia.org/resource/Q5> , <http://dbpedia.org/class/yago/PhysicalEntity100001930> , <http://dbpedia.org/class/yago/CausalAgent100007347> , <http://schema.org/Person> , <http://wikidata.dbpedia.org/resource/Q215627> , <http://dbpedia.org/class/yago/Whole100003553> , foaf:Person , <http://dbpedia.org/class/yago/BelgianComicsWriters> ;
+        rdfs:comment                    "Renaud Denauw, plus connu sous le pseudonyme de Renaud, est un dessinateur belge de bande dessinée né le 28 novembre 1936 à Mouscron."@fr , "Renaud Denauw (born 28 November 1936 in Mouscron), also known as \"Renaud\", is a Belgian comic book artist. He is best known for his collaboration with writer Jean Dufaux in the Jessica Blandy comic book."@en , "Renaud Denauw, Künstlername Renaud (* 28. November 1936 in Mouscron), ist ein belgischer Comiczeichner."@de ;
+        rdfs:label                      "Renaud Denauw"@de , "Renaud Denauw"@en , "Renaud Denauw"@fr ;
+        dbpedia-owl:abstract            "Renaud Denauw, plus connu sous le pseudonyme de Renaud, est un dessinateur belge de bande dessinée né le 28 novembre 1936 à Mouscron."@fr , "Renaud Denauw, Künstlername Renaud (* 28. November 1936 in Mouscron), ist ein belgischer Comiczeichner."@de , "Renaud Denauw (born 28 November 1936 in Mouscron), also known as \"Renaud\", is a Belgian comic book artist. He is best known for his collaboration with writer Jean Dufaux in the Jessica Blandy comic book."@en ;
+        dbpedia-owl:alias               "Renaud" ;
+        dbpedia-owl:birthDate           "1936-11-28+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:birthPlace          <http://dbpedia.org/resource/Mouscron> , <http://dbpedia.org/resource/Belgium> ;
+        dbpedia-owl:birthYear           "1936+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:nationality         <http://dbpedia.org/resource/Belgium> ;
+        dbpedia-owl:occupation          <http://dbpedia.org/resource/Renaud_Denauw__1> ;
+        dbpedia-owl:stateOfOrigin       <http://dbpedia.org/resource/Belgium> ;
+        dbpedia-owl:wikiPageExternalLink
+                <http://www.dupuis.com/servlet/jpecat?pgm=VIEW_AUTHOR&lang=FR&AUTEUR_ID=16> , <http://lambiek.net/artists/r/renaud.htm> ;
+        dbpedia-owl:wikiPageID          14272652 ;
+        dbpedia-owl:wikiPageRevisionID  586522652 ;
+        dbpprop:birthDate               "1936-11-28+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:birthPlace              <http://dbpedia.org/resource/Mouscron> , <http://dbpedia.org/resource/Belgium> ;
+        dbpprop:dateOfBirth             "1936-11-28+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:hasPhotoCollection      <http://wifo5-03.informatik.uni-mannheim.de/flickrwrappr/photos/Renaud_Denauw> ;
+        dbpprop:name                    "Renaud Denauw"@en , "Denauw, Renaud"@en ;
+        dbpprop:occupation              "comic artist"@en ;
+        dbpprop:otherNames              "Renaud"@en ;
+        dbpprop:placeOfBirth            <http://dbpedia.org/resource/Belgium> , <http://dbpedia.org/resource/Mouscron> ;
+        dbpprop:shortDescription        "Comic artist"@en ;
+        dc:description                  "Comic artist"@en , "Comic artist" ;
+        dcterms:subject                 <http://dbpedia.org/resource/Category:People_from_Mouscron> , <http://dbpedia.org/resource/Category:Living_people> , <http://dbpedia.org/resource/Category:1936_births> , <http://dbpedia.org/resource/Category:Belgian_comics_writers> ;
+        owl:sameAs                      <http://fr.dbpedia.org/resource/Renaud_Denauw> , <http://rdf.freebase.com/ns/m.03czwbm> , <http://wikidata.dbpedia.org/resource/Q3424867> , <http://wikidata.org/entity/Q3424867> , <http://dbpedia.org/resource/Renaud_Denauw> , <http://de.dbpedia.org/resource/Renaud_Denauw> , <http://yago-knowledge.org/resource/Renaud_Denauw> ;
+        prov:wasDerivedFrom             <http://en.wikipedia.org/wiki/Renaud_Denauw?oldid=586522652> ;
+        foaf:givenName                  "Renaud"@en ;
+        foaf:isPrimaryTopicOf           <http://en.wikipedia.org/wiki/Renaud_Denauw> ;
+        foaf:name                       "Renaud Denauw"@en , "Denauw, Renaud"@en ;
+        foaf:surname                    "Denauw"@en .
+
+<http://de.dbpedia.org/resource/Renaud_Denauw>
+        owl:sameAs  <http://dbpedia.org/resource/Renaud_Denauw> .

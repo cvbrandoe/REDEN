@@ -1,0 +1,107 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb34068049f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34067936b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30142624h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307746506#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb103610961>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb103610961> ;
+        bnf-onto:FRBNF      10361096 ;
+        skos:editorialNote  "Cour d'appel de Bordeaux. Audience solennelle du 4 avril 1894. Installation de M. Lefranc, procureur général. Discours de M. Labroquère,... de M. Delcurrou,... et de M. Lefranc, 1894. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/9835998> ;
+        skos:note           "Docteur en droit (Poitiers, 1870). - Procureur général à Bordeaux"@fr ;
+        skos:prefLabel      "Albert Lefranc (magistrat, 18..-19..?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30774648n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30774646z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34067753c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307746479#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36845854r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person>
+        a                               foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en droit (Poitiers, 1870). - Procureur général à Bordeaux" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Bordeaux" ;
+        bio:birth                       "18.." ;
+        bio:death                       "19.." ;
+        owl:sameAs                      <http://viaf.org/viaf/9835998> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k5651276z.thumbnail> ;
+        foaf:familyName                 "Lefranc" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Albert" ;
+        foaf:name                       "Albert Lefranc" ;
+        foaf:page                       <http://data.bnf.fr/10361096/albert_lefranc/> .
+
+<http://data.bnf.fr/ark:/12148/cb34068067c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34067956z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30774645m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307746490#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103610961#foaf:Person> .

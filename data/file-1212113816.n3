@@ -1,0 +1,58 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb137496860>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb137496860> ;
+        bnf-onto:FRBNF        13749686 ;
+        isni:identifierValid  "0000000001151274" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000001151274> ;
+        skos:exactMatch       <http://viaf.org/viaf/59264212> , <http://isni-url.oclc.nl/isni/0000000001151274> , <http://www.idref.fr/055770894> ;
+        skos:note             "Artiste-peintre, photographe (en 2001). - Co-scénariste"@fr ;
+        skos:prefLabel        "Christiane Grimm"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb137496860#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42562311t#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb137496860#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb137496860#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137496860#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42583736x#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb137496860#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb137496860#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137496860#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb137496860#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1952 ;
+        rdagroup2elements:biographicalInformation
+                "Artiste-peintre, photographe (en 2001). - Co-scénariste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/sz#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/59264212> , <http://www.idref.fr/055770894> ;
+        foaf:familyName     "Grimm" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Christiane" ;
+        foaf:name           "Christiane Grimm" ;
+        foaf:page           <http://data.bnf.fr/13749686/christiane_grimm/> .
+
+<http://data.bnf.fr/ark:/12148/cb376914028#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb137496860#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb137496860#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137496860#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414381035#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb137496860#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb137496860#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137496860#foaf:Person> .

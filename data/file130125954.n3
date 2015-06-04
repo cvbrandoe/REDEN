@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/14178330/susanna_foster/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb141783301#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427418216#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb141783301#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb141783301#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141783301#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38452328w#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb141783301#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb141783301#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141783301#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb141783301>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb141783301> ;
+        bnf-onto:FRBNF        14178330 ;
+        isni:identifierValid  "000000003997572X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000003997572X> ;
+        skos:altLabel         "Susan Foster (1924-2009)"@fr ;
+        skos:editorialNote    "Phantom of the opera [Images animées] / Arthur Lubin, réal. ; Nelson Eddy, Susanna Foster, Claude Rains, act... [et al.]. Association française pour l'art et la culture, [2012]. - . - The climax [Spectacle] / film de George Waggner ; avec Boris Karloff et Susan Foster, 1944. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/10058579> , <http://isni-url.oclc.nl/isni/000000003997572X> ;
+        skos:note             "Actrice et chanteuse"@fr ;
+        skos:prefLabel        "Susanna Foster (1924-2009)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb141783301#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb141783301#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1924 ;
+        bnf-onto:lastYear              2009 ;
+        rdagroup2elements:biographicalInformation
+                "Actrice et chanteuse" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1924/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2009/> ;
+        bio:birth                      "1924-12-06" ;
+        bio:death                      "2009-01-17" ;
+        owl:sameAs                     <http://viaf.org/viaf/10058579> ;
+        foaf:birthday                  "12-06" ;
+        foaf:familyName                "Foster" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Susanna" ;
+        foaf:name                      "Susanna Foster" ;
+        foaf:page                      <http://data.bnf.fr/14178330/susanna_foster/> .
+
+<http://data.bnf.fr/ark:/12148/cb38545500r#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb141783301#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb141783301#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141783301#foaf:Person> .

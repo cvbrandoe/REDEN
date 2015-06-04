@@ -1,0 +1,52 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42264563k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16229556x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16229556x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16229556x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34201408c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16229556x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16229556x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16229556x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16229556x#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1862 ;
+        bnf-onto:lastYear              1938 ;
+        rdagroup2elements:biographicalInformation
+                "Maire de Rozay-en-Brie, Seine-et-Marne (1921-1935)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1862/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1938/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1862-12-03" ;
+        bio:death                      "1938" ;
+        owl:sameAs                     <http://viaf.org/viaf/122517348> ;
+        foaf:birthday                  "12-03" ;
+        foaf:familyName                "Gilbert" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Eugène" ;
+        foaf:name                      "Eugène Gilbert" ;
+        foaf:page                      <http://data.bnf.fr/16229556/eugene_gilbert/> .
+
+<http://data.bnf.fr/ark:/12148/cb16229556x>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb16229556x> ;
+        bnf-onto:FRBNF   16229556 ;
+        skos:exactMatch  <http://viaf.org/viaf/122517348> ;
+        skos:note        "Maire de Rozay-en-Brie, Seine-et-Marne (1921-1935)"@fr ;
+        skos:prefLabel   "Eugène Gilbert (1862-1938)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb16229556x#foaf:Person> .

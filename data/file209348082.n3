@@ -1,0 +1,50 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42159684n#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12548691v#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12548691v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12548691v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12548691v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12548691v> ;
+        bnf-onto:FRBNF        12548691 ;
+        isni:identifierValid  "0000000000563699" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000000563699> ;
+        skos:altLabel         "Sébastien de La Mare (1698-17..)"@fr , "Sébastien Delamarre (1698-17..)"@fr , "Sébastien De La Mare (1698-17..)"@fr ;
+        skos:editorialNote    "Gautier. - . - Sarazin. - . - Lepreux, Bretagne. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000000563699> , <http://viaf.org/viaf/69044017> ;
+        skos:note             "Imprimeur-libraire. - Fils de Raoul Delamare à qui il succède sans autorisation préalable. Son imprimerie est fermée le 20 juin 1753, ainsi que celle de Jean-Baptiste Leconte. Peuvent tous deux reprendre leur activité par arrêt du Conseil du 8 avril 1754, sous réserve que seul celui qui survivrait à l'autre pourrait avoir un successeur. En juin 1762, S. Delamare cède à J.-B. Leconte son matériel pour 300 l. et son privilège contre une rente annuelle de même montant ; essaiera en vain de les revendre à nouveau, à Julien Valais, en 1767. Dit âgé de 65 ans et \"retiré à la campagne pour des raisons de pauvreté\" lors de l'enquête de 1764"@fr ;
+        skos:prefLabel        "Sébastien Delamare (1698-17..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12548691v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12548691v#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1698 ;
+        rdagroup2elements:biographicalInformation
+                "Imprimeur-libraire. - Fils de Raoul Delamare à qui il succède sans autorisation préalable. Son imprimerie est fermée le 20 juin 1753, ainsi que celle de Jean-Baptiste Leconte. Peuvent tous deux reprendre leur activité par arrêt du Conseil du 8 avril 1754, sous réserve que seul celui qui survivrait à l'autre pourrait avoir un successeur. En juin 1762, S. Delamare cède à J.-B. Leconte son matériel pour 300 l. et son privilège contre une rente annuelle de même montant ; essaiera en vain de les revendre à nouveau, à Julien Valais, en 1767. Dit âgé de 65 ans et \"retiré à la campagne pour des raisons de pauvreté\" lors de l'enquête de 1764" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1698/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1743-1762" ;
+        bio:birth                      "1698-07-29" ;
+        bio:death                      "17.." ;
+        owl:sameAs                     <http://viaf.org/viaf/69044017> ;
+        foaf:birthday                  "07-29" ;
+        foaf:familyName                "Delamare" ;
+        foaf:givenName                 "Sébastien" ;
+        foaf:name                      "Sébastien Delamare" ;
+        foaf:page                      <http://data.bnf.fr/12548691/sebastien_delamare/> .

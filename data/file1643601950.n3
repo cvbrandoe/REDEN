@@ -1,0 +1,110 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb345579120#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb409838389#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425308322#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1944 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/108987085> , <http://www.idref.fr/050541277> , <http://dbpedia.org/resource/Carl_Bernstein> ;
+        foaf:depiction      <http://commons.wikimedia.org/wiki/Special:FilePath/Carl_bernstein_2007.jpg?width=300> ;
+        foaf:familyName     "Bernstein" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Carl" ;
+        foaf:name           "Carl Bernstein" ;
+        foaf:page           <http://data.bnf.fr/12589748/carl_bernstein/> .
+
+<http://data.bnf.fr/ark:/12148/cb38327843k#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34560673w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34581881q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400615021#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41199910m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125897482>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb125897482> , <http://fr.wikipedia.org/wiki/Carl_Bernstein> ;
+        bnf-onto:FRBNF        12589748 ;
+        isni:identifierValid  "0000000084063455" ;
+        owl:sameAs            <http://isni.org/isni/0000000084063455> ;
+        skos:editorialNote    "Sa Sainteté : Jean-Paul II et l'histoire cachée de notre époque / Carl Bernstein, Marco Politi ; trad. de l'anglais, 1996. - . - LCNA (CD), 1996-06 : Bernstein, Carl, 1944-. - . -"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Carl_Bernstein> , <http://www.idref.fr/050541277> , <http://isni.org/isni/0000000084063455> , <http://viaf.org/viaf/108987085> , <http://dbpedia.org/resource/Carl_Bernstein> ;
+        skos:prefLabel        "Carl Bernstein"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43909121v#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381582005#frbr:Expression>
+        bnfroles:r100        <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41215993p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38249802q#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35836668s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40199743w#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38368062q#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125897482#foaf:Person> .

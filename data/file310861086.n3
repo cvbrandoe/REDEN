@@ -1,0 +1,43 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb16204497m#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Bourgeois de Marseille. - Maître-juré en chirurgie. - A publié en 1674-75, à Marseille, un opuscule: \"Le timon et carte de navigation des jeunes chirurgiens navigans, pour leur apprendre à conduire en bon port les malades de leurs bords\" (celui-ci n'est pas conservé dans les collection de la BnF. Il est présent dans les collections des BM d'Aix-en-Provence, Nîmes et Rouen)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Médecine" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/610/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "16.." ;
+        bio:death                      "16.." ;
+        foaf:familyName                "David" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Henry" ;
+        foaf:name                      "Henry David" ;
+        foaf:page                      <http://data.bnf.fr/16204497/henry_david/> .
+
+<http://data.bnf.fr/16204497/henry_david/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb16204497m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16204497m>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16204497m> ;
+        bnf-onto:FRBNF      16204497 ;
+        skos:altLabel       "Henri David (maître-juré en chirurgie, 16..-16..)"@fr ;
+        skos:editorialNote  "BnF - Département de la recherche bibliographique [Recueil. Dossiers biographiques Boutillier du Retail. Documentation sur Henry David], 1924. - . - CCFR. - http://ccfr.bnf.fr/portailccfr/servlet/LoginServlet. - 2010-05-25"@fr ;
+        skos:note           "Bourgeois de Marseille. - Maître-juré en chirurgie. - A publié en 1674-75, à Marseille, un opuscule: \"Le timon et carte de navigation des jeunes chirurgiens navigans, pour leur apprendre à conduire en bon port les malades de leurs bords\" (celui-ci n'est pas conservé dans les collection de la BnF. Il est présent dans les collections des BM d'Aix-en-Provence, Nîmes et Rouen)"@fr ;
+        skos:prefLabel      "Henry David (maître-juré en chirurgie, 16..-16..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16204497m#foaf:Person> .

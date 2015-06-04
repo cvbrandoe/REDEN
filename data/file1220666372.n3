@@ -1,0 +1,45 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb410504869#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15939846q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15939846q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15939846q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15939846q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15939846q> ;
+        bnf-onto:FRBNF        15939846 ;
+        isni:identifierValid  "0000000107973460" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000107973460> ;
+        skos:editorialNote    "Artists-in-labs : processes of inquiry / editor, Jill Scott, 2006. - . - LCNA. - http://authorities.loc.gov. - 2009-02-12"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/15705497> , <http://isni-url.oclc.nl/isni/0000000107973460> ;
+        skos:note             "Artiste. - Enseigne l'art et la communication, Institut HyperWerk, Hochschule für Gestaltung und Kunst, Zurich, Suisse (en 2006)"@fr ;
+        skos:prefLabel        "Jill Scott"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15939846q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15939846q#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1952 ;
+        rdagroup2elements:biographicalInformation
+                "Artiste. - Enseigne l'art et la communication, Institut HyperWerk, Hochschule für Gestaltung und Kunst, Zurich, Suisse (en 2006)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/at#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Melbourne (Australie)" ;
+        owl:sameAs                      <http://viaf.org/viaf/15705497> ;
+        foaf:familyName                 "Scott" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Jill" ;
+        foaf:name                       "Jill Scott" ;
+        foaf:page                       <http://data.bnf.fr/15939846/jill_scott/> .

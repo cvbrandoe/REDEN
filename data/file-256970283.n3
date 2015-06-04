@@ -1,0 +1,123 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb371938516#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37044013g#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36946790r#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37081209w#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12110068f>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12110068f> ;
+        bnf-onto:FRBNF   12110068 ;
+        skos:exactMatch  <http://www.idref.fr/029482755> , <http://viaf.org/viaf/7421193> ;
+        skos:note        "Illustrateur de bande-dessinée"@fr ;
+        skos:prefLabel   "Grégoire Mathieu"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349977677#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43412908h#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38920581n#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37188106f#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370277669#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40102861j#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Illustrateur de bande-dessinée" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/029482755> , <http://viaf.org/viaf/7421193> ;
+        foaf:familyName  "Mathieu" ;
+        foaf:givenName   "Grégoire" ;
+        foaf:name        "Grégoire Mathieu" ;
+        foaf:page        <http://data.bnf.fr/12110068/gregoire_mathieu/> .
+
+<http://data.bnf.fr/ark:/12148/cb36961254q#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389215889#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39035851j#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36185428q#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37193852j#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388157215#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37719535z#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35851832j#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110068f#foaf:Person> .

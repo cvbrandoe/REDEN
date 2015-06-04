@@ -1,0 +1,99 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb43562332x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42548295f#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425564277#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420556657#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42569272f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42595358t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15091387p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15091387p> ;
+        bnf-onto:FRBNF        15091387 ;
+        isni:identifierValid  "0000000071418026" ;
+        owl:sameAs            <http://isni.org/isni/0000000071418026> ;
+        skos:editorialNote    "Vues sur la mer : roman / Hélène Gaudy, impr. 2006. - . - Matisse : l'éblouissement de la couleur / Hélène Gaudy, DL 2011. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/127593160> , <http://isni.org/isni/0000000071418026> , <http://viaf.org/viaf/5222467> ;
+        skos:note             "Membre du comité de rédaction de la revue \"Inculte\" (en 2011). - Ancienne élève de l'École des arts décoratifs de Strasbourg"@fr ;
+        skos:prefLabel        "Hélène Gaudy"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43743736k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43867344n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1979 ;
+        rdagroup2elements:biographicalInformation
+                "Membre du comité de rédaction de la revue \"Inculte\" (en 2011). - Ancienne élève de l'École des arts décoratifs de Strasbourg" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/5222467> , <http://www.idref.fr/127593160> ;
+        foaf:familyName     "Gaudy" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Hélène" ;
+        foaf:name           "Hélène Gaudy" ;
+        foaf:page           <http://data.bnf.fr/15091387/helene_gaudy/> .
+
+<http://data.bnf.fr/ark:/12148/cb43656803n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402085275#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40990165r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43790655w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15091387p#foaf:Person> .

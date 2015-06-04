@@ -1,0 +1,61 @@
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpprop: <http://dbpedia.org/property/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://dbpedia.org/resource/Jacques_Joseph_Guillaume_Pierre,_comte_de_Corbi%C3%A8re>
+        dbpedia-owl:wikiPageRedirects  <http://dbpedia.org/resource/Jacques-Joseph_Corbi%C3%A8re> .
+
+<http://en.wikipedia.org/wiki/Jacques-Joseph_Corbière>
+        foaf:primaryTopic  <http://dbpedia.org/resource/Jacques-Joseph_Corbi%C3%A8re> .
+
+<http://dbpedia.org/resource/Jacques-Joseph_Corbière>
+        owl:sameAs  <http://dbpedia.org/resource/Jacques-Joseph_Corbi%C3%A8re> .
+
+<http://dbpedia.org/resource/Jacques-Joseph_Corbi%C3%A8re>
+        a                               foaf:Person , owl:Thing , <http://wikidata.dbpedia.org/resource/Q215627> , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> , dbpedia-owl:Person , <http://schema.org/Person> , dbpedia-owl:Agent , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> , <http://wikidata.dbpedia.org/resource/Q5> ;
+        rdfs:comment                    "Jacques-Joseph, comte de Corbière, né à Cornuz-les-Trois-Maries (aujourd'hui Corps-Nuds), près de Rennes le 22 mai 1766 et décédé le 12 janvier 1853 à Rennes, est un homme politique français."@fr , "Jacques Joseph Corbière (Corps-Nuds, 12 maggio 1766 – Rennes, 12 gennaio 1853) è stato un politico e avvocato francese.Meglio noto come conte di Corbière. Figlio di mugnaio, dopo una carriera con la rivoluzione, divenne, sotto la restaurazione, ministro senza portafoglio del secondo governo Richelieu (1820-1821), eppoi importantissimo ministro dell'interno ultra del governo de Villèle (1821-1828)."@it , "Jacques Joseph Guillaume François Pierre, comte de Corbière (22 May 1766 - 12 January 1853) was a French lawyer who became Minister of the Interior. He was intolerant of liberalism and a strong supporter of the church."@en ;
+        rdfs:label                      "Jacques Joseph, conte di Corbière"@it , "Jacques-Joseph Corbière"@fr , "Jacques-Joseph Corbière"@en ;
+        dbpedia-owl:abstract            "Jacques-Joseph, comte de Corbière, né à Cornuz-les-Trois-Maries (aujourd'hui Corps-Nuds), près de Rennes le 22 mai 1766 et décédé le 12 janvier 1853 à Rennes, est un homme politique français."@fr , "Jacques Joseph Guillaume François Pierre, comte de Corbière (22 May 1766 - 12 January 1853) was a French lawyer who became Minister of the Interior. He was intolerant of liberalism and a strong supporter of the church."@en , "Jacques Joseph Corbière (Corps-Nuds, 12 maggio 1766 – Rennes, 12 gennaio 1853) è stato un politico e avvocato francese.Meglio noto come conte di Corbière. Figlio di mugnaio, dopo una carriera con la rivoluzione, divenne, sotto la restaurazione, ministro senza portafoglio del secondo governo Richelieu (1820-1821), eppoi importantissimo ministro dell'interno ultra del governo de Villèle (1821-1828)."@it ;
+        dbpedia-owl:birthDate           "1766-05-22+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:birthName           "Jacques Joseph Guillaume François Pierre Corbière"@en ;
+        dbpedia-owl:birthPlace          <http://dbpedia.org/resource/Amanlis> , <http://dbpedia.org/resource/Ille-et-Vilaine> ;
+        dbpedia-owl:birthYear           "1766+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:deathDate           "1853-01-12+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:deathPlace          <http://dbpedia.org/resource/Rennes> , <http://dbpedia.org/resource/Ille-et-Vilaine> ;
+        dbpedia-owl:deathYear           "1853+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:occupation          <http://dbpedia.org/resource/Jacques-Joseph_Corbi%C3%A8re__1> ;
+        dbpedia-owl:thumbnail           <http://commons.wikimedia.org/wiki/Special:FilePath/M._de_Corbière.JPG?width=300> ;
+        dbpedia-owl:wikiPageExternalLink
+                <http://www.inrp.fr/she/ministres_bio/corbiere.htm> ;
+        dbpedia-owl:wikiPageID          42324886 ;
+        dbpedia-owl:wikiPageRevisionID  604920753 ;
+        dbpprop:birthDate               "1766-05-22+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:birthName               "Jacques Joseph Guillaume François Pierre Corbière"@en ;
+        dbpprop:birthPlace              "Amanlis, near Rennes, Ille-et-Vilaine, France"@en ;
+        dbpprop:caption                 "Portrait from Biographie pittoresque des députés, 1820"@en ;
+        dbpprop:dateOfBirth             "1766-05-22+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:dateOfDeath             "1853-01-12+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathDate               "1853-01-12+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathPlace              "Rennes, Ille-et-Vilaine, France"@en ;
+        dbpprop:knownFor                "Minister of the Interior"@en ;
+        dbpprop:name                    "Jacques-Joseph Corbière"@en , "Corbiere, Jacques Joseph"@en ;
+        dbpprop:nationality             "French"@en ;
+        dbpprop:occupation              "Lawyer, politician"@en ;
+        dbpprop:placeOfBirth            "Amanlis, France"@en ;
+        dbpprop:placeOfDeath            "Rennes, France"@en ;
+        dbpprop:shortDescription        "Lawyer"@en ;
+        dc:description                  "Lawyer"@en , "Lawyer" ;
+        dcterms:subject                 <http://dbpedia.org/resource/Category:1853_deaths> , <http://dbpedia.org/resource/Category:1766_births> , <http://dbpedia.org/resource/Category:French_interior_ministers> ;
+        owl:sameAs                      <http://rdf.freebase.com/ns/m.01029_cg> , <http://dbpedia.org/resource/Jacques-Joseph_Corbi%C3%A8re> ;
+        prov:wasDerivedFrom             <http://en.wikipedia.org/wiki/Jacques-Joseph_Corbière?oldid=604920753> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/M._de_Corbière.JPG> ;
+        foaf:givenName                  "Jacques Joseph"@en ;
+        foaf:isPrimaryTopicOf           <http://en.wikipedia.org/wiki/Jacques-Joseph_Corbière> ;
+        foaf:name                       "Jacques-Joseph Corbière"@en , "Corbiere, Jacques Joseph"@en , "Jacques Joseph Corbiere"@en ;
+        foaf:surname                    "Corbiere"@en .

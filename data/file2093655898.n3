@@ -1,0 +1,92 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb409940078#frbr:Expression>
+        bnfroles:r3200       <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        marcrel:dst          <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423454848#frbr:Expression>
+        bnfroles:r3200       <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        marcrel:dst          <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Directeur artistique du Théâtre, Scène nationale de Poitiers (en 2006)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/19966915> ;
+        foaf:familyName  "Garnier" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Denis" ;
+        foaf:name        "Denis Garnier" ;
+        foaf:page        <http://data.bnf.fr/15058629/denis_garnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb40993803v#frbr:Expression>
+        bnfroles:r3200       <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        marcrel:dst          <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb150586296>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb150586296> ;
+        bnf-onto:FRBNF   15058629 ;
+        skos:exactMatch  <http://viaf.org/viaf/19966915> ;
+        skos:note        "Directeur artistique du Théâtre, Scène nationale de Poitiers (en 2006)"@fr ;
+        skos:prefLabel   "Denis Garnier (directeur artistique)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425645602#frbr:Expression>
+        bnfroles:r3200       <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        marcrel:dst          <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb410099306#frbr:Expression>
+        bnfroles:r3200       <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        marcrel:dst          <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42345445c#frbr:Expression>
+        bnfroles:r3200       <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        marcrel:dst          <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42132285s#frbr:Expression>
+        bnfroles:r3150       <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        marcrel:pro          <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41248433s#frbr:Expression>
+        bnfroles:r3200       <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        marcrel:dst          <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423454112#frbr:Expression>
+        bnfroles:r3150       <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        marcrel:pro          <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40993958d#frbr:Expression>
+        bnfroles:r3200       <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        marcrel:dst          <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401447142#frbr:Expression>
+        bnfroles:r3200       <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        marcrel:dst          <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42132185h#frbr:Expression>
+        bnfroles:r3150       <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        marcrel:pro          <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150586296#foaf:Person> .

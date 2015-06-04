@@ -1,0 +1,53 @@
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dbpprop: <http://dbpedia.org/property/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://dbpedia.org/resource/L%C3%A9on_la_lune>
+        dbpedia-owl:writer  <http://dbpedia.org/resource/Robert_Giraud> .
+
+<http://dbpedia.org/resource/Robert_Giraud>
+        a                               dbpedia-owl:Person , <http://wikidata.dbpedia.org/resource/Q5> , dbpedia-owl:Artist , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> , foaf:Person , dbpedia-owl:Writer , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> , <http://wikidata.dbpedia.org/resource/Q215627> , dbpedia-owl:Agent , <http://schema.org/Person> , owl:Thing ;
+        rdfs:comment                    "Robert Giraud est un poète, journaliste, écrivain et lexicologue français, né le 21 novembre 1921 à Nantiat (Haute-Vienne) et mort le 17 janvier 1997 à Nanterre." , "Robert Giraud (November 21, 1921 – January 17, 1997), was a French journalist, poet and lexicographer. He is the author of over 30 books and subject of the 2009 biography Monsieur Bob by Olivier Bailly."@en , "Robert Giraud. (Limoges (Haute-Vienne), 1921 - París, 1997). Periodista y librero francés.Giraud fue un activo miembro de la resistencia francesa durante la ocupoación del país por la Alemania nazi en la Segunda Guerra Mundial. Fue detenido por el régimen de Vichy y condenado a muerte, aunque sus compañeros lo liberaron antes de la ejecución.Tras la guerra escribió en inumerables medios como France Soir y Paris Presse."@es ;
+        rdfs:label                      "Robert Giraud"@es , "Robert Giraud" , "Robert Giraud"@en ;
+        dbpedia-owl:abstract            "Robert Giraud (November 21, 1921 – January 17, 1997), was a French journalist, poet and lexicographer. He is the author of over 30 books and subject of the 2009 biography Monsieur Bob by Olivier Bailly."@en , "Robert Giraud est un poète, journaliste, écrivain et lexicologue français, né le 21 novembre 1921 à Nantiat (Haute-Vienne) et mort le 17 janvier 1997 à Nanterre." , "Robert Giraud. (Limoges (Haute-Vienne), 1921 - París, 1997). Periodista y librero francés.Giraud fue un activo miembro de la resistencia francesa durante la ocupoación del país por la Alemania nazi en la Segunda Guerra Mundial. Fue detenido por el régimen de Vichy y condenado a muerte, aunque sus compañeros lo liberaron antes de la ejecución.Tras la guerra escribió en inumerables medios como France Soir y Paris Presse. Fue íntimo amigo del fotógrafo Robert Doisneau con quien compartió ediciones de sus obras, entre otras «Le vin des rues», con la que obtuvo el premio Rabelais en 1955."@es ;
+        dbpedia-owl:birthDate           "1921-11-21+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:birthPlace          <http://dbpedia.org/resource/Nantiat> , <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Nantiat_(Haute-Vienne)> ;
+        dbpedia-owl:birthYear           "1921+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:deathDate           "1997-01-17+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:deathPlace          <http://dbpedia.org/resource/Nanterre> , <http://dbpedia.org/resource/France> ;
+        dbpedia-owl:deathYear           "1997+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:occupation          <http://dbpedia.org/resource/Poet> , <http://dbpedia.org/resource/Journalist> ;
+        dbpedia-owl:wikiPageExternalLink
+                <http://fr.wikipedia.org/wiki/Robert_Giraud> , <http://www.humanite.fr/node/157570> , <http://robertgiraud.blog.lemonde.fr/2007/01/01/robert-giraud-scenariste-dalain-jessua/> ;
+        dbpedia-owl:wikiPageID          37694451 ;
+        dbpedia-owl:wikiPageRevisionID  547036369 ;
+        dbpprop:birthDate               "1921-11-21+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:birthPlace              <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Nantiat> ;
+        dbpprop:dateOfBirth             "1921-11-21+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:dateOfDeath             "1997-01-17+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathDate               "1997-01-17+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathPlace              <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Nanterre> ;
+        dbpprop:hasPhotoCollection      <http://wifo5-03.informatik.uni-mannheim.de/flickrwrappr/photos/Robert_Giraud> ;
+        dbpprop:name                    "Robert Giraud"@en ;
+        dbpprop:occupation              <http://dbpedia.org/resource/Journalist> , <http://dbpedia.org/resource/Poet> ;
+        dbpprop:placeOfBirth            <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Nantiat_(Haute-Vienne)> ;
+        dbpprop:placeOfDeath            <http://dbpedia.org/resource/Nanterre> , <http://dbpedia.org/resource/France> ;
+        dbpprop:shortDescription        "Journalist"@en ;
+        dc:description                  "Journalist" , "Journalist"@en ;
+        dcterms:subject                 <http://dbpedia.org/resource/Category:French_Resistance_members> , <http://dbpedia.org/resource/Category:French_poets> , <http://dbpedia.org/resource/Category:French_journalists> , <http://dbpedia.org/resource/Category:French_lexicographers> , <http://dbpedia.org/resource/Category:1997_deaths> , <http://dbpedia.org/resource/Category:1921_births> ;
+        owl:sameAs                      <http://dbpedia.org/resource/Robert_Giraud> , <http://fr.dbpedia.org/resource/Robert_Giraud> , <http://rdf.freebase.com/ns/m.05vhxyn> , <http://wikidata.org/entity/Q3435235> , <http://es.dbpedia.org/resource/Robert_Giraud> , <http://wikidata.dbpedia.org/resource/Q3435235> ;
+        prov:wasDerivedFrom             <http://en.wikipedia.org/wiki/Robert_Giraud?oldid=547036369> ;
+        foaf:isPrimaryTopicOf           <http://en.wikipedia.org/wiki/Robert_Giraud> ;
+        foaf:name                       "Robert Giraud"@en .
+
+<http://wikidata.dbpedia.org/resource/Q7344793>
+        owl:sameAs  <http://dbpedia.org/resource/Robert_Giraud> .
+
+<http://en.wikipedia.org/wiki/Robert_Giraud>
+        foaf:primaryTopic  <http://dbpedia.org/resource/Robert_Giraud> .

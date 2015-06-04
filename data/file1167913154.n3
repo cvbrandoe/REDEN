@@ -1,0 +1,54 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39465802n#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb121132990#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb121132990#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121132990#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394672285#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121132990#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121132990#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121132990#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39471515d#frbr:Expression>
+        bnfroles:r500        <http://data.bnf.fr/ark:/12148/cb121132990#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb121132990#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121132990#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121132990#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1928 ;
+        rdagroup2elements:biographicalInformation
+                "Metteur en scène de théâtre. - Délégué général de l'ANALIV, association nationale pour le Livre Vivant (en 1986). - Conseiller technique et pédagogique d'art dramatique du Ministère de la jeunesse et des sports (en 1986)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/59114880> ;
+        foaf:familyName     "Philippe" ;
+        foaf:givenName      "Michel" ;
+        foaf:name           "Michel Philippe" ;
+        foaf:page           <http://data.bnf.fr/12113299/michel_philippe/> .
+
+<http://data.bnf.fr/ark:/12148/cb39467951m#frbr:Expression>
+        bnfroles:r500        <http://data.bnf.fr/ark:/12148/cb121132990#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb121132990#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121132990#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121132990>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb121132990> ;
+        bnf-onto:FRBNF   12113299 ;
+        skos:exactMatch  <http://viaf.org/viaf/59114880> ;
+        skos:note        "Metteur en scène de théâtre. - Délégué général de l'ANALIV, association nationale pour le Livre Vivant (en 1986). - Conseiller technique et pédagogique d'art dramatique du Ministère de la jeunesse et des sports (en 1986)"@fr ;
+        skos:prefLabel   "Michel Philippe"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb121132990#foaf:Person> .

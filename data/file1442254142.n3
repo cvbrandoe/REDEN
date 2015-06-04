@@ -1,0 +1,76 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1965 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur d'anglais, University of Wales, Aberystwyth, GB (en 2007)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxc> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/6141227> , <http://www.idref.fr/050284754> ;
+        foaf:familyName     "Watt" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Diane" ;
+        foaf:name           "Diane Watt" ;
+        foaf:page           <http://data.bnf.fr/13522946/diane_watt/> .
+
+<http://data.bnf.fr/ark:/12148/cb42578931r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388926763#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392220167#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43772763v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41142909p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401376985#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37036966t#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40180728m#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb135229464>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb135229464> ;
+        bnf-onto:FRBNF      13522946 ;
+        skos:editorialNote  "The arts of 17th-century science : representations of the natural world in European and North American culture / ed. by Claire Jowitt and Diane Watt, 2002. - . - Bibliothèque nationale, Canada. - http://amicus.nlc.bnc.ca. - 2005-08-31"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/6141227> , <http://www.idref.fr/050284754> ;
+        skos:note           "Professeur d'anglais, University of Wales, Aberystwyth, GB (en 2007)"@fr ;
+        skos:prefLabel      "Diane Watt"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb135229464#foaf:Person> .

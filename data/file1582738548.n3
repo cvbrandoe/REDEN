@@ -1,0 +1,65 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb35452633w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40924984r#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34989638n#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411758955#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36154181g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12102975g>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12102975g> ;
+        bnf-onto:FRBNF   12102975 ;
+        skos:exactMatch  <http://www.idref.fr/029392608> , <http://viaf.org/viaf/230999863> ;
+        skos:note        "Médecin, spécialisé en radiologie, Service de radiologie, Hôpital Jean Verdier, Bondy (en 1988)"@fr ;
+        skos:prefLabel   "Philippe Grenier"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40115874t#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12102975g#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1949 ;
+        rdagroup2elements:biographicalInformation
+                "Médecin, spécialisé en radiologie, Service de radiologie, Hôpital Jean Verdier, Bondy (en 1988)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/230999863> , <http://www.idref.fr/029392608> ;
+        foaf:familyName     "Grenier" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Philippe" ;
+        foaf:name           "Philippe Grenier" ;
+        foaf:page           <http://data.bnf.fr/12102975/philippe_grenier/> .

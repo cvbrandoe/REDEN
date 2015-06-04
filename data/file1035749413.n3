@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37776170w#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399007483#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1944 ;
+        rdagroup2elements:biographicalInformation
+                "Chanteuse de soul music" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:placeOfBirth  "Shevenport (La.)" ;
+        owl:sameAs                      <http://viaf.org/viaf/222542108> , <http://www.idref.fr/08429082X> ;
+        foaf:familyName                 "Swann" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Bettye" ;
+        foaf:name                       "Bettye Swann" ;
+        foaf:page                       <http://data.bnf.fr/14231024/bettye_swann/> .
+
+<http://data.bnf.fr/ark:/12148/cb411244039#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38092706t#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14231024x>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14231024x> ;
+        bnf-onto:FRBNF        14231024 ;
+        isni:identifierValid  "0000000361028392" ;
+        owl:sameAs            <http://isni.org/isni/0000000361028392> ;
+        skos:editorialNote    "Don't you ever get tired of hurting me ? [Enregistrement sonore]  / Betty Swann, chant [acc. voc. et instr.]. Honest Jons records 7243 866408 2 6. - . - AMG. - http://www.allmusic.com. - 2005-02-15"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/222542108> , <http://www.idref.fr/08429082X> , <http://isni.org/isni/0000000361028392> ;
+        skos:note             "Chanteuse de soul music"@fr ;
+        skos:prefLabel        "Bettye Swann"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38135400k#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14231024x#foaf:Person> .

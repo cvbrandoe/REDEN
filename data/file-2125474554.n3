@@ -1,0 +1,75 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb415000981#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb404039382#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14969995p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14969995p> ;
+        bnf-onto:FRBNF        14969995 ;
+        isni:identifierValid  "0000000354459370" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000354459370> ;
+        skos:editorialNote    "[Recueil. Oeuvre de Robert Boissard] [image fixe], [s.d.]. - . - Le peintre-graveur français. Tome IV / A. P. F. Robert-Dumesnil , 1838, p. 25. - . -"@fr , "Die Monogrammisten und diejenigen. Tome I / Dr G. K. Nagler,  1878, p. 869-870 n° 2022. - . - Robert Boissard / Marianne Grivel. In : Allgemeines Künstler-Lexicon, Tome XII, 1994, p. 321. - . - Bénézit, 2006. - . -"@fr , "BN Cat. gén.. - . - BnF Estampes, Inventaire du Fonds français, graveurs du XVIème siècle / par A. Linzeler, 1932, T. I, Androuet du Cerceau-Leu, p. 120-166. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000354459370> , <http://viaf.org/viaf/40191964> ;
+        skos:note             "Dessinateur et graveur au burin, actif en Alsace et en Lorraine. - Signatures : RB (monogramme confondu avec celui de René Boyvin) ; Robert boissard"@fr , "Il a été placé en apprentissage chez les fils de Théodore de Bry par Jean-Jacques Boissard, son parent, et a réalisé de nombreuses gravures d'après ses dessins, notamment des antiques et des portraits. Il participe entre autres à son ouvrage \"Mascarades\". - Graveur pour le livre illustré, ses oeuvres son édités par Jean-Jacques Boissard et Jean Leclerc"@fr ;
+        skos:prefLabel        "Robert Boissard (1570?-1601?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414994771#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40347078f#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1570 ;
+        bnf-onto:lastYear               1601 ;
+        rdagroup2elements:biographicalInformation
+                "Dessinateur et graveur au burin, actif en Alsace et en Lorraine. - Signatures : RB (monogramme confondu avec celui de René Boyvin) ; Robert boissard" , "Il a été placé en apprentissage chez les fils de Théodore de Bry par Jean-Jacques Boissard, son parent, et a réalisé de nombreuses gravures d'après ses dessins, notamment des antiques et des portraits. Il participe entre autres à son ouvrage \"Mascarades\". - Graveur pour le livre illustré, ses oeuvres son édités par Jean-Jacques Boissard et Jean Leclerc" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1570/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1601/> ;
+        rdagroup2elements:placeOfBirth  "Valence (Drôme)" ;
+        bio:birth                       "1570" ;
+        bio:death                       "1601" ;
+        owl:sameAs                      <http://viaf.org/viaf/40191964> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b8447135w.thumbnail> ;
+        foaf:familyName                 "Boissard" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Robert" ;
+        foaf:name                       "Robert Boissard" ;
+        foaf:page                       <http://data.bnf.fr/14969995/robert_boissard/> .
+
+<http://data.bnf.fr/ark:/12148/cb301218112#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41499885r#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14969995p#foaf:Person> .

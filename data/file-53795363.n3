@@ -1,0 +1,32 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb149549373#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1755 ;
+        rdagroup2elements:biographicalInformation
+                "Député à l'Assemblée Nationale Constituante , France, Béarn. - Famille politique : clergé" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1755/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1001-1100/> ;
+        bio:birth                      "1755" ;
+        bio:death                      "1..." ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b6943731v.thumbnail> ;
+        foaf:familyName                "Julien" ;
+        foaf:page                      <http://data.bnf.fr/14954937/julien/> .
+
+<http://data.bnf.fr/14954937/julien/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb149549373#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149549373>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb149549373> ;
+        bnf-onto:FRBNF  14954937 ;
+        skos:note       "Député à l'Assemblée Nationale Constituante , France, Béarn. - Famille politique : clergé"@fr ;
+        skos:prefLabel  "Julien (1755-1...)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb149549373#foaf:Person> .

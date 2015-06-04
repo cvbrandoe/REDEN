@@ -1,0 +1,46 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb42731872w#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb15856574n#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb15856574n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15856574n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42124750s#frbr:Expression>
+        bnfroles:r1160       <http://data.bnf.fr/ark:/12148/cb15856574n#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb15856574n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15856574n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41387019w#frbr:Expression>
+        bnfroles:r1160       <http://data.bnf.fr/ark:/12148/cb15856574n#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb15856574n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15856574n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15856574n>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb15856574n> ;
+        bnf-onto:FRBNF   15856574 ;
+        skos:exactMatch  <http://viaf.org/viaf/47098057> ;
+        skos:note        "Artiste lyrique (Baryton)"@fr ;
+        skos:prefLabel   "Jean-Gabriel Saint-Martin"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb15856574n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15856574n#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1980 ;
+        rdagroup2elements:biographicalInformation
+                "Artiste lyrique (Baryton)" ;
+        owl:sameAs          <http://viaf.org/viaf/47098057> ;
+        foaf:familyName     "Saint-Martin" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jean-Gabriel" ;
+        foaf:name           "Jean-Gabriel Saint-Martin" ;
+        foaf:page           <http://data.bnf.fr/15856574/jean-gabriel_saint-martin/> .

@@ -1,0 +1,38 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/13620290/annick_david/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13620290c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13620290c#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Peintre français" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Peinture" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/750/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/05661165X> ;
+        foaf:familyName  "David" ;
+        foaf:givenName   "Annick" ;
+        foaf:name        "Annick David" ;
+        foaf:page        <http://data.bnf.fr/13620290/annick_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb13620290c>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb13620290c> ;
+        bnf-onto:FRBNF   13620290 ;
+        skos:exactMatch  <http://www.idref.fr/05661165X> ;
+        skos:note        "Peintre français"@fr ;
+        skos:prefLabel   "Annick David"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb13620290c#foaf:Person> .

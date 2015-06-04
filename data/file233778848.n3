@@ -1,0 +1,110 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1776 ;
+        bnf-onto:lastYear               1856 ;
+        rdagroup2elements:biographicalInformation
+                "Naturaliste et écrivain régionaliste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1776/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1856/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Champrond (Sarthe)" ;
+        rdagroup2elements:placeOfDeath  "Le Mans" ;
+        bio:birth                       "1776-12-02" ;
+        bio:death                       "1856-06-07" ;
+        owl:sameAs                      <http://viaf.org/viaf/56600436> , <http://dbpedia.org/resource/Narcisse_Henri_François_Desportes> , <http://www.idref.fr/101877633> ;
+        foaf:birthday                   "12-02" ;
+        foaf:familyName                 "Desportes" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Narcisse-Henri-François" ;
+        foaf:name                       "Narcisse-Henri-François Desportes" ;
+        foaf:page                       <http://data.bnf.fr/10691753/narcisse-henri-francois_desportes/> .
+
+<http://data.bnf.fr/ark:/12148/cb30334783x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30334786z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb363857115#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30334785m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36385712h#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31089777v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303347848#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10691753t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Narcisse_Henri_François_Desportes> , <http://catalogue.bnf.fr/ark:/12148/cb10691753t> ;
+        bnf-onto:FRBNF        10691753 ;
+        isni:identifierValid  "0000000109034600" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109034600> ;
+        skos:altLabel         "Narcisse Desportes (1776-1856)"@fr ;
+        skos:editorialNote    "DBF. - . - WBIS. - http://db.saur.de/WBIS. - 2008-03-19"@fr , "Biographie et bibliographie du Maine et du département de la Sarthe, faisant suite au Dictionnaire statistique du même département / par J.-R. Pesche... et N.-H.-F. Desportes, 1828. - . - Flore de la Sarthe et de la Mayenne, disposée d'après la méthode naturelle, avec l'indication des propriétés médicales des plantes et leur usage dans les arts / par N. Desportes, 1838. - . -"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/Narcisse_Henri_François_Desportes> , <http://viaf.org/viaf/56600436> , <http://www.idref.fr/101877633> , <http://isni-url.oclc.nl/isni/0000000109034600> , <http://fr.wikipedia.org/wiki/Narcisse_Henri_François_Desportes> ;
+        skos:note             "Naturaliste et écrivain régionaliste"@fr ;
+        skos:prefLabel        "Narcisse-Henri-François Desportes (1776-1856)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30334782k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36387046c#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb363870451#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31089773g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35033715c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303347879#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10691753t#foaf:Person> .

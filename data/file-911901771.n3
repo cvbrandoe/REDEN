@@ -1,0 +1,103 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1939 ;
+        rdagroup2elements:biographicalInformation
+                "Chercheur en biologie marine. - En poste au Laboratoire Arago, Banyuls-sur-Mer, Alpes-Maritimes (en 1994)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/026933373> , <http://viaf.org/viaf/41841776> ;
+        foaf:familyName     "Jacques" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Guy" ;
+        foaf:name           "Guy Jacques" ;
+        foaf:page           <http://data.bnf.fr/11908442/guy_jacques/> .
+
+<http://data.bnf.fr/ark:/12148/cb358559721#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34715166r#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423735344#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38561863x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35918328z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39246233r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37196753b#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41368371n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346207996#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11908442t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11908442t> ;
+        bnf-onto:FRBNF        11908442 ;
+        isni:identifierValid  "0000000122787017" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000122787017> ;
+        skos:exactMatch       <http://www.idref.fr/026933373> , <http://viaf.org/viaf/41841776> , <http://isni-url.oclc.nl/isni/0000000122787017> ;
+        skos:note             "Chercheur en biologie marine. - En poste au Laboratoire Arago, Banyuls-sur-Mer, Alpes-Maritimes (en 1994)"@fr ;
+        skos:prefLabel        "Guy Jacques"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42341241g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40947511k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34853614d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349150048#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908442t#foaf:Person> .

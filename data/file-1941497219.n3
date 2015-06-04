@@ -1,0 +1,64 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb425279335#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12520989s#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12520989s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12520989s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb393695378#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12520989s#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12520989s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12520989s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12520989s#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1741 ;
+        rdagroup2elements:biographicalInformation
+                "Autre(s) graphie(s) : David fils, Christophe. - Imprimeur-libraire. - Fils cadet du libraire Michel David. Gendre de feu Guillaume Vandive puis  d'un libraire Clousier, probablement Michel. Reçu libraire en oct. 1713 et  imprimeur en juillet 1723" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1741/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1713-1741" ;
+        bio:birth                      "16.." ;
+        bio:death                      "1741-11-25" ;
+        owl:sameAs                     <http://viaf.org/viaf/197743249> , <http://www.idref.fr/034455612> ;
+        foaf:familyName                "David" ;
+        foaf:givenName                 "Christophe" ;
+        foaf:name                      "Christophe David" ;
+        foaf:page                      <http://data.bnf.fr/12520989/christophe_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb420225210#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12520989s#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12520989s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12520989s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12520989s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12520989s> ;
+        bnf-onto:FRBNF        12520989 ;
+        isni:identifierValid  "0000000357420121" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000357420121> ;
+        skos:altLabel         "Christophe David II (16..-1741)"@fr , "Christophe II David (16..-1741)"@fr ;
+        skos:editorialNote    "Liste des libraires, 1719. - . - Tableau des libraires, 1732. - . - Tableau des libraires, 1740. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000357420121> , <http://viaf.org/viaf/197743249> , <http://www.idref.fr/034455612> ;
+        skos:note             "Autre(s) graphie(s) : David fils, Christophe. - Imprimeur-libraire. - Fils cadet du libraire Michel David. Gendre de feu Guillaume Vandive puis  d'un libraire Clousier, probablement Michel. Reçu libraire en oct. 1713 et  imprimeur en juillet 1723"@fr ;
+        skos:prefLabel        "Christophe David (16..-1741)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12520989s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36538029b#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12520989s#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12520989s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12520989s#foaf:Person> .

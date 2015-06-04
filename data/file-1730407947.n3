@@ -1,0 +1,185 @@
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpprop: <http://dbpedia.org/property/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://en.wikipedia.org/wiki/Raymond_Poincaré>
+        foaf:primaryTopic  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Poincar%C3%A9>
+        dbpedia-owl:wikiPageDisambiguates
+                <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Georges_Clemenceau>
+        dbpedia-owl:president  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpprop:president      <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Joseph_Caillaux>
+        dbpedia-owl:successor  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpprop:after          <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpprop:successor      <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/President_Poincare>
+        dbpedia-owl:wikiPageRedirects  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Justin_de_Selves>
+        dbpprop:after  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Gaston_Doumergue>
+        dbpedia-owl:president  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpprop:president      <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Raimond_Poincare>
+        dbpedia-owl:wikiPageRedirects  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/%C3%89douard_Herriot>
+        dbpedia-owl:successor  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpprop:successor      <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Raymond_Poincar%C3%A9>
+        a                               <http://dbpedia.org/class/yago/YagoLegalActorGeo> , owl:Thing , dbpedia-owl:OfficeHolder , <http://dbpedia.org/class/yago/Lawgiver110249270> , <http://dbpedia.org/class/yago/Leader109623038> , <http://dbpedia.org/class/yago/KnightsOfTheGoldenFleece> , <http://dbpedia.org/class/yago/Executive110069645> , <http://dbpedia.org/class/yago/PresidentsOfFrance> , <http://dbpedia.org/class/yago/President110467179> , <http://dbpedia.org/class/yago/Minister110320863> , <http://dbpedia.org/class/yago/Representative110522035> , <http://dbpedia.org/class/yago/Object100002684> , <http://umbel.org/umbel/rc/PersonWithOccupation> , <http://dbpedia.org/class/yago/Curate109983572> , <http://wikidata.dbpedia.org/resource/Q215627> , <http://dbpedia.org/class/yago/Organism100004475> , <http://dbpedia.org/class/yago/Aristocrat109807754> , foaf:Person , <http://dbpedia.org/class/yago/Negotiator110351874> , <http://wikidata.dbpedia.org/resource/Q5> , <http://dbpedia.org/class/yago/Politician110451263> , dbpedia-owl:Person , <http://dbpedia.org/class/yago/Person100007846> , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> , <http://dbpedia.org/class/yago/HeadOfState110164747> , <http://dbpedia.org/class/yago/YagoLegalActor> , dbpedia-owl:Agent , <http://dbpedia.org/class/yago/Communicator109610660> , <http://dbpedia.org/class/yago/MaleAristocrat110285135> , <http://dbpedia.org/class/yago/Administrator109770949> , <http://dbpedia.org/class/yago/PhysicalEntity100001930> , <http://dbpedia.org/class/yago/FrenchPeopleOfWorldWarI> , <http://umbel.org/umbel/rc/PrimeMinister_HeadOfGovernment> , <http://dbpedia.org/class/yago/PrimeMinistersOfFrance> , <http://dbpedia.org/class/yago/Head110162991> , <http://dbpedia.org/class/yago/LivingThing100004258> , <http://dbpedia.org/class/yago/Whole100003553> , <http://dbpedia.org/class/yago/Legislator110253995> , <http://dbpedia.org/class/yago/CausalAgent100007347> , <http://schema.org/Person> , <http://dbpedia.org/class/yago/FrenchSenatorsOfTheThirdRepublic> , <http://umbel.org/umbel/rc/Politician> , <http://dbpedia.org/class/yago/Clergyman109927451> , <http://dbpedia.org/class/yago/Knight110238375> , <http://dbpedia.org/class/yago/PoliticiansOfTheFrenchThirdRepublic> , <http://dbpedia.org/class/yago/SpiritualLeader109505153> , <http://dbpedia.org/class/yago/RectorsOfTheUniversityOfGlasgow> , <http://dbpedia.org/class/yago/PeopleFromBar-le-Duc> , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> , <http://dbpedia.org/class/yago/Senator110578471> , <http://dbpedia.org/class/yago/KnightsOfTheOrderOfTheRoyalHouseOfChakri> ;
+        rdfs:comment                    "Raymond Poincaré (ur. 20 sierpnia 1860 w Bar-le-Duc, zm. 15 października 1934 w Paryżu) – polityk francuski, pięciokrotny premier, prezydent Francji w latach 1913-1920. W kwestii polskiej wydał dekret o utworzeniu Błękitnej Armii generała Hallera."@pl , "雷蒙·普恩加莱（Raymond Poincaré，1860年8月20日－1934年10月15日），法國政治家。1912年－1913年擔任法國總理和外交部長；1913年－1920年擔任法兰西第三共和国的總統；1922年－1924年與1926年－1929年再次出任總理。"@zh , "Raymond Poincaré (20 de Agosto de 1860, Bar-le-Duc — 15 de Outubro de 1934, Paris) foi um político francês, ministro da Educação e da Fazenda, chefe do governo em cinco ocasiões e presidente da França (1913-1920) durante a Primeira Guerra Mundial."@pt , "Raymond Poincaré (Bar-le-Duc, 20 agosto 1860 – Parigi, 15 ottobre 1934) è stato un politico francese.Fu Presidente della Repubblica francese durante la prima guerra mondiale e in seguito primo ministro. Era fratello di Lucien Poincaré e parente di Henri Poincaré."@it , "Ра́ймон Пуанкаре́ (фр. Raymond Poincaré) (20 августа 1860 года, Бар-ле-Дюк, — 15 октября 1934 года, Париж) — французский государственный деятель, президент Франции (Третья республика, 1913—1920)."@ru , "Raymond Poincaré (French pronunciation: ​[ʁɛmɔ̃ pwɛ̃kaʁe]; 20 August 1860 – 15 October 1934) was a French statesman who served three times as Prime Minister, and as President from 1913 to 1920. He was a conservative leader, primarily committed to political and social stability.Trained in law, Poincaré was elected a Deputy in 1887, and served in the cabinets of Dupuy and Ribot."@en , "ريمون بوانكاريه (بالفرنسية: Raymond Poincaré) سياسي فرنسي (1860-1934).تولى رئاسة الجمهورية الفرنسية الثالثة (1913-1920) وفي عهده دخلت بلاده الحرب العالمية الأولى. كما تولى رئاسة الوزارة في فرنسا ثلاث مرات: من 21 يناير 1912 إلى 21 يناير 1913. من 15 يناير 1922 إلى 6 يونيو 1924. من 23 يوليو 1926 إلى 29 يوليو 1929.أخوه لوسيان بوانكاريه Lucien عالم فيزيائي، وقريبه جول هنري بوانكاريه Jules Henri عالم فيزيائي ورياضي معروف."@ar , "Raymond Poincaré (* 20. August 1860 in Bar-le-Duc; † 15. Oktober 1934 in Paris) war ein französischer Politiker in der Dritten Republik (ARD). Er war mehrmals Ministerpräsident und vom 18. Februar 1913 bis 17. Februar 1920 Staatspräsident. Er war ein Cousin des Mathematikers Henri Poincaré."@de , "Raymond Poincaré (Bar-le-Duc, 20 de agosto de 1860-París, 15 de octubre de 1934). Político francés, Presidente de la República durante la Primera Guerra Mundial y Primer Ministro de Francia en tres ocasiones: entre 1912 y 1913; entre 1922 y 1924, y entre 1926 y 1929, primo del matemático y científico Henri Poincaré."@es , "Raymond Poincaré, né le 20 août 1860 à Bar-le-Duc (Meuse) et mort le 15 octobre 1934 à Paris, est un homme d'État français. Il est le 10e président de la République française du 18 février 1913 au 18 février 1920.Ministre à plusieurs reprises, président du Conseil des ministres puis président de la République de 1913 à 1920, Raymond Poincaré fut l'une des plus grandes figures politiques de la IIIe République."@fr , "レイモン（レモン）・ポアンカレ（ポワンカレ、Raymond Poincaré、1860年8月20日 – 1934年10月15日）は、フランス第三共和制の政治家、弁護士。通算5期に渡り首相となり、1913年から1920年まで大統領を勤めた。ムーズ県バル＝ル＝デュック出身。弁護士を経て、1887年から1903年まで下院議員。この間、一般教育・芸術大臣や蔵相などを歴任した。1903年には上院議員に選出されている。1909年アカデミー・フランセーズ会員に選ばれる。1912年に初めて首相となる。首相としてはフランス国内における普仏戦争後の財政的逼迫を一気に打開したい財界からのロビー活動と対独復讐政策を求める世論に押され対独包囲網の構築、なかんずくイギリスおよび帝政ロシア（ロシア革命後はソビエト連邦）との軍事的提携に動いた。1913年共和国大統領に就任。1914年に第一次世界大戦が勃発するとフランス国内に「神聖連合」と呼ばれる挙国一致体制を成立させ、フランスは連合国側のひとつとして戦勝国となる。1922年再度首相となり、蔵相を兼務して財政危機の収拾にあたり、フランの価格安定に財政手腕を発揮した。一方で地政学上半永久的な封じ込め政策を行わんがため対独強硬派としてドイツ賠償委員会委員長に就任。ドイツに対して戦争責任の一切を負わせる厳罰主義に徹した。1924年4月9日のドーズ案採択時も最後まで反対するもラムゼイ・マクドナルド、ベニート・ムッソリーニ、カルビン・クーリッジの圧力で方向転換。同年5月11日の仏国会選挙において経済政策の失敗とルール地方占領が招いた国際的孤立で支持を失いポアンカレ所属の民主同盟（Alliance démocratique）は敗退。これを機にフランスはドイツとの宥和政策に転換し、ドーズ案に引き続くヤング案でドイツの戦後補償は実質的に完了するが、ひとたび苛烈な戦後処理を行われたドイツ国民の感情は燻り、これがナチス台頭ひいては第二次世界大戦の萌芽となった。1929年に政界を引退し『回顧録』を執筆。1934年パリで死去。"@ja , "Raymond Poincaré (Bar-le-Duc, 20 augustus 1860 – Parijs, 15 oktober 1934) was een Franse staatsman."@nl ;
+        rdfs:label                      "雷蒙·普恩加萊"@zh , "レイモン・ポアンカレ"@ja , "ريمون بوانكاريه"@ar , "Пуанкаре, Раймон"@ru , "Raymond Poincaré"@pl , "Raymond Poincaré"@pt , "Raymond Poincaré"@en , "Raymond Poincaré"@nl , "Raymond Poincaré"@it , "Raymond Poincaré"@de , "Raymond Poincaré"@fr , "Raymond Poincaré"@es ;
+        dbpedia-owl:abstract            "Raymond Poincaré (20 de Agosto de 1860, Bar-le-Duc — 15 de Outubro de 1934, Paris) foi um político francês, ministro da Educação e da Fazenda, chefe do governo em cinco ocasiões e presidente da França (1913-1920) durante a Primeira Guerra Mundial."@pt , "雷蒙·普恩加莱（Raymond Poincaré，1860年8月20日－1934年10月15日），法國政治家。1912年－1913年擔任法國總理和外交部長；1913年－1920年擔任法兰西第三共和国的總統；1922年－1924年與1926年－1929年再次出任總理。"@zh , "Raymond Poincaré (ur. 20 sierpnia 1860 w Bar-le-Duc, zm. 15 października 1934 w Paryżu) – polityk francuski, pięciokrotny premier, prezydent Francji w latach 1913-1920. W kwestii polskiej wydał dekret o utworzeniu Błękitnej Armii generała Hallera."@pl , "Raymond Poincaré (Bar-le-Duc, 20 agosto 1860 – Parigi, 15 ottobre 1934) è stato un politico francese.Fu Presidente della Repubblica francese durante la prima guerra mondiale e in seguito primo ministro. Era fratello di Lucien Poincaré e parente di Henri Poincaré."@it , "レイモン（レモン）・ポアンカレ（ポワンカレ、Raymond Poincaré、1860年8月20日 – 1934年10月15日）は、フランス第三共和制の政治家、弁護士。通算5期に渡り首相となり、1913年から1920年まで大統領を勤めた。ムーズ県バル＝ル＝デュック出身。弁護士を経て、1887年から1903年まで下院議員。この間、一般教育・芸術大臣や蔵相などを歴任した。1903年には上院議員に選出されている。1909年アカデミー・フランセーズ会員に選ばれる。1912年に初めて首相となる。首相としてはフランス国内における普仏戦争後の財政的逼迫を一気に打開したい財界からのロビー活動と対独復讐政策を求める世論に押され対独包囲網の構築、なかんずくイギリスおよび帝政ロシア（ロシア革命後はソビエト連邦）との軍事的提携に動いた。1913年共和国大統領に就任。1914年に第一次世界大戦が勃発するとフランス国内に「神聖連合」と呼ばれる挙国一致体制を成立させ、フランスは連合国側のひとつとして戦勝国となる。1922年再度首相となり、蔵相を兼務して財政危機の収拾にあたり、フランの価格安定に財政手腕を発揮した。一方で地政学上半永久的な封じ込め政策を行わんがため対独強硬派としてドイツ賠償委員会委員長に就任。ドイツに対して戦争責任の一切を負わせる厳罰主義に徹した。1924年4月9日のドーズ案採択時も最後まで反対するもラムゼイ・マクドナルド、ベニート・ムッソリーニ、カルビン・クーリッジの圧力で方向転換。同年5月11日の仏国会選挙において経済政策の失敗とルール地方占領が招いた国際的孤立で支持を失いポアンカレ所属の民主同盟（Alliance démocratique）は敗退。これを機にフランスはドイツとの宥和政策に転換し、ドーズ案に引き続くヤング案でドイツの戦後補償は実質的に完了するが、ひとたび苛烈な戦後処理を行われたドイツ国民の感情は燻り、これがナチス台頭ひいては第二次世界大戦の萌芽となった。1929年に政界を引退し『回顧録』を執筆。1934年パリで死去。"@ja , "Raymond Poincaré (* 20. August 1860 in Bar-le-Duc; † 15. Oktober 1934 in Paris) war ein französischer Politiker in der Dritten Republik (ARD). Er war mehrmals Ministerpräsident und vom 18. Februar 1913 bis 17. Februar 1920 Staatspräsident. Er war ein Cousin des Mathematikers Henri Poincaré."@de , "Ра́ймон Пуанкаре́ (фр. Raymond Poincaré) (20 августа 1860 года, Бар-ле-Дюк, — 15 октября 1934 года, Париж) — французский государственный деятель, президент Франции (Третья республика, 1913—1920)."@ru , "ريمون بوانكاريه (بالفرنسية: Raymond Poincaré) سياسي فرنسي (1860-1934).تولى رئاسة الجمهورية الفرنسية الثالثة (1913-1920) وفي عهده دخلت بلاده الحرب العالمية الأولى. كما تولى رئاسة الوزارة في فرنسا ثلاث مرات: من 21 يناير 1912 إلى 21 يناير 1913. من 15 يناير 1922 إلى 6 يونيو 1924. من 23 يوليو 1926 إلى 29 يوليو 1929.أخوه لوسيان بوانكاريه Lucien عالم فيزيائي، وقريبه جول هنري بوانكاريه Jules Henri عالم فيزيائي ورياضي معروف."@ar , "Raymond Poincaré (Bar-le-Duc, 20 de agosto de 1860-París, 15 de octubre de 1934). Político francés, Presidente de la República durante la Primera Guerra Mundial y Primer Ministro de Francia en tres ocasiones: entre 1912 y 1913; entre 1922 y 1924, y entre 1926 y 1929, primo del matemático y científico Henri Poincaré."@es , "Raymond Poincaré (French pronunciation: ​[ʁɛmɔ̃ pwɛ̃kaʁe]; 20 August 1860 – 15 October 1934) was a French statesman who served three times as Prime Minister, and as President from 1913 to 1920. He was a conservative leader, primarily committed to political and social stability.Trained in law, Poincaré was elected a Deputy in 1887, and served in the cabinets of Dupuy and Ribot. In 1902, he co-founded the Democratic Republican Alliance, the most important center-right party under the Third Republic, becoming Prime Minister in 1912 and President in 1913. He was noted for his strongly anti-German attitudes, and twice visited Russia to maintain strategic ties.At the peace conference, he favoured re-occupation of the Rhineland, which he was able to carry out in 1923 as Prime Minister."@en , "Raymond Poincaré, né le 20 août 1860 à Bar-le-Duc (Meuse) et mort le 15 octobre 1934 à Paris, est un homme d'État français. Il est le 10e président de la République française du 18 février 1913 au 18 février 1920.Ministre à plusieurs reprises, président du Conseil des ministres puis président de la République de 1913 à 1920, Raymond Poincaré fut l'une des plus grandes figures politiques de la IIIe République. Il fut également l'un des personnages centraux de la Première Guerre mondiale, conflit durant lequel il appela « le Tigre », Georges Clemenceau, à la présidence du Conseil, en 1917."@fr , "Raymond Poincaré (Bar-le-Duc, 20 augustus 1860 – Parijs, 15 oktober 1934) was een Franse staatsman."@nl ;
+        dbpedia-owl:activeYearsEndDate  "1929-07-29+02:00"^^<http://www.w3.org/2001/XMLSchema#date> , "1920-02-18+02:00"^^<http://www.w3.org/2001/XMLSchema#date> , "1913-01-21+02:00"^^<http://www.w3.org/2001/XMLSchema#date> , "1924-06-08+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:activeYearsStartDate
+                "1913-02-18+02:00"^^<http://www.w3.org/2001/XMLSchema#date> , "1912-01-21+02:00"^^<http://www.w3.org/2001/XMLSchema#date> , "1926-07-23+02:00"^^<http://www.w3.org/2001/XMLSchema#date> , "1922-01-15+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:birthDate           "1860-08-20+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:birthPlace          <http://dbpedia.org/resource/Bar-le-Duc> , <http://dbpedia.org/resource/Meuse> , <http://dbpedia.org/resource/France> ;
+        dbpedia-owl:birthYear           "1860+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:deathDate           "1934-10-15+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:deathPlace          <http://dbpedia.org/resource/Paris> , <http://dbpedia.org/resource/France> ;
+        dbpedia-owl:deathYear           "1934+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:individualisedGnd   "118792652" ;
+        dbpedia-owl:office              "Co-Prince of Andorra" , "10th President of France" , "Prime Minister of France" ;
+        dbpedia-owl:party               <http://dbpedia.org/resource/Democratic_Republican_Alliance> ;
+        dbpedia-owl:president           <http://dbpedia.org/resource/Armand_Falli%C3%A8res> , <http://dbpedia.org/resource/Alexandre_Millerand> , <http://dbpedia.org/resource/Gaston_Doumergue> ;
+        dbpedia-owl:primeMinister       <http://dbpedia.org/resource/Louis_Barthou> , <http://dbpedia.org/resource/Georges_Clemenceau> , <http://dbpedia.org/resource/Gaston_Doumergue> , <http://dbpedia.org/resource/Paul_Painlev%C3%A9> , <http://dbpedia.org/resource/Aristide_Briand> , <http://dbpedia.org/resource/Alexandre_Millerand> , <http://dbpedia.org/resource/Alexandre_Ribot> ;
+        dbpedia-owl:religion            <http://dbpedia.org/resource/Catholic_Church> ;
+        dbpedia-owl:successor           <http://dbpedia.org/resource/Aristide_Briand> , <http://dbpedia.org/resource/Fr%C3%A9d%C3%A9ric_Fran%C3%A7ois-Marsal> , <http://dbpedia.org/resource/Paul_Deschanel> ;
+        dbpedia-owl:termPeriod          <http://dbpedia.org/resource/Raymond_Poincar%C3%A9__3> , <http://dbpedia.org/resource/Raymond_Poincar%C3%A9__1> , <http://dbpedia.org/resource/Raymond_Poincar%C3%A9__2> , <http://dbpedia.org/resource/Raymond_Poincar%C3%A9__4> ;
+        dbpedia-owl:thumbnail           <http://commons.wikimedia.org/wiki/Special:FilePath/Poincare_larger.jpg?width=300> ;
+        dbpedia-owl:viafId              "29539324" ;
+        dbpedia-owl:wikiPageExternalLink
+                <https://archive.org/stream/poincareabiograp000413mbp#page/n7/mode/2up> ;
+        dbpedia-owl:wikiPageID          303726 ;
+        dbpedia-owl:wikiPageRevisionID  606407727 ;
+        dbpprop:after                   <http://dbpedia.org/resource/Alexandre_Ribot> , <http://dbpedia.org/resource/Paul_Deschanel> , <http://dbpedia.org/resource/Charles_Jonnart> , <http://dbpedia.org/resource/Bonar_Law> , <http://dbpedia.org/resource/%C3%89mile_Combes> , <http://dbpedia.org/resource/Eug%C3%A8ne_Spuller> , <http://dbpedia.org/resource/Aristide_Briand> , <http://dbpedia.org/resource/Henry_de_Ch%C3%A9ron> , <http://dbpedia.org/resource/Joseph_Caillaux> ;
+        dbpprop:before                  <http://dbpedia.org/resource/%C3%89douard_Herriot> , <http://dbpedia.org/resource/Pierre_Merlou> , <http://dbpedia.org/resource/Charles_Dupuy> , <http://dbpedia.org/resource/Justin_de_Selves> , <http://dbpedia.org/resource/Anatole_de_Monzie> , <http://dbpedia.org/resource/Augustine_Birrell> , <http://dbpedia.org/resource/Auguste_Burdeau> , <http://dbpedia.org/resource/Armand_Falli%C3%A8res> , <http://dbpedia.org/resource/Joseph_Caillaux> , <http://dbpedia.org/resource/Aristide_Briand> ;
+        dbpprop:birthDate               "1860-08-20+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:birthPlace              <http://dbpedia.org/resource/Bar-le-Duc> , <http://dbpedia.org/resource/France> ;
+        dbpprop:dateOfBirth             "1860-08-20+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:dateOfDeath             "1934-10-15+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathDate               "1934-10-15+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathPlace              <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Paris> ;
+        dbpprop:gnd                     118792652 ;
+        dbpprop:hasPhotoCollection      <http://wifo5-03.informatik.uni-mannheim.de/flickrwrappr/photos/Raymond_Poincaré> ;
+        dbpprop:name                    "Raymond Poincaré"@en , "Poincare, Raymond"@en ;
+        dbpprop:office                  10 ;
+        dbpprop:office                  <http://dbpedia.org/resource/Prime_Minister_of_France> , <http://dbpedia.org/resource/List_of_Co-Princes_of_Andorra> ;
+        dbpprop:party                   <http://dbpedia.org/resource/Democratic_Republican_Alliance> ;
+        dbpprop:placeOfBirth            "Bar-le-Duc, Meuse, France"@en ;
+        dbpprop:placeOfDeath            "Paris, France"@en ;
+        dbpprop:predecessor             <http://dbpedia.org/resource/Aristide_Briand> , <http://dbpedia.org/resource/Armand_Falli%C3%A8res> , <http://dbpedia.org/resource/%C3%89douard_Herriot> , <http://dbpedia.org/resource/Joseph_Caillaux> ;
+        dbpprop:president               <http://dbpedia.org/resource/Armand_Falli%C3%A8res> , <http://dbpedia.org/resource/Alexandre_Millerand> , <http://dbpedia.org/resource/Gaston_Doumergue> ;
+        dbpprop:primeminister           <http://dbpedia.org/resource/Paul_Painlev%C3%A9> , <http://dbpedia.org/resource/Louis_Barthou> , <http://dbpedia.org/resource/Alexandre_Millerand> , <http://dbpedia.org/resource/Aristide_Briand> , <http://dbpedia.org/resource/Gaston_Doumergue> , <http://dbpedia.org/resource/Georges_Clemenceau> , <http://dbpedia.org/resource/Alexandre_Ribot> ;
+        dbpprop:religion                <http://dbpedia.org/resource/Catholic_Church> ;
+        dbpprop:rows                    2 ;
+        dbpprop:shortDescription        "President of France"@en ;
+        dbpprop:successor               <http://dbpedia.org/resource/Paul_Deschanel> , <http://dbpedia.org/resource/Aristide_Briand> , <http://dbpedia.org/resource/Fr%C3%A9d%C3%A9ric_Fran%C3%A7ois-Marsal> ;
+        dbpprop:termEnd                 "Served alongside Juan Benlloch i Vivó"@en , "1913-01-21+02:00"^^<http://www.w3.org/2001/XMLSchema#date> , "1920-02-18+02:00"^^<http://www.w3.org/2001/XMLSchema#date> , "and Jaume Viladrich i Gaspa"@en , "1924-06-08+02:00"^^<http://www.w3.org/2001/XMLSchema#date> , "1929-07-29+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:termStart               "1912-01-21+02:00"^^<http://www.w3.org/2001/XMLSchema#date> , "1913-02-18+02:00"^^<http://www.w3.org/2001/XMLSchema#date> , "1922-01-15+02:00"^^<http://www.w3.org/2001/XMLSchema#date> , "1926-07-23+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:title                   <http://dbpedia.org/resource/Ministry_of_National_Education_(France)> , <http://dbpedia.org/resource/Minister_of_the_Economy,_Finances_and_Industry_(France)> , <http://dbpedia.org/resource/Prime_Minister_of_France> , <http://dbpedia.org/resource/Ministry_of_Foreign_Affairs_and_International_Development_(France)> , <http://dbpedia.org/resource/List_of_Presidents_of_France> , <http://dbpedia.org/resource/Minister_of_Worship_(France)> , <http://dbpedia.org/resource/Rector_of_the_University_of_Glasgow> , <http://dbpedia.org/resource/List_of_covers_of_Time_magazine_(1920s)> ;
+        dbpprop:viaf                    29539324 ;
+        dbpprop:wordnet_type            <http://www.w3.org/2006/03/wn/wn20/instances/synset-incumbent-noun-1> , <http://www.w3.org/2006/03/wn/wn20/instances/synset-chancellor-noun-1> ;
+        dbpprop:years                   "1924-03-24+02:00"^^<http://www.w3.org/2001/XMLSchema#date> , 1922 , 1913 , 1914 , 1906 , 1895 , 1893 , 1926 , 1894 , 1912 ;
+        dc:description                  "President of France" , "President of France"@en ;
+        dcterms:subject                 <http://dbpedia.org/resource/Category:Knights_of_the_Golden_Fleece> , <http://dbpedia.org/resource/Category:Prime_Ministers_of_France> , <http://dbpedia.org/resource/Category:French_people_of_World_War_I> , <http://dbpedia.org/resource/Category:French_Ministers_of_Finance> , <http://dbpedia.org/resource/Category:1860_births> , <http://dbpedia.org/resource/Category:Knights_of_the_Order_of_the_Royal_House_of_Chakri> , <http://dbpedia.org/resource/Category:Members_of_the_Acad%C3%A9mie_fran%C3%A7aise> , <http://dbpedia.org/resource/Category:1934_deaths> , <http://dbpedia.org/resource/Category:Presidents_of_France> , <http://dbpedia.org/resource/Category:Politicians_from_Lorraine_(region)> , <http://dbpedia.org/resource/Category:Rectors_of_the_University_of_Glasgow> , <http://dbpedia.org/resource/Category:Democratic_Republican_Alliance_politicians> , <http://dbpedia.org/resource/Category:Members_of_the_Chamber_of_Deputies_of_the_French_Third_Republic> , <http://dbpedia.org/resource/Category:People_from_Bar-le-Duc> , <http://dbpedia.org/resource/Category:French_Senators_of_the_Third_Republic> ;
+        owl:sameAs                      <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> , <http://yago-knowledge.org/resource/Raymond_Poincaré> , <http://rdf.freebase.com/ns/m.01s6yy> ;
+        prov:wasDerivedFrom             <http://en.wikipedia.org/wiki/Raymond_Poincaré?oldid=606407727> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Poincare_larger.jpg> ;
+        foaf:givenName                  "Raymond"@en ;
+        foaf:isPrimaryTopicOf           <http://en.wikipedia.org/wiki/Raymond_Poincaré> ;
+        foaf:name                       "Poincare, Raymond"@en , "Raymond Poincaré"@en , "Raymond Poincare"@en ;
+        foaf:surname                    "Poincare"@en .
+
+<http://dbpedia.org/resource/R_Poincare>
+        dbpedia-owl:wikiPageRedirects  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Alexandre_Millerand>
+        dbpedia-owl:president      <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpedia-owl:primeMinister  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpprop:president          <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpprop:primeminister      <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Eug%C3%A8ne_Spuller>
+        dbpprop:before  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Fr%C3%A9d%C3%A9ric_Fran%C3%A7ois-Marsal>
+        dbpprop:before       <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpprop:predecessor  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Aristide_Briand>
+        dbpedia-owl:successor  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpprop:after          <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpprop:before         <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpprop:predecessor    <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpprop:successor      <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Raymond_Poincare>
+        dbpedia-owl:wikiPageRedirects  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Edmond_Lefebvre_du_Prey>
+        dbpprop:before  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Raimond_Poincar%C3%A9>
+        dbpedia-owl:wikiPageRedirects  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Charles_Jonnart>
+        dbpprop:before  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Paul_Painlev%C3%A9>
+        dbpedia-owl:president  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpprop:president      <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Georges_Leygues>
+        dbpprop:after  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Alexandre_Ribot>
+        dbpprop:before  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Raymond_Nicolas_Landry_Poincare>
+        dbpedia-owl:wikiPageRedirects  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Raymond_Nicolas_Landry_Poincar%C3%A9>
+        dbpedia-owl:wikiPageRedirects  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/R_Poincar%C3%A9>
+        dbpedia-owl:wikiPageRedirects  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Paul_Deschanel>
+        dbpprop:predecessor  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/European_theatre_of_World_War_I>
+        dbpedia-owl:commander  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/%C3%89mile_Gebhart>
+        dbpprop:after  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Augustine_Birrell>
+        dbpprop:after  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Armand_Falli%C3%A8res>
+        dbpedia-owl:primeMinister  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpedia-owl:successor      <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpprop:after              <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpprop:primeminister      <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> ;
+        dbpprop:successor          <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .
+
+<http://dbpedia.org/resource/Raymond_Poincaré>
+        owl:sameAs  <http://dbpedia.org/resource/Raymond_Poincar%C3%A9> .

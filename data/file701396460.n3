@@ -1,0 +1,74 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb121397517>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb121397517> ;
+        bnf-onto:FRBNF        12139751 ;
+        isni:identifierValid  "0000000039669984" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000039669984> ;
+        skos:exactMatch       <http://viaf.org/viaf/46599> , <http://isni-url.oclc.nl/isni/0000000039669984> , <http://www.idref.fr/029859565> ;
+        skos:prefLabel        "Valérie Rodrigue"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb358132227#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35100741r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1963 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/46599> , <http://www.idref.fr/029859565> ;
+        foaf:familyName     "Rodrigue" ;
+        foaf:givenName      "Valérie" ;
+        foaf:name           "Valérie Rodrigue" ;
+        foaf:page           <http://data.bnf.fr/12139751/valerie_rodrigue/> .
+
+<http://data.bnf.fr/ark:/12148/cb401994850#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41423992d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423995867#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35458648c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42194640n#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35058973q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121397517#foaf:Person> .

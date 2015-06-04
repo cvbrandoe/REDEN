@@ -1,0 +1,83 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37663846v#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373898555#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb376638476#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37663845h#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb376638414#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37663842g#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34335393x#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37389856h#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Helléniste" , "Traduit du grec ancien en anglais" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://www.idref.fr/032441134> , <http://viaf.org/viaf/29607724> ;
+        foaf:familyName  "Foster" ;
+        foaf:givenName   "Herbert Baldwin" ;
+        foaf:name        "Herbert Baldwin Foster" ;
+        foaf:page        <http://data.bnf.fr/12347061/herbert_baldwin_foster/> .
+
+<http://data.bnf.fr/ark:/12148/cb12347061p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12347061p> ;
+        bnf-onto:FRBNF        12347061 ;
+        isni:identifierValid  "0000000110493927" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000110493927> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000110493927> , <http://viaf.org/viaf/29607724> , <http://www.idref.fr/032441134> ;
+        skos:note             "Traduit du grec ancien en anglais"@fr , "Helléniste"@fr ;
+        skos:prefLabel        "Herbert Baldwin Foster"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb376638445#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373898613#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12347061p#foaf:Person> .

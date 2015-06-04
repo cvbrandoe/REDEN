@@ -1,0 +1,120 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39789076w#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39818290g#frbr:Expression>
+        bnfroles:r650        <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        marcrel:sgn          <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb147690997>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb147690997> ;
+        bnf-onto:FRBNF      14769099 ;
+        skos:altLabel       "Mathieu fils (1734-1811)"@fr , "Mathieu le fils (1734-1811)"@fr ;
+        skos:editorialNote  "Benoit, Dict.. - . - Grove music online [mort le 6 ou le 9 septembre 1811]. - http://www.oxfordmusiconline.com. - 2010-03-23 Archives de Paris, état civil reconstitué [acte de décès, 6 septembre 1811]. - http://canadp-archivesenligne.paris.fr/archives_etat_civil/avant_1860_fichiers_etat_civil_reconstitue/index.php. - 2010-03-23"@fr , "Six sonates à violon seul et la basse continue... Par Mr Mathieu fils,... Oeuvre IVe... [Musique imprimée], 1764. - . - Six sonates en duo pour deux violons..., composées par Mathieu le fils,... IIIe oeuvre [Musique imprimée], 1764. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/72155688> ;
+        skos:note           "Compositeur et violoniste"@fr ;
+        skos:prefLabel      "Julien-Amable Mathieu (1734-1811)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1734 ;
+        bnf-onto:lastYear              1811 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur et violoniste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1734/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1811/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1734-01-31" ;
+        bio:death                      "1811-09-06" ;
+        owl:sameAs                     <http://viaf.org/viaf/72155688> ;
+        foaf:birthday                  "01-31" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b530217052.thumbnail> ;
+        foaf:familyName                "Mathieu" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Julien-Amable" ;
+        foaf:name                      "Julien-Amable Mathieu" ;
+        foaf:page                      <http://data.bnf.fr/14769099/julien-amable_mathieu/> .
+
+<http://data.bnf.fr/ark:/12148/cb397890777#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43142479r#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43142484b#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb398182925#frbr:Expression>
+        bnfroles:r650        <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        marcrel:sgn          <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43142482n#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39789075j#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb431424819#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb396822350#frbr:Expression>
+        bnfroles:r270        <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        marcrel:scr          <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb397890746#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43142480z#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39789078k#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39818291t#frbr:Expression>
+        bnfroles:r650        <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        marcrel:sgn          <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb431424830#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147690997#foaf:Person> .

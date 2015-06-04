@@ -1,0 +1,82 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb36794455m#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12589432v>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12589432v> ;
+        bnf-onto:FRBNF      12589432 ;
+        skos:altLabel       "C. B."@fr ;
+        skos:editorialNote  "Lord Ruthwen ou Les vampires / roman de C. B. [Cyprien Bérard], 1820. - . - Le vampyre / John Polidori... Suivi de Lord Ruthwen ou Les vampires / Cyprien Bérard, impr. 2011 [p. 6, \"...on a longtemps pensé que son véritable auteur était son éditeur, le romancier français Charles Nodier, auteur de nombreux romans traitant du surnaturel. Il est probable que Cyprien Bérard en est l’auteur, mais on sait que Nodier l’adapta immédiatement en un mélodrame qui fut joué pour la première fois le 13 juin 1820 au théâtre de la porte St Martin à Paris\"]. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/64365884> ;
+        skos:note           "Directeur du théâtre du Vaudeville (1822-1824) puis du Théâtre des Nouveautés, Paris (en 1827)"@fr ;
+        skos:prefLabel      "Cyprien Bérard"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30086018j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb367944548#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30086016v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34653965s#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Directeur du théâtre du Vaudeville (1822-1824) puis du Théâtre des Nouveautés, Paris (en 1827)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "17.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/64365884> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k107983s.thumbnail> ;
+        foaf:familyName                "Bérard" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Cyprien" ;
+        foaf:name                      "Cyprien Bérard" ;
+        foaf:page                      <http://data.bnf.fr/12589432/cyprien_berard/> .
+
+<http://data.bnf.fr/ark:/12148/cb300860176#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30086015h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36794456z#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12589432v#foaf:Person> .

@@ -1,0 +1,53 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb422254166#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb16228911t#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb16228911t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16228911t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16228911t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb16228911t> ;
+        bnf-onto:FRBNF        16228911 ;
+        isni:identifierValid  "0000000121876456" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121876456> ;
+        skos:exactMatch       <http://viaf.org/viaf/152942537> , <http://isni-url.oclc.nl/isni/0000000121876456> , <http://www.idref.fr/152268812> ;
+        skos:note             "Administrateur des affaires maritimes dans les ports français et outremer, administrateur général puis haut fonctionnaire de défense à la mer. - Président d'honneur de l'Association Lapérouse (en 2010)"@fr ;
+        skos:prefLabel        "Pierre Bérard"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb16228911t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435256481#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16228911t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16228911t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16228911t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16228911t#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1935 ;
+        rdagroup2elements:biographicalInformation
+                "Administrateur des affaires maritimes dans les ports français et outremer, administrateur général puis haut fonctionnaire de défense à la mer. - Président d'honneur de l'Association Lapérouse (en 2010)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/152268812> , <http://viaf.org/viaf/152942537> ;
+        foaf:familyName     "Bérard" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Pierre" ;
+        foaf:name           "Pierre Bérard" ;
+        foaf:page           <http://data.bnf.fr/16228911/pierre_berard/> .
+
+<http://data.bnf.fr/ark:/12148/cb423058569#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16228911t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16228911t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16228911t#foaf:Person> .

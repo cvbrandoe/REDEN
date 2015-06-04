@@ -1,0 +1,60 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12536121m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12536121m> ;
+        bnf-onto:FRBNF        12536121 ;
+        isni:identifierValid  "0000000029711640" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000029711640> ;
+        skos:editorialNote    "Littérature et philosophie mêlées / Victor Hugo ; édition critique établie par Anthony R. W. James, 1976. - . - Vinaver studies in French / general ed. A. R. W. James and Jane H. M. Taylor, 1984-. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000029711640> , <http://viaf.org/viaf/69041729> , <http://www.idref.fr/034624678> ;
+        skos:note             "Spécialiste de la littérature française du 19e siècle, notamment spécialiste de Victor Hugo"@fr , "Ecrit aussi en français"@fr ;
+        skos:prefLabel        "Anthony R. W. James"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34557433k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34899331f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345574327#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34293940k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Ecrit aussi en français" , "Spécialiste de la littérature française du 19e siècle, notamment spécialiste de Victor Hugo" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://www.idref.fr/034624678> , <http://viaf.org/viaf/69041729> ;
+        foaf:familyName  "James" ;
+        foaf:givenName   "Anthony R. W." ;
+        foaf:name        "Anthony R. W. James" ;
+        foaf:page        <http://data.bnf.fr/12536121/anthony_r__w__james/> .
+
+<http://data.bnf.fr/ark:/12148/cb342245272#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12536121m#foaf:Person> .

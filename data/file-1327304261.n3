@@ -1,0 +1,37 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb16501311k>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb16501311k> ;
+        bnf-onto:FRBNF   16501311 ;
+        skos:exactMatch  <http://viaf.org/viaf/170474065> ;
+        skos:note        "Acteur"@fr ;
+        skos:prefLabel   "Arnaud Voisin (acteur)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb16501311k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb424095062#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb16501311k#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb16501311k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16501311k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16501311k#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Acteur" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/170474065> ;
+        foaf:familyName  "Voisin" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Arnaud" ;
+        foaf:name        "Arnaud Voisin" ;
+        foaf:page        <http://data.bnf.fr/16501311/arnaud_voisin/> .

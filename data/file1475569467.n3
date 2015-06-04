@@ -1,0 +1,51 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14974790d>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14974790d> ;
+        bnf-onto:FRBNF   14974790 ;
+        skos:exactMatch  <http://viaf.org/viaf/226085565> ;
+        skos:note        "Sculpteur"@fr ;
+        skos:prefLabel   "Pierre François Grégoire Giraud (1783-1836)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14974790d#foaf:Person> .
+
+<http://data.bnf.fr/14974790/pierre_francois_gregoire_giraud/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14974790d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40388267d#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb14974790d#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb14974790d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14974790d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14974790d#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1783 ;
+        bnf-onto:lastYear               1836 ;
+        rdagroup2elements:biographicalInformation
+                "Sculpteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1783/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1836/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Le Luc (Var)" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1783" ;
+        bio:death                       "1836" ;
+        owl:sameAs                      <http://viaf.org/viaf/226085565> ;
+        foaf:familyName                 "Giraud" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Pierre François Grégoire" ;
+        foaf:name                       "Pierre François Grégoire Giraud" ;
+        foaf:page                       <http://data.bnf.fr/14974790/pierre_francois_gregoire_giraud/> .

@@ -1,0 +1,79 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38971830v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb424675373#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1940 ;
+        rdagroup2elements:biographicalInformation
+                "Ornithologue. - Directeur de la section de biologie aviaire : Natural environment research council, GB (en 1991). - En poste : Monks Wood research station, GB (en 2008)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/030827485> , <http://viaf.org/viaf/92279379> , <http://dbpedia.org/resource/Ian_Newton> ;
+        foaf:familyName     "Newton" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Ian" ;
+        foaf:name           "Ian Newton" ;
+        foaf:page           <http://data.bnf.fr/12216501/ian_newton/> .
+
+<http://data.bnf.fr/ark:/12148/cb375349170#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37381014f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122165015>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb122165015> , <http://fr.wikipedia.org/wiki/Ian_Newton> ;
+        bnf-onto:FRBNF        12216501 ;
+        isni:identifierValid  "0000000086459648" ;
+        owl:sameAs            <http://isni.org/isni/0000000086459648> ;
+        skos:editorialNote    "Les oiseaux de proie / [sous la dir. de] I. Newton, P. Olsen ; ill., T. Pyrzakowski, 1991. - . - The migration ecology of birds / Ian Newton, impr. 2008. - . -"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Ian_Newton> , <http://dbpedia.org/resource/Ian_Newton> , <http://isni.org/isni/0000000086459648> , <http://www.idref.fr/030827485> , <http://viaf.org/viaf/92279379> ;
+        skos:note             "Ornithologue. - Directeur de la section de biologie aviaire : Natural environment research council, GB (en 1991). - En poste : Monks Wood research station, GB (en 2008)"@fr ;
+        skos:prefLabel        "Ian Newton"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35455479c#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39209248p#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37380990s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412005339#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122165015#foaf:Person> .

@@ -1,0 +1,60 @@
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpprop: <http://dbpedia.org/property/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://en.wikipedia.org/wiki/Léopoldine_Hugo>
+        foaf:primaryTopic  <http://dbpedia.org/resource/L%C3%A9opoldine_Hugo> .
+
+<http://dbpedia.org/resource/Leopoldine_Hugo>
+        dbpedia-owl:wikiPageRedirects  <http://dbpedia.org/resource/L%C3%A9opoldine_Hugo> .
+
+<http://dbpedia.org/resource/L%C3%A9opoldine_Hugo>
+        a                               owl:Thing , <http://dbpedia.org/class/yago/CausalAgent100007347> , dbpedia-owl:Person , dbpedia-owl:Agent , <http://wikidata.dbpedia.org/resource/Q215627> , <http://schema.org/Person> , <http://dbpedia.org/class/yago/YagoLegalActor> , <http://dbpedia.org/class/yago/Object100002684> , <http://dbpedia.org/class/yago/YagoLegalActorGeo> , <http://dbpedia.org/class/yago/PhysicalEntity100001930> , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> , <http://dbpedia.org/class/yago/Organism100004475> , <http://dbpedia.org/class/yago/Person100007846> , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> , <http://dbpedia.org/class/yago/Whole100003553> , <http://wikidata.dbpedia.org/resource/Q5> , <http://dbpedia.org/class/yago/PeopleFromParis> , <http://dbpedia.org/class/yago/LivingThing100004258> , foaf:Person ;
+        rdfs:comment                    "Léopoldine Hugo (Léopoldine Cécile Marie-Pierre Catherine Hugo; 28 August 1824 – 4 September 1843) was the eldest daughter of novelist, poet and dramatist Victor Hugo and his wife, Adèle Foucher."@en , "Léopoldine Cécile Marie-Pierre Catherine Hugo, née le 28 août 1824 à Paris et morte le 4 septembre 1843 à Villequier, est la fille du romancier, poète et dramaturge Victor Hugo et d’Adèle Foucher."@fr ;
+        rdfs:label                      "Léopoldine Hugo"@fr , "Léopoldine Hugo"@en ;
+        dbpedia-owl:abstract            "Léopoldine Hugo (Léopoldine Cécile Marie-Pierre Catherine Hugo; 28 August 1824 – 4 September 1843) was the eldest daughter of novelist, poet and dramatist Victor Hugo and his wife, Adèle Foucher."@en , "Léopoldine Cécile Marie-Pierre Catherine Hugo, née le 28 août 1824 à Paris et morte le 4 septembre 1843 à Villequier, est la fille du romancier, poète et dramaturge Victor Hugo et d’Adèle Foucher."@fr ;
+        dbpedia-owl:birthDate           "1824-08-28+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:birthName           "Léopoldine Cécile Marie-Pierre Catherine Hugo"@en ;
+        dbpedia-owl:birthPlace          <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Paris> ;
+        dbpedia-owl:birthYear           "1824+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:deathDate           "1843-09-04+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:deathPlace          <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Villequier> ;
+        dbpedia-owl:deathYear           "1843+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:thumbnail           <http://commons.wikimedia.org/wiki/Special:FilePath/Auguste_de_Chatillon_-_Léopoldine_Hugo.jpg?width=300> ;
+        dbpedia-owl:viafId              "51770927" ;
+        dbpedia-owl:wikiPageExternalLink
+                <http://www.seinemaritime.net/musees_detail_departement_seine-maritime.php?idMusee=5> , <http://www.youtube.com/watch?v=9MNtRZAyddE> , <http://fr.wikisource.org/wiki/Les_Contemplations> , <http://www.reelyredd.com/hugo.html> ;
+        dbpedia-owl:wikiPageID          7931387 ;
+        dbpedia-owl:wikiPageRevisionID  599209803 ;
+        dbpprop:birthDate               "1824-08-28+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:birthName               "Léopoldine Cécile Marie-Pierre Catherine Hugo"@en ;
+        dbpprop:birthPlace              <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Paris> ;
+        dbpprop:caption                 "Portrait of Léopoldine Hugo. Painted by Auguste de Châtillon in 1836, on the day of her first communion."@en ;
+        dbpprop:dateOfBirth             "1824-08-28+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:dateOfDeath             "1843-09-04+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathDate               "--09-04+02:00"^^<http://www.w3.org/2001/XMLSchema#gMonthDay> ;
+        dbpprop:deathPlace              <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Villequier> ;
+        dbpprop:hasPhotoCollection      <http://wifo5-03.informatik.uni-mannheim.de/flickrwrappr/photos/Léopoldine_Hugo> ;
+        dbpprop:name                    "Hugo, Leopoldine"@en ;
+        dbpprop:nationality             "French"@en ;
+        dbpprop:placeOfBirth            <http://dbpedia.org/resource/Paris> , <http://dbpedia.org/resource/France> ;
+        dbpprop:placeOfDeath            <http://dbpedia.org/resource/Villequier> , <http://dbpedia.org/resource/France> ;
+        dbpprop:shortDescription        "Daughter of Victor Hugo"@en ;
+        dc:description                  "Daughter of Victor Hugo" , "Daughter of Victor Hugo"@en ;
+        dcterms:subject                 <http://dbpedia.org/resource/Category:1843_deaths> , <http://dbpedia.org/resource/Category:1824_births> , <http://dbpedia.org/resource/Category:People_from_Paris> , <http://dbpedia.org/resource/Category:Victor_Hugo> ;
+        owl:sameAs                      <http://rdf.freebase.com/ns/m.026kh11> , <http://dbpedia.org/resource/L%C3%A9opoldine_Hugo> , <http://yago-knowledge.org/resource/Léopoldine_Hugo> ;
+        prov:wasDerivedFrom             <http://en.wikipedia.org/wiki/Léopoldine_Hugo?oldid=599209803> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Auguste_de_Chatillon_-_Léopoldine_Hugo.jpg> ;
+        foaf:givenName                  "Leopoldine"@en ;
+        foaf:isPrimaryTopicOf           <http://en.wikipedia.org/wiki/Léopoldine_Hugo> ;
+        foaf:name                       "Hugo, Leopoldine"@en , "Leopoldine Hugo"@en ;
+        foaf:surname                    "Hugo"@en .
+
+<http://dbpedia.org/resource/Léopoldine_Hugo>
+        owl:sameAs  <http://dbpedia.org/resource/L%C3%A9opoldine_Hugo> .

@@ -1,0 +1,68 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb410058528#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42557448f#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42560303q#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41005865m#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15002433d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Jon_Foster> , <http://catalogue.bnf.fr/ark:/12148/cb15002433d> ;
+        bnf-onto:FRBNF        15002433 ;
+        isni:identifierValid  "0000000083917359" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000083917359> ;
+        skos:editorialNote    "Lignes de vies [Images animées] / Tod Williams, réal., scénario... ; Jeff Bridges, Kim Basinger, Jon Foster... [et al.], act. Universal pictures video France, [2005]. - . - IMDB. - http://www.imdb.com. - 2005-09-01"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Jon_Foster> , <http://viaf.org/viaf/69205628> , <http://isni-url.oclc.nl/isni/0000000083917359> , <http://dbpedia.org/resource/Jon_Foster> ;
+        skos:note             "Acteur de cinéma"@fr ;
+        skos:prefLabel        "Jon Foster"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43788752v#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1984 ;
+        rdagroup2elements:biographicalInformation
+                "Acteur de cinéma" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        owl:sameAs          <http://viaf.org/viaf/69205628> , <http://dbpedia.org/resource/Jon_Foster> ;
+        foaf:depiction      <http://commons.wikimedia.org/wiki/Special:FilePath/Jonfoster.jpg?width=300> ;
+        foaf:familyName     "Foster" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jon" ;
+        foaf:name           "Jon Foster" ;
+        foaf:page           <http://data.bnf.fr/15002433/jon_foster/> .
+
+<http://data.bnf.fr/ark:/12148/cb39965253r#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15002433d#foaf:Person> .

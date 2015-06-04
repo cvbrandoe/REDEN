@@ -1,0 +1,57 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34581890p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11915278r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11915278r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11915278r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347170915#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11915278r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11915278r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11915278r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34709884c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11915278r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11915278r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11915278r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11915278r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11915278r> ;
+        bnf-onto:FRBNF        11915278 ;
+        isni:identifierValid  "0000000081507241" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081507241> ;
+        skos:editorialNote    "La République ou le roi : correspondance inédite, 1888-1923 / Maurice Barrès et Charles Maurras ; réunie et classée par Hélène et Nicole Maurras ; commentée par Henri Massis ; introd. et notes de Guy Dupré, 1995 [document électronique : reprod. de l'éd. de 1970]. - . - BN Cat. gén. 1960-1969. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000081507241> , <http://www.idref.fr/027019209> , <http://viaf.org/viaf/71394901> ;
+        skos:note             "Poète"@fr ;
+        skos:prefLabel        "Hélène Maurras"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11915278r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353209532#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11915278r#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11915278r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11915278r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11915278r#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Poète" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/71394901> , <http://www.idref.fr/027019209> ;
+        foaf:familyName  "Maurras" ;
+        foaf:givenName   "Hélène" ;
+        foaf:name        "Hélène Maurras" ;
+        foaf:page        <http://data.bnf.fr/11915278/helene_maurras/> .

@@ -1,0 +1,52 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14541866s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14541866s> ;
+        bnf-onto:FRBNF        14541866 ;
+        isni:identifierValid  "0000000121190227" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121190227> ;
+        skos:editorialNote    "L'arche de verre / Philip Baldwin, Monica Guggisberg, impr. 2011. - . - Philip Baldwin, Monica Guggisberg : in search of clear lines / with texts by Suzanne K. Frantz and Jean-Luc Olivié, 1998. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/5798658> , <http://isni-url.oclc.nl/isni/0000000121190227> , <http://www.idref.fr/157421791> ;
+        skos:note             "Artiste verrier"@fr ;
+        skos:prefLabel        "Philip Baldwin (1947-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14541866s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42475877w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14541866s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14541866s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14541866s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14541866s#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1947 ;
+        rdagroup2elements:biographicalInformation
+                "Artiste verrier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1947/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Dessin. Arts décoratifs" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/740/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs                     <http://viaf.org/viaf/5798658> , <http://www.idref.fr/157421791> ;
+        foaf:familyName                "Baldwin" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Philip" ;
+        foaf:name                      "Philip Baldwin" ;
+        foaf:page                      <http://data.bnf.fr/14541866/philip_baldwin/> .
+
+<http://data.bnf.fr/14541866/philip_baldwin/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14541866s#foaf:Person> .

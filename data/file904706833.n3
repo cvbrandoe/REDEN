@@ -1,0 +1,74 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12031785f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12031785f> ;
+        bnf-onto:FRBNF        12031785 ;
+        isni:identifierValid  "0000000079697971" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000079697971> ;
+        skos:editorialNote    "Kommagene : Heimat der Götter / Jörg Wagner, 1988. - . - LC Authorities. - http://authorities.loc.gov. - 2013-06-27"@fr ;
+        skos:exactMatch       <http://www.idref.fr/056622023> , <http://isni-url.oclc.nl/isni/0000000079697971> , <http://viaf.org/viaf/4945775> ;
+        skos:note             "Historien"@fr ;
+        skos:prefLabel        "Jörg Wagner"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34305072h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1943 ;
+        rdagroup2elements:biographicalInformation
+                "Historien" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        owl:sameAs          <http://viaf.org/viaf/4945775> , <http://www.idref.fr/056622023> ;
+        foaf:familyName     "Wagner" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jörg" ;
+        foaf:name           "Jörg Wagner" ;
+        foaf:page           <http://data.bnf.fr/12031785/jorg_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb399369430#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353349746#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36614220k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366583032#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427552671#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35371109n#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12031785f#foaf:Person> .

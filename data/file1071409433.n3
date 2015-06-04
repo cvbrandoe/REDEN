@@ -1,0 +1,78 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38248938r#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb140469265>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb140469265> , <http://fr.wikipedia.org/wiki/Wayne_Newton> ;
+        bnf-onto:FRBNF        14046926 ;
+        isni:identifierValid  "0000000063092679" ;
+        owl:sameAs            <http://isni.org/isni/0000000063092679> ;
+        skos:editorialNote    "IMDB (http://us.imdb.com), 2001-09-19. - . - Les gens du cinéma = The people of the movie world / André Siscot, 1998. - . - AMG (http://www.allmusic.com), 2001-09-19. - . -"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Wayne_Newton> , <http://isni.org/isni/0000000063092679> , <http://dbpedia.org/resource/Wayne_Newton> , <http://viaf.org/viaf/24803379> ;
+        skos:note             "Acteur et chanteur"@fr ;
+        skos:prefLabel        "Wayne Newton"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38237967w#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37797612r#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38280866m#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37797587c#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40049019w#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40230404x#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1942 ;
+        rdagroup2elements:biographicalInformation
+                "Acteur et chanteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        owl:sameAs          <http://viaf.org/viaf/24803379> , <http://dbpedia.org/resource/Wayne_Newton> ;
+        foaf:depiction      <http://commons.wikimedia.org/wiki/Special:FilePath/WayneNewton-00018.jpg?width=300> ;
+        foaf:familyName     "Newton" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Wayne" ;
+        foaf:name           "Wayne Newton" ;
+        foaf:page           <http://data.bnf.fr/14046926/wayne_newton/> .
+
+<http://data.bnf.fr/ark:/12148/cb385916630#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140469265#foaf:Person> .

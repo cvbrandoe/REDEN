@@ -1,0 +1,46 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb16681495j#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1963 ;
+        rdagroup2elements:biographicalInformation
+                "Maître de conférences et historien du sport à l'université Bordeaux-Segalen (en 2013)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/220197661> , <http://www.idref.fr/087574047> ;
+        foaf:familyName     "Sabatier" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Fabien" ;
+        foaf:name           "Fabien Sabatier" ;
+        foaf:page           <http://data.bnf.fr/16681495/fabien_sabatier/> .
+
+<http://data.bnf.fr/ark:/12148/cb16681495j>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16681495j> ;
+        bnf-onto:FRBNF      16681495 ;
+        skos:editorialNote  "Histoire des organisations sportives communistes de France au XXe siècle... / Fabien Sabatier, DL 2013. - . - SUDoc. - http://www.sudoc.abes.fr/. - 2013-05-07"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/220197661> , <http://www.idref.fr/087574047> ;
+        skos:note           "Maître de conférences et historien du sport à l'université Bordeaux-Segalen (en 2013)"@fr ;
+        skos:prefLabel      "Fabien Sabatier"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16681495j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438657537#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb16681495j#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb16681495j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16681495j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43576589m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16681495j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16681495j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16681495j#foaf:Person> .

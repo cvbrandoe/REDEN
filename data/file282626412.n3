@@ -1,0 +1,85 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37591970z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401052890#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1948 ;
+        rdagroup2elements:biographicalInformation
+                "Titulaire de la chaire d'histoire suisse moderne et contemporaine de la Faculté des lettres et sciences humaines de l'Université de Neuchâtel, Suisse (en 2006)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/sz#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Lausanne, Suisse" ;
+        owl:sameAs                      <http://www.idref.fr/030930707> , <http://viaf.org/viaf/76633889> ;
+        foaf:familyName                 "Henry" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Philippe" ;
+        foaf:name                       "Philippe Henry" ;
+        foaf:page                       <http://data.bnf.fr/12224818/philippe_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb35804220k#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402108785#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42511850t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388783184#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41008427p#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41041063k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12224818f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12224818f> ;
+        bnf-onto:FRBNF        12224818 ;
+        isni:identifierValid  "0000000116758906" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000116758906> ;
+        skos:editorialNote    "Crime, justice et société dans la principauté de Neuchâtel au XVIIIe siècle, 1707-1806 / Philippe Henry, 1984. - . - La correspondance familiale en Suisse romande aux XVIIIe et  XIXe siècles : affectivité, sociabilité, réseaux : actes du colloque de Neuchâtel, 27-28 mai 2005, organisé par l'Institut d'Histoire de l'Université de Neuchâtel et les Archives de la vie ordinaire / sous la direction de Philippe Henry et Jean-Pierre Jelmini, 2006. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/030930707> , <http://viaf.org/viaf/76633889> , <http://isni-url.oclc.nl/isni/0000000116758906> ;
+        skos:note             "Titulaire de la chaire d'histoire suisse moderne et contemporaine de la Faculté des lettres et sciences humaines de l'Université de Neuchâtel, Suisse (en 2006)"@fr ;
+        skos:prefLabel        "Philippe Henry"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41008322p#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224818f#foaf:Person> .

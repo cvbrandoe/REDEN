@@ -1,0 +1,37 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb15117329g#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Réalisatrice de documentaires" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/76614419> , <http://www.idref.fr/115447253> ;
+        foaf:familyName  "Lemaître" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Marie-T" ;
+        foaf:name        "Marie-T Lemaître" ;
+        foaf:page        <http://data.bnf.fr/15117329/marie-t_lemaitre/> .
+
+<http://data.bnf.fr/ark:/12148/cb15117329g>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb15117329g> ;
+        bnf-onto:FRBNF   15117329 ;
+        skos:exactMatch  <http://www.idref.fr/115447253> , <http://viaf.org/viaf/76614419> ;
+        skos:note        "Réalisatrice de documentaires"@fr ;
+        skos:prefLabel   "Marie-T Lemaître"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb15117329g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40226394p#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb15117329g#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb15117329g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15117329g#foaf:Person> .

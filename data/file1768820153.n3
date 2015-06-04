@@ -1,0 +1,96 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb357996975#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34595053f#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35278700q#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13092276q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13092276q> ;
+        bnf-onto:FRBNF        13092276 ;
+        isni:identifierValid  "000000002868170X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000002868170X> ;
+        skos:editorialNote    "Le paradoxe français : réduire les risques cardiaques et vivre mieux grâce au vin et au style de vie méditerranéen / Lewis Perdue ; trad. de l'américain sous le contrôle du Pr. Serge Renaud par Annie Lunel et Laurence Martel, 1995. - . - Monde, 2012-11-02 (faire-part de décès). - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/32134576> , <http://www.idref.fr/030746248> , <http://isni-url.oclc.nl/isni/000000002868170X> ;
+        skos:note             "Directeur de recherches à l'INSERM, Lyon (en 1995). - Professeur de nutrition et d'anatomie pathologique à l'Université de Montréal"@fr ;
+        skos:prefLabel        "Serge Renaud (1927-2012)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384958233#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36706738g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1927 ;
+        bnf-onto:lastYear              2012 ;
+        rdagroup2elements:biographicalInformation
+                "Directeur de recherches à l'INSERM, Lyon (en 1995). - Professeur de nutrition et d'anatomie pathologique à l'Université de Montréal" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1927/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2012/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1927-11-21" ;
+        bio:death                      "2012-10-28" ;
+        owl:sameAs                     <http://www.idref.fr/030746248> , <http://viaf.org/viaf/32134576> ;
+        foaf:birthday                  "11-21" ;
+        foaf:familyName                "Renaud" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Serge" ;
+        foaf:name                      "Serge Renaud" ;
+        foaf:page                      <http://data.bnf.fr/13092276/serge_renaud/> .
+
+<http://data.bnf.fr/ark:/12148/cb36630342m#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35804229p#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38495783p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38495819v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39176081h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13092276q#foaf:Person> .

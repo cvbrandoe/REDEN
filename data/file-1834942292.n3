@@ -1,0 +1,82 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12128691r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12128691r> ;
+        bnf-onto:FRBNF        12128691 ;
+        isni:identifierValid  "0000000047469966" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000047469966> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000047469966> , <http://viaf.org/viaf/71424748> , <http://www.idref.fr/029724198> ;
+        skos:note             "Poète"@fr ;
+        skos:prefLabel        "Florence Ferrari"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1964 ;
+        rdagroup2elements:biographicalInformation
+                "Poète" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/029724198> , <http://viaf.org/viaf/71424748> ;
+        foaf:familyName     "Ferrari" ;
+        foaf:givenName      "Florence" ;
+        foaf:name           "Florence Ferrari" ;
+        foaf:page           <http://data.bnf.fr/12128691/florence_ferrari/> .
+
+<http://data.bnf.fr/ark:/12148/cb35034288f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35536215k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb391085828#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421773377#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42479273t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37008058k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411074775#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42485293p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421760015#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12128691r#foaf:Person> .

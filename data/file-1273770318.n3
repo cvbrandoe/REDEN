@@ -1,0 +1,55 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42366685t#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb16206236b#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb16206236b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16206236b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16206236b>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16206236b> ;
+        bnf-onto:FRBNF      16206236 ;
+        skos:editorialNote  "Annecy [Images animées] / Franck Wolff, réal. Sans canal fixe, [2010]. - . - Terra. - http://www.reseau-terra.eu/article828.html. - 2011-07-21"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/122064012> , <http://www.idref.fr/130192783> ;
+        skos:note           "Réalisateur de film documentaire. - Membre du collectif de documentaristes \"sans canal fixe\", basé à Tours"@fr ;
+        skos:prefLabel      "Franck Wolff"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16206236b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421802871#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb16206236b#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb16206236b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16206236b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423666745#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb16206236b#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb16206236b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16206236b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422777125#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb16206236b#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb16206236b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16206236b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16206236b#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Réalisateur de film documentaire. - Membre du collectif de documentaristes \"sans canal fixe\", basé à Tours" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/130192783> , <http://viaf.org/viaf/122064012> ;
+        foaf:familyName  "Wolff" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Franck" ;
+        foaf:name        "Franck Wolff" ;
+        foaf:page        <http://data.bnf.fr/16206236/franck_wolff/> .

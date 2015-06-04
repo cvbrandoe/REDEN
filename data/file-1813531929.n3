@@ -1,0 +1,68 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb42488260f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41392185z#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Archéologue. - Enseignante en archéologie et en histoire de l'art à l'Université Blaise Pascal  et directrice de nombreuses campagnes de fouilles dans le Massif central et en Croatie et en Albanie (en 2008). - Chercheur au CNRS, UMR 5594, Artzhiq, Dijon, Centre d'études médiévales d'Auxerre (en 2011)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/03293128X> , <http://viaf.org/viaf/39460485> ;
+        foaf:familyName  "Chevalier" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Pascale" ;
+        foaf:name        "Pascale Chevalier" ;
+        foaf:page        <http://data.bnf.fr/12386360/pascale_chevalier/> .
+
+<http://data.bnf.fr/ark:/12148/cb437941753#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40999545d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12386360r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12386360r> ;
+        bnf-onto:FRBNF        12386360 ;
+        isni:identifierValid  "0000000061204147" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000061204147> ;
+        skos:editorialNote    "Basiliques chrétiennes d'Afrique du Nord. Inventaire de l'Algérie / avec la participation de Jean-Pierre Caillet et de Pascale Chevalier et Alexandra Lorquin, 1992. - . - Sculptures médiévales en Auvergne : création, disparition et réapparition / sous la direction d'Annie Regond et Pascale Chevalier, 2008. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/39460485> , <http://www.idref.fr/03293128X> , <http://isni-url.oclc.nl/isni/0000000061204147> ;
+        skos:note             "Archéologue. - Enseignante en archéologie et en histoire de l'art à l'Université Blaise Pascal  et directrice de nombreuses campagnes de fouilles dans le Massif central et en Croatie et en Albanie (en 2008). - Chercheur au CNRS, UMR 5594, Artzhiq, Dijon, Centre d'études médiévales d'Auxerre (en 2011)"@fr ;
+        skos:prefLabel        "Pascale Chevalier"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37432558t#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35820829s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12386360r#foaf:Person> .

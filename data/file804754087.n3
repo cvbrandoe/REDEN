@@ -1,0 +1,81 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb356277949#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37271630z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34703030s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb343000651#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353380573#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34621451m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34867390v#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34636951d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Professeur à l'École normale nationale d'apprentissage de Paris-Nord (en 1989)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/226721326> , <http://www.idref.fr/027113515> ;
+        foaf:familyName  "Roux" ;
+        foaf:givenName   "Christian" ;
+        foaf:name        "Christian Roux" ;
+        foaf:page        <http://data.bnf.fr/11922965/christian_roux/> .
+
+<http://data.bnf.fr/ark:/12148/cb34963688b#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11922965t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11922965t> ;
+        bnf-onto:FRBNF        11922965 ;
+        isni:identifierValid  "0000000401489645" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000401489645> ;
+        skos:exactMatch       <http://viaf.org/viaf/226721326> , <http://isni-url.oclc.nl/isni/0000000401489645> , <http://www.idref.fr/027113515> ;
+        skos:note             "Professeur à l'École normale nationale d'apprentissage de Paris-Nord (en 1989)"@fr ;
+        skos:prefLabel        "Christian Roux (enseignant)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11922965t#foaf:Person> .

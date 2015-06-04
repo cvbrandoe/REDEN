@@ -1,0 +1,59 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42648458z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15500628r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15500628r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15500628r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15500628r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15500628r> ;
+        bnf-onto:FRBNF        15500628 ;
+        isni:identifierValid  "0000000036557215" ;
+        owl:sameAs            <http://isni.org/isni/0000000036557215> ;
+        skos:editorialNote    "Au temps banni d'Houphouët-Boigny / Robert Lopez, DL 2006. - . - L'Harmattan. - http://www.editions-harmattan.fr/index.asp?navig=auteurs&obj=artiste&no=13178. - 2007-01-31"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000036557215> , <http://viaf.org/viaf/64310250> , <http://www.idref.fr/147072662> ;
+        skos:note             "Directeur des études et de la recherche, Institut national de la Jeunesse et des sports de Côte d'Ivoire (1979-1991), inspecteur d'Académie-inspecteur pédagogique en éducation physique et sportive en formation à Paris et en responsabilité dans l'Académie de Montpellier (1992-2000)"@fr ;
+        skos:prefLabel        "Robert Lopez"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15500628r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb409580469#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15500628r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15500628r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15500628r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438525005#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15500628r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15500628r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15500628r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42220055s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15500628r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15500628r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15500628r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15500628r#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1935 ;
+        rdagroup2elements:biographicalInformation
+                "Directeur des études et de la recherche, Institut national de la Jeunesse et des sports de Côte d'Ivoire (1979-1991), inspecteur d'Académie-inspecteur pédagogique en éducation physique et sportive en formation à Paris et en responsabilité dans l'Académie de Montpellier (1992-2000)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/64310250> , <http://www.idref.fr/147072662> ;
+        foaf:familyName     "Lopez" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Robert" ;
+        foaf:name           "Robert Lopez" ;
+        foaf:page           <http://data.bnf.fr/15500628/robert_lopez/> .

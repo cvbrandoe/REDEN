@@ -1,0 +1,73 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/13497446/sid_james/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38600890h#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb134974467>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb134974467> ;
+        bnf-onto:FRBNF        13497446 ;
+        isni:identifierValid  "0000000368680631" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000368680631> ;
+        skos:altLabel         "Sidney Joel Cohen (1913-1976)"@fr ;
+        skos:exactMatch       <http://www.idref.fr/050465457> , <http://isni-url.oclc.nl/isni/0000000368680631> , <http://viaf.org/viaf/224375104> ;
+        skos:note             "Acteur britannique"@fr ;
+        skos:prefLabel        "Sid James (1913-1976)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb386014674#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40045265n#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1913 ;
+        bnf-onto:lastYear              1976 ;
+        rdagroup2elements:biographicalInformation
+                "Acteur britannique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1913/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1976/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1913" ;
+        bio:death                      "1976" ;
+        owl:sameAs                     <http://www.idref.fr/050465457> , <http://viaf.org/viaf/224375104> ;
+        foaf:familyName                "James" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Sid" ;
+        foaf:name                      "Sid James" ;
+        foaf:page                      <http://data.bnf.fr/13497446/sid_james/> .
+
+<http://data.bnf.fr/ark:/12148/cb38368016j#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383837845#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134974467#foaf:Person> .

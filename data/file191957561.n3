@@ -1,0 +1,95 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb123844580>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb123844580> ;
+        bnf-onto:FRBNF        12384458 ;
+        isni:identifierValid  "0000000033901519" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000033901519> ;
+        skos:altLabel         "Denis M. Philippe"@fr ;
+        skos:editorialNote    "Changement de circonstances et bouleversement de l'économie contractuelle / par Denis-M. Philippe, 1986 [Thèse]. - . - L'entreprise face au droit des quotas de CO2 / sous la direction de Denis Philippe et Cédric Cheneviere, DL 2011. - . - Prospects of a civil nuclear liability regime in the framework of the European Union / sous la direction de Marc Beyens, Denis Philippe, Patrick Reyners, DL 2012. - . -"@fr , "Sudoc. - http://www.sudoc.abes.fr/. - 2012-06-11 Philippe & partners. - http://www.philippelaw.com/fr/node/213. - 2012-06-20"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/56691794> , <http://www.idref.fr/032905297> , <http://isni-url.oclc.nl/isni/0000000033901519> ;
+        skos:note             "Avocat au barreau de Bruxelles, assistant à l'Université catholique de Louvain et chercheur associé au Centre interuniversitaire de droit comparé, Bruxelles (en 1986). - Membre de l'association Brussels nuclear law association (en 2012)"@fr ;
+        skos:prefLabel        "Denis Philippe"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb426732653#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43649783c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42649330j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1955 ;
+        rdagroup2elements:biographicalInformation
+                "Avocat au barreau de Bruxelles, assistant à l'Université catholique de Louvain et chercheur associé au Centre interuniversitaire de droit comparé, Bruxelles (en 1986). - Membre de l'association Brussels nuclear law association (en 2012)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/be#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> , <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/032905297> , <http://viaf.org/viaf/56691794> ;
+        foaf:familyName     "Philippe" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Denis" ;
+        foaf:name           "Denis Philippe" ;
+        foaf:page           <http://data.bnf.fr/12384458/denis_philippe/> .
+
+<http://data.bnf.fr/ark:/12148/cb39050228k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43710028p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435345221#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42642482c#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb376732185#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43757802q#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438659544#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43583020r#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123844580#foaf:Person> .

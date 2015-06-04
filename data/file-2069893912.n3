@@ -1,0 +1,67 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/12064119/enzo_ferrari/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12064119b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33005583w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12064119b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12064119b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12064119b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34977541k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12064119b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12064119b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12064119b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12064119b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12064119b> , <http://fr.wikipedia.org/wiki/Enzo_Ferrari> ;
+        bnf-onto:FRBNF        12064119 ;
+        isni:identifierValid  "0000000122757459" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000122757459> ;
+        skos:editorialNote    "Piloti, che gente / Enzo Ferrari ; [trad. par Anne Zorn], 1987. - . - GDEL. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000122757459> , <http://dbpedia.org/resource/Enzo_Ferrari> , <http://fr.wikipedia.org/wiki/Enzo_Ferrari> , <http://viaf.org/viaf/2539322> , <http://www.idref.fr/028901304> ;
+        skos:note             "Constructeur automobile"@fr ;
+        skos:prefLabel        "Enzo Ferrari (1898-1988)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12064119b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb330055847#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12064119b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12064119b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12064119b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12064119b#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1898 ;
+        bnf-onto:lastYear               1988 ;
+        rdagroup2elements:biographicalInformation
+                "Constructeur automobile" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1898/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1988/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        rdagroup2elements:placeOfBirth  "Modène, Italie" ;
+        rdagroup2elements:placeOfDeath  "Modène, Italie" ;
+        bio:birth                       "1898-02-18" ;
+        bio:death                       "1988-07-14" ;
+        owl:sameAs                      <http://dbpedia.org/resource/Enzo_Ferrari> , <http://viaf.org/viaf/2539322> , <http://www.idref.fr/028901304> ;
+        foaf:birthday                   "02-18" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b530772747.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Ilario_Bandini_ed_Enzo_Ferrari.jpg?width=300> ;
+        foaf:familyName                 "Ferrari" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Enzo" ;
+        foaf:name                       "Enzo Ferrari" ;
+        foaf:page                       <http://data.bnf.fr/12064119/enzo_ferrari/> .

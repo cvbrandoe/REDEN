@@ -1,0 +1,82 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13164408t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13164408t> ;
+        bnf-onto:FRBNF        13164408 ;
+        isni:identifierValid  "000000005455507X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000005455507X> ;
+        skos:altLabel         "Emmanuel Rousseau (1788-1868)"@fr , "Louis Rousseau (1788-1868)"@fr ;
+        skos:editorialNote    "ABF. - . - Larousse 19e s.. - . -"@fr , "Zoologie. Tome cinquième, Description des mollusques, coquilles et zoophytes / par L. Rousseau ; sous le commandement de M. J. Dumont d'Urville, 1995 [document électronique : reprod. de l'éd. de 1854]. - . - Maladie et autopsie de M. G. Cuvier / par M. Emm. Rousseau, [1832]. - . - Des Châtaignes et plaques épidermiques particulières aux solipèdes / par le Dr L.-F.-Emmanuel Rousseau, 1852. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/9984411> , <http://www.idref.fr/084003197> , <http://isni-url.oclc.nl/isni/000000005455507X> ;
+        skos:note             "Médecin. - Naturaliste. - A été aide-naturaliste au Muséum national d'histoire naturelle"@fr ;
+        skos:prefLabel        "Louis-François-Emmanuel Rousseau (1788-1868)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1788 ;
+        bnf-onto:lastYear              1868 ;
+        rdagroup2elements:biographicalInformation
+                "Médecin. - Naturaliste. - A été aide-naturaliste au Muséum national d'histoire naturelle" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1788/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1868/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1788" ;
+        bio:death                      "1868" ;
+        owl:sameAs                     <http://www.idref.fr/084003197> , <http://viaf.org/viaf/9984411> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k97694b.thumbnail> ;
+        foaf:familyName                "Rousseau" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Louis-François-Emmanuel" ;
+        foaf:name                      "Louis-François-Emmanuel Rousseau" ;
+        foaf:page                      <http://data.bnf.fr/13164408/louis-francois-emmanuel_rousseau/> .
+
+<http://data.bnf.fr/ark:/12148/cb31256659n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31256662j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb312566589#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31256660v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40481182h#frbr:Expression>
+        bnfroles:r530        <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> ;
+        marcrel:pht          <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37263514q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb312566616#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13164408t#foaf:Person> .

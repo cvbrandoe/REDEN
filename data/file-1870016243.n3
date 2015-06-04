@@ -1,0 +1,126 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1950 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/au#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        owl:sameAs          <http://viaf.org/viaf/2520183> , <http://www.idref.fr/059063343> ;
+        foaf:familyName     "Wagner" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Karl" ;
+        foaf:name           "Karl Wagner" ;
+        foaf:page           <http://data.bnf.fr/12206078/karl_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb122060785>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb122060785> ;
+        bnf-onto:FRBNF        12206078 ;
+        isni:identifierValid  "0000000122757395" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000122757395> ;
+        skos:editorialNote    "Lebens-Beschreibung und \"Die Schriften des Waldschulmeisters\" / Peter Rosegger ; hrsg. von Karl Wagner, 1993. - . - Bibliothèque nationale, Autriche. - http://aleph.onb.ac.at. - 2006-08-30"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000122757395> , <http://www.idref.fr/059063343> , <http://viaf.org/viaf/2520183> ;
+        skos:prefLabel        "Karl Wagner"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39176964d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35666648f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425177264#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38969646d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357314994#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42413436g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421404136#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42140408m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427361996#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37554943z#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37472601z#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42763173d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35702147p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40101234r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357177781#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35666649s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37565385p#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38845907s#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122060785#foaf:Person> .

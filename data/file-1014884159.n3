@@ -1,0 +1,116 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb30304582d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb350100995#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353597659#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37042375c#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38686382m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb118987890>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb118987890> , <http://fr.wikipedia.org/wiki/Eduard_David> ;
+        bnf-onto:FRBNF        11898789 ;
+        isni:identifierValid  "0000000116018596" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000116018596> ;
+        skos:editorialNote    "Contes d'un tchu d'cadot / Édouard David, 1979. - . - Chés hortillonnages / Édouard David, DL 2005. - . - [Textes choisis / Édouard David] Contenu dans : Édouard David, poète picard / Pierre Garnier, impr. 2006. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/139632778> , <http://viaf.org/viaf/17963676> , <http://isni-url.oclc.nl/isni/0000000116018596> , <http://fr.wikipedia.org/wiki/Eduard_David> , <http://dbpedia.org/resource/Eduard_David> , <http://www.idref.fr/026813564> ;
+        skos:note             "Écrit en picard"@fr ;
+        skos:prefLabel        "Édouard David (1863-1932)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319986177#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> .
+
+<http://data.bnf.fr/11898789/edouard_david/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1863 ;
+        bnf-onto:lastYear              1932 ;
+        rdagroup2elements:biographicalInformation
+                "Écrit en picard" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1863/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1932/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/800/> ;
+        bio:birth                      "1863" ;
+        bio:death                      "1932" ;
+        owl:sameAs                     <http://viaf.org/viaf/17963676> , <http://www.idref.fr/139632778> , <http://dbpedia.org/resource/Eduard_David> , <http://www.idref.fr/026813564> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k888809n.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv_Bild_183-R04545,_Dr._Eduard_David.jpg?width=300> ;
+        foaf:familyName                "David" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Édouard" ;
+        foaf:name                      "Édouard David" ;
+        foaf:page                      <http://data.bnf.fr/11898789/edouard_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb40118628t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32282708t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346594546#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347398709#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34323189f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38686376p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38725448d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118987890#foaf:Person> .

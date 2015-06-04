@@ -1,0 +1,44 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/13532886/hubert_barbier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb135328869#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb135328869#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1932 ;
+        rdagroup2elements:biographicalInformation
+                "Prêtre (1955). - Vicaire général de Luçon (1978). - Évêque d'Annecy (auxiliaire en 1980, titulaire en 1984). - Archevêque de Bourges (2000-04)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/050503839> , <http://viaf.org/viaf/266194158> ;
+        foaf:familyName     "Barbier" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Hubert" ;
+        foaf:name           "Hubert Barbier" ;
+        foaf:page           <http://data.bnf.fr/13532886/hubert_barbier/> .
+
+<http://data.bnf.fr/ark:/12148/cb135328869>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb135328869> ;
+        bnf-onto:FRBNF      13532886 ;
+        skos:editorialNote  "\"Tout par amour\" : entretiens avec François Le Roux / Mgr Hubert Barbier, 1999. - . - WW France 1991-1992. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/050503839> , <http://viaf.org/viaf/266194158> ;
+        skos:note           "Prêtre (1955). - Vicaire général de Luçon (1978). - Évêque d'Annecy (auxiliaire en 1980, titulaire en 1984). - Archevêque de Bourges (2000-04)"@fr ;
+        skos:prefLabel      "Hubert Barbier"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb135328869#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37071177w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135328869#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135328869#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135328869#foaf:Person> .

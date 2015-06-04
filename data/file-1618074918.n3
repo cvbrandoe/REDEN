@@ -1,0 +1,50 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb144549199#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1903 ;
+        bnf-onto:lastYear              1986 ;
+        rdagroup2elements:biographicalInformation
+                "A été professeur au lycée de Vernon" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1903/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1986/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1903-04-06" ;
+        bio:death                      "1986-05-31" ;
+        owl:sameAs                     <http://viaf.org/viaf/66687163> , <http://www.idref.fr/073392324> ;
+        foaf:birthday                  "04-06" ;
+        foaf:familyName                "Parmentier" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Etiennette" ;
+        foaf:name                      "Etiennette Parmentier" ;
+        foaf:page                      <http://data.bnf.fr/14454919/etiennette_parmentier/> .
+
+<http://data.bnf.fr/ark:/12148/cb37702886s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144549199#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144549199#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144549199#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb144549199>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb144549199> ;
+        bnf-onto:FRBNF   14454919 ;
+        skos:exactMatch  <http://www.idref.fr/073392324> , <http://viaf.org/viaf/66687163> ;
+        skos:note        "A été professeur au lycée de Vernon"@fr ;
+        skos:prefLabel   "Etiennette Parmentier (1903-1986)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb144549199#foaf:Person> .
+
+<http://data.bnf.fr/14454919/etiennette_parmentier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb144549199#foaf:Person> .

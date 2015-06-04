@@ -1,0 +1,83 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb40110189q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34760630z#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb136245680>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb136245680> ;
+        bnf-onto:FRBNF   13624568 ;
+        skos:altLabel    "Pierre Samson"@fr ;
+        skos:exactMatch  <http://viaf.org/viaf/2647992> ;
+        skos:note        "Journaliste, dessinateur de presse. - Directeur de la revue \"Satiricon\" (en 2001)"@fr ;
+        skos:prefLabel   "Samson"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35779312q#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34724070p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39470625r#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37180803d#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37622837t#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36977354n#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1952 ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste, dessinateur de presse. - Directeur de la revue \"Satiricon\" (en 2001)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/2647992> ;
+        foaf:familyName     "Samson" ;
+        foaf:page           <http://data.bnf.fr/13624568/samson/> .
+
+<http://data.bnf.fr/ark:/12148/cb346119795#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34577843d#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136245680#foaf:Person> .

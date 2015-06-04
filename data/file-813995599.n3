@@ -1,0 +1,70 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39017990s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39232735n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40187850r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41286630n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39185187t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb391959699#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41286516t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14486234c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14486234c> ;
+        bnf-onto:FRBNF        14486234 ;
+        isni:identifierValid  "0000000078423987" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000078423987> ;
+        skos:exactMatch       <http://viaf.org/viaf/85489236> , <http://isni-url.oclc.nl/isni/0000000078423987> , <http://www.idref.fr/080559662> ;
+        skos:prefLabel        "Helen Foster"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14486234c#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxc> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs                     <http://viaf.org/viaf/85489236> , <http://www.idref.fr/080559662> ;
+        foaf:familyName                "Foster" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Helen" ;
+        foaf:name                      "Helen Foster" ;
+        foaf:page                      <http://data.bnf.fr/14486234/helen_foster/> .

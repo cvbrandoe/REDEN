@@ -1,0 +1,82 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb350508171#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35532110m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb350505861#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119287662>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb119287662> ;
+        bnf-onto:FRBNF        11928766 ;
+        isni:identifierValid  "000000005695383X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000005695383X> ;
+        skos:altLabel         "Jaques Wagner"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000005695383X> , <http://viaf.org/viaf/84570251> , <http://www.idref.fr/027191400> , <http://www.idref.fr/158869753> ;
+        skos:note             "Agrégé de l'université"@fr ;
+        skos:prefLabel        "Jacques Wagner (agrégé de l'université)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347806411#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb348798453#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35098550s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389425539#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35690078w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb371655699#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119287662#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Agrégé de l'université" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/158869753> , <http://www.idref.fr/027191400> , <http://viaf.org/viaf/84570251> ;
+        foaf:familyName  "Wagner" ;
+        foaf:givenName   "Jacques" ;
+        foaf:name        "Jacques Wagner" ;
+        foaf:page        <http://data.bnf.fr/11928766/jacques_wagner/> .

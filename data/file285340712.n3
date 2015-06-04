@@ -1,0 +1,67 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Clarinettiste et compositeur" ;
+        owl:sameAs       <http://viaf.org/viaf/19944587> ;
+        foaf:familyName  "René" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Franck" ;
+        foaf:name        "Franck René" ;
+        foaf:page        <http://data.bnf.fr/14774177/franck_rene/> .
+
+<http://data.bnf.fr/ark:/12148/cb165472645#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb147741776>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb147741776> ;
+        bnf-onto:FRBNF   14774177 ;
+        skos:exactMatch  <http://viaf.org/viaf/19944587> ;
+        skos:note        "Clarinettiste et compositeur"@fr ;
+        skos:prefLabel   "Franck René (clarinettiste)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16547326w#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb409780383#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15506841z#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16547295f#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425388111#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39763814p#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb397638558#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb409780352#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147741776#foaf:Person> .

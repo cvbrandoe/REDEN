@@ -1,0 +1,67 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en sémiologie de l'Université de Paris VII. - Professeur de théorie de la littérature à l'Universidade federal de Minas Gerais (en 1988)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/bl#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/por> ;
+        owl:sameAs       <http://www.idref.fr/032369794> , <http://viaf.org/viaf/9921931> ;
+        foaf:familyName  "Souza" ;
+        foaf:givenName   "Eneida Maria de" ;
+        foaf:name        "Eneida Maria de Souza" ;
+        foaf:page        <http://data.bnf.fr/12341248/eneida_maria_de_souza/> .
+
+<http://data.bnf.fr/ark:/12148/cb421963033#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41157508n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb355991963#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39952450b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411913550#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12341248k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12341248k> ;
+        bnf-onto:FRBNF        12341248 ;
+        isni:identifierValid  "0000000028121745" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000028121745> ;
+        skos:editorialNote    "A pedra mágica do discurso / Eneida Maria de Souza, 1988. - . - LCNA, 1991. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000028121745> , <http://www.idref.fr/032369794> , <http://viaf.org/viaf/9921931> ;
+        skos:note             "Docteur en sémiologie de l'Université de Paris VII. - Professeur de théorie de la littérature à l'Universidade federal de Minas Gerais (en 1988)"@fr ;
+        skos:prefLabel        "Eneida Maria de Souza"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39992751b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12341248k#foaf:Person> .

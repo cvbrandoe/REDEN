@@ -1,0 +1,52 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb41384917z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13558825z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13558825z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13558825z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35589378h#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb13558825z#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb13558825z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13558825z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13558825z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13558825z> ;
+        bnf-onto:FRBNF        13558825 ;
+        isni:identifierValid  "0000000054637630" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000054637630> ;
+        skos:exactMatch       <http://www.idref.fr/127568190> , <http://isni-url.oclc.nl/isni/0000000054637630> , <http://viaf.org/viaf/37082105> ;
+        skos:note             "Ingénieur recherche à Paris I (Panthéon-Sorbonne)"@fr ;
+        skos:prefLabel        "Renée David"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13558825z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13558825z#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1921 ;
+        rdagroup2elements:biographicalInformation
+                "Ingénieur recherche à Paris I (Panthéon-Sorbonne)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/127568190> , <http://viaf.org/viaf/37082105> ;
+        foaf:familyName     "David" ;
+        foaf:givenName      "Renée" ;
+        foaf:name           "Renée David" ;
+        foaf:page           <http://data.bnf.fr/13558825/renee_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb35763812f#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb13558825z#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb13558825z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13558825z#foaf:Person> .

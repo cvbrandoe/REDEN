@@ -1,0 +1,61 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12493673k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12493673k> ;
+        bnf-onto:FRBNF        12493673 ;
+        isni:identifierValid  "0000000000387920" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000000387920> ;
+        skos:exactMatch       <http://viaf.org/viaf/56713910> , <http://isni-url.oclc.nl/isni/0000000000387920> , <http://www.idref.fr/034149864> ;
+        skos:note             "Professeur d'anglais"@fr ;
+        skos:prefLabel        "Françoise Michelet"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399917575#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35784200f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Professeur d'anglais" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/034149864> , <http://viaf.org/viaf/56713910> ;
+        foaf:familyName  "Michelet" ;
+        foaf:givenName   "Françoise" ;
+        foaf:name        "Françoise Michelet" ;
+        foaf:page        <http://data.bnf.fr/12493673/francoise_michelet/> .
+
+<http://data.bnf.fr/ark:/12148/cb389080526#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36710427r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42746146t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12493673k#foaf:Person> .

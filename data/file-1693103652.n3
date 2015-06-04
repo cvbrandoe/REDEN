@@ -1,0 +1,88 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39914485n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1869 ;
+        bnf-onto:lastYear               1955 ;
+        rdagroup2elements:biographicalInformation
+                "Psychologue. - Président de l'Université de Northwestern, Ill." ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1869/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1955/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Cooksville, Ill., Etats-Unis" ;
+        rdagroup2elements:placeOfDeath  "Evanston, Ill., Etats-Unis" ;
+        bio:birth                       "1869-05-01" ;
+        bio:death                       "1955-09-23" ;
+        owl:sameAs                      <http://dbpedia.org/resource/Walter_Dill_Scott> , <http://www.idref.fr/050787772> , <http://viaf.org/viaf/46931485> ;
+        foaf:birthday                   "05-01" ;
+        foaf:familyName                 "Scott" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Walter Dill" ;
+        foaf:name                       "Walter Dill Scott" ;
+        foaf:page                       <http://data.bnf.fr/13594895/walter_dill_scott/> .
+
+<http://data.bnf.fr/ark:/12148/cb377548791#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb313400314#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb135948950>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Walter_Dill_Scott> , <http://catalogue.bnf.fr/ark:/12148/cb135948950> ;
+        bnf-onto:FRBNF        13594895 ;
+        isni:identifierValid  "0000000108963889" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108963889> ;
+        skos:editorialNote    "The psychology of advertising / Walter Dill Scott, 1998 [reprint de l'éd. de 1908]. - . - LCNA (CD), 1996-06. - . -"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Walter_Dill_Scott> , <http://dbpedia.org/resource/Walter_Dill_Scott> , <http://www.idref.fr/050787772> , <http://viaf.org/viaf/46931485> , <http://isni-url.oclc.nl/isni/0000000108963889> ;
+        skos:note             "Psychologue. - Président de l'Université de Northwestern, Ill."@fr ;
+        skos:prefLabel        "Walter Dill Scott (1869-1955)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30499877w#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32622833r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31340030s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35194738p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32259307f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135948950#foaf:Person> .

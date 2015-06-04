@@ -1,0 +1,92 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb38584757v#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/32205031> ;
+        foaf:familyName  "Lee" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Arno" ;
+        foaf:name        "Arno Lee" ;
+        foaf:page        <http://data.bnf.fr/14114561/arno_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb38479265x#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14114561n>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14114561n> ;
+        bnf-onto:FRBNF   14114561 ;
+        skos:exactMatch  <http://viaf.org/viaf/32205031> ;
+        skos:note        "Compositeur"@fr ;
+        skos:prefLabel   "Arno Lee"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385244104#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392775087#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38944021s#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38479180j#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38535970t#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39277504v#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38535531t#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41004373m#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39277516v#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38585028k#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14114561n#foaf:Person> .

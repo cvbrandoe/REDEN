@@ -1,0 +1,112 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb43305276d#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42413117c#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411920573#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb397052504#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41399360v#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139865191>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb139865191> ;
+        bnf-onto:FRBNF        13986519 ;
+        isni:identifierValid  "0000000114963797" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114963797> ;
+        skos:editorialNote    "The rough guide to bluegrass [Enregistrement sonore] / Gibson brothers, groupe voc. et instr. ; Kathy Mattea, Ralph Stanley, chant... [et al.]. World Music Network RGNET1267CD. - . - The folk music encyclopaedia, 1976. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000114963797> , <http://www.idref.fr/161904211> , <http://viaf.org/viaf/102651823> ;
+        skos:note             "Chanteur et banjoïste de bluegrass. - Forme un duo avec son frère Carter Stanley"@fr ;
+        skos:prefLabel        "Ralph Stanley"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43282755k#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42741891c#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43338311f#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1927 ;
+        rdagroup2elements:biographicalInformation
+                "Chanteur et banjoïste de bluegrass. - Forme un duo avec son frère Carter Stanley" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        owl:sameAs          <http://www.idref.fr/161904211> , <http://viaf.org/viaf/102651823> ;
+        foaf:familyName     "Stanley" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Ralph" ;
+        foaf:name           "Ralph Stanley" ;
+        foaf:page           <http://data.bnf.fr/13986519/ralph_stanley/> .
+
+<http://data.bnf.fr/ark:/12148/cb413485368#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43519531s#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb430254567#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39088674d#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38099665r#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb397248890#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39722505t#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139865191#foaf:Person> .

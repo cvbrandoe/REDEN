@@ -1,0 +1,82 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb384368295#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15002373c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15002373c> , <http://fr.wikipedia.org/wiki/Isaac_Julien> ;
+        bnf-onto:FRBNF        15002373 ;
+        isni:identifierValid  "000000010927660X" ;
+        owl:sameAs            <http://isni.org/isni/000000010927660X> ;
+        skos:exactMatch       <http://www.idref.fr/069774560> , <http://isni.org/isni/000000010927660X> , <http://fr.wikipedia.org/wiki/Isaac_Julien> , <http://viaf.org/viaf/96584785> , <http://dbpedia.org/resource/Isaac_Julien> ;
+        skos:note             "Artiste, vidéaste. - Professeur invité, Carnegie Mellon university, Pittsburg, Pa. (en 2005). - Membre de la rédaction du magazine \"Critical quarterly\" (Blackwell, Oxford). - Vite et travaille à Londres (en 2005)"@fr ;
+        skos:prefLabel        "Isaac Julien"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1960 ;
+        rdagroup2elements:biographicalInformation
+                "Artiste, vidéaste. - Professeur invité, Carnegie Mellon university, Pittsburg, Pa. (en 2005). - Membre de la rédaction du magazine \"Critical quarterly\" (Blackwell, Oxford). - Vite et travaille à Londres (en 2005)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Art" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/700/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Londres" ;
+        owl:sameAs                      <http://dbpedia.org/resource/Isaac_Julien> , <http://www.idref.fr/069774560> , <http://viaf.org/viaf/96584785> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Isaac_Julien.jpg?width=300> ;
+        foaf:familyName                 "Julien" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Isaac" ;
+        foaf:name                       "Isaac Julien" ;
+        foaf:page                       <http://data.bnf.fr/15002373/isaac_julien/> .
+
+<http://data.bnf.fr/ark:/12148/cb413090380#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42542519q#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425146086#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39108745m#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> .
+
+<http://data.bnf.fr/15002373/isaac_julien/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42624749f#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41479306t#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15002373c#foaf:Person> .

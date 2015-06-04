@@ -1,0 +1,62 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb385172165#frbr:Expression>
+        bnfroles:r1388       <http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person>
+        a                               foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Joueur de shakuhachi (flûte de bambou du Japon)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:placeOfBirth  "Texas" ;
+        owl:sameAs                      <http://www.idref.fr/087814714> , <http://viaf.org/viaf/61757213> ;
+        foaf:familyName                 "Lee" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Riley" ;
+        foaf:name                       "Riley Lee" ;
+        foaf:page                       <http://data.bnf.fr/14197934/riley_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb39274855v#frbr:Expression>
+        bnfroles:r1388       <http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421681262#frbr:Expression>
+        bnfroles:r1388       <http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390428186#frbr:Expression>
+        bnfroles:r1388       <http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb141979347>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb141979347> ;
+        bnf-onto:FRBNF        14197934 ;
+        isni:identifierValid  "0000000063107316" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000063107316> ;
+        skos:editorialNote    "Ghost stories [Enregistrement sonore] / Ned Rothenberg, clar. , saxo, fl. ; Riley Lee, fl. ; Min Xiao-Fen, luth (ethnique)... [et al.]. Tzadik TZ 7061. - . - Big pond. - http://www.users.bigpond.com/. -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000063107316> , <http://www.idref.fr/087814714> , <http://viaf.org/viaf/61757213> ;
+        skos:note             "Joueur de shakuhachi (flûte de bambou du Japon)"@fr ;
+        skos:prefLabel        "Riley Lee"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39042814t#frbr:Expression>
+        bnfroles:r1388       <http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141979347#foaf:Person> .

@@ -1,0 +1,51 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb15054850m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Lennie_James> , <http://catalogue.bnf.fr/ark:/12148/cb15054850m> ;
+        bnf-onto:FRBNF        15054850 ;
+        isni:identifierValid  "0000000005418087" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000005418087> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000005418087> , <http://viaf.org/viaf/44588371> , <http://www.idref.fr/077039270> , <http://dbpedia.org/resource/Lennie_James> , <http://fr.wikipedia.org/wiki/Lennie_James> ;
+        skos:note             "Acteur"@fr ;
+        skos:prefLabel        "Lennie James"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15054850m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400757451#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb15054850m#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb15054850m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15054850m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41342460d#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb15054850m#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb15054850m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15054850m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15054850m#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Acteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        owl:sameAs       <http://www.idref.fr/077039270> , <http://dbpedia.org/resource/Lennie_James> , <http://viaf.org/viaf/44588371> ;
+        foaf:depiction   <http://commons.wikimedia.org/wiki/Special:FilePath/Lennie_James.jpg?width=300> ;
+        foaf:familyName  "James" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Lennie" ;
+        foaf:name        "Lennie James" ;
+        foaf:page        <http://data.bnf.fr/15054850/lennie_james/> .
+
+<http://data.bnf.fr/ark:/12148/cb421341792#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb15054850m#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb15054850m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15054850m#foaf:Person> .

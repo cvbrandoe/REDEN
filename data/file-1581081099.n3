@@ -1,0 +1,66 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb413304256#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb139261515#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb139261515#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139261515#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139261515#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1900 ;
+        bnf-onto:lastYear               1941 ;
+        rdagroup2elements:biographicalInformation
+                "Chanteuse et actrice de cinéma" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1900/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1941/> ;
+        rdagroup2elements:placeOfBirth  "Danville, Ill" ;
+        rdagroup2elements:placeOfDeath  "Chicago" ;
+        bio:birth                       "1900" ;
+        bio:death                       "1941" ;
+        owl:sameAs                      <http://viaf.org/viaf/54334803> , <http://dbpedia.org/resource/Helen_Morgan> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Helen_Morgan.jpg?width=300> ;
+        foaf:familyName                 "Morgan" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Helen" ;
+        foaf:name                       "Helen Morgan" ;
+        foaf:page                       <http://data.bnf.fr/13926151/helen_morgan/> .
+
+<http://data.bnf.fr/ark:/12148/cb139261515>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Helen_Morgan> , <http://catalogue.bnf.fr/ark:/12148/cb139261515> ;
+        bnf-onto:FRBNF        13926151 ;
+        isni:identifierValid  "0000000055145662" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000055145662> ;
+        skos:altLabel         "Helen Riggins"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/Helen_Morgan> , <http://viaf.org/viaf/54334803> , <http://isni-url.oclc.nl/isni/0000000055145662> , <http://fr.wikipedia.org/wiki/Helen_Morgan> ;
+        skos:note             "Chanteuse et actrice de cinéma"@fr ;
+        skos:prefLabel        "Helen Morgan (1900-1941)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb139261515#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384644087#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139261515#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139261515#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139261515#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40078375k#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139261515#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139261515#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139261515#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb434509708#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb139261515#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139261515#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139261515#foaf:Person> .

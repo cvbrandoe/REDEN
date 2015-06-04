@@ -1,0 +1,67 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb41042655v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37532275r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411769365#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438881453#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13595601h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13595601h> ;
+        bnf-onto:FRBNF        13595601 ;
+        isni:identifierValid  "0000000109143823" ;
+        owl:sameAs            <http://isni.org/isni/0000000109143823> ;
+        skos:editorialNote    "The silviculture of mahogany / J. E. Mayhew and A. C. Newton, 1998. - . - Induced resistance for plant defence / edited by Dale Walters, Adrian Newton, Gary Lyon, 2007. - . - Forest ecology and conservation / Adrian C. Newton, impr. 2007. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000109143823> , <http://viaf.org/viaf/71562977> , <http://www.idref.fr/118434543> ;
+        skos:note             "En poste : Institute of ecology and resource management, University of Edinburgh (en 1998). - En poste : Scottish Crop Research Institute, Invergowrie, Dundee, Royaume Uni (en 2007). - En poste : School of conservation sciences, Bournemouth university, GB (en 2007)"@fr ;
+        skos:prefLabel        "Adrian Christopher Newton"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "En poste : Institute of ecology and resource management, University of Edinburgh (en 1998). - En poste : Scottish Crop Research Institute, Invergowrie, Dundee, Royaume Uni (en 2007). - En poste : School of conservation sciences, Bournemouth university, GB (en 2007)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://viaf.org/viaf/71562977> , <http://www.idref.fr/118434543> ;
+        foaf:familyName  "Newton" ;
+        foaf:givenName   "Adrian Christopher" ;
+        foaf:name        "Adrian Christopher Newton" ;
+        foaf:page        <http://data.bnf.fr/13595601/adrian_christopher_newton/> .
+
+<http://data.bnf.fr/ark:/12148/cb41463295b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb375458442#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13595601h#foaf:Person> .

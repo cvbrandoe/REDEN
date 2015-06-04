@@ -1,0 +1,79 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb36185854c#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36626874v#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb367143441#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361521036#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34731933f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38886711j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1935 ;
+        rdagroup2elements:biographicalInformation
+                "Polytechnicien et énarque. - Inspecteur des Finances (1962-1996). - Président du Crédit national (1987-1990)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/027023141> , <http://viaf.org/viaf/112179752> ;
+        foaf:familyName     "Mentré" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Paul" ;
+        foaf:name           "Paul Mentré" ;
+        foaf:page           <http://data.bnf.fr/11915588/paul_mentre/> .
+
+<http://data.bnf.fr/ark:/12148/cb37437821h#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11915588w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11915588w> ;
+        bnf-onto:FRBNF        11915588 ;
+        isni:identifierValid  "000000008179173X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000008179173X> ;
+        skos:editorialNote    "Les Durées d'amortissement, rapport / au Ministre d'Etat, Ministre de l'économie, des finances et de la privatisation ; groupe d'étude présidé par Paul Mentré, 1987. - . - L'Amérique et nous / P. Mentré, 1989. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000008179173X> , <http://www.idref.fr/027023141> , <http://viaf.org/viaf/112179752> ;
+        skos:note             "Polytechnicien et énarque. - Inspecteur des Finances (1962-1996). - Président du Crédit national (1987-1990)"@fr ;
+        skos:prefLabel        "Paul Mentré"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35041112d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11915588w#foaf:Person> .

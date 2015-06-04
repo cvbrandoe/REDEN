@@ -1,0 +1,37 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+<http://data.bnf.fr/ark:/12148/cb12239482v#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Fils et successeur de Richard I Wellington, décédé avant 1718. En apprentissage à partir de déc. 1724" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1735-1743" ;
+        bio:birth                      "170." ;
+        bio:death                      "174." ;
+        owl:sameAs                     <http://viaf.org/viaf/76180103> ;
+        foaf:familyName                "Wellington" ;
+        foaf:givenName                 "Richard" ;
+        foaf:name                      "Richard Wellington" ;
+        foaf:page                      <http://data.bnf.fr/12239482/richard_wellington/> .
+
+<http://data.bnf.fr/ark:/12148/cb12239482v>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12239482v> ;
+        bnf-onto:FRBNF      12239482 ;
+        skos:altLabel       "Richard Wellington II (libraire, 170.?-174.?)"@fr , "Richard II Wellington (libraire, 170.?-174.?)"@fr ;
+        skos:editorialNote  "Plomer, 1668-1725. - . - Mc Kenzie. - . - Maxted, 1710-1777. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/76180103> ;
+        skos:note           "Fils et successeur de Richard I Wellington, décédé avant 1718. En apprentissage à partir de déc. 1724"@fr ;
+        skos:prefLabel      "Richard Wellington (libraire, 170.?-174.?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12239482v#foaf:Person> .

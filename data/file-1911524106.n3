@@ -1,0 +1,74 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37419080w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33073471k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12040981k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12040981k> ;
+        bnf-onto:FRBNF        12040981 ;
+        isni:identifierValid  "0000000364468748" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000364468748> ;
+        skos:editorialNote    "BN Cat. gén. suppl.. - . - BN Cat. gén. 1960-1969 : Leblond (Abbé Bernard). - . -"@fr , "Recherches en spirale autour de la chapelle Saint-Germain (Querqueville) / Bernard Leblond, 1982. - . - Ordo, Coutances 1959. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/229027348> , <http://isni-url.oclc.nl/isni/0000000364468748> , <http://www.idref.fr/072232218> ;
+        skos:note             "Prêtre du diocèse de Coutances et d'Avranches (ordonné en 1945). - Prêtre à Querqueville, Manche (en 1982)"@fr ;
+        skos:prefLabel        "Bernard Leblond"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb330734707#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb348528361#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33073472x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36263370h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb323594087#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12040981k#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1921 ;
+        rdagroup2elements:biographicalInformation
+                "Prêtre du diocèse de Coutances et d'Avranches (ordonné en 1945). - Prêtre à Querqueville, Manche (en 1982)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/072232218> , <http://viaf.org/viaf/229027348> ;
+        foaf:familyName     "Leblond" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Bernard" ;
+        foaf:name           "Bernard Leblond" ;
+        foaf:page           <http://data.bnf.fr/12040981/bernard_leblond/> .

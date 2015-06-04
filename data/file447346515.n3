@@ -1,0 +1,79 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13578269b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13578269b> ;
+        bnf-onto:FRBNF        13578269 ;
+        isni:identifierValid  "000000005879705X" ;
+        owl:sameAs            <http://isni.org/isni/000000005879705X> ;
+        skos:editorialNote    "La pratique de l'expertise judiciaire / Gilles Bourgeois, Pierre Julien, Michel Zavaro, 1999. - . - Droit judiciaire privé / Pierre Julien, Natalie Fricero, 2009. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/000000005879705X> , <http://viaf.org/viaf/79157293> ;
+        skos:note             "Agrégé des facultés de droit, ancien directeur de l'Institut d'études judiciaires et doyen honoraire, Faculté de droit, des sciences politiques, économiques et de gestion de l'Université de Nice-Sophia Antipolis (en 2009)"@fr ;
+        skos:prefLabel        "Pierre Julien"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb44226792n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370936206#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39076082p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37632932k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42547055d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37199426b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1932 ;
+        rdagroup2elements:biographicalInformation
+                "Agrégé des facultés de droit, ancien directeur de l'Institut d'études judiciaires et doyen honoraire, Faculté de droit, des sciences politiques, économiques et de gestion de l'Université de Nice-Sophia Antipolis (en 2009)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/79157293> ;
+        foaf:familyName     "Julien" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Pierre" ;
+        foaf:name           "Pierre Julien" ;
+        foaf:page           <http://data.bnf.fr/13578269/pierre_julien/> .
+
+<http://data.bnf.fr/ark:/12148/cb414123015#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422342545#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13578269b#foaf:Person> .

@@ -1,0 +1,59 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12529117w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12529117w> ;
+        bnf-onto:FRBNF        12529117 ;
+        isni:identifierValid  "000000008162486X" ;
+        owl:sameAs            <http://isni.org/isni/000000008162486X> ;
+        skos:editorialNote    "Markierung von Aktantenfunktionen und \"Prädertermination\" im Französischen : ein Beitrag zur Neuinterpretation morphosyntaktischer Strukturen in der französischen Umgangssprache / Daniel Jacob, 1995 [document électronique : reprod. de l'éd. de 1990]. - . - Lengua medieval y tradiciones discursivas en la Península Ibérica : descripción gramatical-pragmática histórica-metodología / Daniel Jacob, Johannes Kabatek eds., 2001. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/88646722> , <http://isni.org/isni/000000008162486X> , <http://www.idref.fr/034546251> ;
+        skos:note             "Ecrit aussi en espagnol"@fr , "Linguiste. - En poste : Universität zu Köln, Lehrstuhl für Romanische Sprachwissenschaft - Iberoromanistik, Allemagne (en 2004)"@fr ;
+        skos:prefLabel        "Daniel Jacob"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12529117w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37736132h#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12529117w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12529117w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12529117w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354709987#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12529117w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12529117w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12529117w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12529117w#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1957 ;
+        rdagroup2elements:biographicalInformation
+                "Ecrit aussi en espagnol" , "Linguiste. - En poste : Universität zu Köln, Lehrstuhl für Romanische Sprachwissenschaft - Iberoromanistik, Allemagne (en 2004)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        owl:sameAs          <http://www.idref.fr/034546251> , <http://viaf.org/viaf/88646722> ;
+        foaf:familyName     "Jacob" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Daniel" ;
+        foaf:name           "Daniel Jacob" ;
+        foaf:page           <http://data.bnf.fr/12529117/daniel_jacob/> .
+
+<http://data.bnf.fr/ark:/12148/cb41069034b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12529117w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12529117w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12529117w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37753590g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12529117w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12529117w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12529117w#foaf:Person> .

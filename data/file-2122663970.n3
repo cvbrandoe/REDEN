@@ -1,0 +1,55 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb146923498>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Ralph_Morgan> , <http://catalogue.bnf.fr/ark:/12148/cb146923498> ;
+        bnf-onto:FRBNF        14692349 ;
+        isni:identifierValid  "0000000361280635" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000361280635> ;
+        skos:editorialNote    "Condemned to live [Images animées] / Frank R. Strayer, réal. ; Ralph Morgan, Pedro De Cordoba, Maxine Doyle... [et al.], act. French konexion, [2014]. - . - IMDB : Ralph Morgan (I). - http://www.imdb.com/name/nm0604960/. - 2014-04-08"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/224288590> , <http://isni-url.oclc.nl/isni/0000000361280635> , <http://dbpedia.org/resource/Ralph_Morgan> , <http://fr.wikipedia.org/wiki/Ralph_Morgan> ;
+        skos:note             "Acteur"@fr ;
+        skos:prefLabel        "Ralph Morgan (1883-1956)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb146923498#foaf:Person> .
+
+<http://data.bnf.fr/14692349/ralph_morgan/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb146923498#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb146923498#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1883 ;
+        bnf-onto:lastYear               1956 ;
+        rdagroup2elements:biographicalInformation
+                "Acteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1883/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1956/> ;
+        rdagroup2elements:placeOfBirth  "New York" ;
+        rdagroup2elements:placeOfDeath  "New York" ;
+        bio:birth                       "1883-07-06" ;
+        bio:death                       "1956-06-11" ;
+        owl:sameAs                      <http://viaf.org/viaf/224288590> , <http://dbpedia.org/resource/Ralph_Morgan> ;
+        foaf:birthday                   "07-06" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Ralph_Morgan_in_Speed_(1936)_trailer.jpg?width=300> ;
+        foaf:familyName                 "Morgan" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Ralph" ;
+        foaf:name                       "Ralph Morgan" ;
+        foaf:page                       <http://data.bnf.fr/14692349/ralph_morgan/> .
+
+<http://data.bnf.fr/ark:/12148/cb43749212n#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146923498#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146923498#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146923498#foaf:Person> .

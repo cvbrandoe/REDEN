@@ -1,0 +1,113 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb30197772w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1752 ;
+        bnf-onto:lastYear               1835 ;
+        rdagroup2elements:biographicalInformation
+                "Jurisconsulte, conseiller à la cour de Cassation. - Frère de : Carnot, Lazare (1753-1823)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1752/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1835/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Né à Nolay (Côte-d'or)" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1752-03-22" ;
+        bio:death                       "1835-07-31" ;
+        owl:sameAs                      <http://viaf.org/viaf/2605067> ;
+        foaf:birthday                   "03-22" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6112919j.thumbnail> ;
+        foaf:familyName                 "Carnot" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Joseph-François-Claude" ;
+        foaf:name                       "Joseph-François-Claude Carnot" ;
+        foaf:page                       <http://data.bnf.fr/12998758/joseph-francois-claude_carnot/> .
+
+<http://data.bnf.fr/ark:/12148/cb39374307s#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb339643669#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301977737#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30197768n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb129987581>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb129987581> ;
+        bnf-onto:FRBNF      12998758 ;
+        skos:editorialNote  "De l'instruction criminelle, considérée dans ses rapports généraux et particuliers avec les lois nouvelles et la jurisprudence de la Cour de cassation / par Carnot, conseiller à la cour de Cassation, 1812. - . - DBF. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/2605067> ;
+        skos:note           "Jurisconsulte, conseiller à la cour de Cassation. - Frère de : Carnot, Lazare (1753-1823)"@fr ;
+        skos:prefLabel      "Joseph-François-Claude Carnot (1752-1808)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30197766z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301977679#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30197771j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39311703j#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36436777g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39374309g#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301977706#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301977690#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30197774k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129987581#foaf:Person> .

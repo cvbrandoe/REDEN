@@ -1,0 +1,65 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38858108v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38858165p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401477212#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41308104q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13499824h>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb13499824h> ;
+        bnf-onto:FRBNF   13499824 ;
+        skos:exactMatch  <http://viaf.org/viaf/227723880> , <http://www.idref.fr/057623716> ;
+        skos:note        "Professeur des Écoles"@fr ;
+        skos:prefLabel   "Pierre-Stéphane Proust"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb371748709#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1960 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur des Écoles" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/227723880> , <http://www.idref.fr/057623716> ;
+        foaf:familyName     "Proust" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Pierre-Stéphane" ;
+        foaf:name           "Pierre-Stéphane Proust" ;
+        foaf:page           <http://data.bnf.fr/13499824/pierre-stephane_proust/> .
+
+<http://data.bnf.fr/ark:/12148/cb438981517#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13499824h#foaf:Person> .

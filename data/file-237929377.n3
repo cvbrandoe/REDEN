@@ -1,0 +1,79 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31339110d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31339111r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1784 ;
+        bnf-onto:lastYear              1821 ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste. - Critique littéraire. - Directeur du \"London magazine\"" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1784/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1821/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1784" ;
+        bio:death                      "1821" ;
+        owl:sameAs                     <http://viaf.org/viaf/29709495> , <http://www.idref.fr/057749531> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k35146c.thumbnail> ;
+        foaf:familyName                "Scott" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "John" ;
+        foaf:name                      "John Scott" ;
+        foaf:page                      <http://data.bnf.fr/13736409/john_scott/> .
+
+<http://data.bnf.fr/ark:/12148/cb36584342f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb326227177#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32622716w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb137364092>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb137364092> ;
+        bnf-onto:FRBNF        13736409 ;
+        isni:identifierValid  "0000000066326194" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000066326194> ;
+        skos:editorialNote    "Regency editor : life of John Scott / Patrick O'Leary, 1983. - . - BN Cat. gén. : Scott (John), journaliste. - . -"@fr , "A visit to Paris in 1814 / by John Scott, 1816. - . - Oxford English lit. [né en 1783]. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/29709495> , <http://isni-url.oclc.nl/isni/0000000066326194> , <http://www.idref.fr/057749531> ;
+        skos:note             "Journaliste. - Critique littéraire. - Directeur du \"London magazine\""@fr ;
+        skos:prefLabel        "John Scott (1784-1821)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> .
+
+<http://data.bnf.fr/13736409/john_scott/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb313391096#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137364092#foaf:Person> .

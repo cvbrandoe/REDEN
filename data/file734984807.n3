@@ -1,0 +1,41 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb16524059w#foaf:Person>
+        a                    foaf:Person ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16524076g#frbr:Work> ;
+        rdagroup2elements:biographicalInformation
+                "Cinéaste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs           <http://viaf.org/viaf/173765468> ;
+        foaf:familyName      "Tyndall" ;
+        foaf:gender          "male" ;
+        foaf:givenName       "Andrew" ;
+        foaf:name            "Andrew Tyndall" ;
+        foaf:page            <http://data.bnf.fr/16524059/andrew_tyndall/> .
+
+<http://data.bnf.fr/ark:/12148/cb42273710h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16524059w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16524059w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16524059w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16524059w>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16524059w> ;
+        bnf-onto:FRBNF      16524059 ;
+        skos:editorialNote  "Argument : a project by Anthony McCall & Andrew Tyndall, 2006. - . - Library of Congress authorities. - http://authorities.loc.gov. - 2011-07-13"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/173765468> ;
+        skos:note           "Cinéaste"@fr ;
+        skos:prefLabel      "Andrew Tyndall"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16524059w#foaf:Person> .

@@ -1,0 +1,29 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb166737066#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Artiste lyrique (soprano)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw#> ;
+        owl:sameAs       <http://viaf.org/viaf/297459206> ;
+        foaf:familyName  "Wolff" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Christine" ;
+        foaf:name        "Christine Wolff" ;
+        foaf:page        <http://data.bnf.fr/16673706/christine_wolff/> .
+
+<http://data.bnf.fr/ark:/12148/cb166737066>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb166737066> ;
+        bnf-onto:FRBNF   16673706 ;
+        skos:exactMatch  <http://viaf.org/viaf/297459206> ;
+        skos:note        "Artiste lyrique (soprano)"@fr ;
+        skos:prefLabel   "Christine Wolff (artiste lyrique)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb166737066#foaf:Person> .

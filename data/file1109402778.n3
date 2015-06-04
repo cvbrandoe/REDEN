@@ -1,0 +1,79 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb40221126f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1839 ;
+        bnf-onto:lastYear               1905 ;
+        rdagroup2elements:biographicalInformation
+                "Prêtre du Diocèse d'Annecy, chanoine honoraire. - Professeur de théologie au grand Séminaire d'Annecy (1870-1888). - Fondateur de l'Académie salésienne" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1839/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1905/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Régnier (Haute-Savoie)" ;
+        bio:birth                       "1839-11-19" ;
+        bio:death                       "1905-09-16" ;
+        owl:sameAs                      <http://viaf.org/viaf/68920744> ;
+        foaf:birthday                   "11-19" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6575235s.thumbnail> ;
+        foaf:familyName                 "Chevalier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jean Marie" ;
+        foaf:name                       "Jean Marie Chevalier" ;
+        foaf:page                       <http://data.bnf.fr/10727270/jean_marie_chevalier/> .
+
+<http://data.bnf.fr/ark:/12148/cb30235362x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34118594s#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30235364m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302353638#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301772189#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34118593f#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb107272706>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb107272706> ;
+        bnf-onto:FRBNF      10727270 ;
+        skos:altLabel       "Jean-Marie Chevallier (1839-1905)"@fr ;
+        skos:editorialNote  "La Bénite-Fontaine : près de La Roche, diocèse d'Annecy (Haute-Savoie) / [signé : Jean-Marie Chevalier]. 2e éd., [1895]. - . - Monographie de la paroisse de Reignier :  diocèse d'Annecy / par le chanoine Jean-Marie Chevallier [sic], 2006. - . -"@fr , "DBF : Chevalier (Jean-Marie). - . - BN Cat. gén. : Chevalier (abbé Jean-Marie), chanoine honoraire. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/68920744> ;
+        skos:note           "Prêtre du Diocèse d'Annecy, chanoine honoraire. - Professeur de théologie au grand Séminaire d'Annecy (1870-1888). - Fondateur de l'Académie salésienne"@fr ;
+        skos:prefLabel      "Jean Marie Chevalier (1839-1905)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb107272706#foaf:Person> .

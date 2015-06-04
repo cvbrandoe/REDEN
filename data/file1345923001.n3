@@ -1,0 +1,40 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb41384318n#frbr:Expression>
+        bnfroles:r2280       <http://data.bnf.fr/ark:/12148/cb165646461#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb165646461#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165646461#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb165646461#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Conservateur de bibliothèque. - Dramaturge. - Scénographe. - Vidéaste" ;
+        owl:sameAs       <http://viaf.org/viaf/222133286> ;
+        foaf:familyName  "Dujardin" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Brigitte" ;
+        foaf:name        "Brigitte Dujardin" ;
+        foaf:page        <http://data.bnf.fr/16564646/brigitte_dujardin/> .
+
+<http://data.bnf.fr/ark:/12148/cb42581085q#frbr:Expression>
+        bnfroles:r2280       <http://data.bnf.fr/ark:/12148/cb165646461#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb165646461#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165646461#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb165646461>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb165646461> ;
+        bnf-onto:FRBNF   16564646 ;
+        skos:exactMatch  <http://viaf.org/viaf/222133286> ;
+        skos:note        "Conservateur de bibliothèque. - Dramaturge. - Scénographe. - Vidéaste"@fr ;
+        skos:prefLabel   "Brigitte Dujardin"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb165646461#foaf:Person> .

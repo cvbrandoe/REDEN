@@ -1,0 +1,78 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39940565z#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb332850229#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36544715t#frbr:Expression>
+        bnfroles:r3030       <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399405549#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399405607#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36542389s#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12231009r>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12231009r> ;
+        bnf-onto:FRBNF      12231009 ;
+        skos:altLabel       "Robert Scot (libraire, 16..-169.?)"@fr ;
+        skos:editorialNote  "Plomer, 1641-1667. - . - Plomer, 1668-1725. - . - Morrison, 1641-1700. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/077794117> , <http://viaf.org/viaf/224094194> ;
+        skos:note           "En apprentissage de janv. 1649 à mars 1656. Apprenti, associé puis successeur de William Wells"@fr ;
+        skos:prefLabel      "Robert Scott (libraire, 16..-169.?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12231009r#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "En apprentissage de janv. 1649 à mars 1656. Apprenti, associé puis successeur de William Wells" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1661-1691" ;
+        bio:birth                      "16.." ;
+        bio:death                      "169." ;
+        owl:sameAs                     <http://viaf.org/viaf/224094194> , <http://www.idref.fr/077794117> ;
+        foaf:familyName                "Scott" ;
+        foaf:givenName                 "Robert" ;
+        foaf:name                      "Robert Scott" ;
+        foaf:page                      <http://data.bnf.fr/12231009/robert_scott/> .

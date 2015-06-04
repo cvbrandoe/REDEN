@@ -1,0 +1,83 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb30601620x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb315406047#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30601623z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> .
+
+<http://data.bnf.fr/12612905/charles/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30601622m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb306016249#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1744 ;
+        bnf-onto:lastYear               1836 ;
+        rdagroup2elements:biographicalInformation
+                "Prince non régnant, fils du Landgrave de Hesse-Cassel Frédéric II et gouverneur (Statthalter) de la principauté de Schleswig-Holstein" ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1744/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1836/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Cassel (Allemagne)" ;
+        rdagroup2elements:placeOfDeath  "Louisenlund (Danemark)" ;
+        bio:birth                       "1744-12-19" ;
+        bio:death                       "1836-08-17" ;
+        owl:sameAs                      <http://viaf.org/viaf/17342331> , <http://dbpedia.org/resource/Charles_de_Hesse-Cassel> ;
+        foaf:birthday                   "12-19" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k111630k.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Karl_von_Hessen-Kassel.jpg?width=300> ;
+        foaf:familyName                 "Charles" ;
+        foaf:gender                     "male" ;
+        foaf:page                       <http://data.bnf.fr/12612905/charles/> .
+
+<http://data.bnf.fr/ark:/12148/cb306016218#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12612905c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Charles_de_Hesse-Cassel> , <http://catalogue.bnf.fr/ark:/12148/cb12612905c> ;
+        bnf-onto:FRBNF        12612905 ;
+        isni:identifierValid  "0000000079850171" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000079850171> ;
+        skos:altLabel         "Carl (prince de Hesse-Cassel, 1744-1836)"@de , "Karl (prince de Hesse-Cassel, 1744-1836)"@de , "Karl (landgrave de Hesse-Cassel, 1744-1836)"@de , "Carl (landgrave de Hesse-Cassel, 1744-1836)"@de , "Charles (prince de Hesse-Cassel, 1744-1836)"@fr ;
+        skos:editorialNote    "Geschichte des Feldzugs in Schweden im Jahre 1788 / von dem Prinzen Carl von Hessen ;  [Uebersetzung von Langlotz, 1789. - . - Normdaten (CD), 2005-01 : Karl, Hessen-Kassel, Landgraf. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000079850171> , <http://viaf.org/viaf/17342331> , <http://dbpedia.org/resource/Charles_de_Hesse-Cassel> , <http://fr.wikipedia.org/wiki/Charles_de_Hesse-Cassel> ;
+        skos:note             "Prince non régnant, fils du Landgrave de Hesse-Cassel Frédéric II et gouverneur (Statthalter) de la principauté de Schleswig-Holstein"@fr ;
+        skos:prefLabel        "Charles (landgrave de Hesse-Cassel, 1744-1836)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12612905c#foaf:Person> .

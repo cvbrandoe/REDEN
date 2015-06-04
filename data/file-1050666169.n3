@@ -1,0 +1,58 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12785193m#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1803 ;
+        bnf-onto:lastYear              1865 ;
+        rdagroup2elements:biographicalInformation
+                "Ministre conjoint du Canada-Uni (1851-1855)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxc> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1803/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1865/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Science politique" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/320/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1803" ;
+        bio:death                      "1865" ;
+        owl:sameAs                     <http://dbpedia.org/resource/Augustin-Norbert_Morin> , <http://viaf.org/viaf/9974358> ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Augustin_Norbert_Morin_(HS85-10-16599).jpg?width=300> ;
+        foaf:familyName                "Morin" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Augustin-Norbert" ;
+        foaf:name                      "Augustin-Norbert Morin" ;
+        foaf:page                      <http://data.bnf.fr/12785193/augustin-norbert_morin/> .
+
+<http://data.bnf.fr/ark:/12148/cb12785193m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12785193m> , <http://fr.wikipedia.org/wiki/Augustin-Norbert_Morin> ;
+        bnf-onto:FRBNF        12785193 ;
+        isni:identifierValid  "0000000073612471" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000073612471> ;
+        skos:editorialNote    "Correspondance entre l'hon. W. H. Draper et l'hon. R. E. Caron, et les hon. L. H. Lafontaine et A. N. Morin, dont il a été question dans un débat récent dans l'Assemblée législative, 1846. - . - Augustin-Norbert Morin : 1803-1965 / Jean-Marc Paradis, 2005. - . -"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/Augustin-Norbert_Morin> , <http://viaf.org/viaf/9974358> , <http://fr.wikipedia.org/wiki/Augustin-Norbert_Morin> , <http://isni-url.oclc.nl/isni/0000000073612471> ;
+        skos:note             "Ministre conjoint du Canada-Uni (1851-1855)"@fr ;
+        skos:prefLabel        "Augustin-Norbert Morin (1803-1865)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12785193m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35235311q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12785193m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12785193m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12785193m#foaf:Person> .
+
+<http://data.bnf.fr/12785193/augustin-norbert_morin/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12785193m#foaf:Person> .

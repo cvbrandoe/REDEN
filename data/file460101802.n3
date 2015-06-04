@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb41371887x#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412585291#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41959590j#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1959 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Courbevoie, Hauts-de-Seine" ;
+        owl:sameAs                      <http://viaf.org/viaf/7660715> ;
+        foaf:familyName                 "Henry" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Bertrand" ;
+        foaf:name                       "Bertrand Henry" ;
+        foaf:page                       <http://data.bnf.fr/14976884/bertrand_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb149768847>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb149768847> ;
+        bnf-onto:FRBNF   14976884 ;
+        skos:exactMatch  <http://viaf.org/viaf/7660715> ;
+        skos:prefLabel   "Bertrand Henry"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb404792381#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40478778d#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42106461p#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149768847#foaf:Person> .

@@ -1,0 +1,32 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+<http://data.bnf.fr/ark:/12148/cb14459668w#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Scénariste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs                     <http://viaf.org/viaf/66688181> ;
+        foaf:familyName                "Delacroix" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Pascal" ;
+        foaf:name                      "Pascal Delacroix" ;
+        foaf:page                      <http://data.bnf.fr/14459668/pascal_delacroix/> .
+
+<http://data.bnf.fr/ark:/12148/cb14459668w>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14459668w> ;
+        bnf-onto:FRBNF   14459668 ;
+        skos:exactMatch  <http://viaf.org/viaf/66688181> ;
+        skos:note        "Scénariste"@fr ;
+        skos:prefLabel   "Pascal Delacroix"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14459668w#foaf:Person> .

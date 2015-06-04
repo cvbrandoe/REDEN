@@ -1,0 +1,45 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb43503102f#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb16649545c#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb16649545c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16649545c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16649545c>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb16649545c> ;
+        bnf-onto:FRBNF   16649545 ;
+        skos:exactMatch  <http://viaf.org/viaf/294331554> ;
+        skos:note        "Acteur. - Pensionnaire de la Comédie-Française depuis octobre 2012"@fr ;
+        skos:prefLabel   "Jérémy Lopez (acteur)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb16649545c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16649545c#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Acteur. - Pensionnaire de la Comédie-Française depuis octobre 2012" ;
+        owl:sameAs       <http://viaf.org/viaf/294331554> ;
+        foaf:familyName  "Lopez" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Jérémy" ;
+        foaf:name        "Jérémy Lopez" ;
+        foaf:page        <http://data.bnf.fr/16649545/jeremy_lopez/> .
+
+<http://data.bnf.fr/ark:/12148/cb442606933#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb16649545c#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb16649545c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16649545c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43503473s#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb16649545c#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb16649545c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16649545c#foaf:Person> .

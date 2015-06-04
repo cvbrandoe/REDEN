@@ -1,0 +1,122 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34804672s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42378380z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35119824t#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420913805#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb410196746#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38933126b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12028000s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12028000s> ;
+        bnf-onto:FRBNF        12028000 ;
+        isni:identifierValid  "0000000081626048" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081626048> ;
+        skos:editorialNote    "Les louanges du Seigneur : commentaire pastoral et spirituel des psaumes du dimanche et des fêtes / par Maurice Gilbert, 1991. - . - L'évêque / Carlo Maria Martini ; traduit de l'italien par Maurice Gilbert, impr. 2012. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/028446410> , <http://viaf.org/viaf/88867931> , <http://isni-url.oclc.nl/isni/0000000081626048> ;
+        skos:note             "Jésuite. - Recteur de l'Institut biblique pontifical de Rome (1978-1984)"@fr ;
+        skos:prefLabel        "Maurice Gilbert"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389538000#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40194103s#frbr:Expression>
+        bnfroles:r120        <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        marcrel:cwt          <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1934 ;
+        rdagroup2elements:biographicalInformation
+                "Jésuite. - Recteur de l'Institut biblique pontifical de Rome (1978-1984)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/be#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/88867931> , <http://www.idref.fr/028446410> ;
+        foaf:familyName     "Gilbert" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Maurice" ;
+        foaf:name           "Maurice Gilbert" ;
+        foaf:page           <http://data.bnf.fr/12028000/maurice_gilbert/> .
+
+<http://data.bnf.fr/ark:/12148/cb356589894#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43611502f#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427959831#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354568442#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/12028000/maurice_gilbert/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354800201#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42307700w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36664341v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35294416q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12028000s#foaf:Person> .

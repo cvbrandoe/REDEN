@@ -1,0 +1,72 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb134872992>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb134872992> ;
+        bnf-onto:FRBNF      13487299 ;
+        skos:altLabel       "翊燮 李"@ko , "Ik-Sōp I"@fr , "Ik-Seob Li"@fr , "Ik-Sop Yi"@fr , "Ik-Sop Lee"@fr ;
+        skos:editorialNote  "I Ki-Mun kyo su čōñ nyōn tʹoi im ki nyōm non čʹoñ / Sim Čä-Ki, Ko Yōñ-Kūn, I Ik-Sōp, I Pyōñ-Kūn ... pʹyōn = Essays in honor of Ki-Moon Lee / ed. by Jae-Kee Shim, Young-Kun Ko, Ik-Sop Lee, Pyonggeun Lee ..., 1996. - . - National library of Korea. - http://nl.go.kr. - 2009-07-31"@fr , "LC Authorities : Lee, Iksop. - http://authorities.loc.gov. - 2009-07-31 BnF Service coréen, 2009-07-31. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/112835198> , <http://viaf.org/viaf/54299403> ;
+        skos:note           "Grammairien. - En poste à l'Université nationale de Séoul (en 1996)"@fr ;
+        skos:prefLabel      "Iksop Lee"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1938 ;
+        rdagroup2elements:biographicalInformation
+                "Grammairien. - En poste à l'Université nationale de Séoul (en 1996)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/kor> ;
+        owl:sameAs          <http://www.idref.fr/112835198> , <http://viaf.org/viaf/54299403> ;
+        foaf:familyName     "Lee" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Iksop" ;
+        foaf:name           "Iksop Lee" ;
+        foaf:page           <http://data.bnf.fr/13487299/iksop_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb38867920w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38807904d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37508931w#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37490332b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401848114#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421122841#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37059478k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134872992#foaf:Person> .

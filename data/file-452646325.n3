@@ -1,0 +1,80 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb412439000#frbr:Expression>
+        bnfroles:r340        <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> ;
+        marcrel:aud          <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35610987p#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35395581v#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345522732#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1915 ;
+        bnf-onto:lastYear              1987 ;
+        rdagroup2elements:biographicalInformation
+                "En poste au French film office, New York (en 1962)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1915/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1987/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1915" ;
+        bio:death                      "1987" ;
+        owl:sameAs                     <http://www.idref.fr/027129411> , <http://viaf.org/viaf/76322687> ;
+        foaf:familyName                "Scott" ;
+        foaf:givenName                 "Helen G." ;
+        foaf:name                      "Helen G. Scott" ;
+        foaf:page                      <http://data.bnf.fr/11924215/helen_g__scott/> .
+
+<http://data.bnf.fr/ark:/12148/cb34835148d#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42745561k#frbr:Expression>
+        bnfroles:r340        <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> ;
+        marcrel:aud          <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11924215t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11924215t> ;
+        bnf-onto:FRBNF        11924215 ;
+        isni:identifierValid  "000000011029686X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000011029686X> ;
+        skos:altLabel         "Helen Scott (1915-1987)"@fr ;
+        skos:editorialNote    "Hitchcock/Truffaut / avec la collab. de Helen Scott, 1993. - . - LCNA, 1985. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/76322687> , <http://isni-url.oclc.nl/isni/000000011029686X> , <http://www.idref.fr/027129411> ;
+        skos:note             "En poste au French film office, New York (en 1962)"@fr ;
+        skos:prefLabel        "Helen G. Scott (1915-1987)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34743752v#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11924215t#foaf:Person> .

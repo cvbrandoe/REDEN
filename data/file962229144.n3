@@ -1,0 +1,78 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb301508719#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10639180r>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb10639180r> ;
+        bnf-onto:FRBNF      10639180 ;
+        skos:editorialNote  "Compte que rend de sa gestion administrative pendant l'an IX le Cen Claude-Pierre Bouvier, en sa qualité de maire de la ville de Dole (département du Jura), 1801. - . - DBF. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/305419657> ;
+        skos:note           "Homme politique. - Maire de Dôle, Jura"@fr ;
+        skos:prefLabel      "Claude Pierre Bouvier (1787-1843)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1787 ;
+        bnf-onto:lastYear               1843 ;
+        rdagroup2elements:biographicalInformation
+                "Homme politique. - Maire de Dôle, Jura" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1787/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1843/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Dôle (Jura)" ;
+        rdagroup2elements:placeOfDeath  "Nénon (Jura)" ;
+        bio:birth                       "1787" ;
+        bio:death                       "1843-12-28" ;
+        owl:sameAs                      <http://viaf.org/viaf/305419657> ;
+        foaf:familyName                 "Bouvier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Claude Pierre" ;
+        foaf:name                       "Claude Pierre Bouvier" ;
+        foaf:page                       <http://data.bnf.fr/10639180/claude_pierre_bouvier/> .
+
+<http://data.bnf.fr/ark:/12148/cb301508730#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36402855v#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30150869r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30150874b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30150872n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30150870z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10639180r#foaf:Person> .

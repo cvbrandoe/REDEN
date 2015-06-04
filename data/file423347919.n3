@@ -1,0 +1,96 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30930093c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346326132#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb309300921#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30930094q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1757 ;
+        bnf-onto:lastYear               1836 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre et chimiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1757/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1836/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Broglie (Eure), France" ;
+        bio:birth                       "1757-09-08" ;
+        bio:death                       "1836-09-27" ;
+        owl:sameAs                      <http://viaf.org/viaf/64119120> , <http://www.idref.fr/099132249> ;
+        foaf:birthday                   "09-08" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6552355d.thumbnail> ;
+        foaf:familyName                 "Mérimée" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jean-François-Léonor" ;
+        foaf:name                       "Jean-François-Léonor Mérimée" ;
+        foaf:page                       <http://data.bnf.fr/12549640/jean-francois-leonor_merimee/> .
+
+<http://data.bnf.fr/ark:/12148/cb309300894#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34626059g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb309300952#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30930090b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12551442m#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30930091p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125496406>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb125496406> ;
+        bnf-onto:FRBNF        12549640 ;
+        isni:identifierValid  "0000000083888084" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000083888084> ;
+        skos:editorialNote    "Des liants et des couleurs ... commentaires de l'ouvrage \"De la peinture à l'huile\" de J. -F.- L. Mérimée... / Jean Petit, Jacques Roire, Henri Valot, 1995. - . - GDEL. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000083888084> , <http://www.idref.fr/099132249> , <http://viaf.org/viaf/64119120> ;
+        skos:note             "Peintre et chimiste"@fr ;
+        skos:prefLabel        "Jean-François-Léonor Mérimée (1757-1836)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb125496406#foaf:Person> .

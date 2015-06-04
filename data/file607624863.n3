@@ -1,0 +1,46 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb13517322g#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Médecin-inspecteur de la Société des jeunes apprentis de la ville de Paris" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/223440550> , <http://www.idref.fr/149292848> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k28373b.thumbnail> ;
+        foaf:familyName                "Fournier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Édouard" ;
+        foaf:name                      "Édouard Fournier" ;
+        foaf:page                      <http://data.bnf.fr/13517322/edouard_fournier/> .
+
+<http://data.bnf.fr/ark:/12148/cb304553484#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13517322g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13517322g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13517322g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13517322g>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13517322g> ;
+        bnf-onto:FRBNF      13517322 ;
+        skos:editorialNote  "De l'emploi thérapeutique de l'eau d'Alet dans les convalescences des fièvres graves et des maladies aiguës en général, les dyspepsies, la migraine, la chlorose et l'état nerveux, / par M. le Dr Édouard Fournier, 1859. - . - BN Cat. gén. : Fournier (Édouard), Dr.. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/223440550> , <http://www.idref.fr/149292848> ;
+        skos:note           "Médecin-inspecteur de la Société des jeunes apprentis de la ville de Paris"@fr ;
+        skos:prefLabel      "Édouard Fournier (médecin, 18..-18..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13517322g#foaf:Person> .

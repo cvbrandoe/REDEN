@@ -1,0 +1,87 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb347153142#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb434228716#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349379488#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43451543h#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349379426#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1939 ;
+        rdagroup2elements:biographicalInformation
+                "Illustratrice d'ouvrages pour enfants" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/49249789> , <http://www.idref.fr/145176711> ;
+        foaf:familyName     "Gordon" ;
+        foaf:givenName      "Margaret" ;
+        foaf:name           "Margaret Gordon" ;
+        foaf:page           <http://data.bnf.fr/12078718/margaret_gordon/> .
+
+<http://data.bnf.fr/ark:/12148/cb43439425t#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12078718t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12078718t> ;
+        bnf-onto:FRBNF        12078718 ;
+        isni:identifierValid  "0000000078302114" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000078302114> ;
+        skos:exactMatch       <http://viaf.org/viaf/49249789> , <http://isni-url.oclc.nl/isni/0000000078302114> , <http://www.idref.fr/145176711> ;
+        skos:note             "Illustratrice d'ouvrages pour enfants"@fr ;
+        skos:prefLabel        "Margaret Gordon"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34937946k#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34713591k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43448628c#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34937943j#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12078718t#foaf:Person> .

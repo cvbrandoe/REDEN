@@ -1,0 +1,67 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1943 ;
+        rdagroup2elements:biographicalInformation
+                "Cartographe. - Spécialiste en cartographie historique. - En poste au bureau d'études Latitude (Lyon, en 1995)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/034218912> , <http://viaf.org/viaf/5459329> ;
+        foaf:familyName     "Rolland" ;
+        foaf:givenName      "Pierre" ;
+        foaf:name           "Pierre Rolland" ;
+        foaf:page           <http://data.bnf.fr/12499709/pierre_rolland/> .
+
+<http://data.bnf.fr/ark:/12148/cb40030192v#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425031389#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357763093#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42378763g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388767131#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35848441w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124997096>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb124997096> ;
+        bnf-onto:FRBNF        12499709 ;
+        isni:identifierValid  "0000000061398447" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000061398447> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000061398447> , <http://www.idref.fr/034218912> , <http://viaf.org/viaf/5459329> ;
+        skos:note             "Cartographe. - Spécialiste en cartographie historique. - En poste au bureau d'études Latitude (Lyon, en 1995)"@fr ;
+        skos:prefLabel        "Pierre Rolland"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb124997096#foaf:Person> .

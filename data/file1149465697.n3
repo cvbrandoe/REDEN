@@ -1,0 +1,60 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb40018183d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Joueur de go" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/kor> ;
+        owl:sameAs       <http://viaf.org/viaf/75656682> , <http://www.idref.fr/078995051> ;
+        foaf:familyName  "Lee" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Chang-Ho" ;
+        foaf:name        "Chang-Ho Lee" ;
+        foaf:page        <http://data.bnf.fr/14549592/chang-ho_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb14549592f>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14549592f> ;
+        bnf-onto:FRBNF   14549592 ;
+        skos:altLabel    "Chang-Ho Li"@fr , "Čʹañ-Ho I"@fr , "Chang-Ho Yi"@fr ;
+        skos:exactMatch  <http://viaf.org/viaf/75656682> , <http://www.idref.fr/078995051> ;
+        skos:note        "Joueur de go"@fr ;
+        skos:prefLabel   "Chang-Ho Lee"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb433914505#frbr:Expression>
+        bnfroles:r530        <http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person> ;
+        marcrel:pht          <http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39138693t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43487135v#frbr:Expression>
+        bnfroles:r530        <http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person> ;
+        marcrel:pht          <http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb391925564#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14549592f#foaf:Person> .

@@ -1,0 +1,73 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb312671409#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301036316#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb312671393#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10329764f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10329764f> ;
+        bnf-onto:FRBNF        10329764 ;
+        isni:identifierValid  "0000000066310846" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000066310846> ;
+        skos:altLabel         "Albertus Rubens (1614-1657)"@fr ;
+        skos:editorialNote    "Alberti Rubenii,... de Re vestiaria veterum, praecipue de lato clavo, libri duo ; et alia ejusdem opuscula posthuma, 1665. - . - WBIS. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/29522920> , <http://isni-url.oclc.nl/isni/0000000066310846> , <http://www.idref.fr/117605948> ;
+        skos:note             "Historien et numismate. - Fils de Pierre Paul Rubens"@fr ;
+        skos:prefLabel        "Albert Rubens (1614-1657)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30531302m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1614 ;
+        bnf-onto:lastYear               1657 ;
+        rdagroup2elements:biographicalInformation
+                "Historien et numismate. - Fils de Pierre Paul Rubens" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1614/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1657/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        rdagroup2elements:placeOfBirth  "Anvers, Pays-Bas" ;
+        bio:birth                       "1614-06-05" ;
+        bio:death                       "1657-10-01" ;
+        owl:sameAs                      <http://viaf.org/viaf/29522920> , <http://www.idref.fr/117605948> ;
+        foaf:birthday                   "06-05" ;
+        foaf:familyName                 "Rubens" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Albert" ;
+        foaf:name                       "Albert Rubens" ;
+        foaf:page                       <http://data.bnf.fr/10329764/albert_rubens/> .
+
+<http://data.bnf.fr/ark:/12148/cb30103630v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10329764f#foaf:Person> .

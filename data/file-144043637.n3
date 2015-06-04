@@ -1,0 +1,46 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb120420749#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1901 ;
+        rdagroup2elements:biographicalInformation
+                "Historien de la Réforme" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/080926444> , <http://viaf.org/viaf/108867253> ;
+        foaf:familyName     "Grimm" ;
+        foaf:givenName      "Harold John" ;
+        foaf:name           "Harold John Grimm" ;
+        foaf:page           <http://data.bnf.fr/12042074/harold_john_grimm/> .
+
+<http://data.bnf.fr/ark:/12148/cb411729993#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120420749#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120420749#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120420749#foaf:Person> .
+
+<http://data.bnf.fr/12042074/harold_john_grimm/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb120420749#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120420749>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb120420749> ;
+        bnf-onto:FRBNF        12042074 ;
+        isni:identifierValid  "0000000109321546" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109321546> ;
+        skos:editorialNote    "Luther's works. Volume 31, Career of the reformer. I / edited by Harold J. Grimm ; general editor Helmut T. Lehmann, 1957. - . - LC Authorities. - http://authorities.loc.gov/. - 2007-12-17"@fr ;
+        skos:exactMatch       <http://www.idref.fr/080926444> , <http://isni-url.oclc.nl/isni/0000000109321546> , <http://viaf.org/viaf/108867253> ;
+        skos:note             "Historien de la Réforme"@fr ;
+        skos:prefLabel        "Harold John Grimm"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120420749#foaf:Person> .

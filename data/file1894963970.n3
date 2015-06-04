@@ -1,0 +1,72 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb395092068#frbr:Expression>
+        bnfroles:r320        <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> ;
+        marcrel:rcp          <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41207977q#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41207898d#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43534203x#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Auteur dramatique. - Régisseur du Théâtre de la Gaîté-lyrique (ca 1914) et du Théâtre de l'Apollo (ca 1919)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        bio:birth                      "18.." ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://viaf.org/viaf/71654626> ;
+        foaf:familyName                "Edmond" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Paul" ;
+        foaf:name                      "Paul Edmond" ;
+        foaf:page                      <http://data.bnf.fr/14655758/paul_edmond/> .
+
+<http://data.bnf.fr/ark:/12148/cc4595t/cd0e2028#frbr:Expression>
+        bnfroles:r320        <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> ;
+        marcrel:rcp          <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc4595t/cd0e1978#frbr:Expression>
+        bnfroles:r320        <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> ;
+        marcrel:rcp          <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb146557587>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb146557587> ;
+        bnf-onto:FRBNF   14655758 ;
+        skos:exactMatch  <http://viaf.org/viaf/71654626> ;
+        skos:note        "Auteur dramatique. - Régisseur du Théâtre de la Gaîté-lyrique (ca 1914) et du Théâtre de l'Apollo (ca 1919)"@fr ;
+        skos:prefLabel   "Paul Edmond (directeur de théâtre, 18..-19.. )"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39500416z#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146557587#foaf:Person> .

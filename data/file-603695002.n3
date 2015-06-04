@@ -1,0 +1,77 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb343415226#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35618334c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34612235v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37650870s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34963052p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34903191m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1934 ;
+        rdagroup2elements:biographicalInformation
+                "Ingénieur agronome ENSAG" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/267319219> , <http://www.idref.fr/026885468> ;
+        foaf:familyName     "Gautier" ;
+        foaf:givenName      "Michel" ;
+        foaf:name           "Michel Gautier" ;
+        foaf:page           <http://data.bnf.fr/11904432/michel_gautier/> .
+
+<http://data.bnf.fr/ark:/12148/cb346122366#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11904432j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11904432j> ;
+        bnf-onto:FRBNF        11904432 ;
+        isni:identifierValid  "0000000383075712" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000383075712> ;
+        skos:exactMatch       <http://viaf.org/viaf/267319219> , <http://www.idref.fr/026885468> , <http://isni-url.oclc.nl/isni/0000000383075712> ;
+        skos:note             "Ingénieur agronome ENSAG"@fr ;
+        skos:prefLabel        "Michel Gautier"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34308299t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11904432j#foaf:Person> .

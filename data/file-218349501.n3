@@ -1,0 +1,71 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35811633h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35568350g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12232261n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12232261n> ;
+        bnf-onto:FRBNF        12232261 ;
+        isni:identifierValid  "0000000030117454" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000030117454> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000030117454> , <http://viaf.org/viaf/4984422> , <http://www.idref.fr/031024726> ;
+        skos:note             "Romancière. - Journaliste au Nouvel observateur (en 1991)"@fr ;
+        skos:prefLabel        "Nita Rousseau"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Romancière. - Journaliste au Nouvel observateur (en 1991)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/4984422> , <http://www.idref.fr/031024726> ;
+        foaf:familyName  "Rousseau" ;
+        foaf:givenName   "Nita" ;
+        foaf:name        "Nita Rousseau" ;
+        foaf:page        <http://data.bnf.fr/12232261/nita_rousseau/> .
+
+<http://data.bnf.fr/ark:/12148/cb35725639k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35504600j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb355567606#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37628207p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35488680g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12232261n#foaf:Person> .

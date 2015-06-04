@@ -1,0 +1,108 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb32101546r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38692397w#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30885387b#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1856 ;
+        bnf-onto:lastYear               1904 ;
+        rdagroup2elements:biographicalInformation
+                "Critique littéraire et poète. - Spécialiste de Pétrarque et de littérature populaire italienne" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1856/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1904/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        rdagroup2elements:placeOfBirth  "Molinella, Italie" ;
+        rdagroup2elements:placeOfDeath  "Collegiliato, Italie" ;
+        bio:birth                       "1856-03-25" ;
+        bio:death                       "1904-12-24" ;
+        owl:sameAs                      <http://www.idref.fr/03168436X> , <http://viaf.org/viaf/14834211> ;
+        foaf:birthday                   "03-25" ;
+        foaf:familyName                 "Ferrari" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Severino" ;
+        foaf:name                       "Severino Ferrari" ;
+        foaf:page                       <http://data.bnf.fr/12285261/severino_ferrari/> .
+
+<http://data.bnf.fr/ark:/12148/cb30430241t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb310946000#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb321015473#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12285261d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12285261d> ;
+        bnf-onto:FRBNF        12285261 ;
+        isni:identifierValid  "0000000121215797" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121215797> ;
+        skos:editorialNote    "Le rime / Francesco Petrarca ; a cura di Giosuè Carducci e Severino Ferrari, nuova presentazione di Gianfranco Contini, 1984. - . - Encicl. italiana. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000121215797> , <http://viaf.org/viaf/14834211> , <http://www.idref.fr/03168436X> ;
+        skos:note             "Critique littéraire et poète. - Spécialiste de Pétrarque et de littérature populaire italienne"@fr ;
+        skos:prefLabel        "Severino Ferrari (1856-1904)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb331342979#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb330055936#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb332658521#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304302425#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30430240g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37373675k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> .
+
+<http://data.bnf.fr/12285261/severino_ferrari/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12285261d#foaf:Person> .

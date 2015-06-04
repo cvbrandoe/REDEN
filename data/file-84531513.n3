@@ -1,0 +1,52 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12609147k>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12609147k> ;
+        bnf-onto:FRBNF      12609147 ;
+        skos:altLabel       "Jeune Giraud (secrétaire, 17..-17..?)"@fr ;
+        skos:editorialNote  "Régénération parfaite : aux citoyens de la section de la Montagne / [signé Giraud, jeune], [ca 1792]. - . - Martin et Walter. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/050544462> , <http://viaf.org/viaf/69050132> ;
+        skos:note           "Secrétaire-commis au comité de distribution de la Convention nationale"@fr ;
+        skos:prefLabel      "Dominique Giraud (secrétaire, 17..-17..?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12609147k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36051520g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12609147k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12609147k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12609147k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30511373q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12609147k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12609147k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12609147k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12609147k#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Secrétaire-commis au comité de distribution de la Convention nationale" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "17.." ;
+        bio:death                      "17.." ;
+        owl:sameAs                     <http://www.idref.fr/050544462> , <http://viaf.org/viaf/69050132> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k6247965d.thumbnail> ;
+        foaf:familyName                "Giraud" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Dominique" ;
+        foaf:name                      "Dominique Giraud" ;
+        foaf:page                      <http://data.bnf.fr/12609147/dominique_giraud/> .

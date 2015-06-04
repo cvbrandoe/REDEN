@@ -1,0 +1,33 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb11958468j#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             290 ;
+        bnf-onto:lastYear              303 ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/0290/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/0303/> ;
+        bio:birth                      "290" ;
+        bio:death                      "303" ;
+        owl:sameAs                     <http://www.idref.fr/149384998> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b8496056s.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8496248x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69532441.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69515149.thumbnail> ;
+        foaf:familyName                "Agnès" ;
+        foaf:page                      <http://data.bnf.fr/11958468/agnes/> .
+
+<http://data.bnf.fr/11958468/agnes/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11958468j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11958468j>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb11958468j> ;
+        bnf-onto:FRBNF   11958468 ;
+        skos:exactMatch  <http://www.idref.fr/149384998> ;
+        skos:prefLabel   "Agnès (sainte, 0290-0303)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb11958468j#foaf:Person> .

@@ -1,0 +1,97 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb40027902r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42124762s#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://viaf.org/viaf/160193640> ;
+        foaf:familyName  "Lee" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Cedric" ;
+        foaf:name        "Cedric Lee" ;
+        foaf:page        <http://data.bnf.fr/15518175/cedric_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb40027889c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401295238#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40129509q#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400278970#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb155181751>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb155181751> ;
+        bnf-onto:FRBNF      15518175 ;
+        skos:editorialNote  "Three devotional songs [Musique imprimée] : solo bass with basso continuo / George Jeffreys ; general editor, Cedric Lee, cop. 2000. - . - LC authorities. - http://authorities.loc.gov. - 2007-03-16"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/160193640> ;
+        skos:prefLabel      "Cedric Lee (musicologue)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40129531w#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40129525z#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400278928#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40129530j#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401295269#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40129508c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41252373h#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155181751#foaf:Person> .

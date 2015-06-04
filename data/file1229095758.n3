@@ -1,0 +1,89 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb34866209n#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42278431v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37671816n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37229984m#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36598880j#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119086353>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb119086353> ;
+        bnf-onto:FRBNF        11908635 ;
+        isni:identifierValid  "0000000115570522" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000115570522> ;
+        skos:editorialNote    "La Duchesse prise au jeu ou L'impromptu de Neuilly : entretien avec Robert Bensimon et Corine Thézier / [André Jarry], 1995. - . - Figaro, 2012-06-09/10 (faire-part de décès). - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000115570522> , <http://viaf.org/viaf/68930657> , <http://www.idref.fr/026935856> ;
+        skos:note             "Vice-président de l'\"Association des amis d'Alfred de Vigny\" (en 1995). - Docteur ès lettres, chercheur  au CNRS"@fr ;
+        skos:prefLabel        "André Jarry (19..-2012)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              2012 ;
+        rdagroup2elements:biographicalInformation
+                "Vice-président de l'\"Association des amis d'Alfred de Vigny\" (en 1995). - Docteur ès lettres, chercheur  au CNRS" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2012/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "19.." ;
+        bio:death                      "2012-05-17" ;
+        owl:sameAs                     <http://www.idref.fr/026935856> , <http://viaf.org/viaf/68930657> ;
+        foaf:familyName                "Jarry" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "André" ;
+        foaf:name                      "André Jarry" ;
+        foaf:page                      <http://data.bnf.fr/11908635/andre_jarry/> .
+
+<http://data.bnf.fr/ark:/12148/cb342310693#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34556633w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361525786#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35202768f#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119086353#foaf:Person> .

@@ -1,0 +1,41 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/13547158/renaut_de_magny/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13547158j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13547158j#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Fritz Fath avance le nom de Guy, châtelain de Coucy à partir de 1186, lequel, après avoir participé à la 3e croisade, mourut dans la 4e (en 1203) en traversant la mer Égée (Geoffroy de Villehardouin, § 124). - Selon F. Fath, Guy appartient à la famille de Torote ou Thourotte" , "Alain Lerond recense 33 chansons attribuées au châtelain de Coucy (selon lui, 7 authentiques, 6 dont l'attribution au châtelain est possible, 12 douteuses et 8 à rejeter). - Ce poète a inspiré à Jakemés le roman du «Châtelain de Coucy» - le héros de ce roman porte le nom de Renaut" , "Jean-Benjamin de La Borde identifie le châtelain à Raoul Ier, seigneur de Coucy, mort au siège de Saint-Jean-d'Acre (1191). - Pierre-Louis Ginguené propose plutôt son neveu et homonyme, également mort à la 3e croisade (Histoire littéraire de la France, t. XIV, 1817, p. 579-587). - Ces deux auteurs se trompent en confondant le châtelain avec le seigneur de Coucy" , "Holger Petersen Dyggve (Gace Brulé, trouvère champenois, 1951) écarte l'appartenance à cette dernière famille et identifie ce même Guy († 1203), vicomte de Soissons, seigneur de Namcel et châtelain de Coucy, à Guy de Ponceaux, ami de Gace Brulé. - Alain Lerond (p. 16-20) indique toutes ces hypothèses en envisageant avec faveur celle de H.P. Dyggve" , "Francisque Michel propose Regnault, châtelain de Coucy, mort au début du XIIIe siècle ; Gaston Paris précise : Renaut de Magny, châtelain de Coucy de 1207 à 1218 (Romania, VIII, 1879, p. 355-359)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1101-1200/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1201-1300/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fro> ;
+        bio:birth                      "11.." ;
+        bio:death                      "122." ;
+        owl:sameAs                     <http://www.idref.fr/050794833> , <http://viaf.org/viaf/34621855> ;
+        foaf:familyName                "Magny" ;
+        foaf:givenName                 "Renaut de" ;
+        foaf:name                      "Renaut de Magny" ;
+        foaf:page                      <http://data.bnf.fr/13547158/renaut_de_magny/> .
+
+<http://data.bnf.fr/ark:/12148/cb13547158j>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13547158j> ;
+        bnf-onto:FRBNF      13547158 ;
+        skos:altLabel       "Reignaut (châtelain de Coucy, 11..-122.?)"@fr , "Renaut de Magny Couci (châtelain de, 11..-122.?)"@fr , "Reignaut Coucy (châtelain de, 11..-122.?)"@fr , "Renaut de Magny Coucy (châtelain de, 11..-122.?)"@fr , "Regnault (châtelain de Coucy, 11..-122.?)"@fr , "Renaut (châtelain de Coucy, 11..-122.?)"@fr , "Renaut de Coucy (11..-122.?)"@fr , "Renaut de Couci (11..-122.?)"@fr , "Regnault Coucy (châtelain de, 11..-122.?)"@fr ;
+        skos:editorialNote  "Chansons attribuées au chastelain de Couci / éd. par Alain Lerond, 1964. - . - Chevalier : COUCY (Reignaut, châtelain de), trouvère † 1191 ; (Guy...). - . -"@fr , "Mémoires historiques sur Raoul de Coucy / [par J.-B. de La Borde]. On y a joint le recueil de ses chansons..., 1781. - . - Chansons du châtelain de Coucy / rev. sur tous les mss par Francisque Michel, 1830. - . - Die Lieder des Castellans von Coucy / bearb. von Fritz Fath, 1883. - . -"@fr , "Lexikon des Mittelalters : COUCY, Kastellan von. - . - BN Cat. gén. : COUCY (Raoul de). - . -"@fr , "GDEL : GUI de Coucy. - . - DBF : COUCY (Renaut de Magny, châtelain de) + GUY DE COUCY. - . - Bossuat, n °s 2327-2328 et 4457-4461, et Grente. Moyen âge : Châtelain de Coucy. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/050794833> , <http://viaf.org/viaf/34621855> ;
+        skos:note           "Francisque Michel propose Regnault, châtelain de Coucy, mort au début du XIIIe siècle ; Gaston Paris précise : Renaut de Magny, châtelain de Coucy de 1207 à 1218 (Romania, VIII, 1879, p. 355-359)"@fr , "Alain Lerond recense 33 chansons attribuées au châtelain de Coucy (selon lui, 7 authentiques, 6 dont l'attribution au châtelain est possible, 12 douteuses et 8 à rejeter). - Ce poète a inspiré à Jakemés le roman du «Châtelain de Coucy» - le héros de ce roman porte le nom de Renaut"@fr , "Holger Petersen Dyggve (Gace Brulé, trouvère champenois, 1951) écarte l'appartenance à cette dernière famille et identifie ce même Guy († 1203), vicomte de Soissons, seigneur de Namcel et châtelain de Coucy, à Guy de Ponceaux, ami de Gace Brulé. - Alain Lerond (p. 16-20) indique toutes ces hypothèses en envisageant avec faveur celle de H.P. Dyggve"@fr , "Jean-Benjamin de La Borde identifie le châtelain à Raoul Ier, seigneur de Coucy, mort au siège de Saint-Jean-d'Acre (1191). - Pierre-Louis Ginguené propose plutôt son neveu et homonyme, également mort à la 3e croisade (Histoire littéraire de la France, t. XIV, 1817, p. 579-587). - Ces deux auteurs se trompent en confondant le châtelain avec le seigneur de Coucy"@fr , "Fritz Fath avance le nom de Guy, châtelain de Coucy à partir de 1186, lequel, après avoir participé à la 3e croisade, mourut dans la 4e (en 1203) en traversant la mer Égée (Geoffroy de Villehardouin, § 124). - Selon F. Fath, Guy appartient à la famille de Torote ou Thourotte"@fr ;
+        skos:prefLabel      "Renaut de Magny (11..-122.?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13547158j#foaf:Person> .

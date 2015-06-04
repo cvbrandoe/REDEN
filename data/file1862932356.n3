@@ -1,0 +1,78 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb425605189#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38879604h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de mathématiques. - En poste au collège Saint-Joseph, Saint-Cloud (en 1994)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/5031212> , <http://www.idref.fr/033924961> ;
+        foaf:familyName  "Jacob" ;
+        foaf:givenName   "Nadine" ;
+        foaf:name        "Nadine Jacob" ;
+        foaf:page        <http://data.bnf.fr/12473263/nadine_jacob/> .
+
+<http://data.bnf.fr/ark:/12148/cb423718601#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357232139#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39978094q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38879637g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35741547c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42074065r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37056887x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12473263r>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12473263r> ;
+        bnf-onto:FRBNF   12473263 ;
+        skos:exactMatch  <http://viaf.org/viaf/5031212> , <http://www.idref.fr/033924961> ;
+        skos:note        "Professeur de mathématiques. - En poste au collège Saint-Joseph, Saint-Cloud (en 1994)"@fr ;
+        skos:prefLabel   "Nadine Jacob"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12473263r#foaf:Person> .

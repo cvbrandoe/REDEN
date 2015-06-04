@@ -1,0 +1,100 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14530211d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14530211d> ;
+        bnf-onto:FRBNF        14530211 ;
+        isni:identifierValid  "0000000031754092" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000031754092> ;
+        skos:altLabel         "Jean de La Vigne"@fr , "Verfèle"@fr , "Denis-Joseph-Claude Verfèle"@fr , "Denis-Joseph-Claude Lefèvre"@fr , "Sedin"@fr ;
+        skos:editorialNote    "Lettres de deux amants détenus pendant le régime de le Terreur / recueillies et publ. par M. Sedin, 1823. - . - Pèlerinages d'un Childe-Harold parisien aux environs de la capitale, en Lorraine, en Alsace, à Lyon et en Suisse / extraits du portefeuille de M. D.-J.-C. Verfèle, 1825. - . -"@fr , "M. Cicogne / [par D.-J.-C. Le Fèvre], 1819. - . - Vingt millions d'économies ou Opinion de Jean de La Vigne sur l'exercice et les octrois, 1830. - . - Suprématie du fromage de Brie : hymne d'un Meldois/ [signé : Verfèle], 1830. - . -"@fr , "Quérard supercheries. - . - BN Cat. gén. : Le Fèvre (Denis-Joseph-Claude), pseud. Jean de La Vigne, Sedin, Verfèle. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000031754092> , <http://viaf.org/viaf/61783237> ;
+        skos:note             "Actif à Meaux"@fr ;
+        skos:prefLabel        "Denis-Joseph-Claude Le Fèvre"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30773141m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb326671853#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36376025z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb330748023#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307731361#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb360037585#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30773138q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Actif à Meaux" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "17.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/61783237> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k6100137t.thumbnail> ;
+        foaf:familyName                "Le Fèvre" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Denis-Joseph-Claude" ;
+        foaf:name                      "Denis-Joseph-Claude Le Fèvre" ;
+        foaf:page                      <http://data.bnf.fr/14530211/denis-joseph-claude_le_fevre/> .
+
+<http://data.bnf.fr/ark:/12148/cb30773142z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307731439#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30773137c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307731392#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14530211d#foaf:Person> .

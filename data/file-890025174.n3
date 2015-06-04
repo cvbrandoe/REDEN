@@ -1,0 +1,61 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb125112787>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb125112787> ;
+        bnf-onto:FRBNF      12511278 ;
+        skos:altLabel       "Willem V (Stathouder de Hollande, 1748-1806)"@nl ;
+        skos:editorialNote  "Inventaris van de archieven van stadhouder Willem V (1745-1808) en de Hofcommissie van  Willem IV en Willem V (1732-1794) / bewerkt door B. Woelderink ; met medewerking van Mewrouw H. J. de Muij-Fleurke, 2005. - . - Dictionnaire encyclopédique d'histoire / M. Mourre, 1986. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/034348409> ;
+        skos:note           "Stathouder de Hollande de 1751 à 1795"@fr ;
+        skos:prefLabel      "Guillaume V (Stathouder de Hollande, 1748-1806)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb125112787#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30556878v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125112787#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125112787#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125112787#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305568796#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125112787#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125112787#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125112787#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30556877h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125112787#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125112787#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125112787#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125112787#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1748 ;
+        bnf-onto:lastYear               1806 ;
+        rdagroup2elements:biographicalInformation
+                "Stathouder de Hollande de 1751 à 1795" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ne#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1748/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1806/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/dut> ;
+        rdagroup2elements:placeOfBirth  "La Haye" ;
+        rdagroup2elements:placeOfDeath  "Brunswick" ;
+        bio:birth                       "1748-03-08" ;
+        bio:death                       "1806-04-09" ;
+        owl:sameAs                      <http://www.idref.fr/034348409> ;
+        foaf:birthday                   "03-08" ;
+        foaf:familyName                 "Guillaume" ;
+        foaf:page                       <http://data.bnf.fr/12511278/guillaume_5/> .
+
+<http://data.bnf.fr/12511278/guillaume_5/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb125112787#foaf:Person> .

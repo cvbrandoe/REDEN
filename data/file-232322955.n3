@@ -1,0 +1,66 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb120935263>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb120935263> ;
+        bnf-onto:FRBNF      12093526 ;
+        skos:altLabel       "어령 이"@ko , "O-Nyŏng Yi"@ko , "Ǒ-Ryōng Yi"@ko , "Lee O-Young"@ko , "Ō-Lyōñ I"@ko , "Oryǒng Yi"@ko , "O-Yong Lee"@ko , "御寧 李"@ko ;
+        skos:editorialNote  "LC Authorities : Yi, Ŏ-ryŏng, 1934-. - http://authorities.loc.gov. - 2006-02-17 BnF Service coréen. - . -"@fr , "Smaller is better : miniaturisation et productivité japonaises / O-Young Lee, 1988. - . - National library of Korea. - http://nl.go.kr. - 2006-02-17"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/109057898> , <http://www.idref.fr/029273285> ;
+        skos:note           "Ecrit aussi en anglais"@fr , "Romancier. - Professeur de littérature à l'Université de Séoul (en 1988). - Rédacteur en chef de la revue littéraire Munhak sasang (en 1967)"@fr ;
+        skos:prefLabel      "O-Young Lee"@ko ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35696430f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35533214h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37520273c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389641742#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37507137h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1934 ;
+        rdagroup2elements:biographicalInformation
+                "Romancier. - Professeur de littérature à l'Université de Séoul (en 1988). - Rédacteur en chef de la revue littéraire Munhak sasang (en 1967)" , "Ecrit aussi en anglais" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/kor> ;
+        owl:sameAs          <http://viaf.org/viaf/109057898> , <http://www.idref.fr/029273285> ;
+        foaf:familyName     "Lee" ;
+        foaf:givenName      "O-Young" ;
+        foaf:name           "O-Young Lee" ;
+        foaf:page           <http://data.bnf.fr/12093526/o-young_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb34962023v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120935263#foaf:Person> .

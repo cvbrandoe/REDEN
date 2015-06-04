@@ -1,0 +1,60 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb39701856w#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb13944218j#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb13944218j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13944218j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39701855j#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb13944218j#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb13944218j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13944218j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39716358m#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13944218j#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13944218j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13944218j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13944218j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13944218j> ;
+        bnf-onto:FRBNF        13944218 ;
+        isni:identifierValid  "0000000114768545" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114768545> ;
+        skos:altLabel         "Gilbert A Rodin (1906-1974)"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000114768545> , <http://viaf.org/viaf/86669546> ;
+        skos:note             "Saxophoniste. - Clarinettiste. - Jazz"@fr ;
+        skos:prefLabel        "Gil Rodin (1906-1974)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13944218j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13944218j#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1906 ;
+        bnf-onto:lastYear               1974 ;
+        rdagroup2elements:biographicalInformation
+                "Saxophoniste. - Clarinettiste. - Jazz" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1906/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1974/> ;
+        rdagroup2elements:placeOfBirth  "Russie" ;
+        rdagroup2elements:placeOfDeath  "Palm Springs, Calif" ;
+        bio:birth                       "1906" ;
+        bio:death                       "1974" ;
+        owl:sameAs                      <http://viaf.org/viaf/86669546> ;
+        foaf:familyName                 "Rodin" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Gil" ;
+        foaf:name                       "Gil Rodin" ;
+        foaf:page                       <http://data.bnf.fr/13944218/gil_rodin/> .

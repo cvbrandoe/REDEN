@@ -1,0 +1,26 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/15138473/hercule/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb15138473w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15138473w#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Divinité romaine" ;
+        foaf:depiction   <http://gallica.bnf.fr/ark:/12148/btv1b53056680d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b59669483.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69365008.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b59054366.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b5903879q.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b7200330j.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b5904848g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b59038789.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53040233s.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53042427m.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b59043621.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6936619q.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53042689r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530329973.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69561703.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b10500543x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b59037801.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b59728266.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b5962771d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b84931210.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530392915.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b5903732z.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b59043673.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53039384g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b105005591.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b10500560d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530424409.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53041147z.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53039520z.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69366189.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53040691w.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69366293.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b5905435s.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b5962769b.thumbnail> ;
+        foaf:familyName  "Hercule" ;
+        foaf:page        <http://data.bnf.fr/15138473/hercule/> .
+
+<http://data.bnf.fr/ark:/12148/cb15138473w>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb15138473w> ;
+        bnf-onto:FRBNF  15138473 ;
+        skos:note       "Divinité romaine"@fr ;
+        skos:prefLabel  "Hercule (divinité romaine)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb15138473w#foaf:Person> .

@@ -1,0 +1,43 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb16505356h#foaf:Person>
+        a                               foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Fille d'un conseiller au Parlement de Provence. - Veuve de M. Mayol de Saint-Simon. - Elle suscite une violente passion à Jean-Baptiste d'Entrecasteaux (1758-1785) qui, souhaitant l'épouser, assassine sa femme" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de la France" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Aix-en-Provence (Bouches-du-Rhône)" ;
+        bio:birth                       "17.." ;
+        bio:death                       "17.." ;
+        foaf:familyName                 "Saint-Simon" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Sylvie de" ;
+        foaf:name                       "Sylvie de Saint-Simon" ;
+        foaf:page                       <http://data.bnf.fr/16505356/sylvie_de_saint-simon/> .
+
+<http://data.bnf.fr/16505356/sylvie_de_saint-simon/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb16505356h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16505356h>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb16505356h> ;
+        bnf-onto:FRBNF  16505356 ;
+        skos:altLabel   "Sylvie Mayol de Saint-Simon"@fr , "Sylvie de Pazery de Thorame"@fr ;
+        skos:note       "Fille d'un conseiller au Parlement de Provence. - Veuve de M. Mayol de Saint-Simon. - Elle suscite une violente passion à Jean-Baptiste d'Entrecasteaux (1758-1785) qui, souhaitant l'épouser, assassine sa femme"@fr ;
+        skos:prefLabel  "Sylvie de Saint-Simon"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb16505356h#foaf:Person> .

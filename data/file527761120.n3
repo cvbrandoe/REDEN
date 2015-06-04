@@ -1,0 +1,51 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb38254227d#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb13967723n#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb13967723n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13967723n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13967723n#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1901 ;
+        bnf-onto:lastYear               1979 ;
+        rdagroup2elements:biographicalInformation
+                "Pseudonyme de Herbert Marx. - Acteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1901/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1979/> ;
+        rdagroup2elements:placeOfBirth  "New York" ;
+        rdagroup2elements:placeOfDeath  "Hollywood" ;
+        bio:birth                       "1901-02-25" ;
+        bio:death                       "1979-11-30" ;
+        owl:sameAs                      <http://dbpedia.org/resource/Zeppo_Marx> , <http://viaf.org/viaf/76507665> , <http://www.idref.fr/027811425> ;
+        foaf:birthday                   "02-25" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Zeppo_Marx.jpg?width=300> ;
+        foaf:familyName                 "Marx" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Zeppo" ;
+        foaf:name                       "Zeppo Marx" ;
+        foaf:page                       <http://data.bnf.fr/13967723/zeppo_marx/> .
+
+<http://data.bnf.fr/ark:/12148/cb13967723n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13967723n> , <http://fr.wikipedia.org/wiki/Zeppo_Marx> ;
+        bnf-onto:FRBNF        13967723 ;
+        isni:identifierValid  "0000000083956753" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000083956753> ;
+        skos:exactMatch       <http://www.idref.fr/027811425> , <http://dbpedia.org/resource/Zeppo_Marx> , <http://fr.wikipedia.org/wiki/Zeppo_Marx> , <http://viaf.org/viaf/76507665> , <http://isni-url.oclc.nl/isni/0000000083956753> ;
+        skos:note             "Pseudonyme de Herbert Marx. - Acteur"@fr ;
+        skos:prefLabel        "Zeppo Marx (1901-1979)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13967723n#foaf:Person> .

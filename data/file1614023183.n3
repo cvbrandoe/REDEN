@@ -1,0 +1,80 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37071810j#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1932 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en médecine de la Faculté de Lyon. - Interne des hôpitaux de Dijon (jusqu'en 1999). - Fondateur de la Maison de Jouvence (en 1992)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Autun" ;
+        owl:sameAs                      <http://www.idref.fr/073284432> , <http://viaf.org/viaf/59239753> ;
+        foaf:familyName                 "Rérolle" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Guy" ;
+        foaf:name                       "Guy Rérolle" ;
+        foaf:page                       <http://data.bnf.fr/13505134/guy_rerolle/> .
+
+<http://data.bnf.fr/ark:/12148/cb135051347>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb135051347> ;
+        bnf-onto:FRBNF        13505134 ;
+        isni:identifierValid  "0000000038980420" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000038980420> ;
+        skos:editorialNote    "Castigat ridendo mores / Dr Guy Rérolle, 2000. - . - BN Cat. gén. 1960-1969. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/59239753> , <http://www.idref.fr/073284432> , <http://isni-url.oclc.nl/isni/0000000038980420> ;
+        skos:note             "Docteur en médecine de la Faculté de Lyon. - Interne des hôpitaux de Dijon (jusqu'en 1999). - Fondateur de la Maison de Jouvence (en 1992)"@fr ;
+        skos:prefLabel        "Guy Rérolle"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427707459#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38883906s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414581921#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb325657106#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42314664b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38920852w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41172012q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135051347#foaf:Person> .

@@ -1,0 +1,111 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb43603262r#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345677866#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1929 ;
+        rdagroup2elements:biographicalInformation
+                "Romancier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/dk#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/dan> ;
+        owl:sameAs          <http://viaf.org/viaf/84968625> , <http://www.idref.fr/026749955> ;
+        foaf:familyName     "Brandt" ;
+        foaf:givenName      "Jørgen Gustava" ;
+        foaf:name           "Jørgen Gustava Brandt" ;
+        foaf:page           <http://data.bnf.fr/11893785/jorgen_gustava_brandt/> .
+
+<http://data.bnf.fr/ark:/12148/cb37472939g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37472937s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36205265w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389054172#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11893785d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11893785d> ;
+        bnf-onto:FRBNF        11893785 ;
+        isni:identifierValid  "0000000078290723" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000078290723> ;
+        skos:editorialNote    "Den finske sømand og andre udvalgte noveller / J.G. Brandt, 1973. - . - Kraks blå bog 1987. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/026749955> , <http://isni-url.oclc.nl/isni/0000000078290723> , <http://viaf.org/viaf/84968625> ;
+        skos:note             "Romancier"@fr ;
+        skos:prefLabel        "Jørgen Gustava Brandt"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37685975m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> .
+
+<http://data.bnf.fr/11893785/jorgen_gustava_brandt/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392535154#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392034970#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39059110d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370512485#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374729384#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34886517h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388232387#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11893785d#foaf:Person> .

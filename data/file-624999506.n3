@@ -1,0 +1,67 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12086333b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12086333b> ;
+        bnf-onto:FRBNF        12086333 ;
+        isni:identifierValid  "000000011944382X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000011944382X> ;
+        skos:exactMatch       <http://www.idref.fr/029183359> , <http://viaf.org/viaf/7416221> , <http://isni-url.oclc.nl/isni/000000011944382X> ;
+        skos:note             "En poste, Yale university, Department of history, New Haven, Conn. (en 1988)"@fr ;
+        skos:prefLabel        "Daniel James"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1948 ;
+        rdagroup2elements:biographicalInformation
+                "En poste, Yale university, Department of history, New Haven, Conn. (en 1988)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/7416221> , <http://www.idref.fr/029183359> ;
+        foaf:familyName     "James" ;
+        foaf:givenName      "Daniel" ;
+        foaf:name           "Daniel James" ;
+        foaf:page           <http://data.bnf.fr/12086333/daniel_james/> .
+
+<http://data.bnf.fr/ark:/12148/cb41061888j#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37443802g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36628722t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366828179#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38908762f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37540733x#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12086333b#foaf:Person> .

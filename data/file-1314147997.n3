@@ -1,0 +1,64 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb399716235#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40962219q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1961 ;
+        rdagroup2elements:biographicalInformation
+                "Philosophe. - Enseignant et critique. - Fondateur et rédacteur en chef de la revue \"Les Visiteurs\" de 1995 à 2003, enseignant à l'Institut d'architecture de l'Université de Genève (en 2001), maître-assistant en histoire et théorie à l'École d'architecture de la ville et des territoires de Marne-la-Vallée (en 2010)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/12360133> , <http://www.idref.fr/030943744> , <http://www.idref.fr/060260998> ;
+        foaf:familyName     "Marot" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Sébastien" ;
+        foaf:name           "Sébastien Marot" ;
+        foaf:page           <http://data.bnf.fr/12225847/sebastien_marot/> .
+
+<http://data.bnf.fr/ark:/12148/cb35473254d#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122258478>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb122258478> ;
+        bnf-onto:FRBNF        12225847 ;
+        isni:identifierValid  "0000000083572549" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000083572549> ;
+        skos:editorialNote    "Lettres à un jeune homme dont l'éducation a été négligée / Thomas De Quincey ; trad. de l'anglais par Sébastien Marot, 1991. - . - Le territoire comme palimpseste et autres essais / André Corboz ; présenté par Sébastien Marot, 2001. - . - L'art de la mémoire, le territoire et l'architecture / Sébastien Marot, impr. 2010. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/12360133> , <http://www.idref.fr/030943744> , <http://www.idref.fr/060260998> , <http://isni-url.oclc.nl/isni/0000000083572549> ;
+        skos:note             "Philosophe. - Enseignant et critique. - Fondateur et rédacteur en chef de la revue \"Les Visiteurs\" de 1995 à 2003, enseignant à l'Institut d'architecture de l'Université de Genève (en 2001), maître-assistant en histoire et théorie à l'École d'architecture de la ville et des territoires de Marne-la-Vallée (en 2010)"@fr ;
+        skos:prefLabel        "Sébastien Marot"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422702619#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38915774x#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122258478#foaf:Person> .

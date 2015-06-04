@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13331035m>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13331035m> ;
+        bnf-onto:FRBNF      13331035 ;
+        skos:editorialNote  "La mosaïque dans la maison / Paul Siggins & Paul Cooper ; photogr. de Richard Foster, 1998. - . - Internet, http://www.loc.gov., 1998-10-22. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/035707348> , <http://viaf.org/viaf/273647222> ;
+        skos:note           "Photographe"@fr ;
+        skos:prefLabel      "Richard Foster (photographe)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361688718#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38938894z#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb369696851#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35855845v#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Photographe" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://www.idref.fr/035707348> , <http://viaf.org/viaf/273647222> ;
+        foaf:familyName  "Foster" ;
+        foaf:givenName   "Richard" ;
+        foaf:name        "Richard Foster" ;
+        foaf:page        <http://data.bnf.fr/13331035/richard_foster/> .
+
+<http://data.bnf.fr/ark:/12148/cb40960827h#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37199956n#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13331035m#foaf:Person> .

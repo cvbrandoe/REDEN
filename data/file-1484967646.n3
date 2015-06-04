@@ -1,0 +1,42 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb119379250#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb11937924n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11937924n#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1639 ;
+        bnf-onto:lastYear              1728 ;
+        rdagroup2elements:biographicalInformation
+                "Sculpteur français" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1639/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1728/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Sculpture" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/730/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1639" ;
+        bio:death                      "1728-09-21" ;
+        foaf:familyName                "Garnier" ;
+        foaf:givenName                 "Louis" ;
+        foaf:name                      "Louis Garnier" ;
+        foaf:page                      <http://data.bnf.fr/11937924/louis_garnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb11937924n>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb11937924n> ;
+        bnf-onto:FRBNF  11937924 ;
+        skos:note       "Sculpteur français"@fr ;
+        skos:prefLabel  "Louis Garnier (1639?-1728)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb11937924n#foaf:Person> .

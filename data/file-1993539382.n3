@@ -1,0 +1,156 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1888 ;
+        bnf-onto:lastYear              1964 ;
+        rdagroup2elements:biographicalInformation
+                "Acteur de théâtre et cinéma" , "Pseudonyme de Adolph Marx" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1888/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1964/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1888-11-23" ;
+        bio:death                      "1964-10-11" ;
+        owl:sameAs                     <http://dbpedia.org/resource/Harpo_Marx> , <http://viaf.org/viaf/68932575> , <http://www.idref.fr/027014541> ;
+        foaf:birthday                  "11-23" ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Marx_Brothers_1948.jpg?width=300> ;
+        foaf:familyName                "Marx" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Harpo" ;
+        foaf:name                      "Harpo Marx" ;
+        foaf:page                      <http://data.bnf.fr/11914931/harpo_marx/> .
+
+<http://data.bnf.fr/ark:/12148/cb38476239n#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384618403#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38463512h#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/11914931/harpo_marx/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347268188#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38463516w#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385084816#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11914931s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11914931s> , <http://fr.wikipedia.org/wiki/Harpo_Marx> ;
+        bnf-onto:FRBNF        11914931 ;
+        isni:identifierValid  "0000000110689962" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000110689962> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000110689962> , <http://www.idref.fr/027014541> , <http://fr.wikipedia.org/wiki/Harpo_Marx> , <http://viaf.org/viaf/68932575> , <http://dbpedia.org/resource/Harpo_Marx> ;
+        skos:note             "Acteur de théâtre et cinéma"@fr , "Pseudonyme de Adolph Marx"@fr ;
+        skos:prefLabel        "Harpo Marx (1888?-1964)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382681697#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382783826#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38247678x#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33092441t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38370152z#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383279686#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38268155j#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384555014#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38268167j#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43601001h#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34843798b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38254227d#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38012579t#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38157296s#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc89127g/ca59904086976355#frbr:Expression>
+        bnfroles:r4020       <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914931s#foaf:Person> .

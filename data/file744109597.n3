@@ -1,0 +1,86 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34613880k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11928767d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11928767d> ;
+        bnf-onto:FRBNF        11928767 ;
+        isni:identifierValid  "0000000000060709" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000000060709> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000000060709> , <http://www.idref.fr/027191419> , <http://viaf.org/viaf/56617582> ;
+        skos:note             "Romancier"@fr ;
+        skos:prefLabel        "Paul Wagner (romancier)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35224946k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345904431#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345832341#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34315347b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346649370#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34657433r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb350513752#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35212191h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Romancier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/027191419> , <http://viaf.org/viaf/56617582> ;
+        foaf:familyName  "Wagner" ;
+        foaf:givenName   "Paul" ;
+        foaf:name        "Paul Wagner" ;
+        foaf:page        <http://data.bnf.fr/11928767/paul_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb35212192v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11928767d#foaf:Person> .

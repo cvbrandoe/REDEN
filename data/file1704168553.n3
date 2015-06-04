@@ -1,0 +1,66 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb345556836#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb436954065#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34565497j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11916851m>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb11916851m> ;
+        bnf-onto:FRBNF      11916851 ;
+        skos:editorialNote  "Ah les femmes ' / Philip Morgan, 1976. - . - Un sacré mercenaire / Philip Morgan, 1969. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/64009616> ;
+        skos:prefLabel      "Philip Morgan (romancier)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34583570q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/64009616> ;
+        foaf:familyName  "Morgan" ;
+        foaf:givenName   "Philip" ;
+        foaf:name        "Philip Morgan" ;
+        foaf:page        <http://data.bnf.fr/11916851/philip_morgan/> .
+
+<http://data.bnf.fr/ark:/12148/cb34564550x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34563267k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34565360x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11916851m#foaf:Person> .

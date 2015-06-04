@@ -1,0 +1,76 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Enseigne la sociologie de la culture  à l'Université de Leeds (en 1981)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://viaf.org/viaf/29565710> , <http://www.idref.fr/029537495> ;
+        foaf:familyName  "Wolff" ;
+        foaf:givenName   "Janet" ;
+        foaf:name        "Janet Wolff" ;
+        foaf:page        <http://data.bnf.fr/12114318/janet_wolff/> .
+
+<http://data.bnf.fr/ark:/12148/cb39149023f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374939572#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357410110#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42520004d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37160706r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354714089#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12114318p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12114318p> ;
+        bnf-onto:FRBNF        12114318 ;
+        isni:identifierValid  "0000000108832416" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108832416> ;
+        skos:exactMatch       <http://viaf.org/viaf/29565710> , <http://isni-url.oclc.nl/isni/0000000108832416> , <http://www.idref.fr/029537495> ;
+        skos:note             "Enseigne la sociologie de la culture  à l'Université de Leeds (en 1981)"@fr ;
+        skos:prefLabel        "Janet Wolff"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37420829c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb350144381#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114318p#foaf:Person> .

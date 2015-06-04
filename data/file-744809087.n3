@@ -1,0 +1,76 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb391375981#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123067350>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb123067350> ;
+        bnf-onto:FRBNF      12306735 ;
+        skos:editorialNote  "Le diagnostic d'entreprise / sous la dir. de Alain Marion, 1992. - . - Analyse financière / Alain Marion, DL 2007. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/210503619> , <http://www.idref.fr/031945317> ;
+        skos:note           "Docteur ès sciences économiques (Lyon 2, 1976). - Président fondateur du Cercle d'études en diagnostic d'entreprise (en 1992). - Professeur à l'IAE, Institut d'administration des entreprises, Lyon (en 2007)"@fr ;
+        skos:prefLabel      "Alain Marion"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41116731n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1950 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur ès sciences économiques (Lyon 2, 1976). - Président fondateur du Cercle d'études en diagnostic d'entreprise (en 1992). - Professeur à l'IAE, Institut d'administration des entreprises, Lyon (en 2007)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/210503619> , <http://www.idref.fr/031945317> ;
+        foaf:familyName     "Marion" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Alain" ;
+        foaf:name           "Alain Marion" ;
+        foaf:page           <http://data.bnf.fr/12306735/alain_marion/> .
+
+<http://data.bnf.fr/ark:/12148/cb355601113#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37281887p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb424665982#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36712498r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb376552187#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37052700s#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123067350#foaf:Person> .

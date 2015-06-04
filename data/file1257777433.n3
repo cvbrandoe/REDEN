@@ -1,0 +1,54 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb145358160>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb145358160> ;
+        bnf-onto:FRBNF      14535816 ;
+        skos:altLabel       "Agnès (moniale de l'Unité)"@fr ;
+        skos:editorialNote  "Icônes arabes : art chrétien du Levant :  exposition présentée à l'Institut du monde arabe, [Paris], du 6 mai au 17 août 2003 / [organisée en collab. avec la Maison d'Antioche et l'Ikonen Museum de Francfort] ; ouvrage dir. par Agnès-Mariam de la Croix et François Zabbal, 2003. - . - Internet. - http://www.rjliban.com/arts-spectacles. - 2004-04-02"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/46998761> ;
+        skos:note           "Carmélite, puis fondatrice de l'ordre des Moniales de l'Unité d'Antioche, installé dans le Couvent Saint-Jacques-le-Mutilé, à Qâra, dans le désert syrien. - Présidente de la Maison d'Antioche (au Liban) (en 2003)"@fr ;
+        skos:prefLabel      "Agnès-Mariam de la Croix (moniale de l'Unité)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb145358160#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39000775f#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb145358160#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb145358160#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb145358160#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39000787f#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb145358160#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb145358160#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb145358160#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40925340q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb145358160#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb145358160#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb145358160#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb145358160#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Carmélite, puis fondatrice de l'ordre des Moniales de l'Unité d'Antioche, installé dans le Couvent Saint-Jacques-le-Mutilé, à Qâra, dans le désert syrien. - Présidente de la Maison d'Antioche (au Liban) (en 2003)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/le#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/46998761> ;
+        foaf:familyName  "Agnès-Mariam de la Croix" ;
+        foaf:gender      "female" ;
+        foaf:page        <http://data.bnf.fr/14535816/agnes-mariam_de_la_croix/> .
+
+<http://data.bnf.fr/ark:/12148/cb425978936#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb145358160#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb145358160#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb145358160#foaf:Person> .

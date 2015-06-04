@@ -1,0 +1,51 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12043005q#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1955 ;
+        rdagroup2elements:biographicalInformation
+                "Sculpteur, plasticien. - Professeur à l'Ecole Supérieure des Beaux arts de Marseille-Luminy depuis 2001 (en 2004)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Sculpture" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/730/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/084022892> , <http://viaf.org/viaf/27083870> ;
+        foaf:familyName     "Fabre" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Gérard" ;
+        foaf:name           "Gérard Fabre" ;
+        foaf:page           <http://data.bnf.fr/12043005/gerard_fabre/> .
+
+<http://data.bnf.fr/ark:/12148/cb40038303w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12043005q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12043005q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12043005q#foaf:Person> .
+
+<http://data.bnf.fr/12043005/gerard_fabre/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12043005q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12043005q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12043005q> ;
+        bnf-onto:FRBNF        12043005 ;
+        isni:identifierValid  "0000000078301330" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000078301330> ;
+        skos:editorialNote    "Gérard Fabre / Musée Ziem, 1986 [4 ̊V.Pièce 18823. - . - Gérard Fabre / [textes de Liliana Albertazzi, François Bazzoli, Gérard Fabre], [2005]. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/27083870> , <http://isni-url.oclc.nl/isni/0000000078301330> , <http://www.idref.fr/084022892> ;
+        skos:note             "Sculpteur, plasticien. - Professeur à l'Ecole Supérieure des Beaux arts de Marseille-Luminy depuis 2001 (en 2004)"@fr ;
+        skos:prefLabel        "Gérard Fabre"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12043005q#foaf:Person> .

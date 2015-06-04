@@ -1,0 +1,172 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42362174t#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/13986416/fred_personne/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384888499#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1932 ;
+        bnf-onto:lastYear               2014 ;
+        rdagroup2elements:biographicalInformation
+                "Comédien" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1932/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/2014/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Arts du spectacle" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/790/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Auchel (Pas-de-Calais)" ;
+        rdagroup2elements:placeOfDeath  "Marmande (Lot-et-Garonne)" ;
+        bio:birth                       "1932-08-20" ;
+        bio:death                       "2014-11-18" ;
+        owl:sameAs                      <http://viaf.org/viaf/14967463> , <http://www.idref.fr/070560676> ;
+        foaf:birthday                   "08-20" ;
+        foaf:familyName                 "Personne" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Fred" ;
+        foaf:name                       "Fred Personne" ;
+        foaf:page                       <http://data.bnf.fr/13986416/fred_personne/> .
+
+<http://data.bnf.fr/ark:/12148/cb38239601m#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38384190p#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381600377#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41492382n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43815983p#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42401250s#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41088395j#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394615930#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38204909c#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39477443t#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39479041h#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381736939#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38559284z#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394961346#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        bnfroles:r500        <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38142524b#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38169871s#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38559241p#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38202944d#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381035838#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41279946c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39473577f#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13986416q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13986416q> ;
+        bnf-onto:FRBNF        13986416 ;
+        isni:identifierValid  "0000000079842518" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000079842518> ;
+        skos:editorialNote    "Musée du Louvre / André Hatala. ODA Edition,1990. - . - IMDB (http://www.imdb.com/), 2002-04-23. - . - Y'a quelqu'un ? Non, y'a personne ! / Fred Personne, impr. 2008. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/070560676> , <http://viaf.org/viaf/14967463> , <http://isni-url.oclc.nl/isni/0000000079842518> ;
+        skos:note             "Comédien"@fr ;
+        skos:prefLabel        "Fred Personne (1932-2014)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13986416q#foaf:Person> .

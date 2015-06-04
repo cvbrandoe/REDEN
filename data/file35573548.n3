@@ -1,0 +1,72 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1956 ;
+        rdagroup2elements:biographicalInformation
+                "Chercheur à l'École pratique des hautes études, spécialiste de la culture populaire en pays tamoul" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/029295831> , <http://viaf.org/viaf/76344479> ;
+        foaf:familyName     "Racine" ;
+        foaf:givenName      "Josiane" ;
+        foaf:name           "Josiane Racine" ;
+        foaf:page           <http://data.bnf.fr/12095267/josiane_racine/> .
+
+<http://data.bnf.fr/ark:/12148/cb349703927#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35830285t#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40090181f#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357616999#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389600399#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12095267b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12095267b> ;
+        bnf-onto:FRBNF        12095267 ;
+        isni:identifierValid  "0000000374282621" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000374282621> ;
+        skos:exactMatch       <http://viaf.org/viaf/76344479> , <http://isni-url.oclc.nl/isni/0000000374282621> , <http://www.idref.fr/029295831> ;
+        skos:note             "Chercheur à l'École pratique des hautes études, spécialiste de la culture populaire en pays tamoul"@fr ;
+        skos:prefLabel        "Josiane Racine"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357616937#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37070703r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12095267b#foaf:Person> .

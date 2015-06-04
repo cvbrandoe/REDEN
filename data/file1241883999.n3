@@ -1,0 +1,85 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb36986140c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36659306b#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37085518n#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37097146g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40171169k#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425835111#frbr:Expression>
+        bnfroles:r540        <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        marcrel:aft          <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35823841c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12087499s>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12087499s> ;
+        bnf-onto:FRBNF   12087499 ;
+        skos:exactMatch  <http://viaf.org/viaf/49251648> , <http://www.idref.fr/029198445> ;
+        skos:note        "Docteur d'État en sciences politiques de l'Université d'Aix-Marseille 3. - Professeur des universités détaché au Ministère des affaires étrangères (en 2006)"@fr ;
+        skos:prefLabel   "Fred Constant"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1950 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur d'État en sciences politiques de l'Université d'Aix-Marseille 3. - Professeur des universités détaché au Ministère des affaires étrangères (en 2006)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/49251648> , <http://www.idref.fr/029198445> ;
+        foaf:familyName     "Constant" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Fred" ;
+        foaf:name           "Fred Constant" ;
+        foaf:page           <http://data.bnf.fr/12087499/fred_constant/> .
+
+<http://data.bnf.fr/ark:/12148/cb361627408#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34947934s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37198488n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087499s#foaf:Person> .

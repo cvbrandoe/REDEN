@@ -1,0 +1,42 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb139684681#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1972 ;
+        rdagroup2elements:biographicalInformation
+                "Chanteuse de variétés. - Actrice dans \"Hélène et les garçons\"" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:placeOfBirth  "Valenciennes (Nord)" ;
+        owl:sameAs                      <http://viaf.org/viaf/32190999> ;
+        foaf:familyName                 "Lopez" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Manuela" ;
+        foaf:name                       "Manuela Lopez" ;
+        foaf:page                       <http://data.bnf.fr/13968468/manuela_lopez/> .
+
+<http://data.bnf.fr/ark:/12148/cb139684681>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb139684681> ;
+        bnf-onto:FRBNF        13968468 ;
+        isni:identifierValid  "0000000371819139" ;
+        owl:sameAs            <http://isni.org/isni/0000000371819139> ;
+        skos:exactMatch       <http://viaf.org/viaf/32190999> , <http://isni.org/isni/0000000371819139> ;
+        skos:note             "Chanteuse de variétés. - Actrice dans \"Hélène et les garçons\""@fr ;
+        skos:prefLabel        "Manuela Lopez"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb139684681#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40014099j#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb139684681#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb139684681#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139684681#foaf:Person> .

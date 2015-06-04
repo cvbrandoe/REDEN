@@ -1,0 +1,35 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12494467b>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12494467b> ;
+        bnf-onto:FRBNF   12494467 ;
+        skos:exactMatch  <http://www.idref.fr/136655718> ;
+        skos:note        "artiste membre du groupe Haha depuis 1988"@fr ;
+        skos:prefLabel   "Wendy Jacob"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12494467b#foaf:Person> .
+
+<http://data.bnf.fr/12494467/wendy_jacob/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12494467b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12494467b#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1958 ;
+        rdagroup2elements:biographicalInformation
+                "artiste membre du groupe Haha depuis 1988" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/136655718> ;
+        foaf:familyName     "Jacob" ;
+        foaf:givenName      "Wendy" ;
+        foaf:name           "Wendy Jacob" ;
+        foaf:page           <http://data.bnf.fr/12494467/wendy_jacob/> .

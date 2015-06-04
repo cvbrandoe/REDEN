@@ -1,0 +1,65 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb41328932k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435707960#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1957 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur d'administration publique. - En poste : Radboud universiteit, Nimègue, Pays-Bas (en 2008)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ne#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/166418234> , <http://viaf.org/viaf/294361797> ;
+        foaf:familyName     "Vries" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Michiel S. de" ;
+        foaf:name           "Michiel S. de Vries" ;
+        foaf:page           <http://data.bnf.fr/15015632/michiel_s__de_vries/> .
+
+<http://data.bnf.fr/ark:/12148/cb15015632j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15015632j> ;
+        bnf-onto:FRBNF        15015632 ;
+        isni:identifierValid  "0000000034506801" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000034506801> ;
+        skos:altLabel         "Michiel Stijn de Vries"@fr , "Michiel Stijn De Vries"@fr ;
+        skos:editorialNote    "Calculated choices in policy-making / Michiel S. de Vries, cop. 1999. - . - Global trends in public sector reform / [edited by] Michiel S. de Vries and Juraj Nemec, DL 2012. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000034506801> , <http://www.idref.fr/166418234> , <http://viaf.org/viaf/294361797> ;
+        skos:note             "Professeur d'administration publique. - En poste : Radboud universiteit, Nimègue, Pays-Bas (en 2008)"@fr ;
+        skos:prefLabel        "Michiel S. de Vries"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37322240j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422473849#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43773750r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15015632j#foaf:Person> .

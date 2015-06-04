@@ -1,0 +1,69 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb43601070b#frbr:Expression>
+        bnfroles:r100        <http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14108382t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14108382t> ;
+        bnf-onto:FRBNF        14108382 ;
+        isni:identifierValid  "0000000119450878" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000119450878> ;
+        skos:editorialNote    "Sous le ciel d'Argentine [Images animées] / Irving Cummings, réal. ; Rian James, Ralph Spence, idée orig. Twentieth century Fox home entertainment France [2006]. - . - IMDb. - http://www.imdb.com/name/nm0416861/?ref_=fn_al_nm_1. - 2013-12-12"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000119450878> , <http://viaf.org/viaf/114480838> ;
+        skos:note             "Scénariste, réalisateur et producteur"@fr ;
+        skos:prefLabel        "Rian James (1899-1953)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43502262b#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382103732#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1899 ;
+        bnf-onto:lastYear              1953 ;
+        rdagroup2elements:biographicalInformation
+                "Scénariste, réalisateur et producteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1899/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1953/> ;
+        bio:birth                      "1899-10-03" ;
+        bio:death                      "1953-04-26" ;
+        owl:sameAs                     <http://viaf.org/viaf/114480838> ;
+        foaf:birthday                  "10-03" ;
+        foaf:familyName                "James" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Rian" ;
+        foaf:name                      "Rian James" ;
+        foaf:page                      <http://data.bnf.fr/14108382/rian_james/> .
+
+<http://data.bnf.fr/ark:/12148/cb401800249#frbr:Expression>
+        bnfroles:r100        <http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38463585q#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108382t#foaf:Person> .

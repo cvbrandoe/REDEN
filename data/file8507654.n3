@@ -1,0 +1,93 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Romancier. - A collaboré à \"La revue de Boulogne-sur-Mer (en 1938)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/76772438> , <http://www.idref.fr/056888368> ;
+        foaf:familyName  "Corbie" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Arnauld de" ;
+        foaf:name        "Arnauld de Corbie" ;
+        foaf:page        <http://data.bnf.fr/11141011/arnauld_de_corbie/> .
+
+<http://data.bnf.fr/ark:/12148/cb426933633#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319672983#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31967302h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31967300t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb111410116>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb111410116> ;
+        bnf-onto:FRBNF        11141011 ;
+        isni:identifierValid  "0000000076900073" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000076900073> ;
+        skos:editorialNote    "Combats de coqs / Arnauld de Corbie ; dessins de Del Marle [lettre-préface de Paul Masural], 1939. - . - La corrida de Pampelune : roman / Arnauld de Corbie, 1947. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/76772438> , <http://www.idref.fr/056888368> , <http://isni-url.oclc.nl/isni/0000000076900073> ;
+        skos:note             "Romancier. - A collaboré à \"La revue de Boulogne-sur-Mer (en 1938)"@fr ;
+        skos:prefLabel        "Arnauld de Corbie"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42144451q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42606982w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319673015#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31967299f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31967297r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32290664r#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421444611#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb111410116#foaf:Person> .

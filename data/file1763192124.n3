@@ -1,0 +1,77 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb38898484m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357989534#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39221919h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1958 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en économie internationale. - Chargée de recherches à l'IFRI (en 1991)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/030788463> , <http://viaf.org/viaf/59132879> ;
+        foaf:familyName     "Nicolas" ;
+        foaf:givenName      "Françoise" ;
+        foaf:name           "Françoise Nicolas" ;
+        foaf:page           <http://data.bnf.fr/12213360/francoise_nicolas/> .
+
+<http://data.bnf.fr/ark:/12148/cb362080594#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12213360d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12213360d> ;
+        bnf-onto:FRBNF        12213360 ;
+        isni:identifierValid  "0000000081379294" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081379294> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000081379294> , <http://viaf.org/viaf/59132879> , <http://www.idref.fr/030788463> ;
+        skos:note             "Docteur en économie internationale. - Chargée de recherches à l'IFRI (en 1991)"@fr ;
+        skos:prefLabel        "Françoise Nicolas"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35512045k#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39179000d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39207985b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392251585#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12213360d#foaf:Person> .

@@ -1,0 +1,77 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb41271507f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37107055g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35767756r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37368059p#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Diplômé de Harvard. - Président de Peter L. Bernstein Inc. (société de conseils en investissements), conseiller de rédaction du \"Journal of Portfolio Management\" (en 1995)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://viaf.org/viaf/79086255> , <http://www.idref.fr/031643930> ;
+        foaf:familyName  "Bernstein" ;
+        foaf:givenName   "Peter L." ;
+        foaf:name        "Peter L. Bernstein" ;
+        foaf:page        <http://data.bnf.fr/12282036/peter_l__bernstein/> .
+
+<http://data.bnf.fr/ark:/12148/cb12282036x>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12282036x> ;
+        bnf-onto:FRBNF        12282036 ;
+        isni:identifierValid  "0000000081588715" ;
+        owl:sameAs            <http://isni.org/isni/0000000081588715> ;
+        skos:editorialNote    "Capital ideas : the improbable origins of modern Wall Street / Peter L. Bernstein, 1992. - . - Des idées capitales : les origines improbables du Wall Street moderne / Peter L. Bernstein, 1995. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/79086255> , <http://www.idref.fr/031643930> , <http://isni.org/isni/0000000081588715> ;
+        skos:note             "Diplômé de Harvard. - Président de Peter L. Bernstein Inc. (société de conseils en investissements), conseiller de rédaction du \"Journal of Portfolio Management\" (en 1995)"@fr ;
+        skos:prefLabel        "Peter L. Bernstein"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40999633p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37029991j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37372558g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41348404c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12282036x#foaf:Person> .

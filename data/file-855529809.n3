@@ -1,0 +1,73 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb16588265k#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb12571825j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30659426d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12571825j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12571825j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12571825j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423129264#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12571825j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12571825j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12571825j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36172358f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12571825j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12571825j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12571825j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12571825j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Phineas_Fletcher> , <http://catalogue.bnf.fr/ark:/12148/cb12571825j> ;
+        bnf-onto:FRBNF        12571825 ;
+        isni:identifierValid  "0000000121274586" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121274586> ;
+        skos:editorialNote    "Locustae uel Pietas iesuitica / Phineas Fletcher ; ed. with an introd., translation and commentary by Estelle Haan, 1996. - . - DNB. - . -"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/Phineas_Fletcher> , <http://www.idref.fr/035031891> , <http://viaf.org/viaf/34576203> , <http://fr.wikipedia.org/wiki/Phineas_Fletcher> , <http://isni-url.oclc.nl/isni/0000000121274586> ;
+        skos:note             "A aussi écrit en latin"@fr , "Poète"@fr ;
+        skos:prefLabel        "Phineas Fletcher (1582-1650)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12571825j#foaf:Person> .
+
+<http://data.bnf.fr/12571825/phineas_fletcher/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12571825j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30441474s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12571825j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12571825j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12571825j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12571825j#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1582 ;
+        bnf-onto:lastYear               1650 ;
+        rdagroup2elements:biographicalInformation
+                "A aussi écrit en latin" , "Poète" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1582/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1650/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Cranbrook, GB" ;
+        bio:birth                       "1582-04-08" ;
+        bio:death                       "1650" ;
+        owl:sameAs                      <http://www.idref.fr/035031891> , <http://viaf.org/viaf/34576203> , <http://dbpedia.org/resource/Phineas_Fletcher> ;
+        foaf:birthday                   "04-08" ;
+        foaf:familyName                 "Fletcher" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Phineas" ;
+        foaf:name                       "Phineas Fletcher" ;
+        foaf:page                       <http://data.bnf.fr/12571825/phineas_fletcher/> .

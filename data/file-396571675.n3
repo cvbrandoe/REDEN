@@ -1,0 +1,49 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb30009937c#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12553492n#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12553492n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12553492n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12553492n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12553492n> ;
+        bnf-onto:FRBNF        12553492 ;
+        isni:identifierValid  "0000000070400094" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000070400094> ;
+        skos:editorialNote    "Méthodes de transformation des combinaisons organiques / P. Alexeyeff ; trad. du russe par Georges Darzens et Léon Lefèvre ; introd. par Ed. Grimaux, 1995 [document électronique : reprod. de l'éd. de 1891]. - . - ABF. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000070400094> , <http://viaf.org/viaf/98739171> , <http://www.idref.fr/034822461> ;
+        skos:note             "Ingénieur chimiste. - Préparateur à l'École polytechnique"@fr , "A traduit du russe en français"@fr ;
+        skos:prefLabel        "Léon Lefèvre (1890-1905)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12553492n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12553492n#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1890 ;
+        bnf-onto:lastYear              1905 ;
+        rdagroup2elements:biographicalInformation
+                "Ingénieur chimiste. - Préparateur à l'École polytechnique" , "A traduit du russe en français" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1890/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1905/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1890" ;
+        bio:death                      "1905" ;
+        owl:sameAs                     <http://viaf.org/viaf/98739171> , <http://www.idref.fr/034822461> ;
+        foaf:familyName                "Lefèvre" ;
+        foaf:givenName                 "Léon" ;
+        foaf:name                      "Léon Lefèvre" ;
+        foaf:page                      <http://data.bnf.fr/12553492/leon_lefevre/> .

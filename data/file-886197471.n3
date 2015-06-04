@@ -1,0 +1,97 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb31015462k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42237933v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1397 ;
+        bnf-onto:lastYear              1455 ;
+        rdagroup2elements:biographicalInformation
+                "Pape de 1447 à 1455. - Met un terme définitif au Grand Schisme en recevant la soumission de l'antipape Félix V et du concile de Bâle. - Fondateur de la bibliothèque du Vatican" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1397/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1455/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Religion" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/200/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        bio:birth                      "1397-11-15" ;
+        bio:death                      "1455-03-24" ;
+        owl:sameAs                     <http://www.idref.fr/033582262> , <http://viaf.org/viaf/120732037> ;
+        foaf:birthday                  "11-15" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b6947199m.thumbnail> ;
+        foaf:familyName                "Nicolas" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/12443467/nicolas_5/> .
+
+<http://data.bnf.fr/ark:/12148/cc77176w/cd0e261#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124434672>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb124434672> ;
+        bnf-onto:FRBNF        12443467 ;
+        isni:identifierValid  "000000012149188X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000012149188X> ;
+        skos:altLabel         "Nicolaus V (pape, 1397-1455)"@la , "Niccolò V (pape, 1397-1455)"@it , "Tommaso Parentucelli (1397-1455)"@fr , "Nikolaus V (pape, 1397-1455)"@de ;
+        skos:editorialNote    "Indulgentiarum litterae Nicolai V pro regno Cypri, 1454. - . - GDEL. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000012149188X> , <http://viaf.org/viaf/120732037> , <http://www.idref.fr/033582262> ;
+        skos:note             "Pape de 1447 à 1455. - Met un terme définitif au Grand Schisme en recevant la soumission de l'antipape Félix V et du concile de Bâle. - Fondateur de la bibliothèque du Vatican"@fr ;
+        skos:prefLabel        "Nicolas V (pape, 1397-1455)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33627825g#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> .
+
+<http://data.bnf.fr/12443467/nicolas_5/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31015465m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb310154648#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc77181w/cd0e118#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33768938b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb338873726#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124434672#foaf:Person> .

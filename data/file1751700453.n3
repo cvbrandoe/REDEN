@@ -1,0 +1,66 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb127699267#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1865 ;
+        rdagroup2elements:biographicalInformation
+                "Littérateur. - Professeur de mathématiques à l'école de la Providence à Amiens, puis à Lille et Asnières (en 1895). - N'a jamais reçu les ordres. - Il lance un mensuel \"l'Alliance antijuive\" (1890-1892) puis \"La Terre de France\" (1894-1895) ; il dirige  également les \"Annales de la philosophie\" et fonde en octobre 1895 : \"La France nouvelle\". - Nom réel : Henri Déporte. - Né à Yébleron, Seine-Maritime" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1865/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1865-05-20" ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://viaf.org/viaf/64131024> , <http://www.idref.fr/166271241> ;
+        foaf:birthday                  "05-20" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k69181g.thumbnail> ;
+        foaf:familyName                "Desportes" ;
+        foaf:givenName                 "Henri" ;
+        foaf:name                      "Henri Desportes" ;
+        foaf:page                      <http://data.bnf.fr/12769926/henri_desportes/> .
+
+<http://data.bnf.fr/ark:/12148/cb30334771x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb127699267#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb127699267#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127699267#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351737935#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb127699267#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb127699267#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127699267#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303347728#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb127699267#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb127699267#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127699267#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30334770k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb127699267#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb127699267#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127699267#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb127699267>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb127699267> ;
+        bnf-onto:FRBNF        12769926 ;
+        isni:identifierValid  "0000000078355072" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000078355072> ;
+        skos:altLabel         "Georges Du Boscher (1865-19..)"@fr , "Henry Desportes (1865-19..)"@fr ;
+        skos:editorialNote    "Le juif franc-maçon : roman contemporain / par l'abbé Henri Desportes, 1890. - . - Mort et vivant / Georges Du Boscher, 1899. - . -"@fr , "Lorenz : Desportes (l'abbé Henri). - . - Dictionnaire biographique et géographique du nationalisme français (1880-1900) / Bertrand Joly, 1898 : Desportes (Henri Déporte, dit l'abbé). - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/166271241> , <http://isni-url.oclc.nl/isni/0000000078355072> , <http://viaf.org/viaf/64131024> ;
+        skos:note             "Littérateur. - Professeur de mathématiques à l'école de la Providence à Amiens, puis à Lille et Asnières (en 1895). - N'a jamais reçu les ordres. - Il lance un mensuel \"l'Alliance antijuive\" (1890-1892) puis \"La Terre de France\" (1894-1895) ; il dirige  également les \"Annales de la philosophie\" et fonde en octobre 1895 : \"La France nouvelle\". - Nom réel : Henri Déporte. - Né à Yébleron, Seine-Maritime"@fr ;
+        skos:prefLabel        "Henri Desportes (1865-19..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb127699267#foaf:Person> .

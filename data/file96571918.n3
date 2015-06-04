@@ -1,0 +1,60 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb123222848#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1846 ;
+        bnf-onto:lastYear              1893 ;
+        rdagroup2elements:biographicalInformation
+                "Dessinateur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1846/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1893/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1846-11-15" ;
+        bio:death                      "1893-09-27" ;
+        owl:sameAs                     <http://viaf.org/viaf/14840864> ;
+        foaf:birthday                  "11-15" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k5656731n.thumbnail> ;
+        foaf:familyName                "Gautier" ;
+        foaf:givenName                 "Barthélemy" ;
+        foaf:name                      "Barthélemy Gautier" ;
+        foaf:page                      <http://data.bnf.fr/12322284/barthelemy_gautier/> .
+
+<http://data.bnf.fr/ark:/12148/cb123222848>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb123222848> ;
+        bnf-onto:FRBNF        12322284 ;
+        isni:identifierValid  "0000000045566236" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000045566236> ;
+        skos:exactMatch       <http://viaf.org/viaf/14840864> , <http://isni-url.oclc.nl/isni/0000000045566236> ;
+        skos:note             "Dessinateur"@fr ;
+        skos:prefLabel        "Barthélemy Gautier (1846-1893)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb123222848#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373868930#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb123222848#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb123222848#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123222848#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35610277f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123222848#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123222848#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123222848#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302631526#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb123222848#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb123222848#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123222848#foaf:Person> .

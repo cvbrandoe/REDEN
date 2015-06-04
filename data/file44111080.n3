@@ -1,0 +1,108 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42252533z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42358109m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14568881s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14568881s> ;
+        bnf-onto:FRBNF        14568881 ;
+        isni:identifierValid  "0000000116421975" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000116421975> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000116421975> , <http://viaf.org/viaf/51933257> , <http://www.idref.fr/082723664> ;
+        skos:note             "Historienne spécialiste des années 50, critique d'art et commissaire d'expositions. - Blogeuse  : Occhiata puis La Pause-Art. - Enseignante à l'Université Panthéon-Sorbonne, Paris (en 2004)"@fr ;
+        skos:prefLabel        "Anne Malherbe"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41410716t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401333255#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42475809d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411469863#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41482637f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb424758338#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1974 ;
+        rdagroup2elements:biographicalInformation
+                "Historienne spécialiste des années 50, critique d'art et commissaire d'expositions. - Blogeuse  : Occhiata puis La Pause-Art. - Enseignante à l'Université Panthéon-Sorbonne, Paris (en 2004)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/51933257> , <http://www.idref.fr/082723664> ;
+        foaf:familyName     "Malherbe" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Anne" ;
+        foaf:name           "Anne Malherbe" ;
+        foaf:page           <http://data.bnf.fr/14568881/anne_malherbe/> .
+
+<http://data.bnf.fr/ark:/12148/cb42160760z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41079753r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb410105842#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42326713d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41450015c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39157063d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568881s#foaf:Person> .

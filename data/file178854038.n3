@@ -1,0 +1,102 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb374407521#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35182457f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35869594d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33208694w#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35402293m#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351409565#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12038329j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12038329j> ;
+        bnf-onto:FRBNF        12038329 ;
+        isni:identifierValid  "0000000109381098" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109381098> ;
+        skos:altLabel         "Klaus Wagner Erbskorn (1937-2005)"@fr ;
+        skos:editorialNote    "Catálogo abreviado de las obras impresas del siglo XVI de la Biblioteca universitaria de Sevilla / K. Wagner, 1988. - . - \"Avisos. Noticias de la Real Biblioteca\", n° 46, juillet-sept. 2006. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000109381098> , <http://www.idref.fr/059651318> , <http://viaf.org/viaf/115218437> ;
+        skos:note             "Docteur en philosophie de l'université Johannes Gutenberg de Mayence. - Docteur en philologie hispanique de l'université de Séville. - Professeur de littérature espagnole à l'université de Séville (en 1988). - D'abord lecteur d'allemand à l'université de Séville (à partir de 1964). - Spécialiste d'histoire du livre et de la littérature hispaniques du XVIe s."@fr ;
+        skos:prefLabel        "Klaus Wagner (1937-2005)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1937 ;
+        bnf-onto:lastYear               2005 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en philosophie de l'université Johannes Gutenberg de Mayence. - Docteur en philologie hispanique de l'université de Séville. - Professeur de littérature espagnole à l'université de Séville (en 1988). - D'abord lecteur d'allemand à l'université de Séville (à partir de 1964). - Spécialiste d'histoire du livre et de la littérature hispaniques du XVIe s." ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1937/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/2005/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+        rdagroup2elements:placeOfBirth  "Rheindiebach, Allemagne" ;
+        bio:birth                       "1937" ;
+        bio:death                       "2005-09-30" ;
+        owl:sameAs                      <http://www.idref.fr/059651318> , <http://viaf.org/viaf/115218437> ;
+        foaf:familyName                 "Wagner" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Klaus" ;
+        foaf:name                       "Klaus Wagner" ;
+        foaf:page                       <http://data.bnf.fr/12038329/klaus_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb348334551#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40201583z#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35526090k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35140946v#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35182379g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038329j#foaf:Person> .

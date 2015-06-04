@@ -1,0 +1,49 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb16531093j#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb16531090h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16531090h#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "On recense très peu de pièces de ce compositeur, trois tout au plus, publiées à Paris en 1903 et 1906" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://viaf.org/viaf/180349636> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k882872r.thumbnail> ;
+        foaf:familyName                "David" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Gaston" ;
+        foaf:name                      "Gaston David" ;
+        foaf:page                      <http://data.bnf.fr/16531090/gaston_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb16531090h>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16531090h> ;
+        bnf-onto:FRBNF      16531090 ;
+        skos:editorialNote  "Pazdirek. - . - BnF-Musique, Collections. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/180349636> ;
+        skos:note           "On recense très peu de pièces de ce compositeur, trois tout au plus, publiées à Paris en 1903 et 1906"@fr ;
+        skos:prefLabel      "Gaston David (compositeur, 18..-19..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16531090h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42572006m#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb16531090h#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb16531090h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16531090h#foaf:Person> .

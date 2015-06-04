@@ -1,0 +1,97 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb34643408c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34739066v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353730222#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1921 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur ès lettres. - Professeur au Centre régional de formation des maîtres de l'enfance inadaptée de Lyon (en 1970)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/027961419> , <http://viaf.org/viaf/104196481> ;
+        foaf:familyName     "Giraud" ;
+        foaf:givenName      "Henri" ;
+        foaf:name           "Henri Giraud" ;
+        foaf:page           <http://data.bnf.fr/11989181/henri_giraud/> .
+
+<http://data.bnf.fr/ark:/12148/cb350232431#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34550270j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11989181s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11989181s> ;
+        bnf-onto:FRBNF        11989181 ;
+        isni:identifierValid  "0000000077305743" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000077305743> ;
+        skos:exactMatch       <http://viaf.org/viaf/104196481> , <http://isni-url.oclc.nl/isni/0000000077305743> , <http://www.idref.fr/027961419> ;
+        skos:note             "Docteur ès lettres. - Professeur au Centre régional de formation des maîtres de l'enfance inadaptée de Lyon (en 1970)"@fr ;
+        skos:prefLabel        "Henri Giraud"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353749265#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34297889m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34655230p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34659936n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34643409q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34653525f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345692400#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11989181s#foaf:Person> .

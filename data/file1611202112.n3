@@ -1,0 +1,47 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12503666m>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12503666m> ;
+        bnf-onto:FRBNF      12503666 ;
+        skos:altLabel       "Queen Mother (1900-2002)"@fr , "Elizabeth (reine de Grande-Bretagne, 1900-2002)"@fr , "Elizabeth Angela Marguerite Bowes- Lyon (1900-2002)"@fr , "Elizabeth Angela Marguerite Bowes-Lyon (1900-2002)"@fr , "Élisabeth (reine mère, 1900-2002)"@fr , "Queen Mum (1900-2002)"@fr ;
+        skos:editorialNote  "Bibliogr., G.B. (CD) 1996-2002 : Elizabeth, Queen, consort of George VI, King of Great Britain. - . - Intern. WW, 1990-1991. - . - Monde, 2002-04-02. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/034263683> ;
+        skos:note           "Épouse d'Albert, duc d'York promu roi de Grande-Bretagne sous le nom de George VI. - Reine de 1936 à 1952 et, depuis 1952, reine mère"@fr ;
+        skos:prefLabel      "Élisabeth (reine de Grande-Bretagne, 1900-2002)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12503666m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12503666m#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1900 ;
+        bnf-onto:lastYear              2002 ;
+        rdagroup2elements:biographicalInformation
+                "Épouse d'Albert, duc d'York promu roi de Grande-Bretagne sous le nom de George VI. - Reine de 1936 à 1952 et, depuis 1952, reine mère" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2002/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1900-08-04" ;
+        bio:death                      "2002-03-30" ;
+        owl:sameAs                     <http://www.idref.fr/034263683> ;
+        foaf:birthday                  "08-04" ;
+        foaf:familyName                "Élisabeth" ;
+        foaf:gender                    "female" ;
+        foaf:page                      <http://data.bnf.fr/12503666/elisabeth/> .
+
+<http://data.bnf.fr/12503666/elisabeth/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12503666m#foaf:Person> .

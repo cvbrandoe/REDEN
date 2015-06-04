@@ -1,0 +1,71 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35013967r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35808935h#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361872128#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123719693>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb123719693> ;
+        bnf-onto:FRBNF        12371969 ;
+        isni:identifierValid  "000000011574553X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000011574553X> ;
+        skos:altLabel         "Martha Wolff"@fr ;
+        skos:editorialNote    "Italian paintings before 1600 in the Art institute of Chicago : a catalogue of the collection / by Christopher Lloyd ; with contributions by Margherita Andreotti, Larry J. Feinberg, and Martha Wolff ; Martha Wolff, general editor, 1993. - . - Northern European and Spanish paintings before 1600 in the Art institute of Chicago : a catalogue of the collection / Martha Wolff, general editor ; Martha Wolff... [et al.] ; with contributions by Ilse Hecht... [et al.], 2008. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/73931851> , <http://isni-url.oclc.nl/isni/000000011574553X> , <http://www.idref.fr/03274983X> ;
+        skos:note             "Historienne de l'art. - Conservateur, Art institute, Chicago, Ill. (en 2008). - Emigre aux Etats-Unis en 1950"@fr ;
+        skos:prefLabel        "Martha Anne Wood Wolff"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374109779#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1949 ;
+        rdagroup2elements:biographicalInformation
+                "Historienne de l'art. - Conservateur, Art institute, Chicago, Ill. (en 2008). - Emigre aux Etats-Unis en 1950" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Francfort-sur-le-Main (Allemagne)" ;
+        owl:sameAs                      <http://viaf.org/viaf/73931851> , <http://www.idref.fr/03274983X> ;
+        foaf:familyName                 "Wolff" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Martha Anne Wood" ;
+        foaf:name                       "Martha Anne Wood Wolff" ;
+        foaf:page                       <http://data.bnf.fr/12371969/martha_anne_wood_wolff/> .
+
+<http://data.bnf.fr/ark:/12148/cb411241411#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42389663n#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123719693#foaf:Person> .

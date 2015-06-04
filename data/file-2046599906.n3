@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb400433941#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39236573m#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14048277m>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb14048277m> ;
+        bnf-onto:FRBNF      14048277 ;
+        skos:altLabel       "Steven Bernstein (compositeur de musique de films)"@fr ;
+        skos:editorialNote  "Restons dans le thon / James T. Walker, réal. ; [...] Steve Bernstein, J. Eric Schmidt, comp. In Concentré de Grosminet [Images animées]. Warner home video France, [1997]. - . - IMDB : Steven Bernstein (II). - http://www.imdb.com/name/nm0077148/. - 2009-03-20"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/2672992> ;
+        skos:note           "Compositeur de musique de dessins animés. - Acteur"@fr ;
+        skos:prefLabel      "Steve Bernstein"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39084794b#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41397881q#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383685236#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39085565f#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14048277m#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur de musique de dessins animés. - Acteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        owl:sameAs       <http://viaf.org/viaf/2672992> ;
+        foaf:familyName  "Bernstein" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Steve" ;
+        foaf:name        "Steve Bernstein" ;
+        foaf:page        <http://data.bnf.fr/14048277/steve_bernstein/> .

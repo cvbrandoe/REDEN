@@ -1,0 +1,73 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42359754b#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412652061#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41209477t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb436233257#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14481393z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14481393z> ;
+        bnf-onto:FRBNF        14481393 ;
+        isni:identifierValid  "0000000375910765" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000375910765> ;
+        skos:exactMatch       <http://viaf.org/viaf/252722311> , <http://isni-url.oclc.nl/isni/0000000375910765> , <http://www.idref.fr/073936863> ;
+        skos:note             "Médecin. - Professeur de psychiatrie du service de santé des armées (en 2003)"@fr ;
+        skos:prefLabel        "Michel Delage"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41441080v#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1943 ;
+        rdagroup2elements:biographicalInformation
+                "Médecin. - Professeur de psychiatrie du service de santé des armées (en 2003)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/073936863> , <http://viaf.org/viaf/252722311> ;
+        foaf:familyName     "Delage" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Michel" ;
+        foaf:name           "Michel Delage" ;
+        foaf:page           <http://data.bnf.fr/14481393/michel_delage/> .
+
+<http://data.bnf.fr/ark:/12148/cb39971074d#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39011146n#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14481393z#foaf:Person> .

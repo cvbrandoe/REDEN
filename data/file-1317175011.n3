@@ -1,0 +1,63 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb402232204#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37425535p#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373639934#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12282255r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12282255r> ;
+        bnf-onto:FRBNF        12282255 ;
+        isni:identifierValid  "0000000083424482" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000083424482> ;
+        skos:editorialNote    "Paleokarst / N. P. James, P. W. Choquette, 1988. - . - Canadiana, 1993-06. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/27128231> , <http://www.idref.fr/083303626> , <http://isni-url.oclc.nl/isni/0000000083424482> ;
+        skos:note             "Géologue. - En poste au Department of geological sciences, Queen's university, Kingston, Ontario (en 1988)"@fr ;
+        skos:prefLabel        "Noel Pattison James"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42702475f#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Géologue. - En poste au Department of geological sciences, Queen's university, Kingston, Ontario (en 1988)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxc> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://www.idref.fr/083303626> , <http://viaf.org/viaf/27128231> ;
+        foaf:familyName  "James" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Noel Pattison" ;
+        foaf:name        "Noel Pattison James" ;
+        foaf:page        <http://data.bnf.fr/12282255/noel_pattison_james/> .
+
+<http://data.bnf.fr/ark:/12148/cb374255439#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12282255r#foaf:Person> .

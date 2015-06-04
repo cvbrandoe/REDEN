@@ -1,0 +1,59 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14563815s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14563815s> ;
+        bnf-onto:FRBNF        14563815 ;
+        isni:identifierValid  "0000000119591937" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000119591937> ;
+        skos:exactMatch       <http://www.idref.fr/061289523> , <http://isni-url.oclc.nl/isni/0000000119591937> , <http://viaf.org/viaf/161259635> ;
+        skos:note             "Musicologue. - Professeur à Santa-Cruz, Université de Californie (en 2001)"@fr ;
+        skos:prefLabel        "David Cope (1941-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14563815s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39195768d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14563815s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14563815s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14563815s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39496965p#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14563815s#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14563815s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14563815s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14563815s#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1941 ;
+        rdagroup2elements:biographicalInformation
+                "Musicologue. - Professeur à Santa-Cruz, Université de Californie (en 2001)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1941/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs                     <http://viaf.org/viaf/161259635> , <http://www.idref.fr/061289523> ;
+        foaf:familyName                "Cope" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "David" ;
+        foaf:name                      "David Cope" ;
+        foaf:page                      <http://data.bnf.fr/14563815/david_cope/> .
+
+<http://data.bnf.fr/ark:/12148/cb40933506t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14563815s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14563815s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14563815s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41205561r#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb14563815s#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb14563815s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14563815s#foaf:Person> .

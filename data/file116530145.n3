@@ -1,0 +1,76 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1769 ;
+        bnf-onto:lastYear              1832 ;
+        rdagroup2elements:biographicalInformation
+                "Pharmacien. - Chimiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1769/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1832/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1769" ;
+        bio:death                      "1832" ;
+        owl:sameAs                     <http://www.idref.fr/086040448> , <http://viaf.org/viaf/59198705> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k918170.thumbnail> ;
+        foaf:familyName                "Henry" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Noël-Étienne" ;
+        foaf:name                      "Noël-Étienne Henry" ;
+        foaf:page                      <http://data.bnf.fr/12552105/noel-etienne_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb305940916#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12552105t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12552105t> ;
+        bnf-onto:FRBNF        12552105 ;
+        isni:identifierValid  "0000000051810434" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000051810434> ;
+        skos:editorialNote    "Pharmacopée raisonnée, ou Traité de pharmacie pratique et théorique / par N.-E. Henry et G. Guibourt ; 2e éd. rev., corr. et considérablement augm. par M. G. Guibourt, 1995 [document électronique : reprod. de l'éd. de 1834]. - . - ABF. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000051810434> , <http://viaf.org/viaf/59198705> , <http://www.idref.fr/086040448> ;
+        skos:note             "Pharmacien. - Chimiste"@fr ;
+        skos:prefLabel        "Noël-Étienne Henry (1769-1832)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372578207#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30594089n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34378294j#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305940889#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30594090v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12552105t#foaf:Person> .

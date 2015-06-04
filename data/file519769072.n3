@@ -1,0 +1,93 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb37209218g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437420906#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1971 ;
+        rdagroup2elements:biographicalInformation
+                "Jésuite. - Docteur en mathématiques et diplômé de l'ENSAE. - Chercheur au CNRS et membre de l'École d'économie de Paris (en 2009)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/27239228> , <http://www.idref.fr/052448657> ;
+        foaf:familyName     "Giraud" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Gaël" ;
+        foaf:name           "Gaël Giraud" ;
+        foaf:page           <http://data.bnf.fr/13604591/gael_giraud/> .
+
+<http://data.bnf.fr/ark:/12148/cb43508255h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb136045913>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb136045913> ;
+        bnf-onto:FRBNF        13604591 ;
+        isni:identifierValid  "0000000052811682" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000052811682> ;
+        skos:exactMatch       <http://www.idref.fr/052448657> , <http://isni-url.oclc.nl/isni/0000000052811682> , <http://viaf.org/viaf/27239228> ;
+        skos:note             "Jésuite. - Docteur en mathématiques et diplômé de l'ENSAE. - Chercheur au CNRS et membre de l'École d'économie de Paris (en 2009)"@fr ;
+        skos:prefLabel        "Gaël Giraud"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421483893#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb426178497#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420982979#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43828931c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42138373h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42638597x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41451860n#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb436080105#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136045913#foaf:Person> .

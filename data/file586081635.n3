@@ -1,0 +1,82 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/13754924/maximin_giraud/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1835 ;
+        bnf-onto:lastYear              1875 ;
+        rdagroup2elements:biographicalInformation
+                "Un des voyants de La Salette (le 19 septembre 1846, avec Mélanie Calvat)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1835/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1875/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1835-08-27" ;
+        bio:death                      "1875-03-01" ;
+        owl:sameAs                     <http://viaf.org/viaf/59265253> , <http://dbpedia.org/resource/Maximin_Giraud> , <http://www.idref.fr/066900190> , <http://www.idref.fr/027395979> ;
+        foaf:birthday                  "08-27" ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Vernines_Notre-Dame_Salette.jpg?width=300> ;
+        foaf:familyName                "Giraud" ;
+        foaf:givenName                 "Maximin" ;
+        foaf:name                      "Maximin Giraud" ;
+        foaf:page                      <http://data.bnf.fr/13754924/maximin_giraud/> .
+
+<http://data.bnf.fr/ark:/12148/cb36485211z#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb321694815#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36485210m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb137549248>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Maximin_Giraud> , <http://catalogue.bnf.fr/ark:/12148/cb137549248> ;
+        bnf-onto:FRBNF        13754924 ;
+        isni:identifierValid  "0000000108305149" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108305149> ;
+        skos:altLabel         "Pierre-Maximin Giraud (1835-1875)"@fr , "Maximin (1835-1875)"@fr ;
+        skos:editorialNote    "Ma profession de foi sur l'apparition de Notre-Dame de La Salette... / par Maximin Giraud, 1866. - . - DBF : GIRAUD (Pierre-Maximin). - . -"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Maximin_Giraud> , <http://www.idref.fr/027395979> , <http://www.idref.fr/066900190> , <http://dbpedia.org/resource/Maximin_Giraud> , <http://viaf.org/viaf/59265253> , <http://isni-url.oclc.nl/isni/0000000108305149> ;
+        skos:note             "Un des voyants de La Salette (le 19 septembre 1846, avec Mélanie Calvat)"@fr ;
+        skos:prefLabel        "Maximin Giraud (1835-1875)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36485209d#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305116350#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb364852082#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32169480t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137549248#foaf:Person> .

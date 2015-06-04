@@ -1,0 +1,71 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb34067351k#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34067129v#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36373376z#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31155090q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311550885#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1817 ;
+        bnf-onto:lastYear               1877 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en droit (1839). - Magistrat" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1817/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1877/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Champdeniers (Deux-Sèvres)" ;
+        bio:birth                       "1817-07-23" ;
+        bio:death                       "1877-03-23" ;
+        owl:sameAs                      <http://viaf.org/viaf/306352660> ;
+        foaf:birthday                   "07-23" ;
+        foaf:familyName                 "Proust" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Charles Stanislas" ;
+        foaf:name                       "Charles Stanislas Proust" ;
+        foaf:page                       <http://data.bnf.fr/10621498/charles_stanislas_proust/> .
+
+<http://data.bnf.fr/ark:/12148/cb31155089h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10621498h>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb10621498h> ;
+        bnf-onto:FRBNF      10621498 ;
+        skos:editorialNote  "Essai sur la législation criminelle / discours prononcé par M. Proust, premier avocat général. (Procès-verbal de rentrée de la Cour impériale de Dijon, le 3 novembre 1864). - . - 13e bulletin annuel / Association amicale des secrétaires et anciens secrétaires de la Conférence des avocats à Paris, 1891 [p. 224]. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/306352660> ;
+        skos:note           "Docteur en droit (1839). - Magistrat"@fr ;
+        skos:prefLabel      "Charles Stanislas Proust (1817-1877)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb10621498h#foaf:Person> .

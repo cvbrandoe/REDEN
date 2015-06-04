@@ -1,0 +1,64 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb392372673#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392751435#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1968 ;
+        rdagroup2elements:biographicalInformation
+                "Chanteuse" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1968/> ;
+        owl:sameAs                     <http://dbpedia.org/resource/Jennifer_Charles> , <http://www.idref.fr/085675822> , <http://viaf.org/viaf/15017489> ;
+        foaf:birthday                  "11-15" ;
+        foaf:familyName                "Charles" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Jennifer" ;
+        foaf:name                      "Jennifer Charles" ;
+        foaf:page                      <http://data.bnf.fr/14576132/jennifer_charles/> .
+
+<http://data.bnf.fr/ark:/12148/cb392338773#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39284504b#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392686432#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14576132c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14576132c> , <http://fr.wikipedia.org/wiki/Jennifer_Charles> ;
+        bnf-onto:FRBNF        14576132 ;
+        isni:identifierValid  "0000000045568303" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000045568303> ;
+        skos:editorialNote    "A bird on a poire [Enregistrement sonore] / Jean-Louis Murat, chant ; avec Fred Jimenez, instr. ; & Jennifer Charles, chant... [et al.]. Labels 72434738341. - . - Science Fair Projects Encyclopedia. - http://www.all-science-fair-projects.com. - 2004-10-22"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/Jennifer_Charles> , <http://www.idref.fr/085675822> , <http://fr.wikipedia.org/wiki/Jennifer_Charles> , <http://isni-url.oclc.nl/isni/0000000045568303> , <http://viaf.org/viaf/15017489> ;
+        skos:note             "Chanteuse"@fr ;
+        skos:prefLabel        "Jennifer Charles (1968-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14576132c#foaf:Person> .

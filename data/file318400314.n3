@@ -1,0 +1,85 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb374765380#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422599045#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42429829z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40203118w#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351828655#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1947 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/075949423> , <http://viaf.org/viaf/112324980> ;
+        foaf:familyName     "Gordon" ;
+        foaf:givenName      "Robert J." ;
+        foaf:name           "Robert J. Gordon" ;
+        foaf:page           <http://data.bnf.fr/12093475/robert_j__gordon/> .
+
+<http://data.bnf.fr/ark:/12148/cb120934751>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb120934751> ;
+        bnf-onto:FRBNF        12093475 ;
+        isni:identifierValid  "0000000121480646" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121480646> ;
+        skos:editorialNote    "Mines, masters and migrants : life in a Namibian mine compound / Robert J. Gordon, 1977. - . - LCNA, 1991 : Gordon, Robert J., 1947-. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/112324980> , <http://isni-url.oclc.nl/isni/0000000121480646> , <http://www.idref.fr/075949423> ;
+        skos:prefLabel        "Robert J. Gordon"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41112365w#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37568464q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb375304912#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb436115431#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34962720r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120934751#foaf:Person> .

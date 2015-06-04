@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1953 ;
+        rdagroup2elements:biographicalInformation
+                "Romancier, essayiste. - Journaliste, collaborateur de divers journaux, dont \"Philadelphia Inquirer\" (en 1995), \"Time magazine\" (en 2011)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/69720132> , <http://www.idref.fr/034213767> , <http://dbpedia.org/resource/Steve_Lopez> ;
+        foaf:familyName     "Lopez" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Steve" ;
+        foaf:name           "Steve Lopez" ;
+        foaf:page           <http://data.bnf.fr/12499336/steve_lopez/> .
+
+<http://data.bnf.fr/ark:/12148/cb357882906#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39270131z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42193061q#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124993360>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Steve_Lopez> , <http://catalogue.bnf.fr/ark:/12148/cb124993360> ;
+        bnf-onto:FRBNF        12499336 ;
+        isni:identifierValid  "0000000117691061" ;
+        owl:sameAs            <http://isni.org/isni/0000000117691061> ;
+        skos:exactMatch       <http://isni.org/isni/0000000117691061> , <http://www.idref.fr/034213767> , <http://viaf.org/viaf/69720132> , <http://fr.wikipedia.org/wiki/Steve_Lopez> , <http://dbpedia.org/resource/Steve_Lopez> ;
+        skos:note             "Romancier, essayiste. - Journaliste, collaborateur de divers journaux, dont \"Philadelphia Inquirer\" (en 1995), \"Time magazine\" (en 2011)"@fr ;
+        skos:prefLabel        "Steve Lopez"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37198091f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42421399t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124993360#foaf:Person> .

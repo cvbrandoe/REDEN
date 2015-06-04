@@ -1,0 +1,76 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30178608b#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb10203467m#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb10203467m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10203467m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb309104456#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10203467m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10203467m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10203467m#foaf:Person> .
+
+<http://data.bnf.fr/10203467/emile_maupas/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb10203467m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10203467m#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1842 ;
+        bnf-onto:lastYear               1916 ;
+        rdagroup2elements:biographicalInformation
+                "Archiviste paléographe (1867). - Conservateur administrateur de la bibliothéque nationale d'Alger (à partir de 1890). - Biologiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1842/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1916/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Biologie" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/570/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Vaudry (Calvados)" ;
+        rdagroup2elements:placeOfDeath  "Alger" ;
+        bio:birth                       "1842-07-02" ;
+        bio:death                       "1916-10-18" ;
+        owl:sameAs                      <http://www.idref.fr/156658380> , <http://viaf.org/viaf/44690207> , <http://dbpedia.org/resource/Émile_Maupas> ;
+        foaf:birthday                   "07-02" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k933727w.thumbnail> ;
+        foaf:familyName                 "Maupas" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Émile" ;
+        foaf:name                       "Émile Maupas" ;
+        foaf:page                       <http://data.bnf.fr/10203467/emile_maupas/> .
+
+<http://data.bnf.fr/ark:/12148/cb10203467m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10203467m> , <http://fr.wikipedia.org/wiki/Émile_Maupas> ;
+        bnf-onto:FRBNF        10203467 ;
+        isni:identifierValid  "000000006303951X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000006303951X> ;
+        skos:editorialNote    "Inventeurs et scientifiques, 1994. - . - Nouvelle biographie normande : Noémi Noire Oursel, 1886-1912. - . - Index biographique de l'Académie des sciences du 22 décembre 1666 au 1er octobre 1978 et Supplément 1978-1993, 1979-1994. - . -"@fr , "Dictionnaire des inventeurs et inventions / avec le concours de Thomas de Galiana, Michel Rival, 1996. - . - Des chemins et des hommes : la France en Algérie (1830-1962) / Anne-Marie Briat, [et al.], 1995. - . -"@fr , "Note sur la moraine terminale d'un ancien glacier trouvée dans le ravin de l'Oued-el-Kébir (Blida) / par M. E. Maupas, 1873. - . - CTHS - Comité des Travaux historiques et scientifiques, Paris. - http://cths.fr/an/prosopo.php?id=1836. - 2011-06-03"@fr ;
+        skos:exactMatch       <http://www.idref.fr/156658380> , <http://viaf.org/viaf/44690207> , <http://fr.wikipedia.org/wiki/Émile_Maupas> , <http://dbpedia.org/resource/Émile_Maupas> , <http://isni-url.oclc.nl/isni/000000006303951X> ;
+        skos:note             "Archiviste paléographe (1867). - Conservateur administrateur de la bibliothéque nationale d'Alger (à partir de 1890). - Biologiste"@fr ;
+        skos:prefLabel        "Émile Maupas (1842-1916)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10203467m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301786148#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb10203467m#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb10203467m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10203467m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30910444v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10203467m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10203467m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10203467m#foaf:Person> .

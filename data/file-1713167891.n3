@@ -1,0 +1,78 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb345722217#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12292124d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12292124d> ;
+        bnf-onto:FRBNF        12292124 ;
+        isni:identifierValid  "0000000116137667" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000116137667> ;
+        skos:altLabel         "Georges Nicolas-Obadia"@fr , "Georges Nicolas-O."@fr , "Georges  Nicolas- O."@fr , "Georges Nicolas- Obadia"@fr ;
+        skos:editorialNote    "Kibboutz en Israël [rapport de voyage Zellidja] / Georges Nicolas, 1952. - . - L'axiomatisation de la géographie : l'axiome chorologique, préliminaire à une histoire de l'espace rural vaudois / Georges Nicolas, 1978 [thèse]. - . - Atlas statistique agricole vaudois 1806 à 1965 : thèse présentée / par Georges Nicolas-Obadia, 1974. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/031767036> , <http://isni-url.oclc.nl/isni/0000000116137667> , <http://viaf.org/viaf/29597562> ;
+        skos:note             "A dirigé plusieurs programmes subventionnés par le Fonds national suisse de la recherche scientifique en géographie historique, géopolitique et épistémologie"@fr , "Géographe, historien et épistémologue. - Titulaire d'une thèse de géographie (Lausanne, 1974) et docteur ès lettres (Paris 1, 1978). - Professeur honoraire de l'Université de Lausanne (en 1997). - Président (en 2001) de la société scientifique Eratosthène (Lausanne, Suisse)"@fr , "A été géographe professionnel dans l'industrie privée et les services publics suisses. - A été professeur de géographie titulaire à l'Université centrale du Vénézuela et à l'Université de Lausanne et professeur invité dans diverses universités d'Europe, du Japon, d'Argentine et de Russie"@fr ;
+        skos:prefLabel        "Georges Nicolas"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1932 ;
+        rdagroup2elements:biographicalInformation
+                "A été géographe professionnel dans l'industrie privée et les services publics suisses. - A été professeur de géographie titulaire à l'Université centrale du Vénézuela et à l'Université de Lausanne et professeur invité dans diverses universités d'Europe, du Japon, d'Argentine et de Russie" , "A dirigé plusieurs programmes subventionnés par le Fonds national suisse de la recherche scientifique en géographie historique, géopolitique et épistémologie" , "Géographe, historien et épistémologue. - Titulaire d'une thèse de géographie (Lausanne, 1974) et docteur ès lettres (Paris 1, 1978). - Professeur honoraire de l'Université de Lausanne (en 1997). - Président (en 2001) de la société scientifique Eratosthène (Lausanne, Suisse)" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/29597562> , <http://www.idref.fr/031767036> ;
+        foaf:familyName     "Nicolas" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Georges" ;
+        foaf:name           "Georges Nicolas" ;
+        foaf:page           <http://data.bnf.fr/12292124/georges_nicolas/> .
+
+<http://data.bnf.fr/ark:/12148/cb360795277#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40007104t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43378910k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35135150w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37377486n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb343447543#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb418618867#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12292124d#foaf:Person> .

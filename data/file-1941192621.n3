@@ -1,0 +1,47 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb15529053w>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb15529053w> ;
+        bnf-onto:FRBNF   15529053 ;
+        skos:altLabel    "Roger Agnès"@fr ;
+        skos:exactMatch  <http://viaf.org/viaf/5238535> ;
+        skos:note        "Sous-officier, résistant toulousain, alias Normand"@fr ;
+        skos:prefLabel   "R.-E Agnès"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb15529053w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411180645#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15529053w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15529053w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15529053w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15529053w#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Sous-officier, résistant toulousain, alias Normand" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de la France" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/5238535> ;
+        foaf:familyName  "Agnès" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "R.-E" ;
+        foaf:name        "R.-E Agnès" ;
+        foaf:page        <http://data.bnf.fr/15529053/r_-e_agnes/> .
+
+<http://data.bnf.fr/15529053/r_-e_agnes/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb15529053w#foaf:Person> .

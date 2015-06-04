@@ -1,0 +1,76 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb402147734#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35516742f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1940 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre, dessinateur, maquettiste, traducteur et poète" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/2481700> ;
+        foaf:familyName     "Chevalier" ;
+        foaf:givenName      "Gil" ;
+        foaf:name           "Gil Chevalier" ;
+        foaf:page           <http://data.bnf.fr/12039883/gil_chevalier/> .
+
+<http://data.bnf.fr/ark:/12148/cb12039883z>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12039883z> ;
+        bnf-onto:FRBNF      12039883 ;
+        skos:altLabel       "Jérôme Mosch"@fr , "Gil"@fr , "Gilbert Chevalier"@fr ;
+        skos:editorialNote  "Calembour / Gilbert Chevalier, 1978. - . - Haïkus de Roquefixade / Gil, 1979. - . - Comme un chien qui rêve / Gil Chevalier, [1985]. - . -"@fr , "Les gaietés de l'outre-tombe / Gérard Bleu ; reconstitution de Jérôme Mosch, 1983. - . - Toulouse, Bologna, deux villes, une culture, 1991, p. 57 : Chevalier, Gil. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/2481700> ;
+        skos:note           "Peintre, dessinateur, maquettiste, traducteur et poète"@fr ;
+        skos:prefLabel      "Gil Chevalier"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41305314v#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34840233n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35607433v#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34862823w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35572477j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34621652h#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039883z#foaf:Person> .

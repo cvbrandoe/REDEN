@@ -1,0 +1,60 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14571383m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14571383m> ;
+        bnf-onto:FRBNF        14571383 ;
+        isni:identifierValid  "0000000108949032" ;
+        owl:sameAs            <http://isni.org/isni/0000000108949032> ;
+        skos:editorialNote    "Pasa el viento : antología poética, 1942-1998 / Meira Delmar ; pról. de Fernando Charry Lara, 2000. - . - Meira Delmar : poesía y prosa / María Mercedes Jaramillo, Betty Osorio, Ariel Castillo Mier, ed., 2009. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/067824854> , <http://viaf.org/viaf/45860367> , <http://isni.org/isni/0000000108949032> ;
+        skos:note             "Poétesse"@fr ;
+        skos:prefLabel        "Meira Delmar (1922-2009)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14571383m#foaf:Person> .
+
+<http://data.bnf.fr/14571383/meira_delmar/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14571383m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422936877#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14571383m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14571383m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14571383m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14571383m#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1922 ;
+        bnf-onto:lastYear               2009 ;
+        rdagroup2elements:biographicalInformation
+                "Poétesse" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ck> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1922/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/2009/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+        rdagroup2elements:placeOfBirth  "Barranquilla (Colombie)" ;
+        rdagroup2elements:placeOfDeath  "Barranquilla (Colombie)" ;
+        bio:birth                       "1922" ;
+        bio:death                       "2009" ;
+        owl:sameAs                      <http://viaf.org/viaf/45860367> , <http://www.idref.fr/067824854> ;
+        foaf:familyName                 "Delmar" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Meira" ;
+        foaf:name                       "Meira Delmar" ;
+        foaf:page                       <http://data.bnf.fr/14571383/meira_delmar/> .
+
+<http://data.bnf.fr/ark:/12148/cb39247251x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14571383m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14571383m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14571383m#foaf:Person> .

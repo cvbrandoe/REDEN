@@ -1,0 +1,55 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14136182d>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14136182d> ;
+        bnf-onto:FRBNF   14136182 ;
+        skos:exactMatch  <http://viaf.org/viaf/19888988> ;
+        skos:note        "Compositeur de musique de films"@fr ;
+        skos:prefLabel   "Daniel Scott (compositeur de musique de films)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384714259#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur de musique de films" ;
+        owl:sameAs       <http://viaf.org/viaf/19888988> ;
+        foaf:familyName  "Scott" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Daniel" ;
+        foaf:name        "Daniel Scott" ;
+        foaf:page        <http://data.bnf.fr/14136182/daniel_scott/> .
+
+<http://data.bnf.fr/ark:/12148/cb38963550x#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38963670t#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385531680#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb391341688#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14136182d#foaf:Person> .

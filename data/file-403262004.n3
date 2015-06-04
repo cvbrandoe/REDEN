@@ -1,0 +1,77 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb420329141#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb375217672#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34330120z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373438656#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1931 ;
+        rdagroup2elements:biographicalInformation
+                "Ecrit aussi en anglais" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/kor> ;
+        owl:sameAs          <http://viaf.org/viaf/36929856> , <http://www.idref.fr/028326903> ;
+        foaf:familyName     "Lee" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Chong-Sik" ;
+        foaf:name           "Chong-Sik Lee" ;
+        foaf:page           <http://data.bnf.fr/12018542/chong-sik_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb353017493#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353837853#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34221649x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12018542w>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12018542w> ;
+        bnf-onto:FRBNF      12018542 ;
+        skos:altLabel       "Č̆ōñ-Sik I"@fr , "Jeong-Sik Yi"@fr , "Cheong-Sik Li"@fr , "庭植 李"@ko , "정식 이"@fr ;
+        skos:editorialNote  "LC Authorities : Lee, Chong-Sik, 1931-. - http://authorities.loc.gov. - 2009-08-05 BnF Service coréen, 2009-08-05. - . -"@fr , "Korean workers' party ... / Chong-Sik Lee, 1978. - . - National library of Korea. - http://nl.go.kr. - 2009-08-05"@fr ;
+        skos:exactMatch     <http://www.idref.fr/028326903> , <http://viaf.org/viaf/36929856> ;
+        skos:note           "Ecrit aussi en anglais"@fr ;
+        skos:prefLabel      "Chong-Sik Lee"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366155737#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12018542w#foaf:Person> .

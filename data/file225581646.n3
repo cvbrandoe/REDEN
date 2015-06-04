@@ -1,0 +1,82 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42686000w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1967 ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste indépendant" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/035621532> , <http://viaf.org/viaf/66611082> ;
+        foaf:familyName     "Gilbert" ;
+        foaf:givenName      "Bruno" ;
+        foaf:name           "Bruno Gilbert" ;
+        foaf:page           <http://data.bnf.fr/13325122/bruno_gilbert/> .
+
+<http://data.bnf.fr/ark:/12148/cb370527134#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427317431#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb434523227#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41073241x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36707723p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43530202m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42731747d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42685993z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb133251229>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb133251229> ;
+        bnf-onto:FRBNF        13325122 ;
+        isni:identifierValid  "0000000023576214" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000023576214> ;
+        skos:exactMatch       <http://viaf.org/viaf/66611082> , <http://www.idref.fr/035621532> , <http://isni-url.oclc.nl/isni/0000000023576214> ;
+        skos:note             "Journaliste indépendant"@fr ;
+        skos:prefLabel        "Bruno Gilbert"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb133251229#foaf:Person> .

@@ -1,0 +1,98 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb331956805#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb318312605#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30155237p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb103016326>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb103016326> ;
+        bnf-onto:FRBNF        10301632 ;
+        isni:identifierValid  "0000000089089195" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000089089195> ;
+        skos:editorialNote    "Der St Galler palimpsest der Divinae institutiones des Lactentius / von Dr Samuel Brandt, 1885. - . - ADB. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/077147197> , <http://viaf.org/viaf/10596629> , <http://isni-url.oclc.nl/isni/0000000089089195> ;
+        skos:note             "Philologue"@fr , "A aussi écrit en latin"@fr ;
+        skos:prefLabel        "Samuel Brandt (1848-1938)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb318658325#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30155236b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb387820433#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31865834v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1848 ;
+        bnf-onto:lastYear               1938 ;
+        rdagroup2elements:biographicalInformation
+                "A aussi écrit en latin" , "Philologue" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1848/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1938/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Sarrebruck, Allemagne" ;
+        rdagroup2elements:placeOfDeath  "Heidelberg, Allemagne" ;
+        bio:birth                       "1848-05-01" ;
+        bio:death                       "1938-08-18" ;
+        owl:sameAs                      <http://www.idref.fr/077147197> , <http://viaf.org/viaf/10596629> ;
+        foaf:birthday                   "05-01" ;
+        foaf:familyName                 "Brandt" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Samuel" ;
+        foaf:name                       "Samuel Brandt" ;
+        foaf:page                       <http://data.bnf.fr/10301632/samuel_brandt/> .
+
+<http://data.bnf.fr/ark:/12148/cb318658356#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31865833h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb387769409#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103016326#foaf:Person> .

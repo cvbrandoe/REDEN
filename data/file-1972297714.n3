@@ -1,0 +1,94 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13091760g>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13091760g> ;
+        bnf-onto:FRBNF      13091760 ;
+        skos:altLabel       "Philippe Devoucoux (1935-2012)"@fr , "Philippe Devoucoux Du Buyssou (1935-2012)"@fr , "Philippe (dominicain, 1935-2012)"@fr , "Philippe Devoucoux Du Buysson (1935-2012)"@fr , "Philippe Devoucoux du Buyssou (1935-2012)"@fr ;
+        skos:editorialNote  "Annuaire des couvents et des maisons... / Ordre des frères prêcheurs, Province de Toulouse 1971, p. 53 : DEVOUCOUX, Paul Philippe. - . - Essai de bibliographie broût-vernétoise, 2004, p.59-60. - . -"@fr , "Dialogues avec Jésus de Nazareth / Philippe Devoucoux, 1984. - . - Histoires du pèlerinage à Saint-Maximin et à la Sainte-Baume. T. I / par fr. Philippe Devoucoux du Buyssou [sic], 1994. - . - Vie de sainte Marie-Madeleine et de sainte Marthe, sa s™ur / texte attribué à Raban Maur ; trad. de l'abbé Faillon ; [éd. par Philippe Devoucoux du Buysson et al.], 1994. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/228710153> , <http://www.idref.fr/028319214> ;
+        skos:note           "Dominicain (profès depuis 1956). - Ancien père gardien de la grotte de la Sainte-Baume"@fr ;
+        skos:prefLabel      "Philippe Devoucoux du Buysson (1935-2012)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35835725j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41411024r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35775110h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb343460659#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347796383#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42359778b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1935 ;
+        bnf-onto:lastYear              2012 ;
+        rdagroup2elements:biographicalInformation
+                "Dominicain (profès depuis 1956). - Ancien père gardien de la grotte de la Sainte-Baume" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1935/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2012/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1935-03-20" ;
+        bio:death                      "2012-10-25" ;
+        owl:sameAs                     <http://viaf.org/viaf/228710153> , <http://www.idref.fr/028319214> ;
+        foaf:birthday                  "03-20" ;
+        foaf:familyName                "Devoucoux du Buysson" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Philippe" ;
+        foaf:name                      "Philippe Devoucoux du Buysson" ;
+        foaf:page                      <http://data.bnf.fr/13091760/philippe_devoucoux_du_buysson/> .
+
+<http://data.bnf.fr/ark:/12148/cb36962875k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35775108z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35775107m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41344720g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091760g#foaf:Person> .

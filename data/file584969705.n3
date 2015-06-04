@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1936 ;
+        rdagroup2elements:biographicalInformation
+                "Agronome. - Président du Centre de Paris de l'Institut national de la recherche agronomique (en 1996)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> , <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/034941576> , <http://viaf.org/viaf/2589272> ;
+        foaf:familyName     "Béranger" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Claude" ;
+        foaf:name           "Claude Béranger" ;
+        foaf:page           <http://data.bnf.fr/12564031/claude_beranger/> .
+
+<http://data.bnf.fr/ark:/12148/cb37485828g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41379926x#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40071990f#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36980114c#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12564031s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12564031s> ;
+        bnf-onto:FRBNF        12564031 ;
+        isni:identifierValid  "0000000121180467" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121180467> ;
+        skos:editorialNote    "Beef cattle production / ed. by the late R. Jarrige and C. Béranger, 1992. - . - Les fermentations au service des produits de terroir / Marie-Christine Montel, Claude Béranger, Joseph Bonnemaire, coordonnateurs, DL 2005. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/2589272> , <http://www.idref.fr/034941576> , <http://isni-url.oclc.nl/isni/0000000121180467> ;
+        skos:note             "Agronome. - Président du Centre de Paris de l'Institut national de la recherche agronomique (en 1996)"@fr ;
+        skos:prefLabel        "Claude Béranger"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38806492w#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12564031s#foaf:Person> .

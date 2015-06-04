@@ -1,0 +1,44 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb412186195#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb156113187#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb156113187#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156113187#foaf:Person> .
+
+<http://data.bnf.fr/15611318/achille/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb156113187#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb156113187>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb156113187> ;
+        bnf-onto:FRBNF   15611318 ;
+        skos:exactMatch  <http://www.idref.fr/161840094> , <http://viaf.org/viaf/221471081> ;
+        skos:note        "Acteur au théâtre du Vaudeville. - crée le rôle de Hierzen dans \"L'ange gardien\" en 1837"@fr ;
+        skos:prefLabel   "Achille (acteur, 18..-18..)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb156113187#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb156113187#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Acteur au théâtre du Vaudeville. - crée le rôle de Hierzen dans \"L'ange gardien\" en 1837" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        bio:birth                      "18.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/221471081> , <http://www.idref.fr/161840094> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b85143797.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8514378t.thumbnail> ;
+        foaf:familyName                "Achille" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/15611318/achille/> .

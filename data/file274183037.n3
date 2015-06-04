@@ -1,0 +1,40 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13558430f#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1929 ;
+        rdagroup2elements:biographicalInformation
+                "Photographe américain" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Photographie" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/770/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/13753860X> ;
+        foaf:familyName     "Baldwin" ;
+        foaf:givenName      "Frederick Colburn" ;
+        foaf:name           "Frederick Colburn Baldwin" ;
+        foaf:page           <http://data.bnf.fr/13558430/frederick_colburn_baldwin/> .
+
+<http://data.bnf.fr/13558430/frederick_colburn_baldwin/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13558430f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13558430f>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb13558430f> ;
+        bnf-onto:FRBNF   13558430 ;
+        skos:altLabel    "Frederick C. Baldwin"@fr ;
+        skos:exactMatch  <http://www.idref.fr/13753860X> ;
+        skos:note        "Photographe américain"@fr ;
+        skos:prefLabel   "Frederick Colburn Baldwin"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb13558430f#foaf:Person> .

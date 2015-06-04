@@ -1,0 +1,40 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13566179p>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb13566179p> ;
+        bnf-onto:FRBNF   13566179 ;
+        skos:exactMatch  <http://www.idref.fr/052585484> ;
+        skos:note        "Sculpteur sur bois. - Enseigne la sculpture à l'École d'art du district Bayonne-Anglet-Biarritz (en 2003)"@fr ;
+        skos:prefLabel   "Benoît Lasserre"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb13566179p#foaf:Person> .
+
+<http://data.bnf.fr/13566179/benoit_lasserre/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13566179p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13566179p#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1943 ;
+        rdagroup2elements:biographicalInformation
+                "Sculpteur sur bois. - Enseigne la sculpture à l'École d'art du district Bayonne-Anglet-Biarritz (en 2003)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Sculpture" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/730/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/052585484> ;
+        foaf:familyName     "Lasserre" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Benoît" ;
+        foaf:name           "Benoît Lasserre" ;
+        foaf:page           <http://data.bnf.fr/13566179/benoit_lasserre/> .

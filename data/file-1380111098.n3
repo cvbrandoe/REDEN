@@ -1,0 +1,65 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14516269r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14516269r> , <http://fr.wikipedia.org/wiki/Lee_Sung-gang> ;
+        bnf-onto:FRBNF        14516269 ;
+        isni:identifierValid  "0000000382886484" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000382886484> ;
+        skos:altLabel         "Sung-Kang Li (1962-....)"@fr , "Lee Sung-Gang (1962-....)"@fr , "성강 이 (1962-....)"@ko , "Seong-Gang Lee (1962-....)"@fr , "Sung-Kang Rhee (1962-....)"@fr , "Sung-Gang Yi (1962-....)"@fr , "Sōñ-Kañ I (1962-....)"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000382886484> , <http://dbpedia.org/resource/Lee_Sung-gang> , <http://viaf.org/viaf/266154688> , <http://fr.wikipedia.org/wiki/Lee_Sung-gang> , <http://www.idref.fr/118948660> ;
+        skos:note             "Cinéaste d'animation"@fr ;
+        skos:prefLabel        "Sung-Gang Lee (1962-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400248738#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43416073f#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42582351g#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1962 ;
+        rdagroup2elements:biographicalInformation
+                "Cinéaste d'animation" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1962/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/kor> ;
+        owl:sameAs                     <http://viaf.org/viaf/266154688> , <http://dbpedia.org/resource/Lee_Sung-gang> , <http://www.idref.fr/118948660> ;
+        foaf:familyName                "Lee" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Sung-Gang" ;
+        foaf:name                      "Sung-Gang Lee" ;
+        foaf:page                      <http://data.bnf.fr/14516269/sung-gang_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb39103641r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42581557v#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14516269r#foaf:Person> .

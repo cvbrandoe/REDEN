@@ -1,0 +1,124 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb342995987#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33160615w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11922976g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11922976g> ;
+        bnf-onto:FRBNF        11922976 ;
+        isni:identifierValid  "0000000362185816" ;
+        owl:sameAs            <http://isni.org/isni/0000000362185816> ;
+        skos:editorialNote    "La transmission du patrimoine et son imposition / Jean Roux, 1989. - . - Et si la France quittait l'Union européenne ? / Robert Clavijo et Jean Roux, impr. 2005. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/027113655> , <http://isni.org/isni/0000000362185816> , <http://viaf.org/viaf/222704910> ;
+        skos:note             "Expert-comptable. - Économiste. - Commissaire aux comptes (en 2005)"@fr ;
+        skos:prefLabel        "Jean Roux"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40011177s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb350136192#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35660439g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346930445#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34674469f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1926 ;
+        rdagroup2elements:biographicalInformation
+                "Expert-comptable. - Économiste. - Commissaire aux comptes (en 2005)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/027113655> , <http://viaf.org/viaf/222704910> ;
+        foaf:familyName     "Roux" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jean" ;
+        foaf:name           "Jean Roux" ;
+        foaf:page           <http://data.bnf.fr/11922976/jean_roux/> .
+
+<http://data.bnf.fr/ark:/12148/cb339169443#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349029938#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34693043t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33160614j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb331606167#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb331606136#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34693045h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34565641g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351869820#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40062790x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11922976g#foaf:Person> .

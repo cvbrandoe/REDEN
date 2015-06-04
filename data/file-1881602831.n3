@@ -1,0 +1,84 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34868398v#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38814579p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb371830106#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36973324r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12114193w>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12114193w> ;
+        bnf-onto:FRBNF   12114193 ;
+        skos:exactMatch  <http://viaf.org/viaf/190587634> , <http://www.idref.fr/02953576X> ;
+        skos:note        "Journaliste"@fr ;
+        skos:prefLabel   "Michel Rousseau"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347548381#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347685580#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354716243#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37679880p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1953 ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/190587634> , <http://www.idref.fr/02953576X> ;
+        foaf:familyName     "Rousseau" ;
+        foaf:givenName      "Michel" ;
+        foaf:name           "Michel Rousseau" ;
+        foaf:page           <http://data.bnf.fr/12114193/michel_rousseau/> .
+
+<http://data.bnf.fr/ark:/12148/cb389768453#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34768570v#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12114193w#foaf:Person> .

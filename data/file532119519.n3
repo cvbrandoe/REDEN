@@ -1,0 +1,95 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb395806792#frbr:Expression>
+        bnfroles:r470        <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        marcrel:lbt          <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39580624s#frbr:Expression>
+        bnfroles:r470        <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        marcrel:lbt          <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38654437z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38654436m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb386544358#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb395807660#frbr:Expression>
+        bnfroles:r470        <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        marcrel:lbt          <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30539849k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb408887084#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "17.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/291390650> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b84219802.thumbnail> ;
+        foaf:familyName                "Grenier" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/14782035/grenier/> .
+
+<http://data.bnf.fr/ark:/12148/cb321935401#frbr:Expression>
+        bnfroles:r470        <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        marcrel:lbt          <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14782035q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14782035q> ;
+        bnf-onto:FRBNF        14782035 ;
+        isni:identifierValid  "0000000396465963" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000396465963> ;
+        skos:altLabel         "E. Grenier (librettiste, 17..-18..?)"@fr ;
+        skos:editorialNote    "Cioranescu, 18e s. : Grenier. - . - BN Cat. gén. : Grenier. - . -"@fr , "La Mélomanie, opéra-comique en 1 acte et en vers, par Grenier, musique de M. Champein, 1825. - . - La mélomanie [Document d'archives] : opéra-comique en 1 acte, en vers / E. Grenier, [1937]. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/291390650> , <http://isni-url.oclc.nl/isni/0000000396465963> ;
+        skos:prefLabel        "Grenier (librettiste, 17..-18..?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb386544389#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb395809656#frbr:Expression>
+        bnfroles:r470        <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        marcrel:lbt          <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14782035q#foaf:Person> .

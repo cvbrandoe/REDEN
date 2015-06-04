@@ -1,0 +1,75 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/14221835/jean-louis_rolland/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb378378247#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381772637#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb380882985#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37837823w#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14221835k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14221835k> ;
+        bnf-onto:FRBNF        14221835 ;
+        isni:identifierValid  "0000000388438447" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000388438447> ;
+        skos:exactMatch       <http://www.idref.fr/127473556> , <http://isni-url.oclc.nl/isni/0000000388438447> , <http://viaf.org/viaf/281546587> ;
+        skos:note             "Acteur. - Chanteur"@fr ;
+        skos:prefLabel        "Jean-Louis Rolland"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Acteur. - Chanteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/281546587> , <http://www.idref.fr/127473556> ;
+        foaf:familyName  "Rolland" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Jean-Louis" ;
+        foaf:name        "Jean-Louis Rolland" ;
+        foaf:page        <http://data.bnf.fr/14221835/jean-louis_rolland/> .
+
+<http://data.bnf.fr/ark:/12148/cb37837825k#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38288753x#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39662975r#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14221835k#foaf:Person> .

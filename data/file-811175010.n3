@@ -1,0 +1,68 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34783719v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34809216d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37462829p#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34809389w#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356586461#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354378337#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124737158>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb124737158> ;
+        bnf-onto:FRBNF        12473715 ;
+        isni:identifierValid  "0000000114953820" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114953820> ;
+        skos:editorialNote    "Les demi-civilisés / Jean-Charles Harvey ; éd. critique par Guildo Rousseau, 1988. - . - Dictionnaire des auteurs de langue française en Amérique du Nord / Réginald Hamel, John Hare, Paul Wyczynski, 1990. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/93398633> , <http://www.idref.fr/033930066> , <http://isni-url.oclc.nl/isni/0000000114953820> ;
+        skos:note             "Bibliographe, critique et historien des lettres. - Professeur au Collège et à l'Université du Québec à Trois-Rivières, Canada (en 1988)"@fr ;
+        skos:prefLabel        "Guildo Rousseau"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124737158#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1938 ;
+        rdagroup2elements:biographicalInformation
+                "Bibliographe, critique et historien des lettres. - Professeur au Collège et à l'Université du Québec à Trois-Rivières, Canada (en 1988)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxc> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/033930066> , <http://viaf.org/viaf/93398633> ;
+        foaf:familyName     "Rousseau" ;
+        foaf:givenName      "Guildo" ;
+        foaf:name           "Guildo Rousseau" ;
+        foaf:page           <http://data.bnf.fr/12473715/guildo_rousseau/> .

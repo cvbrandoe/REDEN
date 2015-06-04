@@ -1,0 +1,47 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40192311g#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb150785071#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb150785071#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150785071#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb150785071#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Éclairagiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/107045504> ;
+        foaf:familyName  "Dujardin" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Adeline" ;
+        foaf:name        "Adeline Dujardin" ;
+        foaf:page        <http://data.bnf.fr/15078507/adeline_dujardin/> .
+
+<http://data.bnf.fr/ark:/12148/cb150785071>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb150785071> ;
+        bnf-onto:FRBNF   15078507 ;
+        skos:exactMatch  <http://viaf.org/viaf/107045504> ;
+        skos:note        "Éclairagiste"@fr ;
+        skos:prefLabel   "Adeline Dujardin"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb150785071#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423925767#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb150785071#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb150785071#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150785071#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42147238p#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb150785071#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb150785071#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150785071#foaf:Person> .

@@ -1,0 +1,80 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1936 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre et graveur coréen. - Collectionneur d'art. - Né à Kyongnam, Corée du Sud, vit et travaille au Japon" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Arts graphiques" , "Peinture" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/760/> , <http://dewey.info/class/750/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/jpn> , <http://id.loc.gov/vocabulary/iso639-2/kor> ;
+        owl:sameAs          <http://dbpedia.org/resource/Lee_Ufan> , <http://www.idref.fr/071528423> , <http://www.idref.fr/034463038> , <http://viaf.org/viaf/20244189> ;
+        foaf:depiction      <http://commons.wikimedia.org/wiki/Special:FilePath/Lee_Ufan_Relatum_with_four_stones_and_four_irons_1978.jpg?width=300> ;
+        foaf:familyName     "Lee" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "U-Fan" ;
+        foaf:name           "U-Fan Lee" ;
+        foaf:page           <http://data.bnf.fr/12521678/u-fan_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb389094291#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42771208z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42433959x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38907695w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> .
+
+<http://data.bnf.fr/12521678/u-fan_lee/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12521678j>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12521678j> , <http://fr.wikipedia.org/wiki/Lee_Ufan> ;
+        bnf-onto:FRBNF      12521678 ;
+        skos:altLabel       "Lee U Fan"@fr , "Woo-Hwan Yi"@fr , "Ufan Lee"@fr , "Wu-Hwan Li"@fr , "우환 이"@fr , "U-Hwan Yi"@fr , "U-Hoan I"@fr , "禹煥 李"@ko ;
+        skos:editorialNote  "Lee U-Fan : print works 1970-1986, 1986. - . - National library of Korea. - http://nl.go.kr. - 2010-06-12"@fr , "LC Authorities : Yi, U-hwan, 1936-. - http://authorities.loc.gov. - 2010-06-12 BnF Service coréen, 2010-06-12. - . -"@fr , "Un art de la rencontre / Lee Ufan, 2002. - . - Lee Ufan, peintures et sculptures : [exposition, Paris, Galerie Thaddaeus Ropac..., 2009] / [texte de Lee Ufan] ; [entretien par Lorand Hegyi] ; [traduction du japonais par Kolin Kobayashi...], cop. 2009. - . -"@fr ;
+        skos:exactMatch     <http://dbpedia.org/resource/Lee_Ufan> , <http://fr.wikipedia.org/wiki/Lee_Ufan> , <http://www.idref.fr/071528423> , <http://viaf.org/viaf/20244189> , <http://www.idref.fr/034463038> ;
+        skos:note           "Peintre et graveur coréen. - Collectionneur d'art. - Né à Kyongnam, Corée du Sud, vit et travaille au Japon"@fr ;
+        skos:prefLabel      "U-Fan Lee"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401288037#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43681970g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40209754v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12521678j#foaf:Person> .

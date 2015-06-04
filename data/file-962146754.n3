@@ -1,0 +1,49 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb136036391#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Magistrat. - Historien" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://viaf.org/viaf/17394853> , <http://www.idref.fr/053523814> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k351409.thumbnail> ;
+        foaf:familyName                "Montégut" ;
+        foaf:givenName                 "Henri de" ;
+        foaf:name                      "Henri de Montégut" ;
+        foaf:page                      <http://data.bnf.fr/13603639/henri_de_montegut/> .
+
+<http://data.bnf.fr/ark:/12148/cb136036391>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb136036391> ;
+        bnf-onto:FRBNF        13603639 ;
+        isni:identifierValid  "0000000009226736" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000009226736> ;
+        skos:altLabel         "Henri Bonhomme de Montégut"@fr ;
+        skos:editorialNote    "Dix entrées solennelles à Périgueux, 1470-1566 / publiées pour la première fois d'après les manuscrits de la Bibliothèque nationale et les archives de la ville de Périgueux par le président de Montégut, 1882. - . - Philippe de Gentils de Lajonchapt, marquis de Langallerie, premier baron de Saintonge... (1661-1717) / par H. B. de Montégut, 1866. - . -"@fr , "Internet, http://newfirstsearch.oclc.org, 2001-01-17. - . - BN Cat. gén. : Montégut, Henri (André-Louis-Henri Bonhomme de). - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/053523814> , <http://viaf.org/viaf/17394853> , <http://isni-url.oclc.nl/isni/0000000009226736> ;
+        skos:note             "Magistrat. - Historien"@fr ;
+        skos:prefLabel        "Henri de Montégut"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb136036391#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32994058b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb136036391#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb136036391#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136036391#foaf:Person> .

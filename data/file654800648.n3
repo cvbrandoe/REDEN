@@ -1,0 +1,50 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb156045665>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb156045665> ;
+        bnf-onto:FRBNF   15604566 ;
+        skos:exactMatch  <http://viaf.org/viaf/7709104> , <http://www.idref.fr/148439640> ;
+        skos:note        "Peintre-décorateur français ayant travaillé à l'Opéra dans les années 1840"@fr ;
+        skos:prefLabel   "Wagner (décorateur)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb156045665#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40916850f#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb156045665#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb156045665#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156045665#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41203841g#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb156045665#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb156045665#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156045665#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41342610d#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb156045665#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb156045665#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156045665#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb156045665#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Peintre-décorateur français ayant travaillé à l'Opéra dans les années 1840" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/7709104> , <http://www.idref.fr/148439640> ;
+        foaf:familyName  "Wagner" ;
+        foaf:gender      "male" ;
+        foaf:page        <http://data.bnf.fr/15604566/wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb413414140#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb156045665#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb156045665#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156045665#foaf:Person> .

@@ -1,0 +1,68 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35576950v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34830129x#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37742084q#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12037218c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12037218c> ;
+        bnf-onto:FRBNF        12037218 ;
+        isni:identifierValid  "0000000109358613" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109358613> ;
+        skos:editorialNote    "The Politics of Black empowerment / James Jennings, 1992. - . - LCNA, 1986. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/111625925> , <http://www.idref.fr/028560973> , <http://isni-url.oclc.nl/isni/0000000109358613> ;
+        skos:note             "Professeur de science politique, University of Massachussetts, Boston. - Membre du William Monroe Trotter institute (en 1992)"@fr ;
+        skos:prefLabel        "James Jennings"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1949 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de science politique, University of Massachussetts, Boston. - Membre du William Monroe Trotter institute (en 1992)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/028560973> , <http://viaf.org/viaf/111625925> ;
+        foaf:familyName     "Jennings" ;
+        foaf:givenName      "James" ;
+        foaf:name           "James Jennings" ;
+        foaf:page           <http://data.bnf.fr/12037218/james_jennings/> .
+
+<http://data.bnf.fr/ark:/12148/cb355418099#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374789613#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411341715#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12037218c#foaf:Person> .

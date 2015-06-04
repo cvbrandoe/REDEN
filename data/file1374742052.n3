@@ -1,0 +1,121 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/12007730/jordi_barre/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382462250#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38245062d#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120077300>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb120077300> ;
+        bnf-onto:FRBNF        12007730 ;
+        isni:identifierValid  "0000000119306948" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000119306948> ;
+        skos:editorialNote    "Jordi Barre / J. Queralt, 1985 [8 ̊ Ln27. 95207. - . - France 3. - http://languedoc-roussillon.france3.fr/info/jordi-barre-est-mort-67409099.html. - 2011-02-17"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000119306948> , <http://viaf.org/viaf/87055464> , <http://www.idref.fr/084159928> ;
+        skos:note             "Chanteur et musicien catalan"@fr ;
+        skos:prefLabel        "Jordi Barre (1920-2011)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382677987#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1920 ;
+        bnf-onto:lastYear              2011 ;
+        rdagroup2elements:biographicalInformation
+                "Chanteur et musicien catalan" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1920/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2011/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/cat> ;
+        bio:birth                      "1920-04-07" ;
+        bio:death                      "2011-02-17" ;
+        owl:sameAs                     <http://viaf.org/viaf/87055464> , <http://www.idref.fr/084159928> ;
+        foaf:birthday                  "04-07" ;
+        foaf:familyName                "Barre" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jordi" ;
+        foaf:name                      "Jordi Barre" ;
+        foaf:page                      <http://data.bnf.fr/12007730/jordi_barre/> .
+
+<http://data.bnf.fr/ark:/12148/cb384508848#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382566704#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38267662z#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38267841j#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38452953r#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35059272p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38240839w#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38452003q#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38351665h#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38267883g#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382408941#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120077300#foaf:Person> .

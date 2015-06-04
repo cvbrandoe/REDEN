@@ -1,0 +1,88 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb36156931m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41161734h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Médecin, spécialisé en pédiatrie. - En poste à l'Unité de réanimation et des maladies respiratoires de l'enfant à l'Hôpital de l'Hôtel-Dieu, Clermont-Ferrand (en 2004)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/41944987> , <http://www.idref.fr/08581119X> ;
+        foaf:familyName  "Labbé" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "André" ;
+        foaf:name        "André Labbé" ;
+        foaf:page        <http://data.bnf.fr/12500742/andre_labbe/> .
+
+<http://data.bnf.fr/ark:/12148/cb36987729r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39907400z#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41141995v#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb391044554#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36088808r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37690076g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125007425>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb125007425> ;
+        bnf-onto:FRBNF        12500742 ;
+        isni:identifierValid  "0000000000257819" ;
+        owl:sameAs            <http://isni.org/isni/0000000000257819> ;
+        skos:editorialNote    "Pneumologie de l'enfant / Guy Dutaut, André Labbé, 1996. - . - Asthme chez l'enfant / [sous la dir. de] A. Labbé, G. Dutau, 2004. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000000257819> , <http://viaf.org/viaf/41944987> , <http://www.idref.fr/08581119X> ;
+        skos:note             "Médecin, spécialisé en pédiatrie. - En poste à l'Unité de réanimation et des maladies respiratoires de l'enfant à l'Hôpital de l'Hôtel-Dieu, Clermont-Ferrand (en 2004)"@fr ;
+        skos:prefLabel        "André Labbé"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39915049x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39095556p#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125007425#foaf:Person> .

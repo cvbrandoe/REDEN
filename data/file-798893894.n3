@@ -1,0 +1,72 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb144019395>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb144019395> ;
+        bnf-onto:FRBNF   14401939 ;
+        skos:exactMatch  <http://www.idref.fr/131510991> , <http://viaf.org/viaf/56823207> ;
+        skos:note        "Statisticien. - En poste au CFES, Centre français d'éducation pour la santé (en 2001). - Biostatisticien, département Enquêtes et analyses statistiques, direction des affaires scientifiques, INPES (en 2011)"@fr ;
+        skos:prefLabel   "Arnaud Gautier (1974-....)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41248540b#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1974 ;
+        rdagroup2elements:biographicalInformation
+                "Statisticien. - En poste au CFES, Centre français d'éducation pour la santé (en 2001). - Biostatisticien, département Enquêtes et analyses statistiques, direction des affaires scientifiques, INPES (en 2011)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1974/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs                     <http://www.idref.fr/131510991> , <http://viaf.org/viaf/56823207> ;
+        foaf:birthday                  "10-15" ;
+        foaf:familyName                "Gautier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Arnaud" ;
+        foaf:name                      "Arnaud Gautier" ;
+        foaf:page                      <http://data.bnf.fr/14401939/arnaud_gautier/> .
+
+<http://data.bnf.fr/ark:/12148/cb42442791t#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40129343b#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39970460k#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38874782c#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41397225k#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42686230c#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144019395#foaf:Person> .

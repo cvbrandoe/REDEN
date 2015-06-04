@@ -1,0 +1,66 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb426590391#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38504281p#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38280512v#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb141310400>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb141310400> ;
+        bnf-onto:FRBNF      14131040 ;
+        skos:editorialNote  "Scope 2. - http://scope2.monsite-orange.fr. - 2012-06-24 100 ans de finales [Images animées] / Jacques Alain Raynaud, réal., 1992. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/060946091> , <http://viaf.org/viaf/121726367> ;
+        skos:note           "Journaliste et réalisateur. - Gérant des éditions Scope 2 (en 2012)"@fr ;
+        skos:prefLabel      "Jacques Alain Raynaud"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399763555#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1942 ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste et réalisateur. - Gérant des éditions Scope 2 (en 2012)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/121726367> , <http://www.idref.fr/060946091> ;
+        foaf:familyName     "Raynaud" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jacques Alain" ;
+        foaf:name           "Jacques Alain Raynaud" ;
+        foaf:page           <http://data.bnf.fr/14131040/jacques_alain_raynaud/> .
+
+<http://data.bnf.fr/ark:/12148/cb40925772f#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42749345r#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141310400#foaf:Person> .

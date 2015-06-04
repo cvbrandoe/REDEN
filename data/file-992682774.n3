@@ -1,0 +1,85 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb413785853#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39171018j#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> ;
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41269004r#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38922027z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1966 ;
+        dcterms:contributor            <http://data.bnf.fr/ark:/12148/cb13542504h#frbr:Work> ;
+        rdagroup2elements:biographicalInformation
+                "Poète. - Artiste plasticien et vidéaste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1966/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Art" , "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/700/> , <http://dewey.info/class/800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs                     <http://www.idref.fr/078993830> , <http://viaf.org/viaf/15710726> ;
+        foaf:familyName                "Bérard" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Stéphane" ;
+        foaf:name                      "Stéphane Bérard" ;
+        foaf:page                      <http://data.bnf.fr/14448465/stephane_berard/> .
+
+<http://data.bnf.fr/ark:/12148/cb43519922x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40192398c#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14448465v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14448465v> ;
+        bnf-onto:FRBNF        14448465 ;
+        isni:identifierValid  "000000007841700X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000007841700X> ;
+        skos:editorialNote    "Le problème martien : roman / Stéphane Bérard, 2002. - . - Stéphane Bérard... : [exposition, Digne-les-Bains, Le CAIRN... et Marseille, FRAC Provence-Alpes-Côte d'Azur, 2003] / [texte de Xavier Boussiron], 2003. - . -"@fr , "Sitaudis.com. - http://www.sitaudis.com. - 2004-01-07"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/15710726> , <http://www.idref.fr/078993830> , <http://isni-url.oclc.nl/isni/000000007841700X> ;
+        skos:note             "Poète. - Artiste plasticien et vidéaste"@fr ;
+        skos:prefLabel        "Stéphane Bérard (1966-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> .
+
+<http://data.bnf.fr/14448465/stephane_berard/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb424180504#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14448465v#foaf:Person> .

@@ -1,0 +1,59 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Eclairagiste, vidéaste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/15034202> ;
+        foaf:familyName  "David" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Cyril" ;
+        foaf:name        "Cyril David" ;
+        foaf:page        <http://data.bnf.fr/14675496/cyril_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb410231152#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14675496c>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14675496c> ;
+        bnf-onto:FRBNF   14675496 ;
+        skos:exactMatch  <http://viaf.org/viaf/15034202> ;
+        skos:note        "Eclairagiste, vidéaste"@fr ;
+        skos:prefLabel   "Cyril David (éclairagiste)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39495073k#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb413976966#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> ;
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39495095w#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42714293h#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14675496c#foaf:Person> .

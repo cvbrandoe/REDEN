@@ -1,0 +1,78 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb35070114g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb434431232#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388668551#frbr:Expression>
+        bnfroles:r540        <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> ;
+        marcrel:aft          <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35006376k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43443112d#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34703167d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Professeur à l'Université catholique de Louvain (en 1995)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/be#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/026933365> , <http://viaf.org/viaf/4931434> ;
+        foaf:familyName  "Jacques" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Georges" ;
+        foaf:name        "Georges Jacques" ;
+        foaf:page        <http://data.bnf.fr/11908441/georges_jacques/> .
+
+<http://data.bnf.fr/ark:/12148/cb35438200v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11908441g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11908441g> ;
+        bnf-onto:FRBNF        11908441 ;
+        isni:identifierValid  "0000000115876302" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000115876302> ;
+        skos:editorialNote    "Itinéraires et plaisirs textuels / G. Jacques [et al.], 1987. - . - Le tramway des officiers / Georges Thinès ; préf. de Fernand Verhesen ; lecture de Georges Jacques, 1995. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/026933365> , <http://isni-url.oclc.nl/isni/0000000115876302> , <http://viaf.org/viaf/4931434> ;
+        skos:note             "Professeur à l'Université catholique de Louvain (en 1995)"@fr ;
+        skos:prefLabel        "Georges Jacques"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356575993#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908441g#foaf:Person> .

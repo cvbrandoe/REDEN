@@ -1,0 +1,73 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb349916843#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34974822d#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34944247g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34878238x#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb348665309#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Professeur au Collège de Villers-Bocage, Somme (en 1988)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/39395806> , <http://www.idref.fr/083600353> ;
+        foaf:familyName  "Barre" ;
+        foaf:givenName   "Francis" ;
+        foaf:name        "Francis Barre" ;
+        foaf:page        <http://data.bnf.fr/12050749/francis_barre/> .
+
+<http://data.bnf.fr/ark:/12148/cb35044302c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349648435#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12050749r>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12050749r> ;
+        bnf-onto:FRBNF   12050749 ;
+        skos:exactMatch  <http://www.idref.fr/083600353> , <http://viaf.org/viaf/39395806> ;
+        skos:note        "Professeur au Collège de Villers-Bocage, Somme (en 1988)"@fr ;
+        skos:prefLabel   "Francis Barre"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35025551z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12050749r#foaf:Person> .

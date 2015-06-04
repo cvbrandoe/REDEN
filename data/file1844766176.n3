@@ -1,0 +1,42 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb16058216w>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb16058216w> ;
+        bnf-onto:FRBNF   16058216 ;
+        skos:exactMatch  <http://viaf.org/viaf/89841733> ;
+        skos:note        "Employé de l'Opéra en 1825, chargé du bureau du parterre"@fr ;
+        skos:prefLabel   "Bouvard (Employé de l'Opéra, 17..-18..)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb16058216w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41486103q#frbr:Expression>
+        bnfroles:r320        <http://data.bnf.fr/ark:/12148/cb16058216w#foaf:Person> ;
+        marcrel:rcp          <http://data.bnf.fr/ark:/12148/cb16058216w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16058216w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16058216w#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Employé de l'Opéra en 1825, chargé du bureau du parterre" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "17.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/89841733> ;
+        foaf:familyName                "Bouvard" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/16058216/bouvard/> .

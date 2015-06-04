@@ -1,0 +1,120 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb352821197#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32280093g#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42992154v#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35282108k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32117204n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40868028d#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb330089277#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15342796g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15342796g> ;
+        bnf-onto:FRBNF        15342796 ;
+        isni:identifierValid  "000000007848531X" ;
+        owl:sameAs            <http://isni.org/isni/000000007848531X> ;
+        skos:exactMatch       <http://viaf.org/viaf/95178546> , <http://isni.org/isni/000000007848531X> , <http://www.idref.fr/148533191> ;
+        skos:note             "Psychiatre, auteur, photographe"@fr ;
+        skos:prefLabel        "Oscar Louis Forel (1891-1982)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb322800924#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1891 ;
+        bnf-onto:lastYear              1982 ;
+        rdagroup2elements:biographicalInformation
+                "Psychiatre, auteur, photographe" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/sz> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1891/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1982/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1891-09-20" ;
+        bio:death                      "1982-11-07" ;
+        owl:sameAs                     <http://viaf.org/viaf/95178546> , <http://www.idref.fr/148533191> ;
+        foaf:birthday                  "09-20" ;
+        foaf:familyName                "Forel" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Oscar Louis" ;
+        foaf:name                      "Oscar Louis Forel" ;
+        foaf:page                      <http://data.bnf.fr/15342796/oscar_louis_forel/> .
+
+<http://data.bnf.fr/ark:/12148/cb32117201m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb321172039#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32117202z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34759944f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32466742w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb321172050#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32117177k#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15342796g#foaf:Person> .

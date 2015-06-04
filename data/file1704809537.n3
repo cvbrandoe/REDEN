@@ -1,0 +1,57 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/15289734/louis-antoine_beaunier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb152897348#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40737525q#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb152897348#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb152897348#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb152897348#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb152897348>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb152897348> , <http://fr.wikipedia.org/wiki/Louis-Antoine_Beaunier> ;
+        bnf-onto:FRBNF        15289734 ;
+        isni:identifierValid  "0000000011176731" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000011176731> ;
+        skos:altLabel         "Beaunier (1779-1835)"@fr ;
+        skos:editorialNote    "Atlas des concessions du terrain houiller de la Sarre [Document cartographique] / par Beaunier et Calmelet, ingénieurs au corps impérial des Mines, 1810. - . - DBF [mort le 26 août 1835]. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000011176731> , <http://dbpedia.org/resource/Louis-Antoine_Beaunier> , <http://fr.wikipedia.org/wiki/Louis-Antoine_Beaunier> , <http://viaf.org/viaf/17523948> , <http://www.idref.fr/152160140> ;
+        skos:note             "Ingénieur des mines. - Directeur de l'École des mines de Saint-Etienne. - Membre du Conseil d'État"@fr ;
+        skos:prefLabel        "Louis-Antoine Beaunier (1779-1835)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb152897348#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb152897348#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1779 ;
+        bnf-onto:lastYear               1835 ;
+        rdagroup2elements:biographicalInformation
+                "Ingénieur des mines. - Directeur de l'École des mines de Saint-Etienne. - Membre du Conseil d'État" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1779/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1835/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Melun" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1779-01-15" ;
+        bio:death                       "1835-08" ;
+        owl:sameAs                      <http://viaf.org/viaf/17523948> , <http://www.idref.fr/152160140> , <http://dbpedia.org/resource/Louis-Antoine_Beaunier> ;
+        foaf:birthday                   "01-15" ;
+        foaf:familyName                 "Beaunier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Louis-Antoine" ;
+        foaf:name                       "Louis-Antoine Beaunier" ;
+        foaf:page                       <http://data.bnf.fr/15289734/louis-antoine_beaunier/> .

@@ -1,0 +1,41 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb11938532d#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             -69 ;
+        bnf-onto:lastYear              -30 ;
+        rdagroup2elements:biographicalInformation
+                "Reine d'Égypte de 51 à 30 av. J.-C." ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/-0069/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/-0030/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/egy> ;
+        bio:birth                      "- 69" ;
+        bio:death                      "- 30" ;
+        owl:sameAs                     <http://viaf.org/viaf/67762941> , <http://dbpedia.org/resource/Cléopâtre_VII> , <http://www.idref.fr/027316564> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b69366597.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69365090.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8595238g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k204465p.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Kleopatra-VII.-Altes-Museum-Berlin1.jpg?width=300> , <http://gallica.bnf.fr/ark:/12148/btv1b77592117.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b7759200f.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6936512g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b85952268.thumbnail> ;
+        foaf:familyName                "Cléopâtre" ;
+        foaf:gender                    "female" ;
+        foaf:page                      <http://data.bnf.fr/11938532/cleopatre_7/> .
+
+<http://data.bnf.fr/11938532/cleopatre_7/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11938532d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11938532d>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://fr.wikipedia.org/wiki/Cléopâtre_VII> , <http://catalogue.bnf.fr/ark:/12148/cb11938532d> ;
+        bnf-onto:FRBNF   11938532 ;
+        skos:exactMatch  <http://viaf.org/viaf/67762941> , <http://www.idref.fr/027316564> , <http://fr.wikipedia.org/wiki/Cléopâtre_VII> , <http://dbpedia.org/resource/Cléopâtre_VII> ;
+        skos:note        "Reine d'Égypte de 51 à 30 av. J.-C."@fr ;
+        skos:prefLabel   "Cléopâtre VII (reine d'Égypte, 0069-0030 av. J.-C.)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb11938532d#foaf:Person> .

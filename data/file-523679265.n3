@@ -1,0 +1,64 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb39912354m#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40095658h#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14651844v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Richard_Jacques> , <http://catalogue.bnf.fr/ark:/12148/cb14651844v> ;
+        bnf-onto:FRBNF        14651844 ;
+        isni:identifierValid  "0000000114794938" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114794938> ;
+        skos:editorialNote    "Headhunter [Ressource électronique] : redemption / [...] music composed, orchestrated and produced by Richard Jacques [...]. Sega Europe, 2005. - . - Internet movie database. - http://www.imdb.com/name/nm1287555/. - 2005-08-17"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000114794938> , <http://dbpedia.org/resource/Richard_Jacques> , <http://fr.wikipedia.org/wiki/Richard_Jacques> , <http://viaf.org/viaf/106863386> ;
+        skos:note             "Compositeur pour le cinéma, la télévision et les jeux vidéo"@fr ;
+        skos:prefLabel        "Richard Jacques"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1973 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur pour le cinéma, la télévision et les jeux vidéo" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:placeOfBirth  "Warwick (GB)" ;
+        owl:sameAs                      <http://dbpedia.org/resource/Richard_Jacques> , <http://viaf.org/viaf/106863386> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Richard_jacques.jpg?width=300> ;
+        foaf:familyName                 "Jacques" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Richard" ;
+        foaf:name                       "Richard Jacques" ;
+        foaf:page                       <http://data.bnf.fr/14651844/richard_jacques/> .
+
+<http://data.bnf.fr/ark:/12148/cb401765289#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40175692f#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401304758#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14651844v#foaf:Person> .

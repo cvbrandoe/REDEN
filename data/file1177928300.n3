@@ -1,0 +1,66 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb42051856v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38991632d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Professeur à l'ESSEC (en 1993)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/032107072> , <http://viaf.org/viaf/71459851> ;
+        foaf:familyName  "Roux" ;
+        foaf:givenName   "Elyette" ;
+        foaf:name        "Elyette Roux" ;
+        foaf:page        <http://data.bnf.fr/12320140/elyette_roux/> .
+
+<http://data.bnf.fr/ark:/12148/cb371031386#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb362018736#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35579944n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12320140w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12320140w> ;
+        bnf-onto:FRBNF        12320140 ;
+        isni:identifierValid  "000000011668701X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000011668701X> ;
+        skos:exactMatch       <http://viaf.org/viaf/71459851> , <http://isni-url.oclc.nl/isni/000000011668701X> , <http://www.idref.fr/032107072> ;
+        skos:note             "Professeur à l'ESSEC (en 1993)"@fr ;
+        skos:prefLabel        "Elyette Roux"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb391045395#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12320140w#foaf:Person> .

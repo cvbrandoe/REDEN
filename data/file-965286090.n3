@@ -1,0 +1,80 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34688932n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38872909c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388729217#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12938040s>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12938040s> ;
+        bnf-onto:FRBNF   12938040 ;
+        skos:exactMatch  <http://www.idref.fr/052470326> , <http://viaf.org/viaf/46891784> ;
+        skos:note        "Journaliste à la \"Voix du Nord\" de 1968 à 1994. - Administrateur de la Société historique d'Avesnes et de l' Écomusée de lAvesnois (en 2005)"@fr ;
+        skos:prefLabel   "Pierre Henry"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36157531r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37186289r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1938 ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste à la \"Voix du Nord\" de 1968 à 1994. - Administrateur de la Société historique d'Avesnes et de l' Écomusée de lAvesnois (en 2005)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/052470326> , <http://viaf.org/viaf/46891784> ;
+        foaf:familyName     "Henry" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Pierre" ;
+        foaf:name           "Pierre Henry" ;
+        foaf:page           <http://data.bnf.fr/12938040/pierre_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb38872907p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37186292n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb371191512#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401071238#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12938040s#foaf:Person> .

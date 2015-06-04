@@ -1,0 +1,50 @@
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpprop: <http://dbpedia.org/property/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://dbpedia.org/resource/Auguste_Angellier>
+        a                               dbpedia-owl:Writer , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> , owl:Thing , <http://wikidata.dbpedia.org/resource/Q215627> , dbpedia-owl:Artist , dbpedia-owl:Agent , <http://schema.org/Person> , <http://wikidata.dbpedia.org/resource/Q5> , dbpedia-owl:Person , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> , foaf:Person ;
+        rdfs:comment                    "Auguste Angellier (1848-1911) fut le premier professeur de langue et littérature anglaises de la Faculté des Lettres de Lille, avant d’en être son doyen de 1897 à 1900. Critique et historien de la littérature, mais aussi poète, il fit sensation à la Sorbonne en attaquant les théories de Taine dans sa thèse sur Robert Burns en 1893."@fr , "Auguste Angellier (July 1, 1848 – February 28, 1911) was the first teacher of language and English literature at the Faculté de Lettres of Lille, before becoming its dean from 1897 to 1900. A literary critic and historian of literature, he was also a poet, and made sensation at the Sorbonne attacking the theories of Hippolyte Taine in his thesis about Robert Burns in 1893."@en , "Auguste Angellier (Dunkerque, 1 luglio 1848 – Boulogne-sur-Mer, 28 febbraio 1911) è stato un poeta francese.Insegnante, fu il primo professore di lingua e letteratura inglese della Facoltà di Lettere di Lilla, prima di diventarne il preside dal 1897 al 1900. Critico e storico della letteratura, fece scalpore alla Sorbona attaccando le teorie di Taine nella sua tesi su Robert Burns nel 1893."@it ;
+        rdfs:label                      "Auguste Angellier"@it , "Auguste Angellier"@fr , "Auguste Angellier"@en ;
+        dbpedia-owl:abstract            "Auguste Angellier (1848-1911) fut le premier professeur de langue et littérature anglaises de la Faculté des Lettres de Lille, avant d’en être son doyen de 1897 à 1900. Critique et historien de la littérature, mais aussi poète, il fit sensation à la Sorbonne en attaquant les théories de Taine dans sa thèse sur Robert Burns en 1893."@fr , "Auguste Angellier (Dunkerque, 1 luglio 1848 – Boulogne-sur-Mer, 28 febbraio 1911) è stato un poeta francese.Insegnante, fu il primo professore di lingua e letteratura inglese della Facoltà di Lettere di Lilla, prima di diventarne il preside dal 1897 al 1900. Critico e storico della letteratura, fece scalpore alla Sorbona attaccando le teorie di Taine nella sua tesi su Robert Burns nel 1893."@it , "Auguste Angellier (July 1, 1848 – February 28, 1911) was the first teacher of language and English literature at the Faculté de Lettres of Lille, before becoming its dean from 1897 to 1900. A literary critic and historian of literature, he was also a poet, and made sensation at the Sorbonne attacking the theories of Hippolyte Taine in his thesis about Robert Burns in 1893."@en ;
+        dbpedia-owl:birthDate           "1848-07-01+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:birthPlace          <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Nord_(French_department)> , <http://dbpedia.org/resource/Dunkirk> ;
+        dbpedia-owl:birthYear           "1848+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:deathDate           "1911-02-28+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:deathPlace          <http://dbpedia.org/resource/Boulogne-sur-Mer> , <http://dbpedia.org/resource/Pas-de-Calais> , <http://dbpedia.org/resource/France> ;
+        dbpedia-owl:deathYear           "1911+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:genre               <http://dbpedia.org/resource/Literary_criticism> , <http://dbpedia.org/resource/Poetry> ;
+        dbpedia-owl:wikiPageExternalLink
+                <http://angellier.biblio.univ-lille3.fr> ;
+        dbpedia-owl:wikiPageID          42419547 ;
+        dbpedia-owl:wikiPageRevisionID  604006637 ;
+        dbpprop:birthDate               "1848-07-01+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:birthPlace              <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Nord_(French_department)> , <http://dbpedia.org/resource/Dunkirk> ;
+        dbpprop:dateOfBirth             "1848-07-01+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:dateOfDeath             "1911-02-28+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathDate               "1911-02-28+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathPlace              <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Pas-de-Calais> , <http://dbpedia.org/resource/Boulogne-sur-Mer> ;
+        dbpprop:genre                   <http://dbpedia.org/resource/Poetry> , <http://dbpedia.org/resource/Literary_criticism> ;
+        dbpprop:name                    "Auguste Angellier"@en , "Angellier, Auguste"@en ;
+        dbpprop:occupation              "Poet, teacher"@en ;
+        dbpprop:placeOfBirth            <http://dbpedia.org/resource/Nord_(French_department)> , <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Dunkirk> ;
+        dbpprop:placeOfDeath            <http://dbpedia.org/resource/Pas-de-Calais> , <http://dbpedia.org/resource/Boulogne-sur-Mer> , <http://dbpedia.org/resource/France> ;
+        dbpprop:shortDescription        "French educator"@en ;
+        dc:description                  "French educator"@en , "French educator" ;
+        dcterms:subject                 <http://dbpedia.org/resource/Category:People_from_Dunkirk> , <http://dbpedia.org/resource/Category:1911_deaths> , <http://dbpedia.org/resource/Category:1848_births> , <http://dbpedia.org/resource/Category:French_poets> , <http://dbpedia.org/resource/Category:French_literary_critics> , <http://dbpedia.org/resource/Category:French_academics> , <http://dbpedia.org/resource/Category:Universit%C3%A9_Lille_Nord_de_France_faculty> ;
+        owl:sameAs                      <http://it.dbpedia.org/resource/Auguste_Angellier> , <http://rdf.freebase.com/ns/m.01084pz3> , <http://dbpedia.org/resource/Auguste_Angellier> , <http://wikidata.org/entity/Q2266379> , <http://wikidata.dbpedia.org/resource/Q2266379> , <http://fr.dbpedia.org/resource/Auguste_Angellier> ;
+        prov:wasDerivedFrom             <http://en.wikipedia.org/wiki/Auguste_Angellier?oldid=604006637> ;
+        foaf:givenName                  "Auguste"@en ;
+        foaf:homepage                   <http://angellier.biblio.univ-lille3.fr> ;
+        foaf:isPrimaryTopicOf           <http://en.wikipedia.org/wiki/Auguste_Angellier> ;
+        foaf:name                       "Angellier, Auguste"@en , "Auguste Angellier"@en ;
+        foaf:surname                    "Angellier"@en .
+
+<http://en.wikipedia.org/wiki/Auguste_Angellier>
+        foaf:primaryTopic  <http://dbpedia.org/resource/Auguste_Angellier> .

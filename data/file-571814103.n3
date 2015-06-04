@@ -1,0 +1,34 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb108293181#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Marionnettiste et concepteur de marionnettes" ;
+        owl:sameAs       <http://viaf.org/viaf/306352754> ;
+        foaf:familyName  "Lee" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Terry" ;
+        foaf:name        "Terry Lee" ;
+        foaf:page        <http://data.bnf.fr/10829318/terry_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb43764731h#frbr:Expression>
+        bnfroles:r1050       <http://data.bnf.fr/ark:/12148/cb108293181#foaf:Person> ;
+        bnfroles:r2215       <http://data.bnf.fr/ark:/12148/cb108293181#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb108293181#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb108293181>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb108293181> ;
+        bnf-onto:FRBNF   10829318 ;
+        skos:exactMatch  <http://viaf.org/viaf/306352754> ;
+        skos:note        "Marionnettiste et concepteur de marionnettes"@fr ;
+        skos:prefLabel   "Terry Lee"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb108293181#foaf:Person> .

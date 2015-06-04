@@ -1,0 +1,97 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb42334736s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400124697#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41054537b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43536265z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36968326f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423501477#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb371012020#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414752982#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13337935j>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13337935j> ;
+        bnf-onto:FRBNF      13337935 ;
+        skos:altLabel       "Arthur R. David"@fr , "Arthur"@fr ;
+        skos:editorialNote  "Rêvances : Angers-Sydney, notre voyage à vélo / Paule et Arthur, 1997. - . - Rêvances : Angers-Sydney, notre voyage à vélo / Paule et Arthur ; texte et photographies, Arthur R. David, DL 2005. - . - Voyager à vélo / Paule et Arthur David, impr. 2008. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/139841512> , <http://viaf.org/viaf/71131409> ;
+        skos:note           "A étudié la philosophie et les sciences et le commerce. - Passionné de voyages. - Conférencier, éditeur et réalisateur (en 2008)"@fr ;
+        skos:prefLabel      "Arthur David"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1954 ;
+        rdagroup2elements:biographicalInformation
+                "A étudié la philosophie et les sciences et le commerce. - Passionné de voyages. - Conférencier, éditeur et réalisateur (en 2008)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/139841512> , <http://viaf.org/viaf/71131409> ;
+        foaf:familyName     "David" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Arthur" ;
+        foaf:name           "Arthur David" ;
+        foaf:page           <http://data.bnf.fr/13337935/arthur_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb40012462t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412372731#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422123505#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40013311w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13337935j#foaf:Person> .

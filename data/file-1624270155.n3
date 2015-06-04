@@ -1,0 +1,81 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb423194493#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420032706#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39002380d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42391376f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37527010m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388986171#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388202464#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400102127#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39002458h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13178058f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13178058f> ;
+        bnf-onto:FRBNF        13178058 ;
+        isni:identifierValid  "0000000117575677" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000117575677> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000117575677> , <http://www.idref.fr/035270241> , <http://viaf.org/viaf/34597828> ;
+        skos:note             "Spécialiste de danse et de chorégraphie. - Professeur, University of California, Department of dance, Riverside, Calif. (en 1995)"@fr ;
+        skos:prefLabel        "Susan Leigh Foster"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13178058f#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Spécialiste de danse et de chorégraphie. - Professeur, University of California, Department of dance, Riverside, Calif. (en 1995)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://viaf.org/viaf/34597828> , <http://www.idref.fr/035270241> ;
+        foaf:familyName  "Foster" ;
+        foaf:givenName   "Susan Leigh" ;
+        foaf:name        "Susan Leigh Foster" ;
+        foaf:page        <http://data.bnf.fr/13178058/susan_leigh_foster/> .

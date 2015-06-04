@@ -1,0 +1,70 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37627380s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39060089f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb377071413#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1968 ;
+        rdagroup2elements:biographicalInformation
+                "Auteur-illustrateur de livres pour enfants" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/59261857> , <http://www.idref.fr/056551304> ;
+        foaf:familyName     "Lasserre" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Éric" ;
+        foaf:name           "Éric Lasserre" ;
+        foaf:page           <http://data.bnf.fr/13736701/eric_lasserre/> .
+
+<http://data.bnf.fr/ark:/12148/cb137367014>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb137367014> ;
+        bnf-onto:FRBNF        13736701 ;
+        isni:identifierValid  "0000000001150546" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000001150546> ;
+        skos:altLabel         "Enrique Lasserre"@fr ;
+        skos:editorialNote    "Les aventures fabuleuses de Dizzy Boy et son nez en trompette / Éric Lasserre et Élodie Houyelle, 2001. - . - Toreros / Enrique Éric Lasserre, 2003 [Le prénom de l'auteur \"Éric\" est barré et remplacé par \"Enrique\". - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/056551304> , <http://isni-url.oclc.nl/isni/0000000001150546> , <http://viaf.org/viaf/59261857> ;
+        skos:note             "Auteur-illustrateur de livres pour enfants"@fr ;
+        skos:prefLabel        "Éric Lasserre"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37582455q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39082877j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37689801r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137367014#foaf:Person> .

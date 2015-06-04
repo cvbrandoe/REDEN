@@ -1,0 +1,39 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb16654350d#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de sociologie à l'Université de Paris 8 (en 2012)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/295574644> , <http://www.idref.fr/073396613> ;
+        foaf:familyName  "Henry" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Odile" ;
+        foaf:name        "Odile Henry" ;
+        foaf:page        <http://data.bnf.fr/16654350/odile_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb16654350d>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb16654350d> ;
+        bnf-onto:FRBNF   16654350 ;
+        skos:exactMatch  <http://viaf.org/viaf/295574644> , <http://www.idref.fr/073396613> ;
+        skos:note        "Professeur de sociologie à l'Université de Paris 8 (en 2012)"@fr ;
+        skos:prefLabel   "Odile Henry"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb16654350d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42787088j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16654350d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16654350d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16654350d#foaf:Person> .

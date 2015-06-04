@@ -1,0 +1,73 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1940 ;
+        rdagroup2elements:biographicalInformation
+                "Maître de conférences à l'École des hautes études en sciences sociales, chercheur sur la sociologie de l'éducation, du pouvoir et des élites (en 1993)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/79075289> , <http://www.idref.fr/030536103> ;
+        foaf:familyName     "Saint Martin" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Monique de" ;
+        foaf:name           "Monique de Saint Martin" ;
+        foaf:page           <http://data.bnf.fr/12193159/monique_de_saint_martin/> .
+
+<http://data.bnf.fr/ark:/12148/cb361837460#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb410316991#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35372238r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43642448b#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39195053f#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421423529#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366643248#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121931594>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb121931594> ;
+        bnf-onto:FRBNF        12193159 ;
+        isni:identifierValid  "0000000121410074" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121410074> ;
+        skos:exactMatch       <http://www.idref.fr/030536103> , <http://viaf.org/viaf/79075289> , <http://isni-url.oclc.nl/isni/0000000121410074> ;
+        skos:note             "Maître de conférences à l'École des hautes études en sciences sociales, chercheur sur la sociologie de l'éducation, du pouvoir et des élites (en 1993)"@fr ;
+        skos:prefLabel        "Monique de Saint Martin"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb121931594#foaf:Person> .

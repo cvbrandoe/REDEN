@@ -1,0 +1,70 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb31061069z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420496143#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38794586f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1867 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur d'anglais au lycée Henri Martin de Saint-Quentin, Aisne (en 1908). - Secrétaire général de la Société géographique de Saint-Quentin (en 1908). - Lauréat des Sociétés de géographie et du Conservatoire national des Arts-et-Métiers" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1867/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Rouen" ;
+        bio:birth                       "1867" ;
+        bio:death                       "19.." ;
+        owl:sameAs                      <http://viaf.org/viaf/285851180> ;
+        foaf:familyName                 "Parmentier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Georges" ;
+        foaf:name                       "Georges Parmentier" ;
+        foaf:page                       <http://data.bnf.fr/10718195/georges_parmentier/> .
+
+<http://data.bnf.fr/ark:/12148/cb107181959>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb107181959> ;
+        bnf-onto:FRBNF        10718195 ;
+        isni:identifierValid  "0000000391997231" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000391997231> ;
+        skos:altLabel         "Georges Romuald Parmentier (1867-19..)"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000391997231> , <http://viaf.org/viaf/285851180> ;
+        skos:note             "Professeur d'anglais au lycée Henri Martin de Saint-Quentin, Aisne (en 1908). - Secrétaire général de la Société géographique de Saint-Quentin (en 1908). - Lauréat des Sociétés de géographie et du Conservatoire national des Arts-et-Métiers"@fr ;
+        skos:prefLabel        "Georges Parmentier (1867-19..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb310245039#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38796391z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107181959#foaf:Person> .

@@ -1,0 +1,66 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb409894824#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40929781c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Auteur de bandes dessinées coréennes (manhwas)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/kor> ;
+        owl:sameAs       <http://viaf.org/viaf/71702868> ;
+        foaf:familyName  "Lee" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Ki-Hoon" ;
+        foaf:name        "Ki-Hoon Lee" ;
+        foaf:page        <http://data.bnf.fr/15525197/ki-hoon_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb40992036c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40990511x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41014008j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15525197t>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb15525197t> ;
+        bnf-onto:FRBNF      15525197 ;
+        skos:altLabel       "Ki-Hun Li"@ko , "Ki-Hun I"@ko , "Ki-Hoon Yi"@ko , "Lee Ki-Hoon"@ko , "Gi-Hoon Rhee"@ko , "이기훈"@ko ;
+        skos:editorialNote  "Phantom / Lee Ki-Hoon, Cho Seung-Yup, DL 2006. - . - National library of Korea. - http://nl.go.kr. - 2007-04-20"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/71702868> ;
+        skos:note           "Auteur de bandes dessinées coréennes (manhwas)"@fr ;
+        skos:prefLabel      "Ki-Hoon Lee"@ko ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb409297774#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15525197t#foaf:Person> .

@@ -1,0 +1,71 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb35002398x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12106531q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12106531q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12106531q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366778566#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12106531q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12106531q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12106531q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb377051152#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12106531q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12106531q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12106531q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12106531q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Nicolas_d'Autrécourt> , <http://catalogue.bnf.fr/ark:/12148/cb12106531q> ;
+        bnf-onto:FRBNF        12106531 ;
+        isni:identifierValid  "0000000058426638" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000058426638> ;
+        skos:altLabel         "Nicholaus de Aurituria (1298?-1369)"@fr , "Nicholaus de Ultricuria (1298?-1369)"@la , "Nicolaus von Autrecourt (1298?-1369)"@fr , "Nicholas of Autrecourt (1298?-1369)"@fr , "Nicholaus de Autricuria (1298?-1369)"@fr , "Nicholaus (1298?-1369)"@fr , "Nicholaus de Altricuria (1298?-1369)"@fr , "Nicolas d' Autrécourt (1298?-1369)"@fr , "Nicolas d'Autricort (1298?-1369)"@fr , "Nicholaus de Utricuria (1298?-1369)"@fr , "Nicola di Autrecourt (1298?-1369)"@fr , "Nicolas (1298?-1369)"@fr ;
+        skos:editorialNote    "Correspondance ; Articles condamnés / Nicolas d'Autrécourt ; texte latin établi par L.M. de Rijk ; introd., trad. et notes par Christophe Grellard, 2001. - . - GDEL. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/02943775X> , <http://dbpedia.org/resource/Nicolas_d'Autrécourt> , <http://fr.wikipedia.org/wiki/Nicolas_d'Autrécourt> , <http://viaf.org/viaf/84486238> , <http://isni-url.oclc.nl/isni/0000000058426638> ;
+        skos:note             "Maître à la Faculté des arts de l'Université de Paris (ca 1325-1340), sociétaire du Collège de Sorbonne. - Maître en théologie (1340). - Détenu à Avignon de 1341 à 1347. - Chanoine de la cathédrale de Metz (à partir de 1338 ; doyen du chapitre à partir de 1350)"@fr ;
+        skos:prefLabel        "Nicolas d'Autrécourt (1298?-1369)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12106531q#foaf:Person> .
+
+<http://data.bnf.fr/12106531/nicolas_d_autrecourt/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12106531q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37400032n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12106531q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12106531q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12106531q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12106531q#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1298 ;
+        bnf-onto:lastYear              1369 ;
+        rdagroup2elements:biographicalInformation
+                "Maître à la Faculté des arts de l'Université de Paris (ca 1325-1340), sociétaire du Collège de Sorbonne. - Maître en théologie (1340). - Détenu à Avignon de 1341 à 1347. - Chanoine de la cathédrale de Metz (à partir de 1338 ; doyen du chapitre à partir de 1350)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1298/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1369/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Religion" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/200/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        bio:birth                      "1298" ;
+        bio:death                      "1369-06-17" ;
+        owl:sameAs                     <http://www.idref.fr/02943775X> , <http://viaf.org/viaf/84486238> , <http://dbpedia.org/resource/Nicolas_d'Autrécourt> ;
+        foaf:familyName                "Nicolas d'Autrécourt" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/12106531/nicolas_d_autrecourt/> .

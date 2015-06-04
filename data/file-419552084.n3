@@ -1,0 +1,88 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1921 ;
+        bnf-onto:lastYear              2007 ;
+        rdagroup2elements:biographicalInformation
+                "Bibliothécaire-archiviste du Conseil d'État. - Secrétaire général adjoint  puis président de la Société d'histoire de la pharmacie. - Vice-président de l'Association le vieux papier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1921/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2007/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1921" ;
+        bio:death                      "2007-03-10" ;
+        owl:sameAs                     <http://www.idref.fr/026942887> , <http://viaf.org/viaf/12310462> ;
+        foaf:familyName                "Julien" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Pierre" ;
+        foaf:name                      "Pierre Julien" ;
+        foaf:page                      <http://data.bnf.fr/11909212/pierre_julien/> .
+
+<http://data.bnf.fr/ark:/12148/cb375359653#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32293848s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346540379#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35795726z#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11909212k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11909212k> ;
+        bnf-onto:FRBNF        11909212 ;
+        isni:identifierValid  "0000000034915971" ;
+        owl:sameAs            <http://isni.org/isni/0000000034915971> ;
+        skos:editorialNote    "Saint Côme et saint Damien, patrons des médecins, chirurgiens et pharmaciens / Pierre Julien, 1980. - . - Guide de l'hist. des sci. et des tech. en France / Christine Blondel, Valérie Gourlet, 1987 (p. 121-122). - . -"@fr , "Monde, 207-03-14 (faire-part de décès). - . - BN Cat. gén. suppl.. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/026942887> , <http://isni.org/isni/0000000034915971> , <http://viaf.org/viaf/12310462> ;
+        skos:note             "Bibliothécaire-archiviste du Conseil d'État. - Secrétaire général adjoint  puis président de la Société d'histoire de la pharmacie. - Vice-président de l'Association le vieux papier"@fr ;
+        skos:prefLabel        "Pierre Julien (1921-2007)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb331222681#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35391160t#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34898809d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb322938494#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347110895#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909212k#foaf:Person> .

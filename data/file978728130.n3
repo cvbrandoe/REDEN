@@ -1,0 +1,121 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42350590g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34786200s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39028840d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc132490/cd0e401#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123388430>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/José_María_Heredia_y_Campuzano> , <http://catalogue.bnf.fr/ark:/12148/cb123388430> ;
+        bnf-onto:FRBNF        12338843 ;
+        isni:identifierValid  "0000000081355153" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081355153> ;
+        skos:altLabel         "José María Heredia y Heredia (1803-1839)"@fr ;
+        skos:editorialNote    "Espasa-Calpe : Heredia y Campuzano (José María). - . - Laffont-Bompiani, Auteurs. - . - Larousse 19e s.. - . -"@fr , "Niagara y otros textos : poesía y prosa selectas / José María Heredia ; selección, pról., cronología y bibliogr. Ángel Augier, 1990. - . - Antologia herediana : selección de las mejores poesias líricas ; los últimos romanos / de José María Heredia y Heredia, 1945. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/032339771> , <http://dbpedia.org/resource/José_María_Heredia_y_Campuzano> , <http://fr.wikipedia.org/wiki/José_María_Heredia_y_Campuzano> , <http://viaf.org/viaf/56682317> , <http://isni-url.oclc.nl/isni/0000000081355153> ;
+        skos:note             "Poète, essayiste et historien. - Lutta pour l'indépendance de Cuba, dut s'exiler au Mexique"@fr ;
+        skos:prefLabel        "José María Heredia (1803-1839)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37530964j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42376776b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43649900d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1803 ;
+        bnf-onto:lastYear              1839 ;
+        rdagroup2elements:biographicalInformation
+                "Poète, essayiste et historien. - Lutta pour l'indépendance de Cuba, dut s'exiler au Mexique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/cu#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1803/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1839/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+        bio:birth                      "1803-12-31" ;
+        bio:death                      "1839-05-07" ;
+        owl:sameAs                     <http://www.idref.fr/032339771> , <http://viaf.org/viaf/56682317> , <http://dbpedia.org/resource/José_María_Heredia_y_Campuzano> ;
+        foaf:birthday                  "12-31" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k129713s.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Jose_Maria_Heredia.jpg?width=300> ;
+        foaf:familyName                "Heredia" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "José María" ;
+        foaf:name                      "José María Heredia" ;
+        foaf:page                      <http://data.bnf.fr/12338843/jose_maria_heredia/> .
+
+<http://data.bnf.fr/ark:/12148/cb39234827s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb355731022#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402009249#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb416541060#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb300101523#frbr:Expression>
+        bnfroles:r4010       <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        marcrel:fmo          <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> .
+
+<http://data.bnf.fr/12338843/jose_maria_heredia/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30213100x#frbr:Expression>
+        bnfroles:r4010       <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        marcrel:fmo          <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37530858b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123388430#foaf:Person> .

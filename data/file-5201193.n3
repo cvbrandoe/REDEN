@@ -1,0 +1,74 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb425444297#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42139243j#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41256990q#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1950 ;
+        rdagroup2elements:biographicalInformation
+                "Attaché au Ministère de la Communauté française de Belgique, Service des Lettres (en 2010). - Diplômé ès lettres" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/be> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/057109109> , <http://viaf.org/viaf/27198985> ;
+        foaf:familyName     "Duhamel" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Joseph" ;
+        foaf:name           "Joseph Duhamel" ;
+        foaf:page           <http://data.bnf.fr/12983833/joseph_duhamel/> .
+
+<http://data.bnf.fr/ark:/12148/cb12983833j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12983833j> ;
+        bnf-onto:FRBNF        12983833 ;
+        isni:identifierValid  "0000000116111176" ;
+        owl:sameAs            <http://isni.org/isni/0000000116111176> ;
+        skos:editorialNote    "Contes glacés / Jacques Sternberg ; choix établi par Joseph Duhamel, 2008. - . - Xavier Hanotte : les doubles / Joseph Duhamel, DL 2010. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000116111176> , <http://www.idref.fr/057109109> , <http://viaf.org/viaf/27198985> ;
+        skos:note             "Attaché au Ministère de la Communauté française de Belgique, Service des Lettres (en 2010). - Diplômé ès lettres"@fr ;
+        skos:prefLabel        "Joseph Duhamel"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb44242718p#frbr:Expression>
+        bnfroles:r540        <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> ;
+        marcrel:aft          <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40939906c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42305216d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35694628z#frbr:Expression>
+        bnfroles:r120        <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> ;
+        marcrel:cwt          <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12983833j#foaf:Person> .

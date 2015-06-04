@@ -1,0 +1,58 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb397642357#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39643471t#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Parolier et disc jokey" ;
+        owl:sameAs       <http://viaf.org/viaf/10116196> ;
+        foaf:familyName  "Berkeley" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Troy Valentino" ;
+        foaf:name        "Troy Valentino Berkeley" ;
+        foaf:page        <http://data.bnf.fr/14846731/troy_valentino_berkeley/> .
+
+<http://data.bnf.fr/ark:/12148/cb14846731k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14846731k> ;
+        bnf-onto:FRBNF        14846731 ;
+        isni:identifierValid  "0000000001530055" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000001530055> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000001530055> , <http://viaf.org/viaf/10116196> ;
+        skos:note             "Parolier et disc jokey"@fr ;
+        skos:prefLabel        "Troy Valentino Berkeley"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39754113f#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39641456f#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411628539#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14846731k#foaf:Person> .

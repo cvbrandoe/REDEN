@@ -1,0 +1,99 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb42365255j#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41291549s#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37701532s#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374688232#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1941 ;
+        rdagroup2elements:biographicalInformation
+                "Historien. - Professeur, University of Wales, Swansea, GB (en 2006)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/033268991> , <http://viaf.org/viaf/12396317> ;
+        foaf:familyName     "France" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "John" ;
+        foaf:name           "John France" ;
+        foaf:page           <http://data.bnf.fr/12415209/john_france/> .
+
+<http://data.bnf.fr/ark:/12148/cb37045235k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb413479333#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb376678564#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124152096>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb124152096> ;
+        bnf-onto:FRBNF        12415209 ;
+        isni:identifierValid  "0000000108706444" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108706444> ;
+        skos:editorialNote    "Rodulfi Glabri Historiarum libri quinque / ed. and transl. by John France ; (Eiusdem auctoris) Vita domni Willelmi abbatis / ed. by Neithard Bulst ; transl. by John France and Paul Reynolds, 1989. - . - Victory in the East : a military history of the First Crusade / John France, 1994. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000108706444> , <http://www.idref.fr/033268991> , <http://viaf.org/viaf/12396317> ;
+        skos:note             "Historien. - Professeur, University of Wales, Swansea, GB (en 2006)"@fr ;
+        skos:prefLabel        "John France"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401806150#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38780007r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425150001#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37177889f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb387800083#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124152096#foaf:Person> .

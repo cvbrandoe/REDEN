@@ -1,0 +1,58 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb413531930#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16077720p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16077720p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16077720p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16077720p#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1817 ;
+        bnf-onto:lastYear               1890 ;
+        rdagroup2elements:biographicalInformation
+                "Roi des Pays-Bas et grand-duc de Luxembourg (1849-1890). - Fils de Guillaume II" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ne#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1817/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1890/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Science politique" , "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/320/> , <http://dewey.info/class/940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/dut> ;
+        rdagroup2elements:placeOfBirth  "Bruxelles (Belgique)" ;
+        rdagroup2elements:placeOfDeath  "Apeldoorn (Pays-Bas)" ;
+        bio:birth                       "1817-02-19" ;
+        bio:death                       "1890-11-14" ;
+        owl:sameAs                      <http://viaf.org/viaf/286321103> ;
+        foaf:birthday                   "02-19" ;
+        foaf:familyName                 "Guillaume" ;
+        foaf:gender                     "male" ;
+        foaf:page                       <http://data.bnf.fr/16077720/guillaume_3/> .
+
+<http://data.bnf.fr/16077720/guillaume_3/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb16077720p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16077720p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb16077720p> ;
+        bnf-onto:FRBNF        16077720 ;
+        isni:identifierValid  "0000000392284540" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000392284540> ;
+        skos:altLabel         "Guillaume III (grand-duc de Luxembourg, 1817-1890)"@fr , "Willem III (roi des Pays-Bas, 1817-1890)"@fr , "Guillaume III des Pays-Bas (1817-1890)"@fr , "Guillaume d' Orange-Nassau (1817-1890)"@fr , "Willem III (grand-duc de Luxembourg, 1817-1890)"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/286321103> , <http://isni-url.oclc.nl/isni/0000000392284540> ;
+        skos:note             "Roi des Pays-Bas et grand-duc de Luxembourg (1849-1890). - Fils de Guillaume II"@fr ;
+        skos:prefLabel        "Guillaume III (roi des Pays-Bas, 1817-1890)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb16077720p#foaf:Person> .

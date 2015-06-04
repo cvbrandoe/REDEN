@@ -1,0 +1,65 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1924 ;
+        rdagroup2elements:biographicalInformation
+                "Économiste. - A été professeur d'économie, et d'histoire et philosophie des sciences, Indiana university, Bloomington ; a été professeur,  Queen's University, Kingston, Canada" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/11141360> , <http://www.idref.fr/032412533> ;
+        foaf:familyName     "Gordon" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Scott" ;
+        foaf:name           "Scott Gordon" ;
+        foaf:page           <http://data.bnf.fr/12344720/scott_gordon/> .
+
+<http://data.bnf.fr/ark:/12148/cb123447209>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb123447209> ;
+        bnf-onto:FRBNF        12344720 ;
+        isni:identifierValid  "0000000108698819" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108698819> ;
+        skos:altLabel         "Howard Scott Gordon"@fr ;
+        skos:editorialNote    "Indiana University. - http://www.indiana.edu/~hpscdept/Fac-Gordon.shtml. - 2009-11-04 LC Authorities. - http://authorities.loc.gov. - 2009-11-04"@fr , "The history and philosophy of social science / Scott Gordon, 1991. - . - Controlling the state : constitutionalism from ancient Athens to today / Scott Gordon, 1999 [contient une bibliographie]. - . - Canada and the new international economy , three essays  / [by H. Scott Gordon, Harry G. Johnson, Arthur J. R. Smith] ; edited by H. E. English , 1961. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000108698819> , <http://www.idref.fr/032412533> , <http://viaf.org/viaf/11141360> ;
+        skos:note             "Économiste. - A été professeur d'économie, et d'histoire et philosophie des sciences, Indiana university, Bloomington ; a été professeur,  Queen's University, Kingston, Canada"@fr ;
+        skos:prefLabel        "Scott Gordon"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39134356t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36608426z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33223852q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb332026995#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37666046c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123447209#foaf:Person> .

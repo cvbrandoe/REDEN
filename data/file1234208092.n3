@@ -1,0 +1,58 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb43292542w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12765338m#foaf:Person> ;
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb12765338m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12765338m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12765338m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41206867w#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb12765338m#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb12765338m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12765338m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35158930m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12765338m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12765338m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12765338m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12765338m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12765338m> ;
+        bnf-onto:FRBNF        12765338 ;
+        isni:identifierValid  "0000000079953613" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000079953613> ;
+        skos:altLabel         "Petrus Tallanderius"@la , "Pierre Taillandier"@fr , "Pierre Tailhandier"@fr ;
+        skos:editorialNote    "Lectura / Petrus Tallanderius ; ed. by Albert Seay, 1977 [Incipit : lectura per Petrum Tallanderii ordinata tam super cantu mensurabili quam immensurabili]. - . - Dictionnaire de la musique : les hommes et leurs oeuvres, 1993 : Taillandier. - . -"@fr , "Grove music online : Tailhandier, Pierre. - http://www.grovemusiconline.com. - 2010-03-02 Guide la musique du Moyen-âge, 1999 : Taillandier, Pierre (Talhandier). - . - Medieval music database : Pierre Taillandier. - http://www.lib.latrobe.edu.au/MMDB. - 2010-03-12"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000079953613> , <http://viaf.org/viaf/50578804> ;
+        skos:note             "Compositeur et théoricien de la musique"@fr ;
+        skos:prefLabel        "Pierre Taillandier (compositeur, 13..-14..?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12765338m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12765338m#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur et théoricien de la musique" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1301-1400/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1401-1500/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        bio:birth                      "13.." ;
+        bio:death                      "14.." ;
+        owl:sameAs                     <http://viaf.org/viaf/50578804> ;
+        foaf:familyName                "Taillandier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Pierre" ;
+        foaf:name                      "Pierre Taillandier" ;
+        foaf:page                      <http://data.bnf.fr/12765338/pierre_taillandier/> .

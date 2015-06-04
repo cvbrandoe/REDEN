@@ -1,0 +1,52 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39288712g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125740790#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125740790#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125740790#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37490670q#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb125740790#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb125740790#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125740790#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40148619g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb125740790#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb125740790#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125740790#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125740790>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb125740790> ;
+        bnf-onto:FRBNF        12574079 ;
+        isni:identifierValid  "0000000110212777" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000110212777> ;
+        skos:editorialNote    "LC authorities. - http://authorities.loc.gov. - 2012-11-23 Bibliothèque nationale, Grande-Bretagne. - http://catalogue.bl.uk. - Site de l'auteur. - http://www.casanovaumbria.eu/Art_History/Tom_Henry. - 2012-11-22"@fr , "The National gallery complete illustrated catalogue / comp. by Christopher Baker and Tom Henry, 1996. - . - Raphaël : les dernières années : [exposition], Paris... 2012... 2013 / sous la direction de Tom Henry et Paul Joannides ; [catalogue par Ana González Mozo, Bruno Mottin, Élisabeth Ravaud, et al.], impr. 2012. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/035059303> , <http://isni-url.oclc.nl/isni/0000000110212777> , <http://viaf.org/viaf/12425428> ;
+        skos:note             "Docteur en histoire de l'art. - Spécialiste de l'art de la Renaissance. - Professeur d'histoire de l'art à l'Université du Kent, Grande-Bretagne (en 2012)"@fr ;
+        skos:prefLabel        "Tom Henry"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb125740790#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125740790#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en histoire de l'art. - Spécialiste de l'art de la Renaissance. - Professeur d'histoire de l'art à l'Université du Kent, Grande-Bretagne (en 2012)" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        foaf:familyName  "Henry" ;
+        foaf:gender      "male" .
+
+<http://data.bnf.fr/ark:/12148/cb376937795#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125740790#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125740790#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125740790#foaf:Person> .

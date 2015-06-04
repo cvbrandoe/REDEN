@@ -1,0 +1,110 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12087384g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12087384g> ;
+        bnf-onto:FRBNF        12087384 ;
+        isni:identifierValid  "0000000083775426" ;
+        owl:sameAs            <http://isni.org/isni/0000000083775426> ;
+        skos:editorialNote    "Juin, maréchal de France / B. Pujo, 1988. - . - Les Flandin de la vallée de la Cure / [Bernard Pujo, Régine Flandin-Pujo]. Les carnets du docteur Charles Flandin(1803-1887), 1997. - . - Vézelay / Arnaud d'Aunay et Bernard Pujo, 2002. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/029197090> , <http://viaf.org/viaf/44324904> , <http://isni.org/isni/0000000083775426> ;
+        skos:note             "Officier de cavalerie, auditeur à l'Institut des hautes études de défense nationale"@fr ;
+        skos:prefLabel        "Bernard Pujo (1921-2002)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37028560x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38873096w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38953189n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35744693j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366913992#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37108897v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb410728164#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370969275#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1921 ;
+        bnf-onto:lastYear              2002 ;
+        rdagroup2elements:biographicalInformation
+                "Officier de cavalerie, auditeur à l'Institut des hautes études de défense nationale" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1921/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2002/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1921" ;
+        bio:death                      "2002-05-24" ;
+        owl:sameAs                     <http://www.idref.fr/029197090> , <http://viaf.org/viaf/44324904> ;
+        foaf:familyName                "Pujo" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Bernard" ;
+        foaf:name                      "Bernard Pujo" ;
+        foaf:page                      <http://data.bnf.fr/12087384/bernard_pujo/> .
+
+<http://data.bnf.fr/ark:/12148/cb35727409k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354203318#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357498621#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb350170677#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34944993k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12087384g#foaf:Person> .

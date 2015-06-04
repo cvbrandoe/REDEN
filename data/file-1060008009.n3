@@ -1,0 +1,60 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Dessinateur, scénariste, producteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://viaf.org/viaf/296216350> ;
+        foaf:familyName  "Gordon" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Steven E." ;
+        foaf:name        "Steven E. Gordon" ;
+        foaf:page        <http://data.bnf.fr/15560510/steven_e__gordon/> .
+
+<http://data.bnf.fr/ark:/12148/cb15560510n>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb15560510n> ;
+        bnf-onto:FRBNF      15560510 ;
+        skos:editorialNote  "Shrek le troisième : un héritier pour le trône / [d'après le film de] Dreamworks ; adaptation originale de Catherine Hapka ; illustré par Steven E. Gordon, DL 2007. - . - Site personnel de l'auteur. - http://www.stevenegordon.com/. - 2007-09-11"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/296216350> ;
+        skos:note           "Dessinateur, scénariste, producteur"@fr ;
+        skos:prefLabel      "Steven E. Gordon"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb424358385#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41079497j#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42743204f#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41027202z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41188674k#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15560510n#foaf:Person> .

@@ -1,0 +1,85 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb42414968q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42052182q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43409514t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15103670k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15103670k> ;
+        bnf-onto:FRBNF        15103670 ;
+        isni:identifierValid  "0000000109957421" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109957421> ;
+        skos:exactMatch       <http://www.idref.fr/131812033> , <http://viaf.org/viaf/85335152> , <http://isni-url.oclc.nl/isni/0000000109957421> ;
+        skos:note             "Auteur et illustratrice d'ouvrages pour la jeunesse"@fr ;
+        skos:prefLabel        "Mélanie Watt"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41321301z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41479976n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402369231#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43410667q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41104727q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Auteur et illustratrice d'ouvrages pour la jeunesse" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://viaf.org/viaf/85335152> , <http://www.idref.fr/131812033> ;
+        foaf:familyName  "Watt" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Mélanie" ;
+        foaf:name        "Mélanie Watt" ;
+        foaf:page        <http://data.bnf.fr/15103670/melanie_watt/> .
+
+<http://data.bnf.fr/ark:/12148/cb43410649s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42130296z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15103670k#foaf:Person> .

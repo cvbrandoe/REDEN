@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34964832h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357180263#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35020690x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35706766k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12094695f>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12094695f> ;
+        bnf-onto:FRBNF   12094695 ;
+        skos:exactMatch  <http://www.idref.fr/029288495> , <http://viaf.org/viaf/24629144> ;
+        skos:note        "Agrégé de physique. - Maître de conférence à l'Université de Pierre et Marie Curie (en 1987)"@fr ;
+        skos:prefLabel   "Michel Henry (physicien)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41351693w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35611815s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12094695f#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1938 ;
+        rdagroup2elements:biographicalInformation
+                "Agrégé de physique. - Maître de conférence à l'Université de Pierre et Marie Curie (en 1987)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/029288495> , <http://viaf.org/viaf/24629144> ;
+        foaf:familyName     "Henry" ;
+        foaf:givenName      "Michel" ;
+        foaf:name           "Michel Henry" ;
+        foaf:page           <http://data.bnf.fr/12094695/michel_henry/> .

@@ -1,0 +1,55 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb13547631w#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Chargé de mission en Afrique Noire Française (en 1932)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/14936544> ;
+        foaf:depiction   <http://gallica.bnf.fr/ark:/12148/bpt6k5520982q.thumbnail> ;
+        foaf:familyName  "Roux" ;
+        foaf:givenName   "A. Charles" ;
+        foaf:name        "A. Charles Roux" ;
+        foaf:page        <http://data.bnf.fr/13547631/a__charles_roux/> .
+
+<http://data.bnf.fr/ark:/12148/cb42092341h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13547631w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13547631w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13547631w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37150580d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13547631w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13547631w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13547631w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13547631w>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13547631w> ;
+        bnf-onto:FRBNF      13547631 ;
+        skos:editorialNote  "L'appel de l'Afrique noire à la France / A. Charles Roux, 1939. - . - BN Cat. gén. suppl.. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/14936544> ;
+        skos:note           "Chargé de mission en Afrique Noire Française (en 1932)"@fr ;
+        skos:prefLabel      "A. Charles Roux"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13547631w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31841994m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13547631w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13547631w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13547631w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb426133894#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13547631w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13547631w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13547631w#foaf:Person> .

@@ -1,0 +1,129 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38684997t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412063336#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34725717d#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31664375g#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36026368h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1905 ;
+        bnf-onto:lastYear               1944 ;
+        bnf-onto:mortPourLaFrance       true ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste, musicographe, traducteur, collectionneur de disques. - Combattit dans les Brigades internationales pendant la guerre d'Espagne. Durant la deuxième guerre mondiale, résistant responsable du secteur de Castanet (Haute-Garonne). Assassiné par la milice. - Pseudonyme de Charles Wolf" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1905/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Saint-Amarin (Haut-Rhin) " ;
+        rdagroup2elements:placeOfDeath  "Toulouse (Haute-Garonne)" ;
+        bio:birth                       "1905-07-05" ;
+        bio:death                       "1944-05-17" ;
+        owl:sameAs                      <http://viaf.org/viaf/8456308> , <http://www.idref.fr/027199142> ;
+        foaf:birthday                   "07-05" ;
+        foaf:familyName                 "Wolff" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Charles" ;
+        foaf:name                       "Charles Wolff" ;
+        foaf:page                       <http://data.bnf.fr/11929352/charles_wolff/> .
+
+<http://data.bnf.fr/ark:/12148/cb11929352h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11929352h> ;
+        bnf-onto:FRBNF        11929352 ;
+        isni:identifierValid  "0000000055092249" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000055092249> ;
+        skos:altLabel         "Charles Wolf (1905-1944)"@fr ;
+        skos:editorialNote    "Anthologie des écrivains morts à la guerre 1939-1945 / publiée par l’Association des Écrivains Combattants,  1960. - . - Maitron : Wolff, Charles (Wolf Charles, dit). - . - WBI. - http://db.saur.de/WBIS/basicSearchResult.jsf. - 2008-03-12"@fr , "Disques : répertoire critique du phonographe / Charles Wolff, 1929. - . - Professeur Unrat : l'Ange bleu / Heinrich Mann ; traduit de l'allemand par Charles Wolff, 1983. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/8456308> , <http://isni-url.oclc.nl/isni/0000000055092249> , <http://www.idref.fr/027199142> ;
+        skos:note             "Journaliste, musicographe, traducteur, collectionneur de disques. - Combattit dans les Brigades internationales pendant la guerre d'Espagne. Durant la deuxième guerre mondiale, résistant responsable du secteur de Castanet (Haute-Garonne). Assassiné par la milice. - Pseudonyme de Charles Wolf"@fr ;
+        skos:prefLabel        "Charles Wolff (1905-1944)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36025189p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39459767q#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32600270d#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316643775#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37749166r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42343450g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31664376t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb377494746#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32414057g#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb324056037#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb436071675#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929352h#foaf:Person> .

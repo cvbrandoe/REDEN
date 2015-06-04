@@ -1,0 +1,29 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+<http://data.bnf.fr/ark:/12148/cb13997226x#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Dirige l'ensemble instrumental Merta Sari spécialisé dans l'interprétation de musique traditionnelle balinaise" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/io#> ;
+        owl:sameAs       <http://viaf.org/viaf/46956467> ;
+        foaf:familyName  "Rodin" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "I Wayan" ;
+        foaf:name        "I Wayan Rodin" ;
+        foaf:page        <http://data.bnf.fr/13997226/i_wayan_rodin/> .
+
+<http://data.bnf.fr/ark:/12148/cb13997226x>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb13997226x> ;
+        bnf-onto:FRBNF   13997226 ;
+        skos:exactMatch  <http://viaf.org/viaf/46956467> ;
+        skos:note        "Dirige l'ensemble instrumental Merta Sari spécialisé dans l'interprétation de musique traditionnelle balinaise"@fr ;
+        skos:prefLabel   "I Wayan Rodin"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb13997226x#foaf:Person> .

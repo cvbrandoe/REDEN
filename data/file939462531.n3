@@ -1,0 +1,59 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb37254818z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120067971#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120067971#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120067971#foaf:Person> .
+
+<http://data.bnf.fr/12006797/david_2/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb120067971#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120067971>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb120067971> ;
+        bnf-onto:FRBNF      12006797 ;
+        skos:altLabel       "Lebna Dengel (1496 ? - 1540 ?)"@fr , "Dawit II (empereur d'Éthiopie, 1496 ? - 1540 ?)"@fr , "Prêtre-Jean (1496 ? - 1540 ?)"@fr , "Lebna Denguel (1496 ? - 1540 ?)"@fr ;
+        skos:editorialNote  "WBI : Lebna Dengel : 1496-1540. - . - LC Authorities : Lebna-Dengel, Negus of Ethiopia, fl. 1508-1540. - http://authorities.loc.gov. - 2010-06-03 Dictionary of African historical biography / par Mark R. Lipschutz, R. Kent Rasmussen, 1989 : Lebna Dengel (Dauti [David] II c. 1496-1540. - . -"@fr , "Legatio David Aethiopiae regis , 1533. - . - GLE : David ; Dawit (1500 - v. 1540), négus d'Abyssinie en  1507. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/97760466> ;
+        skos:note           "De son nom propre Lebna-Denguel, empereur d'Éthiopie sous le nom de David II, surnommé parfois de son temps le \"Prêtre Jean\", nom donné par la légende au souverain éthiopien chrétien depuis le l2e siècle. De ce fait, plusieurs empereurs d'Éthiopie se cachent sous cette appellation légendaire"@fr ;
+        skos:prefLabel      "David II (empereur d'Éthiopie, 1496 ? - 1540 ?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb120067971#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303044437#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120067971#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120067971#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120067971#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120067971#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1496 ;
+        bnf-onto:lastYear              1540 ;
+        rdagroup2elements:biographicalInformation
+                "De son nom propre Lebna-Denguel, empereur d'Éthiopie sous le nom de David II, surnommé parfois de son temps le \"Prêtre Jean\", nom donné par la légende au souverain éthiopien chrétien depuis le l2e siècle. De ce fait, plusieurs empereurs d'Éthiopie se cachent sous cette appellation légendaire" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/et#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1496/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1540/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Science politique" , "Histoire du reste du monde" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/950/> , <http://dewey.info/class/320/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/gez> ;
+        bio:birth                      "1496" ;
+        bio:death                      "1540" ;
+        owl:sameAs                     <http://viaf.org/viaf/97760466> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k531271.thumbnail> ;
+        foaf:familyName                "David" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/12006797/david_2/> .

@@ -1,0 +1,81 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1937 ;
+        rdagroup2elements:biographicalInformation
+                "Ancien conseiller régional de Bretagne. - Président de l'association Blanc c'est exprimé (en 2004)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/24611989> , <http://www.idref.fr/028249666> ;
+        foaf:familyName     "Gautier" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Gérard" ;
+        foaf:name           "Gérard Gautier" ;
+        foaf:page           <http://data.bnf.fr/12012437/gerard_gautier/> .
+
+<http://data.bnf.fr/ark:/12148/cb410037813#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347438257#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12012437k>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12012437k> ;
+        bnf-onto:FRBNF      12012437 ;
+        skos:editorialNote  "Éclats : poèmes / Gérard Gautier, 1983. - . - Foires et salons : mode d'emploi / Gérard Gautier, 1987. - . - L'incendie de la paillote bretonne / Gérard Gautier, 2004. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/028249666> , <http://viaf.org/viaf/24611989> ;
+        skos:note           "Ancien conseiller régional de Bretagne. - Président de l'association Blanc c'est exprimé (en 2004)"@fr ;
+        skos:prefLabel      "Gérard Gautier"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb348664948#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34974777d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39236248k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34956544z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb424454357#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392200998#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb376607414#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012437k#foaf:Person> .

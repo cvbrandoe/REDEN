@@ -1,0 +1,61 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb413227824#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349528753#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1950 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de langue et littérature allemandes, Princeton university" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/4956536> , <http://www.idref.fr/112842895> ;
+        foaf:familyName     "Jennings" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Michael William" ;
+        foaf:name           "Michael William Jennings" ;
+        foaf:page           <http://data.bnf.fr/12087164/michael_william_jennings/> .
+
+<http://data.bnf.fr/ark:/12148/cb120871649>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb120871649> ;
+        bnf-onto:FRBNF      12087164 ;
+        skos:editorialNote  "Dialectical images / Michael W. Jennings, 1987. - . - Library of Congress authorities. - http://authorities.loc.gov. - 2012-07-17"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/4956536> , <http://www.idref.fr/112842895> ;
+        skos:note           "Professeur de langue et littérature allemandes, Princeton university"@fr ;
+        skos:prefLabel      "Michael William Jennings"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390235949#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42591003r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb413864261#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120871649#foaf:Person> .

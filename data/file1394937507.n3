@@ -1,0 +1,60 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb357315622#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1961 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de théologie, Cheltenham and Gloucester college of higher education (en 1994)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/69028392> , <http://www.idref.fr/136875831> ;
+        foaf:familyName     "Scott" ;
+        foaf:givenName      "Peter" ;
+        foaf:name           "Peter Scott" ;
+        foaf:page           <http://data.bnf.fr/12466261/peter_scott/> .
+
+<http://data.bnf.fr/ark:/12148/cb12466261k>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12466261k> ;
+        bnf-onto:FRBNF      12466261 ;
+        skos:editorialNote  "Theology, ideology and liberation / Peter Scott, 1994. - . - BLNA, 1995-03. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/69028392> , <http://www.idref.fr/136875831> ;
+        skos:note           "Professeur de théologie, Cheltenham and Gloucester college of higher education (en 1994)"@fr ;
+        skos:prefLabel      "Peter Scott"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392498276#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39010796m#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42063358v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438528229#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12466261k#foaf:Person> .

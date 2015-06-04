@@ -1,0 +1,68 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb438315115#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42676847j#frbr:Expression>
+        bnfroles:r1040       <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> ;
+        marcrel:cnd          <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42675328n#frbr:Expression>
+        bnfroles:r1040       <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> ;
+        marcrel:cnd          <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425361797#frbr:Expression>
+        bnfroles:r1040       <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> ;
+        marcrel:cnd          <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur et chef d'orchestre" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://viaf.org/viaf/198575162> ;
+        foaf:familyName  "Foster" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Ben" ;
+        foaf:name        "Ben Foster" ;
+        foaf:page        <http://data.bnf.fr/16560721/ben_foster/> .
+
+<http://data.bnf.fr/ark:/12148/cb43832356t#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42536184t#frbr:Expression>
+        bnfroles:r1040       <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> ;
+        marcrel:cnd          <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb165607210>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb165607210> ;
+        bnf-onto:FRBNF      16560721 ;
+        skos:editorialNote  "New blood [Images animées] : live in London / Blue Leach, réal. ; Peter Gabriel, chant ; The new blood orchestra ; Ben Foster, dir. Naïve, 2011. - . - Discogs. - http://www.discogs.com/artist/Ben+Foster#t=Credits_Conducting-Leading&q=&p=1. - 2011-12-29"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/198575162> ;
+        skos:note           "Compositeur et chef d'orchestre"@fr ;
+        skos:prefLabel      "Ben Foster (musicien)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43645691r#frbr:Expression>
+        bnfroles:r1040       <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> ;
+        marcrel:cnd          <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165607210#foaf:Person> .

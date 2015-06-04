@@ -1,0 +1,56 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb32834117m#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb167317407#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb167317407#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb167317407#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb167317407>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb167317407> ;
+        bnf-onto:FRBNF      16731740 ;
+        skos:altLabel       "Courbet fils aîné (18..-18..)"@fr ;
+        skos:editorialNote  "Le Patriote jurassien / [gérant responsable : Athalin Courbet], 1837-1850. - . - Dictionnaire biographique du département du Jura / Max Roche, Michel Vernus, 1996. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/305913653> ;
+        skos:note           "Imprimeur à Lons-le-Saunier. - Fondateur et gérant des journaux \"Le Patriote jurassien\" en 1837 et \"Nouvelliste du Jura\" en 1850"@fr ;
+        skos:prefLabel      "Athalin Courbet (18..-18..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb167317407#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32827110q#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb167317407#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb167317407#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb167317407#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32852601j#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb167317407#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb167317407#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb167317407#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb167317407#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Imprimeur à Lons-le-Saunier. - Fondateur et gérant des journaux \"Le Patriote jurassien\" en 1837 et \"Nouvelliste du Jura\" en 1850" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/305913653> ;
+        foaf:familyName                "Courbet" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Athalin" ;
+        foaf:name                      "Athalin Courbet" ;
+        foaf:page                      <http://data.bnf.fr/16731740/athalin_courbet/> .

@@ -1,0 +1,60 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31177588f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb102867921#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb102867921#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb102867921#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30431595t#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb102867921#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb102867921#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb102867921#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb102867921>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb102867921> ;
+        bnf-onto:FRBNF      10286792 ;
+        skos:editorialNote  "Trois lettres inédites de Jules Ferry / (publiées par Paul Raphaël), 1912. - . - La France, l'Allemagne et les Juifs (1789-1915), antisémitisme et pangermanisme / par Paul Raphaël, 1916. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/160809547> ;
+        skos:note           "Journaliste"@fr ;
+        skos:prefLabel      "Paul Raphaël (journaliste, 18..-19..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb102867921#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb325564483#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb102867921#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb102867921#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb102867921#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb102867921#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://viaf.org/viaf/160809547> ;
+        foaf:familyName                "Raphaël" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Paul" ;
+        foaf:name                      "Paul Raphaël" ;
+        foaf:page                      <http://data.bnf.fr/10286792/paul_raphael/> .
+
+<http://data.bnf.fr/ark:/12148/cb31177589s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb102867921#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb102867921#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb102867921#foaf:Person> .

@@ -1,0 +1,123 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb392002595#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb150257817>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Thierry_Amiel> , <http://catalogue.bnf.fr/ark:/12148/cb150257817> ;
+        bnf-onto:FRBNF        15025781 ;
+        isni:identifierValid  "0000000002713953" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000002713953> ;
+        skos:editorialNote    "Les mots bleus [Enregistrement sonore] ; Casser la voix : live / Thierry Amiel, chant [acc. instr.]. RCA 82876552332u. - . - Thierry site officiel. - http://www.lesitedethierry.com/. - 2005-12-08"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/Thierry_Amiel> , <http://isni-url.oclc.nl/isni/0000000002713953> , <http://viaf.org/viaf/76596274> , <http://fr.wikipedia.org/wiki/Thierry_Amiel> ;
+        skos:note             "Chanteur"@fr ;
+        skos:prefLabel        "Thierry Amiel"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41166637g#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402199778#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41121562c#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390950131#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39100123q#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42200639s#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42281087w#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1982 ;
+        rdagroup2elements:biographicalInformation
+                "Chanteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:placeOfBirth  "Marseille" ;
+        owl:sameAs                      <http://viaf.org/viaf/76596274> , <http://dbpedia.org/resource/Thierry_Amiel> ;
+        foaf:familyName                 "Amiel" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Thierry" ;
+        foaf:name                       "Thierry Amiel" ;
+        foaf:page                       <http://data.bnf.fr/15025781/thierry_amiel/> .
+
+<http://data.bnf.fr/ark:/12148/cb435268971#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40945177x#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401249297#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42769677m#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422005981#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb409685713#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39076965k#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39052429z#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39116266x#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150257817#foaf:Person> .

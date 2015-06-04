@@ -1,0 +1,85 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb302353320#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb133220360>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb133220360> ;
+        bnf-onto:FRBNF        13322036 ;
+        isni:identifierValid  "0000000043203474" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000043203474> ;
+        skos:altLabel         "Jean Simonin (16..-1674)"@fr ;
+        skos:editorialNote    "DBF : Chevalier, (J.). - . - BN Cat. gén. : Chevalier (Jean Simonin dit). - . -"@fr , "Les amours de Calotin : comédie en 3 actes et en vers / par Chevalier, 1995 [document électronique : reprod. de l'éd. de 1870] [préf.: il est dit qu'il mourut avant Molière, i.e. vers 1672]. - . - Lorenz: décédé en 1674. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/24746318> , <http://isni-url.oclc.nl/isni/0000000043203474> , <http://www.idref.fr/116917318> ;
+        skos:note             "Acteur et auteur dramatique. - Fit partie de la troupe de Mademoiselle au Faubourg-Saint-Germain puis au théâtre du Marais"@fr ;
+        skos:prefLabel        "Jean Chevalier (16..-1674)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30235334p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41883340f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302353382#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30235331n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302353351#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30235336c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1674 ;
+        rdagroup2elements:biographicalInformation
+                "Acteur et auteur dramatique. - Fit partie de la troupe de Mademoiselle au Faubourg-Saint-Germain puis au théâtre du Marais" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1674/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "16.." ;
+        bio:death                      "1674" ;
+        owl:sameAs                     <http://www.idref.fr/116917318> , <http://viaf.org/viaf/24746318> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k57416324.thumbnail> ;
+        foaf:familyName                "Chevalier" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Chevalier" ;
+        foaf:page                      <http://data.bnf.fr/13322036/jean_chevalier/> .
+
+<http://data.bnf.fr/ark:/12148/cb30235337q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133220360#foaf:Person> .

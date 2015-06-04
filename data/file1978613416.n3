@@ -1,0 +1,69 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12507047n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12507047n> ;
+        bnf-onto:FRBNF        12507047 ;
+        isni:identifierValid  "0000000032262540" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000032262540> ;
+        skos:altLabel         "Virginie Saint- James"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000032262540> , <http://viaf.org/viaf/116534> , <http://www.idref.fr/034301453> ;
+        skos:note             "Juriste. - Maître de conférences en droit public à l'Université de Limoges (en 2002)"@fr ;
+        skos:prefLabel        "Virginie Saint-James"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40068520n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37695184k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36687003m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41456187z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1964 ;
+        rdagroup2elements:biographicalInformation
+                "Juriste. - Maître de conférences en droit public à l'Université de Limoges (en 2002)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/034301453> , <http://viaf.org/viaf/116534> ;
+        foaf:familyName     "Saint-James" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Virginie" ;
+        foaf:name           "Virginie Saint-James" ;
+        foaf:page           <http://data.bnf.fr/12507047/virginie_saint-james/> .
+
+<http://data.bnf.fr/ark:/12148/cb43882586b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb424852403#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12507047n#foaf:Person> .

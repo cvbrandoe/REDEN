@@ -1,0 +1,83 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1952 ;
+        rdagroup2elements:biographicalInformation
+                "Chanteuse de musique country" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:placeOfBirth  "Virginia Beach, Va." ;
+        owl:sameAs                      <http://dbpedia.org/resource/Juice_Newton> , <http://viaf.org/viaf/54337463> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/JuiceNewtonByPhilKonstantin.jpg?width=300> ;
+        foaf:familyName                 "Newton" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Juice" ;
+        foaf:name                       "Juice Newton" ;
+        foaf:page                       <http://data.bnf.fr/13943104/juice_newton/> .
+
+<http://data.bnf.fr/ark:/12148/cb39052750m#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38128311g#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38104385n#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13943104b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13943104b> , <http://fr.wikipedia.org/wiki/Juice_Newton> ;
+        bnf-onto:FRBNF        13943104 ;
+        isni:identifierValid  "0000000073578146" ;
+        owl:sameAs            <http://isni.org/isni/0000000073578146> ;
+        skos:exactMatch       <http://viaf.org/viaf/54337463> , <http://isni.org/isni/0000000073578146> , <http://dbpedia.org/resource/Juice_Newton> , <http://fr.wikipedia.org/wiki/Juice_Newton> ;
+        skos:note             "Chanteuse de musique country"@fr ;
+        skos:prefLabel        "Juice Newton"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385037062#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38211384z#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38107251s#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38474135h#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381032316#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38975279h#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13943104b#foaf:Person> .

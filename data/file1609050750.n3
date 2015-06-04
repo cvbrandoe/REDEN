@@ -1,0 +1,99 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1961 ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste sportif au \"Figaro\" (en 1992) puis au \"Monde\" (en 2006)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/031334113> , <http://viaf.org/viaf/59140482> ;
+        foaf:familyName     "Constant" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Alain" ;
+        foaf:name           "Alain Constant" ;
+        foaf:page           <http://data.bnf.fr/12256910/alain_constant/> .
+
+<http://data.bnf.fr/ark:/12148/cb37706910s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370265655#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35517074c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36999597c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392800505#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38906601g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122569102>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb122569102> ;
+        bnf-onto:FRBNF        12256910 ;
+        isni:identifierValid  "0000000033976190" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000033976190> ;
+        skos:editorialNote    "Nouvelles des stades / Alain Constant, 1992. - . - Un siècle de football / Jean-Philippe Bouchard, Alain Constant, 2002. - . - Un siècle de football / Jean-Philippe Bouchard, Alain Constant, DL 2006. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000033976190> , <http://www.idref.fr/031334113> , <http://viaf.org/viaf/59140482> ;
+        skos:note             "Journaliste sportif au \"Figaro\" (en 1992) puis au \"Monde\" (en 2006)"@fr ;
+        skos:prefLabel        "Alain Constant"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411621641#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35850129g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb371000502#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40944343x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40078363k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390836490#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122569102#foaf:Person> .

@@ -1,0 +1,104 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb30235075f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302350832#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30235085r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30235084d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30236472r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302350743#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1809 ;
+        bnf-onto:lastYear               1868 ;
+        rdagroup2elements:biographicalInformation
+                "Élève de l'École normale (entre en 1828). - Agrégé de mathématiques (en 1834). - Député de l'Aveyron au Corps législatif (1853-1868)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1809/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1868/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Limoges (Haute-Vienne)" ;
+        rdagroup2elements:placeOfDeath  "Paris (France)" ;
+        bio:birth                       "1809-10-26" ;
+        bio:death                       "1868-11-26" ;
+        owl:sameAs                      <http://www.idref.fr/155496611> , <http://viaf.org/viaf/71382436> ;
+        foaf:birthday                   "10-26" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k204194d.thumbnail> ;
+        foaf:familyName                 "Chevalier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Auguste" ;
+        foaf:name                       "Auguste Chevalier" ;
+        foaf:page                       <http://data.bnf.fr/10734172/auguste_chevalier/> .
+
+<http://data.bnf.fr/ark:/12148/cb107341723>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb107341723> ;
+        bnf-onto:FRBNF        10734172 ;
+        isni:identifierValid  "0000000000127598" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000000127598> ;
+        skos:editorialNote    "WBIS. - http://db.saur.de/WBIS/. - 2008-01-02 DBF : Chevalier (Guillaume-Auguste). - . -"@fr , "Élémens de chimie, d'après M. le Bon L.-J. Thénard / par M. Chevet et M. Auguste Chevalier, 1833. - . - Budget de l'agriculture : discours de M. Auguste Chevalier, député au Corps législatif, dans la séance du 19 juin 1865, 1865. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/71382436> , <http://isni-url.oclc.nl/isni/0000000000127598> , <http://www.idref.fr/155496611> ;
+        skos:note             "Élève de l'École normale (entre en 1828). - Agrégé de mathématiques (en 1834). - Député de l'Aveyron au Corps législatif (1853-1868)"@fr ;
+        skos:prefLabel        "Auguste Chevalier (1809-1868)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302350863#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30235081c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302350801#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb364697785#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb364696797#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107341723#foaf:Person> .

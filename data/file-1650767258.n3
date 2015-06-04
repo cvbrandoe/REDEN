@@ -1,0 +1,86 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb381594379#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422894617#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42331657r#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1933 ;
+        bnf-onto:lastYear               1990 ;
+        rdagroup2elements:biographicalInformation
+                "Acteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1933/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1990/> ;
+        rdagroup2elements:placeOfBirth  "Naples" ;
+        rdagroup2elements:placeOfDeath  "Rome" ;
+        bio:birth                       "1933-06-14" ;
+        bio:death                       "1990-12-18" ;
+        owl:sameAs                      <http://viaf.org/viaf/87275127> ;
+        foaf:birthday                   "06-14" ;
+        foaf:familyName                 "Orlando" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Orazio" ;
+        foaf:name                       "Orazio Orlando" ;
+        foaf:page                       <http://data.bnf.fr/14212741/orazio_orlando/> .
+
+<http://data.bnf.fr/ark:/12148/cb42599928h#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42463142m#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38160156s#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423943091#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42521575j#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb142127418>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb142127418> ;
+        bnf-onto:FRBNF        14212741 ;
+        isni:identifierValid  "0000000107851439" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000107851439> ;
+        skos:editorialNote    "Le roi mystère [Images animées] / Paul Planchon, réal. ; Orazio Orlando, act. Vidéo évasion, 2010. - . - IMDB. - http://www.imdb.fr/name/nm0650010/. - 2010-12-03"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000107851439> , <http://viaf.org/viaf/87275127> ;
+        skos:note             "Acteur"@fr ;
+        skos:prefLabel        "Orazio Orlando (1933-1990)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb142127418#foaf:Person> .

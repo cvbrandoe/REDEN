@@ -1,0 +1,83 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb39192215q#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41381372q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb375459132#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37608719n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38806918v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35061491s#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357446341#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35744608g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37008001m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1959 ;
+        rdagroup2elements:biographicalInformation
+                "Titulaire d'un doctorat de 3e cycle en philosophie (Paris 1, 1987)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/24650715> , <http://www.idref.fr/030760178> ;
+        foaf:familyName     "Parmentier" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Marc" ;
+        foaf:name           "Marc Parmentier" ;
+        foaf:page           <http://data.bnf.fr/12211147/marc_parmentier/> .
+
+<http://data.bnf.fr/ark:/12148/cb122111475>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb122111475> ;
+        bnf-onto:FRBNF        12211147 ;
+        isni:identifierValid  "000000011608880X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000011608880X> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000011608880X> , <http://www.idref.fr/030760178> , <http://viaf.org/viaf/24650715> ;
+        skos:note             "Titulaire d'un doctorat de 3e cycle en philosophie (Paris 1, 1987)"@fr ;
+        skos:prefLabel        "Marc Parmentier"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122111475#foaf:Person> .

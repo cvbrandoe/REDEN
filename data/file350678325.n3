@@ -1,0 +1,57 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14154029m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14154029m> , <http://fr.wikipedia.org/wiki/Kathryn_Beaumont> ;
+        bnf-onto:FRBNF        14154029 ;
+        isni:identifierValid  "0000000046755266" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000046755266> ;
+        skos:editorialNote    "Alice in wonderland [Enregistrement sonore] : original soundtrack / Sammy Fain, Oliver Wallace, Mack David... [et al.], comp. ; the Jud Conlon chorus, choeur ; Kathryn Beaumont, Bill Thompson... [et al.], chant. Walt Disney records 0946 351038 2 3. - . - IMDB. - http://us.imdb.com/name/nm0064607/. - 2009-02-05"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000046755266> , <http://www.idref.fr/162150091> , <http://dbpedia.org/resource/Kathryn_Beaumont> , <http://fr.wikipedia.org/wiki/Kathryn_Beaumont> , <http://viaf.org/viaf/49431729> ;
+        skos:note             "Actrice. - Chanteuse de musique de films d'animation"@fr ;
+        skos:prefLabel        "Kathryn Beaumont"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14154029m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38506821z#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14154029m#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14154029m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14154029m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb410296523#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14154029m#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14154029m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14154029m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38167728w#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14154029m#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14154029m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14154029m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14154029m#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1938 ;
+        rdagroup2elements:biographicalInformation
+                "Actrice. - Chanteuse de musique de films d'animation" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        owl:sameAs          <http://viaf.org/viaf/49431729> , <http://dbpedia.org/resource/Kathryn_Beaumont> , <http://www.idref.fr/162150091> ;
+        foaf:familyName     "Beaumont" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Kathryn" ;
+        foaf:name           "Kathryn Beaumont" ;
+        foaf:page           <http://data.bnf.fr/14154029/kathryn_beaumont/> .
+
+<http://data.bnf.fr/ark:/12148/cb40116098v#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14154029m#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14154029m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14154029m#foaf:Person> .

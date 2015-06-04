@@ -1,0 +1,57 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14610147w#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1509 ;
+        bnf-onto:lastYear               1568 ;
+        rdagroup2elements:biographicalInformation
+                "Poète. - Chancelier de Gueldre. - Frère de : Second, Jean (1511-1536) et de : Nicolai, Nicolaus Grudius (1504-1570)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1509/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1568/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        rdagroup2elements:placeOfBirth  "Malines (Belgique)" ;
+        rdagroup2elements:placeOfDeath  "Bruxelles" ;
+        bio:birth                       "1509" ;
+        bio:death                       "1568" ;
+        owl:sameAs                      <http://viaf.org/viaf/71645733> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k720822.thumbnail> ;
+        foaf:familyName                 "Marius" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Hadrianus" ;
+        foaf:name                       "Hadrianus Marius" ;
+        foaf:page                       <http://data.bnf.fr/14610147/hadrianus_marius/> .
+
+<http://data.bnf.fr/ark:/12148/cb30835130s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14610147w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14610147w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14610147w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14610147w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14610147w> ;
+        bnf-onto:FRBNF        14610147 ;
+        isni:identifierValid  "000000010801590X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000010801590X> ;
+        skos:altLabel         "Adriaan Nicolai (1509-1568)"@fr , "Hadrianus Marius Everardi (1509-1568)"@fr , "Hadrianus Marius Nicolai (1509-1568)"@fr ;
+        skos:editorialNote    "De drie dichtende broers Grudius, Marius en Secundus, 2000. - . - Bibliothèque royale, Pays-Bas. - http://www.kb.nl. - 2005-03-03"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/71645733> , <http://isni-url.oclc.nl/isni/000000010801590X> ;
+        skos:note             "Poète. - Chancelier de Gueldre. - Frère de : Second, Jean (1511-1536) et de : Nicolai, Nicolaus Grudius (1504-1570)"@fr ;
+        skos:prefLabel        "Hadrianus Marius (1509-1568)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14610147w#foaf:Person> .
+
+<http://data.bnf.fr/14610147/hadrianus_marius/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14610147w#foaf:Person> .

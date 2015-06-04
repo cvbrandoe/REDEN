@@ -1,0 +1,62 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb36519475f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133012644#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133012644#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133012644#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb133012644#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1720 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre expert et restaurateur de tableau. - Marchand d'art" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1720/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1720" ;
+        bio:death                      "17.." ;
+        owl:sameAs                     <http://viaf.org/viaf/233199498> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k141664v.thumbnail> ;
+        foaf:familyName                "Boileau" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Nicolas-François-Jacques" ;
+        foaf:name                      "Nicolas-François-Jacques Boileau" ;
+        foaf:page                      <http://data.bnf.fr/13301264/nicolas-francois-jacques_boileau/> .
+
+<http://data.bnf.fr/ark:/12148/cb36506966x#frbr:Expression>
+        bnfroles:r365        <http://data.bnf.fr/ark:/12148/cb133012644#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133012644#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301204095#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133012644#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133012644#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133012644#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb133012644>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb133012644> ;
+        bnf-onto:FRBNF        13301264 ;
+        isni:identifierValid  "0000000366663993" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000366663993> ;
+        skos:exactMatch       <http://viaf.org/viaf/233199498> , <http://isni-url.oclc.nl/isni/0000000366663993> ;
+        skos:note             "Peintre expert et restaurateur de tableau. - Marchand d'art"@fr ;
+        skos:prefLabel        "Nicolas-François-Jacques Boileau (1720-17..?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb133012644#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36522741g#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb133012644#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133012644#foaf:Person> .

@@ -1,0 +1,38 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13535172d>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13535172d> ;
+        bnf-onto:FRBNF      13535172 ;
+        skos:altLabel       "Jean-Baptiste Racine (libraire, 17..-18..)"@fr ;
+        skos:editorialNote  "Delalain, Paris, 1789-1813. - . - Clérembray. - . - Lepreux, Normandie. - . -"@fr , "Almanach de la librairie, 1781. - . - Debray. - . - Manuel de la librairie, 1807 : encore répertorié (?). - . -"@fr , "Quéniart. - . - Darnton, Édition et sédition. - . - Dawson. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/46922307> , <http://www.idref.fr/079246400> ;
+        skos:note           "Attesté en activité à partir d'avril 1781. Associé puis successeur (sept.-oct. 1783) du libraire de Rouen Pierre III Machuel, à la même adresse que celui-ci. Un arrêt du Conseil du 15 oct. 1782 le condamne à la déchéance de sa maîtrise, ainsi que Pierre Machuel, pour publication d'un ouvrage prohibé ; la peine ne semble pas avoir été appliquée. Élu le 1er janv. 1792 juré auprès du tribunal de district de Rouen. Membre de la municipalité de Rouen en l'an II (1793-1794). Jacques-Auguste Delalain, libraire parisien en exercice à Rouen d'avril 1803 à déc. 1804, aurait racheté une partie de son fonds dès 1803. Il est cependant encore en activité en 1805. J.-A. Delalain est attesté définitivement propriétaire de son fonds en 1814"@fr ;
+        skos:prefLabel      "Jean Racine (libraire, 17..-18..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13535172d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13535172d#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Attesté en activité à partir d'avril 1781. Associé puis successeur (sept.-oct. 1783) du libraire de Rouen Pierre III Machuel, à la même adresse que celui-ci. Un arrêt du Conseil du 15 oct. 1782 le condamne à la déchéance de sa maîtrise, ainsi que Pierre Machuel, pour publication d'un ouvrage prohibé ; la peine ne semble pas avoir été appliquée. Élu le 1er janv. 1792 juré auprès du tribunal de district de Rouen. Membre de la municipalité de Rouen en l'an II (1793-1794). Jacques-Auguste Delalain, libraire parisien en exercice à Rouen d'avril 1803 à déc. 1804, aurait racheté une partie de son fonds dès 1803. Il est cependant encore en activité en 1805. J.-A. Delalain est attesté définitivement propriétaire de son fonds en 1814" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1781-1805" ;
+        bio:birth                      "17.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://www.idref.fr/079246400> , <http://viaf.org/viaf/46922307> ;
+        foaf:familyName                "Racine" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Racine" ;
+        foaf:page                      <http://data.bnf.fr/13535172/jean_racine/> .

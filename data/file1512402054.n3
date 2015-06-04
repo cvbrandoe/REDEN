@@ -1,0 +1,43 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb165361068#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Photographe actif à El-Guisr (Égypte, isthme de Suez) dans les années 1860 ; a photographié le chantier de construction du canal de Suez pour le compte de l'entreprise Couvreux." ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/183597332> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b84514946.thumbnail> ;
+        foaf:familyName                "Cuvier" ;
+        foaf:page                      <http://data.bnf.fr/16536106/cuvier/> .
+
+<http://data.bnf.fr/ark:/12148/cb40367026m#frbr:Expression>
+        bnfroles:r530        <http://data.bnf.fr/ark:/12148/cb165361068#foaf:Person> ;
+        marcrel:pht          <http://data.bnf.fr/ark:/12148/cb165361068#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165361068#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb165361068>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb165361068> ;
+        bnf-onto:FRBNF      16536106 ;
+        skos:editorialNote  "Album de l'Isthme de Suez [Image fixe] / Cuvier, photographe à El-Guisr (Egypte). - . - Auer, 1992. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/183597332> ;
+        skos:note           "Photographe actif à El-Guisr (Égypte, isthme de Suez) dans les années 1860 ; a photographié le chantier de construction du canal de Suez pour le compte de l'entreprise Couvreux."@fr ;
+        skos:prefLabel      "Cuvier (photographe, 18..-18..?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb165361068#foaf:Person> .

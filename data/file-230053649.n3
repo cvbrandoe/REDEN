@@ -1,0 +1,88 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb43656488r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41352580h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1962 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/12431172> ;
+        foaf:familyName     "Wagner" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jérôme Arnaud" ;
+        foaf:name           "Jérôme Arnaud Wagner" ;
+        foaf:page           <http://data.bnf.fr/12726560/jerome_arnaud_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb420247916#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42579175d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12726560r>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12726560r> ;
+        bnf-onto:FRBNF   12726560 ;
+        skos:altLabel    "Jérôme Wagner"@fr ;
+        skos:exactMatch  <http://viaf.org/viaf/12431172> ;
+        skos:prefLabel   "Jérôme Arnaud Wagner"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41314230s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb426953131#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42698752r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349924049#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb424508569#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438114464#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb377203014#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12726560r#foaf:Person> .

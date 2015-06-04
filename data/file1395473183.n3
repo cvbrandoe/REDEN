@@ -1,0 +1,50 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb436654621#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb167115330#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb167115330#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb167115330#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb167115330#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1873 ;
+        bnf-onto:lastYear               1955 ;
+        rdagroup2elements:biographicalInformation
+                "Instituteur à Villey-sur-Tille (Côte d'Or) (en 1934). - Officier d'académie" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1873/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1955/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Villey-sur-Tille (Côte-d'Or)" ;
+        rdagroup2elements:placeOfDeath  "Dijon (Côte-d'Or)" ;
+        bio:birth                       "1873-10-10" ;
+        bio:death                       "1955-07-22" ;
+        owl:sameAs                      <http://viaf.org/viaf/305246941> ;
+        foaf:birthday                   "10-10" ;
+        foaf:familyName                 "Garnier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Eugène" ;
+        foaf:name                       "Eugène Garnier" ;
+        foaf:page                       <http://data.bnf.fr/16711533/eugene_garnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb167115330>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb167115330> ;
+        bnf-onto:FRBNF   16711533 ;
+        skos:altLabel    "Émile Garnier (1873-1922)"@fr ;
+        skos:exactMatch  <http://viaf.org/viaf/305246941> ;
+        skos:note        "Instituteur à Villey-sur-Tille (Côte d'Or) (en 1934). - Officier d'académie"@fr ;
+        skos:prefLabel   "Eugène Garnier (1873-1922)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb167115330#foaf:Person> .

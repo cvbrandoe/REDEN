@@ -1,0 +1,69 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1976 ;
+        rdagroup2elements:biographicalInformation
+                "Acteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:placeOfBirth  "New Mexico" ;
+        owl:sameAs                      <http://viaf.org/viaf/107093577> , <http://dbpedia.org/resource/Adrian_Grenier> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Adrian_Grenier_by_David_Shankbone.jpg?width=300> ;
+        foaf:familyName                 "Grenier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Adrian" ;
+        foaf:name                       "Adrian Grenier" ;
+        foaf:page                       <http://data.bnf.fr/14183371/adrian_grenier/> .
+
+<http://data.bnf.fr/ark:/12148/cb43643067r#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14183371m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Adrian_Grenier> , <http://catalogue.bnf.fr/ark:/12148/cb14183371m> ;
+        bnf-onto:FRBNF        14183371 ;
+        isni:identifierValid  "0000000114967894" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114967894> ;
+        skos:editorialNote    "Entourage. Saisons 1 & 2 [Images animées] / Doug Ellin, idée orig. ; Kevin Connolly, Adrian Grenier, Kevin Dillon... [et al.], act. Warner home video, 2008. - . - IMDB. - http://www.us.imdb.com/name/nm0004978/. - 2008-05-23"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/107093577> , <http://isni-url.oclc.nl/isni/0000000114967894> , <http://dbpedia.org/resource/Adrian_Grenier> , <http://fr.wikipedia.org/wiki/Adrian_Grenier> ;
+        skos:note             "Acteur"@fr ;
+        skos:prefLabel        "Adrian Grenier"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414217017#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41235790h#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38597952m#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385300913#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427200053#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14183371m#foaf:Person> .

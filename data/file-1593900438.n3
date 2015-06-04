@@ -1,0 +1,81 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38359524k#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34656900x#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34298429w#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb141012836>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb141012836> ;
+        bnf-onto:FRBNF      14101283 ;
+        skos:editorialNote  "L'étrange rencontre de Gling-Gling / CAP films ; adaptation de Jean Gilbert, 1979. - . - BN Cat. gén. 1970-1979. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/231343148> ;
+        skos:note           "Scénariste pour France 2 et adaptateur pour la télévision et le cinéma"@fr ;
+        skos:prefLabel      "Jean Gilbert (scénariste, 19..-....)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346404524#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34640451s#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34640228q#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34297787n#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34672120s#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Scénariste pour France 2 et adaptateur pour la télévision et le cinéma" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs                     <http://viaf.org/viaf/231343148> ;
+        foaf:familyName                "Gilbert" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Gilbert" ;
+        foaf:page                      <http://data.bnf.fr/14101283/jean_gilbert/> .
+
+<http://data.bnf.fr/ark:/12148/cb346402292#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141012836#foaf:Person> .

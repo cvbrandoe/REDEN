@@ -1,0 +1,81 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12084599b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12084599b> ;
+        bnf-onto:FRBNF        12084599 ;
+        isni:identifierValid  "0000000083832195" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000083832195> ;
+        skos:altLabel         "Henri Cros (1840-1907)"@fr ;
+        skos:editorialNote    "Dictionnaire des inventeurs français / Marie Fernande Alphandéry, 1963. - . - Forme rejetée : DBF. - . -"@fr , "L'encaustique et les autres procédés de peinture chez les anciens : histoire et technique : par Henry Cros,... Charles Henry, 1988 [reprod. en fac-sim. de l'édition de 1884]. - . - GLE. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/02916267X> , <http://viaf.org/viaf/54173721> , <http://isni-url.oclc.nl/isni/0000000083832195> ;
+        skos:note             "Sculpteur, céramiste et peintre. - Frère de: Cros, Charles (1842-1888)"@fr ;
+        skos:prefLabel        "Henry Cros (1840-1907)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> .
+
+<http://data.bnf.fr/12084599/henry_cros/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb403873632#frbr:Expression>
+        bnfroles:r640        <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> ;
+        marcrel:scl          <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30593594c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34947876f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31982212r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421691714#frbr:Expression>
+        bnfroles:r314        <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12084599b#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1840 ;
+        bnf-onto:lastYear               1907 ;
+        rdagroup2elements:biographicalInformation
+                "Sculpteur, céramiste et peintre. - Frère de: Cros, Charles (1842-1888)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1840/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1907/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Sculpture" , "Peinture" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/730/> , <http://dewey.info/class/750/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Narbonne (Aude)" ;
+        rdagroup2elements:placeOfDeath  "Sèvres (Hauts-de-Seine)" ;
+        bio:birth                       "1840-11-16" ;
+        bio:death                       "1907-02" ;
+        owl:sameAs                      <http://www.idref.fr/02916267X> , <http://viaf.org/viaf/54173721> ;
+        foaf:birthday                   "11-16" ;
+        foaf:familyName                 "Cros" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Henry" ;
+        foaf:name                       "Henry Cros" ;
+        foaf:page                       <http://data.bnf.fr/12084599/henry_cros/> .

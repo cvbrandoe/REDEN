@@ -1,0 +1,75 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb144556380>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb144556380> ;
+        bnf-onto:FRBNF        14455638 ;
+        isni:identifierValid  "0000000374894556" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000374894556> ;
+        skos:exactMatch       <http://www.idref.fr/068889801> , <http://isni-url.oclc.nl/isni/0000000374894556> , <http://viaf.org/viaf/224107833> ;
+        skos:note             "Maître de conférences à l'ENSGSI à Nancy. - Enseigne la gestion industrielle et la gestion de projet (en 2002)"@fr ;
+        skos:prefLabel        "Jean Renaud (1953-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414042402#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38993625m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39997755x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38932245n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39097447x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39161007p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38910743f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb144556380#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1953 ;
+        rdagroup2elements:biographicalInformation
+                "Maître de conférences à l'ENSGSI à Nancy. - Enseigne la gestion industrielle et la gestion de projet (en 2002)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1953/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs                     <http://viaf.org/viaf/224107833> , <http://www.idref.fr/068889801> ;
+        foaf:birthday                  "05-15" ;
+        foaf:familyName                "Renaud" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Renaud" ;
+        foaf:page                      <http://data.bnf.fr/14455638/jean_renaud/> .

@@ -1,0 +1,76 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34147006p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305940618#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10740325c>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb10740325c> ;
+        bnf-onto:FRBNF      10740325 ;
+        skos:altLabel       "Marie-Jacques-Marcel Henry (1855-1940)"@fr , "Marcel-Jacques Henry (1855-1940)"@fr ;
+        skos:editorialNote  "Discours prononcé par M. le chanoine Henry... à la fête célébrée, le 27 juin 1909, à la cathédrale de Nancy, en l'honneur de la béatification de Jeanne d'Arc, [1909]. - . - Bibliographie lorraine : HENRY (Marcel-Jacques) - voir aussi le n° 7170-1197. - . -"@fr , "Ésotérisme, occultisme, franc-maçonnerie et christianisme aux XIXe et XXe siècles : explorations bio-bibliographiques / Marie-France James, 2008 : HENRY, Marcel. - . - BN Cat. gén. : HENRY (Mgr Marie-Jacques-Marcel), vicaire général de Verdun. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/19669455> ;
+        skos:note           "Prélat du Diocèse de Verdun (ordonné prêtre en 1881), chanoine honoraire (1894), protonotaire apostolique"@fr ;
+        skos:prefLabel      "Marcel Henry (1855-1940)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305940571#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34110830f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1855 ;
+        bnf-onto:lastYear               1940 ;
+        rdagroup2elements:biographicalInformation
+                "Prélat du Diocèse de Verdun (ordonné prêtre en 1881), chanoine honoraire (1894), protonotaire apostolique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1855/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Savonnières-devant-Bar (Meuse)" ;
+        rdagroup2elements:placeOfDeath  "Le Neubourg (Eure)" ;
+        bio:birth                       "1855-05-26" ;
+        bio:death                       "1940-06-07" ;
+        owl:sameAs                      <http://viaf.org/viaf/19669455> ;
+        foaf:birthday                   "05-26" ;
+        foaf:familyName                 "Henry" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Marcel" ;
+        foaf:name                       "Marcel Henry" ;
+        foaf:page                       <http://data.bnf.fr/10740325/marcel_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb30594058c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30594060x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10740325c#foaf:Person> .

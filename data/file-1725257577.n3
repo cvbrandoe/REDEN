@@ -1,0 +1,59 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb423749601#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb16267184d#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb16267184d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16267184d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42374985c#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb16267184d#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb16267184d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16267184d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16267184d#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1928 ;
+        rdagroup2elements:biographicalInformation
+                "Prénoms complets : Louis-Jean. - Auteur-compositeur" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1928/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "1928-05-11" ;
+        owl:sameAs                     <http://viaf.org/viaf/167538074> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b8594831b.thumbnail> ;
+        foaf:familyName                "Rolland" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Louis" ;
+        foaf:name                      "Louis Rolland" ;
+        foaf:page                      <http://data.bnf.fr/16267184/louis_rolland/> .
+
+<http://data.bnf.fr/ark:/12148/cb16267184d>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb16267184d> ;
+        bnf-onto:FRBNF   16267184 ;
+        skos:exactMatch  <http://viaf.org/viaf/167538074> ;
+        skos:note        "Prénoms complets : Louis-Jean. - Auteur-compositeur"@fr ;
+        skos:prefLabel   "Louis Rolland (18..-1928)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb16267184d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42374946g#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb16267184d#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb16267184d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16267184d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42374956s#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb16267184d#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb16267184d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16267184d#foaf:Person> .

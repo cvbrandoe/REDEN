@@ -1,0 +1,70 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb407753187#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12275338z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12275338z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12275338z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb342616263#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12275338z#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12275338z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12275338z#foaf:Person> .
+
+<http://data.bnf.fr/12275338/robert_jennings/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12275338z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37434012m#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12275338z#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12275338z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12275338z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12275338z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12275338z> ;
+        bnf-onto:FRBNF        12275338 ;
+        isni:identifierValid  "0000000120249274" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000120249274> ;
+        skos:altLabel         "Robert Yewdall Jennings (1913-2004)"@fr ;
+        skos:editorialNote    "Annuaire. 65, 2, Session de Milan 1993 / Institut de Droit international, 1994. - . - BN Cat. gén. suppl.. - . -"@fr , "International law in transition : essays in memory of Judge Nagendra Singh / ed. by Justice R. S. Pathak & R. P. Dhokalia ; foreword H. E. Judge Sir R. Y. Jennings, 1992. - . - BLNA, 1994-10 : Jennings, Sir Robert, 1913-. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000120249274> , <http://viaf.org/viaf/44606724> , <http://www.idref.fr/031562310> ;
+        skos:note             "Juriste. - Ancien président de la Cour internationale de justice. - Ancien professeur de droit international à l'Université de Cambridge, GB. - Directeur de la collection \"Cambridge studies in international and comparative law\" aux éd. Cambridge University press (en 1989)"@fr ;
+        skos:prefLabel        "Robert Jennings (1913-2004)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12275338z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33063003s#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12275338z#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12275338z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12275338z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12275338z#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1913 ;
+        bnf-onto:lastYear              2004 ;
+        rdagroup2elements:biographicalInformation
+                "Juriste. - Ancien président de la Cour internationale de justice. - Ancien professeur de droit international à l'Université de Cambridge, GB. - Directeur de la collection \"Cambridge studies in international and comparative law\" aux éd. Cambridge University press (en 1989)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1913/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2004/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1913-10-19" ;
+        bio:death                      "2004-08-04" ;
+        owl:sameAs                     <http://viaf.org/viaf/44606724> , <http://www.idref.fr/031562310> ;
+        foaf:birthday                  "10-19" ;
+        foaf:familyName                "Jennings" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Robert" ;
+        foaf:name                      "Robert Jennings" ;
+        foaf:page                      <http://data.bnf.fr/12275338/robert_jennings/> .

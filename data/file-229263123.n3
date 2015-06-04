@@ -1,0 +1,76 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1970 ;
+        rdagroup2elements:biographicalInformation
+                "Spécialiste en écologie des plantes. - Chargée de mission au sein du ministère de l'Écologie, du développement durable et de l'énergie (en 2012)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/080779808> , <http://www.idref.fr/074179373> , <http://viaf.org/viaf/32223085> ;
+        foaf:familyName     "Garnier" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Lisa" ;
+        foaf:name           "Lisa Garnier" ;
+        foaf:page           <http://data.bnf.fr/14476060/lisa_garnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb42441876z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39187375v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb144760605>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb144760605> ;
+        bnf-onto:FRBNF   14476060 ;
+        skos:altLabel    "Lisa Durand"@fr , "Lisa Durand-Garnier"@fr , "Lisa Durand- Garnier"@fr ;
+        skos:exactMatch  <http://viaf.org/viaf/32223085> , <http://www.idref.fr/074179373> , <http://www.idref.fr/080779808> ;
+        skos:note        "Spécialiste en écologie des plantes. - Chargée de mission au sein du ministère de l'Écologie, du développement durable et de l'énergie (en 2012)"@fr ;
+        skos:prefLabel   "Lisa Garnier"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420052773#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42005272c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43831832z#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42118168z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389938882#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41222901p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144760605#foaf:Person> .

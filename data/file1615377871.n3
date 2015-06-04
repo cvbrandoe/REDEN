@@ -1,0 +1,137 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1899 ;
+        bnf-onto:lastYear               1978 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur, arrangeur et parolier. - Auteur de plus de 60 opérettes et de 100 musiques de films dont \"Le Chemin du Paradis\" en 1930 et \"Le Congrès s'amuse\" en 1931. - Collabora à la composition de \"L'Auberge du Cheval Blanc\". - Dans les années 60, il fut le responsable des versions allemandes de \"My fair Lady\", \"Hello Dolly!\" et \"L'Homme de la Mancha\"" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1899/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1978/> ;
+        rdagroup2elements:placeOfBirth  "Berlin" ;
+        bio:birth                       "1899-09-29" ;
+        bio:death                       "1978-03-20" ;
+        owl:sameAs                      <http://viaf.org/viaf/61733693> ;
+        foaf:birthday                   "09-29" ;
+        foaf:familyName                 "Gilbert" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Robert" ;
+        foaf:name                       "Robert Gilbert" ;
+        foaf:page                       <http://data.bnf.fr/13923562/robert_gilbert/> .
+
+<http://data.bnf.fr/ark:/12148/cb39735794r#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38046785w#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14021798v#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb378683252#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32165539p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37848962h#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37937914c#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42842907b#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400807122#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139235626>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb139235626> ;
+        bnf-onto:FRBNF        13923562 ;
+        isni:identifierValid  "0000000109078267" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109078267> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000109078267> , <http://viaf.org/viaf/61733693> ;
+        skos:note             "Compositeur, arrangeur et parolier. - Auteur de plus de 60 opérettes et de 100 musiques de films dont \"Le Chemin du Paradis\" en 1930 et \"Le Congrès s'amuse\" en 1931. - Collabora à la composition de \"L'Auberge du Cheval Blanc\". - Dans les années 60, il fut le responsable des versions allemandes de \"My fair Lady\", \"Hello Dolly!\" et \"L'Homme de la Mancha\""@fr ;
+        skos:prefLabel        "Robert Gilbert (1899-1978)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37805387n#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37806192x#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31791502w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37850592m#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb379379340#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37864895n#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb432852955#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb378643373#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37976445v#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb379726652#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139235626#foaf:Person> .

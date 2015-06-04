@@ -1,0 +1,35 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb387037606#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14317443h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14317443h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14317443h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14317443h#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Petit-fils de Léon Tolstoï (1828-1910)" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        foaf:familyName  "Tolstoï" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Jean" ;
+        foaf:name        "Jean Tolstoï" ;
+        foaf:page        <http://data.bnf.fr/14317443/jean_tolstoi/> .
+
+<http://data.bnf.fr/ark:/12148/cb14317443h>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb14317443h> ;
+        bnf-onto:FRBNF  14317443 ;
+        skos:altLabel   "Comte Tolstoï"@fr , "Ivan Tolstoï"@fr ;
+        skos:note       "Petit-fils de Léon Tolstoï (1828-1910)"@fr ;
+        skos:prefLabel  "Jean Tolstoï"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb14317443h#foaf:Person> .

@@ -1,0 +1,50 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13843057g>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13843057g> ;
+        bnf-onto:FRBNF      13843057 ;
+        skos:editorialNote  "Mozart Edition 14 : Le Singspiel allemand [Enregistrement sonore] / [...Joachim Vogt, Wolfgang Wagner, Guenther Koch, T (3 esclaves)...] John Pritchard, Bernhard Klee, Eugen Jochum, Ferenc Fricsay, dir. Philips 6747387. - . - Rundfunkchor Berlin. - http://www.rundfunkchor-berlin.de. -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/54592131> ;
+        skos:note           "Ténor"@fr ;
+        skos:prefLabel      "Wolfgang Wagner (ténor)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13843057g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37984518z#frbr:Expression>
+        bnfroles:r1150       <http://data.bnf.fr/ark:/12148/cb13843057g#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13843057g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13843057g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb378563481#frbr:Expression>
+        bnfroles:r1150       <http://data.bnf.fr/ark:/12148/cb13843057g#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13843057g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13843057g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13843057g#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Ténor" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Musique" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/780/> ;
+        owl:sameAs       <http://viaf.org/viaf/54592131> ;
+        foaf:familyName  "Wagner" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Wolfgang" ;
+        foaf:name        "Wolfgang Wagner" ;
+        foaf:page        <http://data.bnf.fr/13843057/wolfgang_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb37984318d#frbr:Expression>
+        bnfroles:r1150       <http://data.bnf.fr/ark:/12148/cb13843057g#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13843057g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13843057g#foaf:Person> .

@@ -1,0 +1,76 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34593253h#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34785510p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34329849k#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353754935#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37504779c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12619119j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12619119j> ;
+        bnf-onto:FRBNF        12619119 ;
+        isni:identifierValid  "000000010888411X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000010888411X> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000010888411X> , <http://www.idref.fr/026971461> , <http://viaf.org/viaf/37037480> ;
+        skos:note             "Jésuite"@fr , "Traduit du grec en français"@fr ;
+        skos:prefLabel        "Jean-Marie Le Blond"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Traduit du grec en français" , "Jésuite" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/37037480> , <http://www.idref.fr/026971461> ;
+        foaf:familyName  "Le Blond" ;
+        foaf:givenName   "Jean-Marie" ;
+        foaf:name        "Jean-Marie Le Blond" ;
+        foaf:page        <http://data.bnf.fr/12619119/jean-marie_le_blond/> .
+
+<http://data.bnf.fr/ark:/12148/cb35111261f#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35796881m#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb343468645#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12619119j#foaf:Person> .

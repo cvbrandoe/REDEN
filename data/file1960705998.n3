@@ -1,0 +1,77 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1946 ;
+        rdagroup2elements:biographicalInformation
+                "Consultant au cabinet Techné-conseil (en 1999)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/050407988> , <http://viaf.org/viaf/228711802> ;
+        foaf:familyName     "Lefèvre" ;
+        foaf:givenName      "Patrick" ;
+        foaf:name           "Patrick Lefèvre" ;
+        foaf:page           <http://data.bnf.fr/13528451/patrick_lefevre/> .
+
+<http://data.bnf.fr/ark:/12148/cb42326477t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40941516v#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412635845#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427912029#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb424841966#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390426922#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13528451s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13528451s> ;
+        bnf-onto:FRBNF        13528451 ;
+        isni:identifierValid  "0000000364487746" ;
+        owl:sameAs            <http://isni.org/isni/0000000364487746> ;
+        skos:exactMatch       <http://isni.org/isni/0000000364487746> , <http://www.idref.fr/050407988> , <http://viaf.org/viaf/228711802> ;
+        skos:note             "Consultant au cabinet Techné-conseil (en 1999)"@fr ;
+        skos:prefLabel        "Patrick Lefèvre"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37039758c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb377084179#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13528451s#foaf:Person> .

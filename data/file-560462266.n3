@@ -1,0 +1,38 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb144066564#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              711 ;
+        rdagroup2elements:biographicalInformation
+                "Dernier roi des Wisigoths. - Vraisemblablement duc de Bétique, il est élu roi en en 709 puis battu par les troupes de Ṭ̣̣āriq ibn Ziyād en 711" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/0601-0700/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/0711/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/940/> ;
+        bio:birth                      "06.." ;
+        bio:death                      "711" ;
+        foaf:familyName                "Rodrigue" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/14406656/rodrigue/> .
+
+<http://data.bnf.fr/ark:/12148/cb144066564>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb144066564> ;
+        bnf-onto:FRBNF      14406656 ;
+        skos:altLabel       "Rodrigo (roi des Wisigoths, 06..-0711)"@es , "Rodericus (roi des Wisigoths, 06..-0711)"@la , "Rodéric (roi des Wisigoths, 06..-0711)"@fr , "Roderich (roi des Wisigoths, 06..-0711)"@de ;
+        skos:editorialNote  "Crónica del rey don Rodrigo : crónica sarracina / Pedro de Corral ; ed., introd. y notas de James Donald Fogelquist, 2001. - . - Lexikon des Mittelalters : Roderich (Rodericus, span. Rodrigo). - . -"@fr , "GLU : Rodrigue ou Rodéric. - . - Bibliothèque nationale d'Espagne. Autorités : : Rodrigo, rey de los Visigodos. - http://www.bne.es. - 2010-01-20 Dicc. encicl. Espasa : Rodrigo. - . -"@fr ;
+        skos:note           "Dernier roi des Wisigoths. - Vraisemblablement duc de Bétique, il est élu roi en en 709 puis battu par les troupes de Ṭ̣̣āriq ibn Ziyād en 711"@fr ;
+        skos:prefLabel      "Rodrigue (roi des Wisigoths, 06..-0711)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb144066564#foaf:Person> .
+
+<http://data.bnf.fr/14406656/rodrigue/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb144066564#foaf:Person> .

@@ -1,0 +1,58 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Illustratrice de livres pour enfants" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/41947036> , <http://www.idref.fr/086760793> ;
+        foaf:familyName  "Dujardin" ;
+        foaf:givenName   "Véronique" ;
+        foaf:name        "Véronique Dujardin" ;
+        foaf:page        <http://data.bnf.fr/12511564/veronique_dujardin/> .
+
+<http://data.bnf.fr/ark:/12148/cb35801279h#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35828598q#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36194759s#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357302740#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35773237b#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12511564c>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12511564c> ;
+        bnf-onto:FRBNF   12511564 ;
+        skos:exactMatch  <http://www.idref.fr/086760793> , <http://viaf.org/viaf/41947036> ;
+        skos:note        "Illustratrice de livres pour enfants"@fr ;
+        skos:prefLabel   "Véronique Dujardin"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12511564c#foaf:Person> .

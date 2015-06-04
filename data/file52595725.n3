@@ -1,0 +1,106 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb39668841m#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1943 ;
+        rdagroup2elements:biographicalInformation
+                "Chanteuse" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:placeOfBirth  "Nice" ;
+        owl:sameAs                      <http://www.idref.fr/076690245> , <http://viaf.org/viaf/256825891> ;
+        foaf:familyName                 "Grimm" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Chantal" ;
+        foaf:name                       "Chantal Grimm" ;
+        foaf:page                       <http://data.bnf.fr/13926689/chantal_grimm/> .
+
+<http://data.bnf.fr/ark:/12148/cb38370583b#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139266897>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb139266897> ;
+        bnf-onto:FRBNF   13926689 ;
+        skos:exactMatch  <http://viaf.org/viaf/256825891> , <http://www.idref.fr/076690245> ;
+        skos:note        "Chanteuse"@fr ;
+        skos:prefLabel   "Chantal Grimm"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42348309z#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381784542#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38435207z#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38245030s#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38374992c#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb391581330#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382453925#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41201917d#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38335444j#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38179671f#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38450880w#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38563431p#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139266897#foaf:Person> .

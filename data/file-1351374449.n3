@@ -1,0 +1,91 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1872 ;
+        bnf-onto:lastYear               1960 ;
+        rdagroup2elements:biographicalInformation
+                "Universitaire. - Professeur de philosophie à l'Université de Bruxelles (1897-1907). - Fils de Marcellin Berthelot (1827-1907). - Normalien. - Agrégé de philosophie (1892). - Prénoms complets : René, Jules" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1872/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1960/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Sèvres (Hauts-de-Seine)" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1872-08-18" ;
+        bio:death                       "1960-06-16" ;
+        owl:sameAs                      <http://www.idref.fr/151760144> , <http://viaf.org/viaf/11357618> ;
+        foaf:birthday                   "08-18" ;
+        foaf:familyName                 "Berthelot" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "René" ;
+        foaf:name                       "René Berthelot" ;
+        foaf:page                       <http://data.bnf.fr/12967563/rene_berthelot/> .
+
+<http://data.bnf.fr/ark:/12148/cb31806190d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb318061923#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31806194s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb129675636>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb129675636> ;
+        bnf-onto:FRBNF        12967563 ;
+        isni:identifierValid  "0000000110249932" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000110249932> ;
+        skos:editorialNote    "Qui était qui, XXs siècle / Béatrice et Michel Wattel, 2005. - . - BN Cat. gén. suppl.. - . -"@fr , "Évolutionnisme et platonisme, mélanges d'histoire de la philosophie et d'histoire des sciences / par René Berthelot, 1908. - . - World biographical information system. - http://db.saur.de/WBIS. - 2009-02-05"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000110249932> , <http://viaf.org/viaf/11357618> , <http://www.idref.fr/151760144> ;
+        skos:note             "Universitaire. - Professeur de philosophie à l'Université de Bruxelles (1897-1907). - Fils de Marcellin Berthelot (1827-1907). - Normalien. - Agrégé de philosophie (1892). - Prénoms complets : René, Jules"@fr ;
+        skos:prefLabel        "René Berthelot (1872-1960)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> .
+
+<http://data.bnf.fr/12967563/rene_berthelot/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb318061954#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35376194x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31806193f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31806191r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb318061896#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129675636#foaf:Person> .

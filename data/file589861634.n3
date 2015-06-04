@@ -1,0 +1,64 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb137407325#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1267 ;
+        bnf-onto:lastYear              1327 ;
+        rdagroup2elements:biographicalInformation
+                "Roi de Sicile sous le nom de Jacques Ier (1285-1327). - Comte de Barcelone et roi d'Aragon et de Valence (1291-1327). - Roi de Majorque (1291-1295)" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1267/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1327/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+        bio:birth                      "1267-08-10" ;
+        bio:death                      "1327-11-02" ;
+        owl:sameAs                     <http://viaf.org/viaf/70299199> , <http://www.idref.fr/078387795> ;
+        foaf:birthday                  "08-10" ;
+        foaf:familyName                "Jacques" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/13740732/jacques_2/> .
+
+<http://data.bnf.fr/13740732/jacques_2/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb137407325#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31684261x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137407325#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137407325#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137407325#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30640732s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137407325#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137407325#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137407325#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30640731f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137407325#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137407325#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137407325#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb137407325>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb137407325> ;
+        bnf-onto:FRBNF        13740732 ;
+        isni:identifierValid  "0000000115570768" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000115570768> ;
+        skos:altLabel         "Jacques II le Juste (1267-1327)"@fr , "Jaume II (roi d'Aragon, 1267-1327)"@fr , "Jaume II (roi d'Aragon, 1267-1327)"@ca , "Jaume el Just (1267-1327)"@ca , "Jaime II (roi d'Aragon, 1267-1327)"@es , "Jaime II (roi d'Aragon, 1267-1327)"@fr ;
+        skos:editorialNote    "Bibliothèque nationale de Catalogne. Fichier d'autorité. - http://cantic.bnc.cat. - 2012-05-24 GDEL : Jacques II le Juste (v. 1267-1327). - . - El castell del rei en temps de Jaume II : edició comentada dels llibres de comptes de l'obra (1313-1317) / Isabel Companys i Farrerons, Núria Montardit i Bofarull, 1995. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/078387795> , <http://viaf.org/viaf/70299199> , <http://isni-url.oclc.nl/isni/0000000115570768> ;
+        skos:note             "Roi de Sicile sous le nom de Jacques Ier (1285-1327). - Comte de Barcelone et roi d'Aragon et de Valence (1291-1327). - Roi de Majorque (1291-1295)"@fr ;
+        skos:prefLabel        "Jacques II (roi d'Aragon, 1267-1327)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb137407325#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121344020>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb137407325#foaf:Person> .

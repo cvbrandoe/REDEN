@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb36610995f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38868173h#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366416061#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366918952#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37471187w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1948 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur d'archivistique (en 1982)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/028404009> , <http://viaf.org/viaf/110255141> ;
+        foaf:familyName     "Foster" ;
+        foaf:givenName      "Janet" ;
+        foaf:name           "Janet Foster" ;
+        foaf:page           <http://data.bnf.fr/12024568/janet_foster/> .
+
+<http://data.bnf.fr/ark:/12148/cb12024568t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12024568t> ;
+        bnf-onto:FRBNF        12024568 ;
+        isni:identifierValid  "0000000119541825" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000119541825> ;
+        skos:editorialNote    "Index to testamentary records of the deanery of Arches / ed. by J. Foster, 1985. - . - BLNA, 1996-06. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/110255141> , <http://isni-url.oclc.nl/isni/0000000119541825> , <http://www.idref.fr/028404009> ;
+        skos:note             "Professeur d'archivistique (en 1982)"@fr ;
+        skos:prefLabel        "Janet Foster"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12024568t#foaf:Person> .

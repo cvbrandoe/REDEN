@@ -1,0 +1,66 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31196375q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12513422n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12513422n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12513422n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12513422n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12513422n> ;
+        bnf-onto:FRBNF        12513422 ;
+        isni:identifierValid  "0000000047709173" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000047709173> ;
+        skos:editorialNote    "Manière de parler la langue françoise : selon ses differens styles / André Renaud, 1973 [reprod. de l'éd. de 1697]. - . - Cioranescu, 17e s.. - . -"@fr , "Larousse 19e s.. - . - BN Cat. gén. : Renaud (Abbé André). - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000047709173> , <http://viaf.org/viaf/117747> , <http://www.idref.fr/034371826> ;
+        skos:note             "Homme de lettres. - Abbé. - Docteur en théologie"@fr ;
+        skos:prefLabel        "André Renaud (16..-1702?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12513422n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35154097f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12513422n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12513422n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12513422n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12513422n#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:lastYear               1702 ;
+        rdagroup2elements:biographicalInformation
+                "Homme de lettres. - Abbé. - Docteur en théologie" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1702/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfDeath  "Lyon" ;
+        bio:birth                       "16.." ;
+        bio:death                       "1702" ;
+        owl:sameAs                      <http://viaf.org/viaf/117747> , <http://www.idref.fr/034371826> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k508575.thumbnail> ;
+        foaf:familyName                 "Renaud" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "André" ;
+        foaf:name                       "André Renaud" ;
+        foaf:page                       <http://data.bnf.fr/12513422/andre_renaud/> .
+
+<http://data.bnf.fr/ark:/12148/cb31196374c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12513422n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12513422n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12513422n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35202496v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12513422n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12513422n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12513422n#foaf:Person> .

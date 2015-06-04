@@ -1,0 +1,37 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb155866710#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1921 ;
+        rdagroup2elements:biographicalInformation
+                "Dominicaine d'un institut séculier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Religion" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/200/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        foaf:familyName     "Agnès" ;
+        foaf:gender         "female" ;
+        foaf:page           <http://data.bnf.fr/15586671/agnes/> .
+
+<http://data.bnf.fr/ark:/12148/cb155866710>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb155866710> ;
+        bnf-onto:FRBNF      15586671 ;
+        skos:altLabel       "Agnès Thibaud"@fr , "Agnès Thibault"@fr ;
+        skos:editorialNote  "Soeur Agnès : coeur kidnappé en Haïti / Noël Guetny, impr. 2006. - . - Presse. - http://www.la-croix.com/article/index.jsp?docId=2257155&imprim=true. - 2007-07-05"@fr ;
+        skos:note           "Dominicaine d'un institut séculier"@fr ;
+        skos:prefLabel      "Agnès (dominicaine)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb155866710#foaf:Person> .
+
+<http://data.bnf.fr/15586671/agnes/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb155866710#foaf:Person> .

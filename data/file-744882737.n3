@@ -1,0 +1,34 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+<http://data.bnf.fr/ark:/12148/cb119063364>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb119063364> ;
+        bnf-onto:FRBNF      11906336 ;
+        skos:editorialNote  "Le vair palefroi / Huon le Roi ; avec deux versions de \"La male honte\" par Huon de Cambrai et par Guillaume, fabliaux du XIIIe siècle, 1983. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/291346074> , <http://www.idref.fr/057569738> ;
+        skos:note           "Auteur de fabliaux. - On lui attribue une version de \"La male honte\", fabliau du milieu du XIIIe siècle"@fr ;
+        skos:prefLabel      "Guillaume (auteur de fabliaux, 12..?-12..?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb119063364#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119063364#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Auteur de fabliaux. - On lui attribue une version de \"La male honte\", fabliau du milieu du XIIIe siècle" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1201-1300/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1201-1300/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "12.." ;
+        bio:death                      "12.." ;
+        owl:sameAs                     <http://viaf.org/viaf/291346074> , <http://www.idref.fr/057569738> ;
+        foaf:familyName                "Guillaume" ;
+        foaf:page                      <http://data.bnf.fr/11906336/guillaume/> .

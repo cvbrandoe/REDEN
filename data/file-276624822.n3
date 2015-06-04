@@ -1,0 +1,46 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb13060519m#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Secrétaire de la Conférence des avocats de Poitiers (en 1868)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://viaf.org/viaf/275335639> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k6354074v.thumbnail> ;
+        foaf:familyName                "Giraud" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Charles" ;
+        foaf:name                      "Charles Giraud" ;
+        foaf:page                      <http://data.bnf.fr/13060519/charles_giraud/> .
+
+<http://data.bnf.fr/ark:/12148/cb13060519m>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13060519m> ;
+        bnf-onto:FRBNF      13060519 ;
+        skos:editorialNote  "Éloges de M. Henri Grellaud, ancien batonnier... et de MM. Jolly, Jacquelin, Girault, avocats, décédés dans l'année / par Charles Giraud,... secrétaire de la Conférence, 1868. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/275335639> ;
+        skos:note           "Secrétaire de la Conférence des avocats de Poitiers (en 1868)"@fr ;
+        skos:prefLabel      "Charles Giraud (secrétaire de la Conférence des avocats, 18..-19..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13060519m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30511286s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13060519m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13060519m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13060519m#foaf:Person> .

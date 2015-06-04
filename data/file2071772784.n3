@@ -1,0 +1,101 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1931 ;
+        bnf-onto:lastYear              2008 ;
+        rdagroup2elements:biographicalInformation
+                "Romancier et scénariste. - Pseudonyme de Donald James Wheal. - A aussi écrit sous son vrai nom. - A aussi écrit  en collaboration avec Anthony Barwick sous  le pseudonyme collectif James Barwick" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1931/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2008/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1931-08-22" ;
+        bio:death                      "2008-04-28" ;
+        owl:sameAs                     <http://www.idref.fr/086261452> , <http://viaf.org/viaf/97929965> ;
+        foaf:birthday                  "08-22" ;
+        foaf:familyName                "James" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Donald" ;
+        foaf:name                      "Donald James" ;
+        foaf:page                      <http://data.bnf.fr/14108370/donald_james/> .
+
+<http://data.bnf.fr/ark:/12148/cb40123258n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39224963q#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14108370t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14108370t> ;
+        bnf-onto:FRBNF        14108370 ;
+        isni:identifierValid  "0000000121447483" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121447483> ;
+        skos:editorialNote    "Monstrum / Donald James ; trad. de l'anglais par Joseph Antoine, 2000. - . - Cosmos 1999 [Images animées] / Tom Clegg, Charles Crichton, Peter Medak, réal. ; Terence Feely, James Donald, Terrance Dicks, scénario. TF1 vidéo, [2004]. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/97929965> , <http://isni-url.oclc.nl/isni/0000000121447483> , <http://www.idref.fr/086261452> ;
+        skos:note             "Romancier et scénariste. - Pseudonyme de Donald James Wheal. - A aussi écrit sous son vrai nom. - A aussi écrit  en collaboration avec Anthony Barwick sous  le pseudonyme collectif James Barwick"@fr ;
+        skos:prefLabel        "Donald James (1931-2008)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42513796b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400081925#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb371927401#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347310438#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39200796r#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389608819#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39240682m#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390248126#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392249700#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108370t#foaf:Person> .

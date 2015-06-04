@@ -1,0 +1,45 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/16194827/helene_villefranche/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb161948277#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb161948277#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1879 ;
+        bnf-onto:lastYear              1951 ;
+        rdagroup2elements:biographicalInformation
+                "Fondatrice des Auxiliaires du Coeur de Jésus" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1879/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1951/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Religion" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/200/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1879-01-10" ;
+        bio:death                      "1951-07-04" ;
+        foaf:birthday                  "01-10" ;
+        foaf:familyName                "Villefranche" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Hélène" ;
+        foaf:name                      "Hélène Villefranche" ;
+        foaf:page                      <http://data.bnf.fr/16194827/helene_villefranche/> .
+
+<http://data.bnf.fr/ark:/12148/cb161948277>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb161948277> ;
+        bnf-onto:FRBNF  16194827 ;
+        skos:altLabel   "Marie-Agnès du Coeur de Jésus (Mère, 1879-1951)"@fr , "Agnès (Mère, 1879-1951)"@fr ;
+        skos:note       "Fondatrice des Auxiliaires du Coeur de Jésus"@fr ;
+        skos:prefLabel  "Hélène Villefranche (1879-1951)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb161948277#foaf:Person> .

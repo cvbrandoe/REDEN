@@ -1,0 +1,49 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb37265214c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13517293q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13517293q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13517293q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13517293q#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1892 ;
+        bnf-onto:lastYear              1947 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de chimie colloidale à l' Université de l'État de l'Ohio" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1892/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1947/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1892" ;
+        bio:death                      "1947" ;
+        owl:sameAs                     <http://www.idref.fr/175386641> , <http://viaf.org/viaf/272511463> ;
+        foaf:familyName                "France" ;
+        foaf:givenName                 "Wesley George" ;
+        foaf:name                      "Wesley George France" ;
+        foaf:page                      <http://data.bnf.fr/13517293/wesley_george_france/> .
+
+<http://data.bnf.fr/ark:/12148/cb13517293q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13517293q> ;
+        bnf-onto:FRBNF        13517293 ;
+        isni:identifierValid  "0000000383912226" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000383912226> ;
+        skos:editorialNote    "A laboratory manual of elementary physical chemistry / by Edward Mack and Wesley G. France, 1995 [document électronique : reprod. de l'éd. de 1928]. - . - Internet, telnet:library.ohio-state.edu, 1998-08-10. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/175386641> , <http://viaf.org/viaf/272511463> , <http://isni-url.oclc.nl/isni/0000000383912226> ;
+        skos:note             "Professeur de chimie colloidale à l' Université de l'État de l'Ohio"@fr ;
+        skos:prefLabel        "Wesley George France (1892-1947)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13517293q#foaf:Person> .

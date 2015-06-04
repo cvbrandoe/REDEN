@@ -1,0 +1,67 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb11929610d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11929610d> ;
+        bnf-onto:FRBNF        11929610 ;
+        isni:identifierValid  "0000000081559703" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081559703> ;
+        skos:altLabel         "Ewa Bérard- Zarzycka"@fr , "Ewa Bérard-Zarzycka"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000081559703> , <http://viaf.org/viaf/76324542> , <http://www.idref.fr/02720278X> ;
+        skos:note             "Chercheur au CNRS, a fait ses études à Varsovie et à Yale"@fr ;
+        skos:prefLabel        "Ewa Bérard"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42092945j#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Chercheur au CNRS, a fait ses études à Varsovie et à Yale" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/02720278X> , <http://viaf.org/viaf/76324542> ;
+        foaf:familyName  "Bérard" ;
+        foaf:givenName   "Ewa" ;
+        foaf:name        "Ewa Bérard" ;
+        foaf:page        <http://data.bnf.fr/11929610/ewa_berard/> .
+
+<http://data.bnf.fr/ark:/12148/cb42801851g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347022783#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb358431786#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb376238899#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35456155s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11929610d#foaf:Person> .

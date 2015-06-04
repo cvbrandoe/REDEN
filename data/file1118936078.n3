@@ -1,0 +1,75 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42119469c#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425354685#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14169944d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14169944d> ;
+        bnf-onto:FRBNF        14169944 ;
+        isni:identifierValid  "000000010866394X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000010866394X> ;
+        skos:altLabel         "Marius de Vries"@fr ;
+        skos:editorialNote    "Easy virtue [Enregistrement sonore] : original motion picture soundtrack composed by Marius de Vries ; including vocal performances by Ben Barnes & Jessica Biel. / the Easy virtue orchestra ; Marius de Vries, dir.. Decca records 478 1417. - . - IMDB. - http://us.imdb.com/name/nm0003946/. - 2009-09-04"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000010866394X> , <http://www.idref.fr/159658284> , <http://viaf.org/viaf/7038467> ;
+        skos:note             "Compositeur de musique de films et chef d'orchestre. - Producteur"@fr ;
+        skos:prefLabel        "Marius De Vries"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41489990d#frbr:Expression>
+        bnfroles:r1040       <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> ;
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> ;
+        marcrel:cnd          <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425308353#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1961 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur de musique de films et chef d'orchestre. - Producteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        owl:sameAs          <http://viaf.org/viaf/7038467> , <http://www.idref.fr/159658284> ;
+        foaf:familyName     "De Vries" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Marius" ;
+        foaf:name           "Marius De Vries" ;
+        foaf:page           <http://data.bnf.fr/14169944/marius_de_vries/> .
+
+<http://data.bnf.fr/ark:/12148/cb38435465p#frbr:Expression>
+        bnfroles:r1040       <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> ;
+        marcrel:cnd          <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38584500b#frbr:Expression>
+        bnfroles:r1860       <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38383608s#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14169944d#foaf:Person> .

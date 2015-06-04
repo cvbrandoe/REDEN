@@ -1,0 +1,79 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb391071222#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411101008#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42146528z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1947 ;
+        rdagroup2elements:biographicalInformation
+                "Agrégé d'histoire. - Enseignant à l'Université de Marne-la-Vallée (en 2003)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/49391736> , <http://www.idref.fr/053477731> ;
+        foaf:familyName     "Delacroix" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Christian" ;
+        foaf:name           "Christian Delacroix" ;
+        foaf:page           <http://data.bnf.fr/13576833/christian_delacroix/> .
+
+<http://data.bnf.fr/ark:/12148/cb41033489n#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422891304#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40011153s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13576833h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13576833h> ;
+        bnf-onto:FRBNF        13576833 ;
+        isni:identifierValid  "0000000122797215" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000122797215> ;
+        skos:editorialNote    "Les courants historiques en France, 19e-20e siècles / Christian Delacroix, François Dosse, Patrick Garcia, 1999. - . - Histoire et historiens en France depuis 1945 / Christian Delacroix, François Dosse, Patrick Garcia, 2003. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/053477731> , <http://isni-url.oclc.nl/isni/0000000122797215> , <http://viaf.org/viaf/49391736> ;
+        skos:note             "Agrégé d'histoire. - Enseignant à l'Université de Marne-la-Vallée (en 2003)"@fr ;
+        skos:prefLabel        "Christian Delacroix"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414687639#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37677250m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13576833h#foaf:Person> .

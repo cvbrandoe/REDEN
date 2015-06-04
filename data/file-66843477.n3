@@ -1,0 +1,31 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/12163886/fernand_rolland/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12163886b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12163886b#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1920 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre et sculpteur français" ;
+        owl:sameAs          <http://www.idref.fr/086141198> ;
+        foaf:familyName     "Rolland" ;
+        foaf:givenName      "Fernand" ;
+        foaf:name           "Fernand Rolland" ;
+        foaf:page           <http://data.bnf.fr/12163886/fernand_rolland/> .
+
+<http://data.bnf.fr/ark:/12148/cb12163886b>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12163886b> ;
+        bnf-onto:FRBNF   12163886 ;
+        skos:exactMatch  <http://www.idref.fr/086141198> ;
+        skos:note        "Peintre et sculpteur français"@fr ;
+        skos:prefLabel   "Fernand Rolland"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12163886b#foaf:Person> .

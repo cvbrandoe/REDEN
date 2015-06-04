@@ -1,0 +1,61 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb38305521j#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb144456739#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb144456739#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144456739#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb144456739#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1894 ;
+        bnf-onto:lastYear              1996 ;
+        rdagroup2elements:biographicalInformation
+                "Chanteur de jazz" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1894/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1996/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1894" ;
+        bio:death                      "1996" ;
+        owl:sameAs                     <http://viaf.org/viaf/24821714> ;
+        foaf:familyName                "Robyn" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "William" ;
+        foaf:name                      "William Robyn" ;
+        foaf:page                      <http://data.bnf.fr/14445673/william_robyn/> .
+
+<http://data.bnf.fr/ark:/12148/cb144456739>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb144456739> ;
+        bnf-onto:FRBNF        14445673 ;
+        isni:identifierValid  "0000000368524305" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000368524305> ;
+        skos:altLabel         "Bob Hillman (1894-1996)"@fr , "Walter Clarke (1894-1996)"@fr , "Edgar Richards (1894-1996)"@fr , "Lewis Roberts (1894-1996)"@fr , "Jamie Bolton (1894-1996)"@fr , "Fred Franklin (1894-1996)"@fr , "Walter Richards (1894-1996)"@fr , "Albert Lee (1894-1996)"@fr , "Mario Rubinoff (1894-1996)"@fr , "Roy Powell (1894-1996)"@fr , "Ray Powell (1894-1996)"@fr , "Edmund Playman (1894-1996)"@fr , "Billy Roberts (1894-1996)"@fr , "Allen O’Shea (1894-1996)"@fr , "Fred Conroy (1894-1996)"@fr , "Wolf Scarpioff (1894-1996)"@fr , "Louis Young (1894-1996)"@fr , "Edward Hamilton (1894-1996)"@fr , "Eddie Shaw (1894-1996)"@fr , "Brian Thomas (1894-1996)"@fr , "Willie Robyn (1894-1996)"@fr , "William Stanley (1894-1996)"@fr , "William Rubinoff (1894-1996)"@fr , "George Ruban (1894-1996)"@fr , "Walter Ray (1894-1996)"@fr , "Charles Hart (1894-1996)"@fr , "Jack Ender (1894-1996)"@fr , "Ray Hamilton (1894-1996)"@fr , "Les Weston (1894-1996)"@fr , "Larry Henderson (1894-1996)"@fr , "Jerry White (1894-1996)"@fr , "John Manning (1894-1996)"@fr , "Walter Remick (1894-1996)"@fr , "Al Foster (1894-1996)"@fr , "William Scarpioff (1894-1996)"@fr , "Tom Brown (1894-1996)"@fr , "Thornely Crane (1894-1996)"@fr , "Henry Scott (1894-1996)"@fr , "Al Johnson (1894-1996)"@fr , "Frank Conroy (1894-1996)"@fr , "Reg Forsythe (1894-1996)"@fr , "Lawrence Henry (1894-1996)"@fr , "John Spear (1894-1996)"@fr , "Frankie Waters (1894-1996)"@fr , "William Robinow (1894-1996)"@fr , "Wee Willie (1894-1996)"@fr , "Ray Turner (1894-1996)"@fr , "John O’Shea (1894-1996)"@fr , "Bobby Mack (1894-1996)"@fr , "Walter Norton (1894-1996)"@fr , "Wyllie Robin (1894-1996)"@fr , "William Robinson (1894-1996)"@fr , "Harry Smith (1894-1996)"@fr , "Bert Bennett (1894-1996)"@fr , "Eddie Rickman (1894-1996)"@fr , "James Allison (1894-1996)"@fr , "Buddy Gravelle (1894-1996)"@fr , "William Francis (1894-1996)"@fr , "William Rubin (1894-1996)"@fr ;
+        skos:editorialNote    "Remember [Enregistrement sonore] ; Forever / William Robyn, chant. Cameo 827. - . - Lonely me [Enregistrement sonore] / Lou Gold & his orchestra, vocal chorus by Jerry White. Banner 0566. - . - I love you more each day [Enregistrement sonore] / Wee\" Willie Robyn, chant. Oriole 1862. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/24821714> , <http://isni-url.oclc.nl/isni/0000000368524305> ;
+        skos:note             "Chanteur de jazz"@fr ;
+        skos:prefLabel        "William Robyn (1894-1996)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb144456739#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40038227m#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb144456739#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb144456739#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144456739#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400148465#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb144456739#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb144456739#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144456739#foaf:Person> .

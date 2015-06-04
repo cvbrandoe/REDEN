@@ -1,0 +1,108 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1928 ;
+        rdagroup2elements:biographicalInformation
+                "Romancier, dramaturge, auteur d'un livret d'opéra. - Journaliste, rédacteur en chef de la revue \"L'Anjou\" (en 1990)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/31996885> ;
+        foaf:familyName     "Gilbert" ;
+        foaf:givenName      "Charles" ;
+        foaf:name           "Charles Gilbert" ;
+        foaf:page           <http://data.bnf.fr/11904879/charles_gilbert/> .
+
+<http://data.bnf.fr/ark:/12148/cb37697949r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119048799>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb119048799> ;
+        bnf-onto:FRBNF        11904879 ;
+        isni:identifierValid  "0000000020950477" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000020950477> ;
+        skos:editorialNote    "Mission Lorelei / Charles Gilbert, 1985. - . - L'Anjou / Charles Gilbert, 1986. - . - Doué la Fontaine, histoire et vie de la Cité des Roses / Charles Gilbert, 1992. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000020950477> , <http://viaf.org/viaf/31996885> ;
+        skos:note             "Romancier, dramaturge, auteur d'un livret d'opéra. - Journaliste, rédacteur en chef de la revue \"L'Anjou\" (en 1990)"@fr ;
+        skos:prefLabel        "Charles Gilbert"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb408972139#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361473163#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346004780#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34839072z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34880658x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34911275c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345886272#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb408964813#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40897732z#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34680808k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35550549p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34616811g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40896767c#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119048799#foaf:Person> .

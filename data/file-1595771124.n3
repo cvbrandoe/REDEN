@@ -1,0 +1,101 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35440679h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370999674#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36959876d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1926 ;
+        bnf-onto:lastYear              2012 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur ès lettres (Paris 3, 1972). - Professeur à la Sorbonne (en 1992)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1926/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2012/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1926-01-06" ;
+        bio:death                      "2012-01-25" ;
+        owl:sameAs                     <http://www.idref.fr/031686397> , <http://viaf.org/viaf/59146378> ;
+        foaf:birthday                  "01-06" ;
+        foaf:familyName                "Guillaume" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "André" ;
+        foaf:name                      "André Guillaume" ;
+        foaf:page                      <http://data.bnf.fr/12285429/andre_guillaume/> .
+
+<http://data.bnf.fr/ark:/12148/cb349332440#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414307794#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35559046f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41085733c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357709753#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12285429g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12285429g> ;
+        bnf-onto:FRBNF        12285429 ;
+        isni:identifierValid  "000000011651678X" ;
+        owl:sameAs            <http://isni.org/isni/000000011651678X> ;
+        skos:editorialNote    "Un Noël en 1942 / André Guillaume, DL 2009. - . - Monde, 2012-02-02 (faire-part de décès). - . -"@fr , "L'Irlande : une ou deux nations ? / André Guillaume, 1987. - . - Les sept piliers de la sagesse : un triomphe / Thomas Edward Lawrence ; présentation, trad. nouv. et notes de Renée et André Guillaume, 1995. - . - Écrits politiques / John Milton ; traduction [de l'anglais], introductions et notes par Renée et André Guillaume, impr. 2007. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/000000011651678X> , <http://viaf.org/viaf/59146378> , <http://www.idref.fr/031686397> ;
+        skos:note             "Docteur ès lettres (Paris 3, 1972). - Professeur à la Sorbonne (en 1992)"@fr ;
+        skos:prefLabel        "André Guillaume (1926-2012)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37099861s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35938223c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34903978m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12285429g#foaf:Person> .

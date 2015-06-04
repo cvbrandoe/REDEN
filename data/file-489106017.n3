@@ -1,0 +1,58 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14596751q#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs                     <http://viaf.org/viaf/256760856> , <http://www.idref.fr/111737265> ;
+        foaf:familyName                "Jarry" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Marjolaine" ;
+        foaf:name                      "Marjolaine Jarry" ;
+        foaf:page                      <http://data.bnf.fr/14596751/marjolaine_jarry/> .
+
+<http://data.bnf.fr/ark:/12148/cb436173479#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14596751q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14596751q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14596751q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14596751q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14596751q> ;
+        bnf-onto:FRBNF        14596751 ;
+        isni:identifierValid  "0000000379076165" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000379076165> ;
+        skos:exactMatch       <http://www.idref.fr/111737265> , <http://viaf.org/viaf/256760856> , <http://isni-url.oclc.nl/isni/0000000379076165> ;
+        skos:note             "Journaliste"@fr ;
+        skos:prefLabel        "Marjolaine Jarry"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14596751q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42782264w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14596751q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14596751q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14596751q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39200500b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14596751q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14596751q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14596751q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40246699n#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14596751q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14596751q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14596751q#foaf:Person> .

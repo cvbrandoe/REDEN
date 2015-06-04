@@ -1,0 +1,75 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb144150673>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb144150673> ;
+        bnf-onto:FRBNF        14415067 ;
+        isni:identifierValid  "0000000003507713" ;
+        owl:sameAs            <http://isni.org/isni/0000000003507713> ;
+        skos:exactMatch       <http://www.idref.fr/058555994> , <http://viaf.org/viaf/44515139> , <http://www.idref.fr/137755821> , <http://isni.org/isni/0000000003507713> ;
+        skos:note             "Docteur en pharmacie. - Diplômé de l'école d'homéopathie de Toulouse. - Responsable du DU d'homéopathie à la faculté de pharmacie de Toulouse (2011)"@fr ;
+        skos:prefLabel        "François Roux (pharmacien, 1962-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb426805642#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41351428w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb409472619#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38851438x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43788586m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42483884w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42633455h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb144150673#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1962 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en pharmacie. - Diplômé de l'école d'homéopathie de Toulouse. - Responsable du DU d'homéopathie à la faculté de pharmacie de Toulouse (2011)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1962/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs                     <http://www.idref.fr/137755821> , <http://viaf.org/viaf/44515139> , <http://www.idref.fr/058555994> ;
+        foaf:birthday                  "07-07" ;
+        foaf:familyName                "Roux" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "François" ;
+        foaf:name                      "François Roux" ;
+        foaf:page                      <http://data.bnf.fr/14415067/francois_roux/> .

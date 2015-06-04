@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37400144x#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb123816951#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb123816951#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123816951#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35174733j#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb123816951#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb123816951#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123816951#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123816951>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb123816951> ;
+        bnf-onto:FRBNF        12381695 ;
+        isni:identifierValid  "0000000079970480" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000079970480> ;
+        skos:editorialNote    "Recueil des publications scientifiques de Ferdinand de Saussure / Charles Bally, Léopold Gautier, 1984 [reprod. de l'éd. de 1922]. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000079970480> , <http://viaf.org/viaf/55774355> , <http://www.idref.fr/032871457> ;
+        skos:note             "Philologue. - En poste à la Faculté des lettres de l'Université de Genève (en 1922)"@fr ;
+        skos:prefLabel        "Léopold Gautier (philologue, 18..-19..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb123816951#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35427116h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123816951#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123816951#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123816951#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb352317424#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123816951#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123816951#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123816951#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123816951#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Philologue. - En poste à la Faculté des lettres de l'Université de Genève (en 1922)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/sz#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://viaf.org/viaf/55774355> , <http://www.idref.fr/032871457> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k214790.thumbnail> ;
+        foaf:familyName                "Gautier" ;
+        foaf:givenName                 "Léopold" ;
+        foaf:name                      "Léopold Gautier" ;
+        foaf:page                      <http://data.bnf.fr/12381695/leopold_gautier/> .

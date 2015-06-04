@@ -1,0 +1,84 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb414020839#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354297515#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12053846q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12053846q> ;
+        bnf-onto:FRBNF        12053846 ;
+        isni:identifierValid  "0000000110306714" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000110306714> ;
+        skos:editorialNote    "Systematische Aufstellung in deutschen wissenschaftlichen Bibliotheken / Bernd Lorenz, 1993. - . - Bibliothèque nationale, Allemagne. - http://www.ddb.de. - 2009-01-28"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000110306714> , <http://viaf.org/viaf/88754941> , <http://www.idref.fr/028770978> ;
+        skos:note             "Directeur de l'unité de formation, Archiv- und Bibliothekswesen, Fachhochschule für öffentliche Verwaltung und Rechtspflege, Münich, Allemagne (en 2007)"@fr ;
+        skos:prefLabel        "Bernd Lorenz"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1949 ;
+        rdagroup2elements:biographicalInformation
+                "Directeur de l'unité de formation, Archiv- und Bibliothekswesen, Fachhochschule für öffentliche Verwaltung und Rechtspflege, Münich, Allemagne (en 2007)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        owl:sameAs          <http://viaf.org/viaf/88754941> , <http://www.idref.fr/028770978> ;
+        foaf:familyName     "Lorenz" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Bernd" ;
+        foaf:name           "Bernd Lorenz" ;
+        foaf:page           <http://data.bnf.fr/12053846/bernd_lorenz/> .
+
+<http://data.bnf.fr/ark:/12148/cb39024249w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356143630#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40929878r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41316462f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39024258v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374859758#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb348858905#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12053846q#foaf:Person> .

@@ -1,0 +1,88 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Clarinettiste. - Saxophoniste. - Jazz" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Musique" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/780/> ;
+        owl:sameAs       <http://www.idref.fr/077901525> , <http://viaf.org/viaf/207045557> ;
+        foaf:familyName  "Wagner" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Christian" ;
+        foaf:name        "Christian Wagner" ;
+        foaf:page        <http://data.bnf.fr/13995894/christian_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb384627929#frbr:Expression>
+        bnfroles:r1420       <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385753433#frbr:Expression>
+        bnfroles:r1420       <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384627882#frbr:Expression>
+        bnfroles:r1420       <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38462804g#frbr:Expression>
+        bnfroles:r1420       <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38575350c#frbr:Expression>
+        bnfroles:r1420       <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38079810m#frbr:Expression>
+        bnfroles:r1420       <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38463227q#frbr:Expression>
+        bnfroles:r1450       <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38575348t#frbr:Expression>
+        bnfroles:r1420       <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38079816p#frbr:Expression>
+        bnfroles:r1420       <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13995894k>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb13995894k> ;
+        bnf-onto:FRBNF   13995894 ;
+        skos:exactMatch  <http://www.idref.fr/077901525> , <http://viaf.org/viaf/207045557> ;
+        skos:note        "Clarinettiste. - Saxophoniste. - Jazz"@fr ;
+        skos:prefLabel   "Christian Wagner (clarinettiste, saxophoniste)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38462799q#frbr:Expression>
+        bnfroles:r1420       <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13995894k#foaf:Person> .

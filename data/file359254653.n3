@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb144759027#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1642 ;
+        bnf-onto:lastYear              1698 ;
+        rdagroup2elements:biographicalInformation
+                "Épouse de Champmeslé, Charles Chevillet de. - Tragédienne" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1642/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1698/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Arts du spectacle" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/790/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1642-02-18" ;
+        bio:death                      "1698-05-15" ;
+        owl:sameAs                     <http://www.idref.fr/073974374> , <http://viaf.org/viaf/61772641> , <http://dbpedia.org/resource/Mademoiselle_de_Champmeslé> ;
+        foaf:birthday                  "02-18" ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Marie_Champmeslé.jpg?width=300> ;
+        foaf:familyName                "Champmeslé" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Marie de" ;
+        foaf:name                      "Marie de Champmeslé" ;
+        foaf:page                      <http://data.bnf.fr/14475902/marie_de_champmesle/> .
+
+<http://data.bnf.fr/ark:/12148/cb39496300f#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb144759027#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb144759027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144759027#foaf:Person> .
+
+<http://data.bnf.fr/14475902/marie_de_champmesle/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb144759027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb144759027>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Mademoiselle_de_Champmeslé> , <http://catalogue.bnf.fr/ark:/12148/cb144759027> ;
+        bnf-onto:FRBNF        14475902 ;
+        isni:identifierValid  "0000000039068759" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000039068759> ;
+        skos:altLabel         "Marie Desmares (1642-1698)"@fr , "La Champmeslé (1642-1698)"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/61772641> , <http://fr.wikipedia.org/wiki/Mademoiselle_de_Champmeslé> , <http://www.idref.fr/073974374> , <http://dbpedia.org/resource/Mademoiselle_de_Champmeslé> , <http://isni-url.oclc.nl/isni/0000000039068759> ;
+        skos:note             "Épouse de Champmeslé, Charles Chevillet de. - Tragédienne"@fr ;
+        skos:prefLabel        "Marie de Champmeslé (1642-1698)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb144759027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39496298q#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb144759027#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb144759027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144759027#foaf:Person> .

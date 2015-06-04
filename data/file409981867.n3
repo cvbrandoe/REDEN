@@ -1,0 +1,72 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb34346246k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35337844q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1933 ;
+        rdagroup2elements:biographicalInformation
+                "Spécialiste de la céramique. - Cadre retraité (en 1996)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/14781199> , <http://www.idref.fr/167568809> ;
+        foaf:familyName     "Lemaître" ;
+        foaf:givenName      "Claude" ;
+        foaf:name           "Claude Lemaître" ;
+        foaf:page           <http://data.bnf.fr/12014591/claude_lemaitre/> .
+
+<http://data.bnf.fr/ark:/12148/cb35803546v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43509450k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120145914>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb120145914> ;
+        bnf-onto:FRBNF        12014591 ;
+        isni:identifierValid  "0000000028251910" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000028251910> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000028251910> , <http://viaf.org/viaf/14781199> , <http://www.idref.fr/167568809> ;
+        skos:note             "Spécialiste de la céramique. - Cadre retraité (en 1996)"@fr ;
+        skos:prefLabel        "Claude Lemaître"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb358450819#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34758369w#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35976878n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120145914#foaf:Person> .

@@ -1,0 +1,42 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14657626t#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Maquilleuse et conceptrice de masques" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/2732048> ;
+        foaf:familyName  "Rolland" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Madeleine" ;
+        foaf:name        "Madeleine Rolland" ;
+        foaf:page        <http://data.bnf.fr/14657626/madeleine_rolland/> .
+
+<http://data.bnf.fr/ark:/12148/cb14657626t>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14657626t> ;
+        bnf-onto:FRBNF   14657626 ;
+        skos:exactMatch  <http://viaf.org/viaf/2732048> ;
+        skos:note        "Maquilleuse et conceptrice de masques"@fr ;
+        skos:prefLabel   "Madeleine Rolland (maquilleuse)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14657626t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb395001718#frbr:Expression>
+        bnfroles:r2220       <http://data.bnf.fr/ark:/12148/cb14657626t#foaf:Person> ;
+        marcrel:prd          <http://data.bnf.fr/ark:/12148/cb14657626t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14657626t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb395001749#frbr:Expression>
+        bnfroles:r2220       <http://data.bnf.fr/ark:/12148/cb14657626t#foaf:Person> ;
+        marcrel:prd          <http://data.bnf.fr/ark:/12148/cb14657626t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14657626t#foaf:Person> .

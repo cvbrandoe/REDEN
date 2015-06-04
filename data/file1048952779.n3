@@ -1,0 +1,26 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+<http://data.bnf.fr/ark:/12148/cb13936579v>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb13936579v> ;
+        bnf-onto:FRBNF   13936579 ;
+        skos:exactMatch  <http://viaf.org/viaf/42029411> ;
+        skos:prefLabel   "Dick Lee (musicien écossais)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb13936579v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13936579v#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        owl:sameAs       <http://viaf.org/viaf/42029411> ;
+        foaf:familyName  "Lee" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Dick" ;
+        foaf:name        "Dick Lee" ;
+        foaf:page        <http://data.bnf.fr/13936579/dick_lee/> .

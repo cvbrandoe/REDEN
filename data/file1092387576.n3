@@ -1,0 +1,77 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb391873855#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41196303z#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40227985m#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb391872627#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38471881w#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39187359m#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38268804k#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39187332k#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Actrice, spécialisée dans l'enregistrement de lecture" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/74063688> ;
+        foaf:familyName  "Rousseau" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Monique" ;
+        foaf:name        "Monique Rousseau" ;
+        foaf:page        <http://data.bnf.fr/14222597/monique_rousseau/> .
+
+<http://data.bnf.fr/ark:/12148/cb14222597j>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14222597j> ;
+        bnf-onto:FRBNF   14222597 ;
+        skos:exactMatch  <http://viaf.org/viaf/74063688> ;
+        skos:note        "Actrice, spécialisée dans l'enregistrement de lecture"@fr ;
+        skos:prefLabel   "Monique Rousseau (actrice)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb391873499#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14222597j#foaf:Person> .

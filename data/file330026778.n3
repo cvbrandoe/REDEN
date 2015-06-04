@@ -1,0 +1,92 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1907 ;
+        bnf-onto:lastYear              1950 ;
+        rdagroup2elements:biographicalInformation
+                "A traduit du français en anglais" , "Peintre, poète, photographe et cinéaste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1907/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1950/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Audiovisuel" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/791/> ;
+        bio:birth                      "1907-08-19" ;
+        bio:death                      "1950-09-24" ;
+        owl:sameAs                     <http://viaf.org/viaf/12318595> , <http://dbpedia.org/resource/Humphrey_Jennings> , <http://www.idref.fr/028146360> ;
+        foaf:birthday                  "08-19" ;
+        foaf:familyName                "Jennings" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Humphrey" ;
+        foaf:name                      "Humphrey Jennings" ;
+        foaf:page                      <http://data.bnf.fr/12003885/humphrey_jennings/> .
+
+<http://data.bnf.fr/ark:/12148/cb12003885k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12003885k> , <http://fr.wikipedia.org/wiki/Humphrey_Jennings> ;
+        bnf-onto:FRBNF        12003885 ;
+        isni:identifierValid  "000000012120844X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000012120844X> ;
+        skos:altLabel         "Frank Humphrey Sinkler Jennings (1907-1950)"@fr ;
+        skos:editorialNote    "Pandaemonium, 1660-1886 / Humphrey Jennings, 1985. - . - IMBD. - http://www.us.imdb.com/name/nm0421165/. - 20070920"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Humphrey_Jennings> , <http://viaf.org/viaf/12318595> , <http://www.idref.fr/028146360> , <http://isni-url.oclc.nl/isni/000000012120844X> , <http://dbpedia.org/resource/Humphrey_Jennings> ;
+        skos:note             "A traduit du français en anglais"@fr , "Peintre, poète, photographe et cinéaste"@fr ;
+        skos:prefLabel        "Humphrey Jennings (1907-1950)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb410271767#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> .
+
+<http://data.bnf.fr/12003885/humphrey_jennings/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349196386#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425448238#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42234796g#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420579139#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427134480#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41027175w#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42234800w#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12003885k#foaf:Person> .

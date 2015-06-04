@@ -1,0 +1,42 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb16266852g#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1322 ;
+        bnf-onto:lastYear               1388 ;
+        rdagroup2elements:biographicalInformation
+                "Moine bénédictin à l'Abbaye Saint-Martial de Limoges. - Évêque de Saint-Papoul (1362). - Archevêque de Bourges (1370) puis d'Arles (1374). - Gouverneur du Comtat Venaissin (1374-1376). - Cardinal (1383)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1322/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1388/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        rdagroup2elements:placeOfDeath  "Avignon" ;
+        bio:birth                       "1322" ;
+        bio:death                       "1388-11-16" ;
+        foaf:familyName                 "Cros" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Pierre de" ;
+        foaf:name                       "Pierre de Cros" ;
+        foaf:page                       <http://data.bnf.fr/16266852/pierre_de_cros/> .
+
+<http://data.bnf.fr/16266852/pierre_de_cros/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb16266852g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16266852g>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16266852g> ;
+        bnf-onto:FRBNF      16266852 ;
+        skos:altLabel       "Petrus de Croso (1322?-1388)"@la ;
+        skos:editorialNote  "The letters of Pierre de Cros : chamberlain to pope Gregory XI (1371-1378) / by Daniel Williman, 2009. - . - DBF : Cros (Pierre de). - . -"@fr , "DHGE : Cros (Pierre de). - . - Lexikon des Mittelalters : Pierre II de Cros. - http://apps.brepolis.net. - 2011-05-26 Gallia christiana novissima. Histoire des archevêchés, évêques et abbayes de France. Arles, 1900 [p. 710 : Pierre III de Cros ; p. 730 : Petrus de Croso]. - . -"@fr ;
+        skos:note           "Moine bénédictin à l'Abbaye Saint-Martial de Limoges. - Évêque de Saint-Papoul (1362). - Archevêque de Bourges (1370) puis d'Arles (1374). - Gouverneur du Comtat Venaissin (1374-1376). - Cardinal (1383)"@fr ;
+        skos:prefLabel      "Pierre de Cros (1322?-1388)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16266852g#foaf:Person> .

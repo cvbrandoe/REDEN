@@ -1,0 +1,105 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb34083561w#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301978845#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31909013k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30197885h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30197886v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30608434r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319090127#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1865 ;
+        bnf-onto:lastYear               1948 ;
+        rdagroup2elements:biographicalInformation
+                "Officier. - Fils du président de la République : Carnot, Sadi (1837-1894)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1865/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1948/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Annecy" ;
+        bio:birth                       "1865" ;
+        bio:death                       "1948" ;
+        owl:sameAs                      <http://www.idref.fr/153488077> , <http://viaf.org/viaf/34555160> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b8443773d.thumbnail> ;
+        foaf:familyName                 "Carnot" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Lazare-Hippolyte-Sadi" ;
+        foaf:name                       "Lazare-Hippolyte-Sadi Carnot" ;
+        foaf:page                       <http://data.bnf.fr/12462089/lazare-hippolyte-sadi_carnot/> .
+
+<http://data.bnf.fr/ark:/12148/cb12462089f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12462089f> ;
+        bnf-onto:FRBNF        12462089 ;
+        isni:identifierValid  "000000000021961X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000000021961X> ;
+        skos:altLabel         "Capitaine Carnot (1865-1948)"@fr , "Lieutenant Carnot (1865-1948)"@fr , "Lazare-Hippolyte Sadi-Carnot (1865-1948)"@fr ;
+        skos:editorialNote    "Lorenz : Carnot (le capitaine Sadi). - . - WBI : Carnot (Lazare Hippolyte Sadi). - . -"@fr , "Le drapeau du 27e régiment d'infanterie / par le lieutenant Carnot, 1891. - . - Environs de Nolay [Document cartographique] / par le capitaine Carnot, [1904]. - . - Famille Carnot, en Bourgogne : tableau de la branche de Nolay depuis 1520 / [par L.-H. Sadi Carnot], [s. d.]. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/34555160> , <http://isni-url.oclc.nl/isni/000000000021961X> , <http://www.idref.fr/153488077> ;
+        skos:note             "Officier. - Fils du président de la République : Carnot, Sadi (1837-1894)"@fr ;
+        skos:prefLabel        "Lazare-Hippolyte-Sadi Carnot (1865-1948)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34065659p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> .
+
+<http://data.bnf.fr/12462089/lazare-hippolyte-sadi_carnot/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301978876#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb407390772#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40751696g#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462089f#foaf:Person> .

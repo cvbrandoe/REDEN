@@ -1,0 +1,132 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Traducteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/090314700> , <http://viaf.org/viaf/89214001> ;
+        foaf:familyName  "Mallarmé" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Camille" ;
+        foaf:name        "Camille Mallarmé" ;
+        foaf:page        <http://data.bnf.fr/14689697/camille_mallarme/> .
+
+<http://data.bnf.fr/ark:/12148/cb30867005d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb308670042#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb355434953#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31116836j#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb386943067#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30867002c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32532205w#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39466028c#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30867003q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435289864#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32411782w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36566346w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42034956f#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41893229v#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39466029q#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31116837w#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38694455q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb325322187#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14689697f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14689697f> ;
+        bnf-onto:FRBNF        14689697 ;
+        isni:identifierValid  "000000006165413X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000006165413X> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000006165413X> , <http://viaf.org/viaf/89214001> , <http://www.idref.fr/090314700> ;
+        skos:note             "Traducteur"@fr ;
+        skos:prefLabel        "Camille Mallarmé"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb331372673#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14689697f#foaf:Person> .

@@ -1,0 +1,103 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb38097479d#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438212443#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38096403x#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38603645v#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389753653#frbr:Expression>
+        bnfroles:r1860       <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1962 ;
+        rdagroup2elements:biographicalInformation
+                "Guitariste, pianiste, chanteur de pop-folk, disc-jockey et remixer. - Membre du groupe Everything but the girl" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        owl:sameAs          <http://viaf.org/viaf/115801901> , <http://dbpedia.org/resource/Ben_Watt> ;
+        foaf:depiction      <http://commons.wikimedia.org/wiki/Special:FilePath/Benwatt_sep09.JPG?width=300> ;
+        foaf:familyName     "Watt" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Ben" ;
+        foaf:name           "Ben Watt" ;
+        foaf:page           <http://data.bnf.fr/13901036/ben_watt/> .
+
+<http://data.bnf.fr/ark:/12148/cb13901036c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13901036c> , <http://fr.wikipedia.org/wiki/Ben_Watt> ;
+        bnf-onto:FRBNF        13901036 ;
+        isni:identifierValid  "0000000084127260" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000084127260> ;
+        skos:editorialNote    "Hendra [Enregistrement sonore] / Ben Watt, chant, guit. [acc. instr.].-[Londres, Grande-Bretagne] : Caroline records ; [France] : [distrib. Universal music France], P 2014.. - . - All music guide. - http://www.allmusic.com. - 2000-02-14"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000084127260> , <http://dbpedia.org/resource/Ben_Watt> , <http://fr.wikipedia.org/wiki/Ben_Watt> , <http://viaf.org/viaf/115801901> ;
+        skos:note             "Guitariste, pianiste, chanteur de pop-folk, disc-jockey et remixer. - Membre du groupe Everything but the girl"@fr ;
+        skos:prefLabel        "Ben Watt"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385778491#frbr:Expression>
+        bnfroles:r1860       <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38126205s#frbr:Expression>
+        bnfroles:r1280       <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb380975294#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392007017#frbr:Expression>
+        bnfroles:r1860       <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43799813p#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39200594h#frbr:Expression>
+        bnfroles:r1860       <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb380979413#frbr:Expression>
+        bnfroles:r1280       <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38518061p#frbr:Expression>
+        bnfroles:r1860       <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13901036c#foaf:Person> .

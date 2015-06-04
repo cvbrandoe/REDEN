@@ -1,0 +1,145 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35532025c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb416764657#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb325564394#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35423687f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1918 ;
+        bnf-onto:lastYear              1977 ;
+        rdagroup2elements:biographicalInformation
+                "Pseudonyme de Victor-Marie (ou Victor-Maurice) Lepage (ou Le Page), plus connu sous le pseudonyme \"Ange Bastiani\". - A écrit également sous les pseudonymes \"Zep Cassini\", \"Vic Vorlier\", \"Luigi da Costa\", etc... (cf notice Bastiani, Ange)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1918/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1977/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1918-12-02" ;
+        bio:death                      "1977-11-04" ;
+        owl:sameAs                     <http://www.idref.fr/027089924> , <http://viaf.org/viaf/120725447> ;
+        foaf:birthday                  "12-02" ;
+        foaf:familyName                "Raphaël" ;
+        foaf:givenName                 "Maurice" ;
+        foaf:name                      "Maurice Raphaël" ;
+        foaf:page                      <http://data.bnf.fr/11921171/maurice_raphael/> .
+
+<http://data.bnf.fr/ark:/12148/cb347418294#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb325564363#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32556434d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412257564#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119211719>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb119211719> ;
+        bnf-onto:FRBNF        11921171 ;
+        isni:identifierValid  "0000000108049616" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108049616> ;
+        skos:editorialNote    "Les Yeux de la tête / Maurice Raphaël, 1986. - . - BN Cat. gén. suppl. : Raphaël (Maurice). - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/120725447> , <http://www.idref.fr/027089924> , <http://isni-url.oclc.nl/isni/0000000108049616> ;
+        skos:note             "Pseudonyme de Victor-Marie (ou Victor-Maurice) Lepage (ou Le Page), plus connu sous le pseudonyme \"Ange Bastiani\". - A écrit également sous les pseudonymes \"Zep Cassini\", \"Vic Vorlier\", \"Luigi da Costa\", etc... (cf notice Bastiani, Ange)"@fr ;
+        skos:prefLabel        "Maurice Raphaël (1918-1977)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32556438s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345823044#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35422568n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32556435r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40095216g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39982564x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32556432q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34880565x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32556437f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39166425x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35746608z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32556440b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119211719#foaf:Person> .

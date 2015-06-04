@@ -1,0 +1,80 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb388569673#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1958 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de philosophie" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ne#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/dut> ;
+        owl:sameAs          <http://viaf.org/viaf/41877761> , <http://www.idref.fr/029996589> ;
+        foaf:familyName     "Vries" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Hent de" ;
+        foaf:name           "Hent de Vries" ;
+        foaf:page           <http://data.bnf.fr/12150396/hent_de_vries/> .
+
+<http://data.bnf.fr/ark:/12148/cb42797806s#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12150396b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12150396b> ;
+        bnf-onto:FRBNF        12150396 ;
+        isni:identifierValid  "0000000108912205" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108912205> ;
+        skos:altLabel         "Hent De Vries"@fr , "Hendrik Vries"@fr , "Hendrik De Vries"@fr ;
+        skos:editorialNote    "Die Aktualität der \"Dialektik der Aufklärung\" / Hrsg. Harry Kunneman, Hent de Vries, 1989. - . - Religion and violence / Hent de Vries, 2002. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/029996589> , <http://viaf.org/viaf/41877761> , <http://isni-url.oclc.nl/isni/0000000108912205> ;
+        skos:note             "Professeur de philosophie"@fr ;
+        skos:prefLabel        "Hent de Vries"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36150391c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42214815h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35079619r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb424482253#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43557620r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42194985f#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12150396b#foaf:Person> .

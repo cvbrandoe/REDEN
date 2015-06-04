@@ -1,0 +1,58 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb36122689h#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12229482n#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12229482n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12229482n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39359978r#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12229482n#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12229482n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12229482n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12229482n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12229482n> ;
+        bnf-onto:FRBNF        12229482 ;
+        isni:identifierValid  "0000000122704517" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000122704517> ;
+        skos:altLabel         "Giorgio Ferrario (imprimeur-libraire, 15..-16..)"@fr , "Georgius Ferrarius (imprimeur-libraire, 15..-16..)"@fr ;
+        skos:editorialNote    "Pastorello. - . - Cosenza. - . - Borsa. - . -"@fr , "Vaccaro. - . - STC Italian books, 1601-1700. - . - Ascarelli, Menato. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000122704517> , <http://viaf.org/viaf/24653755> , <http://www.idref.fr/068971362> ;
+        skos:note             "Devise(s) : Inter omnes duratura clarior. - Originaire de Crémone"@fr ;
+        skos:prefLabel        "Giorgio Ferrari (imprimeur-libraire, 15..-16..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12229482n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12229482n#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Devise(s) : Inter omnes duratura clarior. - Originaire de Crémone" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1501-1600/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1571-1606" ;
+        bio:birth                      "15.." ;
+        bio:death                      "16.." ;
+        owl:sameAs                     <http://viaf.org/viaf/24653755> , <http://www.idref.fr/068971362> ;
+        foaf:familyName                "Ferrari" ;
+        foaf:givenName                 "Giorgio" ;
+        foaf:name                      "Giorgio Ferrari" ;
+        foaf:page                      <http://data.bnf.fr/12229482/giorgio_ferrari/> .
+
+<http://data.bnf.fr/ark:/12148/cb31042534h#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12229482n#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12229482n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12229482n#foaf:Person> .

@@ -1,0 +1,77 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1970 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1970/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs                     <http://viaf.org/viaf/49457114> , <http://www.idref.fr/078047250> ;
+        foaf:birthday                  "02-05" ;
+        foaf:familyName                "Lefèvre" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Clémence" ;
+        foaf:name                      "Clémence Lefèvre" ;
+        foaf:page                      <http://data.bnf.fr/14519170/clemence_lefevre/> .
+
+<http://data.bnf.fr/ark:/12148/cb411431238#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399631294#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39086662x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14519170d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14519170d> ;
+        bnf-onto:FRBNF        14519170 ;
+        isni:identifierValid  "0000000071029266" ;
+        owl:sameAs            <http://isni.org/isni/0000000071029266> ;
+        skos:exactMatch       <http://www.idref.fr/078047250> , <http://viaf.org/viaf/49457114> , <http://isni.org/isni/0000000071029266> ;
+        skos:prefLabel        "Clémence Lefèvre (1970-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39962303r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399630422#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40234413v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39112800p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39963061b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14519170d#foaf:Person> .

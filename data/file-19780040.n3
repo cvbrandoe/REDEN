@@ -1,0 +1,68 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37542454j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122815331>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb122815331> ;
+        bnf-onto:FRBNF        12281533 ;
+        isni:identifierValid  "0000000109138506" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109138506> ;
+        skos:editorialNote    "Hubble vision : astronomy with the Hubble space telescope / Carolyn Collins Petersen and John C. Brandt, 1995. - . - LCNA (CD), 1995-12. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000109138506> , <http://viaf.org/viaf/71452507> , <http://www.idref.fr/031638139> ;
+        skos:note             "Astronome. - En poste : Laboratory for atmospheric and space physics, University of Colorado, Boulder (en 1995)"@fr ;
+        skos:prefLabel        "John C. Brandt"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37485627k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373638977#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37404819m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40033478v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399653295#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122815331#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1934 ;
+        rdagroup2elements:biographicalInformation
+                "Astronome. - En poste : Laboratory for atmospheric and space physics, University of Colorado, Boulder (en 1995)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/031638139> , <http://viaf.org/viaf/71452507> ;
+        foaf:familyName     "Brandt" ;
+        foaf:givenName      "John C." ;
+        foaf:name           "John C. Brandt" ;
+        foaf:page           <http://data.bnf.fr/12281533/john_c__brandt/> .

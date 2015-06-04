@@ -1,0 +1,50 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb41274897s#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb15739225r#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb15739225r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15739225r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15739225r#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Travaille en association avec son frère William Stratford, avec qui il publie le \"Carlton House Magazine\"" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1789-1816" ;
+        bio:birth                      "17.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/69260175> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b6941903m.thumbnail> ;
+        foaf:familyName                "Stratford" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "James" ;
+        foaf:name                      "James Stratford" ;
+        foaf:page                      <http://data.bnf.fr/15739225/james_stratford/> .
+
+<http://data.bnf.fr/ark:/12148/cb15739225r>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb15739225r> ;
+        bnf-onto:FRBNF   15739225 ;
+        skos:exactMatch  <http://viaf.org/viaf/69260175> ;
+        skos:note        "Travaille en association avec son frère William Stratford, avec qui il publie le \"Carlton House Magazine\""@fr ;
+        skos:prefLabel   "James Stratford (imprimeur-libraire et éditeur d'estampes, 17..-18..)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb15739225r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402597704#frbr:Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb15739225r#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb15739225r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15739225r#foaf:Person> .

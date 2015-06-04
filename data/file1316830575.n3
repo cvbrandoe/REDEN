@@ -1,0 +1,79 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/13547971/hendrik_de_vries/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35448316q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40243857j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13547971z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13547971z> ;
+        bnf-onto:FRBNF        13547971 ;
+        isni:identifierValid  "0000000083561700" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000083561700> ;
+        skos:altLabel         "Enrique de Vries (1896-1989)"@fr , "Enrique De Vries (1896-1989)"@fr , "Hendrik De Vries (1896-1989)"@fr ;
+        skos:editorialNote    "Bibliothèque royale, Pays-Bas. - http://opc4.kb.nl. - 2004-12-09 Kritisch literatuur lexicon, 1980-. - . - dbnl - digitale bibliotheek voor de Nederlandse letteren. - http://www.dbnl.org. - 2004-12-09"@fr , "BnF, Service néerlandais. - . -"@fr , "Hendrik de Vries, 1896-1989 : [tentoonstelling], Groninger museum... = [exhibition], Groninger museum... / [Groningen museum], 1996. - . - Bibliografie van Hendrik de Vries (1896-1989) / samengest. door Charlotte de Cloet, 1993. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/10011907> , <http://isni-url.oclc.nl/isni/0000000083561700> , <http://www.idref.fr/128726571> ;
+        skos:note             "Poète, peintre et dessinateur. - Membre du groupe De ploeg"@fr , "A écrit également en espagnol et traduit de l'espagnol en néerlandais"@fr ;
+        skos:prefLabel        "Hendrik de Vries (1896-1989)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1896 ;
+        bnf-onto:lastYear              1989 ;
+        rdagroup2elements:biographicalInformation
+                "Poète, peintre et dessinateur. - Membre du groupe De ploeg" , "A écrit également en espagnol et traduit de l'espagnol en néerlandais" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ne#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1896/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1989/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Peinture" , "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/750/> , <http://dewey.info/class/800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/dut> ;
+        bio:birth                      "1896-08-17" ;
+        bio:death                      "1989-11-18" ;
+        owl:sameAs                     <http://www.idref.fr/128726571> , <http://viaf.org/viaf/10011907> ;
+        foaf:birthday                  "08-17" ;
+        foaf:familyName                "Vries" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Hendrik de" ;
+        foaf:name                      "Hendrik de Vries" ;
+        foaf:page                      <http://data.bnf.fr/13547971/hendrik_de_vries/> .
+
+<http://data.bnf.fr/ark:/12148/cb43671715k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32981705r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41087747j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13547971z#foaf:Person> .

@@ -1,0 +1,38 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+<http://data.bnf.fr/ark:/12148/cb131808923#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1731 ;
+        rdagroup2elements:biographicalInformation
+                "Imprimeur-libraire ; imprimeur de monseigneur l'évêque [de Lisieux] ; et de la commission provinciale intermédiaire (1787). - Natif de Marseille, y a été apprenti en 1748 chez Dominique I Sibié. Travaille ensuite dans l'atelier de Jacques Aunay du Ronceray, à Lisieux. Peu après la mort de son patron (1767), la veuve de ce dernier, Marie Maillard, dont il avait épousé la nièce, se démet en sa faveur. Reçu imprimeur à Lisieux par arrêt du Conseil du 28 mars 1768. P.-C. Tissot lui succède en 1816" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1731/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1768-1816" ;
+        bio:birth                      "1731-07-13" ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/69070810> ;
+        foaf:birthday                  "07-13" ;
+        foaf:familyName                "Mistral" ;
+        foaf:givenName                 "François-Bonaventure" ;
+        foaf:name                      "François-Bonaventure Mistral" ;
+        foaf:page                      <http://data.bnf.fr/13180892/francois-bonaventure_mistral/> .
+
+<http://data.bnf.fr/ark:/12148/cb131808923>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb131808923> ;
+        bnf-onto:FRBNF      13180892 ;
+        skos:editorialNote  "Almanach typographique, an VII. - . - Annuaire de l'imprimerie, 1813. - . - Almanach du commerce, 1815. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/69070810> ;
+        skos:note           "Imprimeur-libraire ; imprimeur de monseigneur l'évêque [de Lisieux] ; et de la commission provinciale intermédiaire (1787). - Natif de Marseille, y a été apprenti en 1748 chez Dominique I Sibié. Travaille ensuite dans l'atelier de Jacques Aunay du Ronceray, à Lisieux. Peu après la mort de son patron (1767), la veuve de ce dernier, Marie Maillard, dont il avait épousé la nièce, se démet en sa faveur. Reçu imprimeur à Lisieux par arrêt du Conseil du 28 mars 1768. P.-C. Tissot lui succède en 1816"@fr ;
+        skos:prefLabel      "François-Bonaventure Mistral (1731-18..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb131808923#foaf:Person> .

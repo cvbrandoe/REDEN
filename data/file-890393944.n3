@@ -1,0 +1,85 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1976 ;
+        rdagroup2elements:biographicalInformation
+                "Scénariste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/39702648> , <http://www.idref.fr/147719275> ;
+        foaf:familyName     "Gordon" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Michael B." ;
+        foaf:name           "Michael B. Gordon" ;
+        foaf:page           <http://data.bnf.fr/15617449/michael_b__gordon/> .
+
+<http://data.bnf.fr/ark:/12148/cb421206391#frbr:Expression>
+        bnfroles:r100        <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42313260m#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb426665910#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41202836n#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41202455t#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42119738x#frbr:Expression>
+        bnfroles:r100        <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42659336t#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41202452s#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42174995b#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb156174497>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb156174497> ;
+        bnf-onto:FRBNF        15617449 ;
+        isni:identifierValid  "0000000116255604" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000116255604> ;
+        skos:altLabel         "Michael Gordon"@fr ;
+        skos:editorialNote    "300 [Images animées] / Zack Snyder, réal. ; Kurt Johnstad, Michael B. Gordon, scénario. Warner home video, [2008]. - . - GI Joe [Images animées] / Stephen Sommers, réal., idée orig. ; Michael Gordon, idée orig... [et al.]. Paramount home entertainment France, [2009]. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/39702648> , <http://www.idref.fr/147719275> , <http://isni-url.oclc.nl/isni/0000000116255604> ;
+        skos:note             "Scénariste"@fr ;
+        skos:prefLabel        "Michael B. Gordon"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb156174497#foaf:Person> .

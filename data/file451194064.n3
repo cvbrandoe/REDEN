@@ -1,0 +1,68 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35229825j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37759073z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35440334q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1941 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur à l'Université de Marbourg, Allemagne (en 1992). - Né à Berlin" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        owl:sameAs          <http://viaf.org/viaf/85174584> , <http://www.idref.fr/030322782> ;
+        foaf:familyName     "Möbius" ;
+        foaf:givenName      "Hanno" ;
+        foaf:name           "Hanno Möbius" ;
+        foaf:page           <http://data.bnf.fr/12176180/hanno_mobius/> .
+
+<http://data.bnf.fr/ark:/12148/cb36151981z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121761808>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb121761808> ;
+        bnf-onto:FRBNF        12176180 ;
+        isni:identifierValid  "000000011681033X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000011681033X> ;
+        skos:editorialNote    "Drehort Stadt : Das Thema \"Grossstadt\" im deutschen Film / Hanno Möbius, Guntram Vogt, 1990. - . - Kürschners dtsch. Gel.-Kal., 1992. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/030322782> , <http://isni-url.oclc.nl/isni/000000011681033X> , <http://viaf.org/viaf/85174584> ;
+        skos:note             "Professeur à l'Université de Marbourg, Allemagne (en 1992). - Né à Berlin"@fr ;
+        skos:prefLabel        "Hanno Möbius"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356512467#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401981550#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121761808#foaf:Person> .

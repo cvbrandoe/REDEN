@@ -1,0 +1,62 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb139446744>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb139446744> , <http://fr.wikipedia.org/wiki/Beverly_Wolff> ;
+        bnf-onto:FRBNF        13944674 ;
+        isni:identifierValid  "0000000073639893" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000073639893> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000073639893> , <http://viaf.org/viaf/7579283> , <http://dbpedia.org/resource/Beverly_Wolff> , <http://fr.wikipedia.org/wiki/Beverly_Wolff> ;
+        skos:note             "Artiste lyrique (mezzo-soprano)"@fr ;
+        skos:prefLabel        "Beverly Wolff"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38214037b#frbr:Expression>
+        bnfroles:r1130       <http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381737958#frbr:Expression>
+        bnfroles:r1130       <http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38079257m#frbr:Expression>
+        bnfroles:r1130       <http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1928 ;
+        rdagroup2elements:biographicalInformation
+                "Artiste lyrique (mezzo-soprano)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:placeOfBirth  "Atlanta" ;
+        owl:sameAs                      <http://viaf.org/viaf/7579283> , <http://dbpedia.org/resource/Beverly_Wolff> ;
+        foaf:familyName                 "Wolff" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Beverly" ;
+        foaf:name                       "Beverly Wolff" ;
+        foaf:page                       <http://data.bnf.fr/13944674/beverly_wolff/> .
+
+<http://data.bnf.fr/ark:/12148/cb380949494#frbr:Expression>
+        bnfroles:r1130       <http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385091165#frbr:Expression>
+        bnfroles:r1130       <http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139446744#foaf:Person> .

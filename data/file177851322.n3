@@ -1,0 +1,46 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb43513222j#frbr:Expression>
+        bnfroles:r1257       <http://data.bnf.fr/ark:/12148/cb162633573#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb162633573#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb162633573#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb162633573>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb162633573> ;
+        bnf-onto:FRBNF        16263357 ;
+        isni:identifierValid  "0000000114604663" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114604663> ;
+        skos:editorialNote    "Sonate e-moll für viola da gamba und B.c [Enregistrement sonore] / Georg Philipp Telemann, comp. ; Petr Wagner, vle de gbe. Ars Produktion ARS 38 076. - . - Bibliotheque nationale de la République tchèque. - http://viaf.org/processed/NKC%7Cjn19990010032. - 2011-02-10"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000114604663> , <http://viaf.org/viaf/31948939> ;
+        skos:note             "Gambiste. - Chef d'orchestre"@fr ;
+        skos:prefLabel        "Petr Wagner"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb162633573#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb162633573#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1969 ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Petr" ;
+        foaf:name           "Petr Wagner" ;
+        foaf:page           <http://data.bnf.fr/16263357/petr_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb423795306#frbr:Expression>
+        bnfroles:r1257       <http://data.bnf.fr/ark:/12148/cb162633573#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb162633573#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb162633573#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42789932w#frbr:Expression>
+        bnfroles:r1250       <http://data.bnf.fr/ark:/12148/cb162633573#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb162633573#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb162633573#foaf:Person> .

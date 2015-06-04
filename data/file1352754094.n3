@@ -1,0 +1,45 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb356892412#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12390164b#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12390164b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12390164b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12390164b>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12390164b> ;
+        bnf-onto:FRBNF      12390164 ;
+        skos:altLabel       "Charles-Étienne Charle (imprimeur-libraire, 17..-179.?)"@fr ;
+        skos:editorialNote  "Almanach de l'auteur et du libraire, 1777. - . - Almanach de la librairie, 1781. - . - Sgard, Journaux. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/9931496> ;
+        skos:note           "Vraisemblablement fils et successeur de Charles Charle(s), libraire et échevin de Meaux, décédé peu avant 1771. Établi avant 1773. Publie à partir de  1773 l'\"Almanach historique du diocèse de Meaux\" et, de nov. 1775 à août 1791, les \"Affiches de Meaux\". Également auteur d'un \"Almanach svelte\" pour l'année 1779 publié sous permission tacite. Une \"citoyenne Charle(s)\" est attestée à Meaux en l'an VII"@fr ;
+        skos:prefLabel      "Charles-Étienne Charles (imprimeur-libraire, 17..-179.?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12390164b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12390164b#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Vraisemblablement fils et successeur de Charles Charle(s), libraire et échevin de Meaux, décédé peu avant 1771. Établi avant 1773. Publie à partir de  1773 l'\"Almanach historique du diocèse de Meaux\" et, de nov. 1775 à août 1791, les \"Affiches de Meaux\". Également auteur d'un \"Almanach svelte\" pour l'année 1779 publié sous permission tacite. Une \"citoyenne Charle(s)\" est attestée à Meaux en l'an VII" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1773-1791" ;
+        bio:birth                      "17.." ;
+        bio:death                      "179." ;
+        owl:sameAs                     <http://viaf.org/viaf/9931496> ;
+        foaf:familyName                "Charles" ;
+        foaf:givenName                 "Charles-Étienne" ;
+        foaf:name                      "Charles-Étienne Charles" ;
+        foaf:page                      <http://data.bnf.fr/12390164/charles-etienne_charles/> .

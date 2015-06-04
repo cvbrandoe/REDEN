@@ -1,0 +1,92 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb423351549#frbr:Expression>
+        bnfroles:r520        <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40343856c#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb131895557>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb131895557> , <http://fr.wikipedia.org/wiki/Jean-Baptiste_Corneille> ;
+        bnf-onto:FRBNF        13189555 ;
+        isni:identifierValid  "0000000081159806" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081159806> ;
+        skos:editorialNote    "Les premiers éléments de la peinture pratique / Roger de Piles ; [ill. de J. B. Corneille], 1973. - . - Bénézit, 1976. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/034167552> , <http://isni-url.oclc.nl/isni/0000000081159806> , <http://fr.wikipedia.org/wiki/Jean-Baptiste_Corneille> , <http://dbpedia.org/resource/Jean-Baptiste_Corneille> , <http://viaf.org/viaf/37058311> ;
+        skos:note             "Peintre et graveur"@fr ;
+        skos:prefLabel        "Jean-Baptiste Corneille (1649-1695)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40296471r#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423112964#frbr:Expression>
+        bnfroles:r520        <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37533034v#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40408429x#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40387290p#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1649 ;
+        bnf-onto:lastYear              1695 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre et graveur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1649/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1695/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1649-12-02" ;
+        bio:death                      "1695-04-12" ;
+        owl:sameAs                     <http://www.idref.fr/034167552> , <http://dbpedia.org/resource/Jean-Baptiste_Corneille> , <http://viaf.org/viaf/37058311> ;
+        foaf:birthday                  "12-02" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b85969260.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Globes_de_Coronelli_globe_celeste.png?width=300> ;
+        foaf:familyName                "Corneille" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean-Baptiste" ;
+        foaf:name                      "Jean-Baptiste Corneille" ;
+        foaf:page                      <http://data.bnf.fr/13189555/jean-baptiste_corneille/> .
+
+<http://data.bnf.fr/ark:/12148/cb40408428k#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb403408888#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131895557#foaf:Person> .

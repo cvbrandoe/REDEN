@@ -1,0 +1,75 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb39334009t#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39334008g#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39365670d#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1587 ;
+        bnf-onto:lastYear              1653 ;
+        rdagroup2elements:biographicalInformation
+                "Imprimeur-libraire ; imprimeur de l'Université ; imprimeur (ordinaire) du Roi (1610). - Originaire de Septsarges (Meuse). Apprenti, gendre et successeur de l'imprimeur-libraire Jean Cousin" , "Devise(s) : Constantiae corona" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1587/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1653/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1608-1652" ;
+        bio:birth                      "1587" ;
+        bio:death                      "1653" ;
+        owl:sameAs                     <http://www.idref.fr/149988079> , <http://viaf.org/viaf/225753337> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b7200331z.thumbnail> ;
+        foaf:familyName                "Constant" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Nicolas" ;
+        foaf:name                      "Nicolas Constant" ;
+        foaf:page                      <http://data.bnf.fr/14492987/nicolas_constant/> .
+
+<http://data.bnf.fr/ark:/12148/cb30807535g#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40658482r#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> ;
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb144929874>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb144929874> ;
+        bnf-onto:FRBNF      14492987 ;
+        skos:editorialNote  "Assier. - . - Lepreux, Champagne-Barrois. - . - Goldsmith, STC French books. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/149988079> , <http://viaf.org/viaf/225753337> ;
+        skos:note           "Imprimeur-libraire ; imprimeur de l'Université ; imprimeur (ordinaire) du Roi (1610). - Originaire de Septsarges (Meuse). Apprenti, gendre et successeur de l'imprimeur-libraire Jean Cousin"@fr , "Devise(s) : Constantiae corona"@fr ;
+        skos:prefLabel      "Nicolas Constant (1587-1653?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb393538990#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144929874#foaf:Person> .

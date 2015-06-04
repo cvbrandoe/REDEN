@@ -1,0 +1,77 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb35677705w#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35704486w#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36149274g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38457708k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35677711t#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356777098#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40579964p#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351819327#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Editrice" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/27191589> , <http://www.idref.fr/050632019> ;
+        foaf:familyName  "Sabatier" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Michelle" ;
+        foaf:name        "Michelle Sabatier" ;
+        foaf:page        <http://data.bnf.fr/12736277/michelle_sabatier/> .
+
+<http://data.bnf.fr/ark:/12148/cb12736277v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12736277v> ;
+        bnf-onto:FRBNF        12736277 ;
+        isni:identifierValid  "0000000001782068" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000001782068> ;
+        skos:editorialNote    "Parc national des Cévennes / Michelle Sabatier, 1989. - . - BN-Opaline Audiovisuel, 2000-01-24. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/050632019> , <http://viaf.org/viaf/27191589> , <http://isni-url.oclc.nl/isni/0000000001782068> ;
+        skos:note             "Editrice"@fr ;
+        skos:prefLabel        "Michelle Sabatier"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12736277v#foaf:Person> .

@@ -1,0 +1,92 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb16144591g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb16144591g> ;
+        bnf-onto:FRBNF        16144591 ;
+        isni:identifierValid  "0000000115810055" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000115810055> ;
+        skos:altLabel         "Ursula Sckeutterie (1774-1862)"@fr , "Ursula Scheulterie (1774-1862)"@fr ;
+        skos:editorialNote    "La princesse de Chypre : roman historique / par Ursula Scheulterie (Mme Mélanie de Boileau), 1807. - . - DBF. - . -"@fr , "ABF. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/125981414> , <http://isni-url.oclc.nl/isni/0000000115810055> ;
+        skos:note             "Historienne. - Femme de lettres"@fr ;
+        skos:prefLabel        "Mélanie de Boileau (1774-1862)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301204064#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30120407g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1774 ;
+        bnf-onto:lastYear               1862 ;
+        rdagroup2elements:biographicalInformation
+                "Historienne. - Femme de lettres" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1774/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1862/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Abbeville (Somme)" ;
+        rdagroup2elements:placeOfDeath  "Versailles" ;
+        bio:birth                       "1774" ;
+        bio:death                       "1862-12-23" ;
+        owl:sameAs                      <http://viaf.org/viaf/125981414> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k5716510x.thumbnail> ;
+        foaf:familyName                 "Boileau" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Mélanie de" ;
+        foaf:name                       "Mélanie de Boileau" ;
+        foaf:page                       <http://data.bnf.fr/16144591/melanie_de_boileau/> .
+
+<http://data.bnf.fr/ark:/12148/cb301204033#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31834340j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36311527k#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36314739v#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30120405s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30120404f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30120402r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16144591g#foaf:Person> .

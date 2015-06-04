@@ -1,0 +1,81 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb35500714j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb355040613#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb352141585#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> .
+
+<http://data.bnf.fr/12175686/lena_christ/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12175686g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12175686g> ;
+        bnf-onto:FRBNF        12175686 ;
+        isni:identifierValid  "0000000081509765" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081509765> ;
+        skos:altLabel         "Lena Benedix (1881-1920)"@fr ;
+        skos:editorialNote    "Sämtliche Werke / Lena Christ, 1990. - . - Bibliothèque nationale, Allemagne. - http://www.ddb.de. - 2003-03-20"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/71432758> , <http://www.idref.fr/073364681> , <http://isni-url.oclc.nl/isni/0000000081509765> ;
+        skos:note             "Romancière et dramaturge. - Épouse de l'écrivain : Benedix, Peter"@fr ;
+        skos:prefLabel        "Lena Christ (1881-1920)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1881 ;
+        bnf-onto:lastYear               1920 ;
+        rdagroup2elements:biographicalInformation
+                "Romancière et dramaturge. - Épouse de l'écrivain : Benedix, Peter" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1881/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1920/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Glonn, Allemagne" ;
+        rdagroup2elements:placeOfDeath  "Münich, Allemagne" ;
+        bio:birth                       "1881-10-30" ;
+        bio:death                       "1920-06-30" ;
+        owl:sameAs                      <http://viaf.org/viaf/71432758> , <http://www.idref.fr/073364681> ;
+        foaf:birthday                   "10-30" ;
+        foaf:familyName                 "Christ" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Lena" ;
+        foaf:name                       "Lena Christ" ;
+        foaf:page                       <http://data.bnf.fr/12175686/lena_christ/> .
+
+<http://data.bnf.fr/ark:/12148/cb354154039#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34335437q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12175686g#foaf:Person> .

@@ -1,0 +1,77 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb346758255#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34685628v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12614535p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12614535p> ;
+        bnf-onto:FRBNF        12614535 ;
+        isni:identifierValid  "0000000063354050" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000063354050> ;
+        skos:altLabel         "James Elward (1928-1996)"@fr ;
+        skos:editorialNote    "L'écharpe de saphir : roman / Rebecca James ; traduit de l'américain par Henriette Rain, 1976. - . - Demain m'appartient / Rebecca James / traduit de l'américain par Henriette Rain, 1982. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000063354050> , <http://viaf.org/viaf/16104371> ;
+        skos:note             "Pseudonyme, pour ses romans, de James Elward. - Auteur dramatique sous son patronyme"@fr ;
+        skos:prefLabel        "Rebecca James (1928-1996)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34699132w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1928 ;
+        bnf-onto:lastYear              1996 ;
+        rdagroup2elements:biographicalInformation
+                "Pseudonyme, pour ses romans, de James Elward. - Auteur dramatique sous son patronyme" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1928/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1996/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1928-11-22" ;
+        bio:death                      "1996-08-30" ;
+        owl:sameAs                     <http://viaf.org/viaf/16104371> ;
+        foaf:birthday                  "11-22" ;
+        foaf:familyName                "James" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Rebecca" ;
+        foaf:name                      "Rebecca James" ;
+        foaf:page                      <http://data.bnf.fr/12614535/rebecca_james/> .
+
+<http://data.bnf.fr/ark:/12148/cb34614176n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34857822j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346180065#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12614535p#foaf:Person> .

@@ -1,0 +1,34 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/16722602/wesley/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb16722602f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16722602f>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16722602f> ;
+        bnf-onto:FRBNF      16722602 ;
+        skos:editorialNote  "Music and the Wesleys / edited by Nicholas Temperley and Stephen Banfield, cop. 2010. - . - Grove music online. - http://www.oxfordmusiconline.com. - 2013-11-13"@fr ;
+        skos:note           "Fondateurs du méthodisme. - Compositeurs et organistes"@fr ;
+        skos:prefLabel      "Wesley (famille)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16722602f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16722602f#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Fondateurs du méthodisme. - Compositeurs et organistes" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Musique" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/780/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        foaf:familyName  "Wesley" ;
+        foaf:page        <http://data.bnf.fr/16722602/wesley/> .

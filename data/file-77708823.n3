@@ -1,0 +1,40 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb362063731#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125126448#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125126448#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125126448#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125126448>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb125126448> ;
+        bnf-onto:FRBNF        12512644 ;
+        isni:identifierValid  "0000000061455720" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000061455720> ;
+        skos:editorialNote    "Ronsard et la rhétorique / Alex. L. Gordon, 1970. - . - BN Cat. gén. 1960-1969. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000061455720> , <http://viaf.org/viaf/12414109> , <http://www.idref.fr/034363203> ;
+        skos:note             "Spécialiste de la littérature française du 16e siècle. - Docteur en lettres (Paris, 1965)"@fr ;
+        skos:prefLabel        "Alexander Lobban Gordon"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb125126448#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125126448#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Spécialiste de la littérature française du 16e siècle. - Docteur en lettres (Paris, 1965)" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/034363203> , <http://viaf.org/viaf/12414109> ;
+        foaf:familyName  "Gordon" ;
+        foaf:givenName   "Alexander Lobban" ;
+        foaf:name        "Alexander Lobban Gordon" ;
+        foaf:page        <http://data.bnf.fr/12512644/alexander_lobban_gordon/> .

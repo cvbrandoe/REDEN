@@ -1,0 +1,81 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb41277423v#frbr:Expression>
+        bnfroles:r3060       <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        marcrel:prt          <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420426430#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1979 ;
+        rdagroup2elements:biographicalInformation
+                "Graveur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Rennes (Ille-et-Vilaine)" ;
+        owl:sameAs                      <http://viaf.org/viaf/17482256> ;
+        foaf:familyName                 "Garçon" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Géraldine" ;
+        foaf:name                       "Géraldine Garçon" ;
+        foaf:page                       <http://data.bnf.fr/14643548/geraldine_garcon/> .
+
+<http://data.bnf.fr/ark:/12148/cb402130671#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14643548p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14643548p> ;
+        bnf-onto:FRBNF        14643548 ;
+        isni:identifierValid  "0000000009258957" ;
+        owl:sameAs            <http://isni.org/isni/0000000009258957> ;
+        skos:exactMatch       <http://isni.org/isni/0000000009258957> , <http://viaf.org/viaf/17482256> ;
+        skos:note             "Graveur"@fr ;
+        skos:prefLabel        "Géraldine Garçon"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41277431g#frbr:Expression>
+        bnfroles:r3060       <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        marcrel:prt          <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41277443g#frbr:Expression>
+        bnfroles:r3060       <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        marcrel:prt          <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39998874q#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14643548p#foaf:Person> .

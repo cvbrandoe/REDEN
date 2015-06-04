@@ -1,0 +1,45 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/15916546/charlotte_de_la_salle/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb15916546r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15916546r#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1860 ;
+        bnf-onto:lastYear              1937 ;
+        rdagroup2elements:biographicalInformation
+                "Comtesse" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1860/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1937/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de la France" , "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/800/> , <http://dewey.info/class/944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1860-04-18" ;
+        bio:death                      "1937" ;
+        foaf:birthday                  "04-18" ;
+        foaf:familyName                "La Salle" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Charlotte de" ;
+        foaf:name                      "Charlotte de La Salle" ;
+        foaf:page                      <http://data.bnf.fr/15916546/charlotte_de_la_salle/> .
+
+<http://data.bnf.fr/ark:/12148/cb15916546r>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb15916546r> ;
+        bnf-onto:FRBNF  15916546 ;
+        skos:altLabel   "Ixixe (1860-1937)"@fr , "Charlotte de Saint-Gervais (1860-1937)"@fr ;
+        skos:note       "Comtesse"@fr ;
+        skos:prefLabel  "Charlotte de La Salle (1860-1937)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb15916546r#foaf:Person> .

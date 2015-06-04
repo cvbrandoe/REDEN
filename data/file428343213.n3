@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Scénariste" ;
+        owl:sameAs       <http://www.idref.fr/133489671> , <http://viaf.org/viaf/5185558> ;
+        foaf:familyName  "Jammes" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Fernand" ;
+        foaf:name        "Fernand Jammes" ;
+        foaf:page        <http://data.bnf.fr/14627950/fernand_jammes/> .
+
+<http://data.bnf.fr/ark:/12148/cb399250165#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392479677#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40220542j#frbr:Expression>
+        bnfroles:r230        <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39925988h#frbr:Expression>
+        bnfroles:r230        <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43781780d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14627950w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14627950w> ;
+        bnf-onto:FRBNF        14627950 ;
+        isni:identifierValid  "0000000010842173" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000010842173> ;
+        skos:exactMatch       <http://www.idref.fr/133489671> , <http://isni-url.oclc.nl/isni/0000000010842173> , <http://viaf.org/viaf/5185558> ;
+        skos:note             "Scénariste"@fr ;
+        skos:prefLabel        "Fernand Jammes"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39978403p#frbr:Expression>
+        bnfroles:r230        <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14627950w#foaf:Person> .

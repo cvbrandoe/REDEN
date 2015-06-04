@@ -1,0 +1,44 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb39460054g#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14682086f#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14682086f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14682086f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14682086f#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Actrice de théâtre et de cinéma" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        bio:birth                      "18.." ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://viaf.org/viaf/258498526> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b53049785r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53049794q.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53049827j.thumbnail> ;
+        foaf:familyName                "Greuze" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Lilian" ;
+        foaf:name                      "Lilian Greuze" ;
+        foaf:page                      <http://data.bnf.fr/14682086/lilian_greuze/> .
+
+<http://data.bnf.fr/ark:/12148/cb14682086f>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14682086f> ;
+        bnf-onto:FRBNF   14682086 ;
+        skos:exactMatch  <http://viaf.org/viaf/258498526> ;
+        skos:note        "Actrice de théâtre et de cinéma"@fr ;
+        skos:prefLabel   "Lilian Greuze"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14682086f#foaf:Person> .
+
+<http://data.bnf.fr/14682086/lilian_greuze/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14682086f#foaf:Person> .

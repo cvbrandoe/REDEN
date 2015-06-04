@@ -1,0 +1,64 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Traduit de l'anglais et de l'américain en français" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/64008362> , <http://www.idref.fr/026983699> ;
+        foaf:familyName  "Léonard" ;
+        foaf:givenName   "Josette" ;
+        foaf:name        "Josette Léonard" ;
+        foaf:page        <http://data.bnf.fr/11912486/josette_leonard/> .
+
+<http://data.bnf.fr/ark:/12148/cb37649556c#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119124866>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb119124866> ;
+        bnf-onto:FRBNF   11912486 ;
+        skos:altLabel    "Josette G. Léonard"@fr ;
+        skos:exactMatch  <http://viaf.org/viaf/64008362> , <http://www.idref.fr/026983699> ;
+        skos:note        "Traduit de l'anglais et de l'américain en français"@fr ;
+        skos:prefLabel   "Josette Léonard"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353706042#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34552612z#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34329712z#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35095768p#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345925386#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119124866#foaf:Person> .

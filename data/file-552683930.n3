@@ -1,0 +1,68 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb38988022x#frbr:Expression>
+        bnfroles:r1130       <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42647693s#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41460631g#frbr:Expression>
+        bnfroles:r1130       <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person>
+        a                               foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Artiste lyrique (mezzo soprano)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/sp#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:placeOfBirth  "Pamplune (Espagne)" ;
+        owl:sameAs                      <http://viaf.org/viaf/17460330> , <http://www.idref.fr/156258803> ;
+        foaf:familyName                 "Beaumont" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Maite" ;
+        foaf:name                       "Maite Beaumont" ;
+        foaf:page                       <http://data.bnf.fr/14534068/maite_beaumont/> .
+
+<http://data.bnf.fr/ark:/12148/cb410531657#frbr:Expression>
+        bnfroles:r1130       <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42352859n#frbr:Expression>
+        bnfroles:r1130       <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42688454d#frbr:Expression>
+        bnfroles:r1140       <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14534068s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14534068s> ;
+        bnf-onto:FRBNF        14534068 ;
+        isni:identifierValid  "000000005520348X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000005520348X> ;
+        skos:editorialNote    "La maga abbandonata [Enregistrement sonore] / Handel, comp. ; Maite Beaumont, A. Deutsche Harmonia mundi 74321 95644 2. - . - Göttinger Händel Gesellschaft. - http://www.haendel.org. -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000005520348X> , <http://www.idref.fr/156258803> , <http://viaf.org/viaf/17460330> ;
+        skos:note             "Artiste lyrique (mezzo soprano)"@fr ;
+        skos:prefLabel        "Maite Beaumont"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14534068s#foaf:Person> .

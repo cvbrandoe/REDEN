@@ -1,0 +1,38 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14978237j#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1871 ;
+        bnf-onto:lastYear              1968 ;
+        rdagroup2elements:biographicalInformation
+                "Homme politique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/be#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1871/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1968/> ;
+        bio:birth                      "1871" ;
+        bio:death                      "1968" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b69311114.thumbnail> ;
+        foaf:familyName                "Huysmans" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Camille" ;
+        foaf:name                      "Camille Huysmans" ;
+        foaf:page                      <http://data.bnf.fr/14978237/camille_huysmans/> .
+
+<http://data.bnf.fr/ark:/12148/cb14978237j>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb14978237j> ;
+        bnf-onto:FRBNF  14978237 ;
+        skos:note       "Homme politique"@fr ;
+        skos:prefLabel  "Camille Huysmans (1871-1968)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb14978237j#foaf:Person> .
+
+<http://data.bnf.fr/14978237/camille_huysmans/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14978237j#foaf:Person> .

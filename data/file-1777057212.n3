@@ -1,0 +1,42 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb148249499#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1949 ;
+        rdagroup2elements:biographicalInformation
+                "Agent, producteur et traducteur hollandais" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ne#> ;
+        owl:sameAs          <http://viaf.org/viaf/7653072> ;
+        foaf:familyName     "Elmer" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "John" ;
+        foaf:name           "John Elmer" ;
+        foaf:page           <http://data.bnf.fr/14824949/john_elmer/> .
+
+<http://data.bnf.fr/ark:/12148/cb148249499>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb148249499> ;
+        bnf-onto:FRBNF   14824949 ;
+        skos:altLabel    "Rudolf N. G.  Kronenburg"@fr ;
+        skos:exactMatch  <http://viaf.org/viaf/7653072> ;
+        skos:note        "Agent, producteur et traducteur hollandais"@fr ;
+        skos:prefLabel   "John Elmer"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb148249499#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb396463551#frbr:Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb148249499#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb148249499#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148249499#foaf:Person> .
+
+<http://data.bnf.fr/14824949/john_elmer/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb148249499#foaf:Person> .

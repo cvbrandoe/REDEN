@@ -1,0 +1,89 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb122080461>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb122080461> ;
+        bnf-onto:FRBNF        12208046 ;
+        isni:identifierValid  "0000000118907872" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000118907872> ;
+        skos:editorialNote    "Bleu nuit presque noir / Thanassis Valtinos ; trad. du grec par Bertrand Bouvier, 1992. - . - LC Authorities. - http://authorities.loc.gov. - 2014-07-11"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000118907872> , <http://viaf.org/viaf/2520532> , <http://www.idref.fr/030721318> ;
+        skos:note             "Professeur de grec moderne à l'université de Genève, Faculté des lettres, Département de langues et littératures méditerranéennes, slaves et orientales (1995)"@fr ;
+        skos:prefLabel        "Bertrand Bouvier"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35605759w#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36685145b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1929 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de grec moderne à l'université de Genève, Faculté des lettres, Département de langues et littératures méditerranéennes, slaves et orientales (1995)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/sz#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/030721318> , <http://viaf.org/viaf/2520532> ;
+        foaf:familyName     "Bouvier" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Bertrand" ;
+        foaf:name           "Bertrand Bouvier" ;
+        foaf:page           <http://data.bnf.fr/12208046/bertrand_bouvier/> .
+
+<http://data.bnf.fr/ark:/12148/cb37592937c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34344360x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35519777t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35697625n#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37501548t#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351978825#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437920860#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38905238g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122080461#foaf:Person> .

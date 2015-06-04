@@ -1,0 +1,100 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14599337s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14599337s> ;
+        bnf-onto:FRBNF        14599337 ;
+        isni:identifierValid  "000000012278852X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000012278852X> ;
+        skos:exactMatch       <http://www.idref.fr/076183947> , <http://isni-url.oclc.nl/isni/000000012278852X> , <http://viaf.org/viaf/42090429> ;
+        skos:note             "Auteur-réalisatrice de documentaires, écrivain"@fr ;
+        skos:prefLabel        "Dominique Dreyfus (1945-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb413384761#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40999919z#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1945 ;
+        rdagroup2elements:biographicalInformation
+                "Auteur-réalisatrice de documentaires, écrivain" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1945/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs                     <http://www.idref.fr/076183947> , <http://viaf.org/viaf/42090429> ;
+        foaf:birthday                  "09-27" ;
+        foaf:familyName                "Dreyfus" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Dominique" ;
+        foaf:name                      "Dominique Dreyfus" ;
+        foaf:page                      <http://data.bnf.fr/14599337/dominique_dreyfus/> .
+
+<http://data.bnf.fr/ark:/12148/cb39006107r#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392017720#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401247348#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40124973q#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401249595#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39201816s#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42190159q#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435238917#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39966562s#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435240155#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14599337s#foaf:Person> .

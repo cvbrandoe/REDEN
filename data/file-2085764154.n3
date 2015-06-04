@@ -1,0 +1,123 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39773675j#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34064369x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42772445z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307715130#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb324117806#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb308669974#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30866992d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30866999t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1877 ;
+        bnf-onto:lastYear               1956 ;
+        rdagroup2elements:biographicalInformation
+                "Avocat et homme politique. - Professeur de loi constitutionnelle et administrative à l'Université d'Alger. - Avocat à la Cour d'appel. - Député d'Alger (1924-1938), secrétaire d'État et ministre des PTT (1930)  puis, de l'Éducation nationale (1934). - Sénateur d'Alger (1938-1944). - Licencié en droit. - Prénoms complets : André, Victor" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1877/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1956/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Droit" , "Science politique" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/320/> , <http://dewey.info/class/340/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Bouzaréah (Algérie)" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1877-08-06" ;
+        bio:death                       "1956-04-08" ;
+        owl:sameAs                      <http://www.idref.fr/057301409> , <http://dbpedia.org/resource/André_Mallarmé> , <http://viaf.org/viaf/816> ;
+        foaf:birthday                   "08-06" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/André_Mallarmé.jpg?width=300> ;
+        foaf:familyName                 "Mallarmé" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "André" ;
+        foaf:name                       "André Mallarmé" ;
+        foaf:page                       <http://data.bnf.fr/10363212/andre_mallarme/> .
+
+<http://data.bnf.fr/ark:/12148/cb30866993r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> .
+
+<http://data.bnf.fr/10363212/andre_mallarme/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb103632126>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://fr.wikipedia.org/wiki/André_Mallarmé> , <http://catalogue.bnf.fr/ark:/12148/cb103632126> ;
+        bnf-onto:FRBNF      10363212 ;
+        skos:editorialNote  "Biographies des principales personnalités françaises décédées au cours de l'année 1956 / Henri Temerson, [1957]. - . - Qui était qui, XXe siècle / Béatrice et Michel Wattel, 2005. - . -"@fr , "Code de l'Algérie annoté : supplément, année 1910 [et 1913] / par Robert Estoublon, Adolphe Lefébure ; continué en collaboration avec Émile Larcher et André Mallarmé, 1911-1914. - . - World biographical information system. - http://db.saur.de/WBIS. - 2009-01-21"@fr ;
+        skos:exactMatch     <http://dbpedia.org/resource/André_Mallarmé> , <http://www.idref.fr/057301409> , <http://fr.wikipedia.org/wiki/André_Mallarmé> , <http://viaf.org/viaf/816> ;
+        skos:note           "Avocat et homme politique. - Professeur de loi constitutionnelle et administrative à l'Université d'Alger. - Avocat à la Cour d'appel. - Député d'Alger (1924-1938), secrétaire d'État et ministre des PTT (1930)  puis, de l'Éducation nationale (1934). - Sénateur d'Alger (1938-1944). - Licencié en droit. - Prénoms complets : André, Victor"@fr ;
+        skos:prefLabel      "André Mallarmé (1877-1956)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30867000p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30866998g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb308669943#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412486231#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb308670011#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103632126#foaf:Person> .

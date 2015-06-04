@@ -1,0 +1,79 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40220570s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37737493s#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39223612r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1969 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en science politique (London school of economics and political science, 1999). - Professeur de science politique, University of Bath,  GB (en 2004)" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1969/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs                     <http://viaf.org/viaf/118592945> , <http://www.idref.fr/069522308> ;
+        foaf:birthday                  "02-06" ;
+        foaf:familyName                "Wolff" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Stefan" ;
+        foaf:name                      "Stefan Wolff" ;
+        foaf:page                      <http://data.bnf.fr/14410405/stefan_wolff/> .
+
+<http://data.bnf.fr/ark:/12148/cb38981368c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14410405f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14410405f> ;
+        bnf-onto:FRBNF        14410405 ;
+        isni:identifierValid  "0000000109392299" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109392299> ;
+        skos:editorialNote    "German minorities in Europe : ethnic identity and cultural belonging / Stefan Wolff, 2000. - . - The ethnopolitical encyclopaedia of Europe / ed. by Karl Cordell and Stefan Wolff, 2004. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/069522308> , <http://viaf.org/viaf/118592945> , <http://isni-url.oclc.nl/isni/0000000109392299> ;
+        skos:note             "Docteur en science politique (London school of economics and political science, 1999). - Professeur de science politique, University of Bath,  GB (en 2004)"@fr ;
+        skos:prefLabel        "Stefan Wolff (1969-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41234838f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42703052x#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422542328#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38981365b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410405f#foaf:Person> .

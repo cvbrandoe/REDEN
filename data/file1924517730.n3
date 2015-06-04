@@ -1,0 +1,50 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb13976116p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13976116p> ;
+        bnf-onto:FRBNF        13976116 ;
+        isni:identifierValid  "0000000001330766" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000001330766> ;
+        skos:editorialNote    "Les animaux décousus [Images animées] / Louis Cézanne, réal., scénario ; Louis Cézanne, Stéphane Arboux, Alain Baron [et al.], act., [DL 1994]. - . - Corps de textes - auteurs. - http://www.corpsdetextes.com. - 2011-08-22"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/69123494> , <http://isni-url.oclc.nl/isni/0000000001330766> ;
+        skos:note             "Auteur dramatique et metteur en scène. - Acteur de théâtre et de cinéma. - Cinéaste. - Utilise aussi le pseudonyme David Noir"@fr ;
+        skos:prefLabel        "Louis Cézanne"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13976116p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38300119p#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb13976116p#foaf:Person> ;
+        bnfroles:r3170       <http://data.bnf.fr/ark:/12148/cb13976116p#foaf:Person> ;
+        bnfroles:r3210       <http://data.bnf.fr/ark:/12148/cb13976116p#foaf:Person> ;
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb13976116p#foaf:Person> ;
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb13976116p#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb13976116p#foaf:Person> ;
+        marcrel:dst          <http://data.bnf.fr/ark:/12148/cb13976116p#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb13976116p#foaf:Person> ;
+        marcrel:pro          <http://data.bnf.fr/ark:/12148/cb13976116p#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb13976116p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13976116p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13976116p#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1963 ;
+        rdagroup2elements:biographicalInformation
+                "Auteur dramatique et metteur en scène. - Acteur de théâtre et de cinéma. - Cinéaste. - Utilise aussi le pseudonyme David Noir" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs          <http://viaf.org/viaf/69123494> ;
+        foaf:familyName     "Cézanne" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Louis" ;
+        foaf:name           "Louis Cézanne" ;
+        foaf:page           <http://data.bnf.fr/13976116/louis_cezanne/> .

@@ -1,0 +1,54 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb15538453z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15538453z> ;
+        bnf-onto:FRBNF        15538453 ;
+        isni:identifierValid  "0000000055235043" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000055235043> ;
+        skos:altLabel         "M. Loventz (1692-1752)"@fr ;
+        skos:editorialNote    "Oraison funèbre de tres-haut et très-excellent seigneur monseigneur Maurice de Saxe / prononcée par M. Loventz [sic], 1751. - . - Haag. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/29842808> , <http://isni-url.oclc.nl/isni/0000000055235043> ;
+        skos:note             "Docteur en philosophie et en théologie. - Professeur à l'université de Strasbourg"@fr ;
+        skos:prefLabel        "Jean-Michel Lorenz (1692-1752)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15538453z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb317315677#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15538453z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15538453z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15538453z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15538453z#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1692 ;
+        bnf-onto:lastYear               1752 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en philosophie et en théologie. - Professeur à l'université de Strasbourg" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1692/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1752/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        rdagroup2elements:placeOfBirth  "Strasbourg" ;
+        bio:birth                       "1692-06-16" ;
+        bio:death                       "1752-08-13" ;
+        owl:sameAs                      <http://viaf.org/viaf/29842808> ;
+        foaf:birthday                   "06-16" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k5788173m.thumbnail> ;
+        foaf:familyName                 "Lorenz" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jean-Michel" ;
+        foaf:name                       "Jean-Michel Lorenz" ;
+        foaf:page                       <http://data.bnf.fr/15538453/jean-michel_lorenz/> .

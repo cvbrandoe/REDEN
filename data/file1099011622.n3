@@ -1,0 +1,57 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb165227627#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1867 ;
+        bnf-onto:lastYear              1932 ;
+        rdagroup2elements:biographicalInformation
+                "Banquier américain et bibliophile. - Petit-fils de : Junius S. Morgan (1813-1890). - Fils de : Sarah Spencer Morgan (1839-1896) et George Hale Morgan (1840-1911). - Neveu de : John Pierpont Morgan (1839-1896). - Bibliothécaire à la bibliothèque de l'Université de Princeton de 1898 à 1909, à laquelle il a donné sa collection d'éditions originales des oeuvres du poète latin Virgile" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1867/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1932/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1867-06-05" ;
+        bio:death                      "1932-08-18" ;
+        owl:sameAs                     <http://viaf.org/viaf/42234457> ;
+        foaf:birthday                  "06-05" ;
+        foaf:familyName                "Morgan" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Junius Spencer" ;
+        foaf:name                      "Junius Spencer Morgan" ;
+        foaf:page                      <http://data.bnf.fr/16522762/junius_spencer_morgan/> .
+
+<http://data.bnf.fr/ark:/12148/cb310421572#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb165227627#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb165227627#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165227627#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb165227627>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb165227627> ;
+        bnf-onto:FRBNF        16522762 ;
+        isni:identifierValid  "0000000121300166" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121300166> ;
+        skos:altLabel         "Junius S. Morgan (1867-1932)"@fr ;
+        skos:editorialNote    "LC Authorities : Morgan, Junius Spencer [filiation]. - http://authorities.loc.gov. - 2011-07-07 VIAF [autres formes du nom]. - http://viaf.org. - 2011-07-07"@fr , "The Tradition of Virgil : three papers on the history and influence of the poet / by Junius S. Morgan, Kenneth McKenzie, Charles G. Osgood, 1930. - . - A catalogue of the Junius Spencer Morgan Collection of Virgil in The Princeton University Library / Craig Kallendorf, 2009. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000121300166> , <http://viaf.org/viaf/42234457> ;
+        skos:note             "Banquier américain et bibliophile. - Petit-fils de : Junius S. Morgan (1813-1890). - Fils de : Sarah Spencer Morgan (1839-1896) et George Hale Morgan (1840-1911). - Neveu de : John Pierpont Morgan (1839-1896). - Bibliothécaire à la bibliothèque de l'Université de Princeton de 1898 à 1909, à laquelle il a donné sa collection d'éditions originales des oeuvres du poète latin Virgile"@fr ;
+        skos:prefLabel        "Junius Spencer Morgan (1867-1932)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb165227627#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb338645195#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb165227627#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb165227627#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165227627#foaf:Person> .

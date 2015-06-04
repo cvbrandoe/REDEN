@@ -1,0 +1,52 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39174323p#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb119706468#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb119706468#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119706468#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119706468#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1943 ;
+        bnf-onto:lastYear              1971 ;
+        rdagroup2elements:biographicalInformation
+                "Mannequin et actrice américaine" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1943/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1971/> ;
+        bio:birth                      "1943-04-30" ;
+        bio:death                      "1971-11-16" ;
+        owl:sameAs                     <http://www.idref.fr/027724972> , <http://dbpedia.org/resource/Edie_Sedgwick> , <http://viaf.org/viaf/72565776> ;
+        foaf:birthday                  "04-30" ;
+        foaf:familyName                "Sedgwick" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Edie" ;
+        foaf:name                      "Edie Sedgwick" ;
+        foaf:page                      <http://data.bnf.fr/11970646/edie_sedgwick/> .
+
+<http://data.bnf.fr/ark:/12148/cb119706468>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Edie_Sedgwick> , <http://catalogue.bnf.fr/ark:/12148/cb119706468> ;
+        bnf-onto:FRBNF        11970646 ;
+        isni:identifierValid  "0000000077302665" ;
+        owl:sameAs            <http://isni.org/isni/0000000077302665> ;
+        skos:altLabel         "Edith Sedgwick (1943-1971)"@fr , "Edith Post (1943-1971)"@fr ;
+        skos:exactMatch       <http://www.idref.fr/027724972> , <http://isni.org/isni/0000000077302665> , <http://dbpedia.org/resource/Edie_Sedgwick> , <http://viaf.org/viaf/72565776> , <http://fr.wikipedia.org/wiki/Edie_Sedgwick> ;
+        skos:note             "Mannequin et actrice américaine"@fr ;
+        skos:prefLabel        "Edie Sedgwick (1943-1971)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb119706468#foaf:Person> .
+
+<http://data.bnf.fr/11970646/edie_sedgwick/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb119706468#foaf:Person> .

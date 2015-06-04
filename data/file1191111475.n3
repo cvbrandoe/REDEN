@@ -1,0 +1,29 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+<http://data.bnf.fr/ark:/12148/cb12361454g>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12361454g> ;
+        bnf-onto:FRBNF      12361454 ;
+        skos:editorialNote  "L'apprenti-yogi / Janine Giraud, 1967. - . - BN Cat. gén. 1960-1969. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/19754889> , <http://www.idref.fr/032619073> ;
+        skos:prefLabel      "Janine Giraud"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12361454g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12361454g#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1930 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/19754889> , <http://www.idref.fr/032619073> ;
+        foaf:familyName     "Giraud" ;
+        foaf:givenName      "Janine" ;
+        foaf:name           "Janine Giraud" ;
+        foaf:page           <http://data.bnf.fr/12361454/janine_giraud/> .

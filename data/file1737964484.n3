@@ -1,0 +1,38 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb16206478t#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Tromboniste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/121882993> ;
+        foaf:familyName  "Charles" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Fabrice" ;
+        foaf:name        "Fabrice Charles" ;
+        foaf:page        <http://data.bnf.fr/16206478/fabrice_charles/> .
+
+<http://data.bnf.fr/ark:/12148/cb16206478t>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16206478t> ;
+        bnf-onto:FRBNF      16206478 ;
+        skos:editorialNote  "Dordogne [Enregistrement sonore] /  Benjamin Bondonneau, clar. ; Fabrice Charles, trb. Amor fati FATUM 011. - . - Quatuor Cassini. - http://1d-aquitaine.com/fr/artist/quatuor-cassini. - 2010-06-02"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/121882993> ;
+        skos:note           "Tromboniste"@fr ;
+        skos:prefLabel      "Fabrice Charles"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16206478t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42141218m#frbr:Expression>
+        bnfroles:r1520       <http://data.bnf.fr/ark:/12148/cb16206478t#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb16206478t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16206478t#foaf:Person> .

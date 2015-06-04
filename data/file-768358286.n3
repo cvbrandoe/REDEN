@@ -1,0 +1,58 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35338606v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12820866c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12820866c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12820866c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42232458m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12820866c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12820866c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12820866c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35630776w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12820866c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12820866c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12820866c#foaf:Person> .
+
+<http://data.bnf.fr/12820866/alpha_conde/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12820866c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12820866c#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1938 ;
+        rdagroup2elements:biographicalInformation
+                "Homme politique, fondateur du RPG (Rassemblement du Peuple de Guinée)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gv> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://dbpedia.org/resource/Alpha_Condé> , <http://www.idref.fr/122412060> , <http://viaf.org/viaf/217598751> ;
+        foaf:depiction      <http://commons.wikimedia.org/wiki/Special:FilePath/Alpha_Conde_-_World_Economic_Forum_Annual_Meeting_2012.jpg?width=300> ;
+        foaf:familyName     "Condé" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Alpha" ;
+        foaf:name           "Alpha Condé" ;
+        foaf:page           <http://data.bnf.fr/12820866/alpha_conde/> .
+
+<http://data.bnf.fr/ark:/12148/cb12820866c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Alpha_Condé> , <http://catalogue.bnf.fr/ark:/12148/cb12820866c> ;
+        bnf-onto:FRBNF        12820866 ;
+        isni:identifierValid  "0000000398239986" ;
+        owl:sameAs            <http://isni.org/isni/0000000398239986> ;
+        skos:editorialNote    "Guinée, Albanie d'Afrique ou néo-colonie américaine / Alpha Condé, éditions Gît-le-cœur, 1972. - . - Un africain engagé : ce que je veux pour la Guinée / Alpha Condé, éditions Picollec, 2010. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000398239986> , <http://dbpedia.org/resource/Alpha_Condé> , <http://fr.wikipedia.org/wiki/Alpha_Condé> , <http://viaf.org/viaf/217598751> , <http://www.idref.fr/122412060> ;
+        skos:note             "Homme politique, fondateur du RPG (Rassemblement du Peuple de Guinée)"@fr ;
+        skos:prefLabel        "Alpha Condé"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12820866c#foaf:Person> .

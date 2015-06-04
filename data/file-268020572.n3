@@ -1,0 +1,78 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb423867307#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31015459p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc771863/cd0e109#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34104518h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb436606642#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> .
+
+<http://data.bnf.fr/13529979/nicolas_4/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13529979s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Nicolas_IV> , <http://catalogue.bnf.fr/ark:/12148/cb13529979s> ;
+        bnf-onto:FRBNF        13529979 ;
+        isni:identifierValid  "0000000121183131" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121183131> ;
+        skos:altLabel         "Niccolò IV (pape, 1227-1292)"@it , "Girolamo D'Ascoli (1227-1292)"@fr , "Nicholas IV (pape, 1227-1292)"@en , "Nikolaus IV (pape, 1227-1292)"@de , "Girolamo d'Ascoli (1227-1292)"@fr , "Girolamo Masci (1227-1292)"@fr , "Nicolaus IV (pape, 1227-1292)"@la ;
+        skos:editorialNote    "Dictionnaire historique de la papauté / sous la dir. de Philippe Levillain, 1994. - . - BN Cat. gén. : Nicolas IV (Girolamo d'Ascoli, pape sous le nom de). - . -"@fr , "[Regola dei penitenti francescani / Niccolò IV] i̲n̲ Carisma e legislazione alle origini del Terzo ordine di S. Francesco / Lino Temperini, 1996. - . - GDEL. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000121183131> , <http://dbpedia.org/resource/Nicolas_IV> , <http://fr.wikipedia.org/wiki/Nicolas_IV> , <http://viaf.org/viaf/3827199> ;
+        skos:note             "Pape de 1588 à 1592. - Franciscain"@fr ;
+        skos:prefLabel        "Nicolas IV (pape, 1227-1292)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1227 ;
+        bnf-onto:lastYear              1292 ;
+        rdagroup2elements:biographicalInformation
+                "Pape de 1588 à 1592. - Franciscain" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1227/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1292/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        bio:birth                      "1227-09-30" ;
+        bio:death                      "1292-04-04" ;
+        owl:sameAs                     <http://dbpedia.org/resource/Nicolas_IV> , <http://viaf.org/viaf/3827199> ;
+        foaf:birthday                  "09-30" ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/NicholasIV.jpg?width=300> , <http://gallica.bnf.fr/ark:/12148/bpt6k5712711s.thumbnail> ;
+        foaf:familyName                "Nicolas" ;
+        foaf:page                      <http://data.bnf.fr/13529979/nicolas_4/> .
+
+<http://data.bnf.fr/ark:/12148/cb31015458b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13529979s#foaf:Person> .

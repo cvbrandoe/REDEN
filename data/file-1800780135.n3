@@ -1,0 +1,39 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb13545553f#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1942 ;
+        rdagroup2elements:biographicalInformation
+                "Photographe" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Photographie" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/770/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/08136296X> ;
+        foaf:familyName     "James" ;
+        foaf:givenName      "Geoffrey" ;
+        foaf:name           "Geoffrey James" ;
+        foaf:page           <http://data.bnf.fr/13545553/geoffrey_james/> .
+
+<http://data.bnf.fr/ark:/12148/cb13545553f>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb13545553f> ;
+        bnf-onto:FRBNF   13545553 ;
+        skos:exactMatch  <http://www.idref.fr/08136296X> ;
+        skos:note        "Photographe"@fr ;
+        skos:prefLabel   "Geoffrey James"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb13545553f#foaf:Person> .
+
+<http://data.bnf.fr/13545553/geoffrey_james/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13545553f#foaf:Person> .

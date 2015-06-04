@@ -1,0 +1,30 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+<http://data.bnf.fr/ark:/12148/cb14659221g#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Cinéaste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/29793877> ;
+        foaf:familyName  "Beaumont" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Roger" ;
+        foaf:name        "Roger Beaumont" ;
+        foaf:page        <http://data.bnf.fr/14659221/roger_beaumont/> .
+
+<http://data.bnf.fr/ark:/12148/cb14659221g>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb14659221g> ;
+        bnf-onto:FRBNF      14659221 ;
+        skos:editorialNote  "Trois filles vers le soleil [Spectacle] : film / de Roger Baumont, [s.d.]. - . - IMDB. - http://www.us.imdb.com/name/nm0064633/. - 2008-06-27"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/29793877> ;
+        skos:note           "Cinéaste"@fr ;
+        skos:prefLabel      "Roger Beaumont (cinéaste)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb14659221g#foaf:Person> .

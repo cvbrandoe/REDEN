@@ -1,0 +1,74 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb402124923#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35656150d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb350098969#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39911017b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1926 ;
+        bnf-onto:lastYear               2006 ;
+        rdagroup2elements:biographicalInformation
+                "Historien. - Membre, Academia  română (depuis 1993)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/rm#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1926/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/2006/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/rum> ;
+        rdagroup2elements:placeOfBirth  "Buhuşi (Roumanie)" ;
+        rdagroup2elements:placeOfDeath  "Iaşi (Roumanie)" ;
+        bio:birth                       "1926-02-26" ;
+        bio:death                       "2006-01-24" ;
+        owl:sameAs                      <http://www.idref.fr/029498570> , <http://viaf.org/viaf/79061949> ;
+        foaf:birthday                   "02-26" ;
+        foaf:familyName                 "Platon" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Gheorghe" ;
+        foaf:name                       "Gheorghe Platon" ;
+        foaf:page                       <http://data.bnf.fr/12111304/gheorghe_platon/> .
+
+<http://data.bnf.fr/ark:/12148/cb41126351c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121113048>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb121113048> ;
+        bnf-onto:FRBNF        12111304 ;
+        isni:identifierValid  "0000000114490934" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114490934> ;
+        skos:altLabel         "Gh. Platon (1926-2006)"@fr ;
+        skos:editorialNote    "Universitatea din Iaşi, 1860-1985 / red. Gh. Platon, V. Cristian, 1986. - . - Bibliothèque nationale, Roumanie. - http://www.bibnat.ro. - 2010-04-15"@fr ;
+        skos:exactMatch       <http://www.idref.fr/029498570> , <http://isni-url.oclc.nl/isni/0000000114490934> , <http://viaf.org/viaf/79061949> ;
+        skos:note             "Historien. - Membre, Academia  română (depuis 1993)"@fr ;
+        skos:prefLabel        "Gheorghe Platon (1926-2006)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb121113048#foaf:Person> .

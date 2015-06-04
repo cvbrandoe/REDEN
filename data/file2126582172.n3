@@ -1,0 +1,94 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb33026881p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12236486h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12236486h> ;
+        bnf-onto:FRBNF        12236486 ;
+        isni:identifierValid  "0000000081249350" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081249350> ;
+        skos:altLabel         "Ottilie von Pogwisch (1796-1872)"@fr ;
+        skos:editorialNote    "German biogr. arch.. - . - German biogr. index. - . -"@fr , "Goethes Schwiegertochter : ein Porträt / von Ottilie von Goethe ; hrsg. und mit einem Nachwort versehen von Ulrich Janetzki, 1984. - . - LCNA, 1977-1986. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/031077919> , <http://isni-url.oclc.nl/isni/0000000081249350> , <http://viaf.org/viaf/46814794> ;
+        skos:note             "Femme écrivain, belle-fille de Goethe"@fr ;
+        skos:prefLabel        "Ottilie von Goethe (1796-1872)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb330268794#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38857554w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33026880b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb330268821#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb330268763#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33026878s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33026877f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1796 ;
+        bnf-onto:lastYear              1872 ;
+        rdagroup2elements:biographicalInformation
+                "Femme écrivain, belle-fille de Goethe" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1796/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1872/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        bio:birth                      "1796-10-31" ;
+        bio:death                      "1872-10-26" ;
+        owl:sameAs                     <http://www.idref.fr/031077919> , <http://viaf.org/viaf/46814794> ;
+        foaf:birthday                  "10-31" ;
+        foaf:familyName                "Goethe" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Ottilie von" ;
+        foaf:name                      "Ottilie von Goethe" ;
+        foaf:page                      <http://data.bnf.fr/12236486/ottilie_von_goethe/> .
+
+<http://data.bnf.fr/12236486/ottilie_von_goethe/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12236486h#foaf:Person> .

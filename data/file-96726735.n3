@@ -1,0 +1,87 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40985919s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> .
+
+<http://data.bnf.fr/15776416/eric_gautier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38430896v#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420477784#frbr:Expression>
+        bnfroles:r470        <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        marcrel:lbt          <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15776416f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15776416f> ;
+        bnf-onto:FRBNF        15776416 ;
+        isni:identifierValid  "0000000132567317" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000132567317> ;
+        skos:editorialNote    "Voyage dans le journal d'une coopérative intellectuelle / Éric Gautier, DL 2006. - . - Du temps d'avant le temps [Musique imprimée] : conte musical / livret d'Éric Gautier ; musique de Jacques Barathon, 2009. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000132567317> , <http://viaf.org/viaf/61881997> ;
+        skos:note             "Enseignant. - Poète et librettiste. - Auteur-interprète de chansons. - Président du Conseil général des Deux-Sèvres (en 2008)"@fr ;
+        skos:prefLabel        "Éric Gautier"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1947 ;
+        rdagroup2elements:biographicalInformation
+                "Enseignant. - Poète et librettiste. - Auteur-interprète de chansons. - Président du Conseil général des Deux-Sèvres (en 2008)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/61881997> ;
+        foaf:familyName     "Gautier" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Éric" ;
+        foaf:name           "Éric Gautier" ;
+        foaf:page           <http://data.bnf.fr/15776416/eric_gautier/> .
+
+<http://data.bnf.fr/ark:/12148/cb43690051p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412548721#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425695906#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb395788064#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38154058z#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43902306t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15776416f#foaf:Person> .

@@ -1,0 +1,53 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14842148p#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1876 ;
+        bnf-onto:lastYear               1951 ;
+        rdagroup2elements:biographicalInformation
+                "Pseudonyme de William-Gustave Smyth. - Compositeur et éditeur de musique. - Directeur du département musique des éditions Hachette & Cie (1900-1906). - Rédacteur en chef de \"La quinzaine musicale, journal des familles et des salons\". - A aussi utilisé le pseudonyme Maurice Gracey" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1876/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1951/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1876-11-07" ;
+        bio:death                       "1951-04-06" ;
+        owl:sameAs                      <http://viaf.org/viaf/64274129> ;
+        foaf:birthday                   "11-07" ;
+        foaf:familyName                 "Ampère" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Pierre" ;
+        foaf:name                       "Pierre Ampère" ;
+        foaf:page                       <http://data.bnf.fr/14842148/pierre_ampere/> .
+
+<http://data.bnf.fr/ark:/12148/cb14842148p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14842148p> ;
+        bnf-onto:FRBNF        14842148 ;
+        isni:identifierValid  "0000000001274530" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000001274530> ;
+        skos:editorialNote    "Violetta [Musique imprimée] : sur un motif de la Traviata de G. Verdi : tango / paroles de P. Ampère ; musique de Othmar Klose et Rudi Lukesch, [1961]. - . - Dictionnaire des éditeurs de musique français. Volume II, 1988 [sous : Hachette & Cie, p. 207]. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/64274129> , <http://isni-url.oclc.nl/isni/0000000001274530> ;
+        skos:note             "Pseudonyme de William-Gustave Smyth. - Compositeur et éditeur de musique. - Directeur du département musique des éditions Hachette & Cie (1900-1906). - Rédacteur en chef de \"La quinzaine musicale, journal des familles et des salons\". - A aussi utilisé le pseudonyme Maurice Gracey"@fr ;
+        skos:prefLabel        "Pierre Ampère (1876-1951)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14842148p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39730230x#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb14842148p#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb14842148p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14842148p#foaf:Person> .

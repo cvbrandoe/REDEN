@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb15027425d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15027425d> ;
+        bnf-onto:FRBNF        15027425 ;
+        isni:identifierValid  "0000000081388721" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081388721> ;
+        skos:editorialNote    "The material object in the work of Marcel Proust / Thomas Baldwin, 2005. - . - Questions of Influence in Modern French Literature / edited by Thomas Baldwin, James Fowler and Ana de Medeiros, 2013. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000081388721> , <http://www.idref.fr/092142540> , <http://viaf.org/viaf/59365459> ;
+        skos:note             "Enseigne à l'École normale supérieure, Paris (en 2005). - Professeur, French department, University of Kent, Canterbury, GB (en 2011)"@fr ;
+        skos:prefLabel        "Thomas Baldwin"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412916628#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43821733t#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1977 ;
+        rdagroup2elements:biographicalInformation
+                "Enseigne à l'École normale supérieure, Paris (en 2005). - Professeur, French department, University of Kent, Canterbury, GB (en 2011)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/59365459> , <http://www.idref.fr/092142540> ;
+        foaf:familyName     "Baldwin" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Thomas" ;
+        foaf:name           "Thomas Baldwin" ;
+        foaf:page           <http://data.bnf.fr/15027425/thomas_baldwin/> .
+
+<http://data.bnf.fr/ark:/12148/cb40022996q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427400730#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423535174#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15027425d#foaf:Person> .

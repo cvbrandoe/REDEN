@@ -1,0 +1,89 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39916411k#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38157296s#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39159919w#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1909 ;
+        bnf-onto:lastYear              1993 ;
+        rdagroup2elements:biographicalInformation
+                "Cinéaste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1909/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1993/> ;
+        bio:birth                      "1909-09-06" ;
+        bio:death                      "1993-04-29" ;
+        owl:sameAs                     <http://viaf.org/viaf/61731978> ;
+        foaf:birthday                  "09-06" ;
+        foaf:familyName                "Gordon" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Michael" ;
+        foaf:name                      "Michael Gordon" ;
+        foaf:page                      <http://data.bnf.fr/13894614/michael_gordon/> .
+
+<http://data.bnf.fr/ark:/12148/cb382247004#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38238370c#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb138946144>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb138946144> ;
+        bnf-onto:FRBNF        13894614 ;
+        isni:identifierValid  "0000000108580044" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108580044> ;
+        skos:editorialNote    "Cyrano de Bergerac [Images animées] / Michael Gordon, réal. Bach films, [2005]. - . - IMDb : Michael Gordon (I). - http://www.imdb.com/name/nm0330456/?ref_=fn_al_nm_3. - 2013-07-08"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000108580044> , <http://viaf.org/viaf/61731978> ;
+        skos:note             "Cinéaste"@fr ;
+        skos:prefLabel        "Michael Gordon (1909-1993)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41106569k#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435920123#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381608979#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382416685#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138946144#foaf:Person> .

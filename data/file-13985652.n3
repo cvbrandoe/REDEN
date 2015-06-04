@@ -1,0 +1,66 @@
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpprop: <http://dbpedia.org/property/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://dbpedia.org/resource/Claude_Barrès>
+        owl:sameAs  <http://dbpedia.org/resource/Claude_Barr%C3%A8s> .
+
+<http://en.wikipedia.org/wiki/Claude_Barrès>
+        foaf:primaryTopic  <http://dbpedia.org/resource/Claude_Barr%C3%A8s> .
+
+<http://dbpedia.org/resource/Claude_Barres>
+        dbpedia-owl:wikiPageRedirects  <http://dbpedia.org/resource/Claude_Barr%C3%A8s> .
+
+<http://dbpedia.org/resource/Claude_Barr%C3%A8s>
+        a                               <http://dbpedia.org/class/yago/LivingThing100004258> , <http://wikidata.dbpedia.org/resource/Q215627> , owl:Thing , <http://dbpedia.org/class/yago/SkilledWorker110605985> , <http://dbpedia.org/class/yago/Person100007846> , <http://wikidata.dbpedia.org/resource/Q5> , <http://schema.org/Person> , foaf:Person , <http://dbpedia.org/class/yago/YagoLegalActor> , <http://dbpedia.org/class/yago/CausalAgent100007347> , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> , <http://dbpedia.org/class/yago/Whole100003553> , <http://dbpedia.org/class/yago/PhysicalEntity100001930> , <http://dbpedia.org/class/yago/Worker109632518> , <http://dbpedia.org/class/yago/Organism100004475> , <http://dbpedia.org/class/yago/MilitaryOfficer110317007> , <http://dbpedia.org/class/yago/YagoLegalActorGeo> , <http://dbpedia.org/class/yago/Serviceman110582746> , <http://dbpedia.org/class/yago/ArmyOfficer109809749> , <http://dbpedia.org/class/yago/PeopleFromVosges> , <http://dbpedia.org/class/yago/FrenchArmyOfficers> , dbpedia-owl:Agent , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> , <http://dbpedia.org/class/yago/Object100002684> , dbpedia-owl:Person , dbpedia-owl:MilitaryPerson ;
+        rdfs:comment                    "Claude Barrès est un militaire français, né le 25 mars 1925 à Charmes dans les Vosges et mort le 26 mai 1959 à Djebel Harraba, en Algérie. Son grand-père est l'écrivain nationaliste Maurice Barrès et son père est le journaliste Philippe Barrès."@fr , "Claude Henri Maurice Barrès (22 March 1925 – 26 May 1959) was a French Army officer that in World War II, First Indochina War, Korean War and Algerian War. He was the grandson of author Maurice Barrès and son of journalist Philippe Barrès."@en ;
+        rdfs:label                      "Claude Barrès"@fr , "Claude Barrès"@en ;
+        dbpedia-owl:abstract            "Claude Henri Maurice Barrès (22 March 1925 – 26 May 1959) was a French Army officer that in World War II, First Indochina War, Korean War and Algerian War. He was the grandson of author Maurice Barrès and son of journalist Philippe Barrès."@en , "Claude Barrès est un militaire français, né le 25 mars 1925 à Charmes dans les Vosges et mort le 26 mai 1959 à Djebel Harraba, en Algérie. Son grand-père est l'écrivain nationaliste Maurice Barrès et son père est le journaliste Philippe Barrès."@fr ;
+        dbpedia-owl:allegiance          "France" ;
+        dbpedia-owl:award               <http://dbpedia.org/resource/Croix_de_guerre_1939%E2%80%931945_(France)> , <http://dbpedia.org/resource/Legion_of_Honour> , <http://dbpedia.org/resource/M%C3%A9daille_militaire> ;
+        dbpedia-owl:battle              <http://dbpedia.org/resource/Korean_War> , <http://dbpedia.org/resource/Algerian_War> , <http://dbpedia.org/resource/First_Indochina_War> , <http://dbpedia.org/resource/World_War_II> ;
+        dbpedia-owl:birthDate           "1925-03-22+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:birthPlace          <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Charmes,_Vosges> ;
+        dbpedia-owl:birthYear           "1925+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:deathDate           "1959-05-26+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:deathPlace          <http://dbpedia.org/resource/Algeria> ;
+        dbpedia-owl:deathYear           "1959+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:militaryBranch      <http://dbpedia.org/resource/French_Army> ;
+        dbpedia-owl:militaryCommand     "5th Company, 9e RCP" ;
+        dbpedia-owl:relation            <http://dbpedia.org/resource/Philippe_Barr%C3%A8s> , <http://dbpedia.org/resource/Maurice_Barr%C3%A8s> ;
+        dbpedia-owl:serviceEndYear      "1959+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:serviceStartYear    "1943+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:viafId              "20488892" ;
+        dbpedia-owl:wikiPageID          18758346 ;
+        dbpedia-owl:wikiPageRevisionID  545389088 ;
+        dbpprop:allegiance              <http://dbpedia.org/resource/France> ;
+        dbpprop:awards                  "Commander of the Légion d’honneur"@en ;
+        dbpprop:awards                  <http://dbpedia.org/resource/M%C3%A9daille_militaire> , <http://dbpedia.org/resource/Croix_de_guerre_1939%E2%80%931945_(France)> ;
+        dbpprop:battles                 <http://dbpedia.org/resource/Algerian_War> , <http://dbpedia.org/resource/World_War_II> , <http://dbpedia.org/resource/Korean_War> , <http://dbpedia.org/resource/First_Indochina_War> ;
+        dbpprop:birthDate               "1925-03-22+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:birthPlace              <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Charmes,_Vosges> ;
+        dbpprop:branch                  <http://dbpedia.org/resource/French_Army> ;
+        dbpprop:commands                5 ;
+        dbpprop:dateOfBirth             "1925-03-22+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:dateOfDeath             "1959-05-26+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathDate               "1959-05-26+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathPlace              "Djebel Harraba, Algeria"@en ;
+        dbpprop:hasPhotoCollection      <http://wifo5-03.informatik.uni-mannheim.de/flickrwrappr/photos/Claude_Barrès> ;
+        dbpprop:name                    "Barres, Claude"@en , "Claude Barrès"@en ;
+        dbpprop:placeOfBirth            <http://dbpedia.org/resource/France> , <http://dbpedia.org/resource/Charmes,_Vosges> ;
+        dbpprop:placeOfDeath            "Djebel Harraba, Algeria"@en ;
+        dbpprop:rank                    <http://dbpedia.org/resource/Captain_(armed_forces)> ;
+        dbpprop:relations               <http://dbpedia.org/resource/Maurice_Barr%C3%A8s> , <http://dbpedia.org/resource/Philippe_Barr%C3%A8s> ;
+        dbpprop:serviceyears            1943 ;
+        dcterms:subject                 <http://dbpedia.org/resource/Category:Commandeurs_of_the_L%C3%A9gion_d'honneur> , <http://dbpedia.org/resource/Category:French_Army_officers> , <http://dbpedia.org/resource/Category:French_military_personnel_of_World_War_II> , <http://dbpedia.org/resource/Category:French_military_personnel_of_the_Algerian_War> , <http://dbpedia.org/resource/Category:1925_births> , <http://dbpedia.org/resource/Category:Recipients_of_the_Croix_de_Guerre_(France)> , <http://dbpedia.org/resource/Category:French_military_personnel_of_the_Korean_War> , <http://dbpedia.org/resource/Category:French_military_personnel_of_the_First_Indochina_War> , <http://dbpedia.org/resource/Category:People_from_Vosges> , <http://dbpedia.org/resource/Category:1959_deaths> ;
+        owl:sameAs                      <http://dbpedia.org/resource/Claude_Barr%C3%A8s> , <http://rdf.freebase.com/ns/m.04gh7yb> , <http://yago-knowledge.org/resource/Claude_Barrès> ;
+        prov:wasDerivedFrom             <http://en.wikipedia.org/wiki/Claude_Barrès?oldid=545389088> ;
+        foaf:givenName                  "Claude"@en ;
+        foaf:isPrimaryTopicOf           <http://en.wikipedia.org/wiki/Claude_Barrès> ;
+        foaf:name                       "Barres, Claude"@en , "Claude Barrès"@en , "Claude Barres"@en ;
+        foaf:surname                    "Barres"@en .

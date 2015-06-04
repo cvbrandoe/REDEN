@@ -1,0 +1,63 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb11914933g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Jenny_von_Westphalen> , <http://catalogue.bnf.fr/ark:/12148/cb11914933g> ;
+        bnf-onto:FRBNF        11914933 ;
+        isni:identifierValid  "0000000122826936" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000122826936> ;
+        skos:editorialNote    "Ein bewegtes Leben / Jenny Marx, 1989. - . - Les filles de Karl Marx : lettres inédites / introd. de Michelle Perrot, 1979, pp. 54-55. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000122826936> , <http://dbpedia.org/resource/Jenny_von_Westphalen> , <http://viaf.org/viaf/87905388> , <http://fr.wikipedia.org/wiki/Jenny_von_Westphalen> , <http://www.idref.fr/027014584> ;
+        skos:note             "Épouse de Karl Marx (1843). - Fille du baron von Westphalen"@fr , "A aussi écrit en anglais"@fr ;
+        skos:prefLabel        "Jenny Marx (1814-1881)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11914933g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36635843j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11914933g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914933g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914933g#foaf:Person> .
+
+<http://data.bnf.fr/11914933/jenny_marx/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11914933g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11914933g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1814 ;
+        bnf-onto:lastYear              1881 ;
+        rdagroup2elements:biographicalInformation
+                "A aussi écrit en anglais" , "Épouse de Karl Marx (1843). - Fille du baron von Westphalen" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1814/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1881/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        bio:birth                      "1814" ;
+        bio:death                      "1881" ;
+        owl:sameAs                     <http://www.idref.fr/027014584> , <http://viaf.org/viaf/87905388> , <http://dbpedia.org/resource/Jenny_von_Westphalen> ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Karl_Marx_Frau.jpg?width=300> ;
+        foaf:familyName                "Marx" ;
+        foaf:givenName                 "Jenny" ;
+        foaf:name                      "Jenny Marx" ;
+        foaf:page                      <http://data.bnf.fr/11914933/jenny_marx/> .
+
+<http://data.bnf.fr/ark:/12148/cb43540662s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11914933g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914933g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914933g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351864202#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11914933g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11914933g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11914933g#foaf:Person> .

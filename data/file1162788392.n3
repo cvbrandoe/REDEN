@@ -1,0 +1,98 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb382439794#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13929676m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13929676m> ;
+        bnf-onto:FRBNF        13929676 ;
+        isni:identifierValid  "0000000115999345" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000115999345> ;
+        skos:altLabel         "William Lee"@fr ;
+        skos:editorialNote    "Morning, noon, & night [Enregistrement sonore] / Bob James, p ; Chuck Loeb, guit. ; Will Lee, guit. b... [et al.]. Warner Bros 9362-48270-2. - . - Epistrophy (3 min 16 s) / Barry Harris, p ; Lee William, cb ; Leroy Williams, batt. In : Jazz piano [Enregistrement sonore] / Ray Briant, p ; Tommy Bryant, cb ; Gus Johnson, batt... [et al.]. Columbia 4685722. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/16405948> , <http://www.idref.fr/156660555> , <http://isni-url.oclc.nl/isni/0000000115999345> ;
+        skos:note             "Joueur de guitare basse"@fr ;
+        skos:prefLabel        "Will Lee"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38193942n#frbr:Expression>
+        bnfroles:r1299       <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43691038q#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382100690#frbr:Expression>
+        bnfroles:r1299       <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1952 ;
+        rdagroup2elements:biographicalInformation
+                "Joueur de guitare basse" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        owl:sameAs          <http://www.idref.fr/156660555> , <http://viaf.org/viaf/16405948> ;
+        foaf:familyName     "Lee" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Will" ;
+        foaf:name           "Will Lee" ;
+        foaf:page           <http://data.bnf.fr/13929676/will_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb38385782z#frbr:Expression>
+        bnfroles:r1299       <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382256917#frbr:Expression>
+        bnfroles:r1299       <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb413233870#frbr:Expression>
+        bnfroles:r1299       <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38229623q#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38213117r#frbr:Expression>
+        bnfroles:r1299       <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38971824x#frbr:Expression>
+        bnfroles:r1290       <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38235995n#frbr:Expression>
+        bnfroles:r1289       <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38131284x#frbr:Expression>
+        bnfroles:r1299       <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13929676m#foaf:Person> .

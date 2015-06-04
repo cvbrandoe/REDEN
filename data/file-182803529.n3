@@ -1,0 +1,73 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb35111116b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345827794#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347218914#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11908385t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11908385t> ;
+        bnf-onto:FRBNF        11908385 ;
+        isni:identifierValid  "0000000117117385" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000117117385> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000117117385> , <http://viaf.org/viaf/162928328> , <http://www.idref.fr/026932687> ;
+        skos:prefLabel        "Nicolas Jacob (juriste)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351210404#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34316089p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34727284n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34656494q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb342953454#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11908385t#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/162928328> , <http://www.idref.fr/026932687> ;
+        foaf:familyName  "Jacob" ;
+        foaf:givenName   "Nicolas" ;
+        foaf:name        "Nicolas Jacob" ;
+        foaf:page        <http://data.bnf.fr/11908385/nicolas_jacob/> .

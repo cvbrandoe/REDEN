@@ -1,0 +1,66 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34854013n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34614221n#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Chargée de mission à la direction du développement économique, sous-direction des financements (en 1980)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/026856360> , <http://viaf.org/viaf/66466933> ;
+        foaf:familyName  "Fabre" ;
+        foaf:givenName   "Marie-France" ;
+        foaf:name        "Marie-France Fabre" ;
+        foaf:page        <http://data.bnf.fr/11902118/marie-france_fabre/> .
+
+<http://data.bnf.fr/ark:/12148/cb35711391p#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361568362#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357093697#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35454748p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11902118p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11902118p> ;
+        bnf-onto:FRBNF        11902118 ;
+        isni:identifierValid  "0000000021761723" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000021761723> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000021761723> , <http://viaf.org/viaf/66466933> , <http://www.idref.fr/026856360> ;
+        skos:note             "Chargée de mission à la direction du développement économique, sous-direction des financements (en 1980)"@fr ;
+        skos:prefLabel        "Marie-France Fabre"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11902118p#foaf:Person> .

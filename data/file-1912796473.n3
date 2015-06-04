@@ -1,0 +1,48 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb43631856m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15935278q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15935278q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15935278q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15935278q#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1956 ;
+        rdagroup2elements:biographicalInformation
+                "Professionnel de l'industrie du pneumatique. - Défenseur de l'occitan du bassin du Puy-en-Velay" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/oci> , <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/138521948> , <http://viaf.org/viaf/78796205> ;
+        foaf:familyName     "Garnier" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Gabriel" ;
+        foaf:name           "Gabriel Garnier" ;
+        foaf:page           <http://data.bnf.fr/15935278/gabriel_garnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb15935278q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15935278q> ;
+        bnf-onto:FRBNF        15935278 ;
+        isni:identifierValid  "0000000072516330" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000072516330> ;
+        skos:exactMatch       <http://viaf.org/viaf/78796205> , <http://www.idref.fr/138521948> , <http://isni-url.oclc.nl/isni/0000000072516330> ;
+        skos:note             "Professionnel de l'industrie du pneumatique. - Défenseur de l'occitan du bassin du Puy-en-Velay"@fr ;
+        skos:prefLabel        "Gabriel Garnier"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15935278q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41365415q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15935278q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15935278q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15935278q#foaf:Person> .

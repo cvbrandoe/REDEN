@@ -1,0 +1,97 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Réalisateur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/56818071> ;
+        foaf:familyName  "Roux" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Stéphane" ;
+        foaf:name        "Stéphane Roux" ;
+        foaf:page        <http://data.bnf.fr/14133762/stephane_roux/> .
+
+<http://data.bnf.fr/ark:/12148/cb385898669#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38621852m#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38622445g#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38622443s#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38967248h#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38589850x#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb386211264#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39042925r#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38952484h#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14133762q>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14133762q> ;
+        bnf-onto:FRBNF   14133762 ;
+        skos:exactMatch  <http://viaf.org/viaf/56818071> ;
+        skos:note        "Réalisateur"@fr ;
+        skos:prefLabel   "Stéphane Roux (réalisateur)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38590221q#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb386224444#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39061407m#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390614006#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14133762q#foaf:Person> .

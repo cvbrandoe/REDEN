@@ -1,0 +1,44 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/15048586/pedro_de_heredia/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb15048586j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15048586j>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb15048586j> ;
+        bnf-onto:FRBNF      15048586 ;
+        skos:editorialNote  "Pedro de Heredia y Cartagena de Indias / M. del Carmen Gómez Pérez, 1984. - . - LC authorities. - http://authorities.loc.gov. - 2006-03-09"@fr ;
+        skos:note           "Soldat mort dans un naufrage. - Fondateur de la ville de Carthagène (Colombie)"@fr ;
+        skos:prefLabel      "Pedro de Heredia (15..?-1574)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb15048586j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15048586j#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:lastYear               1574 ;
+        rdagroup2elements:biographicalInformation
+                "Soldat mort dans un naufrage. - Fondateur de la ville de Carthagène (Colombie)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/sp#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1501-1600/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1574/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Géographie" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/910/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+        rdagroup2elements:placeOfBirth  "Madrid" ;
+        bio:birth                       "15.." ;
+        bio:death                       "1574" ;
+        foaf:familyName                 "Heredia" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Pedro de" ;
+        foaf:name                       "Pedro de Heredia" ;
+        foaf:page                       <http://data.bnf.fr/15048586/pedro_de_heredia/> .

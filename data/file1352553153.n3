@@ -1,0 +1,54 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38534263c#frbr:Expression>
+        bnfroles:r1380       <http://data.bnf.fr/ark:/12148/cb13933385h#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13933385h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13933385h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13933385h#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1958 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur et flûtiste" ;
+        owl:sameAs          <http://www.idref.fr/149742754> , <http://viaf.org/viaf/42028820> ;
+        foaf:familyName     "Racine" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Philippe" ;
+        foaf:name           "Philippe Racine" ;
+        foaf:page           <http://data.bnf.fr/13933385/philippe_racine/> .
+
+<http://data.bnf.fr/ark:/12148/cb381900909#frbr:Expression>
+        bnfroles:r1380       <http://data.bnf.fr/ark:/12148/cb13933385h#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13933385h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13933385h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385010237#frbr:Expression>
+        bnfroles:r1380       <http://data.bnf.fr/ark:/12148/cb13933385h#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13933385h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13933385h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385342594#frbr:Expression>
+        bnfroles:r1380       <http://data.bnf.fr/ark:/12148/cb13933385h#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13933385h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13933385h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13933385h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13933385h> ;
+        bnf-onto:FRBNF        13933385 ;
+        isni:identifierValid  "0000000055142170" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000055142170> ;
+        skos:exactMatch       <http://www.idref.fr/149742754> , <http://viaf.org/viaf/42028820> , <http://isni-url.oclc.nl/isni/0000000055142170> ;
+        skos:note             "Compositeur et flûtiste"@fr ;
+        skos:prefLabel        "Philippe Racine"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13933385h#foaf:Person> .

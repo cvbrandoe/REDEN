@@ -1,0 +1,66 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb373602328#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37478289j#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37337233p#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37368528s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122796153>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb122796153> ;
+        bnf-onto:FRBNF        12279615 ;
+        isni:identifierValid  "0000000081740529" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081740529> ;
+        skos:exactMatch       <http://viaf.org/viaf/108991359> , <http://isni-url.oclc.nl/isni/0000000081740529> , <http://www.idref.fr/076605434> ;
+        skos:note             "Juriste. - Spécialiste de procédure civile. - Professeur au University college London, GB (en 1987)"@fr ;
+        skos:prefLabel        "Jack I. H. Jacob"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374802634#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Juriste. - Spécialiste de procédure civile. - Professeur au University college London, GB (en 1987)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://viaf.org/viaf/108991359> , <http://www.idref.fr/076605434> ;
+        foaf:familyName  "Jacob" ;
+        foaf:givenName   "Jack I. H." ;
+        foaf:name        "Jack I. H. Jacob" ;
+        foaf:page        <http://data.bnf.fr/12279615/jack_i__h__jacob/> .
+
+<http://data.bnf.fr/ark:/12148/cb374882752#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122796153#foaf:Person> .

@@ -1,0 +1,83 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb36965935b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36996647c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12195348h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12195348h> ;
+        bnf-onto:FRBNF        12195348 ;
+        isni:identifierValid  "0000000077797338" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000077797338> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000077797338> , <http://www.idref.fr/030562945> , <http://viaf.org/viaf/61592356> ;
+        skos:note             "Docteur en médecine"@fr ;
+        skos:prefLabel        "Patrick Jammes"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37089019k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb358244498#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42728923f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388207842#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb355646494#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1944 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en médecine" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/030562945> , <http://viaf.org/viaf/61592356> ;
+        foaf:familyName     "Jammes" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Patrick" ;
+        foaf:name           "Patrick Jammes" ;
+        foaf:page           <http://data.bnf.fr/12195348/patrick_jammes/> .
+
+<http://data.bnf.fr/ark:/12148/cb35930761c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370725328#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195348h#foaf:Person> .

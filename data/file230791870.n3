@@ -1,0 +1,75 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12058978t>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12058978t> ;
+        bnf-onto:FRBNF      12058978 ;
+        skos:editorialNote  "Scrittura come riparazione : saggio su letteratura e psicoanalisi / Stefano Ferrari, 1994. - . - Bibliogr., Italie (CD), 1994-12. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/275779440> , <http://www.idref.fr/028836537> ;
+        skos:note           "Professeur de psychologie de l'art à la Faculté de lettres et de philosophie de l'Université de Bologne (en 1994)"@fr ;
+        skos:prefLabel      "Stefano Ferrari"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366246279#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1949 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de psychologie de l'art à la Faculté de lettres et de philosophie de l'Université de Bologne (en 1994)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        owl:sameAs          <http://www.idref.fr/028836537> , <http://viaf.org/viaf/275779440> ;
+        foaf:familyName     "Ferrari" ;
+        foaf:givenName      "Stefano" ;
+        foaf:name           "Stefano Ferrari" ;
+        foaf:page           <http://data.bnf.fr/12058978/stefano_ferrari/> .
+
+<http://data.bnf.fr/ark:/12148/cb39010454v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42751403c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388426313#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42284030n#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39010450g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35734343z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35012742m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12058978t#foaf:Person> .

@@ -1,0 +1,71 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1962 ;
+        rdagroup2elements:biographicalInformation
+                "Romancière. - Nouvelliste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxc> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1962/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Montréal, Canada" ;
+        owl:sameAs                      <http://www.idref.fr/060120878> , <http://viaf.org/viaf/10061421> ;
+        foaf:familyName                 "Baldwin" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Shauna Singh" ;
+        foaf:name                       "Shauna Singh Baldwin" ;
+        foaf:page                       <http://data.bnf.fr/14400313/shauna_singh_baldwin/> .
+
+<http://data.bnf.fr/ark:/12148/cb38851651p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41116998g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38822125c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39208553v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14400313k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14400313k> ;
+        bnf-onto:FRBNF        14400313 ;
+        isni:identifierValid  "0000000108694500" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108694500> ;
+        skos:editorialNote    "Bibliothèque nationale, Canada. - http://www.amicus.nlc-bnc.ca. - 2002-05-14 CORC. - http://corc.oclc.org. - 2002-05-14 Shauna Singh Baldwin. - http://www.shaunasinghbaldwin.com. - 2007-02-17"@fr , "La mémoire du corps : roman / Shauna Singh Baldwin ; trad. de l'anglais par Josée Kamoun, 2002. - . - BEPI, 2002. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/10061421> , <http://isni-url.oclc.nl/isni/0000000108694500> , <http://www.idref.fr/060120878> ;
+        skos:note             "Romancière. - Nouvelliste"@fr ;
+        skos:prefLabel        "Shauna Singh Baldwin (1962-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388011591#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40062029x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14400313k#foaf:Person> .

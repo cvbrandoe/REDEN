@@ -1,0 +1,59 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34953038x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357223976#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12088287g>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12088287g> ;
+        bnf-onto:FRBNF   12088287 ;
+        skos:exactMatch  <http://viaf.org/viaf/44325084> , <http://www.idref.fr/119737396> ;
+        skos:note        "Expert en cultures fruitières à l'Organisation des Nations Unies pour l'alimentation et l'agriculture (depuis 1961). - Ingénieur agronome"@fr ;
+        skos:prefLabel   "Jean-Marie Philippe"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1928 ;
+        rdagroup2elements:biographicalInformation
+                "Expert en cultures fruitières à l'Organisation des Nations Unies pour l'alimentation et l'agriculture (depuis 1961). - Ingénieur agronome" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/44325084> , <http://www.idref.fr/119737396> ;
+        foaf:familyName     "Philippe" ;
+        foaf:givenName      "Jean-Marie" ;
+        foaf:name           "Jean-Marie Philippe" ;
+        foaf:page           <http://data.bnf.fr/12088287/jean-marie_philippe/> .
+
+<http://data.bnf.fr/ark:/12148/cb354701981#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374462016#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41111224s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12088287g#foaf:Person> .

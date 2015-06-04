@@ -1,0 +1,100 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb399362641#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb410699115#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1957 ;
+        rdagroup2elements:biographicalInformation
+                "Géobiologue" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/34571658> , <http://www.idref.fr/03475721X> ;
+        foaf:familyName     "Gautier" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Thierry" ;
+        foaf:name           "Thierry Gautier" ;
+        foaf:page           <http://data.bnf.fr/12547779/thierry_gautier/> .
+
+<http://data.bnf.fr/ark:/12148/cb39252692m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39936211f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37189085j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41085962h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40094353q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36191876x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39243854n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125477791>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb125477791> ;
+        bnf-onto:FRBNF   12547779 ;
+        skos:exactMatch  <http://viaf.org/viaf/34571658> , <http://www.idref.fr/03475721X> ;
+        skos:note        "Géobiologue"@fr ;
+        skos:prefLabel   "Thierry Gautier"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39252709h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43600335d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35851502s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39936262b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125477791#foaf:Person> .

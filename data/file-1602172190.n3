@@ -1,0 +1,87 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34999220p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39026981s#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11912132f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11912132f> ;
+        bnf-onto:FRBNF        11912132 ;
+        isni:identifierValid  "0000000038243877" ;
+        owl:sameAs            <http://isni.org/isni/0000000038243877> ;
+        skos:exactMatch       <http://www.idref.fr/026979098> , <http://isni.org/isni/0000000038243877> , <http://viaf.org/viaf/36920957> ;
+        skos:note             "Vétérinaire. - Docteur ès-sciences (Paris 12)"@fr ;
+        skos:prefLabel        "Pierre-Charles Lefèvre"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35929954m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349609397#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34733138f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36208421j#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35826364c#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1943 ;
+        rdagroup2elements:biographicalInformation
+                "Vétérinaire. - Docteur ès-sciences (Paris 12)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/36920957> , <http://www.idref.fr/026979098> ;
+        foaf:familyName     "Lefèvre" ;
+        foaf:givenName      "Pierre-Charles" ;
+        foaf:name           "Pierre-Charles Lefèvre" ;
+        foaf:page           <http://data.bnf.fr/11912132/pierre-charles_lefevre/> .
+
+<http://data.bnf.fr/ark:/12148/cb348569724#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37607227n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40579024z#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11912132f#foaf:Person> .

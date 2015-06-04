@@ -1,0 +1,77 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1939 ;
+        rdagroup2elements:biographicalInformation
+                "Auteur-éditeur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/074423584> , <http://viaf.org/viaf/39448504> ;
+        foaf:familyName     "Grenier" ;
+        foaf:givenName      "Karl" ;
+        foaf:name           "Karl Grenier" ;
+        foaf:page           <http://data.bnf.fr/12327812/karl_grenier/> .
+
+<http://data.bnf.fr/ark:/12148/cb35767611h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123278128>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb123278128> ;
+        bnf-onto:FRBNF        12327812 ;
+        isni:identifierValid  "0000000001964451" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000001964451> ;
+        skos:exactMatch       <http://viaf.org/viaf/39448504> , <http://www.idref.fr/074423584> , <http://isni-url.oclc.nl/isni/0000000001964451> ;
+        skos:note             "Auteur-éditeur"@fr ;
+        skos:prefLabel        "Karl Grenier"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36972237k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb358276006#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36171318z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35585209f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357145255#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35821438w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35784778r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123278128#foaf:Person> .

@@ -1,0 +1,75 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb35950983n#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124291616>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb124291616> ;
+        bnf-onto:FRBNF        12429161 ;
+        isni:identifierValid  "0000000061558244" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000061558244> ;
+        skos:altLabel         "Jean-Jacques Lefebvre (1779-1858)"@fr ;
+        skos:editorialNote    "Almanach du commerce, 1850. - . - Werdet. - . - Delalain, Paris, 1789-1813. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/060736992> , <http://isni-url.oclc.nl/isni/0000000061558244> , <http://viaf.org/viaf/19769270> ;
+        skos:note             "Libraire. - Originaire de Domrémy-la-Pucelle (Vosges). Apprenti, dès l'âge de 8 ans, sous la direction de son père, lui-même ouvrier typographe chez Henri Didot. Commis chez Jean-François-Pierre Déterville en 1803. Serait mort dans la misère"@fr ;
+        skos:prefLabel        "Jean-Jacques Lefèvre (1779-1858)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35832272z#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35992858g#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1779 ;
+        bnf-onto:lastYear              1858 ;
+        rdagroup2elements:biographicalInformation
+                "Libraire. - Originaire de Domrémy-la-Pucelle (Vosges). Apprenti, dès l'âge de 8 ans, sous la direction de son père, lui-même ouvrier typographe chez Henri Didot. Commis chez Jean-François-Pierre Déterville en 1803. Serait mort dans la misère" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1779/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1858/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1805-1850" ;
+        bio:birth                      "1779" ;
+        bio:death                      "1858" ;
+        owl:sameAs                     <http://www.idref.fr/060736992> , <http://viaf.org/viaf/19769270> ;
+        foaf:familyName                "Lefèvre" ;
+        foaf:givenName                 "Jean-Jacques" ;
+        foaf:name                      "Jean-Jacques Lefèvre" ;
+        foaf:page                      <http://data.bnf.fr/12429161/jean-jacques_lefevre/> .
+
+<http://data.bnf.fr/ark:/12148/cb359928574#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30967266b#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35992859t#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124291616#foaf:Person> .

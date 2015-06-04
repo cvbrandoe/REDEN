@@ -1,0 +1,81 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb374368307#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37393508k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123383606>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb123383606> ;
+        bnf-onto:FRBNF        12338360 ;
+        isni:identifierValid  "0000000110736052" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000110736052> ;
+        skos:editorialNote    "Liquid chromatography column theory / by Raymond P. W. Scott, 1992. - . - LCNA, 1993-03. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000110736052> , <http://viaf.org/viaf/84170800> , <http://www.idref.fr/032333757> ;
+        skos:note             "Chimiste. - En poste au Chemistry department, Birkbeck college, University of London, GB (en 1992). - En poste au Chemistry department, Georgetown university, Washington, GB (en 1992)"@fr ;
+        skos:prefLabel        "Raymond Peter William Scott"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb375286544#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb375437569#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374849542#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400065489#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37394980n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb375017518#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1924 ;
+        rdagroup2elements:biographicalInformation
+                "Chimiste. - En poste au Chemistry department, Birkbeck college, University of London, GB (en 1992). - En poste au Chemistry department, Georgetown university, Washington, GB (en 1992)" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/032333757> , <http://viaf.org/viaf/84170800> ;
+        foaf:familyName     "Scott" ;
+        foaf:givenName      "Raymond Peter William" ;
+        foaf:name           "Raymond Peter William Scott" ;
+        foaf:page           <http://data.bnf.fr/12338360/raymond_peter_william_scott/> .
+
+<http://data.bnf.fr/ark:/12148/cb37413221g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123383606#foaf:Person> .

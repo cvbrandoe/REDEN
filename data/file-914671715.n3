@@ -1,0 +1,36 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/16204542/l__cock/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb16204542m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16204542m#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1952 ;
+        rdagroup2elements:biographicalInformation
+                "Artiste peintre, formée à l'école des Beaux-Arts de Bruxelles. - Réalise des maquettes et des décors pour le cinéma et le théâtre (en 2010)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/be#> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Peinture" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/750/> ;
+        foaf:familyName     "Cock" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "L." ;
+        foaf:name           "L. Cock" ;
+        foaf:page           <http://data.bnf.fr/16204542/l__cock/> .
+
+<http://data.bnf.fr/ark:/12148/cb16204542m>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16204542m> ;
+        bnf-onto:FRBNF      16204542 ;
+        skos:editorialNote  "L. Cock / Paul Devil, DL 2010. - . - Fragments international éditions. - http://www.fragmentsinternational.com/zoomcock.html. - 2010-05-25"@fr ;
+        skos:note           "Artiste peintre, formée à l'école des Beaux-Arts de Bruxelles. - Réalise des maquettes et des décors pour le cinéma et le théâtre (en 2010)"@fr ;
+        skos:prefLabel      "L. Cock"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16204542m#foaf:Person> .

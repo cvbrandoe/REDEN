@@ -1,0 +1,36 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb137784399#foaf:Person>
+        a                foaf:Person ;
+        owl:sameAs       <http://viaf.org/viaf/34641590> ;
+        foaf:familyName  "Kahn" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Sy Myron" .
+
+<http://data.bnf.fr/ark:/12148/cb37725675q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137784399#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137784399#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137784399#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb137784399>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb137784399> ;
+        bnf-onto:FRBNF        13778439 ;
+        isni:identifierValid  "0000000024741162" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000024741162> ;
+        skos:altLabel         "Sy Kahn"@fr ;
+        skos:editorialNote    "Between tedium and terror : a soldier's World War II diary, 1943-45 / Sy M. Kahn ; foreword by Ronald Spector, 1993. - . - LCNA (CD), 1996-06. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000024741162> , <http://viaf.org/viaf/34641590> ;
+        skos:note             "Professeur de littérature. - Soldat pendant la Seconde guerre mondiale"@fr ;
+        skos:prefLabel        "Sy Myron Kahn"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb137784399#foaf:Person> .

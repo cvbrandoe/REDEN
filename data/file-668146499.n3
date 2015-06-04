@@ -1,0 +1,43 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13573842r>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb13573842r> ;
+        bnf-onto:FRBNF  13573842 ;
+        skos:note       "Compositeur. - Inventeur d'instruments de musique"@fr ;
+        skos:prefLabel  "Edmond Malherbe (1870-1963)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb13573842r#foaf:Person> .
+
+<http://data.bnf.fr/13573842/edmond_malherbe/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13573842r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13573842r#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1870 ;
+        bnf-onto:lastYear              1963 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur. - Inventeur d'instruments de musique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1870/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1963/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Musique" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/780/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1870-08-21" ;
+        bio:death                      "1963-03-07" ;
+        foaf:birthday                  "08-21" ;
+        foaf:familyName                "Malherbe" ;
+        foaf:givenName                 "Edmond" ;
+        foaf:name                      "Edmond Malherbe" ;
+        foaf:page                      <http://data.bnf.fr/13573842/edmond_malherbe/> .

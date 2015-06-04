@@ -1,0 +1,60 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb34583497g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35423110g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb343313960#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/56607396> , <http://www.idref.fr/026785692> ;
+        foaf:familyName  "Chevalier" ;
+        foaf:givenName   "Claudine" ;
+        foaf:name        "Claudine Chevalier" ;
+        foaf:page        <http://data.bnf.fr/11896596/claudine_chevalier/> .
+
+<http://data.bnf.fr/ark:/12148/cb35422818x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35422817k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb118965967>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb118965967> ;
+        bnf-onto:FRBNF   11896596 ;
+        skos:exactMatch  <http://viaf.org/viaf/56607396> , <http://www.idref.fr/026785692> ;
+        skos:prefLabel   "Claudine Chevalier"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354644978#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118965967#foaf:Person> .

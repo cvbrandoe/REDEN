@@ -1,0 +1,47 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/15061093/lodovico_antonio_david/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb150610935#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb150610935#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1648 ;
+        bnf-onto:lastYear               1704 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre de sujets mythologiques et compositions religieuses" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/sz#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1648/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1704/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Peinture" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/750/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        rdagroup2elements:placeOfBirth  "Lugano, Suisse" ;
+        rdagroup2elements:placeOfDeath  "Rome" ;
+        bio:birth                       "1648" ;
+        bio:death                       "1704" ;
+        foaf:familyName                 "David" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Lodovico Antonio" ;
+        foaf:name                       "Lodovico Antonio David" ;
+        foaf:page                       <http://data.bnf.fr/15061093/lodovico_antonio_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb150610935>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb150610935> ;
+        bnf-onto:FRBNF      15061093 ;
+        skos:altLabel       "Ludovico David (1648-1704)"@fr , "Luodovico David (1648-1704)"@fr ;
+        skos:editorialNote  "I David : due pittori tra Sei e Settecento : Lugano, Milano, Venezia, Parma e Roma / a cura di Andrea Spiriti, Simona Capelli, 2004. - . - Dictionnaire historique de la Suisse donne comme date de mort vers 1720. - http://www.hls-dhs-dss.ch. - 2008-01-23"@fr ;
+        skos:note           "Peintre de sujets mythologiques et compositions religieuses"@fr ;
+        skos:prefLabel      "Lodovico Antonio David (1648-1704)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb150610935#foaf:Person> .

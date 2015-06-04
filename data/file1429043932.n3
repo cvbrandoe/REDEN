@@ -1,0 +1,39 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12001839x#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             630 ;
+        bnf-onto:lastYear              668 ;
+        rdagroup2elements:biographicalInformation
+                "Empereur d'Orient de 641 à 668" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/0630/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/0668/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        bio:birth                      "630" ;
+        bio:death                      "0668-09-15" ;
+        foaf:familyName                "Constant" ;
+        foaf:page                      <http://data.bnf.fr/12001839/constant_58/> .
+
+<http://data.bnf.fr/12001839/constant_58/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12001839x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12001839x>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb12001839x> ;
+        bnf-onto:FRBNF  12001839 ;
+        skos:altLabel   "Constans Pogonatus (empereur d'Orient, 0630-0668)"@la , "Constant Pogonate (empereur d'Orient, 0630-0668)"@fr , "Constant Heraclius (empereur d'Orient, 0630-0668)"@fr , "Constans Heraclius (empereur d'Orient, 0630-0668)"@la , "Constans (empereur d'Orient, 0630-0668)"@la ;
+        skos:note       "Empereur d'Orient de 641 à 668"@fr ;
+        skos:prefLabel  "Constant (empereur d'Orient, 0630-0668)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb12001839x#foaf:Person> .

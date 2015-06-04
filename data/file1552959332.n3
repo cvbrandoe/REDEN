@@ -1,0 +1,62 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb41023711b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb413837593#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120022234>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb120022234> ;
+        bnf-onto:FRBNF        12002223 ;
+        isni:identifierValid  "000000011561023X" ;
+        owl:sameAs            <http://isni.org/isni/000000011561023X> ;
+        skos:exactMatch       <http://isni.org/isni/000000011561023X> , <http://viaf.org/viaf/17233180> , <http://www.idref.fr/028125487> ;
+        skos:note             "Sociologue. - Maître de conférences à l'Univ. de Paris 5, en 1973. - Docteur en sociologie (Paris 4, 1986)"@fr ;
+        skos:prefLabel        "Yves Chevalier"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349893035#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37596688d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1939 ;
+        rdagroup2elements:biographicalInformation
+                "Sociologue. - Maître de conférences à l'Univ. de Paris 5, en 1973. - Docteur en sociologie (Paris 4, 1986)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/17233180> , <http://www.idref.fr/028125487> ;
+        foaf:familyName     "Chevalier" ;
+        foaf:givenName      "Yves" ;
+        foaf:name           "Yves Chevalier" ;
+        foaf:page           <http://data.bnf.fr/12002223/yves_chevalier/> .
+
+<http://data.bnf.fr/ark:/12148/cb345772532#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120022234#foaf:Person> .

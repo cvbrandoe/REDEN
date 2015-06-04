@@ -1,0 +1,86 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30288431p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302884294#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36869885d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30288425r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31202311t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30288430b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Médecin consultant à Lamalou, ex-interne des hôpitaux civils de Toulouse, médecin-adjoint à l'hospice de Bédarieux" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://viaf.org/viaf/168185377> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k61021361.thumbnail> ;
+        foaf:familyName                "Cros" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Félix" ;
+        foaf:name                      "Félix Cros" ;
+        foaf:page                      <http://data.bnf.fr/10347812/felix_cros/> .
+
+<http://data.bnf.fr/ark:/12148/cb10347812d>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb10347812d> ;
+        bnf-onto:FRBNF      10347812 ;
+        skos:editorialNote  "Du rhumatisme viscéral et de son traitement par les eaux de Lamalou-l'Ancien : études cliniques sur Lamalou-les-Bains / par le Dr F. Cros, 1880. - . - Lorenz. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/168185377> ;
+        skos:note           "Médecin consultant à Lamalou, ex-interne des hôpitaux civils de Toulouse, médecin-adjoint à l'hospice de Bédarieux"@fr ;
+        skos:prefLabel      "Félix Cros (18..-19..?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302884263#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30288428s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30288427f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347812d#foaf:Person> .

@@ -1,0 +1,93 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1899 ;
+        bnf-onto:lastYear               1969 ;
+        rdagroup2elements:biographicalInformation
+                "Altiste. - Compositeur de musique. - Membre du quatuor Calvet. - Fondateur du Quatuor Pascal. - Professeur au Conservatoire national supérieur de musique et à l'École normale de musique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1899/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1969/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Musique" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/780/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Montpellier" ;
+        rdagroup2elements:placeOfDeath  "Clichy La Garenne, Hauts-de-Seine" ;
+        bio:birth                       "1899-01-18" ;
+        bio:death                       "1969-09-15" ;
+        owl:sameAs                      <http://www.idref.fr/079460747> , <http://viaf.org/viaf/14963641> ;
+        foaf:birthday                   "01-18" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k8803097s.thumbnail> ;
+        foaf:familyName                 "Pascal" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Léon" ;
+        foaf:name                       "Léon Pascal" ;
+        foaf:page                       <http://data.bnf.fr/13945297/leon_pascal/> .
+
+<http://data.bnf.fr/ark:/12148/cb38253695r#frbr:Expression>
+        bnfroles:r1220       <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37900729j#frbr:Expression>
+        bnfroles:r1220       <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39725392r#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb397311913#frbr:Expression>
+        bnfroles:r50         <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> ;
+        marcrel:arr          <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39730794j#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385511315#frbr:Expression>
+        bnfroles:r1220       <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13945297x>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13945297x> ;
+        bnf-onto:FRBNF        13945297 ;
+        isni:identifierValid  "0000000042873003" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000042873003> ;
+        skos:editorialNote    "A. B. C. du violon [Musique imprimée] : vues nouvelles sur l'enseignement primaire / Léon Pascal, 1958-1961. - . - Quintette en la majeur, op 114 [Enregistrement sonore] / Franz Schubert ; Monique Mercier, p ; Léon Pascal, alto ; Jacques Dumont, vl ; Robert Salles, vlc ; Henri Moreau, cb. Pathé-Vox DTX139. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000042873003> , <http://viaf.org/viaf/14963641> , <http://www.idref.fr/079460747> ;
+        skos:note             "Altiste. - Compositeur de musique. - Membre du quatuor Calvet. - Fondateur du Quatuor Pascal. - Professeur au Conservatoire national supérieur de musique et à l'École normale de musique"@fr ;
+        skos:prefLabel        "Léon Pascal (1899-1969)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37835386x#frbr:Expression>
+        bnfroles:r1220       <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39731064x#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13945297x#foaf:Person> .

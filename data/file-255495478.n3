@@ -1,0 +1,52 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb34600174s#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb15791689d#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb15791689d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15791689d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15791689d>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb15791689d> ;
+        bnf-onto:FRBNF  15791689 ;
+        skos:note       "Maire de Liévin. - Député du Pas-de-Calais de 1892 à 1919"@fr ;
+        skos:prefLabel  "Arthur Lamendin (1852-1920)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb15791689d#foaf:Person> .
+
+<http://data.bnf.fr/15791689/arthur_lamendin/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb15791689d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15791689d#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1852 ;
+        bnf-onto:lastYear               1920 ;
+        rdagroup2elements:biographicalInformation
+                "Maire de Liévin. - Député du Pas-de-Calais de 1892 à 1919" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1852/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1920/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Science politique" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/320/> ;
+        rdagroup2elements:placeOfBirth  "Lourches (Nord)" ;
+        rdagroup2elements:placeOfDeath  "Neuville-sur-Escaut (Nord)" ;
+        bio:birth                       "1852-03-02" ;
+        bio:death                       "1920-11-03" ;
+        foaf:birthday                   "03-02" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b9044883p.thumbnail> ;
+        foaf:familyName                 "Lamendin" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Arthur" ;
+        foaf:name                       "Arthur Lamendin" ;
+        foaf:page                       <http://data.bnf.fr/15791689/arthur_lamendin/> .

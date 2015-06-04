@@ -1,0 +1,59 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb144471215#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1918 ;
+        bnf-onto:lastYear              1968 ;
+        rdagroup2elements:biographicalInformation
+                "Chanteur de jazz" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1918/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1968/> ;
+        bio:birth                      "1918-06-30" ;
+        bio:death                      "1968-02-07" ;
+        owl:sameAs                     <http://viaf.org/viaf/29106677> ;
+        foaf:birthday                  "06-30" ;
+        foaf:familyName                "Foster" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Stuart" ;
+        foaf:name                      "Stuart Foster" ;
+        foaf:page                      <http://data.bnf.fr/14447121/stuart_foster/> .
+
+<http://data.bnf.fr/ark:/12148/cb144471215>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb144471215> ;
+        bnf-onto:FRBNF        14447121 ;
+        isni:identifierValid  "0000000081078969" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081078969> ;
+        skos:editorialNote    "At sundown / Tommy Dorsey and his Orchestra. RCA Victor 20-2064. - . - Library of Congress authorities. - http://authorities.loc.gov. - 2010-08-02"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/29106677> , <http://isni-url.oclc.nl/isni/0000000081078969> ;
+        skos:note             "Chanteur de jazz"@fr ;
+        skos:prefLabel        "Stuart Foster (1918-1968)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb144471215#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb386266977#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb144471215#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb144471215#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144471215#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435132487#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb144471215#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb144471215#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144471215#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38626532c#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb144471215#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb144471215#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144471215#foaf:Person> .

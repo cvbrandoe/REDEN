@@ -1,0 +1,63 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb40207315c#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13177092c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13177092c> ;
+        bnf-onto:FRBNF        13177092 ;
+        isni:identifierValid  "0000000019176787" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000019176787> ;
+        skos:editorialNote    "5e régiment du Génie: d'hier et d'aujord'hui / Fabrice Hamelin, 1997. - . - Les polices de la route / [Institut national de recherche sur les transports et leur sécurité, Groupe d'analyse du risque routier et de sa gouvernance] ; [rédigé par] Laurent Carnis, Fabrice Hamelin, Vincent Spenlehauer, 2006. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000019176787> , <http://www.idref.fr/03525386X> , <http://viaf.org/viaf/44438691> ;
+        skos:note             "Étudiant en science politique à l'Institut d'études politiques de Paris (en 1997), prépare une thèse sur la genèse et la construction institutionnelle de l'arme du Génie. - Chargé de recherche de l'unité Groupe d'analyse du risque routier et de sa gouvernance à l'INRETS (en 2006)"@fr ;
+        skos:prefLabel        "Fabrice Hamelin"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1972 ;
+        rdagroup2elements:biographicalInformation
+                "Étudiant en science politique à l'Institut d'études politiques de Paris (en 1997), prépare une thèse sur la genèse et la construction institutionnelle de l'arme du Génie. - Chargé de recherche de l'unité Groupe d'analyse du risque routier et de sa gouvernance à l'INRETS (en 2006)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/44438691> , <http://www.idref.fr/03525386X> ;
+        foaf:familyName     "Hamelin" ;
+        foaf:givenName      "Fabrice" ;
+        foaf:name           "Fabrice Hamelin" ;
+        foaf:page           <http://data.bnf.fr/13177092/fabrice_hamelin/> .
+
+<http://data.bnf.fr/ark:/12148/cb370342501#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41213110g#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361853889#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388862564#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13177092c#foaf:Person> .

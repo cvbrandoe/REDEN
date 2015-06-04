@@ -1,0 +1,79 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb43604366n#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43664182k#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb442652878#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43910309k#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43652595b#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437400378#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43833775f#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43820337v#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/304926183> ;
+        foaf:familyName  "Faraday" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Charlotte" ;
+        foaf:name        "Charlotte Faraday" ;
+        foaf:page        <http://data.bnf.fr/16697473/charlotte_faraday/> .
+
+<http://data.bnf.fr/ark:/12148/cb16697473w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb16697473w> ;
+        bnf-onto:FRBNF        16697473 ;
+        isni:identifierValid  "0000000416453776" ;
+        owl:sameAs            <http://isni.org/isni/0000000416453776> ;
+        skos:exactMatch       <http://isni.org/isni/0000000416453776> , <http://viaf.org/viaf/304926183> ;
+        skos:prefLabel        "Charlotte Faraday"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43853139b#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16697473w#foaf:Person> .

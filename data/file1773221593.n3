@@ -1,0 +1,63 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb30482362k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122208352#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122208352#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122208352#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35462647s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122208352#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122208352#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122208352#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122208352#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1806 ;
+        bnf-onto:lastYear              1882 ;
+        rdagroup2elements:biographicalInformation
+                "Titulaire d'un brevet d'imprimeur en lettres et d'un brevet de libraire" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1806/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1882/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1806-05-15" ;
+        bio:death                      "1882-03-02" ;
+        owl:sameAs                     <http://www.idref.fr/030881196> , <http://viaf.org/viaf/76367681> ;
+        foaf:birthday                  "05-15" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k65037067.thumbnail> ;
+        foaf:familyName                "Garnier" ;
+        foaf:givenName                 "Jacques-Marin" ;
+        foaf:name                      "Jacques-Marin Garnier" ;
+        foaf:page                      <http://data.bnf.fr/12220835/jacques-marin_garnier/> .
+
+<http://data.bnf.fr/12220835/jacques-marin_garnier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb122208352#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb314297310#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122208352#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122208352#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122208352#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122208352>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb122208352> ;
+        bnf-onto:FRBNF        12220835 ;
+        isni:identifierValid  "000000005510561X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000005510561X> ;
+        skos:exactMatch       <http://www.idref.fr/030881196> , <http://viaf.org/viaf/76367681> , <http://isni-url.oclc.nl/isni/000000005510561X> ;
+        skos:note             "Titulaire d'un brevet d'imprimeur en lettres et d'un brevet de libraire"@fr ;
+        skos:prefLabel        "Jacques-Marin Garnier (1806-1882)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122208352#foaf:Person> .

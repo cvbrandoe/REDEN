@@ -1,0 +1,57 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38142368d#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb380953549#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381119833#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Chanteur américain de rhythm'n'blues" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        owl:sameAs       <http://viaf.org/viaf/2667333> ;
+        foaf:familyName  "Gordon" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Kelly" ;
+        foaf:name        "Kelly Gordon" ;
+        foaf:page        <http://data.bnf.fr/14000817/kelly_gordon/> .
+
+<http://data.bnf.fr/ark:/12148/cb14000817n>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14000817n> ;
+        bnf-onto:FRBNF   14000817 ;
+        skos:exactMatch  <http://viaf.org/viaf/2667333> ;
+        skos:note        "Chanteur américain de rhythm'n'blues"@fr ;
+        skos:prefLabel   "Kelly Gordon (chanteur)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384545565#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38112479q#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14000817n#foaf:Person> .

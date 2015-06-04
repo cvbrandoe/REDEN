@@ -1,0 +1,82 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb370846625#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37650704q#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123368696>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb123368696> ;
+        bnf-onto:FRBNF        12336869 ;
+        isni:identifierValid  "0000000110699378" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000110699378> ;
+        skos:altLabel         "Carl De Souza"@fr ;
+        skos:editorialNote    "Le sang de l'Anglais / Carl de Souza, 1993. - . - D'île en île. - http://www.lehman.cuny.edu/ile.en.ile/paroles/souza.html. - 2011-10-25"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000110699378> , <http://www.idref.fr/03231521X> , <http://viaf.org/viaf/71463099> ;
+        skos:prefLabel        "Carl de Souza"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425229240#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37106177t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356002192#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37653360t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39496376p#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37647519p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1949 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/mf#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/71463099> , <http://www.idref.fr/03231521X> ;
+        foaf:familyName     "Souza" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Carl de" ;
+        foaf:name           "Carl de Souza" ;
+        foaf:page           <http://data.bnf.fr/12336869/carl_de_souza/> .
+
+<http://data.bnf.fr/ark:/12148/cb35807255z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123368696#foaf:Person> .

@@ -1,0 +1,77 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb370816764#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345580520#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37020820k#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346146959#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb44240874z#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401686203#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1941 ;
+        rdagroup2elements:biographicalInformation
+                "Ingénieur et urbaniste. - Directeur du développement de Ressources et valorisation urbaines, Paris La Défense (en 1989)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/29540118> , <http://www.idref.fr/027113671> ;
+        foaf:familyName     "Roux" ;
+        foaf:givenName      "Jean-Michel" ;
+        foaf:name           "Jean-Michel Roux" ;
+        foaf:page           <http://data.bnf.fr/11922978/jean-michel_roux/> .
+
+<http://data.bnf.fr/ark:/12148/cb119229785>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb119229785> ;
+        bnf-onto:FRBNF        11922978 ;
+        isni:identifierValid  "0000000110492457" ;
+        owl:sameAs            <http://isni.org/isni/0000000110492457> ;
+        skos:exactMatch       <http://viaf.org/viaf/29540118> , <http://www.idref.fr/027113671> , <http://isni.org/isni/0000000110492457> ;
+        skos:note             "Ingénieur et urbaniste. - Directeur du développement de Ressources et valorisation urbaines, Paris La Défense (en 1989)"@fr ;
+        skos:prefLabel        "Jean-Michel Roux"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34632414v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34677789m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119229785#foaf:Person> .

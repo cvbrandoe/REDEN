@@ -1,0 +1,41 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb16709954s#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1977 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en histoire du droit (Paris 10, 2007). - Maître de conférences en droit à l'Université Paris-Ouest Nanterre (en 2013)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/201144329> , <http://www.idref.fr/122159780> ;
+        foaf:familyName     "Constant" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Frédéric" ;
+        foaf:name           "Frédéric Constant" ;
+        foaf:page           <http://data.bnf.fr/16709954/frederic_constant/> .
+
+<http://data.bnf.fr/ark:/12148/cb43661947j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16709954s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16709954s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16709954s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16709954s>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16709954s> ;
+        bnf-onto:FRBNF      16709954 ;
+        skos:editorialNote  "Le droit chinois / Frédéric Constant, Christophe Lopez, impr. 2013. - . - Autorités Sudoc. - http://www.idref.fr/autorites/autorites.html. - 2013-09-23"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/201144329> , <http://www.idref.fr/122159780> ;
+        skos:note           "Docteur en histoire du droit (Paris 10, 2007). - Maître de conférences en droit à l'Université Paris-Ouest Nanterre (en 2013)"@fr ;
+        skos:prefLabel      "Frédéric Constant"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16709954s#foaf:Person> .

@@ -1,0 +1,60 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb15609452d#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1799 ;
+        bnf-onto:lastYear              1869 ;
+        rdagroup2elements:biographicalInformation
+                "Premier ministre (févr.-déc. 1852, 1858-1859 et 1866-1868). - 14e comte de Derby" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1799/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1869/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1799-03-29" ;
+        bio:death                      "1869-10-23" ;
+        owl:sameAs                     <http://www.idref.fr/130715107> , <http://viaf.org/viaf/74175007> ;
+        foaf:birthday                  "03-29" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b8432965z.thumbnail> ;
+        foaf:familyName                "Derby" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Edward George Geoffrey Smith" ;
+        foaf:name                      "Edward George Geoffrey Smith Derby" ;
+        foaf:page                      <http://data.bnf.fr/15609452/edward_george_geoffrey_smith_derby/> .
+
+<http://data.bnf.fr/ark:/12148/cb422217836#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb15609452d#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb15609452d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15609452d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15609452d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15609452d> ;
+        bnf-onto:FRBNF        15609452 ;
+        isni:identifierValid  "0000000083944322" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000083944322> ;
+        skos:altLabel         "Lord Derby (1799-1869)"@fr , "Edward George Geoffrey Smith Stanley (1799-1869)"@fr , "Earl of Derby (1799-1869)"@fr ;
+        skos:editorialNote    "DNB. - . - Mourre, 1986. - . -"@fr , "BN Cat. gén.: Derby (Edward George Geoffrey Smith Stanley), 14th earl of. - . - BN Cat. gén. suppl.. - . -"@fr , "Dissolution of Parliament, speech of the earl of Derby in the House of Lords, on Monday, April 4, 1859, 1859. - . - The forgotten Prime minister, the 14th Earl of Derby / Angus Hawkins, 2007-. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/130715107> , <http://viaf.org/viaf/74175007> , <http://isni-url.oclc.nl/isni/0000000083944322> ;
+        skos:note             "Premier ministre (févr.-déc. 1852, 1858-1859 et 1866-1868). - 14e comte de Derby"@fr ;
+        skos:prefLabel        "Edward George Geoffrey Smith Derby (comte de, 1799-1869)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15609452d#foaf:Person> .
+
+<http://data.bnf.fr/15609452/edward_george_geoffrey_smith_derby/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb15609452d#foaf:Person> .

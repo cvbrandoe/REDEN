@@ -1,0 +1,76 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb34915619z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35446763v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36604208h#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39079717w#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Membre de la Commission du Vieux Paris (en 1986)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/29535632> , <http://www.idref.fr/026932520> ;
+        foaf:familyName  "Jacob" ;
+        foaf:givenName   "Andrée" ;
+        foaf:name        "Andrée Jacob" ;
+        foaf:page        <http://data.bnf.fr/11908373/andree_jacob/> .
+
+<http://data.bnf.fr/ark:/12148/cb356923875#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11908373t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11908373t> ;
+        bnf-onto:FRBNF        11908373 ;
+        isni:identifierValid  "0000000028622574" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000028622574> ;
+        skos:exactMatch       <http://viaf.org/viaf/29535632> , <http://isni-url.oclc.nl/isni/0000000028622574> , <http://www.idref.fr/026932520> ;
+        skos:note             "Membre de la Commission du Vieux Paris (en 1986)"@fr ;
+        skos:prefLabel        "Andrée Jacob"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34949079r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34949096b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34994218x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11908373t#foaf:Person> .

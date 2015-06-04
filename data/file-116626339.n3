@@ -1,0 +1,112 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1860 ;
+        bnf-onto:lastYear               1931 ;
+        rdagroup2elements:biographicalInformation
+                "Humaniste et pédagogue, spécialiste de rhétorique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1860/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1931/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Terre Haute, Ind." ;
+        rdagroup2elements:placeOfDeath  "Californie" ;
+        bio:birth                       "1860-08-20" ;
+        bio:death                       "1931-05-29" ;
+        owl:sameAs                      <http://viaf.org/viaf/59233003> , <http://www.idref.fr/035146494> ;
+        foaf:birthday                   "08-20" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k64914b.thumbnail> ;
+        foaf:familyName                 "Scott" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Fred Newton" ;
+        foaf:name                       "Fred Newton Scott" ;
+        foaf:page                       <http://data.bnf.fr/13475853/fred_newton_scott/> .
+
+<http://data.bnf.fr/ark:/12148/cb31338977n#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb313389707#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13475853q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13475853q> ;
+        bnf-onto:FRBNF        13475853 ;
+        isni:identifierValid  "0000000081384712" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081384712> ;
+        skos:editorialNote    "LCNA. - http://authorities.loc.gov. - 2004-08-05 BN Cat. gén.. - . -"@fr , "An estimate of the value and influence of works of fiction in modern times / Thomas Hill Green ; ed. by Fred Newton Scott, 1995 [document électronique : reprod. de l'éd. de 1911]. - . - The life and legacy of Fred Newton Scott / Donald C. Stewart and Patricia L. Stewart, 1997. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/59233003> , <http://www.idref.fr/035146494> , <http://isni-url.oclc.nl/isni/0000000081384712> ;
+        skos:note             "Humaniste et pédagogue, spécialiste de rhétorique"@fr ;
+        skos:prefLabel        "Fred Newton Scott (1860-1931)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb313389691#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31338972x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb313389780#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31338975z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31338974m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> .
+
+<http://data.bnf.fr/13475853/fred_newton_scott/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb313389769#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30537716v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb313389738#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32903631v#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31338971k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13475853q#foaf:Person> .

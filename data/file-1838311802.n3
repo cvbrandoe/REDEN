@@ -1,0 +1,59 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12176431w#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              380 ;
+        rdagroup2elements:biographicalInformation
+                "Originaire d'Afrique. - Évêque de Vérone dont il est le saint patron. - Prédicateur, théologien. - Actif entre 362 et 371" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/0301-0400/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/0380/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        bio:birth                      "03.." ;
+        bio:death                      "380" ;
+        owl:sameAs                     <http://www.idref.fr/030325676> , <http://viaf.org/viaf/93640414> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b8496310t.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b7200335m.thumbnail> ;
+        foaf:familyName                "Zénon de Vérone" ;
+        foaf:page                      <http://data.bnf.fr/12176431/zenon_de_verone/> .
+
+<http://data.bnf.fr/ark:/12148/cb375385124#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12176431w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12176431w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12176431w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb352358264#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12176431w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12176431w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12176431w#foaf:Person> .
+
+<http://data.bnf.fr/12176431/zenon_de_verone/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12176431w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35565364f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12176431w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12176431w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12176431w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12176431w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12176431w> ;
+        bnf-onto:FRBNF        12176431 ;
+        isni:identifierValid  "000000007979910X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000007979910X> ;
+        skos:altLabel         "Zenone di Verona (saint, 03..-0380?)"@it , "Zeno Veronensis (saint, 03..-0380?)"@la , "Zeno von Verona (saint, 03..-0380?)"@de , "Zeno (saint, 03..-0380?)"@la , "Zeno of Verona (saint, 03..-0380?)"@en , "Zenone (saint, 03..-0380?)"@it , "Zénon (saint, 03..-0380?)"@fr ;
+        skos:editorialNote    "I Discorsi / San Zenone di Verona ; trad. di G. Banterle, 1987. - . - DTC : Zénon de Vérone. - . -"@fr , "Clavis SGL : Zeno Veronensis episcopus sanctus. - . - Marietti : Zenone. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000007979910X> , <http://viaf.org/viaf/93640414> , <http://www.idref.fr/030325676> ;
+        skos:note             "Originaire d'Afrique. - Évêque de Vérone dont il est le saint patron. - Prédicateur, théologien. - Actif entre 362 et 371"@fr ;
+        skos:prefLabel        "Zénon de Vérone (saint, 03..-0380?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12176431w#foaf:Person> .

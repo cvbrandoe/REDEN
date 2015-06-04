@@ -1,0 +1,55 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb425760653#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb15090715p#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb15090715p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15090715p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15090715p>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb15090715p> ;
+        bnf-onto:FRBNF   15090715 ;
+        skos:altLabel    "André Henry Noblet (imprimeur, 179.?-18..)"@fr , "André Henry dit Noblet (imprimeur, 179.?-18..)"@fr ;
+        skos:exactMatch  <http://www.idref.fr/139617337> , <http://viaf.org/viaf/10140221> ;
+        skos:note        "Imprimeur de la Chambre des députés (1824-1848) ; des tribunaux ; de la chambre des avoués. - Breveté imprimeur en succession d'André-François Hacquard le 26 oct. 1824. Publie parfois sous la raison \"Imprimerie de la Chambre des députés\" entre 1824 et 1848. Semble avoir peu exercé après 1848. Matériel vendu aux enchères le 24 nov. 1860. Ludovic-Joseph-Gonzague-Amédée Poupard-Davyl est breveté imprimeur le 15 déc. 1860 en sa succession"@fr ;
+        skos:prefLabel   "André Henry (imprimeur, 179.?-18..)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb15090715p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30258606d#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb15090715p#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb15090715p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15090715p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15090715p#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Imprimeur de la Chambre des députés (1824-1848) ; des tribunaux ; de la chambre des avoués. - Breveté imprimeur en succession d'André-François Hacquard le 26 oct. 1824. Publie parfois sous la raison \"Imprimerie de la Chambre des députés\" entre 1824 et 1848. Semble avoir peu exercé après 1848. Matériel vendu aux enchères le 24 nov. 1860. Ludovic-Joseph-Gonzague-Amédée Poupard-Davyl est breveté imprimeur le 15 déc. 1860 en sa succession" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1824-1860" ;
+        bio:birth                      "179." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/10140221> , <http://www.idref.fr/139617337> ;
+        foaf:familyName                "Henry" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "André" ;
+        foaf:name                      "André Henry" ;
+        foaf:page                      <http://data.bnf.fr/15090715/andre_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb414038963#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb15090715p#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb15090715p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15090715p#foaf:Person> .

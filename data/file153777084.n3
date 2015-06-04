@@ -1,0 +1,65 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1950 ;
+        rdagroup2elements:biographicalInformation
+                "Actrice" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:placeOfBirth  "Toulon" ;
+        owl:sameAs                      <http://viaf.org/viaf/74062153> , <http://dbpedia.org/resource/Sandra_Julien> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Silhouette-personne.svg?width=300> ;
+        foaf:familyName                 "Julien" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Sandra" ;
+        foaf:name                       "Sandra Julien" ;
+        foaf:page                       <http://data.bnf.fr/14191631/sandra_julien/> .
+
+<http://data.bnf.fr/ark:/12148/cb383338503#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14191631x>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Sandra_Julien> , <http://catalogue.bnf.fr/ark:/12148/cb14191631x> ;
+        bnf-onto:FRBNF        14191631 ;
+        isni:identifierValid  "0000000001424180" ;
+        owl:sameAs            <http://isni.org/isni/0000000001424180> ;
+        skos:altLabel         "Sandra Jullien"@fr ;
+        skos:editorialNote    "Le frisson des vampires [Images animées] / Jean Rollin, réal. ; Sandra Julien, Jean-Marie Durand, Michel Delahaye... [et al.], act. Blacke Editions, [1995]. - . - Les gourmandines [Images animées] / Guy Perol, réal., adapt., dial. ; Sandra Jullien, Jacques Cornet, Virginie Vignon... [et al.], act. Universal video productions, 1981. - . -"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/Sandra_Julien> , <http://fr.wikipedia.org/wiki/Sandra_Julien> , <http://isni.org/isni/0000000001424180> , <http://viaf.org/viaf/74062153> ;
+        skos:note             "Actrice"@fr ;
+        skos:prefLabel        "Sandra Julien"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38306111c#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39973803k#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383685116#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382246554#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14191631x#foaf:Person> .

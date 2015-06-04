@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40095440w#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36200622h#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12192487z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12192487z> ;
+        bnf-onto:FRBNF        12192487 ;
+        isni:identifierValid  "0000000039743072" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000039743072> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000039743072> , <http://viaf.org/viaf/2517561> , <http://www.idref.fr/030527848> ;
+        skos:note             "Fondateur de \"Presse Inter\" et de \"Student Europe\". - Journaliste dans la presse économique et scientifique, s'occupe d'information télématique au sein du \"Figaro\" (en 1995)"@fr ;
+        skos:prefLabel        "Emmanuel Voisin"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40936305n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1953 ;
+        rdagroup2elements:biographicalInformation
+                "Fondateur de \"Presse Inter\" et de \"Student Europe\". - Journaliste dans la presse économique et scientifique, s'occupe d'information télématique au sein du \"Figaro\" (en 1995)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/2517561> , <http://www.idref.fr/030527848> ;
+        foaf:familyName     "Voisin" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Emmanuel" ;
+        foaf:name           "Emmanuel Voisin" ;
+        foaf:page           <http://data.bnf.fr/12192487/emmanuel_voisin/> .
+
+<http://data.bnf.fr/ark:/12148/cb35346868p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357207160#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12192487z#foaf:Person> .

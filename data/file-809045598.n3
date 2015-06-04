@@ -1,0 +1,67 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb36657672g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34857933g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37616659b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346604845#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11916598f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11916598f> ;
+        bnf-onto:FRBNF        11916598 ;
+        isni:identifierValid  "0000000029927898" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000029927898> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000029927898> , <http://www.idref.fr/027035530> , <http://viaf.org/viaf/76320386> ;
+        skos:note             "Titulaire d'un doctorat de 3e cycle en économie du développement rural (Montpellier 1, 1988). - Maître-assistant, Chaire d'économie et sociologie rurales, ENSAM, Ecole nationale supérieure agronomique de Montpellier (en 1991)"@fr ;
+        skos:prefLabel        "Étienne Montaigne"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349088656#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1952 ;
+        rdagroup2elements:biographicalInformation
+                "Titulaire d'un doctorat de 3e cycle en économie du développement rural (Montpellier 1, 1988). - Maître-assistant, Chaire d'économie et sociologie rurales, ENSAM, Ecole nationale supérieure agronomique de Montpellier (en 1991)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/76320386> , <http://www.idref.fr/027035530> ;
+        foaf:familyName     "Montaigne" ;
+        foaf:givenName      "Étienne" ;
+        foaf:name           "Étienne Montaigne" ;
+        foaf:page           <http://data.bnf.fr/11916598/etienne_montaigne/> .
+
+<http://data.bnf.fr/ark:/12148/cb34755873s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11916598f#foaf:Person> .

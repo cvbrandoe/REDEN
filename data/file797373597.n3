@@ -1,0 +1,75 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb348981231#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42460584x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35104951k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121521054>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb121521054> ;
+        bnf-onto:FRBNF        12152105 ;
+        isni:identifierValid  "0000000110756504" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000110756504> ;
+        skos:altLabel         "John Fletcher (1940-1992)"@fr ;
+        skos:editorialNote    "The printed works, 1518-1570 of Martin Luther in the libraries of Sydney : a catalogue compiled / by Frank Carleton and John Fletcher, 1983. - . - LCNA, 1986. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000110756504> , <http://www.idref.fr/03001879X> , <http://viaf.org/viaf/88046159> ;
+        skos:prefLabel        "John Edward Fletcher (1940-1992)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb387798297#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1940 ;
+        bnf-onto:lastYear               1992 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/at#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1940/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1992/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Bradford, GB" ;
+        bio:birth                       "1940-01-18" ;
+        bio:death                       "1992-06-02" ;
+        owl:sameAs                      <http://www.idref.fr/03001879X> , <http://viaf.org/viaf/88046159> ;
+        foaf:birthday                   "01-18" ;
+        foaf:familyName                 "Fletcher" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "John Edward" ;
+        foaf:name                       "John Edward Fletcher" ;
+        foaf:page                       <http://data.bnf.fr/12152105/john_edward_fletcher/> .
+
+<http://data.bnf.fr/ark:/12148/cb37446214j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36674502q#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121521054#foaf:Person> .

@@ -1,0 +1,66 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb373192610#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389415861#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37370241f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12280562c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12280562c> ;
+        bnf-onto:FRBNF        12280562 ;
+        isni:identifierValid  "0000000114548243" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114548243> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000114548243> , <http://viaf.org/viaf/108683308> ;
+        skos:note             "Mathématicien. - En poste au Department of mathematics à la Columbia university, New York, USA (en 1984)"@fr ;
+        skos:prefLabel        "John W. Morgan"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373593884#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37462166z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41133719g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12280562c#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Mathématicien. - En poste au Department of mathematics à la Columbia university, New York, USA (en 1984)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://viaf.org/viaf/108683308> ;
+        foaf:familyName  "Morgan" ;
+        foaf:givenName   "John W." ;
+        foaf:name        "John W. Morgan" ;
+        foaf:page        <http://data.bnf.fr/12280562/john_w__morgan/> .

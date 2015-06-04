@@ -1,0 +1,21 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/11964579/verlaine/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11964579q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11964579q#foaf:Person>
+        a                foaf:Person ;
+        foaf:familyName  "Verlaine" ;
+        foaf:page        <http://data.bnf.fr/11964579/verlaine/> .
+
+<http://data.bnf.fr/ark:/12148/cb11964579q>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb11964579q> ;
+        bnf-onto:FRBNF  11964579 ;
+        skos:prefLabel  "Verlaine (famille)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb11964579q#foaf:Person> .

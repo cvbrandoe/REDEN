@@ -1,0 +1,64 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb373196702#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1952 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur d'anglais et de littérature anglaise médiévale, University college, Dublin (en 2005)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ie#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/34637072> , <http://www.idref.fr/073715352> ;
+        foaf:familyName     "Fletcher" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Alan John" ;
+        foaf:name           "Alan John Fletcher" ;
+        foaf:page           <http://data.bnf.fr/13745291/alan_john_fletcher/> .
+
+<http://data.bnf.fr/ark:/12148/cb37688101k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13745291h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13745291h> ;
+        bnf-onto:FRBNF        13745291 ;
+        isni:identifierValid  "0000000108870316" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108870316> ;
+        skos:editorialNote    "Drama and the performing arts in pre-Cromwellian Ireland : a repertory of sources and documents from the earliest times until c. 1642 / Alan J. Fletcher, 2001. - . - Bibliothèque nationale, Grande-Bretagne. - http://blpc.bl.uk. - 2006-04-12"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000108870316> , <http://www.idref.fr/073715352> , <http://viaf.org/viaf/34637072> ;
+        skos:note             "Professeur d'anglais et de littérature anglaise médiévale, University college, Dublin (en 2005)"@fr ;
+        skos:prefLabel        "Alan John Fletcher"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41336771n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42004807b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400624338#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13745291h#foaf:Person> .

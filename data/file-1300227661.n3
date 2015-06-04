@@ -1,0 +1,70 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb32564493n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb325644971#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb325644940#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12462137g>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12462137g> ;
+        bnf-onto:FRBNF      12462137 ;
+        skos:editorialNote  "Biologie du vin / par Jean Renaud, 1950. - . - BN Cat. gén. suppl. : Renaud (Jean), biologiste. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/29630610> , <http://www.idref.fr/140547614> ;
+        skos:note           "Docteur ès-sciences (Paris, 1941)"@fr ;
+        skos:prefLabel      "Jean Renaud (biologiste)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36042096c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Docteur ès-sciences (Paris, 1941)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/140547614> , <http://viaf.org/viaf/29630610> ;
+        foaf:familyName  "Renaud" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Jean" ;
+        foaf:name        "Jean Renaud" ;
+        foaf:page        <http://data.bnf.fr/12462137/jean_renaud/> .
+
+<http://data.bnf.fr/ark:/12148/cb32564495b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32564496p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb331517930#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12462137g#foaf:Person> .

@@ -1,0 +1,73 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Auteur-compositrice" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/22407815> ;
+        foaf:familyName  "Chevalier" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Claire" ;
+        foaf:name        "Claire Chevalier" ;
+        foaf:page        <http://data.bnf.fr/14839277/claire_chevalier/> .
+
+<http://data.bnf.fr/ark:/12148/cb39649169w#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> ;
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39712070p#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb396504432#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb396494342#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39712069g#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39697173p#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb148392771>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb148392771> ;
+        bnf-onto:FRBNF        14839277 ;
+        isni:identifierValid  "0000000368188604" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000368188604> ;
+        skos:altLabel         "Claire Ferullo-Chevalier"@fr , "Claire Ferval"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/22407815> , <http://isni-url.oclc.nl/isni/0000000368188604> ;
+        skos:note             "Auteur-compositrice"@fr ;
+        skos:prefLabel        "Claire Chevalier"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb397120711#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148392771#foaf:Person> .

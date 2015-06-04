@@ -1,0 +1,49 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14594734n#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1832 ;
+        rdagroup2elements:biographicalInformation
+                "Variante(s) de prénom : Zéphir-Denis. - Imprimeur. - Breveté imprimeur le 23 oct. 1829 en succession d'Antoine-Auguste Barthélemy. En 1830-1831, avec plusieurs autres imprimeurs parisiens, pétitionne pour la suppression des brevets d'imprimeur. Sa veuve, née Jeanne-Françoise Boyon et âgée de 24 ans, est brevetée en sa succession le 24 oct. 1832" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1832/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1829-1832" ;
+        bio:birth                      "180." ;
+        bio:death                      "1832" ;
+        owl:sameAs                     <http://viaf.org/viaf/71642384> ;
+        foaf:familyName                "Poussin" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Zéphyr-Denis" ;
+        foaf:name                      "Zéphyr-Denis Poussin" ;
+        foaf:page                      <http://data.bnf.fr/14594734/zephyr-denis_poussin/> .
+
+<http://data.bnf.fr/ark:/12148/cb39237732t#frbr:Expression>
+        bnfroles:r3060       <http://data.bnf.fr/ark:/12148/cb14594734n#foaf:Person> ;
+        marcrel:prt          <http://data.bnf.fr/ark:/12148/cb14594734n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14594734n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14594734n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14594734n> ;
+        bnf-onto:FRBNF        14594734 ;
+        isni:identifierValid  "0000000001390929" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000001390929> ;
+        skos:editorialNote    "Delalain, Liste. - . - Felkay. - . - Arbour, Femmes, 1470-1870. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/71642384> , <http://isni-url.oclc.nl/isni/0000000001390929> ;
+        skos:note             "Variante(s) de prénom : Zéphir-Denis. - Imprimeur. - Breveté imprimeur le 23 oct. 1829 en succession d'Antoine-Auguste Barthélemy. En 1830-1831, avec plusieurs autres imprimeurs parisiens, pétitionne pour la suppression des brevets d'imprimeur. Sa veuve, née Jeanne-Françoise Boyon et âgée de 24 ans, est brevetée en sa succession le 24 oct. 1832"@fr ;
+        skos:prefLabel        "Zéphyr-Denis Poussin (180.?-1832)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14594734n#foaf:Person> .

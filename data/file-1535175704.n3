@@ -1,0 +1,100 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb307248930#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1793 ;
+        bnf-onto:lastYear              1861 ;
+        rdagroup2elements:biographicalInformation
+                "Officier. - Membre de la Commission d'exploration scientifique d'Algérie (1839-1850). - Vécut en Algérie (de 1830 à 1835), (de 1839 à 1845) et (de 1850 à 1851). - Membre résidant de la Société nationale des antiquaires de France (1850)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1793/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1861/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1793-08-08" ;
+        bio:death                      "1861-01-28" ;
+        owl:sameAs                     <http://viaf.org/viaf/39471980> , <http://www.idref.fr/033578826> ;
+        foaf:birthday                  "08-08" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k664958.thumbnail> ;
+        foaf:familyName                "Delamare" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Adolphe Hedwige Alphonse" ;
+        foaf:name                      "Adolphe Hedwige Alphonse Delamare" ;
+        foaf:page                      <http://data.bnf.fr/12443253/adolphe_hedwige_alphonse_delamare/> .
+
+<http://data.bnf.fr/ark:/12148/cb30724895p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36382750b#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12443253t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12443253t> ;
+        bnf-onto:FRBNF        12443253 ;
+        isni:identifierValid  "0000000051411871" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000051411871> ;
+        skos:altLabel         "Adolphe Hedwige Alphonse de Lamare (1793-1861)"@fr , "Commandant de La Mare (1793-1861)"@fr , "Adolphe Hedwige Alphonse de La Mare (1793-1861)"@fr , "Adolphe Hedwige Alphonse de Lamarre (1793-1861)"@fr , "Adolphe Hedwige Alphonse Delamarre (1793-1861)"@fr , "Adolphe Hedwige Alphonse de La Marre (1793-1861)"@fr , "Capitaine Delamare (1793-1861)"@fr ;
+        skos:editorialNote    "Excursion faite en juin 1843 aux ruines de Khremissa... / [commandant A. Delamare], [1856]. - . - Le capitaine Delamare : la réussite de l'archéologie romaine au sein de la Commission d'exploration scientifique d'Algérie / Monique Dodin-Payre, 1994. - . -"@fr , "Note sur quelques villes romaines de l'Algérie / [commandant de La Mare], [1849]. - . - Recherches sur l'ancienne ville de Lambèse / par M. de La Marre, 1850. - . - Exploration scientifique de l'Algérie. Archéologie / par Ad. H. Al. Delamare, 1850. - . -"@fr , "Annuaire prosopographique, Comité des travaux historiques et scientifiques : La Mare Adolphe Hedwige Alphonse de. - http://cths.fr. - 2011-09-14 BN Cat. gén. : La Mare (Commandant Adolphe-Hedwige-Alphonse de). - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/39471980> , <http://www.idref.fr/033578826> , <http://isni-url.oclc.nl/isni/0000000051411871> ;
+        skos:note             "Officier. - Membre de la Commission d'exploration scientifique d'Algérie (1839-1850). - Vécut en Algérie (de 1830 à 1835), (de 1839 à 1845) et (de 1850 à 1851). - Membre résidant de la Société nationale des antiquaires de France (1850)"@fr ;
+        skos:prefLabel        "Adolphe Hedwige Alphonse Delamare (1793-1861)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30724894b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> .
+
+<http://data.bnf.fr/12443253/adolphe_hedwige_alphonse_delamare/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30724892n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35961777m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307248919#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39351170v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30548285r#frbr:Expression>
+        bnfroles:r40         <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        marcrel:ann          <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb320078414#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12443253t#foaf:Person> .

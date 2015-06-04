@@ -1,0 +1,44 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb162526266#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1893 ;
+        bnf-onto:lastYear               1940 ;
+        rdagroup2elements:biographicalInformation
+                "Secrétaire général de la Chambre syndicale des mines métalliques et de l'Union syndicale des mines marocaines. - Président de l'Office parisien d'édition et de publicité. - Administrateur de \"La journée industrielle\". - A été délégué général du bureau du Comité central des houillères de France" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1893/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1940/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Économie politique. Travail" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/330/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1893" ;
+        bio:death                       "1940-05" ;
+        foaf:familyName                 "Duhamel" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jean" ;
+        foaf:name                       "Jean Duhamel" ;
+        foaf:page                       <http://data.bnf.fr/16252626/jean_duhamel/> .
+
+<http://data.bnf.fr/ark:/12148/cb162526266>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb162526266> ;
+        bnf-onto:FRBNF  16252626 ;
+        skos:note       "Secrétaire général de la Chambre syndicale des mines métalliques et de l'Union syndicale des mines marocaines. - Président de l'Office parisien d'édition et de publicité. - Administrateur de \"La journée industrielle\". - A été délégué général du bureau du Comité central des houillères de France"@fr ;
+        skos:prefLabel  "Jean Duhamel (1893?-1940)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb162526266#foaf:Person> .
+
+<http://data.bnf.fr/16252626/jean_duhamel/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb162526266#foaf:Person> .

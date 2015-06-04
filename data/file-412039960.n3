@@ -1,0 +1,54 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb346173689#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126076077#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126076077#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126076077#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb126076077>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb126076077> ;
+        bnf-onto:FRBNF        12607607 ;
+        isni:identifierValid  "0000000078349553" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000078349553> ;
+        skos:editorialNote    "L'inflation au coeur / Michel Rocard, Jacques Gallus, 1975. - . - WW, France 2001-2002. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000078349553> , <http://www.idref.fr/085695726> , <http://viaf.org/viaf/84173326> ;
+        skos:note             "Économiste. - Rapporteur général au Conseil d'état (en 2002). - Diplômé de l'Institut d'études politiques et docteur d'Etat en sciences économiques"@fr ;
+        skos:prefLabel        "Jacques Gallus"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb126076077#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35189251h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126076077#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126076077#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126076077#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345703827#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126076077#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126076077#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126076077#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb126076077#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1948 ;
+        rdagroup2elements:biographicalInformation
+                "Économiste. - Rapporteur général au Conseil d'état (en 2002). - Diplômé de l'Institut d'études politiques et docteur d'Etat en sciences économiques" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/085695726> , <http://viaf.org/viaf/84173326> ;
+        foaf:familyName     "Gallus" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jacques" ;
+        foaf:name           "Jacques Gallus" ;
+        foaf:page           <http://data.bnf.fr/12607607/jacques_gallus/> .

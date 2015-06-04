@@ -1,0 +1,47 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34750711r#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb120134145#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb120134145#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120134145#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120134145#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1958 ;
+        rdagroup2elements:biographicalInformation
+                "Photographe" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        foaf:familyName     "Jammes" ;
+        foaf:givenName      "Louis" ;
+        foaf:name           "Louis Jammes" ;
+        foaf:page           <http://data.bnf.fr/12013414/louis_jammes/> .
+
+<http://data.bnf.fr/12013414/louis_jammes/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb120134145#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120134145>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb120134145> ;
+        bnf-onto:FRBNF        12013414 ;
+        isni:identifierValid  "0000000081376827" ;
+        skos:editorialNote    "Di Rosa / Jean Seisser ; photos, Louis Jammes, 1983. - . - Sarajevo n'est en réalité le nom de rien qui puisse être représenté / Louis Jammes, 1994. - . -"@fr ;
+        skos:note             "Photographe"@fr ;
+        skos:prefLabel        "Louis Jammes"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120134145#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357735700#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb120134145#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb120134145#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120134145#foaf:Person> .

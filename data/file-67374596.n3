@@ -1,0 +1,67 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35790767b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38824133g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38995749c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36968210s#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12500632k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12500632k> ;
+        bnf-onto:FRBNF        12500632 ;
+        isni:identifierValid  "0000000108040152" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108040152> ;
+        skos:editorialNote    "Paul and the nations / James M. Scott, 1995. - . - LCNA (CD), 1996-06. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000108040152> , <http://viaf.org/viaf/100908327> ;
+        skos:note             "Exégète, spécialiste du Nouveau Testament. - A soutenu une thèse  à la faculté de théologie protestante de Tübingen en 1989"@fr ;
+        skos:prefLabel        "James M. Scott"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1955 ;
+        rdagroup2elements:biographicalInformation
+                "Exégète, spécialiste du Nouveau Testament. - A soutenu une thèse  à la faculté de théologie protestante de Tübingen en 1989" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/100908327> ;
+        foaf:familyName     "Scott" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "James M." ;
+        foaf:name           "James M. Scott" ;
+        foaf:page           <http://data.bnf.fr/12500632/james_m__scott/> .
+
+<http://data.bnf.fr/ark:/12148/cb39297716t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35688519g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12500632k#foaf:Person> .

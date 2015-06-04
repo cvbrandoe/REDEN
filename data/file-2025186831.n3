@@ -1,0 +1,91 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb136195789>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb136195789> ;
+        bnf-onto:FRBNF        13619578 ;
+        isni:identifierValid  "0000000078382185" ;
+        owl:sameAs            <http://isni.org/isni/0000000078382185> ;
+        skos:editorialNote    "20 ans Tendance floue [portfolio de photographies] [Image fixe] / Tendance floue, 2011. - . - Les mondes de l'école / Mat Jacob, Olivier Culmann, 2001. - . - Photojournalisme, à la croisée des chemins / [sous la direction de] Olivia Colo, Wilfrid Estève, Mat Jacob, impr. 2005. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/27242628> , <http://www.idref.fr/056604661> , <http://isni.org/isni/0000000078382185> ;
+        skos:note             "Photographe. - Membre fondateur du collectif Tendance floue. - Co-animateur du stage de photojournalisme de l'École des métiers de l'information-CFD (en 2005)"@fr ;
+        skos:prefLabel        "Mat Jacob (photographe)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42319559p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425250367#frbr:Expression>
+        bnfroles:r530        <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        marcrel:pht          <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> .
+
+<http://data.bnf.fr/13619578/mat_jacob/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39101509h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43726338g#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1966 ;
+        rdagroup2elements:biographicalInformation
+                "Photographe. - Membre fondateur du collectif Tendance floue. - Co-animateur du stage de photojournalisme de l'École des métiers de l'information-CFD (en 2005)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Photographie" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/770/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/27242628> , <http://www.idref.fr/056604661> ;
+        foaf:familyName     "Jacob" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Mat" ;
+        foaf:name           "Mat Jacob" ;
+        foaf:page           <http://data.bnf.fr/13619578/mat_jacob/> .
+
+<http://data.bnf.fr/ark:/12148/cb37650586b#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40043144x#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422492568#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42786699m#frbr:Expression>
+        bnfroles:r350        <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        marcrel:prd          <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb376341901#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136195789#foaf:Person> .

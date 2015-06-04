@@ -1,0 +1,73 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/13182607/gustave_valmont/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13182607z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc4824t/ca59862268495688#frbr:Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb13182607z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13182607z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13182607z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34113398d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13182607z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13182607z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13182607z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13182607z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13182607z> ;
+        bnf-onto:FRBNF        13182607 ;
+        isni:identifierValid  "0000000008922764" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000008922764> ;
+        skos:altLabel         "Gustave-Félix-Marie Valmont (1881-1914)"@fr ;
+        skos:editorialNote    "Mémoire des hommes. - http://www.memoiredeshommes.sga.defense.gouv.fr. - 2008-08-01 Livret de l'École des chartes 1821-1966 et 1922-1936. - . - Anthologie des écrivains morts à la guerre 1914-1918 / publiée par l'Association des Écrivains Combattants, tome 1, 1924. - . -"@fr , "Lorenz. - . - BN Cat. gén. : Valmont (Gustave-Félix-Marie). - . -"@fr , "L'aile de l'amour / Gustave Valmont, 1911. - . - Esquisse de l'histoire de Caudebec-en-Caux et de sa région / Gustave Valmont, 1913. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/5072058> , <http://www.idref.fr/061487023> , <http://isni-url.oclc.nl/isni/0000000008922764> ;
+        skos:note             "Archiviste paléographe (diplômé en 1908). - Poète"@fr ;
+        skos:prefLabel        "Gustave Valmont (1881-1914)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13182607z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb341029827#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13182607z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13182607z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13182607z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13182607z#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1881 ;
+        bnf-onto:lastYear               1914 ;
+        bnf-onto:mortPourLaFrance       true ;
+        rdagroup2elements:biographicalInformation
+                "Archiviste paléographe (diplômé en 1908). - Poète" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1881/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1914/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Littératures" , "Histoire de la France" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/800/> , <http://dewey.info/class/944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Fère-Champenoise (Marne)" ;
+        bio:birth                       "1881-06-24" ;
+        bio:death                       "1914-09-06" ;
+        owl:sameAs                      <http://viaf.org/viaf/5072058> , <http://www.idref.fr/061487023> ;
+        foaf:birthday                   "06-24" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k1457703.thumbnail> ;
+        foaf:familyName                 "Valmont" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Gustave" ;
+        foaf:name                       "Gustave Valmont" ;
+        foaf:page                       <http://data.bnf.fr/13182607/gustave_valmont/> .

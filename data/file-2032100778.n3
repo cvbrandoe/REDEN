@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/11226763/francois_leon-daudet/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11226763b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb323735341#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11226763b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11226763b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11226763b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11226763b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11226763b> ;
+        bnf-onto:FRBNF        11226763 ;
+        isni:identifierValid  "0000000079623518" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000079623518> ;
+        skos:altLabel         "François Daudet (1890-19..)"@fr , "François Léon- Daudet (1890-19..)"@fr , "Fernand Victor Marie François Daudet (1890-19..)"@fr ;
+        skos:editorialNote    "Quinze contes / Léon Daudet ; avant-propos de François Daudet, 1948. - . - Les libertés françaises / Directeur : Fr. Daudet, 1955. - . -"@fr , "ABF: Daudet, Fernand Victor Marie François. - . - Daudet - Wikipédia. - http://fr.wikipedia.org/wiki/Daudet. - 2010-05-18"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/120723968> , <http://www.idref.fr/175884897> , <http://isni-url.oclc.nl/isni/0000000079623518> ;
+        skos:note             "Médecin et journaliste. - Fils de: Daudet, Léon (1867-1942)"@fr ;
+        skos:prefLabel        "François Léon-Daudet (1890-19..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11226763b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31996929k#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb11226763b#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb11226763b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11226763b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11226763b#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1890 ;
+        rdagroup2elements:biographicalInformation
+                "Médecin et journaliste. - Fils de: Daudet, Léon (1867-1942)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1890/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Sciences de l'information et de la documentation" , "Médecine" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/610/> , <http://dewey.info/class/020/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Nîmes" ;
+        bio:birth                       "1890-04-14" ;
+        bio:death                       "19.." ;
+        owl:sameAs                      <http://viaf.org/viaf/120723968> , <http://www.idref.fr/175884897> ;
+        foaf:birthday                   "04-14" ;
+        foaf:familyName                 "Léon-Daudet" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "François" ;
+        foaf:name                       "François Léon-Daudet" ;
+        foaf:page                       <http://data.bnf.fr/11226763/francois_leon-daudet/> .

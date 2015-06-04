@@ -1,0 +1,45 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12522465w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12522465w> ;
+        bnf-onto:FRBNF        12522465 ;
+        isni:identifierValid  "0000000032512765" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000032512765> ;
+        skos:exactMatch       <http://www.idref.fr/034471847> , <http://viaf.org/viaf/9956517> , <http://isni-url.oclc.nl/isni/0000000032512765> ;
+        skos:note             "Spécialiste de littérature française"@fr , "Ecrit aussi en français"@fr ;
+        skos:prefLabel        "Monique Wagner"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12522465w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354299464#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12522465w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12522465w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12522465w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12522465w#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1926 ;
+        rdagroup2elements:biographicalInformation
+                "Spécialiste de littérature française" , "Ecrit aussi en français" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/9956517> , <http://www.idref.fr/034471847> ;
+        foaf:familyName     "Wagner" ;
+        foaf:givenName      "Monique" ;
+        foaf:name           "Monique Wagner" ;
+        foaf:page           <http://data.bnf.fr/12522465/monique_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb389737453#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12522465w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12522465w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12522465w#foaf:Person> .

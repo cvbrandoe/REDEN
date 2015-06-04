@@ -1,0 +1,53 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38338171b#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14045189m#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14045189m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14045189m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411121133#frbr:Expression>
+        bnfroles:r1280       <http://data.bnf.fr/ark:/12148/cb14045189m#foaf:Person> ;
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14045189m#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14045189m#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14045189m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14045189m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14045189m#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1960 ;
+        owl:sameAs          <http://viaf.org/viaf/51891049> ;
+        foaf:familyName     "Henry" ;
+        foaf:givenName      "Joe" .
+
+<http://data.bnf.fr/ark:/12148/cb384335168#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14045189m#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14045189m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14045189m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422322400#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14045189m#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14045189m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14045189m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14045189m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14045189m> ;
+        bnf-onto:FRBNF        14045189 ;
+        isni:identifierValid  "0000000079957892" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000079957892> ;
+        skos:altLabel         "Joseph Lee Henry"@fr ;
+        skos:editorialNote    "Murder of crows [Enregistrement sonore] / Joe Henry, chant. A & M-Coyote 3952104. - . - Jazz magazine 2001, 518. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000079957892> , <http://viaf.org/viaf/51891049> ;
+        skos:note             "Auteur-compositeur-interprète"@fr ;
+        skos:prefLabel        "Joe Henry"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14045189m#foaf:Person> .

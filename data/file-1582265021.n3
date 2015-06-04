@@ -1,0 +1,33 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14974758x#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1201-1300/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1301-1400/> ;
+        bio:birth                      "12.." ;
+        bio:death                      "130." ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b6905044k.thumbnail> ;
+        foaf:familyName                "Beaumont" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean 1er de" ;
+        foaf:name                      "Jean 1er de Beaumont" ;
+        foaf:page                      <http://data.bnf.fr/14974758/jean_1er_de_beaumont/> .
+
+<http://data.bnf.fr/14974758/jean_1er_de_beaumont/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14974758x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14974758x>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb14974758x> ;
+        bnf-onto:FRBNF  14974758 ;
+        skos:prefLabel  "Jean 1er de Beaumont (12..-130.)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb14974758x#foaf:Person> .

@@ -1,0 +1,45 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb15043992c#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1953 ;
+        bnf-onto:lastYear               1992 ;
+        rdagroup2elements:biographicalInformation
+                "Linguiste. - Horticulteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1953/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1992/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Botanique" , "Littérature générale" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/580/> , <http://dewey.info/class/801/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Prétoria" ;
+        bio:birth                       "1953-01-20" ;
+        bio:death                       "1992-10-13" ;
+        foaf:birthday                   "01-20" ;
+        foaf:familyName                 "Dickens" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Patrick John" ;
+        foaf:name                       "Patrick John Dickens" ;
+        foaf:page                       <http://data.bnf.fr/15043992/patrick_john_dickens/> .
+
+<http://data.bnf.fr/ark:/12148/cb15043992c>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb15043992c> ;
+        bnf-onto:FRBNF  15043992 ;
+        skos:note       "Linguiste. - Horticulteur"@fr ;
+        skos:prefLabel  "Patrick John Dickens (1953-1992)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb15043992c#foaf:Person> .
+
+<http://data.bnf.fr/15043992/patrick_john_dickens/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb15043992c#foaf:Person> .

@@ -1,0 +1,96 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb122192659>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Louis_Hamelin> , <http://catalogue.bnf.fr/ark:/12148/cb122192659> ;
+        bnf-onto:FRBNF        12219265 ;
+        isni:identifierValid  "0000000108589946" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108589946> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000108589946> , <http://fr.wikipedia.org/wiki/Louis_Hamelin> , <http://www.idref.fr/030861985> , <http://viaf.org/viaf/85357040> , <http://dbpedia.org/resource/Louis_Hamelin> ;
+        skos:note             "Romancier"@fr ;
+        skos:prefLabel        "Louis Hamelin"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42599649n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388653782#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372074385#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1959 ;
+        rdagroup2elements:biographicalInformation
+                "Romancier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxc> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/85357040> , <http://dbpedia.org/resource/Louis_Hamelin> , <http://www.idref.fr/030861985> ;
+        foaf:familyName     "Hamelin" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Louis" ;
+        foaf:name           "Louis Hamelin" ;
+        foaf:page           <http://data.bnf.fr/12219265/louis_hamelin/> .
+
+<http://data.bnf.fr/ark:/12148/cb35782281s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37520827v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361737145#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37066140j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40931750c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36703328b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> .
+
+<http://data.bnf.fr/12219265/louis_hamelin/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35466736c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb376888005#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122192659#foaf:Person> .

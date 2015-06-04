@@ -1,0 +1,78 @@
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpprop: <http://dbpedia.org/property/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://dbpedia.org/resource/Artie_Bernstein>
+        a                               <http://dbpedia.org/class/yago/Person100007846> , <http://wikidata.dbpedia.org/resource/Q5> , dbpedia-owl:Person , <http://dbpedia.org/class/yago/PhysicalEntity100001930> , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> , <http://dbpedia.org/class/yago/Organism100004475> , dbpedia-owl:Agent , <http://dbpedia.org/class/yago/PeopleFromBrooklyn> , <http://dbpedia.org/class/yago/Object100002684> , dbpedia-owl:MusicalArtist , <http://wikidata.dbpedia.org/resource/Q215627> , <http://dbpedia.org/class/yago/Whole100003553> , <http://schema.org/MusicGroup> , owl:Thing , foaf:Person , <http://dbpedia.org/class/yago/CausalAgent100007347> , dbpedia-owl:Artist , <http://schema.org/Person> , <http://dbpedia.org/class/yago/LivingThing100004258> , <http://dbpedia.org/class/yago/YagoLegalActorGeo> , <http://dbpedia.org/class/yago/YagoLegalActor> , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> ;
+        rdfs:comment                    "Arthur \"Artie\" Bernstein (February 4, 1909 – January 4, 1964) was an American jazz bassist. Born in Brooklyn, New York, he started his musical career playing cello on board cruise ships to South America, and also studied law at New York University. However, by 1929 he had started playing bass, and began performing in clubs around New York City. He performed with trumpeter Red Nichols, Red Norvo and others, and recorded with Ben Pollack, Jimmy and Tommy Dorsey, and many others in the 1930s."@en , "Arthur \"Artie\" Bernstein (* 4. Februar 1909 in Brooklyn, New York City; † 4. Januar 1964 in Los Angeles) war ein US-amerikanischer Jazzbassist des Swing. Artie Bernstein war zeitweise Rechtsanwalt, wurde jedoch bald ein gefragter Bassist, bis er 1930 Berufsmusiker wurde. Zunächst arbeitete er 1931/32 mit Red Nichols, von 1932 bis 1934 mit den Dorsey Brothers und von 1939 bis 1941 mit Benny Goodman in dessen Sextett und Septett."@de , "Artie Bernstein né le 3 février 1909 à New York mort le 4 janvier 1964 à Los Angeles est un contrebassiste de jazz."@fr ;
+        rdfs:label                      "Artie Bernstein"@en , "Artie Bernstein"@de , "Artie Bernstein"@fr ;
+        dbpedia-owl:abstract            "Artie Bernstein né le 3 février 1909 à New York mort le 4 janvier 1964 à Los Angeles est un contrebassiste de jazz."@fr , "Arthur \"Artie\" Bernstein (* 4. Februar 1909 in Brooklyn, New York City; † 4. Januar 1964 in Los Angeles) war ein US-amerikanischer Jazzbassist des Swing. Artie Bernstein war zeitweise Rechtsanwalt, wurde jedoch bald ein gefragter Bassist, bis er 1930 Berufsmusiker wurde. Zunächst arbeitete er 1931/32 mit Red Nichols, von 1932 bis 1934 mit den Dorsey Brothers und von 1939 bis 1941 mit Benny Goodman in dessen Sextett und Septett. Seitdem war er als Studiomusiker in Los Angeles beschäftigt.Bernstein war außerdem an Plattenaufnahmen von Jack Teagarden (1931–33), Eddie Condon, Adrian Rollini/Frankie Trumbauer 1934, Billie Holiday 1936, Teddy Wilson 1937, Maxine Sullivan 1937/38, Lionel Hampton, 1939–41, den Metronome All-Stars, Red Norvo 1945, Cootie Williams 1941 und Sonny Berman 1946 beteiligt. 1943 gewann Bernstein den Leserpoll des Jazzmagazins Down Beat."@de , "Arthur \"Artie\" Bernstein (February 4, 1909 – January 4, 1964) was an American jazz bassist. Born in Brooklyn, New York, he started his musical career playing cello on board cruise ships to South America, and also studied law at New York University. However, by 1929 he had started playing bass, and began performing in clubs around New York City. He performed with trumpeter Red Nichols, Red Norvo and others, and recorded with Ben Pollack, Jimmy and Tommy Dorsey, and many others in the 1930s. In 1939 he performed with Benny Goodman at the second From Spirituals to Swing concert. He fell out with Goodman in 1941 - Goodman fiddled with Bernstein's music-stand light so that he would have problems reading the music and appear incompetent, giving Goodman a pretext to fire him.However, he won the Down Beat readers' poll in 1943. He later moved to Los Angeles and worked in the film industry for such companies as Universal Studios and Warner Bros., continuing to work for the latter organization until 1963.He died in Los Angeles at the age of 54."@en ;
+        dbpedia-owl:activeYearsEndYear  "1963+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:activeYearsStartYear
+                "1929+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:alias               "Bernstein, Arthur" ;
+        dbpedia-owl:associatedBand      <http://dbpedia.org/resource/Ben_Pollack> , <http://dbpedia.org/resource/Tommy_Dorsey> ;
+        dbpedia-owl:associatedMusicalArtist
+                <http://dbpedia.org/resource/Tommy_Dorsey> , <http://dbpedia.org/resource/Ben_Pollack> ;
+        dbpedia-owl:background          "non_vocal_instrumentalist" ;
+        dbpedia-owl:birthDate           "1909-02-04+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:birthPlace          <http://dbpedia.org/resource/Brooklyn> , <http://dbpedia.org/resource/New_York> ;
+        dbpedia-owl:birthYear           "1909+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:deathDate           "1964-01-04+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:deathPlace          <http://dbpedia.org/resource/Los_Angeles> , <http://dbpedia.org/resource/California> ;
+        dbpedia-owl:deathYear           "1964+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:genre               <http://dbpedia.org/resource/Jazz> ;
+        dbpedia-owl:instrument          <http://dbpedia.org/resource/Double_bass> , <http://dbpedia.org/resource/Cello> ;
+        dbpedia-owl:occupation          <http://dbpedia.org/resource/Double_bass> ;
+        dbpedia-owl:wikiPageID          15491455 ;
+        dbpedia-owl:wikiPageRevisionID  586716304 ;
+        dbpprop:alternativeNames        "Bernstein, Arthur"@en ;
+        dbpprop:associatedActs          <http://dbpedia.org/resource/Tommy_Dorsey> , <http://dbpedia.org/resource/Ben_Pollack> ;
+        dbpprop:background              "non_vocal_instrumentalist"@en ;
+        dbpprop:birthDate               "1909-02-04+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:birthName               "Arthur Bernstein"@en ;
+        dbpprop:birthPlace              <http://dbpedia.org/resource/New_York> , <http://dbpedia.org/resource/Brooklyn> ;
+        dbpprop:dateOfBirth             "1909-02-04+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:dateOfDeath             "1964-01-04+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathDate               "1964-01-04+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathPlace              <http://dbpedia.org/resource/California> , <http://dbpedia.org/resource/Los_Angeles> ;
+        dbpprop:genre                   <http://dbpedia.org/resource/Jazz> ;
+        dbpprop:hasPhotoCollection      <http://wifo5-03.informatik.uni-mannheim.de/flickrwrappr/photos/Artie_Bernstein> ;
+        dbpprop:instrument              <http://dbpedia.org/resource/Double_bass> , <http://dbpedia.org/resource/Cello> ;
+        dbpprop:label                   "Definitive Records"@en ;
+        dbpprop:name                    "Artie Bernstein"@en , "Bernstein, Artie"@en ;
+        dbpprop:occupation              "Bassist"@en ;
+        dbpprop:placeOfBirth            "Brooklyn, New York"@en ;
+        dbpprop:placeOfDeath            "Los Angeles, California"@en ;
+        dbpprop:shortDescription        "Jazz bassist"@en ;
+        dbpprop:yearsActive             1929 ;
+        dc:description                  "Jazz bassist"@en , "Jazz bassist" ;
+        dcterms:subject                 <http://dbpedia.org/resource/Category:People_from_Brooklyn> , <http://dbpedia.org/resource/Category:1909_births> , <http://dbpedia.org/resource/Category:1964_deaths> , <http://dbpedia.org/resource/Category:American_jazz_double-bassists> ;
+        owl:sameAs                      <http://wikidata.dbpedia.org/resource/Q712435> , <http://wikidata.org/entity/Q712435> , <http://rdf.freebase.com/ns/m.03mc0zj> , <http://yago-knowledge.org/resource/Artie_Bernstein> , <http://de.dbpedia.org/resource/Artie_Bernstein> , <http://dbpedia.org/resource/Artie_Bernstein> , <http://fr.dbpedia.org/resource/Artie_Bernstein> ;
+        prov:wasDerivedFrom             <http://en.wikipedia.org/wiki/Artie_Bernstein?oldid=586716304> ;
+        foaf:givenName                  "Artie"@en , "Arthur Bernstein"@en ;
+        foaf:isPrimaryTopicOf           <http://en.wikipedia.org/wiki/Artie_Bernstein> ;
+        foaf:name                       "Artie Bernstein"@en , "Bernstein, Artie"@en ;
+        foaf:surname                    "Bernstein"@en .
+
+<http://en.wikipedia.org/wiki/Artie_Bernstein>
+        foaf:primaryTopic  <http://dbpedia.org/resource/Artie_Bernstein> .
+
+<http://fr.dbpedia.org/resource/Artie_Bernstein>
+        owl:sameAs  <http://dbpedia.org/resource/Artie_Bernstein> .
+
+<http://de.dbpedia.org/resource/Artie_Bernstein>
+        owl:sameAs  <http://dbpedia.org/resource/Artie_Bernstein> .
+
+<http://dbpedia.org/resource/Bernstein>
+        dbpedia-owl:wikiPageDisambiguates
+                <http://dbpedia.org/resource/Artie_Bernstein> .
+
+<http://wikidata.dbpedia.org/resource/Q712435>
+        owl:sameAs  <http://dbpedia.org/resource/Artie_Bernstein> .

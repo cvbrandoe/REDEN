@@ -1,0 +1,46 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13480261p>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13480261p> ;
+        bnf-onto:FRBNF      13480261 ;
+        skos:editorialNote  "Livret de l'École des chartes 1821-1966, 1967. - . - BN Cat. gén. suppl.. - . -"@fr , "Les enfances Guillaume : chanson de geste du XIIIe siècle / publ. par Patrice Henry [document électronique : reprod. de l'éd. de 1935]. - . - WW, France 1977-1978. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/264553711> ;
+        skos:note           "Prénoms compets : Patrice-Georges-Félix. - Licencié en droit, diplômé d'études supérieures de droit public et d'économie politique, diplômé de l'École libre des sciences politiques. - Archiviste-paléographe (1933). - Président de chambre de la Cour des comptes"@fr ;
+        skos:prefLabel      "Patrice Henry (1913-198.?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13480261p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13480261p#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1913 ;
+        rdagroup2elements:biographicalInformation
+                "Prénoms compets : Patrice-Georges-Félix. - Licencié en droit, diplômé d'études supérieures de droit public et d'économie politique, diplômé de l'École libre des sciences politiques. - Archiviste-paléographe (1933). - Président de chambre de la Cour des comptes" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1913/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1913-02-04" ;
+        bio:death                      "198." ;
+        owl:sameAs                     <http://viaf.org/viaf/264553711> ;
+        foaf:birthday                  "02-04" ;
+        foaf:familyName                "Henry" ;
+        foaf:givenName                 "Patrice" ;
+        foaf:name                      "Patrice Henry" ;
+        foaf:page                      <http://data.bnf.fr/13480261/patrice_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb33366753h#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13480261p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13480261p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13480261p#foaf:Person> .

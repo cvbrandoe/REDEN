@@ -1,0 +1,132 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb38617689n#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38568611t#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39736567j#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1638 ;
+        bnf-onto:lastYear               1692 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur et violoniste. - Anobli vers 1678. - Mort au plus tôt en décembre 1692" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1638/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1692/> ;
+        rdagroup2elements:placeOfBirth  "Florence" ;
+        rdagroup2elements:placeOfDeath  "Pistoia" ;
+        bio:birth                       "1638-07-15" ;
+        bio:death                       "1692-12" ;
+        owl:sameAs                      <http://dbpedia.org/resource/Giovanni_Buonaventura_Viviani> , <http://viaf.org/viaf/56797868> ;
+        foaf:birthday                   "07-15" ;
+        foaf:familyName                 "Viviani" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Giovanni Bonaventura" ;
+        foaf:name                       "Giovanni Bonaventura Viviani" ;
+        foaf:page                       <http://data.bnf.fr/13900898/giovanni_bonaventura_viviani/> .
+
+<http://data.bnf.fr/ark:/12148/cb139207025#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13900898w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Giovanni_Buonaventura_Viviani> , <http://catalogue.bnf.fr/ark:/12148/cb13900898w> ;
+        bnf-onto:FRBNF        13900898 ;
+        isni:identifierValid  "0000000081360892" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081360892> ;
+        skos:editorialNote    "L'arte del violino in Italia [Enregistrement sonore], c.1650-1700 / Angelo Berardi, Pietro Degli Antoni, Giovanni Buonaventura Viviani... [et al.], comp. ; Enrico Gatti, Odile Edouard, vl ; Hendrike ter Brugge, Alain Gervreau, vlc ; Mara Galassi, triple harp ; Guido Morini, clav. et org. Glossa GCD 921206. - . - Grove 6. - . -"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Giovanni_Buonaventura_Viviani> , <http://dbpedia.org/resource/Giovanni_Buonaventura_Viviani> , <http://isni-url.oclc.nl/isni/0000000081360892> , <http://viaf.org/viaf/56797868> ;
+        skos:note             "Compositeur et violoniste. - Anobli vers 1678. - Mort au plus tôt en décembre 1692"@fr ;
+        skos:prefLabel        "Giovanni Bonaventura Viviani (1638-1692?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414649558#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/13900898/giovanni_bonaventura_viviani/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb378734736#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37875024c#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139717640#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb378740484#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13920703h#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb378735813#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39610168r#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37874969k#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb165955082#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43324922k#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139646229#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37874909q#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38463046f#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139974552#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb13900898w#foaf:Person> .

@@ -1,0 +1,71 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb413107337#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435737403#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35223064s#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35643394n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb352917264#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1933 ;
+        rdagroup2elements:biographicalInformation
+                "A été professeur de littérature victorienne et moderne, University of Kent, GB" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/031765998> , <http://viaf.org/viaf/305131090> ;
+        foaf:familyName     "James" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Louis" ;
+        foaf:name           "Louis James" ;
+        foaf:page           <http://data.bnf.fr/12292033/louis_james/> .
+
+<http://data.bnf.fr/ark:/12148/cb37378777r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37555485r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122920333>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb122920333> ;
+        bnf-onto:FRBNF      12292033 ;
+        skos:editorialNote  "Performance and politics in popular drama / ed. by David Bradby, Louis James, Bernard Sharratt, 1980. - . - G. W. M. Reynolds : nineteenth-century fiction, politics, and the press / edited by Anne Humpherys, Louis James, 2008. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/031765998> , <http://viaf.org/viaf/305131090> ;
+        skos:note           "A été professeur de littérature victorienne et moderne, University of Kent, GB"@fr ;
+        skos:prefLabel      "Louis James"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb122920333#foaf:Person> .

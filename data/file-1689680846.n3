@@ -1,0 +1,103 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb37060638x#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37455470j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37060613k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35246791r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35557565m#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37697922q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40087207s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35116603k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11920020w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11920020w> ;
+        bnf-onto:FRBNF        11920020 ;
+        isni:identifierValid  "0000000385643672" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000385643672> ;
+        skos:altLabel         "Nicolas Platon"@fr , "Nicholas Platon"@en , "Nikolaos Platōn"@fr ;
+        skos:editorialNote    "Guide du Musée archéologique d'Héraclion / Stylianos Alexiou ; introd. du professeur N. Platon, 1973. - . - BN Cat. gén. suppl. ; BN Cat. gén. 1960-1969. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/027076172> , <http://isni-url.oclc.nl/isni/0000000385643672> , <http://viaf.org/viaf/241367186> ;
+        skos:note             "Écrit aussi en français, allemand et anglais"@fr , "Archéologue. - Professeur à l'Université Aristote de Thessalonique (en 1973)"@fr ;
+        skos:prefLabel        "Nikolaos Platon"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1909 ;
+        rdagroup2elements:biographicalInformation
+                "Archéologue. - Professeur à l'Université Aristote de Thessalonique (en 1973)" , "Écrit aussi en français, allemand et anglais" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/gre> ;
+        owl:sameAs          <http://viaf.org/viaf/241367186> , <http://www.idref.fr/027076172> ;
+        foaf:familyName     "Platon" ;
+        foaf:givenName      "Nikolaos" ;
+        foaf:name           "Nikolaos Platon" ;
+        foaf:page           <http://data.bnf.fr/11920020/nikolaos_platon/> .
+
+<http://data.bnf.fr/ark:/12148/cb34634106w#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370606127#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb331381014#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37471108r#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37060614x#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11920020w#foaf:Person> .

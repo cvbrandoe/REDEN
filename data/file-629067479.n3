@@ -1,0 +1,72 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb383896594#frbr:Expression>
+        bnfroles:r1210       <http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37791307w#frbr:Expression>
+        bnfroles:r1210       <http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37947140x#frbr:Expression>
+        bnfroles:r1210       <http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13958176m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13958176m> ;
+        bnf-onto:FRBNF        13958176 ;
+        isni:identifierValid  "0000000035064849" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000035064849> ;
+        skos:editorialNote    "Sonate n ° 1 pour violon et piano [Enregistrement sonore] / Béla Bartók, comp.  ; Gabrielle Devries, vl ; Nadine Desouches, p. Pacific LDPC205. - . - Musica et memoria. - http://www.musimem.com/obituaires.html. - 2012-02-08"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/17414321> , <http://isni-url.oclc.nl/isni/0000000035064849> ;
+        skos:note             "Violoniste. - Elève de Marcel Reynal et de Gabriel Bouillon. - A été soliste de l'Orchestre Philharmonique de l'ORTF"@fr ;
+        skos:prefLabel        "Gabrielle Devries (1915-2001)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb379471251#frbr:Expression>
+        bnfroles:r1210       <http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37923618r#frbr:Expression>
+        bnfroles:r1210       <http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13958176m#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1915 ;
+        bnf-onto:lastYear               2001 ;
+        rdagroup2elements:biographicalInformation
+                "Violoniste. - Elève de Marcel Reynal et de Gabriel Bouillon. - A été soliste de l'Orchestre Philharmonique de l'ORTF" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1915/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/2001/> ;
+        rdagroup2elements:placeOfBirth  "Nice" ;
+        rdagroup2elements:placeOfDeath  "Colombes (Hauts de Seine)" ;
+        bio:birth                       "1915-10-19" ;
+        bio:death                       "2001-11-04" ;
+        owl:sameAs                      <http://viaf.org/viaf/17414321> ;
+        foaf:birthday                   "10-19" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k8807479g.thumbnail> ;
+        foaf:familyName                 "Devries" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Gabrielle" ;
+        foaf:name                       "Gabrielle Devries" ;
+        foaf:page                       <http://data.bnf.fr/13958176/gabrielle_devries/> .

@@ -1,0 +1,68 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb36673849z#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1909 ;
+        bnf-onto:lastYear              1997 ;
+        rdagroup2elements:biographicalInformation
+                "Archéologue" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1909/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1997/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1909-07-07" ;
+        bio:death                      "1997-08-13" ;
+        owl:sameAs                     <http://www.idref.fr/034540903> , <http://viaf.org/viaf/108610360> ;
+        foaf:birthday                  "07-07" ;
+        foaf:familyName                "Jennings" ;
+        foaf:givenName                 "Jesse David" ;
+        foaf:name                      "Jesse David Jennings" ;
+        foaf:page                      <http://data.bnf.fr/12528666/jesse_david_jennings/> .
+
+<http://data.bnf.fr/ark:/12148/cb37194287s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366155001#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb352625177#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32628074k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125286667>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb125286667> ;
+        bnf-onto:FRBNF        12528666 ;
+        isni:identifierValid  "0000000114797856" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114797856> ;
+        skos:editorialNote    "Prehistory of North America / Jesse D. Jennings, 1974. - . - Site de Society for American archaeology (SAA). - http://www.saa.org/Publications/saabulletin/15-5/SAA13.html. - 2006-05-18"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/108610360> , <http://isni-url.oclc.nl/isni/0000000114797856> , <http://www.idref.fr/034540903> ;
+        skos:note             "Archéologue"@fr ;
+        skos:prefLabel        "Jesse David Jennings (1909-1997)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb125286667#foaf:Person> .

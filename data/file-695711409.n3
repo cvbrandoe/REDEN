@@ -1,0 +1,74 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42654849b#frbr:Expression>
+        bnfroles:r222        <http://data.bnf.fr/ark:/12148/cb120857080#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb120857080#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120857080#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42617252g#frbr:Expression>
+        bnfroles:r222        <http://data.bnf.fr/ark:/12148/cb120857080#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb120857080#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120857080#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42085721h#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb120857080#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb120857080#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120857080#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42085734v#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb120857080#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb120857080#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120857080#foaf:Person> .
+
+<http://data.bnf.fr/12085708/john_newton/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb120857080#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120857080#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1725 ;
+        bnf-onto:lastYear              1807 ;
+        rdagroup2elements:biographicalInformation
+                "Prédicateur. - Auteur de l'hymne : \" Amazing grace \". - Ancien trafiquant d'esclaves" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1725/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1807/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Religion" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/200/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1725-07-24" ;
+        bio:death                      "1807-12-21" ;
+        owl:sameAs                     <http://viaf.org/viaf/74650916> , <http://dbpedia.org/resource/John_Newton_(1725-1807)> , <http://www.idref.fr/029176107> ;
+        foaf:birthday                  "07-24" ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Newton_j.jpg?width=300> ;
+        foaf:familyName                "Newton" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "John" ;
+        foaf:name                      "John Newton" ;
+        foaf:page                      <http://data.bnf.fr/12085708/john_newton/> .
+
+<http://data.bnf.fr/ark:/12148/cb120857080>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb120857080> , <http://fr.wikipedia.org/wiki/John_Newton_(1725-1807)> ;
+        bnf-onto:FRBNF        12085708 ;
+        isni:identifierValid  "0000000110296077" ;
+        owl:sameAs            <http://isni.org/isni/0000000110296077> ;
+        skos:editorialNote    "Amazing grace : John Newton, slavery and the world's most enduring song / Steve Turner, 2003. - . - The trader, the owner, the slave : parallel lives in the age of slavery / James Walvin, 2007. - . -"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/John_Newton_(1725-1807)> , <http://fr.wikipedia.org/wiki/John_Newton_(1725-1807)> , <http://viaf.org/viaf/74650916> , <http://www.idref.fr/029176107> , <http://isni.org/isni/0000000110296077> ;
+        skos:note             "Prédicateur. - Auteur de l'hymne : \" Amazing grace \". - Ancien trafiquant d'esclaves"@fr ;
+        skos:prefLabel        "John Newton (1725-1807)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120857080#foaf:Person> .

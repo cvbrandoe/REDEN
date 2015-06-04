@@ -1,0 +1,62 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb16163380f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb16163380f> ;
+        bnf-onto:FRBNF        16163380 ;
+        isni:identifierValid  "0000000073441852" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000073441852> ;
+        skos:exactMatch       <http://viaf.org/viaf/103231807> , <http://isni-url.oclc.nl/isni/0000000073441852> , <http://www.idref.fr/160144922> ;
+        skos:note             "Actrice"@fr ;
+        skos:prefLabel        "Nathalie Hugo"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42525455m#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Actrice" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/103231807> , <http://www.idref.fr/160144922> ;
+        foaf:familyName  "Hugo" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Nathalie" ;
+        foaf:name        "Nathalie Hugo" ;
+        foaf:page        <http://data.bnf.fr/16163380/nathalie_hugo/> .
+
+<http://data.bnf.fr/ark:/12148/cb420831968#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42446721m#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421985274#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42092862v#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16163380f#foaf:Person> .

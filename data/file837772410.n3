@@ -1,0 +1,62 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb43603307w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123205195#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123205195#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123205195#foaf:Person> .
+
+<http://data.bnf.fr/12320519/robert_edward_lee/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb123205195#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123205195>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb123205195> , <http://fr.wikipedia.org/wiki/Robert_Lee> ;
+        bnf-onto:FRBNF        12320519 ;
+        isni:identifierValid  "0000000119345832" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000119345832> ;
+        skos:altLabel         "Général Lee (1807-1870)"@fr ;
+        skos:editorialNote    "Les pensées et maximes de Robert E. Lee pour les jeunes générations / Richard G. Williams Jr ; traduit de l'américain par Renaud Joseph, cop. 2013. - . - GDEL. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000119345832> , <http://dbpedia.org/resource/Robert_Lee> , <http://viaf.org/viaf/52983535> , <http://fr.wikipedia.org/wiki/Robert_Lee> ;
+        skos:note             "Général. - Chef des armées sudistes pendant la guerre de Sécession puis directeur du collège de Lexington, Va."@fr ;
+        skos:prefLabel        "Robert Edward Lee (1807-1870)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb123205195#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123205195#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1807 ;
+        bnf-onto:lastYear               1870 ;
+        rdagroup2elements:biographicalInformation
+                "Général. - Chef des armées sudistes pendant la guerre de Sécession puis directeur du collège de Lexington, Va." ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1807/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1870/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Art et science militaires" , "Histoire du reste du monde" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/355/> , <http://dewey.info/class/950/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Stratford (Va.)" ;
+        rdagroup2elements:placeOfDeath  "Lexington (Va.)" ;
+        bio:birth                       "1807-01-19" ;
+        bio:death                       "1870-10-12" ;
+        owl:sameAs                      <http://viaf.org/viaf/52983535> , <http://dbpedia.org/resource/Robert_Lee> ;
+        foaf:birthday                   "01-19" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Robert_Edward_Lee.jpg?width=300> , <http://gallica.bnf.fr/ark:/12148/btv1b530508625.thumbnail> ;
+        foaf:familyName                 "Lee" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Robert Edward" ;
+        foaf:name                       "Robert Edward Lee" ;
+        foaf:page                       <http://data.bnf.fr/12320519/robert_edward_lee/> .

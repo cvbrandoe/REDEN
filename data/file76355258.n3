@@ -1,0 +1,79 @@
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpprop: <http://dbpedia.org/property/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://dbpedia.org/resource/Antoine_de_Saporta>
+        dbpedia-owl:parent  <http://dbpedia.org/resource/Gaston_de_Saporta> ;
+        dbpprop:parents     <http://dbpedia.org/resource/Gaston_de_Saporta> .
+
+<http://es.dbpedia.org/resource/Gaston_de_Saporta>
+        owl:sameAs  <http://dbpedia.org/resource/Gaston_de_Saporta> .
+
+<http://dbpedia.org/resource/Louis_Charles_Joseph_Gaston_de_Saporta,_Comte_de_Saporta>
+        dbpedia-owl:wikiPageRedirects  <http://dbpedia.org/resource/Gaston_de_Saporta> .
+
+<http://de.dbpedia.org/resource/Gaston_de_Saporta>
+        owl:sameAs  <http://dbpedia.org/resource/Gaston_de_Saporta> .
+
+<http://wikidata.dbpedia.org/resource/Q327351>
+        owl:sameAs  <http://dbpedia.org/resource/Gaston_de_Saporta> .
+
+<http://sv.dbpedia.org/resource/Gaston_de_Saporta>
+        owl:sameAs  <http://dbpedia.org/resource/Gaston_de_Saporta> .
+
+<http://dbpedia.org/resource/Gaston_de_Saporta>
+        a                               dbpedia-owl:Agent , foaf:Person , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> , <http://wikidata.dbpedia.org/resource/Q5> , <http://schema.org/Person> , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> , owl:Thing , dbpedia-owl:Person , <http://wikidata.dbpedia.org/resource/Q215627> ;
+        rdfs:comment                    "Gaston de Saporta (1823-1895) was a French aristocrat, palaeobotanist and non-fiction writer."@en , "Marquis de Louis Charles Joseph Gaston Saporta (* 28. Juli 1823 in Saint-Zacharie; † 26. Januar 1895 in Aix-en-Provence) war ein französischer Paläobotaniker. Sein offizielles botanisches Autorenkürzel lautet „Saporta“."@de , "Louis Charles Joseph Gaston de Saporta (Saint-Zacharie (Var), 1823 - Aix-en-Provence, 1895) fue un paleobotánico francés. Mostró la transformación de las especies de plantas durante diferentes épocas."@es , "Louis Charles Joseph Gaston de Saporta, né à Saint-Zacharie (Var) le 28 juillet 1823 et mort à Aix-en-Provence le 26 janvier 1895, est un paléobotaniste français. Il a fait apparaître la transformation des espèces floristiques au cours des différentes ères."@fr ;
+        rdfs:label                      "Gaston de Saporta"@en , "Gaston de Saporta"@fr , "Gaston de Saporta"@de , "Gaston de Saporta"@es ;
+        dbpedia-owl:abstract            "Marquis de Louis Charles Joseph Gaston Saporta (* 28. Juli 1823 in Saint-Zacharie; † 26. Januar 1895 in Aix-en-Provence) war ein französischer Paläobotaniker. Sein offizielles botanisches Autorenkürzel lautet „Saporta“."@de , "Louis Charles Joseph Gaston de Saporta, né à Saint-Zacharie (Var) le 28 juillet 1823 et mort à Aix-en-Provence le 26 janvier 1895, est un paléobotaniste français. Il a fait apparaître la transformation des espèces floristiques au cours des différentes ères."@fr , "Louis Charles Joseph Gaston de Saporta (Saint-Zacharie (Var), 1823 - Aix-en-Provence, 1895) fue un paleobotánico francés. Mostró la transformación de las especies de plantas durante diferentes épocas."@es , "Gaston de Saporta (1823-1895) was a French aristocrat, palaeobotanist and non-fiction writer."@en ;
+        dbpedia-owl:birthDate           "1823-07-28+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:birthPlace          <http://dbpedia.org/resource/Saint-Zacharie> , <http://dbpedia.org/resource/Var_(department)> , <http://dbpedia.org/resource/Provence-Alpes-C%C3%B4te_d'Azur> , <http://dbpedia.org/resource/Ch%C3%A2teau_de_Montvert> ;
+        dbpedia-owl:birthYear           "1823+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:child               <http://dbpedia.org/resource/Antoine_de_Saporta> ;
+        dbpedia-owl:deathDate           "1895-01-26+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:deathPlace          <http://dbpedia.org/resource/Aix-en-Provence> , <http://dbpedia.org/resource/Bouches-du-Rh%C3%B4ne> , <http://dbpedia.org/resource/Provence-Alpes-C%C3%B4te_d'Azur> ;
+        dbpedia-owl:deathYear           "1895+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:nationality         <http://dbpedia.org/resource/France> ;
+        dbpedia-owl:occupation          <http://dbpedia.org/resource/Gaston_de_Saporta__1> ;
+        dbpedia-owl:residence           <http://dbpedia.org/resource/Provence-Alpes-C%C3%B4te_d'Azur> , <http://dbpedia.org/resource/H%C3%B4tel_Boyer_de_Fonscolombe> , <http://dbpedia.org/resource/Bouches-du-Rh%C3%B4ne> , <http://dbpedia.org/resource/Aix-en-Provence> ;
+        dbpedia-owl:stateOfOrigin       <http://dbpedia.org/resource/France> ;
+        dbpedia-owl:thumbnail           <http://commons.wikimedia.org/wiki/Special:FilePath/Gaston_de_saporta_portrait.jpg?width=300> ;
+        dbpedia-owl:wikiPageID          39459706 ;
+        dbpedia-owl:wikiPageRevisionID  586907380 ;
+        dbpprop:birthDate               "1823-07-28+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:birthPlace              "Château de Montvert, Saint-Zacharie, Var, Provence-Alpes-Côte d'Azur, France"@en ;
+        dbpprop:children                <http://dbpedia.org/resource/Antoine_de_Saporta> ;
+        dbpprop:dateOfBirth             "1823-07-28+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:dateOfDeath             "1895-01-26+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathDate               "1895-01-26+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathPlace              "Aix-en-Provence, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, France"@en ;
+        dbpprop:name                    "Saporta, Gaston de"@en , "Gaston de Saporta"@en ;
+        dbpprop:nationality             "French"@en ;
+        dbpprop:occupation              "Botanist"@en ;
+        dbpprop:parents                 "Adolphe Charles François Anne de Saporta"@en , "Irène Boyer de Fonslocolombe de La Mole"@en ;
+        dbpprop:placeOfBirth            "Saint-Zacharie, Var, Provence-Alpes-Côte d'Azur, France"@en ;
+        dbpprop:placeOfDeath            "Aix-en-Provence, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, France"@en ;
+        dbpprop:residence               "Hôtel Boyer de Fonscolombe, 21 rue Gaston de Saporta, Aix-en-Provence, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, France"@en ;
+        dbpprop:shortDescription        "French palaeobotanist"@en ;
+        dbpprop:spouse                  "Émilie de Gabrielli de Gubbio"@en , "Valentine de Forbin la Barben"@en ;
+        dc:description                  "French palaeobotanist" , "French palaeobotanist"@en ;
+        dcterms:subject                 <http://dbpedia.org/resource/Category:People_from_Var_(department)> , <http://dbpedia.org/resource/Category:Provencal_nobility> , <http://dbpedia.org/resource/Category:French_writers> , <http://dbpedia.org/resource/Category:Evolutionary_biologists> , <http://dbpedia.org/resource/Category:French_botanists> , <http://dbpedia.org/resource/Category:1895_deaths> , <http://dbpedia.org/resource/Category:1823_births> , <http://dbpedia.org/resource/Category:People_from_Aix-en-Provence> , <http://dbpedia.org/resource/Category:Members_of_the_French_Academy_of_Sciences> ;
+        owl:sameAs                      <http://sv.dbpedia.org/resource/Gaston_de_Saporta> , <http://es.dbpedia.org/resource/Gaston_de_Saporta> , <http://wikidata.dbpedia.org/resource/Q327351> , <http://fr.dbpedia.org/resource/Gaston_de_Saporta> , <http://rdf.freebase.com/ns/m.0vptqs8> , <http://wikidata.org/entity/Q327351> , <http://de.dbpedia.org/resource/Gaston_de_Saporta> , <http://dbpedia.org/resource/Gaston_de_Saporta> ;
+        prov:wasDerivedFrom             <http://en.wikipedia.org/wiki/Gaston_de_Saporta?oldid=586907380> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Gaston_de_saporta_portrait.jpg> ;
+        foaf:givenName                  "Gaston de"@en ;
+        foaf:isPrimaryTopicOf           <http://en.wikipedia.org/wiki/Gaston_de_Saporta> ;
+        foaf:name                       "Saporta, Gaston de"@en , "Gaston de Saporta"@en ;
+        foaf:surname                    "Saporta"@en .
+
+<http://en.wikipedia.org/wiki/Gaston_de_Saporta>
+        foaf:primaryTopic  <http://dbpedia.org/resource/Gaston_de_Saporta> .
+
+<http://fr.dbpedia.org/resource/Gaston_de_Saporta>
+        owl:sameAs  <http://dbpedia.org/resource/Gaston_de_Saporta> .

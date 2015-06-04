@@ -1,0 +1,80 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb124592613>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb124592613> ;
+        bnf-onto:FRBNF        12459261 ;
+        isni:identifierValid  "000000012119931X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000012119931X> ;
+        skos:editorialNote    "L'Etat / par A. Regnard, 1995 [document électronique : reprod. de l'éd. de 1885]. - . - Vapereau : Regnard (Albert-Adrien). - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/8884847> , <http://isni-url.oclc.nl/isni/000000012119931X> , <http://www.idref.fr/073270237> ;
+        skos:note             "Médecin. - Publiciste. - Administrateur"@fr ;
+        skos:prefLabel        "Albert Regnard (1836-1903)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31187825k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31187823w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311878278#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31187819n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31554646b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1836 ;
+        bnf-onto:lastYear              1903 ;
+        rdagroup2elements:biographicalInformation
+                "Médecin. - Publiciste. - Administrateur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1836/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1903/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1836" ;
+        bio:death                      "1903" ;
+        owl:sameAs                     <http://viaf.org/viaf/8884847> , <http://www.idref.fr/073270237> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k75490h.thumbnail> ;
+        foaf:familyName                "Regnard" ;
+        foaf:givenName                 "Albert" ;
+        foaf:name                      "Albert Regnard" ;
+        foaf:page                      <http://data.bnf.fr/12459261/albert_regnard/> .
+
+<http://data.bnf.fr/ark:/12148/cb311878189#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31187820v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124592613#foaf:Person> .

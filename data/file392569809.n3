@@ -1,0 +1,64 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1919 ;
+        rdagroup2elements:biographicalInformation
+                "Historien. - A été professeur d'histoire de la culture américaine, Program of science, technology, and sociology, Massachusetts institute of technology, Cambridge, Mass." ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/034314245> , <http://viaf.org/viaf/76422234> ;
+        foaf:familyName     "Marx" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Leo" ;
+        foaf:name           "Leo Marx" ;
+        foaf:page           <http://data.bnf.fr/12508185/leo_marx/> .
+
+<http://data.bnf.fr/ark:/12148/cb12508185q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12508185q> ;
+        bnf-onto:FRBNF        12508185 ;
+        isni:identifierValid  "0000000110716211" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000110716211> ;
+        skos:editorialNote    "Does technology drive history? : the dilemma of technological determinism / ed. by Merritt Roe Smith and Leo Marx, 1994. - . - LCNA. - http://authorities.loc.gov. - 2005-10-06"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000110716211> , <http://viaf.org/viaf/76422234> , <http://www.idref.fr/034314245> ;
+        skos:note             "Historien. - A été professeur d'histoire de la culture américaine, Program of science, technology, and sociology, Massachusetts institute of technology, Cambridge, Mass."@fr ;
+        skos:prefLabel        "Leo Marx"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35006870w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374812145#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37365761f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb330925564#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399722239#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12508185q#foaf:Person> .

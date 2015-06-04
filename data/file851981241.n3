@@ -1,0 +1,143 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb357250257#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120600460>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb120600460> ;
+        bnf-onto:FRBNF        12060046 ;
+        isni:identifierValid  "0000000120256853" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000120256853> ;
+        skos:editorialNote    "Lübeck 1945 : Tagebuchauszüge von Arthur Geoffrey Dickens, Überblick von Gerhard Meyer und Erinnerungen von Wilhelm Stier / hrsg. von G. Meyer, 1986. - . - LC Authorities. - http://authorities.loc.gov. - 2010-09-20"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/51711347> , <http://isni-url.oclc.nl/isni/0000000120256853> , <http://www.idref.fr/028850130> ;
+        skos:note             "Historien. - Directeur, Institute of historical research, Londres (1967-1977). - Membre de : British academy"@fr ;
+        skos:prefLabel        "Arthur Geoffrey Dickens (1910-2001)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356529185#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35241900z#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36627121k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1910 ;
+        bnf-onto:lastYear               2001 ;
+        rdagroup2elements:biographicalInformation
+                "Historien. - Directeur, Institute of historical research, Londres (1967-1977). - Membre de : British academy" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1910/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/2001/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Hull, GB" ;
+        rdagroup2elements:placeOfDeath  "Londres" ;
+        bio:birth                       "1910-07-06" ;
+        bio:death                       "2001-07-31" ;
+        owl:sameAs                      <http://viaf.org/viaf/51711347> , <http://www.idref.fr/028850130> ;
+        foaf:birthday                   "07-06" ;
+        foaf:familyName                 "Dickens" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Arthur Geoffrey" ;
+        foaf:name                       "Arthur Geoffrey Dickens" ;
+        foaf:page                       <http://data.bnf.fr/12060046/arthur_geoffrey_dickens/> .
+
+<http://data.bnf.fr/ark:/12148/cb36681290g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35652917t#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34811448v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35652919h#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb343036820#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35262004h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35303305v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32982317w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353862634#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb342570736#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb371120006#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32952415v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349220607#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35652916g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32982316j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120600460#foaf:Person> .

@@ -1,0 +1,66 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Professeur à l'UFR des pays anglophones à l'Université Michel de Montaigne-Bordeaux III (en 1991)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/028599268> , <http://viaf.org/viaf/71408419> ;
+        foaf:familyName  "Béranger" ;
+        foaf:givenName   "Élisabeth" ;
+        foaf:name        "Élisabeth Béranger" ;
+        foaf:page        <http://data.bnf.fr/12040255/elisabeth_beranger/> .
+
+<http://data.bnf.fr/ark:/12148/cb35735356j#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120402553>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb120402553> ;
+        bnf-onto:FRBNF        12040255 ;
+        isni:identifierValid  "0000000032042644" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000032042644> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000032042644> , <http://viaf.org/viaf/71408419> , <http://www.idref.fr/028599268> ;
+        skos:note             "Professeur à l'UFR des pays anglophones à l'Université Michel de Montaigne-Bordeaux III (en 1991)"@fr ;
+        skos:prefLabel        "Élisabeth Béranger"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37372819d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34842740s#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35477315r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361923147#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35591245j#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120402553#foaf:Person> .

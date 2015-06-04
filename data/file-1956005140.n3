@@ -1,0 +1,45 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38259474p#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb140908196#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb140908196#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140908196#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39477440s#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb140908196#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb140908196#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140908196#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb140908196#foaf:Person>
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1941/> ;
+        bio:birth                      "1941-11-22" ;
+        owl:sameAs                     <http://viaf.org/viaf/6594827> ;
+        foaf:birthday                  "11-22" .
+
+<http://data.bnf.fr/ark:/12148/cb38386212n#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb140908196#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb140908196#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140908196#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb140908196>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb140908196> ;
+        bnf-onto:FRBNF        14090819 ;
+        isni:identifierValid  "0000000063837319" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000063837319> ;
+        skos:editorialNote    "A Chorus Line [Spectacle] / mise en scène de Michael Bennett ; d'après la pièce de Nicholas Dante...-Paris : Théâtre du Châtelet, 1987. - . - Viaf. - http://viaf.org/viaf/6594827/#Dante,_Nicholas. - 2011/12/03"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/6594827> , <http://isni-url.oclc.nl/isni/0000000063837319> ;
+        skos:note             "Auteur dramatique, acteur"@fr ;
+        skos:prefLabel        "Nicholas Dante (1941?-1991)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb140908196#foaf:Person> .

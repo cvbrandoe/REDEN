@@ -1,0 +1,81 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb414160270#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39473788n#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394737879#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34838661q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb352272738#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb377108886#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399639071#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1921 ;
+        rdagroup2elements:biographicalInformation
+                "Poète et romancier antillais" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/028590767> , <http://viaf.org/viaf/34474227> ;
+        foaf:familyName     "Desportes" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Georges" ;
+        foaf:name           "Georges Desportes" ;
+        foaf:page           <http://data.bnf.fr/12039584/georges_desportes/> .
+
+<http://data.bnf.fr/ark:/12148/cb39473514j#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12039584g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12039584g> ;
+        bnf-onto:FRBNF        12039584 ;
+        isni:identifierValid  "0000000066431576" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000066431576> ;
+        skos:editorialNote    "Semailles de pollen / Georges Desportes, 1985. - . - Litt. des Caraïbes / Priska Degras, Bernard Magnier, [ca 1987]. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000066431576> , <http://viaf.org/viaf/34474227> , <http://www.idref.fr/028590767> ;
+        skos:note             "Poète et romancier antillais"@fr ;
+        skos:prefLabel        "Georges Desportes"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37535946t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12039584g#foaf:Person> .

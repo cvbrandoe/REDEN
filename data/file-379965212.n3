@@ -1,0 +1,77 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39285087q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38976618n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Spécialiste de l'histoire de l'art du 19e et du 20e siècle. - Conservateur, Indiana university art museum, Bloomington, Ind. (en 1997)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://www.idref.fr/035543752> , <http://viaf.org/viaf/14924014> ;
+        foaf:familyName  "Foster" ;
+        foaf:givenName   "Kathleen A." ;
+        foaf:name        "Kathleen A. Foster" ;
+        foaf:page        <http://data.bnf.fr/13484036/kathleen_a__foster/> .
+
+<http://data.bnf.fr/ark:/12148/cb13484036w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13484036w> ;
+        bnf-onto:FRBNF        13484036 ;
+        isni:identifierValid  "0000000114383004" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114383004> ;
+        skos:editorialNote    "Thomas Eakins rediscovered : Charles Bregler's Thomas Eakins collection at the Pennsylvania Academy of the fine arts / Kathleen A. Foster ; with contributions by Mark Bockrath, Catherine Kimock, Cheryl Leibold...[et al.], 1997. - . - Internet://www.loc.gov, 1998-06-18. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/14924014> , <http://www.idref.fr/035543752> , <http://isni-url.oclc.nl/isni/0000000114383004> ;
+        skos:note             "Spécialiste de l'histoire de l'art du 19e et du 20e siècle. - Conservateur, Indiana university art museum, Bloomington, Ind. (en 1997)"@fr ;
+        skos:prefLabel        "Kathleen A. Foster"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399439633#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37528395w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42671736d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41329129q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388121197#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42757596x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13484036w#foaf:Person> .

@@ -1,0 +1,49 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb406661950#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15376945q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15376945q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15376945q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15376945q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15376945q> ;
+        bnf-onto:FRBNF        15376945 ;
+        isni:identifierValid  "0000000002108067" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000002108067> ;
+        skos:altLabel         "Simon de Vries (cartographe, 16..-16..?)"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/49528098> , <http://isni-url.oclc.nl/isni/0000000002108067> , <http://www.idref.fr/167123629> ;
+        skos:note             "Cartographe"@fr ;
+        skos:prefLabel        "Simon De Vries (cartographe, 16..-16..?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15376945q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15376945q#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Cartographe" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ne#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/dut> ;
+        bio:birth                      "16.." ;
+        bio:death                      "16.." ;
+        owl:sameAs                     <http://viaf.org/viaf/49528098> , <http://www.idref.fr/167123629> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b8494883t.thumbnail> ;
+        foaf:familyName                "De Vries" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Simon" ;
+        foaf:name                      "Simon De Vries" ;
+        foaf:page                      <http://data.bnf.fr/15376945/simon_de_vries/> .

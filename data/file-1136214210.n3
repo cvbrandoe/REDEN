@@ -1,0 +1,32 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12300561j>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12300561j> ;
+        bnf-onto:FRBNF      12300561 ;
+        skos:altLabel       "Bourbon-Condé (famille de)"@fr , "Condé (maison de)"@fr , "Maison de Condé"@fr , "Famille de Condé"@fr ;
+        skos:editorialNote  "DBF. - . - GDEL. - . - Laval, 1992-08. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/031871488> ;
+        skos:prefLabel      "Condé (famille de)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12300561j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12300561j#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/031871488> ;
+        foaf:depiction   <http://gallica.bnf.fr/ark:/12148/bpt6k204987p.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k209822s.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k205722c.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k209882v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k204989f.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k2049869.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k204985x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k54570616.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k204984j.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k2049882.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k205630n.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k5457007d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k2049835.thumbnail> ;
+        foaf:familyName  "Condé" ;
+        foaf:page        <http://data.bnf.fr/12300561/conde/> .
+
+<http://data.bnf.fr/12300561/conde/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12300561j#foaf:Person> .

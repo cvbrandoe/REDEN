@@ -1,0 +1,43 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb435107884#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12552770x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12552770x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12552770x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12552770x#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Traduit de l'italien en français. Spécialiste de la finance (en 2012)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/168057476> , <http://viaf.org/viaf/51804792> ;
+        foaf:familyName  "Duhamel" ;
+        foaf:givenName   "Florence" ;
+        foaf:name        "Florence Duhamel" ;
+        foaf:page        <http://data.bnf.fr/12552770/florence_duhamel/> .
+
+<http://data.bnf.fr/ark:/12148/cb12552770x>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12552770x> ;
+        bnf-onto:FRBNF   12552770 ;
+        skos:exactMatch  <http://viaf.org/viaf/51804792> , <http://www.idref.fr/168057476> ;
+        skos:note        "Traduit de l'italien en français. Spécialiste de la finance (en 2012)"@fr ;
+        skos:prefLabel   "Florence Duhamel"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12552770x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35856942b#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12552770x#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12552770x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12552770x#foaf:Person> .

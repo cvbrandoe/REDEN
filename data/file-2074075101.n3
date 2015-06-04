@@ -1,0 +1,101 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38490186v#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38546039n#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1931 ;
+        rdagroup2elements:biographicalInformation
+                "Réalisateur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        owl:sameAs          <http://www.idref.fr/090944518> , <http://viaf.org/viaf/223442503> ;
+        foaf:familyName     "Roux" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jean-Paul" ;
+        foaf:name           "Jean-Paul Roux" ;
+        foaf:page           <http://data.bnf.fr/13962559/jean-paul_roux/> .
+
+<http://data.bnf.fr/ark:/12148/cb38489071h#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41439799x#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384912809#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38434603f#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38545699x#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38490188j#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384882009#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40898537c#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13962559w>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb13962559w> ;
+        bnf-onto:FRBNF   13962559 ;
+        skos:exactMatch  <http://www.idref.fr/090944518> , <http://viaf.org/viaf/223442503> ;
+        skos:note        "Réalisateur"@fr ;
+        skos:prefLabel   "Jean-Paul Roux"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384901876#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> .
+
+<http://data.bnf.fr/13962559/jean-paul_roux/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420267445#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38486260p#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13962559w#foaf:Person> .

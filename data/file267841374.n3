@@ -1,0 +1,30 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14657400k#foaf:Person>
+        a                foaf:Person ;
+        owl:sameAs       <http://viaf.org/viaf/37177639> ;
+        foaf:familyName  "Rodrigue" ;
+        foaf:givenName   "Mario" ;
+        foaf:name        "Mario Rodrigue" ;
+        foaf:page        <http://data.bnf.fr/14657400/mario_rodrigue/> .
+
+<http://data.bnf.fr/ark:/12148/cb39498089p#frbr:Expression>
+        bnfroles:r2300       <http://data.bnf.fr/ark:/12148/cb14657400k#foaf:Person> ;
+        marcrel:rce          <http://data.bnf.fr/ark:/12148/cb14657400k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14657400k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14657400k>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14657400k> ;
+        bnf-onto:FRBNF   14657400 ;
+        skos:exactMatch  <http://viaf.org/viaf/37177639> ;
+        skos:prefLabel   "Mario Rodrigue (ingénieur du son)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14657400k#foaf:Person> .

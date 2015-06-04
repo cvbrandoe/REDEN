@@ -1,0 +1,67 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1940 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en linguistique (Lille III, 1983). - Professeur de linguistique anglaise à l'Université de Caen (en 1985)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/030959292> , <http://viaf.org/viaf/94228167> ;
+        foaf:familyName     "Garnier" ;
+        foaf:givenName      "Georges" ;
+        foaf:name           "Georges Garnier" ;
+        foaf:page           <http://data.bnf.fr/12227129/georges_garnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb349053146#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12227129w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12227129w> ;
+        bnf-onto:FRBNF        12227129 ;
+        isni:identifierValid  "0000000116886991" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000116886991> ;
+        skos:exactMatch       <http://www.idref.fr/030959292> , <http://isni-url.oclc.nl/isni/0000000116886991> , <http://viaf.org/viaf/94228167> ;
+        skos:note             "Docteur en linguistique (Lille III, 1983). - Professeur de linguistique anglaise à l'Université de Caen (en 1985)"@fr ;
+        skos:prefLabel        "Georges Garnier"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37594016d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb348349727#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361930824#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38929497x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39248513f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227129w#foaf:Person> .

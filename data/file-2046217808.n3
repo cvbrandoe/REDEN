@@ -1,0 +1,35 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14704893x#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Régisseur de théâtre" ;
+        owl:sameAs       <http://viaf.org/viaf/39640164> ;
+        foaf:familyName  "Wolff" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Serge" ;
+        foaf:name        "Serge Wolff" ;
+        foaf:page        <http://data.bnf.fr/14704893/serge_wolff/> .
+
+<http://data.bnf.fr/ark:/12148/cb14704893x>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14704893x> ;
+        bnf-onto:FRBNF   14704893 ;
+        skos:exactMatch  <http://viaf.org/viaf/39640164> ;
+        skos:note        "Régisseur de théâtre"@fr ;
+        skos:prefLabel   "Serge Wolff (régisseur de théâtre)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14704893x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39497412z#frbr:Expression>
+        bnfroles:r2260       <http://data.bnf.fr/ark:/12148/cb14704893x#foaf:Person> ;
+        marcrel:prd          <http://data.bnf.fr/ark:/12148/cb14704893x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14704893x#foaf:Person> .

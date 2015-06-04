@@ -1,0 +1,77 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb37623706h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1961 ;
+        rdagroup2elements:biographicalInformation
+                "Maître de conférences en théologie pratique à la Faculté de théologie protestante de Strasbourg (en 1999)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/263700805> ;
+        foaf:familyName     "Parmentier" ;
+        foaf:givenName      "Élisabeth" ;
+        foaf:name           "Élisabeth Parmentier" ;
+        foaf:page           <http://data.bnf.fr/13742230/elisabeth_parmentier/> .
+
+<http://data.bnf.fr/ark:/12148/cb414569844#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13742230k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13742230k> ;
+        bnf-onto:FRBNF        13742230 ;
+        isni:identifierValid  "0000000122825298" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000122825298> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000122825298> , <http://viaf.org/viaf/263700805> ;
+        skos:note             "Maître de conférences en théologie pratique à la Faculté de théologie protestante de Strasbourg (en 1999)"@fr ;
+        skos:prefLabel        "Élisabeth Parmentier"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421886752#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437978972#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42320836w#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421563487#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399542581#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412946086#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13742230k#foaf:Person> .

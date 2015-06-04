@@ -1,0 +1,63 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Médiéviste, spécialiste de la littérature française du Moyen âge. - Professeur de littérature française, Department of Romance languages and literatures, Boston college, Chestnut Hill, Mass. (1983-...). - Ph. D. (Yale university, New Haven, Conn.)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://viaf.org/viaf/49301805> , <http://www.idref.fr/03264132X> ;
+        foaf:familyName  "Bruckner" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Matilda Tomaryn" ;
+        foaf:name        "Matilda Tomaryn Bruckner" ;
+        foaf:page        <http://data.bnf.fr/12363278/matilda_tomaryn_bruckner/> .
+
+<http://data.bnf.fr/ark:/12148/cb37476980w#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42214539p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12363278d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12363278d> ;
+        bnf-onto:FRBNF        12363278 ;
+        isni:identifierValid  "0000000108573266" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108573266> ;
+        skos:editorialNote    "Shaping romance / Mathilda Tomaryn Bruckner, 1993. - . - Shaping courtliness in Medieval France : essays in honour of Matilda Tomaryn Bruckner / edited by Daniel E. O'Sullivan and Laurie Shepard, 2013. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/03264132X> , <http://isni-url.oclc.nl/isni/0000000108573266> , <http://viaf.org/viaf/49301805> ;
+        skos:note             "Médiéviste, spécialiste de la littérature française du Moyen âge. - Professeur de littérature française, Department of Romance languages and literatures, Boston college, Chestnut Hill, Mass. (1983-...). - Ph. D. (Yale university, New Haven, Conn.)"@fr ;
+        skos:prefLabel        "Matilda Tomaryn Bruckner"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356254402#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37003756m#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35732918x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12363278d#foaf:Person> .

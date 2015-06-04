@@ -1,0 +1,100 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1924 ;
+        bnf-onto:lastYear               1998 ;
+        rdagroup2elements:biographicalInformation
+                "Directeur de société et homme politique. - Sénateur de la Côte d'Or. - Maire de Nuits-Saint-Georges, Côte-d'Or (1969-1995). - Prénoms complets : Bernard, Joseph, Louis" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1924/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1998/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Lyon" ;
+        bio:birth                       "1924-06-30" ;
+        bio:death                       "1998-02-24" ;
+        owl:sameAs                      <http://viaf.org/viaf/100276783> , <http://www.idref.fr/029489490> ;
+        foaf:birthday                   "06-30" ;
+        foaf:familyName                 "Barbier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Bernard" ;
+        foaf:name                       "Bernard Barbier" ;
+        foaf:page                       <http://data.bnf.fr/12110604/bernard_barbier/> .
+
+<http://data.bnf.fr/12110604/bernard_barbier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357034212#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36193263d#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12110604v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12110604v> ;
+        bnf-onto:FRBNF        12110604 ;
+        isni:identifierValid  "0000000081696011" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081696011> ;
+        skos:editorialNote    "1992, les conséquences pour l'économie française du marché intérieur européen : rapport et actes du colloque organisé les 19 et 20 octobre 1988 / par la Commission des affaires économiques et du plan du Sénat ; [sous la dir. de] Jean François-Poncet [et] Bernard Barbier, 1989. - . - WW, France 1997-1998. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000081696011> , <http://viaf.org/viaf/100276783> , <http://www.idref.fr/029489490> ;
+        skos:note             "Directeur de société et homme politique. - Sénateur de la Côte d'Or. - Maire de Nuits-Saint-Georges, Côte-d'Or (1969-1995). - Prénoms complets : Bernard, Joseph, Louis"@fr ;
+        skos:prefLabel        "Bernard Barbier (1924-1998)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34999295k#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357801784#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb358512248#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35001869g#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37021658z#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35764280h#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35732055n#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35780991j#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110604v#foaf:Person> .

@@ -1,0 +1,135 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb434519997#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31880613j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43451997j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43452001f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb434519966#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14503454b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14503454b> ;
+        bnf-onto:FRBNF        14503454 ;
+        isni:identifierValid  "0000000084029804" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000084029804> ;
+        skos:editorialNote    "Der vergessene Klassiker : Leben und Werk Karl Bruckners / [hrsg. von] Sabine Fuchs und Peter Schneck; mit einem Geleitwort von Marianne Gruber, cop. 2002. - . - Bibliothèque nationale, Autriche. - http://www.onb.ac.at. - 2003-10-29"@fr , "BN Cat. gén. suppl.. - . - BN Cat. gén. 1960-1969. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/97705708> , <http://isni-url.oclc.nl/isni/0000000084029804> ;
+        skos:note             "Auteur de livres pour enfants"@fr ;
+        skos:prefLabel        "Karl Bruckner (1906-1982)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1906 ;
+        bnf-onto:lastYear               1982 ;
+        rdagroup2elements:biographicalInformation
+                "Auteur de livres pour enfants" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/au#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1906/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1982/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Vienne" ;
+        bio:birth                       "1906-01-09" ;
+        bio:death                       "1982-10-25" ;
+        owl:sameAs                      <http://viaf.org/viaf/97705708> ;
+        foaf:birthday                   "01-09" ;
+        foaf:familyName                 "Bruckner" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Karl" ;
+        foaf:name                       "Karl Bruckner" ;
+        foaf:page                       <http://data.bnf.fr/14503454/karl_bruckner/> .
+
+<http://data.bnf.fr/ark:/12148/cb43431591z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43451998w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43452002s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43431590m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43433895n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/14503454/karl_bruckner/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43431672z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb434520003#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32934646r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb434316828#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43431684z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31880430k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43438494d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14503454b#foaf:Person> .

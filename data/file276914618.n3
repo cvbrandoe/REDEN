@@ -1,0 +1,58 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb36118250m#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb16598544n#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb16598544n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16598544n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30569313t#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb16598544n#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb16598544n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16598544n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16598544n>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16598544n> ;
+        bnf-onto:FRBNF      16598544 ;
+        skos:altLabel       "Veuve de Carles David (1637-1719)"@fr ;
+        skos:editorialNote  "Billioud : date de fin d'activité 1704. - . - Rép. 17 s.. - . - Goldsmith, STC French books : occurrence 1694. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/249799288> , <http://www.idref.fr/167377213> ;
+        skos:note           "Travaille seule ou en association avec ses fils Antoine I (de 1691 à 1700 env.) et Joseph David (de 1700 à 1718 env.), auxquels elle confie la direction de son atelier et de sa boutique"@fr , "Nom patronymique : Louise Castagnier (ou : Chastagnier). - Imprimeur-libraire ; (seul) imprimeur du Roi (, du pays et de la ville [d'Aix]). - Fille du consul de Marseille Jean Castagnier. En mai 1659, épouse l'imprimeur-libraire d'Aix-en-Provence Charles David. Lui succède à son décès en nov. 1691. Mentionnée lors de l'enquête de 1700-1701. En activité jusqu'en 1718, elle décède en 1719"@fr ;
+        skos:prefLabel      "Veuve de Charles David (1637-1719)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16598544n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb393453558#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb16598544n#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb16598544n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16598544n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16598544n#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1637 ;
+        bnf-onto:lastYear              1719 ;
+        rdagroup2elements:biographicalInformation
+                "Travaille seule ou en association avec ses fils Antoine I (de 1691 à 1700 env.) et Joseph David (de 1700 à 1718 env.), auxquels elle confie la direction de son atelier et de sa boutique" , "Nom patronymique : Louise Castagnier (ou : Chastagnier). - Imprimeur-libraire ; (seul) imprimeur du Roi (, du pays et de la ville [d'Aix]). - Fille du consul de Marseille Jean Castagnier. En mai 1659, épouse l'imprimeur-libraire d'Aix-en-Provence Charles David. Lui succède à son décès en nov. 1691. Mentionnée lors de l'enquête de 1700-1701. En activité jusqu'en 1718, elle décède en 1719" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1637/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1719/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1691-1718" ;
+        bio:birth                      "1637" ;
+        bio:death                      "1719" ;
+        owl:sameAs                     <http://viaf.org/viaf/249799288> , <http://www.idref.fr/167377213> ;
+        foaf:familyName                "David" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Veuve de Charles" ;
+        foaf:name                      "Veuve de Charles David" ;
+        foaf:page                      <http://data.bnf.fr/16598544/veuve_de_charles_david/> .

@@ -1,0 +1,61 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb35995017d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12449396t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12449396t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12449396t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12449396t>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12449396t> ;
+        bnf-onto:FRBNF      12449396 ;
+        skos:altLabel       "Delacroix (éditeur du \"Journal de la noblesse\", 17..-18..?)"@fr , "De Lacroix (éditeur du \"Journal de la noblesse\", 17..-18..?)"@fr ;
+        skos:editorialNote  "Hommage à ma patrie : considérations sur la noblesse de France / par M. de La Croix, 1790. - . - BN Cat. gén. : Lacroix (De), père, généalogiste de l'ordre de Malte. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/268088464> ;
+        skos:note           "Éditeur du \"Journal de la noblesse\" (1790-1791), du \"Journal universel des cours, états et républiques de l'Europe\" (1792), du \"Scrutateur universel\" (1793)"@fr ;
+        skos:prefLabel      "De La Croix (éditeur du \"Journal de la noblesse\", 17..-18..?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12449396t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37234642v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12449396t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12449396t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12449396t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12449396t#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Éditeur du \"Journal de la noblesse\" (1790-1791), du \"Journal universel des cours, états et républiques de l'Europe\" (1792), du \"Scrutateur universel\" (1793)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "17.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/268088464> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k51819v.thumbnail> ;
+        foaf:familyName                "La Croix" ;
+        foaf:givenName                 "De" ;
+        foaf:name                      "De La Croix" ;
+        foaf:page                      <http://data.bnf.fr/12449396/de_la_croix/> .
+
+<http://data.bnf.fr/ark:/12148/cb359950162#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12449396t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12449396t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12449396t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37243167s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12449396t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12449396t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12449396t#foaf:Person> .

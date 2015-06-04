@@ -1,0 +1,46 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14190453f#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1959 ;
+        rdagroup2elements:biographicalInformation
+                "Artiste lyrique (soprano)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        owl:sameAs          <http://viaf.org/viaf/23311760> ;
+        foaf:familyName     "Jennings" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Diane" ;
+        foaf:name           "Diane Jennings" ;
+        foaf:page           <http://data.bnf.fr/14190453/diane_jennings/> .
+
+<http://data.bnf.fr/ark:/12148/cb14190453f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14190453f> ;
+        bnf-onto:FRBNF        14190453 ;
+        isni:identifierValid  "0000000055166121" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000055166121> ;
+        skos:exactMatch       <http://viaf.org/viaf/23311760> , <http://isni-url.oclc.nl/isni/0000000055166121> ;
+        skos:note             "Artiste lyrique (soprano)"@fr ;
+        skos:prefLabel        "Diane Jennings"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14190453f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38363386b#frbr:Expression>
+        bnfroles:r1130       <http://data.bnf.fr/ark:/12148/cb14190453f#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14190453f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14190453f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38174119r#frbr:Expression>
+        bnfroles:r1130       <http://data.bnf.fr/ark:/12148/cb14190453f#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14190453f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14190453f#foaf:Person> .

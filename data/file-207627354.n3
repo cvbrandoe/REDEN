@@ -1,0 +1,67 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb384843714#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39097504x#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39097528x#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42497548c#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38295868q#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14173617f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14173617f> ;
+        bnf-onto:FRBNF        14173617 ;
+        isni:identifierValid  "0000000001423858" ;
+        owl:sameAs            <http://isni.org/isni/0000000001423858> ;
+        skos:exactMatch       <http://isni.org/isni/0000000001423858> , <http://viaf.org/viaf/74061444> , <http://www.idref.fr/179247859> ;
+        skos:note             "Comédien"@fr ;
+        skos:prefLabel        "Jean-François Duhamel"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1944 ;
+        rdagroup2elements:biographicalInformation
+                "Comédien" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:placeOfBirth  "Nantes" ;
+        owl:sameAs                      <http://www.idref.fr/179247859> , <http://viaf.org/viaf/74061444> ;
+        foaf:familyName                 "Duhamel" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jean-François" ;
+        foaf:name                       "Jean-François Duhamel" ;
+        foaf:page                       <http://data.bnf.fr/14173617/jean-francois_duhamel/> .
+
+<http://data.bnf.fr/ark:/12148/cb38418626n#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14173617f#foaf:Person> .

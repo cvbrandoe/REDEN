@@ -1,0 +1,60 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1952 ;
+        rdagroup2elements:biographicalInformation
+                "Titulaire d'un doctorat en droit (Harvard university, Cambridge, Mass., 1979). - Avocat, spécialiste des questions de propriété intellectuelle. - Auteur de romans policiers" , "Écrit également sous le pseudonyme : Baron, Michael" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        foaf:familyName     "Kahn" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Michael Andrew" .
+
+<http://data.bnf.fr/ark:/12148/cb399876961#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36706666f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb358052811#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357851650#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12999865t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12999865t> ;
+        bnf-onto:FRBNF        12999865 ;
+        isni:identifierValid  "0000000114598160" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114598160> ;
+        skos:altLabel         "Michael Kahn"@fr , "Michael A. Kahn"@fr ;
+        skos:editorialNote    "Justice denoted : the legal thriller in American, British and continental courtroom literature / compiled and ed. by Terry White ; foreword by Michael A. Kahn, 2003. - . - LC Authorities. - http://authorities.loc.gov. - 2011-07-17"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000114598160> , <http://viaf.org/viaf/12439590> , <http://www.idref.fr/124036791> ;
+        skos:note             "Écrit également sous le pseudonyme : Baron, Michael"@fr , "Titulaire d'un doctorat en droit (Harvard university, Cambridge, Mass., 1979). - Avocat, spécialiste des questions de propriété intellectuelle. - Auteur de romans policiers"@fr ;
+        skos:prefLabel        "Michael Andrew Kahn"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb358601181#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12999865t#foaf:Person> .

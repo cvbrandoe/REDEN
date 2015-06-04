@@ -1,0 +1,58 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb39921483f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39921462g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1976 ;
+        rdagroup2elements:biographicalInformation
+                "Auteur et dessinateur de bandes dessinées" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/61800311> ;
+        foaf:familyName     "Rod" ;
+        foaf:gender         "male" ;
+        foaf:page           <http://data.bnf.fr/14613064/rod/> .
+
+<http://data.bnf.fr/ark:/12148/cb41058508q#frbr:Expression>
+        bnfroles:r314        <http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14613064x>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14613064x> ;
+        bnf-onto:FRBNF   14613064 ;
+        skos:exactMatch  <http://viaf.org/viaf/61800311> ;
+        skos:note        "Auteur et dessinateur de bandes dessinées"@fr ;
+        skos:prefLabel   "Rod"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41243941k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39921477h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14613064x#foaf:Person> .

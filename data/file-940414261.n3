@@ -1,0 +1,63 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb315258126#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13007059x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13007059x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13007059x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30595260q#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13007059x#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13007059x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13007059x#foaf:Person> .
+
+<http://data.bnf.fr/13007059/victor_valmont/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13007059x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13007059x>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13007059x> ;
+        bnf-onto:FRBNF      13007059 ;
+        skos:editorialNote  "La jeunesse de Lord Beaconsfield / par Victor Valmont, 1878. - . - L'espion prussien : roman anglais / par V. Valmont ; trad. par M. J. Dubrisay, 1995 [document électronique : reprod. de l'éd. de 1872]. - . - Amour et sacrifice / par lady Herbert ; traduit de l'anglais par Me V. Valmont, 1869. - . -"@fr , "Lorenz. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/163943126> ;
+        skos:note           "A aussi écrit en anglais"@fr , "Romancier"@fr ;
+        skos:prefLabel      "Victor Valmont"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13007059x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31525811v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13007059x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13007059x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13007059x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13007059x#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "A aussi écrit en anglais" , "Romancier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/163943126> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k747051.thumbnail> ;
+        foaf:familyName                "Valmont" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Victor" ;
+        foaf:name                      "Victor Valmont" ;
+        foaf:page                      <http://data.bnf.fr/13007059/victor_valmont/> .

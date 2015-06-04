@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40928929k#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12379386z#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12379386z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12379386z#foaf:Person> .
+
+<http://data.bnf.fr/12379386/eileen_marie_julien/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12379386z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35677942n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12379386z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12379386z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12379386z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40136192g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12379386z#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12379386z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12379386z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12379386z#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1949 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de littérature comparée, Indiana university, Bloomington (en 2009)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/113646203> , <http://www.idref.fr/032842740> ;
+        foaf:familyName     "Julien" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Eileen Marie" ;
+        foaf:name           "Eileen Marie Julien" ;
+        foaf:page           <http://data.bnf.fr/12379386/eileen_marie_julien/> .
+
+<http://data.bnf.fr/ark:/12148/cb42006677f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12379386z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12379386z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12379386z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12379386z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12379386z> ;
+        bnf-onto:FRBNF        12379386 ;
+        isni:identifierValid  "0000000084109193" ;
+        owl:sameAs            <http://isni.org/isni/0000000084109193> ;
+        skos:altLabel         "Eileen Julien"@fr ;
+        skos:editorialNote    "African novels and the question of orality / Eileen Julien, 1992. - . - LC authorities. - http://authorities.loc.gov. - 2010-10-11"@fr ;
+        skos:exactMatch       <http://www.idref.fr/032842740> , <http://viaf.org/viaf/113646203> , <http://isni.org/isni/0000000084109193> ;
+        skos:note             "Professeur de littérature comparée, Indiana university, Bloomington (en 2009)"@fr ;
+        skos:prefLabel        "Eileen Marie Julien"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12379386z#foaf:Person> .

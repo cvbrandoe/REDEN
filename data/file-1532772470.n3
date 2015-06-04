@@ -1,0 +1,78 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb349285455#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43815076x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34737449w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34736079g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38904784s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41429893x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34750671b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1947 ;
+        rdagroup2elements:biographicalInformation
+                "Franchiseur puis consultant en franchise et partenariat. - Chargé d'enseignement à l'Université des sciences politiques et juridiques de Strasbourg, vice-président de la Fédération française de la franchise (en 1987), professeur au Centre d'études internationales de la franchise (CETIF-Strasbourg III), premier vice-président de l'Institut des réseaux européens de franchise et de partenariat (IREF) (en 1994)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/31998244> , <http://www.idref.fr/026944197> ;
+        foaf:familyName     "Kahn" ;
+        foaf:givenName      "Michel" ;
+        foaf:name           "Michel Kahn" ;
+        foaf:page           <http://data.bnf.fr/11909320/michel_kahn/> .
+
+<http://data.bnf.fr/ark:/12148/cb11909320g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11909320g> ;
+        bnf-onto:FRBNF        11909320 ;
+        isni:identifierValid  "0000000078293975" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000078293975> ;
+        skos:editorialNote    "Guide des rencontres réussies / Michel Kahn, 1982. - . - La Franchise : guide pratique : être franchiseur, être franchisé / M. Kahn, 1987. - . - Franchise et partenariat / Michel Kahn, 1994. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000078293975> , <http://viaf.org/viaf/31998244> , <http://www.idref.fr/026944197> ;
+        skos:note             "Franchiseur puis consultant en franchise et partenariat. - Chargé d'enseignement à l'Université des sciences politiques et juridiques de Strasbourg, vice-président de la Fédération française de la franchise (en 1987), professeur au Centre d'études internationales de la franchise (CETIF-Strasbourg III), premier vice-président de l'Institut des réseaux européens de franchise et de partenariat (IREF) (en 1994)"@fr ;
+        skos:prefLabel        "Michel Kahn"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356805155#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909320g#foaf:Person> .

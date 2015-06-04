@@ -1,0 +1,43 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12396019p#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1742 ;
+        bnf-onto:lastYear              1795 ;
+        rdagroup2elements:biographicalInformation
+                "Avocat au Parlement de Paris" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1742/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1795/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1742-06-21" ;
+        bio:death                      "1795-11-10" ;
+        owl:sameAs                     <http://www.idref.fr/03305486X> ;
+        foaf:birthday                  "06-21" ;
+        foaf:familyName                "Le Maître" ;
+        foaf:givenName                 "Pierre-Jacques" ;
+        foaf:name                      "Pierre-Jacques Le Maître" ;
+        foaf:page                      <http://data.bnf.fr/12396019/pierre-jacques_le_maitre/> .
+
+<http://data.bnf.fr/ark:/12148/cb12396019p>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12396019p> ;
+        bnf-onto:FRBNF   12396019 ;
+        skos:altLabel    "Pierre-Jacques Lemaître (1742-1795)"@fr ;
+        skos:exactMatch  <http://www.idref.fr/03305486X> ;
+        skos:note        "Avocat au Parlement de Paris"@fr ;
+        skos:prefLabel   "Pierre-Jacques Le Maître (1742-1795)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12396019p#foaf:Person> .
+
+<http://data.bnf.fr/12396019/pierre-jacques_le_maitre/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12396019p#foaf:Person> .

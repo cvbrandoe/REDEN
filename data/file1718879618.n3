@@ -1,0 +1,35 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14974445r#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1476 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1401-1500/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1476/> ;
+        bio:birth                      "14.." ;
+        bio:death                      "1476" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b69050183.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69020578.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6902058p.thumbnail> ;
+        foaf:familyName                "Du Plessis" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Du Plessis" ;
+        foaf:page                      <http://data.bnf.fr/14974445/jean_du_plessis/> .
+
+<http://data.bnf.fr/ark:/12148/cb14974445r>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb14974445r> ;
+        bnf-onto:FRBNF  14974445 ;
+        skos:altLabel   "Jean du Plessis seigneur de Parnay (14..-1476)"@fr ;
+        skos:prefLabel  "Jean Du Plessis (Sieur de Parnay, 14..-1476)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb14974445r#foaf:Person> .
+
+<http://data.bnf.fr/14974445/jean_du_plessis/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14974445r#foaf:Person> .

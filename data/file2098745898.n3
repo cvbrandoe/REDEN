@@ -1,0 +1,56 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb15040865g#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1952 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/27348248> ;
+        foaf:familyName     "Galilée" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Denis" ;
+        foaf:name           "Denis Galilée" ;
+        foaf:page           <http://data.bnf.fr/15040865/denis_galilee/> .
+
+<http://data.bnf.fr/ark:/12148/cb422952670#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15040865g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15040865g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15040865g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43603919j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15040865g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15040865g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15040865g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40071513w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15040865g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15040865g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15040865g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15040865g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15040865g> ;
+        bnf-onto:FRBNF        15040865 ;
+        isni:identifierValid  "0000000004952042" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000004952042> ;
+        skos:editorialNote    "Tartes salées et quiches / Denis Galilée, DL 2005. - . - LP 57 le lycée de la mort / Denis Galilée, DL 2010. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000004952042> , <http://viaf.org/viaf/27348248> ;
+        skos:prefLabel        "Denis Galilée"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15040865g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437829508#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15040865g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15040865g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15040865g#foaf:Person> .

@@ -1,0 +1,58 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb35452707m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1947 ;
+        rdagroup2elements:biographicalInformation
+                "Technicien supérieur à la COGEMA, Marcoule (en 1994). - Président de Parlaren à Bollène où il a créé un centre de documentation provençale (en 1994)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs          <http://www.idref.fr/030926114> , <http://viaf.org/viaf/56661379> ;
+        foaf:familyName     "Courbet" ;
+        foaf:givenName      "Jean-Marc" ;
+        foaf:name           "Jean-Marc Courbet" ;
+        foaf:page           <http://data.bnf.fr/12224444/jean-marc_courbet/> .
+
+<http://data.bnf.fr/ark:/12148/cb42234670h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12224444w>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12224444w> ;
+        bnf-onto:FRBNF      12224444 ;
+        skos:editorialNote  "Proujèt Frederi : un raconte dóu coumissàri Sant-Aloi / Jean-Marc Courbet ; dessin de Gézou, 1991. - . - Dictionnaire des auteurs de langue d'oc : de 1800 à nos jours / Jean Fourié, 1994. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/030926114> , <http://viaf.org/viaf/56661379> ;
+        skos:note           "Technicien supérieur à la COGEMA, Marcoule (en 1994). - Président de Parlaren à Bollène où il a créé un centre de documentation provençale (en 1994)"@fr ;
+        skos:prefLabel      "Jean-Marc Courbet"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42798357j#frbr:Expression>
+        bnfroles:r540        <http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person> ;
+        marcrel:aft          <http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400542408#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37188654p#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12224444w#foaf:Person> .

@@ -1,0 +1,90 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38962414j#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1961 ;
+        bnf-onto:lastYear              2000 ;
+        rdagroup2elements:biographicalInformation
+                "Maître de conférences en histoire contemporaien à l'Université Paris X-Nanterre" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1961/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1961" ;
+        bio:death                      "2000-05-30" ;
+        owl:sameAs                     <http://viaf.org/viaf/46835599> , <http://www.idref.fr/03247332X> ;
+        foaf:familyName                "Duhamel" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Éric" ;
+        foaf:name                      "Éric Duhamel" ;
+        foaf:page                      <http://data.bnf.fr/12349669/eric_duhamel/> .
+
+<http://data.bnf.fr/ark:/12148/cb40011357q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370207507#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37046415r#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12349669k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12349669k> ;
+        bnf-onto:FRBNF        12349669 ;
+        isni:identifierValid  "0000000108959580" ;
+        owl:sameAs            <http://isni.org/isni/0000000108959580> ;
+        skos:editorialNote    "La reconstruction du Parti radical, 1944-1948 / sous la direction de Gilles Le Béguec et Éric Duhamel, 1993. - . - L'UDSR ou la genèse de François Mitterrand / Éric Duhamel, DL 2007. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000108959580> , <http://viaf.org/viaf/46835599> , <http://www.idref.fr/03247332X> ;
+        skos:note             "Maître de conférences en histoire contemporaien à l'Université Paris X-Nanterre"@fr ;
+        skos:prefLabel        "Éric Duhamel (1961-2000)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37206422j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb410097461#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb369998678#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37682377x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35598905x#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349669k#foaf:Person> .

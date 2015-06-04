@@ -1,0 +1,74 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb41493171p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38936191h#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36661633b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36208826c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39984009w#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42458809q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1951 ;
+        rdagroup2elements:biographicalInformation
+                "Directeur et professeur, English department, Indiana university, Bloomington (en 2005)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/98293038> , <http://www.idref.fr/050138510> ;
+        foaf:familyName     "Watt" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Stephen" ;
+        foaf:name           "Stephen Watt" ;
+        foaf:page           <http://data.bnf.fr/12929754/stephen_watt/> .
+
+<http://data.bnf.fr/ark:/12148/cb12929754f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12929754f> ;
+        bnf-onto:FRBNF        12929754 ;
+        isni:identifierValid  "0000000114784342" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114784342> ;
+        skos:editorialNote    "Joyce, O'Casey and the Irish popular theater / Stephen Watt, 1991. - . - LCNA. - http://authorities.loc.gov. - 2006-08-02"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000114784342> , <http://www.idref.fr/050138510> , <http://viaf.org/viaf/98293038> ;
+        skos:note             "Directeur et professeur, English department, Indiana university, Bloomington (en 2005)"@fr ;
+        skos:prefLabel        "Stephen Watt"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb369752499#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12929754f#foaf:Person> .

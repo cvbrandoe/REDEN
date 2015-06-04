@@ -1,0 +1,90 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35380524m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12027928d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12027928d> ;
+        bnf-onto:FRBNF        12027928 ;
+        isni:identifierValid  "000000012138681X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000012138681X> ;
+        skos:exactMatch       <http://viaf.org/viaf/71405143> , <http://www.idref.fr/02844549X> , <http://isni-url.oclc.nl/isni/000000012138681X> ;
+        skos:note             "Théologien luthérien. - Professeur de théologie systématique à l'Université de Vienne"@fr ;
+        skos:prefLabel        "Falk Wagner (1939-1998)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> .
+
+<http://data.bnf.fr/12027928/falk_wagner/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34983666f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36627178j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35382397r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35087176x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35296104c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1939 ;
+        bnf-onto:lastYear               1998 ;
+        rdagroup2elements:biographicalInformation
+                "Théologien luthérien. - Professeur de théologie systématique à l'Université de Vienne" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/au#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1939/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1998/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Vienne" ;
+        rdagroup2elements:placeOfDeath  "Vienne" ;
+        bio:birth                       "1939-02-25" ;
+        bio:death                       "1998-11-18" ;
+        owl:sameAs                      <http://www.idref.fr/02844549X> , <http://viaf.org/viaf/71405143> ;
+        foaf:birthday                   "02-25" ;
+        foaf:familyName                 "Wagner" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Falk" ;
+        foaf:name                       "Falk Wagner" ;
+        foaf:page                       <http://data.bnf.fr/12027928/falk_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb348044789#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37223183m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12027928d#foaf:Person> .

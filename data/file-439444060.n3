@@ -1,0 +1,41 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb10887471h>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb10887471h> ;
+        bnf-onto:FRBNF  10887471 ;
+        skos:note       "Industriel. - S'établit en France à Paris (1879-). - Membre de la Chambre de commerce belge de Paris (1890-)"@fr ;
+        skos:prefLabel  "Emile Bruckner (1858-1930)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb10887471h#foaf:Person> .
+
+<http://data.bnf.fr/10887471/emile_bruckner/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb10887471h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10887471h#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1858 ;
+        bnf-onto:lastYear               1930 ;
+        rdagroup2elements:biographicalInformation
+                "Industriel. - S'établit en France à Paris (1879-). - Membre de la Chambre de commerce belge de Paris (1890-)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/be#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1858/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1930/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Liège (Belgique)" ;
+        rdagroup2elements:placeOfDeath  "Enghien (Val-d'Oise)" ;
+        bio:birth                       "1858" ;
+        bio:death                       "1930-10-30" ;
+        foaf:familyName                 "Bruckner" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Emile" ;
+        foaf:name                       "Emile Bruckner" ;
+        foaf:page                       <http://data.bnf.fr/10887471/emile_bruckner/> .

@@ -1,0 +1,81 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb41881129w#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41881405q#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41881462j#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16668731d>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16668731d> ;
+        bnf-onto:FRBNF      16668731 ;
+        skos:altLabel       "Richard Duhamel (libraire, 15..-15..)"@fr , "Richardus Hamelius (libraire, 15..-15..)"@la ;
+        skos:editorialNote  "Renouard. - . - Index aureliensis. - . - Rép. 16 s.. - . -"@fr , "La Caille : occurrence 1536. - . - Lottin : idem. - . - Renouard, Documents. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/298739797> ;
+        skos:note           "En activité dès mai 1532 et jusqu'en sept. 1548 au moins. Contraint en août 1537 de quitter sa maison à l'enseigne du Roi David qui menace ruine, il la réintègre après reconstruction. En avril 1546, loue les caves de cette même maison pour y installer une taverne et y vendre du vin. Renonce le 5 sept. 1548 aux baux de ses maisons (aux enseignes du Roi David et du Paon) et semble avoir alors cessé d'exercer"@fr ;
+        skos:prefLabel      "Richard Du Hamel (libraire, 15..-15..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41882428m#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41881532w#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "En activité dès mai 1532 et jusqu'en sept. 1548 au moins. Contraint en août 1537 de quitter sa maison à l'enseigne du Roi David qui menace ruine, il la réintègre après reconstruction. En avril 1546, loue les caves de cette même maison pour y installer une taverne et y vendre du vin. Renonce le 5 sept. 1548 aux baux de ses maisons (aux enseignes du Roi David et du Paon) et semble avoir alors cessé d'exercer" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1501-1600/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1501-1600/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1532-1548" ;
+        bio:birth                      "15.." ;
+        bio:death                      "15.." ;
+        owl:sameAs                     <http://viaf.org/viaf/298739797> ;
+        foaf:familyName                "Du Hamel" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Richard" ;
+        foaf:name                      "Richard Du Hamel" ;
+        foaf:page                      <http://data.bnf.fr/16668731/richard_du_hamel/> .
+
+<http://data.bnf.fr/ark:/12148/cb41881538z#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb418813252#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb418800924#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16668731d#foaf:Person> .

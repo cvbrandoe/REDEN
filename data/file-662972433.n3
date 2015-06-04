@@ -1,0 +1,40 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb16684832g>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb16684832g> ;
+        bnf-onto:FRBNF   16684832 ;
+        skos:exactMatch  <http://viaf.org/viaf/302811805> ;
+        skos:note        "Agrégée de lettres classiques (2004), docteure en littérature française du XXe siècle (Paris, 2010). - Chargée de cours à l'université de Versailles Saint-Quentin (en 2011), maître de conférences à l’université Aoyama Gakuin, Tokyo (en 2012)"@fr ;
+        skos:prefLabel   "Aude Leblond"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb16684832g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42757650w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16684832g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16684832g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16684832g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16684832g#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1982 ;
+        rdagroup2elements:biographicalInformation
+                "Agrégée de lettres classiques (2004), docteure en littérature française du XXe siècle (Paris, 2010). - Chargée de cours à l'université de Versailles Saint-Quentin (en 2011), maître de conférences à l’université Aoyama Gakuin, Tokyo (en 2012)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/302811805> ;
+        foaf:familyName     "Leblond" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Aude" ;
+        foaf:name           "Aude Leblond" ;
+        foaf:page           <http://data.bnf.fr/16684832/aude_leblond/> .

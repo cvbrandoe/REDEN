@@ -1,0 +1,42 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb11897546x>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11897546x> ;
+        bnf-onto:FRBNF        11897546 ;
+        isni:identifierValid  "0000000108157692" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108157692> ;
+        skos:exactMatch       <http://viaf.org/viaf/100275721> , <http://isni-url.oclc.nl/isni/0000000108157692> , <http://www.idref.fr/026797631> ;
+        skos:note             "Pseudonyme de Denis-Constant Martin, directeur de recherches au Centre d'études et de recherches internationales, Fondation nationale des sciences politiques (en 1991). - Ecrit aussi sous le pseudonyme \"Gene Dauch\""@fr ;
+        skos:prefLabel        "Denis Constant"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11897546x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11897546x#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1947 ;
+        rdagroup2elements:biographicalInformation
+                "Pseudonyme de Denis-Constant Martin, directeur de recherches au Centre d'études et de recherches internationales, Fondation nationale des sciences politiques (en 1991). - Ecrit aussi sous le pseudonyme \"Gene Dauch\"" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/100275721> , <http://www.idref.fr/026797631> ;
+        foaf:familyName     "Constant" ;
+        foaf:givenName      "Denis" ;
+        foaf:name           "Denis Constant" ;
+        foaf:page           <http://data.bnf.fr/11897546/denis_constant/> .
+
+<http://data.bnf.fr/ark:/12148/cb346725666#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897546x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897546x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897546x#foaf:Person> .

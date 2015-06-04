@@ -1,0 +1,75 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1959 ;
+        rdagroup2elements:biographicalInformation
+                "Orthophoniste, spécialiste des tout-petits en milieu familial et hospitalier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/56849203> , <http://www.idref.fr/079491189> ;
+        foaf:familyName     "Barbier" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Isabelle" ;
+        foaf:name           "Isabelle Barbier" ;
+        foaf:page           <http://data.bnf.fr/14544452/isabelle_barbier/> .
+
+<http://data.bnf.fr/ark:/12148/cb400082390#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40034110n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14544452q>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14544452q> ;
+        bnf-onto:FRBNF   14544452 ;
+        skos:exactMatch  <http://www.idref.fr/079491189> , <http://viaf.org/viaf/56849203> ;
+        skos:note        "Orthophoniste, spécialiste des tout-petits en milieu familial et hospitalier"@fr ;
+        skos:prefLabel   "Isabelle Barbier"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39138130j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39137357w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb391385310#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39138527r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39196831k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40094611m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14544452q#foaf:Person> .

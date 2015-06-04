@@ -1,0 +1,52 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb36157143n#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12315716p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12315716p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12315716p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42030108d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12315716p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12315716p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12315716p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366641717#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12315716p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12315716p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12315716p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12315716p#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Moine de l'Abbaye cistercienne Notre-Dame de Cîteaux" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/03205386X> , <http://viaf.org/viaf/66534520> ;
+        foaf:familyName  "Regnard" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Joël" ;
+        foaf:name        "Joël Regnard" ;
+        foaf:page        <http://data.bnf.fr/12315716/joel_regnard/> .
+
+<http://data.bnf.fr/ark:/12148/cb12315716p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12315716p> ;
+        bnf-onto:FRBNF        12315716 ;
+        isni:identifierValid  "0000000115570215" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000115570215> ;
+        skos:exactMatch       <http://www.idref.fr/03205386X> , <http://viaf.org/viaf/66534520> , <http://isni-url.oclc.nl/isni/0000000115570215> ;
+        skos:note             "Moine de l'Abbaye cistercienne Notre-Dame de Cîteaux"@fr ;
+        skos:prefLabel        "Joël Regnard"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12315716p#foaf:Person> .

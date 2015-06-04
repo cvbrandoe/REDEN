@@ -1,0 +1,87 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb349998283#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389434193#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354953599#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347151731#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1931 ;
+        rdagroup2elements:biographicalInformation
+                "Prénoms complets : John Roger Haughton" , "Professeur de dessin architectural à l'université de Louisville, Kentucky (en 1988)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/at#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/13508928> , <http://www.idref.fr/026934639> ;
+        foaf:familyName     "James" ;
+        foaf:givenName      "John" ;
+        foaf:name           "John James" ;
+        foaf:page           <http://data.bnf.fr/11908545/john_james/> .
+
+<http://data.bnf.fr/ark:/12148/cb35480944h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34715174c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34592813p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119085454>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb119085454> ;
+        bnf-onto:FRBNF        11908545 ;
+        isni:identifierValid  "0000000114680092" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114680092> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000114680092> , <http://viaf.org/viaf/13508928> , <http://www.idref.fr/026934639> ;
+        skos:note             "Professeur de dessin architectural à l'université de Louisville, Kentucky (en 1988)"@fr , "Prénoms complets : John Roger Haughton"@fr ;
+        skos:prefLabel        "John James"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34295840s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40987876t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421896383#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119085454#foaf:Person> .

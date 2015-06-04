@@ -1,0 +1,67 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/12521925/huey_p__newton/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12521925s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb352089971#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12521925s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12521925s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12521925s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12521925s#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1942 ;
+        bnf-onto:lastYear               1989 ;
+        rdagroup2elements:biographicalInformation
+                "Cofondateur et chef du \"Black Panther party\", parti noir extrémiste américain fondé en 1966" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1942/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1989/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Monroe, Calif." ;
+        rdagroup2elements:placeOfDeath  "Oakland, Calif." ;
+        bio:birth                       "1942-02-17" ;
+        bio:death                       "1989-08-22" ;
+        owl:sameAs                      <http://dbpedia.org/resource/Huey_P._Newton> , <http://www.idref.fr/034465871> , <http://viaf.org/viaf/92279351> ;
+        foaf:birthday                   "02-17" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Huey_Newton_HS_Yearbook.jpeg?width=300> ;
+        foaf:familyName                 "Newton" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Huey P." ;
+        foaf:name                       "Huey P. Newton" ;
+        foaf:page                       <http://data.bnf.fr/12521925/huey_p__newton/> .
+
+<http://data.bnf.fr/ark:/12148/cb12521925s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Huey_P._Newton> , <http://catalogue.bnf.fr/ark:/12148/cb12521925s> ;
+        bnf-onto:FRBNF        12521925 ;
+        isni:identifierValid  "000000010924806X" ;
+        owl:sameAs            <http://isni.org/isni/000000010924806X> ;
+        skos:editorialNote    "Insights and poems / Huey P. Newton, Ericka Huggins, 1975. - . - The shadow of the panther : Huey Newton and the price of black power in America / Hugh Pearson, 1994. - . -"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/Huey_P._Newton> , <http://fr.wikipedia.org/wiki/Huey_P._Newton> , <http://isni.org/isni/000000010924806X> , <http://viaf.org/viaf/92279351> , <http://www.idref.fr/034465871> ;
+        skos:note             "Cofondateur et chef du \"Black Panther party\", parti noir extrémiste américain fondé en 1966"@fr ;
+        skos:prefLabel        "Huey P. Newton (1942-1989)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12521925s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35302931t#frbr:Expression>
+        bnfroles:r540        <http://data.bnf.fr/ark:/12148/cb12521925s#foaf:Person> ;
+        marcrel:aft          <http://data.bnf.fr/ark:/12148/cb12521925s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12521925s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35340232k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12521925s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12521925s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12521925s#foaf:Person> .

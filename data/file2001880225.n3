@@ -1,0 +1,52 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40387502d#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149726345#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149726345#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149726345#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149726345>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb149726345> , <http://fr.wikipedia.org/wiki/Auguste_Delacroix> ;
+        bnf-onto:FRBNF        14972634 ;
+        isni:identifierValid  "0000000116254193" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000116254193> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000116254193> , <http://viaf.org/viaf/39650618> , <http://fr.wikipedia.org/wiki/Auguste_Delacroix> , <http://dbpedia.org/resource/Auguste_Delacroix> ;
+        skos:prefLabel        "Auguste Delacroix (1809-1868)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb149726345#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149726345#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1809 ;
+        bnf-onto:lastYear               1868 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1809/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1868/> ;
+        rdagroup2elements:placeOfBirth  "Boulogne-sur-Mer (Pas-de-Calais, France)" ;
+        rdagroup2elements:placeOfDeath  "Boulogne-sur-Mer (Pas-de-Calais, France)" ;
+        bio:birth                       "1809" ;
+        bio:death                       "1868" ;
+        owl:sameAs                      <http://viaf.org/viaf/39650618> , <http://dbpedia.org/resource/Auguste_Delacroix> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Auguste_delacroix.jpg?width=300> , <http://gallica.bnf.fr/ark:/12148/btv1b84375602.thumbnail> ;
+        foaf:familyName                 "Delacroix" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Auguste" ;
+        foaf:name                       "Auguste Delacroix" ;
+        foaf:page                       <http://data.bnf.fr/14972634/auguste_delacroix/> .
+
+<http://data.bnf.fr/ark:/12148/cb414916362#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149726345#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149726345#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149726345#foaf:Person> .

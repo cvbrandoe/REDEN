@@ -1,0 +1,56 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb137730886>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb137730886> ;
+        bnf-onto:FRBNF      13773088 ;
+        skos:editorialNote  "Lepreux, Nord : confusion avec la première épouse de Jean-Baptiste-Joseph Henry. - . - Danchin. - . - Houdoy. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/42022933> ;
+        skos:note           "Nom patronymique : Marie-Josèphe Cense. - Imprimeur-libraire ; imprimeur de MM. les magistrats ; de MM. les grands baillis des États. - Épouse Jean-Baptiste-Joseph Henry avant 1768 (naissance de son fils Esprit-Juste Henry) et lui succède en 1784. Décédée en déc. 1787, une publication au moins paraît encore sous son nom en 1788"@fr ;
+        skos:prefLabel      "Veuve de Jean-Baptiste-Joseph Henry (1742?-1787)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb137730886#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb377029204#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb137730886#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb137730886#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137730886#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb137730886#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1742 ;
+        bnf-onto:lastYear              1787 ;
+        rdagroup2elements:biographicalInformation
+                "Nom patronymique : Marie-Josèphe Cense. - Imprimeur-libraire ; imprimeur de MM. les magistrats ; de MM. les grands baillis des États. - Épouse Jean-Baptiste-Joseph Henry avant 1768 (naissance de son fils Esprit-Juste Henry) et lui succède en 1784. Décédée en déc. 1787, une publication au moins paraît encore sous son nom en 1788" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1742/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1787/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1784-1788" ;
+        bio:birth                      "1742" ;
+        bio:death                      "1787-12-04" ;
+        owl:sameAs                     <http://viaf.org/viaf/42022933> ;
+        foaf:familyName                "Henry" ;
+        foaf:givenName                 "Veuve de Jean-Baptiste-Joseph" ;
+        foaf:name                      "Veuve de Jean-Baptiste-Joseph Henry" ;
+        foaf:page                      <http://data.bnf.fr/13773088/veuve_de_jean-baptiste-joseph_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb424466905#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb137730886#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb137730886#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137730886#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42344230j#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb137730886#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb137730886#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137730886#foaf:Person> .

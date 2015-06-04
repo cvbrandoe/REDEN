@@ -1,0 +1,74 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12305845b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12305845b> ;
+        bnf-onto:FRBNF        12305845 ;
+        isni:identifierValid  "000000011021844X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000011021844X> ;
+        skos:editorialNote    "Argonautiques. Tome III, Chant IV / Apollonios de Rhodes ; texte trad. par Émile Delage, 1981. - . - WW France, 1969-1970. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/17289205> , <http://www.idref.fr/031934404> , <http://isni-url.oclc.nl/isni/000000011021844X> ;
+        skos:note             "Traduit du grec ancien en français"@fr , "Docteur ès lettres (1930). - Recteur de l'Université de Clermont-Ferrand (en 1944)"@fr ;
+        skos:prefLabel        "Émile Delage (1890-197.)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1890 ;
+        rdagroup2elements:biographicalInformation
+                "Traduit du grec ancien en français" , "Docteur ès lettres (1930). - Recteur de l'Université de Clermont-Ferrand (en 1944)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1890/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1890-08-23" ;
+        bio:death                      "197." ;
+        owl:sameAs                     <http://www.idref.fr/031934404> , <http://viaf.org/viaf/17289205> ;
+        foaf:birthday                  "08-23" ;
+        foaf:familyName                "Delage" ;
+        foaf:givenName                 "Émile" ;
+        foaf:name                      "Émile Delage" ;
+        foaf:page                      <http://data.bnf.fr/12305845/emile_delage/> .
+
+<http://data.bnf.fr/ark:/12148/cb346570282#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34571109v#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37381652n#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34657029d#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37527158w#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35583283c#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12305845b#foaf:Person> .

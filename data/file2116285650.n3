@@ -1,0 +1,132 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb366679866#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1957 ;
+        rdagroup2elements:biographicalInformation
+                "Photographe au Service départemental de l'inventaire du Maine-et-Loire (depuis 1982)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/030130646> , <http://viaf.org/viaf/41879481> ;
+        foaf:familyName     "Rousseau" ;
+        foaf:givenName      "Bruno" ;
+        foaf:name           "Bruno Rousseau" ;
+        foaf:page           <http://data.bnf.fr/12160847/bruno_rousseau/> .
+
+<http://data.bnf.fr/ark:/12148/cb37071856v#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43781107p#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39097301b#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39987300b#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43781106b#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb355845289#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35585619v#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12160847q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12160847q> ;
+        bnf-onto:FRBNF        12160847 ;
+        isni:identifierValid  "0000000028929728" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000028929728> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000028929728> , <http://viaf.org/viaf/41879481> , <http://www.idref.fr/030130646> ;
+        skos:note             "Photographe au Service départemental de l'inventaire du Maine-et-Loire (depuis 1982)"@fr ;
+        skos:prefLabel        "Bruno Rousseau"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37098929b#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411443023#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35585618h#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437810976#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37098930j#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35466739d#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37071859w#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437559851#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37182803w#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437811081#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35092809q#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12160847q#foaf:Person> .

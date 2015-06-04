@@ -1,0 +1,55 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb128421681#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1902 ;
+        bnf-onto:lastYear               1944 ;
+        rdagroup2elements:biographicalInformation
+                "Romancier et auteur dramatique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1902/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Mulhouse" ;
+        rdagroup2elements:placeOfDeath  "Auschwitz (Pologne)" ;
+        bio:birth                       "1902-04-22" ;
+        bio:death                       "1944" ;
+        owl:sameAs                      <http://viaf.org/viaf/5059276> ;
+        foaf:birthday                   "04-22" ;
+        foaf:familyName                 "Marx" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Albert" ;
+        foaf:name                       "Albert Marx" ;
+        foaf:page                       <http://data.bnf.fr/12842168/albert_marx/> .
+
+<http://data.bnf.fr/ark:/12148/cb41665599c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb128421681#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb128421681#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb128421681#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32426304d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb128421681#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb128421681#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb128421681#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb128421681>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb128421681> ;
+        bnf-onto:FRBNF      12842168 ;
+        skos:editorialNote  "Mémorial de la Shoah. - http://www.memorialdelashoah.org/. - 2011-04-21 BN Cat. gén. suppl.. - . -"@fr , "Les Créneaux d'Ilion, roman / Albert Marx, 1932. - . - Anthologie des écrivains morts à la guerre (1939-1945) / publ. par l'Association des écrivains combattants, 1960. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/5059276> ;
+        skos:note           "Romancier et auteur dramatique"@fr ;
+        skos:prefLabel      "Albert Marx (1902-1944)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb128421681#foaf:Person> .

@@ -1,0 +1,81 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb349659848#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35864307w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37190464q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb358676361#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40130480v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12061985m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12061985m> ;
+        bnf-onto:FRBNF        12061985 ;
+        isni:identifierValid  "0000000108609396" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108609396> ;
+        skos:editorialNote    "Introduction aux techniques de traitement d'images / par André Marion, 1987. - . - Figaro, 2009-02-21/22 (faire-part de décès). - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/163820759> , <http://viaf.org/viaf/32575> , <http://www.idref.fr/028874900> , <http://isni-url.oclc.nl/isni/0000000108609396> ;
+        skos:note             "Docteur en physique nucléaire. - Ingénieur au CNRS, responsable du CDSI, Centre de dépouillement et de synthèse des images, Orsay"@fr ;
+        skos:prefLabel        "André Marion (1942-2009)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1942 ;
+        bnf-onto:lastYear              2009 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en physique nucléaire. - Ingénieur au CNRS, responsable du CDSI, Centre de dépouillement et de synthèse des images, Orsay" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1942/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2009/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1942-07-14" ;
+        bio:death                      "2009-02-06" ;
+        owl:sameAs                     <http://www.idref.fr/163820759> , <http://viaf.org/viaf/32575> , <http://www.idref.fr/028874900> ;
+        foaf:birthday                  "07-14" ;
+        foaf:familyName                "Marion" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "André" ;
+        foaf:name                      "André Marion" ;
+        foaf:page                      <http://data.bnf.fr/12061985/andre_marion/> .
+
+<http://data.bnf.fr/ark:/12148/cb371840918#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36185248s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12061985m#foaf:Person> .

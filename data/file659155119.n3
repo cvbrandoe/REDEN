@@ -1,0 +1,71 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb33025722n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37357457n#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb330257219#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37357220r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12283199b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12283199b> ;
+        bnf-onto:FRBNF        12283199 ;
+        isni:identifierValid  "0000000110813724" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000110813724> ;
+        skos:editorialNote    "Méthode de la descente / par Jean Giraud, 1965. - . - Correspondance de la presse, 1994-08-25. - . -"@fr , "Monde, 1994-09-15. - . - Monde, 2007-03-30. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/108796270> , <http://www.idref.fr/075526603> , <http://isni-url.oclc.nl/isni/0000000110813724> ;
+        skos:note             "Mathématicien. - Professeur à l'Université de Paris-Sud et à l'École normale supérieure de Saint-Cloud (1969-1989). - Directeur de la recherche et des études doctorales (1993). - Directeur de l'École normale supérieur de Lyon. - Président de la section française de la Commission internationale pour l'enseignement des mathématiques (1976-1980)"@fr ;
+        skos:prefLabel        "Jean Giraud (1936-2007)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37376892f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12283199b#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1936 ;
+        bnf-onto:lastYear              2007 ;
+        rdagroup2elements:biographicalInformation
+                "Mathématicien. - Professeur à l'Université de Paris-Sud et à l'École normale supérieure de Saint-Cloud (1969-1989). - Directeur de la recherche et des études doctorales (1993). - Directeur de l'École normale supérieur de Lyon. - Président de la section française de la Commission internationale pour l'enseignement des mathématiques (1976-1980)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1936/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/2007/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1936-02-02" ;
+        bio:death                      "2007-03-27" ;
+        owl:sameAs                     <http://www.idref.fr/075526603> , <http://viaf.org/viaf/108796270> ;
+        foaf:birthday                  "02-02" ;
+        foaf:familyName                "Giraud" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Giraud" ;
+        foaf:page                      <http://data.bnf.fr/12283199/jean_giraud/> .

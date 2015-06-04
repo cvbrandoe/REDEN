@@ -1,0 +1,103 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/12361796/houston_stewart_chamberlain/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41942105g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1855 ;
+        bnf-onto:lastYear               1927 ;
+        rdagroup2elements:biographicalInformation
+                "Homme de lettres, philosophe et musicographe, allemand d'origine anglaise. - Elevé en France, il part ensuite pour l'Allemagne et se fixe à Bayreuth en 1908. - Propagandiste des doctrines pangermanistes, sa philosophie a influencé le national-socialisme. - A épousé en 1908 Eva von Bülow, fille de Richard et de Cosima Wagner" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1855/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1927/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Musique" , "Philosophie" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/780/> , <http://dewey.info/class/100/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Southsea (GB)" ;
+        rdagroup2elements:placeOfDeath  "Bayreuth (Allemagne)" ;
+        bio:birth                       "1855-09-09" ;
+        bio:death                       "1927-01-09" ;
+        owl:sameAs                      <http://www.idref.fr/032623240> ;
+        foaf:birthday                   "09-09" ;
+        foaf:familyName                 "Chamberlain" ;
+        foaf:givenName                  "Houston Stewart" ;
+        foaf:name                       "Houston Stewart Chamberlain" ;
+        foaf:page                       <http://data.bnf.fr/12361796/houston_stewart_chamberlain/> .
+
+<http://data.bnf.fr/ark:/12148/cb123617967>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb123617967> ;
+        bnf-onto:FRBNF        12361796 ;
+        isni:identifierValid  "0000000110571825" ;
+        skos:editorialNote    "Brockhaus, 19 Aufl.. - . - Oxford German Lit.. - . - GDEL. - . -"@fr , "La genèse du XIXeme siècle / Houston Stewart Chamberlain ; éd. française par Robert Godet, 1913. - . - Richard Wagner / Houston Stewart Chamberlain, DL 2006. - . -"@fr , "Honegger. - . - LCNA (CD OCLC), 1993-09. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/032623240> ;
+        skos:note             "Homme de lettres, philosophe et musicographe, allemand d'origine anglaise. - Elevé en France, il part ensuite pour l'Allemagne et se fixe à Bayreuth en 1908. - Propagandiste des doctrines pangermanistes, sa philosophie a influencé le national-socialisme. - A épousé en 1908 Eva von Bülow, fille de Richard et de Cosima Wagner"@fr ;
+        skos:prefLabel        "Houston Stewart Chamberlain (1855-1927)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351599049#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37362013x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35393630r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353463867#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb348171710#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34796890f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372459455#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40977729t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb391715763#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123617967#foaf:Person> .

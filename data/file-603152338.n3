@@ -1,0 +1,43 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14802100v#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Peintre de vues de Montmartre et aquarelliste. - Expose au Salon à partir de 1879" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        bio:birth                      "18.." ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://viaf.org/viaf/5195014> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b8423141t.thumbnail> ;
+        foaf:familyName                "Lefèvre" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Edouard" ;
+        foaf:name                      "Edouard Lefèvre" ;
+        foaf:page                      <http://data.bnf.fr/14802100/edouard_lefevre/> .
+
+<http://data.bnf.fr/ark:/12148/cb39622941m#frbr:Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb14802100v#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb14802100v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14802100v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14802100v>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14802100v> ;
+        bnf-onto:FRBNF   14802100 ;
+        skos:exactMatch  <http://viaf.org/viaf/5195014> ;
+        skos:note        "Peintre de vues de Montmartre et aquarelliste. - Expose au Salon à partir de 1879"@fr ;
+        skos:prefLabel   "Edouard Lefèvre (peintre, 18..-19..?)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14802100v#foaf:Person> .

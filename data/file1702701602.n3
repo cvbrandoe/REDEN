@@ -1,0 +1,99 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb423944842#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381242535#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42427144f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb439050599#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38534780b#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42434936h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1961 ;
+        rdagroup2elements:biographicalInformation
+                "Artiste du spectacle, auteur-compositeur-interprète. - Animateur d'un groupe biblique à la prison de Fleury-Mérogis dans le diocèse d'Évry (en 2011)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/170634760> , <http://www.idref.fr/162014325> ;
+        foaf:familyName     "Julien" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Eric" ;
+        foaf:name           "Eric Julien" ;
+        foaf:page           <http://data.bnf.fr/14109508/eric_julien/> .
+
+<http://data.bnf.fr/ark:/12148/cb38421586r#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38165660m#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb141095086>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb141095086> ;
+        bnf-onto:FRBNF        14109508 ;
+        isni:identifierValid  "0000000119686581" ;
+        owl:sameAs            <http://isni.org/isni/0000000119686581> ;
+        skos:exactMatch       <http://viaf.org/viaf/170634760> , <http://isni.org/isni/0000000119686581> , <http://www.idref.fr/162014325> ;
+        skos:note             "Artiste du spectacle, auteur-compositeur-interprète. - Animateur d'un groupe biblique à la prison de Fleury-Mérogis dans le diocèse d'Évry (en 2011)"@fr ;
+        skos:prefLabel        "Eric Julien (auteur-compositeur)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38257767r#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385080546#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39594540x#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141095086#foaf:Person> .

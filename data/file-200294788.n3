@@ -1,0 +1,63 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12065228t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1811 ;
+        bnf-onto:lastYear              1882 ;
+        rdagroup2elements:biographicalInformation
+                "Essayiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1811/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1882/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Religion" , "Philosophie" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/200/> , <http://dewey.info/class/100/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1811" ;
+        bio:death                      "1882" ;
+        owl:sameAs                     <http://viaf.org/viaf/4952283> , <http://www.idref.fr/028915348> ;
+        foaf:familyName                "James" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Henry" ;
+        foaf:name                      "Henry James" ;
+        foaf:page                      <http://data.bnf.fr/12065228/henry_james/> .
+
+<http://data.bnf.fr/12065228/henry_james/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12065228t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12065228t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12065228t> ;
+        bnf-onto:FRBNF        12065228 ;
+        isni:identifierValid  "0000000080838938" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000080838938> ;
+        skos:altLabel         "Henry James Sr. (1811-1882)"@fr ;
+        skos:editorialNote    "Oxford American lit. : James, Henry, Sr.. - . - BN Cat. gén. : James (Henry), de New-York. - . -"@fr , "Henry James senior : a selection of his writings / edited and with an introduction by Giles Gunn, 1975. - . - LC Authorities. - http://authorities.loc.gov. - 2004-08-26"@fr ;
+        skos:exactMatch       <http://www.idref.fr/028915348> , <http://isni-url.oclc.nl/isni/0000000080838938> , <http://viaf.org/viaf/4952283> ;
+        skos:note             "Essayiste"@fr ;
+        skos:prefLabel        "Henry James (1811-1882)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12065228t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb352733759#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12065228t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12065228t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12065228t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30643909j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12065228t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12065228t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12065228t#foaf:Person> .

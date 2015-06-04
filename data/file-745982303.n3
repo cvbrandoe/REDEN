@@ -1,0 +1,54 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cc13048d/ca19803696#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb162034036#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb162034036#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb162034036#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc914643/cd0e68#frbr:Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb162034036#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb162034036#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb162034036#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb162034036#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1873 ;
+        bnf-onto:lastYear               1966 ;
+        rdagroup2elements:biographicalInformation
+                "Soeur d'Henri de Régnier (1864-1936)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1873/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1966/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris 1er" ;
+        rdagroup2elements:placeOfDeath  "Paris 7" ;
+        bio:birth                       "1873-06-15" ;
+        bio:death                       "1966-10-17" ;
+        owl:sameAs                      <http://viaf.org/viaf/120766050> ;
+        foaf:birthday                   "06-15" ;
+        foaf:familyName                 "Régnier" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Isabelle de" ;
+        foaf:name                       "Isabelle de Régnier" ;
+        foaf:page                       <http://data.bnf.fr/16203403/isabelle_de_regnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb162034036>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb162034036> ;
+        bnf-onto:FRBNF   16203403 ;
+        skos:exactMatch  <http://viaf.org/viaf/120766050> ;
+        skos:note        "Soeur d'Henri de Régnier (1864-1936)"@fr ;
+        skos:prefLabel   "Isabelle de Régnier (1873-1966)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb162034036#foaf:Person> .

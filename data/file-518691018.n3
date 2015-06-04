@@ -1,0 +1,45 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14656322c#foaf:Person>
+        a                foaf:Person ;
+        owl:sameAs       <http://viaf.org/viaf/7648522> ;
+        foaf:familyName  "Amiel" ;
+        foaf:givenName   "Pierre" ;
+        foaf:name        "Pierre Amiel" ;
+        foaf:page        <http://data.bnf.fr/14656322/pierre_amiel/> .
+
+<http://data.bnf.fr/ark:/12148/cb39498999g#frbr:Expression>
+        bnfroles:r3200       <http://data.bnf.fr/ark:/12148/cb14656322c#foaf:Person> ;
+        marcrel:dst          <http://data.bnf.fr/ark:/12148/cb14656322c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14656322c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39499000b#frbr:Expression>
+        bnfroles:r3200       <http://data.bnf.fr/ark:/12148/cb14656322c#foaf:Person> ;
+        marcrel:dst          <http://data.bnf.fr/ark:/12148/cb14656322c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14656322c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394990021#frbr:Expression>
+        bnfroles:r3200       <http://data.bnf.fr/ark:/12148/cb14656322c#foaf:Person> ;
+        marcrel:dst          <http://data.bnf.fr/ark:/12148/cb14656322c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14656322c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14656322c>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14656322c> ;
+        bnf-onto:FRBNF   14656322 ;
+        skos:exactMatch  <http://viaf.org/viaf/7648522> ;
+        skos:prefLabel   "Pierre Amiel (directeur de théâtre)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14656322c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39499003c#frbr:Expression>
+        bnfroles:r3200       <http://data.bnf.fr/ark:/12148/cb14656322c#foaf:Person> ;
+        marcrel:dst          <http://data.bnf.fr/ark:/12148/cb14656322c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14656322c#foaf:Person> .

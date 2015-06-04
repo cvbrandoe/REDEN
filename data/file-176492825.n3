@@ -1,0 +1,43 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb142680576>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb142680576> ;
+        bnf-onto:FRBNF   14268057 ;
+        skos:exactMatch  <http://viaf.org/viaf/42053015> ;
+        skos:note        "Actrice, metteur en scène et scénographe"@fr ;
+        skos:prefLabel   "Marie Fabre (actrice)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb142680576#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438120766#frbr:Expression>
+        bnfroles:r2280       <http://data.bnf.fr/ark:/12148/cb142680576#foaf:Person> ;
+        bnfroles:r500        <http://data.bnf.fr/ark:/12148/cb142680576#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb142680576#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb142680576#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb142680576#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Actrice, metteur en scène et scénographe" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/42053015> ;
+        foaf:familyName  "Fabre" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Marie" ;
+        foaf:name        "Marie Fabre" ;
+        foaf:page        <http://data.bnf.fr/14268057/marie_fabre/> .
+
+<http://data.bnf.fr/ark:/12148/cb41032087m#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb142680576#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb142680576#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb142680576#foaf:Person> .

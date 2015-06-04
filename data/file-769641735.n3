@@ -1,0 +1,87 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb31996974d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36042899m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43788112z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319969763#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1878 ;
+        bnf-onto:lastYear              1960 ;
+        rdagroup2elements:biographicalInformation
+                "Épouse de Léon Daudet (1867-1942)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1878/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1960/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1878-05-09" ;
+        bio:death                      "1960-04-26" ;
+        owl:sameAs                     <http://viaf.org/viaf/24735481> , <http://www.idref.fr/113296614> ;
+        foaf:birthday                  "05-09" ;
+        foaf:familyName                "Daudet" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Marthe" ;
+        foaf:name                      "Marthe Daudet" ;
+        foaf:page                      <http://data.bnf.fr/13005570/marthe_daudet/> .
+
+<http://data.bnf.fr/ark:/12148/cb309806603#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31996977f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb413914141#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31996975r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13005570b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13005570b> ;
+        bnf-onto:FRBNF        13005570 ;
+        isni:identifierValid  "0000000368571590" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000368571590> ;
+        skos:altLabel         "Pampille (1878-1960)"@fr , "Madame Léon Daudet (1878-1960)"@fr , "Pampyle (1878-1960)"@fr , "Marthe Allard (1878-1960)"@fr ;
+        skos:editorialNote    "Contes des deux mères / Mme de Bussac et Mme Léon Daudet, 1950. - . - Les Bons plats de France / Pampille, 1934. - . -"@fr , "DBF : Daudet (Marthe Allard, Mme Léon). - . - BN Cat. gén. suppl.. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000368571590> , <http://www.idref.fr/113296614> , <http://viaf.org/viaf/24735481> ;
+        skos:note             "Épouse de Léon Daudet (1867-1942)"@fr ;
+        skos:prefLabel        "Marthe Daudet (1878-1960)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13005570b#foaf:Person> .

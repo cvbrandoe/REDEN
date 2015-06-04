@@ -1,0 +1,96 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30724035m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311964212#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30926421v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307240348#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb309264226#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311964123#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30926426k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30664241r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13604659w>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13604659w> ;
+        bnf-onto:FRBNF      13604659 ;
+        skos:altLabel       "Ernest (auteur dramatique, 17..-18..)"@fr ;
+        skos:editorialNote  "La diligence attaquée, ou L'auberge des Cévennes : mélodrame en 3 actes : Paris, Cirque olympique, 15 novembre 1822 / par MM. Ferdinand, Ménissier et Ernest, 1822. - . - La littérature française contemporaine / Quérard, Louandre, Bourquelot. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/78778990> , <http://www.idref.fr/149184808> ;
+        skos:note           "Auteur dramatique"@fr ;
+        skos:prefLabel      "Ernest Renaud (17..-18..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Auteur dramatique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "17.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://www.idref.fr/149184808> , <http://viaf.org/viaf/78778990> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k35084n.thumbnail> ;
+        foaf:familyName                "Renaud" ;
+        foaf:givenName                 "Ernest" ;
+        foaf:name                      "Ernest Renaud" ;
+        foaf:page                      <http://data.bnf.fr/13604659/ernest_renaud/> .
+
+<http://data.bnf.fr/ark:/12148/cb311964185#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42737374n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb309264079#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13604659w#foaf:Person> .

@@ -1,0 +1,68 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1956 ;
+        rdagroup2elements:biographicalInformation
+                "Analyste financier et historien (en 1999)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/22303507> , <http://www.idref.fr/050514229> ;
+        foaf:familyName     "Duhamel" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Grégoire" ;
+        foaf:name           "Grégoire Duhamel" ;
+        foaf:page           <http://data.bnf.fr/13533572/gregoire_duhamel/> .
+
+<http://data.bnf.fr/ark:/12148/cb370524526#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38921758x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb135335721>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb135335721> ;
+        bnf-onto:FRBNF        13533572 ;
+        isni:identifierValid  "0000000055121804" ;
+        owl:sameAs            <http://isni.org/isni/0000000055121804> ;
+        skos:exactMatch       <http://www.idref.fr/050514229> , <http://viaf.org/viaf/22303507> , <http://isni.org/isni/0000000055121804> ;
+        skos:note             "Analyste financier et historien (en 1999)"@fr ;
+        skos:prefLabel        "Grégoire Duhamel"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372217008#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401463520#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb371944938#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41190824v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135335721#foaf:Person> .

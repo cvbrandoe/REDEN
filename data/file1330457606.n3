@@ -1,0 +1,59 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb41280658k#frbr:Expression>
+        bnfroles:r50         <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> ;
+        marcrel:arr          <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41010011g#frbr:Expression>
+        bnfroles:r1270       <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41026824p#frbr:Expression>
+        bnfroles:r50         <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> ;
+        marcrel:arr          <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14766656w>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14766656w> ;
+        bnf-onto:FRBNF   14766656 ;
+        skos:exactMatch  <http://viaf.org/viaf/66729498> ;
+        skos:note        "Harpiste"@fr ;
+        skos:prefLabel   "Jung Wha Lee"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41026817d#frbr:Expression>
+        bnfroles:r50         <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> ;
+        marcrel:arr          <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39755248m#frbr:Expression>
+        bnfroles:r50         <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> ;
+        marcrel:arr          <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Harpiste" ;
+        owl:sameAs       <http://viaf.org/viaf/66729498> ;
+        foaf:familyName  "Lee" ;
+        foaf:givenName   "Jung Wha" ;
+        foaf:name        "Jung Wha Lee" ;
+        foaf:page        <http://data.bnf.fr/14766656/jung_wha_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb41280652h#frbr:Expression>
+        bnfroles:r50         <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> ;
+        marcrel:arr          <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14766656w#foaf:Person> .

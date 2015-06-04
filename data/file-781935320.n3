@@ -1,0 +1,68 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb40627619p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb406276248#frbr:Expression>
+        bnfroles:r400        <http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person> ;
+        marcrel:srv          <http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:lastYear               1748 ;
+        rdagroup2elements:biographicalInformation
+                "Elève de l'abbé Galloys. Associé géomètre à l'Académie des sciences en 1707. Pensionnaire mécanicien en 1725. Professeur de mathématiques au Collège de France. Maître de mathématiques du roi et des pages de la Petite Ecurie. Présenta en 1707 à l'Académie une méthode de collecte des informations cartographiques sur des châssis concentriques" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1748/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Sainte-Maur" ;
+        bio:birth                       "16.." ;
+        bio:death                       "1748" ;
+        owl:sameAs                      <http://viaf.org/viaf/22440573> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b59718049.thumbnail> ;
+        foaf:familyName                 "Chevalier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "François" ;
+        foaf:name                       "François Chevalier" ;
+        foaf:page                       <http://data.bnf.fr/15304589/francois_chevalier/> .
+
+<http://data.bnf.fr/ark:/12148/cb40727670m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40627625m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb153045899>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb153045899> ;
+        bnf-onto:FRBNF   15304589 ;
+        skos:altLabel    "François Chevallier (16..-1748)"@fr ;
+        skos:exactMatch  <http://viaf.org/viaf/22440573> ;
+        skos:note        "Elève de l'abbé Galloys. Associé géomètre à l'Académie des sciences en 1707. Pensionnaire mécanicien en 1725. Professeur de mathématiques au Collège de France. Maître de mathématiques du roi et des pages de la Petite Ecurie. Présenta en 1707 à l'Académie une méthode de collecte des informations cartographiques sur des châssis concentriques"@fr ;
+        skos:prefLabel   "François Chevalier (16..-1748)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40698590g#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153045899#foaf:Person> .

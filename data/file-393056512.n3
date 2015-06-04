@@ -1,0 +1,42 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/12033007/caius_cesar/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb120330076#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120330076#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             -20 ;
+        bnf-onto:lastYear              4 ;
+        rdagroup2elements:biographicalInformation
+                "Fils ainé de Marcus Vipsanius Agrippa et de Julie, fille d'Auguste. - Adopté par Auguste avec son frère Lucius (17 av. J.-C.) et destiné à l'Empire. - Chargé d'une mission en Orient, il serait mort à Limyra en Lycie, des suites des blessures reçues au siège d'Artagira en Arménie" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/-0020/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/0004/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        bio:birth                      "- 20" ;
+        bio:death                      "0004-02-21" ;
+        owl:sameAs                     <http://www.idref.fr/028507819> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b6936549h.thumbnail> ;
+        foaf:familyName                "César" ;
+        foaf:givenName                 "Caius" ;
+        foaf:name                      "Caius César" ;
+        foaf:page                      <http://data.bnf.fr/12033007/caius_cesar/> .
+
+<http://data.bnf.fr/ark:/12148/cb120330076>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb120330076> ;
+        bnf-onto:FRBNF      12033007 ;
+        skos:altLabel       "Caius Caesar (0020 av. J.-C.-0004)"@la , "Gaius Caesar (0020 av. J.-C.-0004)"@la ;
+        skos:editorialNote  "GLU : forme française. - . - Kleine Pauly. - . - Encicl. italiana. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/028507819> ;
+        skos:note           "Fils ainé de Marcus Vipsanius Agrippa et de Julie, fille d'Auguste. - Adopté par Auguste avec son frère Lucius (17 av. J.-C.) et destiné à l'Empire. - Chargé d'une mission en Orient, il serait mort à Limyra en Lycie, des suites des blessures reçues au siège d'Artagira en Arménie"@fr ;
+        skos:prefLabel      "Caius César (0020 av. J.-C.-0004)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb120330076#foaf:Person> .

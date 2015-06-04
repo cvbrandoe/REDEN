@@ -1,0 +1,96 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb411525956#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412054546#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb150924489>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb150924489> ;
+        bnf-onto:FRBNF      15092448 ;
+        skos:editorialNote  "Le rock'n'roll : technique de danse et pratique / Christian Rolland, DL 2006. - . - Histoires de danseurs / Christian Rolland, DL 2007. - . - La valse et la java / Christian Rolland, DL 2009. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/225098315> , <http://www.idref.fr/140231714> ;
+        skos:note           "Professeur de danse de salon"@fr ;
+        skos:prefLabel      "Christian Rolland"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1971 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de danse de salon" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/225098315> , <http://www.idref.fr/140231714> ;
+        foaf:familyName     "Rolland" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Christian" ;
+        foaf:name           "Christian Rolland" ;
+        foaf:page           <http://data.bnf.fr/15092448/christian_rolland/> .
+
+<http://data.bnf.fr/ark:/12148/cb41366098c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42329753c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425609846#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40183449g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40979519f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41471495m#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42240401c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421287962#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42798116d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb424608973#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb150924489#foaf:Person> .

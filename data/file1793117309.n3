@@ -1,0 +1,57 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb40178077m#frbr:Expression>
+        bnfroles:r3200       <http://data.bnf.fr/ark:/12148/cb147704354#foaf:Person> ;
+        marcrel:dst          <http://data.bnf.fr/ark:/12148/cb147704354#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147704354#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb147704354#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Directeur de théâtre" , "Directeur du théâtre des Variétés du 29 décembre 1847 au 8 novembre 1849" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/37180189> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b84227813.thumbnail> ;
+        foaf:familyName                "Morin" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/14770435/morin/> .
+
+<http://data.bnf.fr/14770435/morin/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb147704354#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc98991t/cd0e9900#frbr:Expression>
+        bnfroles:r320        <http://data.bnf.fr/ark:/12148/cb147704354#foaf:Person> ;
+        marcrel:rcp          <http://data.bnf.fr/ark:/12148/cb147704354#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147704354#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb147704354>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb147704354> ;
+        bnf-onto:FRBNF      14770435 ;
+        skos:editorialNote  "Le pouvoir d'une femme [spectacle] / comédie de Joseph-Bernard Rosier, Théâtre des Variétés, 1848. - . - Dictionnaire des théâtres parisiens au XIX ème siècle / Nicole Wild, 1989. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/37180189> ;
+        skos:note           "Directeur de théâtre"@fr , "Directeur du théâtre des Variétés du 29 décembre 1847 au 8 novembre 1849"@fr ;
+        skos:prefLabel      "Morin (Directeur de théâtre, 18..-18..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb147704354#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40175759w#frbr:Expression>
+        bnfroles:r3200       <http://data.bnf.fr/ark:/12148/cb147704354#foaf:Person> ;
+        marcrel:dst          <http://data.bnf.fr/ark:/12148/cb147704354#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147704354#foaf:Person> .

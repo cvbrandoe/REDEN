@@ -1,0 +1,74 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb43366620c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person> .
+
+<http://data.bnf.fr/14803326/ernest_schelling/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb167458860#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb398266862#frbr:Expression>
+        bnfroles:r650        <http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person> ;
+        marcrel:sgn          <http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb167458849#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38051288j#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14803326b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14803326b> ;
+        bnf-onto:FRBNF        14803326 ;
+        isni:identifierValid  "0000000083751598" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000083751598> ;
+        skos:editorialNote    "Ragusa : nocturne / Ernest Schelling, comp. In : Homage to Paderewski [Enregistrement sonore] / Bartók, Benjamin, Blumenfeld... [et al.], comp. ; Jonathan Plowright, p. Hyperion DA67903. - . - Grove music online. - http://www.oxfordmusiconline.com. - 2014-02-28"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/40150031> , <http://isni-url.oclc.nl/isni/0000000083751598> ;
+        skos:note             "Pianiste américain, chef d'orchestre et compositeur"@fr ;
+        skos:prefLabel        "Ernest Schelling (1876-1939)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb433666195#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14803326b#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1876 ;
+        bnf-onto:lastYear              1939 ;
+        rdagroup2elements:biographicalInformation
+                "Pianiste américain, chef d'orchestre et compositeur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1876/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1939/> ;
+        bio:birth                      "1876-07-26" ;
+        bio:death                      "1939-12-08" ;
+        owl:sameAs                     <http://viaf.org/viaf/40150031> ;
+        foaf:birthday                  "07-26" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b8424788m.thumbnail> ;
+        foaf:familyName                "Schelling" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Ernest" ;
+        foaf:name                      "Ernest Schelling" ;
+        foaf:page                      <http://data.bnf.fr/14803326/ernest_schelling/> .

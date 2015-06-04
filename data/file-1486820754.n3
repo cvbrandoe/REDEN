@@ -1,0 +1,79 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12129883x>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12129883x> ;
+        bnf-onto:FRBNF        12129883 ;
+        isni:identifierValid  "0000000117511753" ;
+        owl:sameAs            <http://isni.org/isni/0000000117511753> ;
+        skos:editorialNote    "Grandes vérités et petites histoires / abbé Pierre Lefèvre ; trad... [de la version allemande] par Martine Schmelck, 1988. - . - Guérir le cœur / Gabrielle Bossis ; pensées choisies par Pierre Lefèvre, cop. 2010. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/158811097> , <http://viaf.org/viaf/24635558> , <http://isni.org/isni/0000000117511753> ;
+        skos:note             "Prêtre du Diocèse de Lille (ordonné en 1964)"@fr ;
+        skos:prefLabel        "Pierre Lefèvre"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42225382q#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42573241x#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42573237p#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1934 ;
+        rdagroup2elements:biographicalInformation
+                "Prêtre du Diocèse de Lille (ordonné en 1964)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> , <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/24635558> , <http://www.idref.fr/158811097> ;
+        foaf:familyName     "Lefèvre" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Pierre" ;
+        foaf:name           "Pierre Lefèvre" ;
+        foaf:page           <http://data.bnf.fr/12129883/pierre_lefevre/> .
+
+<http://data.bnf.fr/ark:/12148/cb409381674#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43718848f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb410038623#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40932991r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36632428t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12129883x#foaf:Person> .

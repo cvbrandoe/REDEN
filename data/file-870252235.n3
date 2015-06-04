@@ -1,0 +1,90 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb374473967#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39992882w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37047486h#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354989679#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394566202#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388910588#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35503111k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37192750b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb426830303#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12450097c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12450097c> ;
+        bnf-onto:FRBNF        12450097 ;
+        isni:identifierValid  "0000000066295148" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000066295148> ;
+        skos:editorialNote    "Giulio Romano : repertorio di fonti documentarie / a cura di Daniela Ferrari [et al.], 1992. - . - ICCU, Istituto centrale per il catalogo unico. - http://opac.sbn.it. - 2012-03-29"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/17317840> , <http://isni-url.oclc.nl/isni/0000000066295148> , <http://www.idref.fr/033656193> ;
+        skos:prefLabel        "Daniela Ferrari"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        owl:sameAs       <http://viaf.org/viaf/17317840> , <http://www.idref.fr/033656193> ;
+        foaf:familyName  "Ferrari" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Daniela" ;
+        foaf:name        "Daniela Ferrari" ;
+        foaf:page        <http://data.bnf.fr/12450097/daniela_ferrari/> .
+
+<http://data.bnf.fr/ark:/12148/cb389452536#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42519715z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12450097c#foaf:Person> .

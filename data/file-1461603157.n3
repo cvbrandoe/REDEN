@@ -1,0 +1,111 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1905 ;
+        bnf-onto:lastYear              1986 ;
+        rdagroup2elements:biographicalInformation
+                "Agrégé de physique, docteur es-sciences physiques. - Professeur de chimie" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1905/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1986/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1905-08-21" ;
+        bio:death                      "1986-09-20" ;
+        owl:sameAs                     <http://viaf.org/viaf/9842072> , <http://www.idref.fr/026684543> ;
+        foaf:birthday                  "08-21" ;
+        foaf:familyName                "Amiel" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Amiel" ;
+        foaf:page                      <http://data.bnf.fr/11888664/jean_amiel/> .
+
+<http://data.bnf.fr/ark:/12148/cb37258775g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb317171090#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35134373v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35119324f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37369338s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb317171106#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31717108n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31717114k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31717106z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34329831h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32535397c#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb317171079#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32535401s#frbr:Expression>
+        bnfroles:r50         <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        marcrel:arr          <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb118886645>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb118886645> ;
+        bnf-onto:FRBNF        11888664 ;
+        isni:identifierValid  "0000000108683916" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108683916> ;
+        skos:editorialNote    "La chimie de l'acétylène / par Jean Amiel, 1942. - . - WW France 1985-1986 et 1987-1988. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/026684543> , <http://isni-url.oclc.nl/isni/0000000108683916> , <http://viaf.org/viaf/9842072> ;
+        skos:note             "Agrégé de physique, docteur es-sciences physiques. - Professeur de chimie"@fr ;
+        skos:prefLabel        "Jean Amiel (1905-1986)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb118886645#foaf:Person> .

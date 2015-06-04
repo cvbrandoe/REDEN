@@ -1,0 +1,81 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/12342861/jules_chevalier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302354041#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1824 ;
+        bnf-onto:lastYear              1907 ;
+        rdagroup2elements:biographicalInformation
+                "Fondateur des Missionnaires du Sacré-Cœur (en 1854 ; supérieur général de 1869 à 1901) et des Filles de Notre-Dame-du-Sacré-Cœur (en 1874). - Curé-archiprêtre d'Issoudun (à partir de 1872). - Prêtre du Diocèse de Bourges (1851-1869)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1824/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1907/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1824-03-15" ;
+        bio:death                      "1907-10-21" ;
+        owl:sameAs                     <http://viaf.org/viaf/14845056> , <http://www.idref.fr/074486934> , <http://dbpedia.org/resource/Jules_Chevalier> ;
+        foaf:birthday                  "03-15" ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Jules_Chevalier.jpg?width=300> , <http://gallica.bnf.fr/ark:/12148/bpt6k6227835c.thumbnail> ;
+        foaf:familyName                "Chevalier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jules" ;
+        foaf:name                      "Jules Chevalier" ;
+        foaf:page                      <http://data.bnf.fr/12342861/jules_chevalier/> .
+
+<http://data.bnf.fr/ark:/12148/cb30235405c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30235429c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34044625q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12342861p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Jules_Chevalier> , <http://catalogue.bnf.fr/ark:/12148/cb12342861p> ;
+        bnf-onto:FRBNF        12342861 ;
+        isni:identifierValid  "0000000061509653" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000061509653> ;
+        skos:altLabel         "Jean Jules Chevalier (1824-1907)"@fr , "Un Missionnaire du Sacré-Cœur (1824-1907)"@fr , "Chevalier (1824-1907)"@fr ;
+        skos:editorialNote    "Les deux statues de Notre-Dame du Sacré-Cœur / par le T.R.P. Jules Chevalier, 1895. - . - GDEL : CHEVALIER (Jean Jules). - . -"@fr , "DBF : CHEVALIER (Jean-Ju̲l̲e̲s̲). - . - BN Cat. gén. : CHEVALIER (le P. Jules). - . -"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/Jules_Chevalier> , <http://isni-url.oclc.nl/isni/0000000061509653> , <http://viaf.org/viaf/14845056> , <http://fr.wikipedia.org/wiki/Jules_Chevalier> , <http://www.idref.fr/074486934> ;
+        skos:note             "Fondateur des Missionnaires du Sacré-Cœur (en 1854 ; supérieur général de 1869 à 1901) et des Filles de Notre-Dame-du-Sacré-Cœur (en 1874). - Curé-archiprêtre d'Issoudun (à partir de 1872). - Prêtre du Diocèse de Bourges (1851-1869)"@fr ;
+        skos:prefLabel        "Jules Chevalier (1824-1907)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30235433m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302354208#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12342861p#foaf:Person> .

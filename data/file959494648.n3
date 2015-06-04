@@ -1,0 +1,41 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb409792366#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb15507126c#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb15507126c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15507126c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15507126c>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb15507126c> ;
+        bnf-onto:FRBNF      15507126 ;
+        skos:editorialNote  "Le mariage de Barillon [Spectacle] / mise en scène de Jacques Echantillon,... ; avec Jean-Michel Molé.- Paris : Théâtre du Palais-Royal, 26 août 2005. - . - Théâtre Online. - http://www.theatreonline.com. - 20070208"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/47069395> ;
+        skos:note           "Acteur. - Chansonnier"@fr ;
+        skos:prefLabel      "Jean-Michel Molé"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb15507126c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15507126c#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Acteur. - Chansonnier" ;
+        owl:sameAs       <http://viaf.org/viaf/47069395> ;
+        foaf:familyName  "Molé" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Jean-Michel" ;
+        foaf:name        "Jean-Michel Molé" ;
+        foaf:page        <http://data.bnf.fr/15507126/jean-michel_mole/> .
+
+<http://data.bnf.fr/ark:/12148/cb424344035#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb15507126c#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb15507126c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15507126c#foaf:Person> .

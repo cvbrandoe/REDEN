@@ -1,0 +1,60 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb40415362z#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb14957086j#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb14957086j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14957086j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40251470c#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14957086j#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14957086j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14957086j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14957086j#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Graveur sur cuivre et illustrateur. - Actif à Paris entre 1763 et 1810. - Frère aîné de : Giraud, Antoine-Cosme (1760-18..) ; dit le Jeune" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        bio:birth                      "17.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://www.idref.fr/120938502> , <http://viaf.org/viaf/216285766> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b6943848g.thumbnail> ;
+        foaf:familyName                "Giraud" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "E.-A." ;
+        foaf:name                      "E.-A. Giraud" ;
+        foaf:page                      <http://data.bnf.fr/14957086/e_-a__giraud/> .
+
+<http://data.bnf.fr/ark:/12148/cb403882662#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb14957086j#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb14957086j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14957086j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40250081p#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14957086j#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14957086j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14957086j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14957086j>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb14957086j> ;
+        bnf-onto:FRBNF      14957086 ;
+        skos:altLabel       "Giraud l'Aîné (graveur, 17..-18..)"@fr ;
+        skos:editorialNote  "Jo.ph Siméon Valete [Image fixe] né à Tours le 13 7.bre 1736 député de Tourraine à l'Assemblée nationale de 1789 : [estampe] / Moreau del. ; Giraud sc., [ca 1789]. - . - Bénézit, 1986 : Giraud (E.-A.), dit Giraud l'Aîné. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/120938502> , <http://viaf.org/viaf/216285766> ;
+        skos:note           "Graveur sur cuivre et illustrateur. - Actif à Paris entre 1763 et 1810. - Frère aîné de : Giraud, Antoine-Cosme (1760-18..) ; dit le Jeune"@fr ;
+        skos:prefLabel      "E.-A. Giraud (graveur, 17..-18..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb14957086j#foaf:Person> .

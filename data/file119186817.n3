@@ -1,0 +1,67 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40009881p#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1945 ;
+        rdagroup2elements:biographicalInformation
+                "Directeur du Centre historique minier de Lewarde (Nord) depuis 1990 (en 2002)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1945/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs                     <http://www.idref.fr/071540660> , <http://viaf.org/viaf/86373526> ;
+        foaf:birthday                  "09-22" ;
+        foaf:familyName                "Dubuc" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "André" ;
+        foaf:name                      "André Dubuc" ;
+        foaf:page                      <http://data.bnf.fr/14475550/andre_dubuc/> .
+
+<http://data.bnf.fr/ark:/12148/cb38949375r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb144755500>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb144755500> ;
+        bnf-onto:FRBNF   14475550 ;
+        skos:exactMatch  <http://www.idref.fr/071540660> , <http://viaf.org/viaf/86373526> ;
+        skos:note        "Directeur du Centre historique minier de Lewarde (Nord) depuis 1990 (en 2002)"@fr ;
+        skos:prefLabel   "André Dubuc (1945-....)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421807177#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427551145#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb426271841#frbr:Expression>
+        bnfroles:r200        <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> ;
+        marcrel:cur          <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39097082b#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144755500#foaf:Person> .

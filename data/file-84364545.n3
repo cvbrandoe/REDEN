@@ -1,0 +1,91 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb41065525s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13087760q>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13087760q> ;
+        bnf-onto:FRBNF      13087760 ;
+        skos:editorialNote  "Cambodge : dans les rues de Phnom Penh / aquarelles, peintures et textes de Geneviève Marot, 2003. - . - Ce que j'aime en toi / les Carnettistes tribulants, impr. 2007. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/077328701> , <http://viaf.org/viaf/44435158> ;
+        skos:note           "Illustratrice et graphiste"@fr ;
+        skos:prefLabel      "Geneviève Marot"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39184057c#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39918750s#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1968 ;
+        rdagroup2elements:biographicalInformation
+                "Illustratrice et graphiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/44435158> , <http://www.idref.fr/077328701> ;
+        foaf:familyName     "Marot" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Geneviève" ;
+        foaf:name           "Geneviève Marot" ;
+        foaf:page           <http://data.bnf.fr/13087760/genevieve_marot/> .
+
+<http://data.bnf.fr/ark:/12148/cb38918749f#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb434865211#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38912830v#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb391130283#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400794962#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39073775m#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35836548w#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39917185j#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13087760q#foaf:Person> .

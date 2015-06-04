@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb402477786#frbr:Expression>
+        bnfroles:r522        <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40256176t#frbr:Expression>
+        bnfroles:r522        <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40259447s#frbr:Expression>
+        bnfroles:r522        <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40258823n#frbr:Expression>
+        bnfroles:r522        <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149568259>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb149568259> ;
+        bnf-onto:FRBNF      14956825 ;
+        skos:editorialNote  "Bén.. - . - Thi.Bec.. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/44570883> ;
+        skos:prefLabel      "G. P.  Barbier (peintre, 17..-18.. )"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        bio:birth                      "17.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/44570883> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b530099015.thumbnail> ;
+        foaf:familyName                "Barbier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "G. P. " ;
+        foaf:name                      "G. P.  Barbier" ;
+        foaf:page                      <http://data.bnf.fr/14956825/g__p___barbier/> .
+
+<http://data.bnf.fr/ark:/12148/cb40255611c#frbr:Expression>
+        bnfroles:r522        <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402588229#frbr:Expression>
+        bnfroles:r312        <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149568259#foaf:Person> .

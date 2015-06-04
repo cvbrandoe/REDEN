@@ -1,0 +1,82 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb376190749#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35066797w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353476462#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11927976p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11927976p> ;
+        bnf-onto:FRBNF        11927976 ;
+        isni:identifierValid  "0000000083620352" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000083620352> ;
+        skos:exactMatch       <http://viaf.org/viaf/19685451> , <http://www.idref.fr/027181162> , <http://isni-url.oclc.nl/isni/0000000083620352> ;
+        skos:note             "Diplômé de philosophie et de théologie ; Ordonné en 1958. - En 1968, il entame des études de sciences économiques à Grenoble ; Chercheur au CNRS en 1979. - Docteur ès-sciences économiques (économie internationale) (Grenoble 2, 1988). - Spécialiste des problèmes économiques liés à l'immigration (en 1990)"@fr ;
+        skos:prefLabel        "Raphaël-Emmanuel Verhaeren"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35251613p#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34707153p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34705379f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb362522447#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36252264v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1934 ;
+        rdagroup2elements:biographicalInformation
+                "Diplômé de philosophie et de théologie ; Ordonné en 1958. - En 1968, il entame des études de sciences économiques à Grenoble ; Chercheur au CNRS en 1979. - Docteur ès-sciences économiques (économie internationale) (Grenoble 2, 1988). - Spécialiste des problèmes économiques liés à l'immigration (en 1990)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/027181162> , <http://viaf.org/viaf/19685451> ;
+        foaf:familyName     "Verhaeren" ;
+        foaf:givenName      "Raphaël-Emmanuel" ;
+        foaf:name           "Raphaël-Emmanuel Verhaeren" ;
+        foaf:page           <http://data.bnf.fr/11927976/raphael-emmanuel_verhaeren/> .
+
+<http://data.bnf.fr/ark:/12148/cb347156811#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11927976p#foaf:Person> .

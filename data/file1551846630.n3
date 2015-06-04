@@ -1,0 +1,56 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb43525815m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15519128r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15519128r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15519128r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb409786362#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15519128r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15519128r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15519128r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15519128r#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1964 ;
+        rdagroup2elements:biographicalInformation
+                "Électronicien" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/15079818> , <http://www.idref.fr/110763661> ;
+        foaf:familyName     "Béranger" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Bruno" ;
+        foaf:name           "Bruno Béranger" ;
+        foaf:page           <http://data.bnf.fr/15519128/bruno_beranger/> .
+
+<http://data.bnf.fr/ark:/12148/cb15519128r>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb15519128r> ;
+        bnf-onto:FRBNF      15519128 ;
+        skos:editorialNote  "Les pompes à chaleur / Bruno Béranger, impr. 2006. - . - Chaleur Terre. - http://www.chaleurterre.com/. - 2007-03-20"@fr ;
+        skos:exactMatch     <http://www.idref.fr/110763661> , <http://viaf.org/viaf/15079818> ;
+        skos:note           "Électronicien"@fr ;
+        skos:prefLabel      "Bruno Béranger"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb15519128r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41185038b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15519128r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15519128r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15519128r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42181306q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15519128r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15519128r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15519128r#foaf:Person> .

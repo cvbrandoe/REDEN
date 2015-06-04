@@ -1,0 +1,51 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb403095712#frbr:Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb14962299f#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb14962299f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14962299f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14962299f#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        bio:birth                      "17.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/74122697> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b7743274m.thumbnail> ;
+        foaf:familyName                "Hippolyte" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Auguste" ;
+        foaf:name                      "Auguste Hippolyte" ;
+        foaf:page                      <http://data.bnf.fr/14962299/auguste_hippolyte/> .
+
+<http://data.bnf.fr/ark:/12148/cb40311164z#frbr:Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb14962299f#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb14962299f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14962299f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40309567t#frbr:Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb14962299f#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb14962299f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14962299f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14962299f>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14962299f> ;
+        bnf-onto:FRBNF   14962299 ;
+        skos:altLabel    "Auguste Hyppolite (17..-18..)"@fr , "Auguste Hipolyte (17..-18..)"@fr , "Auguste Hipolite (17..-18..)"@fr ;
+        skos:exactMatch  <http://viaf.org/viaf/74122697> ;
+        skos:prefLabel   "Auguste Hippolyte (miniaturiste, 17..-18.. )"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14962299f#foaf:Person> .

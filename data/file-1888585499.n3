@@ -1,0 +1,94 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb31660592n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12993662s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12993662s> ;
+        bnf-onto:FRBNF        12993662 ;
+        isni:identifierValid  "0000000112090304" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000112090304> ;
+        skos:altLabel         "Elizabeth Rundle (1828-1896)"@fr ;
+        skos:editorialNote    "Chroniques de la famille de Schonberg Cotta / [par Mme E. Charles] ; traduit de l'anglais par Mlle Rilliet de Constant, 1868. - . - LC Authorities : Charles, Elizabeth Rundle. - http://authorities.loc.gov/. - 2010-06-19"@fr , "Oxford DNB : Charles, Elizabeth Rundle. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/95236972> , <http://isni-url.oclc.nl/isni/0000000112090304> ;
+        skos:note             "Romancière. - Épouse Andrew Paton Charles en 1851"@fr ;
+        skos:prefLabel        "Elizabeth Charles (1828-1896)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1828 ;
+        bnf-onto:lastYear               1896 ;
+        rdagroup2elements:biographicalInformation
+                "Romancière. - Épouse Andrew Paton Charles en 1851" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1828/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1896/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Tavistock, GB" ;
+        rdagroup2elements:placeOfDeath  "Londres" ;
+        bio:birth                       "1828-01-02" ;
+        bio:death                       "1896-03-28" ;
+        owl:sameAs                      <http://viaf.org/viaf/95236972> ;
+        foaf:birthday                   "01-02" ;
+        foaf:familyName                 "Charles" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Elizabeth" ;
+        foaf:name                       "Elizabeth Charles" ;
+        foaf:page                       <http://data.bnf.fr/12993662/elizabeth_charles/> .
+
+<http://data.bnf.fr/ark:/12148/cb30223705h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30223706v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302418271#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316605919#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31930760g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302237076#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302237045#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30223708j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12993662s#foaf:Person> .

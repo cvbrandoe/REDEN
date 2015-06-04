@@ -1,0 +1,70 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1936 ;
+        rdagroup2elements:biographicalInformation
+                "Auteur de livres pour la jeunesse" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ne#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/dut> ;
+        owl:sameAs          <http://www.idref.fr/161221459> , <http://viaf.org/viaf/29652277> ;
+        foaf:familyName     "Vries" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Anke de" ;
+        foaf:name           "Anke de Vries" ;
+        foaf:page           <http://data.bnf.fr/12600242/anke_de_vries/> .
+
+<http://data.bnf.fr/ark:/12148/cb38846719g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb434152236#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35803473g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12600242z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12600242z> ;
+        bnf-onto:FRBNF        12600242 ;
+        isni:identifierValid  "0000000080155248" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000080155248> ;
+        skos:altLabel         "Anke De Vries"@fr ;
+        skos:editorialNote    "Chez nous, dans la rue / Anke de Vries ; traduit du néerlandais par Mélanie Erhardy ; illustrations de Victor de la Fuente, 1982. - . - Ricochet. - http://asp.ricochet-jeunes.org. - 2001-08-03"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000080155248> , <http://www.idref.fr/161221459> , <http://viaf.org/viaf/29652277> ;
+        skos:note             "Auteur de livres pour la jeunesse"@fr ;
+        skos:prefLabel        "Anke de Vries"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb434151875#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34724470s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420944658#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12600242z#foaf:Person> .

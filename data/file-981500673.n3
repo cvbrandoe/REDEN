@@ -1,0 +1,78 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "A aussi traduit du grec ancien en italien" , "Helléniste. - Secrétaire d'Alfieri" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        bio:birth                      "17.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/85931465> ;
+        foaf:familyName                "Viviani" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Giovanni" ;
+        foaf:name                      "Giovanni Viviani" ;
+        foaf:page                      <http://data.bnf.fr/10458910/giovanni_viviani/> .
+
+<http://data.bnf.fr/ark:/12148/cb303439587#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31596017d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31596018r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316732488#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10458910m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10458910m> ;
+        bnf-onto:FRBNF        10458910 ;
+        isni:identifierValid  "0000000115767392" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000115767392> ;
+        skos:editorialNote    "Istorie romane di Dione Cassio Coccejano ; tradotte da Giovanni Viviani, 1823. - . - Istituto centrale per il catalogo unico. - http://opac.sbn.it. - 2009-04-10"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000115767392> , <http://viaf.org/viaf/85931465> ;
+        skos:note             "Helléniste. - Secrétaire d'Alfieri"@fr , "A aussi traduit du grec ancien en italien"@fr ;
+        skos:prefLabel        "Giovanni Viviani (17..-18..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb315960209#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb315960193#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30343959k#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10458910m#foaf:Person> .

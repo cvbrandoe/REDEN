@@ -1,0 +1,78 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb399169009#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382986964#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43726672g#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35600261v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12024177p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12024177p> ;
+        bnf-onto:FRBNF        12024177 ;
+        isni:identifierValid  "0000000000804712" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000000804712> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000000804712> , <http://www.idref.fr/028398769> , <http://viaf.org/viaf/24614712> ;
+        skos:note             "Démographe. - En poste à l'Institut de recherche pour le développement (en 2006)"@fr ;
+        skos:prefLabel        "Philippe Hamelin"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1953 ;
+        rdagroup2elements:biographicalInformation
+                "Démographe. - En poste à l'Institut de recherche pour le développement (en 2006)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/028398769> , <http://viaf.org/viaf/24614712> ;
+        foaf:familyName     "Hamelin" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Philippe" ;
+        foaf:name           "Philippe Hamelin" ;
+        foaf:page           <http://data.bnf.fr/12024177/philippe_hamelin/> .
+
+<http://data.bnf.fr/ark:/12148/cb38303692v#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425548940#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384883535#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41454486z#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12024177p#foaf:Person> .

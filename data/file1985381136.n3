@@ -1,0 +1,67 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb36687519c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37045677m#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb371797064#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370985475#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37691482r#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1957 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en ingénierie informatique (Rennes I, 1984)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/145268349> , <http://www.idref.fr/064810712> , <http://viaf.org/viaf/51834723> ;
+        foaf:familyName     "Gautier" ;
+        foaf:givenName      "Thierry" ;
+        foaf:name           "Thierry Gautier" ;
+        foaf:page           <http://data.bnf.fr/13320216/thierry_gautier/> .
+
+<http://data.bnf.fr/ark:/12148/cb13320216f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13320216f> ;
+        bnf-onto:FRBNF        13320216 ;
+        isni:identifierValid  "000000005172849X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000005172849X> ;
+        skos:exactMatch       <http://viaf.org/viaf/51834723> , <http://www.idref.fr/064810712> , <http://isni-url.oclc.nl/isni/000000005172849X> , <http://www.idref.fr/145268349> ;
+        skos:note             "Docteur en ingénierie informatique (Rennes I, 1984)"@fr ;
+        skos:prefLabel        "Thierry Gautier (chercheur en informatique)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37648035s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13320216f#foaf:Person> .

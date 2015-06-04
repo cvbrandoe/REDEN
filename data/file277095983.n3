@@ -1,0 +1,45 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12336659b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12336659b> ;
+        bnf-onto:FRBNF        12336659 ;
+        isni:identifierValid  "0000000078325930" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000078325930> ;
+        skos:exactMatch       <http://viaf.org/viaf/79093445> , <http://isni-url.oclc.nl/isni/0000000078325930> , <http://www.idref.fr/032324065> ;
+        skos:note             "Ancien maire de Saclas"@fr ;
+        skos:prefLabel        "Serge Lefranc"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12336659b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35594547s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12336659b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12336659b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12336659b#foaf:Person> .
+
+<http://data.bnf.fr/12336659/serge_lefranc/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12336659b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12336659b#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1903 ;
+        rdagroup2elements:biographicalInformation
+                "Ancien maire de Saclas" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/032324065> , <http://viaf.org/viaf/79093445> ;
+        foaf:familyName     "Lefranc" ;
+        foaf:givenName      "Serge" ;
+        foaf:name           "Serge Lefranc" ;
+        foaf:page           <http://data.bnf.fr/12336659/serge_lefranc/> .

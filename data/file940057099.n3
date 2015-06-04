@@ -1,0 +1,25 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14219001s>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb14219001s> ;
+        bnf-onto:FRBNF      14219001 ;
+        skos:editorialNote  "Sous un grand ciel gris... / Raphaël, chant. In : Entre deux mondes [Enregistrement sonore] / Rocca, chant... [et al.]. Arsenal-Barclay 5375522. - . - Discogs. - http://www.discogs.com/artist/Rapha%C3%ABl. - 2013-01-29"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/294966921> ;
+        skos:prefLabel      "Raphaël (chanteur de rap)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb14219001s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14219001s#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/294966921> ;
+        foaf:familyName  "Raphaël" ;
+        foaf:gender      "male" ;
+        foaf:page        <http://data.bnf.fr/14219001/raphael/> .

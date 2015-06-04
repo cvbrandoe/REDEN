@@ -1,0 +1,69 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb136220773>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb136220773> ;
+        bnf-onto:FRBNF        13622077 ;
+        isni:identifierValid  "0000000108870260" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108870260> ;
+        skos:altLabel         "Stéfan Ferrari"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/34634374> , <http://isni-url.oclc.nl/isni/0000000108870260> , <http://www.idref.fr/055670555> ;
+        skos:note             "Ancien élève de l'École normale supérieure. Agrégé de Lettres modernes. - Enseignant à l'Université de Paris-Sorbonne (en 2001)"@fr ;
+        skos:prefLabel        "Stéphan Ferrari"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37637769k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1970 ;
+        rdagroup2elements:biographicalInformation
+                "Ancien élève de l'École normale supérieure. Agrégé de Lettres modernes. - Enseignant à l'Université de Paris-Sorbonne (en 2001)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/34634374> , <http://www.idref.fr/055670555> ;
+        foaf:familyName     "Ferrari" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Stéphan" ;
+        foaf:name           "Stéphan Ferrari" ;
+        foaf:page           <http://data.bnf.fr/13622077/stephan_ferrari/> .
+
+<http://data.bnf.fr/ark:/12148/cb43635264j#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43635262v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37647332b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40141589p#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420516162#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb136220773#foaf:Person> .

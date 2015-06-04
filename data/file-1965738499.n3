@@ -1,0 +1,86 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14961664n>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14961664n> ;
+        bnf-onto:FRBNF   14961664 ;
+        skos:exactMatch  <http://viaf.org/viaf/37187309> ;
+        skos:prefLabel   "Philippe Morin"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402930054#frbr:Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40293000d#frbr:Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40293001r#frbr:Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40471023h#frbr:Expression>
+        bnfroles:r530        <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        marcrel:pht          <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> .
+
+<http://data.bnf.fr/14961664/philippe_morin/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb419584932#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40292999j#frbr:Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1957 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        owl:sameAs                      <http://viaf.org/viaf/37187309> ;
+        foaf:familyName                 "Morin" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Philippe" ;
+        foaf:name                       "Philippe Morin" ;
+        foaf:page                       <http://data.bnf.fr/14961664/philippe_morin/> .
+
+<http://data.bnf.fr/ark:/12148/cb40293006g#frbr:Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40293004s#frbr:Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14961664n#foaf:Person> .

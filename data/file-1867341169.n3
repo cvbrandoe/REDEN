@@ -1,0 +1,56 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/12143617/william_berkeley/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12143617j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12143617j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12143617j> ;
+        bnf-onto:FRBNF        12143617 ;
+        isni:identifierValid  "0000000116211337" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000116211337> ;
+        skos:altLabel         "William Barclay (1608-1677)"@fr , "William Birkley (1608-1677)"@fr , "William Berkley (1608-1677)"@fr , "William Bartley (1608-1677)"@fr ;
+        skos:exactMatch       <http://www.idref.fr/029910749> , <http://viaf.org/viaf/36954326> , <http://isni-url.oclc.nl/isni/0000000116211337> ;
+        skos:note             "Gouverneur de Virginie, alors colonie britannique, de 1641 à 1677"@fr ;
+        skos:prefLabel        "William Berkeley (1608-1677)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12143617j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb350674781#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12143617j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12143617j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12143617j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12143617j#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1608 ;
+        bnf-onto:lastYear              1677 ;
+        rdagroup2elements:biographicalInformation
+                "Gouverneur de Virginie, alors colonie britannique, de 1641 à 1677" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1608/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1677/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire du reste du monde" , "Science politique" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/320/> , <http://dewey.info/class/950/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1608" ;
+        bio:death                      "1677-07-09" ;
+        owl:sameAs                     <http://viaf.org/viaf/36954326> , <http://www.idref.fr/029910749> ;
+        foaf:familyName                "Berkeley" ;
+        foaf:givenName                 "William" ;
+        foaf:name                      "William Berkeley" ;
+        foaf:page                      <http://data.bnf.fr/12143617/william_berkeley/> .

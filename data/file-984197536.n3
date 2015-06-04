@@ -1,0 +1,91 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb373627920#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373979764#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12277880m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12277880m> ;
+        bnf-onto:FRBNF        12277880 ;
+        isni:identifierValid  "0000000109105472" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109105472> ;
+        skos:exactMatch       <http://viaf.org/viaf/66527105> , <http://isni-url.oclc.nl/isni/0000000109105472> , <http://www.idref.fr/031594220> ;
+        skos:note             "Professeur d'économie à l'Université de New York (en 1991)"@fr ;
+        skos:prefLabel        "Edward N. Wolff"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Professeur d'économie à l'Université de New York (en 1991)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://www.idref.fr/031594220> , <http://viaf.org/viaf/66527105> ;
+        foaf:familyName  "Wolff" ;
+        foaf:givenName   "Edward N." ;
+        foaf:name        "Edward N. Wolff" ;
+        foaf:page        <http://data.bnf.fr/12277880/edward_n__wolff/> .
+
+<http://data.bnf.fr/ark:/12148/cb37404001b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37558251m#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37461751b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400345562#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38955182q#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373674226#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373577909#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb391515620#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40210867h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12277880m#foaf:Person> .

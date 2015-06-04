@@ -1,0 +1,54 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb16221957f#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1785 ;
+        rdagroup2elements:biographicalInformation
+                "Pseudonyme de Jean-Henri Marchand" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1785/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "17.." ;
+        bio:death                      "1785" ;
+        owl:sameAs                     <http://viaf.org/viaf/148284780> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b85409846.thumbnail> ;
+        foaf:familyName                "Beaumont" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/16221957/beaumont/> .
+
+<http://data.bnf.fr/ark:/12148/cb16221957f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb16221957f> ;
+        bnf-onto:FRBNF        16221957 ;
+        isni:identifierValid  "0000000099853951" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000099853951> ;
+        skos:altLabel         "Beaumont coiffeur dans les Quinze-Vingts (17..-1785)"@fr , "Beaumont coëffeur dans les Quinze-Vingts (17..-1785)"@fr ;
+        skos:editorialNote    "L'enciclopédie perruquiere. Ouvrage curieux a l'usage de toutes sortes de têtes, enrichi de figures en taille-douce. Par M Beaumont, coëffeur dans les Quinze-Vingts, 1757. - . - Enciclopédie perruquière, seconde partie, dans laquelle on explique la manière de se prendre soi-même la mesure d'une perruque... avec un compas inventé par Beaumont, 1761. - . -"@fr , "Quérard : Beaumont, coiffeur dans les Quinze-Vingts, ps. [J.-H. Marchand, avocat]. - . - Cioranescu, 18e s. : Marchand (Jean-Henri). - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000099853951> , <http://viaf.org/viaf/148284780> ;
+        skos:note             "Pseudonyme de Jean-Henri Marchand"@fr ;
+        skos:prefLabel        "Beaumont (17..-1785)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb16221957f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30878612s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16221957f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16221957f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16221957f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30878611f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16221957f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16221957f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16221957f#foaf:Person> .

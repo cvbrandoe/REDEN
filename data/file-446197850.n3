@@ -1,0 +1,87 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb38256108b#frbr:Expression>
+        bnfroles:r1240       <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37793076c#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb378814508#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37793316b#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13937647r>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb13937647r> ;
+        bnf-onto:FRBNF   13937647 ;
+        skos:altLabel    "Earl Thomas"@fr ;
+        skos:exactMatch  <http://viaf.org/viaf/54336579> ;
+        skos:note        "Pianiste. - chant"@fr ;
+        skos:prefLabel   "Jesse James"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38095476w#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37789466d#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb379093048#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Pianiste. - chant" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        owl:sameAs       <http://viaf.org/viaf/54336579> ;
+        foaf:familyName  "James" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Jesse" ;
+        foaf:name        "Jesse James" ;
+        foaf:page        <http://data.bnf.fr/13937647/jesse_james/> .
+
+<http://data.bnf.fr/ark:/12148/cb38054410w#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb379802452#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38128975c#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13937647r#foaf:Person> .

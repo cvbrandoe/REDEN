@@ -1,0 +1,103 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42485789t#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42434900h#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43827951r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435013673#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1968 ;
+        rdagroup2elements:biographicalInformation
+                "Linguiste, auteur, interprète" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/59373166> , <http://www.idref.fr/096241799> ;
+        foaf:familyName     "Bouvier" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Yves-Ferdinand" ;
+        foaf:name           "Yves-Ferdinand Bouvier" ;
+        foaf:page           <http://data.bnf.fr/15065759/yves-ferdinand_bouvier/> .
+
+<http://data.bnf.fr/ark:/12148/cb401217785#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438279585#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425462682#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42128696s#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15065759w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15065759w> ;
+        bnf-onto:FRBNF        15065759 ;
+        isni:identifierValid  "0000000081388908" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081388908> ;
+        skos:exactMatch       <http://www.idref.fr/096241799> , <http://isni-url.oclc.nl/isni/0000000081388908> , <http://viaf.org/viaf/59373166> ;
+        skos:note             "Linguiste, auteur, interprète"@fr ;
+        skos:prefLabel        "Yves-Ferdinand Bouvier"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435620145#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42617589n#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43734665x#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43562016v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42216694k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15065759w#foaf:Person> .

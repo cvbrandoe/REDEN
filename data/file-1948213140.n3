@@ -1,0 +1,42 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12444063t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12444063t> ;
+        bnf-onto:FRBNF        12444063 ;
+        isni:identifierValid  "0000000114426211" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114426211> ;
+        skos:exactMatch       <http://www.idref.fr/085884871> , <http://isni-url.oclc.nl/isni/0000000114426211> , <http://viaf.org/viaf/41934078> ;
+        skos:note             "Expert en techniques de conservation des daguerréotypes. - Membre de la Daguerrian society (en 1992). - Enseigne l'anglais et l'histoire de la photographie (en 2011)"@fr , "Écrit aussi, avec son épouse : Gregorio, Daniela De, professeur de philosophie sous le pseudonyme collectif : Gregorio, Michael (19..-.... : romancier)"@fr ;
+        skos:prefLabel        "Michael G. Jacob"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12444063t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12444063t#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Expert en techniques de conservation des daguerréotypes. - Membre de la Daguerrian society (en 1992). - Enseigne l'anglais et l'histoire de la photographie (en 2011)" , "Écrit aussi, avec son épouse : Gregorio, Daniela De, professeur de philosophie sous le pseudonyme collectif : Gregorio, Michael (19..-.... : romancier)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://www.idref.fr/085884871> , <http://viaf.org/viaf/41934078> ;
+        foaf:familyName  "Jacob" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Michael G." ;
+        foaf:name        "Michael G. Jacob" ;
+        foaf:page        <http://data.bnf.fr/12444063/michael_g__jacob/> .
+
+<http://data.bnf.fr/ark:/12148/cb37424092w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12444063t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12444063t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12444063t#foaf:Person> .

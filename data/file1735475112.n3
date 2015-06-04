@@ -1,0 +1,80 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40256735w#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40260053n#frbr:Expression>
+        bnfroles:r312        <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149545479>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb149545479> ;
+        bnf-onto:FRBNF        14954547 ;
+        isni:identifierValid  "0000000114451468" ;
+        owl:sameAs            <http://isni.org/isni/0000000114451468> ;
+        skos:exactMatch       <http://isni.org/isni/0000000114451468> , <http://viaf.org/viaf/57772828> ;
+        skos:prefLabel        "John Condé (17..-1794)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40378088m#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40259724z#frbr:Expression>
+        bnfroles:r312        <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402478983#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40249465h#frbr:Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41512041r#frbr:Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149545479#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1794 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1794/> ;
+        bio:birth                      "17.." ;
+        bio:death                      "1794" ;
+        owl:sameAs                     <http://viaf.org/viaf/57772828> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b6949696q.thumbnail> ;
+        foaf:familyName                "Condé" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "John" ;
+        foaf:name                      "John Condé" ;
+        foaf:page                      <http://data.bnf.fr/14954547/john_conde/> .

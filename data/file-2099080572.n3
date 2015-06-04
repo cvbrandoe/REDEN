@@ -1,0 +1,115 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Photographe. - Expert et formateur en photographie numérique (en 2006)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/172447674> , <http://www.idref.fr/112011845> ;
+        foaf:familyName  "Gilbert" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Volker" ;
+        foaf:name        "Volker Gilbert" ;
+        foaf:page        <http://data.bnf.fr/15124774/volker_gilbert/> .
+
+<http://data.bnf.fr/ark:/12148/cb40206196d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43744645h#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41009732b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41098207c#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15124774w>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb15124774w> ;
+        bnf-onto:FRBNF      15124774 ;
+        skos:editorialNote  "Développer ses fichiers RAW / Volker Gilbert, impr. 2006. - . - Fabriquer ses accessoires d'éclairage photo / Cyrill Harnischmacher ; traduction et adaptation, Volker Gilbert, impr. 2007. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/112011845> , <http://viaf.org/viaf/172447674> ;
+        skos:note           "Photographe. - Expert et formateur en photographie numérique (en 2006)"@fr ;
+        skos:prefLabel      "Volker Gilbert"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43907176n#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411850479#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42727494b#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423482895#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41448180t#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42177672k#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41295648p#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42333367q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42697629q#frbr:Expression>
+        bnfroles:r10         <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435090525#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43744814s#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42028985s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15124774w#foaf:Person> .

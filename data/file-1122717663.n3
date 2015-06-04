@@ -1,0 +1,80 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb394985323#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42300669w#frbr:Expression>
+        bnfroles:r500        <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39498088b#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40125741s#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437063789#frbr:Expression>
+        bnfroles:r500        <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40090146x#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb442128577#frbr:Expression>
+        bnfroles:r500        <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14674230n>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb14674230n> ;
+        bnf-onto:FRBNF      14674230 ;
+        skos:editorialNote  "Les fausses confidences [spectacle] / mise en scène Jean-Louis Thamin ; avec Frédéric Constant (Dorante)...-Paris, Théâtre Silvia Monfort, 2005. - . - IMDB. - http://www.imdb.com/name/nm0176005/. - 2006-05-22"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/293729315> , <http://www.idref.fr/100509010> ;
+        skos:note           "Acteur et metteur en scène. - Directeur artistique de la compagnie Les Affinités électives"@fr ;
+        skos:prefLabel      "Frédéric Constant (acteur)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40990077g#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        bnfroles:r500        <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Acteur et metteur en scène. - Directeur artistique de la compagnie Les Affinités électives" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://www.idref.fr/100509010> , <http://viaf.org/viaf/293729315> ;
+        foaf:familyName  "Constant" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Frédéric" ;
+        foaf:name        "Frédéric Constant" ;
+        foaf:page        <http://data.bnf.fr/14674230/frederic_constant/> .
+
+<http://data.bnf.fr/ark:/12148/cb427877994#frbr:Expression>
+        bnfroles:r500        <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14674230n#foaf:Person> .

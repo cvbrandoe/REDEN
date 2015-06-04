@@ -1,0 +1,67 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb159339994>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb159339994> ;
+        bnf-onto:FRBNF        15933999 ;
+        isni:identifierValid  "0000000121408177" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121408177> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000121408177> , <http://viaf.org/viaf/78795062> ;
+        skos:note             "Journaliste de la presse écrite et de la télévision (en 2008)"@fr ;
+        skos:prefLabel        "Béatrice Massenet"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42419372h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42378838j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste de la presse écrite et de la télévision (en 2008)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/78795062> ;
+        foaf:familyName  "Massenet" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Béatrice" ;
+        foaf:name        "Béatrice Massenet" ;
+        foaf:page        <http://data.bnf.fr/15933999/beatrice_massenet/> .
+
+<http://data.bnf.fr/ark:/12148/cb41384709s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41452297k#frbr:Expression>
+        bnfroles:r450        <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> ;
+        marcrel:ivr          <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42373762x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42002800f#frbr:Expression>
+        bnfroles:r450        <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> ;
+        marcrel:ivr          <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb159339994#foaf:Person> .

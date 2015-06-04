@@ -1,0 +1,75 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1962 ;
+        rdagroup2elements:biographicalInformation
+                "Auteur et illustrateur d'ouvrages pour la jeunesse" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> , <http://id.loc.gov/vocabulary/iso639-2/kor> ;
+        owl:sameAs          <http://www.idref.fr/140057897> , <http://viaf.org/viaf/31938944> ;
+        foaf:familyName     "Lee" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Ho-Baek" ;
+        foaf:name           "Ho-Baek Lee" ;
+        foaf:page           <http://data.bnf.fr/14614885/ho-baek_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb39933001v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41467199d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14614885b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14614885b> ;
+        bnf-onto:FRBNF        14614885 ;
+        isni:identifierValid  "000000011951291X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000011951291X> ;
+        skos:altLabel         "호백 이"@fr , "Ho-Baig Li"@fr , "Ho-Paik Yi"@fr , "Lee Ho-Baek"@fr , "Ho-Päk I"@fr ;
+        skos:editorialNote    "LC authorities : Lee, Ho Baek. - http://authorities.loc.gov. - 2005-03-21 BnF Service coréen. - . -"@fr , "Quelle coquine cette lapine ! / Ho Baek Lee, 2005. - . - National library of Korea. - http://nl.go.kr. - 2005-03-29"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000011951291X> , <http://viaf.org/viaf/31938944> , <http://www.idref.fr/140057897> ;
+        skos:note             "Auteur et illustrateur d'ouvrages pour la jeunesse"@fr ;
+        skos:prefLabel        "Ho-Baek Lee"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43391403n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb434044804#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb433931724#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb433914040#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43409390c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14614885b#foaf:Person> .

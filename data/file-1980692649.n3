@@ -1,0 +1,62 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb36371644p#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "16.." ;
+        bio:death                      "16.." ;
+        owl:sameAs                     <http://viaf.org/viaf/231008> ;
+        foaf:familyName                "Montaigne" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/14441716/montaigne/> .
+
+<http://data.bnf.fr/ark:/12148/cb36371643b#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30967099r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36371646c#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30967098d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14441716s>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb14441716s> ;
+        bnf-onto:FRBNF      14441716 ;
+        skos:editorialNote  "Observations sur des traitéz faits par le sieur Berthelot concernant les salpêtres et poudres, où il est monstré clairement qu'il a surpris le Conseil du Roy et profité induement de plus de deux millions cinq cens mil livres depuis l'année 1663, jusques en la présente 1671 / [par Montaigne], 1671. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/231008> ;
+        skos:prefLabel      "Montaigne (négociant en poudres et salpêtres, 16..-16..?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb309671004#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14441716s#foaf:Person> .

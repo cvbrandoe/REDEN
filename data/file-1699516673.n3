@@ -1,0 +1,53 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb36697680x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13188831t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13188831t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13188831t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13188831t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13188831t> ;
+        bnf-onto:FRBNF        13188831 ;
+        isni:identifierValid  "0000000011081812" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000011081812> ;
+        skos:exactMatch       <http://viaf.org/viaf/14913548> , <http://isni-url.oclc.nl/isni/0000000011081812> , <http://www.idref.fr/03542723X> ;
+        skos:note             "Agriculteur"@fr ;
+        skos:prefLabel        "Franck Roux (1893-1964)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13188831t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13188831t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1893 ;
+        bnf-onto:lastYear              1964 ;
+        rdagroup2elements:biographicalInformation
+                "Agriculteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1893/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1964/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1893-09-25" ;
+        bio:death                      "1964-04-10" ;
+        owl:sameAs                     <http://www.idref.fr/03542723X> , <http://viaf.org/viaf/14913548> ;
+        foaf:birthday                  "09-25" ;
+        foaf:familyName                "Roux" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Franck" ;
+        foaf:name                      "Franck Roux" ;
+        foaf:page                      <http://data.bnf.fr/13188831/franck_roux/> .
+
+<http://data.bnf.fr/13188831/franck_roux/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13188831t#foaf:Person> .

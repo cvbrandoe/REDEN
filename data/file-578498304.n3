@@ -1,0 +1,97 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb404902070#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42144300j#frbr:Expression>
+        bnfroles:r4040       <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        marcrel:dnr          <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1959 ;
+        rdagroup2elements:biographicalInformation
+                "Dirige les éditions Sixtus de 1989 à 1999. - Critique d'art. - Directeur du Centre du livre d'artiste à Saint Yrieix depuis 1999" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/078054184> , <http://viaf.org/viaf/205968315> ;
+        foaf:familyName     "Mathieu" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Didier" ;
+        foaf:name           "Didier Mathieu" ;
+        foaf:page           <http://data.bnf.fr/15937333/didier_mathieu/> .
+
+<http://data.bnf.fr/ark:/12148/cb42616595b#frbr:Expression>
+        bnfroles:r380        <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38676578q#frbr:Expression>
+        bnfroles:r4040       <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        marcrel:dnr          <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41463671f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400514496#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15937333h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15937333h> ;
+        bnf-onto:FRBNF        15937333 ;
+        isni:identifierValid  "0000000398579251" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000398579251> ;
+        skos:exactMatch       <http://www.idref.fr/078054184> , <http://isni-url.oclc.nl/isni/0000000398579251> , <http://viaf.org/viaf/205968315> ;
+        skos:note             "Dirige les éditions Sixtus de 1989 à 1999. - Critique d'art. - Directeur du Centre du livre d'artiste à Saint Yrieix depuis 1999"@fr ;
+        skos:prefLabel        "Didier Mathieu"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422518864#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb405659290#frbr:Expression>
+        bnfroles:r2190       <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        marcrel:prd          <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42706208q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42143957x#frbr:Expression>
+        bnfroles:r4040       <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        marcrel:dnr          <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390860163#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40299300p#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15937333h#foaf:Person> .

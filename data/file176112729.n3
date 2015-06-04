@@ -1,0 +1,39 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14953717p>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb14953717p> ;
+        bnf-onto:FRBNF  14953717 ;
+        skos:altLabel   "Philippe de Bourbon (1668-1671)"@fr , "Philippe de France (duc d'Anjou, 1668-1671)"@fr ;
+        skos:note       "Deuxième fils de Louis XIV et frère du Grand dauphin"@fr ;
+        skos:prefLabel  "Philippe (duc d'Anjou, 1668-1671)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb14953717p#foaf:Person> .
+
+<http://data.bnf.fr/14953717/philippe/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14953717p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14953717p#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1668 ;
+        bnf-onto:lastYear              1671 ;
+        rdagroup2elements:biographicalInformation
+                "Deuxième fils de Louis XIV et frère du Grand dauphin" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1668/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1671/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1668" ;
+        bio:death                      "1671" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b6945341g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b103351511.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6945342w.thumbnail> ;
+        foaf:familyName                "Philippe" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/14953717/philippe/> .

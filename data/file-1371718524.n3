@@ -1,0 +1,66 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person>
+        bnf-onto:firstYear              1907 ;
+        bnf-onto:lastYear               1962 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur. - Saxophoniste (alto) et chef d'orchestre de jazz" ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1907/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1962/> ;
+        rdagroup2elements:placeOfBirth  "Morristown (N. J.)" ;
+        bio:birth                       "1907-10-19" ;
+        bio:death                       "1962-07-12" ;
+        owl:sameAs                      <http://viaf.org/viaf/37102240> ;
+        foaf:birthday                   "10-19" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k8808719j.thumbnail> ;
+        foaf:familyName                 "Kahn" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Roger Wolfe" ;
+        foaf:name                       "Roger Wolfe Kahn" ;
+        foaf:page                       <http://data.bnf.fr/13895820/roger_wolfe_kahn/> .
+
+<http://data.bnf.fr/ark:/12148/cb38046796j#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb379255199#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb380559068#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb378187521#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38127068c#frbr:Expression>
+        bnfroles:r1040       <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> ;
+        marcrel:cnd          <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb377797452#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37798878g#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13895820v#foaf:Person> .

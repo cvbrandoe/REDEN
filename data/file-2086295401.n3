@@ -1,0 +1,79 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb388659463#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42336957s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40124958t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366626625#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1935 ;
+        rdagroup2elements:biographicalInformation
+                "Ancien élève de l'Ecole nationale d'administration (1964-1965). - Administrateur civil. - Directeur général du \"Courrier picard\" (1978-1985), délégué général de la Cité du spectacle d'Alforville et président du Centre d'action culturelle de Douai (en 1992)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/031917283> , <http://viaf.org/viaf/61612692> ;
+        foaf:familyName     "Roux" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Bernard" ;
+        foaf:name           "Bernard Roux" ;
+        foaf:page           <http://data.bnf.fr/12304326/bernard_roux/> .
+
+<http://data.bnf.fr/ark:/12148/cb424945924#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36618326w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc7548w/ca3173#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12304326f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12304326f> ;
+        bnf-onto:FRBNF        12304326 ;
+        isni:identifierValid  "0000000000447428" ;
+        owl:sameAs            <http://isni.org/isni/0000000000447428> ;
+        skos:editorialNote    "L'économie contemporaine du spectacle vivant / Bernard Roux, 1992. - . - WW, France 1994-1995. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/031917283> , <http://isni.org/isni/0000000000447428> , <http://viaf.org/viaf/61612692> ;
+        skos:note             "Ancien élève de l'Ecole nationale d'administration (1964-1965). - Administrateur civil. - Directeur général du \"Courrier picard\" (1978-1985), délégué général de la Cité du spectacle d'Alforville et président du Centre d'action culturelle de Douai (en 1992)"@fr ;
+        skos:prefLabel        "Bernard Roux"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36676747q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12304326f#foaf:Person> .

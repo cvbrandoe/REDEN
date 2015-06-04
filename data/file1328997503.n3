@@ -1,0 +1,34 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14695126s#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/107603210> ;
+        foaf:familyName  "Philippe" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Hélène" ;
+        foaf:name        "Hélène Philippe" ;
+        foaf:page        <http://data.bnf.fr/14695126/helene_philippe/> .
+
+<http://data.bnf.fr/ark:/12148/cb394802564#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14695126s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14695126s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14695126s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14695126s>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14695126s> ;
+        bnf-onto:FRBNF   14695126 ;
+        skos:exactMatch  <http://viaf.org/viaf/107603210> ;
+        skos:prefLabel   "Hélène Philippe (metteur en scène)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14695126s#foaf:Person> .

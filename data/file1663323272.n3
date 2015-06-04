@@ -1,0 +1,88 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb35379713g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35688649p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399884972#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361885846#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37175296k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35801519g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1940 ;
+        rdagroup2elements:biographicalInformation
+                "Prêtre du diocèse de Meaux (ordonné en 1965). - Professeur d'Écriture sainte en France et en Afrique (en 1993)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/028255135> , <http://viaf.org/viaf/61556697> ;
+        foaf:familyName     "Rolland" ;
+        foaf:givenName      "Philippe" ;
+        foaf:name           "Philippe Rolland" ;
+        foaf:page           <http://data.bnf.fr/12012848/philippe_rolland/> .
+
+<http://data.bnf.fr/ark:/12148/cb36605409n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12012848b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12012848b> ;
+        bnf-onto:FRBNF        12012848 ;
+        isni:identifierValid  "0000000117661399" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000117661399> ;
+        skos:editorialNote    "\"Sois le berger de mes brebis\" : la mission du prêtre dans le monde / Philippe Rolland, 1993. - . - Ordo de Meaux, 1983. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000117661399> , <http://www.idref.fr/028255135> , <http://viaf.org/viaf/61556697> ;
+        skos:note             "Prêtre du diocèse de Meaux (ordonné en 1965). - Professeur d'Écriture sainte en France et en Afrique (en 1993)"@fr ;
+        skos:prefLabel        "Philippe Rolland"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35465843p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40025952t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35606527z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12012848b#foaf:Person> .

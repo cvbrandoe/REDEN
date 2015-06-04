@@ -1,0 +1,45 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb166505620#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://viaf.org/viaf/170000175> ;
+        foaf:familyName  "James" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Judith" ;
+        foaf:name        "Judith James" ;
+        foaf:page        <http://data.bnf.fr/16650562/judith_james/> .
+
+<http://data.bnf.fr/ark:/12148/cb43580088n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb166505620#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb166505620#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166505620#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42792049n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb166505620#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb166505620#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166505620#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb166505620>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb166505620> ;
+        bnf-onto:FRBNF        16650562 ;
+        isni:identifierValid  "0000000118922802" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000118922802> ;
+        skos:editorialNote    "L'ange du passé / Judith James, impr. 2012. - . - LC authorities. - http://authorities.loc.gov. - 2012-12-19"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000118922802> , <http://viaf.org/viaf/170000175> ;
+        skos:prefLabel        "Judith James"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb166505620#foaf:Person> .

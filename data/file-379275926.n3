@@ -1,0 +1,51 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb16209467w>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16209467w> ;
+        bnf-onto:FRBNF      16209467 ;
+        skos:editorialNote  "Le carnet de campagne du commandant Giraud : documents recueillis, classés et mis en ordre / par le commandant Grandin, 1898. - . - BN Cat. gén. : Giraud (Commandant). - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/122219438> ;
+        skos:note           "Commandant"@fr ;
+        skos:prefLabel      "Jean-Baptiste Giraud (1772-1813)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16209467w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16209467w#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1772 ;
+        bnf-onto:lastYear               1813 ;
+        rdagroup2elements:biographicalInformation
+                "Commandant" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1772/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1813/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Châteauneuf (Var)" ;
+        rdagroup2elements:placeOfDeath  "Châteauneuf (Var)" ;
+        bio:birth                       "1772-01-15" ;
+        bio:death                       "1813-05-12" ;
+        owl:sameAs                      <http://viaf.org/viaf/122219438> ;
+        foaf:birthday                   "01-15" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k5675396v.thumbnail> ;
+        foaf:familyName                 "Giraud" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jean-Baptiste" ;
+        foaf:name                       "Jean-Baptiste Giraud" ;
+        foaf:page                       <http://data.bnf.fr/16209467/jean-baptiste_giraud/> .
+
+<http://data.bnf.fr/ark:/12148/cb34081420j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16209467w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16209467w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16209467w#foaf:Person> .

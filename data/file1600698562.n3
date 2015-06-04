@@ -1,0 +1,64 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb34952222v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120866900>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb120866900> ;
+        bnf-onto:FRBNF        12086690 ;
+        isni:identifierValid  "0000000114738207" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114738207> ;
+        skos:editorialNote    "Listening to the cicadas : a study of Plato's \"Phaedrus\" / G.R.F. Ferrari, 1987. - . - LC Authorities. - http://authorities.loc.gov. - 2013-04-29"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000114738207> , <http://www.idref.fr/076308103> , <http://viaf.org/viaf/64032640> ;
+        skos:note             "Professeur de philosophie, Yale university, New Haven, Conn; (en 1987)"@fr ;
+        skos:prefLabel        "Giovanni R. F. Ferrari"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39092168v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb375690536#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425602608#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1954 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de philosophie, Yale university, New Haven, Conn; (en 1987)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/076308103> , <http://viaf.org/viaf/64032640> ;
+        foaf:familyName     "Ferrari" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Giovanni R. F." ;
+        foaf:name           "Giovanni R. F. Ferrari" ;
+        foaf:page           <http://data.bnf.fr/12086690/giovanni_r__f__ferrari/> .
+
+<http://data.bnf.fr/ark:/12148/cb40925854s#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120866900#foaf:Person> .

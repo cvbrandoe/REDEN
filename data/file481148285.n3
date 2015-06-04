@@ -1,0 +1,243 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38238064m#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43843571q#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13899606q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Shirley_Scott> , <http://catalogue.bnf.fr/ark:/12148/cb13899606q> ;
+        bnf-onto:FRBNF        13899606 ;
+        isni:identifierValid  "0000000114778495" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114778495> ;
+        skos:editorialNote    "Trio classics. Vol. 1 [Enregistrement sonore] / Shirley Scott, org. électr... [et al.]. Prestige 9020492400. - . - Bulletin du Hot club de France, n ° 511, 2002. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/084289708> , <http://dbpedia.org/resource/Shirley_Scott> , <http://viaf.org/viaf/94481587> , <http://isni-url.oclc.nl/isni/0000000114778495> , <http://fr.wikipedia.org/wiki/Shirley_Scott> ;
+        skos:note             "Musicienne de jazz. - Joue de l'orgue Hammond"@fr ;
+        skos:prefLabel        "Shirley Scott (1934-2002)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38501580f#frbr:Expression>
+        bnfroles:r1590       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37787712t#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392450976#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42343832n#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1934 ;
+        bnf-onto:lastYear               2002 ;
+        rdagroup2elements:biographicalInformation
+                "Musicienne de jazz. - Joue de l'orgue Hammond" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1934/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/2002/> ;
+        rdagroup2elements:placeOfBirth  "Philadelphie (Pa.)" ;
+        rdagroup2elements:placeOfDeath  "Philadelphie (Pa.)" ;
+        bio:birth                       "1934-03-14" ;
+        bio:death                       "2002-03-10" ;
+        owl:sameAs                      <http://viaf.org/viaf/94481587> , <http://www.idref.fr/084289708> , <http://dbpedia.org/resource/Shirley_Scott> ;
+        foaf:birthday                   "03-14" ;
+        foaf:familyName                 "Scott" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Shirley" ;
+        foaf:name                       "Shirley Scott" ;
+        foaf:page                       <http://data.bnf.fr/13899606/shirley_scott/> .
+
+<http://data.bnf.fr/ark:/12148/cb425183446#frbr:Expression>
+        bnfroles:r1597       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38138091b#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423689498#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38608583b#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382447685#frbr:Expression>
+        bnfroles:r1590       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38098777s#frbr:Expression>
+        bnfroles:r1590       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382371085#frbr:Expression>
+        bnfroles:r1590       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38612037j#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38612038w#frbr:Expression>
+        bnfroles:r1560       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384692035#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414432232#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38612047v#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42650279n#frbr:Expression>
+        bnfroles:r1560       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39296801t#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38131689r#frbr:Expression>
+        bnfroles:r1590       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38612044t#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383053570#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383673640#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb377897260#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38291795c#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39179443s#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38207081b#frbr:Expression>
+        bnfroles:r1590       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38248114j#frbr:Expression>
+        bnfroles:r1560       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38226099k#frbr:Expression>
+        bnfroles:r1590       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38146146h#frbr:Expression>
+        bnfroles:r1590       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40085870q#frbr:Expression>
+        bnfroles:r1590       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41323358d#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38133053k#frbr:Expression>
+        bnfroles:r1590       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42682176f#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38612049j#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39179425v#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38508594t#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423688897#frbr:Expression>
+        bnfroles:r1599       <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13899606q#foaf:Person> .

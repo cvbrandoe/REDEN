@@ -1,0 +1,70 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12519558c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12519558c> ;
+        bnf-onto:FRBNF        12519558 ;
+        isni:identifierValid  "0000000117867696" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000117867696> ;
+        skos:exactMatch       <http://viaf.org/viaf/164645352> , <http://www.idref.fr/03443965X> , <http://isni-url.oclc.nl/isni/0000000117867696> ;
+        skos:note             "Traduit du grec en français"@fr , "Helléniste"@fr ;
+        skos:prefLabel        "Raphaël Dreyfus"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349288915#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb371015066#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Traduit du grec en français" , "Helléniste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/164645352> , <http://www.idref.fr/03443965X> ;
+        foaf:familyName  "Dreyfus" ;
+        foaf:givenName   "Raphaël" ;
+        foaf:name        "Raphaël Dreyfus" ;
+        foaf:page        <http://data.bnf.fr/12519558/raphael_dreyfus/> .
+
+<http://data.bnf.fr/ark:/12148/cb370639165#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb424569519#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345971040#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354541241#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34740141t#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12519558c#foaf:Person> .

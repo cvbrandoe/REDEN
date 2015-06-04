@@ -1,0 +1,72 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb124799425>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb124799425> ;
+        bnf-onto:FRBNF        12479942 ;
+        isni:identifierValid  "0000000081696556" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081696556> ;
+        skos:editorialNote    "BN Cat. gén.. - . - Bn Cat. gén. suppl.. - . -"@fr , "The Bantu of Western Kenya : with special reference to the Vugusu and Logoli / Günter Wagner, 1994 [Reprod. de l'éd. de 1970, publ. originale 1949]. - . - Library of Congress authorities. - http://authorities.loc.gov. - 2003-08-04"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/100294567> , <http://www.idref.fr/03399935X> , <http://isni-url.oclc.nl/isni/0000000081696556> ;
+        skos:note             "Ethnologue. - A été chercheur à l'Institut international des langues et civilisations africaines"@fr ;
+        skos:prefLabel        "Günter Wagner (1908-1952)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37424785j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32409538k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32117114p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37199670c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb339175447#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1908 ;
+        bnf-onto:lastYear              1952 ;
+        rdagroup2elements:biographicalInformation
+                "Ethnologue. - A été chercheur à l'Institut international des langues et civilisations africaines" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1908/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1952/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1908" ;
+        bio:death                      "1952" ;
+        owl:sameAs                     <http://www.idref.fr/03399935X> , <http://viaf.org/viaf/100294567> ;
+        foaf:familyName                "Wagner" ;
+        foaf:givenName                 "Günter" ;
+        foaf:name                      "Günter Wagner" ;
+        foaf:page                      <http://data.bnf.fr/12479942/gunter_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb316135612#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124799425#foaf:Person> .

@@ -1,0 +1,88 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb30304613v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303046146#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1796 ;
+        bnf-onto:lastYear               1879 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en médecine (Paris). - Auditeur et maître des Requêtes. - Conseiller d'Etat. - Homme politique. - Membre du Conseil municipal de Niort (1830-1869), maire de Niort (1840-1843). - Conseiller général des Deux-Sèvres (1839), président du Conseil général (1845). - Député des Deux-Sèvres (circonscription de Niort, 1834-1837, 1842-1846, 1849-1870)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1796/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1879/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Science politique" , "Médecine" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/610/> , <http://dewey.info/class/320/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Niort" ;
+        rdagroup2elements:placeOfDeath  "Niort" ;
+        bio:birth                       "1796-03-30" ;
+        bio:death                       "1879-01-24" ;
+        owl:sameAs                      <http://viaf.org/viaf/120722263> ;
+        foaf:birthday                   "03-30" ;
+        foaf:familyName                 "David" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Ferdinand" ;
+        foaf:name                       "Ferdinand David" ;
+        foaf:page                       <http://data.bnf.fr/10523070/ferdinand_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb30304619x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30304618k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> .
+
+<http://data.bnf.fr/10523070/ferdinand_david/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30304616w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303046177#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10523070b>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb10523070b> ;
+        bnf-onto:FRBNF      10523070 ;
+        skos:altLabel       "Citoyen David (1796-1879)"@fr , "Ferdinand Benjamin David (1796-1879)"@fr ;
+        skos:editorialNote  "Assemblée nationale. Rapport... (Remboursement des sommes versées au Trésor en vertu de l'arrêté du 20 mars 1848), par le citoyen David,... Séance du 25 juillet 1848, 1848. - . - Assemblée nationale législative. Rapport... (Réunion des communes de Dandésigny et de Ligniers-Langoust à la commune de Verrue, Vienne), par M. Ferdinand David,... Séance du 26 juillet 1849, 1849. - . -"@fr , "ABF. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/120722263> ;
+        skos:note           "Docteur en médecine (Paris). - Auditeur et maître des Requêtes. - Conseiller d'Etat. - Homme politique. - Membre du Conseil municipal de Niort (1830-1869), maire de Niort (1840-1843). - Conseiller général des Deux-Sèvres (1839), président du Conseil général (1845). - Député des Deux-Sèvres (circonscription de Niort, 1834-1837, 1842-1846, 1849-1870)"@fr ;
+        skos:prefLabel      "Ferdinand David (1796-1879)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30304615j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10523070b#foaf:Person> .

@@ -1,0 +1,52 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb361264021#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12239106x#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12239106x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12239106x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12239106x>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12239106x> ;
+        bnf-onto:FRBNF        12239106 ;
+        isni:identifierValid  "0000000117807896" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000117807896> ;
+        skos:altLabel         "Jean I David (imprimeur, 15..-156.?)"@fr , "Jean David I (imprimeur, 15..-156.?)"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000117807896> , <http://www.idref.fr/082063540> , <http://viaf.org/viaf/120684853> ;
+        skos:note             "De 1543 à 1545, associé à René Houdouyn et à Pasquier Le Tellier, travaille pour Charles L'Angelier ; puis associé à Jean Langlois jusqu'en 1550"@fr ;
+        skos:prefLabel        "Jean David (imprimeur, 15..-156.?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12239106x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12239106x#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "De 1543 à 1545, associé à René Houdouyn et à Pasquier Le Tellier, travaille pour Charles L'Angelier ; puis associé à Jean Langlois jusqu'en 1550" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1501-1600/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1501-1600/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1543-1564" ;
+        bio:birth                      "15.." ;
+        bio:death                      "156." ;
+        owl:sameAs                     <http://www.idref.fr/082063540> , <http://viaf.org/viaf/120684853> ;
+        foaf:familyName                "David" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean David" ;
+        foaf:page                      <http://data.bnf.fr/12239106/jean_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb30634004c#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12239106x#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12239106x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12239106x#foaf:Person> .

@@ -1,0 +1,66 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb42708651f#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37561501d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13608658h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13608658h> ;
+        bnf-onto:FRBNF        13608658 ;
+        isni:identifierValid  "0000000114751057" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114751057> ;
+        skos:editorialNote    "Keepers of the motherland : German texts by Jewish women writers / Dagmar C.G. Lorenz, cop. 1997. - . - Internet, http://corc.oclc.org, 2001-02-08. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/74025791> , <http://isni-url.oclc.nl/isni/0000000114751057> ;
+        skos:note             "Spécialiste de la littérature allemande. - Professeur, Ohio state university, Columbus (en 1997)"@fr , "Écrit aussi en allemand"@fr ;
+        skos:prefLabel        "Dagmar C. G. Lorenz"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1948 ;
+        rdagroup2elements:biographicalInformation
+                "Spécialiste de la littérature allemande. - Professeur, Ohio state university, Columbus (en 1997)" , "Écrit aussi en allemand" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/74025791> ;
+        foaf:familyName     "Lorenz" ;
+        foaf:givenName      "Dagmar C. G." ;
+        foaf:name           "Dagmar C. G. Lorenz" ;
+        foaf:page           <http://data.bnf.fr/13608658/dagmar_c__g__lorenz/> .
+
+<http://data.bnf.fr/ark:/12148/cb410251951#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38971241v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401718236#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390047355#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13608658h#foaf:Person> .

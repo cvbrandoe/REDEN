@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37412331t#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373644810#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35427376x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37565659z#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122754325>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb122754325> ;
+        bnf-onto:FRBNF        12275432 ;
+        isni:identifierValid  "0000000116057552" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000116057552> ;
+        skos:editorialNote    "An introduction to European legal history / by O. F. Robinson, T. D. Fergus and W. M. Gordon, 1985. - . - BLNA, 1994-03 : Gordon, William M. (William Morrison), 1933-. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000116057552> , <http://viaf.org/viaf/22201480> , <http://www.idref.fr/103917101> ;
+        skos:note             "Juriste. - Professeur au Département d'histoire du droit de l'Université de Glasgow (en 1985)"@fr ;
+        skos:prefLabel        "William Morrison Gordon"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37454417v#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122754325#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1933 ;
+        rdagroup2elements:biographicalInformation
+                "Juriste. - Professeur au Département d'histoire du droit de l'Université de Glasgow (en 1985)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/103917101> , <http://viaf.org/viaf/22201480> ;
+        foaf:familyName     "Gordon" ;
+        foaf:givenName      "William Morrison" ;
+        foaf:name           "William Morrison Gordon" ;
+        foaf:page           <http://data.bnf.fr/12275432/william_morrison_gordon/> .

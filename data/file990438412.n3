@@ -1,0 +1,59 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb35375073f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12846832x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12846832x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12846832x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12846832x#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1736 ;
+        bnf-onto:lastYear               1819 ;
+        rdagroup2elements:biographicalInformation
+                "Ingénieur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1736/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1819/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Sciences de l'ingénieur" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/620/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Greenock (Écosse, Royaume-Uni)" ;
+        bio:birth                       "1736-01-13" ;
+        bio:death                       "1819" ;
+        owl:sameAs                      <http://viaf.org/viaf/22269445> , <http://dbpedia.org/resource/James_Watt> ;
+        foaf:birthday                   "01-13" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k201284j.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Watt_James_von_Breda.jpg?width=300> ;
+        foaf:familyName                 "Watt" ;
+        foaf:givenName                  "James" ;
+        foaf:name                       "James Watt" ;
+        foaf:page                       <http://data.bnf.fr/12846832/james_watt/> .
+
+<http://data.bnf.fr/ark:/12148/cb12846832x>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/James_Watt> , <http://catalogue.bnf.fr/ark:/12148/cb12846832x> ;
+        bnf-onto:FRBNF        12846832 ;
+        isni:identifierValid  "0000000121238286" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121238286> ;
+        skos:editorialNote    "James Watt / par Albert Lévy, 2002 [document électronique : reprod. de l'éd. de 1882]. - . - Robert 2. - . -"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/James_Watt> , <http://isni-url.oclc.nl/isni/0000000121238286> , <http://viaf.org/viaf/22269445> , <http://dbpedia.org/resource/James_Watt> ;
+        skos:note             "Ingénieur"@fr ;
+        skos:prefLabel        "James Watt (1736-1819)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12846832x#foaf:Person> .
+
+<http://data.bnf.fr/12846832/james_watt/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12846832x#foaf:Person> .

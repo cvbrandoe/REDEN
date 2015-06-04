@@ -1,0 +1,115 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Naturaliste et photographe" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://viaf.org/viaf/91604254> , <http://www.idref.fr/057014965> ;
+        foaf:familyName  "Fletcher" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Neil" ;
+        foaf:name        "Neil Fletcher" ;
+        foaf:page        <http://data.bnf.fr/12951838/neil_fletcher/> .
+
+<http://data.bnf.fr/ark:/12148/cb35771541x#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb129518385>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb129518385> ;
+        bnf-onto:FRBNF        12951838 ;
+        isni:identifierValid  "0000000109242485" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109242485> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000109242485> , <http://viaf.org/viaf/91604254> , <http://www.idref.fr/057014965> ;
+        skos:note             "Naturaliste et photographe"@fr ;
+        skos:prefLabel        "Neil Fletcher"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37652879c#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36993777v#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356028761#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35812969k#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37631642t#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41044812m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39981554c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40120958v#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41271121w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42739351g#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37631641g#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427355632#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357248612#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39923462z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35854424j#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129518385#foaf:Person> .

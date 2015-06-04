@@ -1,0 +1,60 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb363448670#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb156026450#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb156026450#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156026450#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb156026450>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb156026450> ;
+        bnf-onto:FRBNF        15602645 ;
+        isni:identifierValid  "0000000119533569" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000119533569> ;
+        skos:editorialNote    "Weller, Falsche Druckorte : dévoile Paris pour une occurrence de 1602. - . - Brunet, G. Impr. imaginaires : idem. - . - Rép. 16 s. : le mentionne à tort comme un nom réel à Villefranche en 1599. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/113641540> , <http://viaf.org/viaf/99617984> , <http://isni-url.oclc.nl/isni/0000000119533569> ;
+        skos:note             "Pseudonyme qui, sous l'adresse de \"Villefranche\" ou \"Ville-Franc(h)e\", dissimule de 1599 à 1687 au moins des éditions, françaises pour la plupart, de polémiques autour de la présence de la Compagnie de Jésus en France (ouvrages du P. Louis Richeome et d'Étienne Pasquier en particulier)"@fr ;
+        skos:prefLabel        "Guillaume Grenier (imprimeur-libraire imaginaire, 16..-17..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb156026450#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39371297k#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb156026450#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb156026450#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156026450#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411761855#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb156026450#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb156026450#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156026450#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb156026450#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Pseudonyme qui, sous l'adresse de \"Villefranche\" ou \"Ville-Franc(h)e\", dissimule de 1599 à 1687 au moins des éditions, françaises pour la plupart, de polémiques autour de la présence de la Compagnie de Jésus en France (ouvrages du P. Louis Richeome et d'Étienne Pasquier en particulier)" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1501-1600/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1599-1687" ;
+        bio:birth                      "15.." ;
+        bio:death                      "16.." ;
+        owl:sameAs                     <http://www.idref.fr/113641540> , <http://viaf.org/viaf/99617984> ;
+        foaf:familyName                "Grenier" ;
+        foaf:givenName                 "Guillaume" ;
+        foaf:name                      "Guillaume Grenier" ;
+        foaf:page                      <http://data.bnf.fr/15602645/guillaume_grenier/> .
+
+<http://data.bnf.fr/ark:/12148/cb31063995g#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb156026450#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb156026450#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb156026450#foaf:Person> .

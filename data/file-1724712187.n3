@@ -1,0 +1,49 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb43705903t#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb16666890q#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb16666890q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16666890q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16666890q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb16666890q> ;
+        bnf-onto:FRBNF        16666890 ;
+        isni:identifierValid  "0000000114733940" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114733940> ;
+        skos:editorialNote    "Le dernier d'entre nous / Neil Gordon ; traduit de l'anglais (États-Unis) par Éric Moreau, DL 2013. - . - LC authorities. - http://authorities.loc.gov/. - 2013-03-01"@fr ;
+        skos:exactMatch       <http://www.idref.fr/172459605> , <http://viaf.org/viaf/59918000> , <http://isni-url.oclc.nl/isni/0000000114733940> ;
+        skos:note             "Romancier. - Enseigne la littérature comparée à l'Université américaine de Paris"@fr ;
+        skos:prefLabel        "Neil Gordon"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb16666890q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435384201#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16666890q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16666890q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16666890q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16666890q#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1958 ;
+        rdagroup2elements:biographicalInformation
+                "Romancier. - Enseigne la littérature comparée à l'Université américaine de Paris" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/172459605> , <http://viaf.org/viaf/59918000> ;
+        foaf:familyName     "Gordon" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Neil" ;
+        foaf:name           "Neil Gordon" ;
+        foaf:page           <http://data.bnf.fr/16666890/neil_gordon/> .

@@ -1,0 +1,37 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb125174218#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1955 ;
+        rdagroup2elements:biographicalInformation
+                "Sculpteur coréen" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/kor> ;
+        owl:sameAs          <http://www.idref.fr/080074944> ;
+        foaf:familyName     "Lee" ;
+        foaf:givenName      "Kyu-Min" ;
+        foaf:name           "Kyu-Min Lee" ;
+        foaf:page           <http://data.bnf.fr/12517421/kyu-min_lee/> .
+
+<http://data.bnf.fr/12517421/kyu-min_lee/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb125174218#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125174218>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb125174218> ;
+        bnf-onto:FRBNF      12517421 ;
+        skos:altLabel       "Kyu-Min I"@fr ;
+        skos:editorialNote  "BN Service coréen. - . - Lee Kyu-Min : exposition 3-17 novembre 1994 / Délégation permanente de la République de Corée auprès de l'UNESCO, [1995]. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/080074944> ;
+        skos:note           "Sculpteur coréen"@fr ;
+        skos:prefLabel      "Kyu-Min Lee"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb125174218#foaf:Person> .

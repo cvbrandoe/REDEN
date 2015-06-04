@@ -1,0 +1,79 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40411541k#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43678517d#frbr:Expression>
+        bnfroles:r414        <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37145536x#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149767452>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb149767452> ;
+        bnf-onto:FRBNF   14976745 ;
+        skos:exactMatch  <http://viaf.org/viaf/276819787> ;
+        skos:note        "Photographe. - Successeur de Dujardin Frères. - Pratique la gravure héliographique"@fr ;
+        skos:prefLabel   "Paul Dujardin (photographe, 18..-19..)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40379779t#frbr:Expression>
+        bnfroles:r3060       <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> ;
+        marcrel:prt          <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb403797894#frbr:Expression>
+        bnfroles:r3060       <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> ;
+        marcrel:prt          <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411522821#frbr:Expression>
+        bnfroles:r4200       <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30978779h#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Photographe. - Successeur de Dujardin Frères. - Pratique la gravure héliographique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://viaf.org/viaf/276819787> ;
+        foaf:familyName                "Dujardin" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Paul" ;
+        foaf:name                      "Paul Dujardin" ;
+        foaf:page                      <http://data.bnf.fr/14976745/paul_dujardin/> .
+
+<http://data.bnf.fr/ark:/12148/cb40477717z#frbr:Expression>
+        bnfroles:r3060       <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> ;
+        marcrel:prt          <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149767452#foaf:Person> .

@@ -1,0 +1,60 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb435058036#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42782675n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42142687s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437744598#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1932 ;
+        rdagroup2elements:biographicalInformation
+                "A été enseignant en histoire et en allemand, conseiller municipal à Troyes pendant 18 ans. - Président de l'association Charles Baltet (en 2010). - Président national de l'association des Croqueurs de pommes (en 2012)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/142451843> , <http://viaf.org/viaf/217445417> ;
+        foaf:familyName     "Lefèvre" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jean" ;
+        foaf:name           "Jean Lefèvre" ;
+        foaf:page           <http://data.bnf.fr/16183396/jean_lefevre/> .
+
+<http://data.bnf.fr/ark:/12148/cb161833967>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb161833967> ;
+        bnf-onto:FRBNF   16183396 ;
+        skos:exactMatch  <http://www.idref.fr/142451843> , <http://viaf.org/viaf/217445417> ;
+        skos:note        "A été enseignant en histoire et en allemand, conseiller municipal à Troyes pendant 18 ans. - Président de l'association Charles Baltet (en 2010). - Président national de l'association des Croqueurs de pommes (en 2012)"@fr ;
+        skos:prefLabel   "Jean Lefèvre"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427295169#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb161833967#foaf:Person> .

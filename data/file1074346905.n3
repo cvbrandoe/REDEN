@@ -1,0 +1,56 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb16513002g#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1885 ;
+        bnf-onto:lastYear               1936 ;
+        rdagroup2elements:biographicalInformation
+                "Gouverneur de la France d'Outre-mer. - A été chef-adjoint du ministre des colonies et secrétaire général de la Réunion (1927). - Chef de cabinet du gouverneur de la Réunion (1925), gouverneur par intérim de la Réunion à 3 reprises" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1885/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1936/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Administration publique" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/350/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Nouméa" ;
+        bio:birth                       "1885-10-05" ;
+        bio:death                       "1936-03-15" ;
+        owl:sameAs                      <http://viaf.org/viaf/171182512> ;
+        foaf:birthday                   "10-05" ;
+        foaf:familyName                 "Fabre" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Louis" ;
+        foaf:name                       "Louis Fabre" ;
+        foaf:page                       <http://data.bnf.fr/16513002/louis_fabre/> .
+
+<http://data.bnf.fr/ark:/12148/cb16513002g>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16513002g> ;
+        bnf-onto:FRBNF      16513002 ;
+        skos:editorialNote  "ABF. - . - AfBA. - . - ANZO-BA. - . -"@fr , "Discours prononcé par M. Louis Fabre,... à l'ouverture de la 1ère session ordinaire du Conseil général le 1er juin 1933, 1933. - . - Le temps, 1936-03-07 (notice nécrologique). - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/171182512> ;
+        skos:note           "Gouverneur de la France d'Outre-mer. - A été chef-adjoint du ministre des colonies et secrétaire général de la Réunion (1927). - Chef de cabinet du gouverneur de la Réunion (1925), gouverneur par intérim de la Réunion à 3 reprises"@fr ;
+        skos:prefLabel      "Louis Fabre (1885-1936)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16513002g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42441571d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16513002g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16513002g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16513002g#foaf:Person> .
+
+<http://data.bnf.fr/16513002/louis_fabre/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb16513002g#foaf:Person> .

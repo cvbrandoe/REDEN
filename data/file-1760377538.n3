@@ -1,0 +1,39 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb15612096f>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb15612096f> ;
+        bnf-onto:FRBNF      15612096 ;
+        skos:editorialNote  "[Recueil. Dossiers biographiques Boutillier du Retail. Documentation sur Victor Bérard], 1938. - . - ABF. - . -"@fr ;
+        skos:note           "Négociant en vins. - A été président de la Chambre syndicale du commerce de gros des vins et spiritueux de Lyon et du département du Rhône. - Chevalier de la Légion d'honneur"@fr ;
+        skos:prefLabel      "Victor Bérard (18..-1938)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb15612096f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15612096f#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1938 ;
+        rdagroup2elements:biographicalInformation
+                "Négociant en vins. - A été président de la Chambre syndicale du commerce de gros des vins et spiritueux de Lyon et du département du Rhône. - Chevalier de la Légion d'honneur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1938/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "1938" ;
+        foaf:familyName                "Bérard" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Victor" ;
+        foaf:name                      "Victor Bérard" ;
+        foaf:page                      <http://data.bnf.fr/15612096/victor_berard/> .
+
+<http://data.bnf.fr/15612096/victor_berard/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb15612096f#foaf:Person> .

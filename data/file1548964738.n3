@@ -1,0 +1,62 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb41397600b#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42517812q#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12739475f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12739475f> ;
+        bnf-onto:FRBNF        12739475 ;
+        isni:identifierValid  "0000000083875363" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000083875363> ;
+        skos:altLabel         "Steve Tracy"@fr ;
+        skos:editorialNote    "A historical guide to Langston Hughes / edited by Steven C. Tracy, 2004. - . - LCNA. - http://authorities.loc.gov. - 2007-10-09"@fr ;
+        skos:exactMatch       <http://www.idref.fr/074447564> , <http://isni-url.oclc.nl/isni/0000000083875363> , <http://viaf.org/viaf/61672605> ;
+        skos:prefLabel        "Steven Carl Tracy"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb410448269#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1954 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/074447564> , <http://viaf.org/viaf/61672605> ;
+        foaf:familyName     "Tracy" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Steven Carl" ;
+        foaf:name           "Steven Carl Tracy" ;
+        foaf:page           <http://data.bnf.fr/12739475/steven_carl_tracy/> .
+
+<http://data.bnf.fr/ark:/12148/cb414517862#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb350612065#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12739475f#foaf:Person> .

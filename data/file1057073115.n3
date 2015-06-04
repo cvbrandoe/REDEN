@@ -1,0 +1,59 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14047425p#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1952 ;
+        rdagroup2elements:biographicalInformation
+                "Chanteur et guitariste de hard-rock" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:placeOfBirth  "New York (N.Y.)" ;
+        owl:sameAs                      <http://dbpedia.org/resource/Paul_Stanley_(artiste)> , <http://viaf.org/viaf/62764542> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/W0865-Hellfest2013_Kiss_PaulStanley_69905.JPG?width=300> ;
+        foaf:familyName                 "Stanley" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Paul" ;
+        foaf:name                       "Paul Stanley" ;
+        foaf:page                       <http://data.bnf.fr/14047425/paul_stanley/> .
+
+<http://data.bnf.fr/ark:/12148/cb14047425p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Paul_Stanley_(artiste)> , <http://catalogue.bnf.fr/ark:/12148/cb14047425p> ;
+        bnf-onto:FRBNF        14047425 ;
+        isni:identifierValid  "0000000078408680" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000078408680> ;
+        skos:editorialNote    "Alive ! Kiss [Enregistrement sonore] / Gene Simmons, Paul Stanley, Ace Frehley, Stephen Coronel, lyrics and music ; Kiss, voc. and instrumental. Casablanca CBLA72001. - . - IMDB. - http://www.imdb.com. - 2007-03-22"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/Paul_Stanley_(artiste)> , <http://isni-url.oclc.nl/isni/0000000078408680> , <http://fr.wikipedia.org/wiki/Paul_Stanley_(artiste)> , <http://viaf.org/viaf/62764542> ;
+        skos:note             "Chanteur et guitariste de hard-rock"@fr ;
+        skos:prefLabel        "Paul Stanley"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14047425p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38942497n#frbr:Expression>
+        bnfroles:r100        <http://data.bnf.fr/ark:/12148/cb14047425p#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb14047425p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14047425p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412243156#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14047425p#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14047425p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14047425p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38523679d#frbr:Expression>
+        bnfroles:r100        <http://data.bnf.fr/ark:/12148/cb14047425p#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb14047425p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14047425p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37802062r#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb14047425p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14047425p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14047425p#foaf:Person> .

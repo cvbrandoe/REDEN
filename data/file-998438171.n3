@@ -1,0 +1,59 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb30447438c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14575113v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14575113v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14575113v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14575113v#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1811 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1811/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Béziers" ;
+        bio:birth                       "1811" ;
+        bio:death                       "18.." ;
+        owl:sameAs                      <http://viaf.org/viaf/69174942> ;
+        foaf:familyName                 "Chevalier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Augustin" ;
+        foaf:name                       "Augustin Chevalier" ;
+        foaf:page                       <http://data.bnf.fr/14575113/augustin_chevalier/> .
+
+<http://data.bnf.fr/ark:/12148/cb319398858#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14575113v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14575113v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14575113v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14575113v>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb14575113v> ;
+        bnf-onto:FRBNF      14575113 ;
+        skos:editorialNote  "Le pêcheur de Portici / Augustin Chevalier, [1845]. - . - Quérard. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/69174942> ;
+        skos:prefLabel      "Augustin Chevalier (1811-18..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb14575113v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31939886m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14575113v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14575113v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14575113v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39286206p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14575113v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14575113v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14575113v#foaf:Person> .

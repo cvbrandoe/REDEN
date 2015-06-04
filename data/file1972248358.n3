@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb33500650v#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12238789v#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12238789v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12238789v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41159123x#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12238789v#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12238789v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12238789v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12238789v#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1810 ;
+        rdagroup2elements:biographicalInformation
+                "Libraire. - Fils du libraire londonien Richard I Baldwin. En apprentissage d'août 1732 à août 1739, s'établit à son compte en 1743 ou peu avant. Publie le \"London Magazine\" de 1746 à 1784. Semble s'être retiré peu après 1801" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1810/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1743-1801" ;
+        bio:birth                      "172." ;
+        bio:death                      "1810-03-30" ;
+        owl:sameAs                     <http://www.idref.fr/067012736> , <http://viaf.org/viaf/99225451> ;
+        foaf:familyName                "Baldwin" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Robert" ;
+        foaf:name                      "Robert Baldwin" ;
+        foaf:page                      <http://data.bnf.fr/12238789/robert_baldwin/> .
+
+<http://data.bnf.fr/ark:/12148/cb39345154c#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12238789v#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12238789v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12238789v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12238789v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12238789v> ;
+        bnf-onto:FRBNF        12238789 ;
+        isni:identifierValid  "0000000359676841" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000359676841> ;
+        skos:editorialNote    "Timperley. - . - Plomer, Bushnell, Dix. - . - Maxted. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000359676841> , <http://www.idref.fr/067012736> , <http://viaf.org/viaf/99225451> ;
+        skos:note             "Libraire. - Fils du libraire londonien Richard I Baldwin. En apprentissage d'août 1732 à août 1739, s'établit à son compte en 1743 ou peu avant. Publie le \"London Magazine\" de 1746 à 1784. Semble s'être retiré peu après 1801"@fr ;
+        skos:prefLabel        "Robert Baldwin (172.?-1810)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12238789v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb393412133#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12238789v#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12238789v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12238789v#foaf:Person> .

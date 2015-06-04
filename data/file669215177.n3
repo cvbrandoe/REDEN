@@ -1,0 +1,76 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb355422374#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en histoire contemporaine. - Enseigne l'histoire des juifs de France à l'Institut national des langues et civilisations orientales (en 1992)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/027070514> , <http://viaf.org/viaf/9851928> ;
+        foaf:familyName  "Philippe" ;
+        foaf:givenName   "Béatrice" ;
+        foaf:name        "Béatrice Philippe" ;
+        foaf:page        <http://data.bnf.fr/11919563/beatrice_philippe/> .
+
+<http://data.bnf.fr/ark:/12148/cb41063151r#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34876654s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346799420#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41268329p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36601908q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34670216b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37173124z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11919563h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11919563h> ;
+        bnf-onto:FRBNF        11919563 ;
+        isni:identifierValid  "0000000108684601" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108684601> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000108684601> , <http://www.idref.fr/027070514> , <http://viaf.org/viaf/9851928> ;
+        skos:note             "Docteur en histoire contemporaine. - Enseigne l'histoire des juifs de France à l'Institut national des langues et civilisations orientales (en 1992)"@fr ;
+        skos:prefLabel        "Béatrice Philippe"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11919563h#foaf:Person> .

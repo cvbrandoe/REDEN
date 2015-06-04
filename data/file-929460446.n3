@@ -1,0 +1,72 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/12070819/andre_henry/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347045683#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb369533021#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1934 ;
+        rdagroup2elements:biographicalInformation
+                "Instituteur, syndicaliste et homme politique. - Ministre du Temps libre (1981-1983). - Inspecteur général de l'administration de l'Éducation nationale (1989-1995)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/028986458> , <http://dbpedia.org/resource/André_Henry_(syndicaliste)> , <http://viaf.org/viaf/51712785> ;
+        foaf:familyName     "Henry" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "André" ;
+        foaf:name           "André Henry" ;
+        foaf:page           <http://data.bnf.fr/12070819/andre_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb37019863t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37598687j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42382391c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12070819h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12070819h> , <http://fr.wikipedia.org/wiki/André_Henry_(syndicaliste)> ;
+        bnf-onto:FRBNF        12070819 ;
+        isni:identifierValid  "0000000031458306" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000031458306> ;
+        skos:editorialNote    "Le Temps libre : conférence de presse et discours / de Mr André Henry, Ministre du temps libre, 1982. - . - Au temps de la force tranquille : entretiens avec André Henry et Guy Putfin / Jacques Pommatau, impr. 2011. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/028986458> , <http://fr.wikipedia.org/wiki/André_Henry_(syndicaliste)> , <http://isni-url.oclc.nl/isni/0000000031458306> , <http://dbpedia.org/resource/André_Henry_(syndicaliste)> , <http://viaf.org/viaf/51712785> ;
+        skos:note             "Instituteur, syndicaliste et homme politique. - Ministre du Temps libre (1981-1983). - Inspecteur général de l'administration de l'Éducation nationale (1989-1995)"@fr ;
+        skos:prefLabel        "André Henry"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37701015t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12070819h#foaf:Person> .

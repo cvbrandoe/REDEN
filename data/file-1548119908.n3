@@ -1,0 +1,65 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb39982616b#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Réalisateur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://www.idref.fr/113576005> , <http://viaf.org/viaf/54353210> ;
+        foaf:familyName  "Charles" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Yannick" ;
+        foaf:name        "Yannick Charles" ;
+        foaf:page        <http://data.bnf.fr/14086661/yannick_charles/> .
+
+<http://data.bnf.fr/ark:/12148/cb410093834#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14086661p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14086661p> ;
+        bnf-onto:FRBNF        14086661 ;
+        isni:identifierValid  "0000000001074678" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000001074678> ;
+        skos:exactMatch       <http://viaf.org/viaf/54353210> , <http://www.idref.fr/113576005> , <http://isni-url.oclc.nl/isni/0000000001074678> ;
+        skos:note             "Réalisateur"@fr ;
+        skos:prefLabel        "Yannick Charles"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38329878q#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38431330s#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40963801j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383601622#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14086661p#foaf:Person> .

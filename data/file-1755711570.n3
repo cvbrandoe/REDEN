@@ -1,0 +1,107 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40157530p#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412734158#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37357395x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1906 ;
+        bnf-onto:lastYear               2005 ;
+        rdagroup2elements:biographicalInformation
+                "Physicien théoricien de la bombe nucléaire. - A soutenu une thèse en physique à Munich, Allemagne (1928). - Professeur, Cornell university, Ithaca, N.Y.. - Prix Nobel de physique (1967). - Auteur de travaux scientifiques sur la théorie des atomes, les collisions atomiques" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1906/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/2005/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Strasbourg" ;
+        rdagroup2elements:placeOfDeath  "Ithaca (N.Y.)" ;
+        bio:birth                       "1906-07-02" ;
+        bio:death                       "2005-03-06" ;
+        owl:sameAs                      <http://dbpedia.org/resource/Hans_Bethe> , <http://www.idref.fr/031560288> , <http://viaf.org/viaf/32057187> ;
+        foaf:birthday                   "07-02" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Hans_Bethe.jpg?width=300> ;
+        foaf:familyName                 "Bethe" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Hans Albrecht" ;
+        foaf:name                       "Hans Albrecht Bethe" ;
+        foaf:page                       <http://data.bnf.fr/12275191/hans_albrecht_bethe/> .
+
+<http://data.bnf.fr/ark:/12148/cb331058998#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> .
+
+<http://data.bnf.fr/12275191/hans_albrecht_bethe/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12275191v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Hans_Bethe> , <http://catalogue.bnf.fr/ark:/12148/cb12275191v> ;
+        bnf-onto:FRBNF        12275191 ;
+        isni:identifierValid  "0000000110237544" ;
+        owl:sameAs            <http://isni.org/isni/0000000110237544> ;
+        skos:altLabel         "Hans Bethe (1906-2005)"@fr ;
+        skos:editorialNote    "Intermediate quantum mechanics / Hans A. Bethe, Roman Jackiw, 1986. - . - Monde, 2005-03-11. - . -"@fr , "Dictionnaire des inventeurs et inventions / [sous la dir. de] Thomas de Galiana, Michel Rival, 1996. - . - BN Cat. gén. 1960-1969. - . -"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Hans_Bethe> , <http://isni.org/isni/0000000110237544> , <http://dbpedia.org/resource/Hans_Bethe> , <http://viaf.org/viaf/32057187> , <http://www.idref.fr/031560288> ;
+        skos:note             "Physicien théoricien de la bombe nucléaire. - A soutenu une thèse en physique à Munich, Allemagne (1928). - Professeur, Cornell university, Ithaca, N.Y.. - Prix Nobel de physique (1967). - Auteur de travaux scientifiques sur la théorie des atomes, les collisions atomiques"@fr ;
+        skos:prefLabel        "Hans Albrecht Bethe (1906-2005)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37353375b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345657098#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373538584#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39096807j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb371618215#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb375511989#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31811196g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12275191v#foaf:Person> .

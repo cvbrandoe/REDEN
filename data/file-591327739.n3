@@ -1,0 +1,42 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+<http://data.bnf.fr/ark:/12148/cb14674023t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14674023t> ;
+        bnf-onto:FRBNF        14674023 ;
+        isni:identifierValid  "0000000080808499" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000080808499> ;
+        skos:editorialNote    "Giordano Ferrari [Document d'archives] : notes biographiques, 1961-1971. - . - . - http://www.castellodeiburattini.it. - 2011-03-17"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000080808499> , <http://viaf.org/viaf/1110774> ;
+        skos:note             "Marionnettiste italien"@fr ;
+        skos:prefLabel        "Giordano Ferrari (1905-1987)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14674023t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14674023t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1905 ;
+        bnf-onto:lastYear              1987 ;
+        rdagroup2elements:biographicalInformation
+                "Marionnettiste italien" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1905/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1987/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        bio:birth                      "1905" ;
+        bio:death                      "1987" ;
+        owl:sameAs                     <http://viaf.org/viaf/1110774> ;
+        foaf:familyName                "Ferrari" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Giordano" ;
+        foaf:name                      "Giordano Ferrari" ;
+        foaf:page                      <http://data.bnf.fr/14674023/giordano_ferrari/> .

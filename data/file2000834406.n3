@@ -1,0 +1,50 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb381380664#frbr:Expression>
+        bnfroles:r1450       <http://data.bnf.fr/ark:/12148/cb142177853#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb142177853#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb142177853#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb142177853>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb142177853> ;
+        bnf-onto:FRBNF      14217785 ;
+        skos:editorialNote  "Au Duc des Lombards / préface de Jean-Michel Proust, impr. 2010. - . - Musique info hebdo, n° 376, 2006. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/2682290> ;
+        skos:note           "Saxophoniste de jazz. - Producteur-animateur de radio et télévision, directeur artistique des disques Blue note et de la salle de jazz le Duc des Lombards. - Fondateur de la marque phonographique Big Blue records"@fr ;
+        skos:prefLabel      "Jean-Michel Proust"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb142177853#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423337476#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb142177853#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb142177853#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb142177853#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb142177853#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Saxophoniste de jazz. - Producteur-animateur de radio et télévision, directeur artistique des disques Blue note et de la salle de jazz le Duc des Lombards. - Fondateur de la marque phonographique Big Blue records" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/2682290> ;
+        foaf:familyName  "Proust" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Jean-Michel" ;
+        foaf:name        "Jean-Michel Proust" ;
+        foaf:page        <http://data.bnf.fr/14217785/jean-michel_proust/> .
+
+<http://data.bnf.fr/ark:/12148/cb414601495#frbr:Expression>
+        bnfroles:r1450       <http://data.bnf.fr/ark:/12148/cb142177853#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb142177853#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb142177853#foaf:Person> .

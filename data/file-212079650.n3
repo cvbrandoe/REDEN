@@ -1,0 +1,54 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb389416629#frbr:Expression>
+        bnfroles:r4020       <http://data.bnf.fr/ark:/12148/cb120960044#foaf:Person> ;
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120960044#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120960044#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120960044#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34977528c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120960044#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120960044#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120960044#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35489252c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120960044#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120960044#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120960044#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120960044>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb120960044> ;
+        bnf-onto:FRBNF        12096004 ;
+        isni:identifierValid  "000000012134111X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000012134111X> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000012134111X> , <http://viaf.org/viaf/56638041> , <http://www.idref.fr/029305810> ;
+        skos:note             "Spécialiste de la littérature française du XIXe siècle. - Co-directeur des \"Cahiers Lautréamont\" (en 1991)"@fr ;
+        skos:prefLabel        "Sylvain-Christian David"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120960044#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120960044#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1957 ;
+        rdagroup2elements:biographicalInformation
+                "Spécialiste de la littérature française du XIXe siècle. - Co-directeur des \"Cahiers Lautréamont\" (en 1991)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/56638041> , <http://www.idref.fr/029305810> ;
+        foaf:familyName     "David" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Sylvain-Christian" ;
+        foaf:name           "Sylvain-Christian David" ;
+        foaf:page           <http://data.bnf.fr/12096004/sylvain-christian_david/> .

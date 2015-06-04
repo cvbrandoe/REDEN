@@ -1,0 +1,48 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37235325p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125287833#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125287833#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125287833#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125287833#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Ecclésiastique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "17.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/73962426> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k455173.thumbnail> ;
+        foaf:familyName                "Michelet" ;
+        foaf:givenName                 "Omer-Louis-François-Antoine" ;
+        foaf:name                      "Omer-Louis-François-Antoine Michelet" ;
+        foaf:page                      <http://data.bnf.fr/12528783/omer-louis-francois-antoine_michelet/> .
+
+<http://data.bnf.fr/ark:/12148/cb125287833>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb125287833> ;
+        bnf-onto:FRBNF        12528783 ;
+        isni:identifierValid  "0000000000628675" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000000628675> ;
+        skos:editorialNote    "Rétractation et profession de foi de Omer-Louis-François-Antoine Michelet, prêtre et vicaire de feu Claude Fauchet, évêque constitutionnel du Calvados, du 12 août 1797. - . - BN Cat. gén. : Michelet (Abbé Omer-Louis-François-Antoine). - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000000628675> , <http://viaf.org/viaf/73962426> ;
+        skos:note             "Ecclésiastique"@fr ;
+        skos:prefLabel        "Omer-Louis-François-Antoine Michelet"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb125287833#foaf:Person> .

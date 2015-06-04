@@ -1,0 +1,56 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12539017t>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12539017t> ;
+        bnf-onto:FRBNF      12539017 ;
+        skos:editorialNote  "[Médaille floue de Jean Grenier] / Roger Judrin. [Écrire et publier] / Jean Grenier ; dessin de Madeleine Grenier, 1982. - . - Madeleine Grenier, Lumières océanes, DL 2013. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/225746231> , <http://www.idref.fr/034657932> ;
+        skos:note           "Peintre. - Fille du philosophe : Grenier, Jean (1898-1971)"@fr ;
+        skos:prefLabel      "Madeleine Grenier (1929-1982)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12539017t#foaf:Person> .
+
+<http://data.bnf.fr/12539017/madeleine_grenier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12539017t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12539017t#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1929 ;
+        bnf-onto:lastYear               1982 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre. - Fille du philosophe : Grenier, Jean (1898-1971)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1929/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1982/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Peinture" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/750/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Marseille (Bouches-du-Rhône)" ;
+        bio:birth                       "1929-11-05" ;
+        bio:death                       "1982-01-02" ;
+        owl:sameAs                      <http://www.idref.fr/034657932> , <http://viaf.org/viaf/225746231> ;
+        foaf:birthday                   "11-05" ;
+        foaf:familyName                 "Grenier" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Madeleine" ;
+        foaf:name                       "Madeleine Grenier" ;
+        foaf:page                       <http://data.bnf.fr/12539017/madeleine_grenier/> .
+
+<http://data.bnf.fr/ark:/12148/cb34690682n#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12539017t#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12539017t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12539017t#foaf:Person> .

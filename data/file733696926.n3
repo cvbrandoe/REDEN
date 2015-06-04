@@ -1,0 +1,89 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1900 ;
+        bnf-onto:lastYear              1998 ;
+        rdagroup2elements:biographicalInformation
+                "Jésuite. - Historien de la philosophie. - Fondateur de la nouvelle série des Archives de Philosophie (en 1955)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1998/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Philosophie" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/100/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1900" ;
+        bio:death                      "1998" ;
+        owl:sameAs                     <http://www.idref.fr/029018811> , <http://viaf.org/viaf/4953682> ;
+        foaf:familyName                "Régnier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Marcel" ;
+        foaf:name                      "Marcel Régnier" ;
+        foaf:page                      <http://data.bnf.fr/12073266/marcel_regnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb37484770r#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34870964g#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33066307q#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> .
+
+<http://data.bnf.fr/12073266/marcel_regnier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35717831n#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34925426w#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb329879272#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37370628b#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb330917313#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120732663>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb120732663> ;
+        bnf-onto:FRBNF      12073266 ;
+        skos:editorialNote  "Hegel critique de la doctrine de la science de Fichte / R. Lauth ; trad. par R.P. M. Régnier et X. Tilliette, 1987. - . - CAT.INIST. - http://cat.inist.fr. - 2007-09-11"@fr ;
+        skos:exactMatch     <http://www.idref.fr/029018811> , <http://viaf.org/viaf/4953682> ;
+        skos:note           "Jésuite. - Historien de la philosophie. - Fondateur de la nouvelle série des Archives de Philosophie (en 1955)"@fr ;
+        skos:prefLabel      "Marcel Régnier (1900-1998)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb120732663#foaf:Person> .

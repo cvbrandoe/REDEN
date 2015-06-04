@@ -1,0 +1,63 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb34765093d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11915909v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11915909v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11915909v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11915909v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11915909v> ;
+        bnf-onto:FRBNF        11915909 ;
+        isni:identifierValid  "0000000000741352" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000000741352> ;
+        skos:editorialNote    "Originalité de la méthode Mézières / Françoise Mézières, 1984. - . - Monde, 1991-10-29 et 1991-11-05. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/027027120> , <http://viaf.org/viaf/12312475> , <http://isni-url.oclc.nl/isni/0000000000741352> ;
+        skos:note             "Masseur-kinésithérapeute, inventeur de la méthode Mézières"@fr ;
+        skos:prefLabel        "Françoise Mézières (1909-1991)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11915909v#foaf:Person> .
+
+<http://data.bnf.fr/11915909/francoise_mezieres/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11915909v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34709602n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11915909v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11915909v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11915909v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35773092x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11915909v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11915909v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11915909v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11915909v#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1909 ;
+        bnf-onto:lastYear              1991 ;
+        rdagroup2elements:biographicalInformation
+                "Masseur-kinésithérapeute, inventeur de la méthode Mézières" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1909/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1991/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1909-06-18" ;
+        bio:death                      "1991-10-17" ;
+        owl:sameAs                     <http://viaf.org/viaf/12312475> , <http://www.idref.fr/027027120> ;
+        foaf:birthday                  "06-18" ;
+        foaf:familyName                "Mézières" ;
+        foaf:givenName                 "Françoise" ;
+        foaf:name                      "Françoise Mézières" ;
+        foaf:page                      <http://data.bnf.fr/11915909/francoise_mezieres/> .

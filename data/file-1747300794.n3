@@ -1,0 +1,48 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/14976009/anne_poussart_de_fors_de_vigean_richelieu/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb149760098#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149760098#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1622 ;
+        bnf-onto:lastYear              1684 ;
+        rdagroup2elements:biographicalInformation
+                "Dame d'honneur de la Reine (1671) puis de la Dauphine (1679). - Epouse en premières noces, le 16 octobre 1644, François-Alexandre d'Albret, sire de Pons et comte de Marennes (16..-1648). - Epouse en secondes noces le duc de Richelieu, le 26 décembre 1649. - Fille de François Poussart, baron de Fors et sieur du Vigean et d'Anne de Neufbourg (1600-1682). - Soeur de Marthe du Vigean (1623-1665)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1622/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1684/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de la France" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1622" ;
+        bio:death                      "1684" ;
+        owl:sameAs                     <http://www.idref.fr/160170877> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b6945466n.thumbnail> ;
+        foaf:familyName                "Richelieu" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Anne Poussart de Fors de Vigean" ;
+        foaf:name                      "Anne Poussart de Fors de Vigean Richelieu" ;
+        foaf:page                      <http://data.bnf.fr/14976009/anne_poussart_de_fors_de_vigean_richelieu/> .
+
+<http://data.bnf.fr/ark:/12148/cb149760098>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb149760098> ;
+        bnf-onto:FRBNF   14976009 ;
+        skos:altLabel    "Anne du Vigent (1622-1684)"@fr , "Anne du Vigean (1622-1684)"@fr , "Anne Du Vigean (1622-1684)"@fr , "Anne Poussart de Fors de Vigean (1622-1684)"@fr ;
+        skos:exactMatch  <http://www.idref.fr/160170877> ;
+        skos:note        "Dame d'honneur de la Reine (1671) puis de la Dauphine (1679). - Epouse en premières noces, le 16 octobre 1644, François-Alexandre d'Albret, sire de Pons et comte de Marennes (16..-1648). - Epouse en secondes noces le duc de Richelieu, le 26 décembre 1649. - Fille de François Poussart, baron de Fors et sieur du Vigean et d'Anne de Neufbourg (1600-1682). - Soeur de Marthe du Vigean (1623-1665)"@fr ;
+        skos:prefLabel   "Anne Poussart de Fors de Vigean Richelieu (duchesse de, 1622-1684)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb149760098#foaf:Person> .

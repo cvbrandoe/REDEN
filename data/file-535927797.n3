@@ -1,0 +1,78 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb394998147#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43768344q#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb436138393#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43509570g#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        bnfroles:r230        <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14679750v>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14679750v> ;
+        bnf-onto:FRBNF   14679750 ;
+        skos:exactMatch  <http://viaf.org/viaf/294946937> ;
+        skos:note        "Musicienne, vidéaste, actrice et dramaturge"@fr ;
+        skos:prefLabel   "Kate France"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Musicienne, vidéaste, actrice et dramaturge" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/294946937> ;
+        foaf:familyName  "France" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Kate" ;
+        foaf:name        "Kate France" ;
+        foaf:page        <http://data.bnf.fr/14679750/kate_france/> .
+
+<http://data.bnf.fr/ark:/12148/cb39498839b#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427871686#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb442111750#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        bnfroles:r230        <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394947780#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14679750v#foaf:Person> .

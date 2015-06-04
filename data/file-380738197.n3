@@ -1,0 +1,35 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13955699x#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Vocaliste. - Rap" ;
+        owl:sameAs       <http://viaf.org/viaf/7580440> ;
+        foaf:familyName  "Bernstein" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Steven Jesse" ;
+        foaf:name        "Steven Jesse Bernstein" ;
+        foaf:page        <http://data.bnf.fr/13955699/steven_jesse_bernstein/> .
+
+<http://data.bnf.fr/ark:/12148/cb38229460c#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13955699x#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13955699x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13955699x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13955699x>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb13955699x> ;
+        bnf-onto:FRBNF   13955699 ;
+        skos:exactMatch  <http://viaf.org/viaf/7580440> ;
+        skos:note        "Vocaliste. - Rap"@fr ;
+        skos:prefLabel   "Steven Jesse Bernstein"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb13955699x#foaf:Person> .

@@ -1,0 +1,88 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40860429x#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40860542d#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb408605412#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb408604993#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40860543r#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40860615s#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb408603138#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40860356j#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Ingénieur de Cassini" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/17527535> ;
+        foaf:depiction   <http://gallica.bnf.fr/ark:/12148/btv1b7711516r.thumbnail> ;
+        foaf:familyName  "Regnard" ;
+        foaf:gender      "male" ;
+        foaf:page        <http://data.bnf.fr/15376227/regnard/> .
+
+<http://data.bnf.fr/ark:/12148/cb15376227v>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb15376227v> ;
+        bnf-onto:FRBNF   15376227 ;
+        skos:exactMatch  <http://viaf.org/viaf/17527535> ;
+        skos:note        "Ingénieur de Cassini"@fr ;
+        skos:prefLabel   "Regnard (cartographe)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40860775x#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb408603556#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40860357w#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15376227v#foaf:Person> .

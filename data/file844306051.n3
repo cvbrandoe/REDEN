@@ -1,0 +1,45 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb162140177#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Actrice" ;
+        owl:sameAs       <http://viaf.org/viaf/142419649> ;
+        foaf:familyName  "Delage" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Geneviève" ;
+        foaf:name        "Geneviève Delage" ;
+        foaf:page        <http://data.bnf.fr/16214017/genevieve_delage/> .
+
+<http://data.bnf.fr/ark:/12148/cb42232011v#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb162140177#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb162140177#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb162140177#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb424918284#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb162140177#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb162140177#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb162140177#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42488742w#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb162140177#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb162140177#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb162140177#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb162140177>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb162140177> ;
+        bnf-onto:FRBNF   16214017 ;
+        skos:exactMatch  <http://viaf.org/viaf/142419649> ;
+        skos:note        "Actrice"@fr ;
+        skos:prefLabel   "Geneviève Delage (actrice)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb162140177#foaf:Person> .

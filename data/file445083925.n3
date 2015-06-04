@@ -1,0 +1,60 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb438333113#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438359713#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43835536g#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438629203#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1952 ;
+        rdagroup2elements:biographicalInformation
+                "Éditrice et chef de produits à la Documentation française (en 2014)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/310540094> ;
+        foaf:familyName     "Lesage" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Dominique" ;
+        foaf:name           "Dominique Lesage" ;
+        foaf:page           <http://data.bnf.fr/16903381/dominique_lesage/> .
+
+<http://data.bnf.fr/ark:/12148/cb16903381x>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb16903381x> ;
+        bnf-onto:FRBNF   16903381 ;
+        skos:exactMatch  <http://viaf.org/viaf/310540094> ;
+        skos:note        "Éditrice et chef de produits à la Documentation française (en 2014)"@fr ;
+        skos:prefLabel   "Dominique Lesage"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43841938h#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16903381x#foaf:Person> .

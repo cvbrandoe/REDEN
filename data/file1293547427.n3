@@ -1,0 +1,69 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb411534250#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41153433m#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1959 ;
+        rdagroup2elements:biographicalInformation
+                "Parolier et compositeur de chansons. - Chanteur dans les groupes de rockabilly Les Alligators (1976), Pow Wow (1992) et RockSpell (2007). - Auteur et illustrateur de livres pour enfants et de bandes dessinées. - Peintre" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/71726734> ;
+        foaf:familyName     "Chennevière" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Alain" ;
+        foaf:name           "Alain Chennevière" ;
+        foaf:page           <http://data.bnf.fr/15793211/alain_chenneviere/> .
+
+<http://data.bnf.fr/ark:/12148/cb411534208#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411534986#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41153427p#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15793211v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15793211v> ;
+        bnf-onto:FRBNF        15793211 ;
+        isni:identifierValid  "0000000057128372" ;
+        owl:sameAs            <http://isni.org/isni/0000000057128372> ;
+        skos:editorialNote    "Disparu dans la foule [Musique imprimée] / paroles, Alain Chennevière & David Mignonneau ; musique, David Mignonneau ; interprété par Pow Wow, 2006. - . - Powweb. - http://powweb.free.fr. - 2008-09-30"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/71726734> , <http://isni.org/isni/0000000057128372> ;
+        skos:note             "Parolier et compositeur de chansons. - Chanteur dans les groupes de rockabilly Les Alligators (1976), Pow Wow (1992) et RockSpell (2007). - Auteur et illustrateur de livres pour enfants et de bandes dessinées. - Peintre"@fr ;
+        skos:prefLabel        "Alain Chennevière"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41153502m#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15793211v#foaf:Person> .

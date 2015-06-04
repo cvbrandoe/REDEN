@@ -1,0 +1,92 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb40466973j#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16516494s#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42572763c#frbr:Expression>
+        bnfroles:r524        <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411757758#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb404669606#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40466962w#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421858000#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> .
+
+<http://data.bnf.fr/12067662/lucian_freud/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16772738r#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1922 ;
+        bnf-onto:lastYear               2011 ;
+        rdagroup2elements:biographicalInformation
+                "D'origine autrichienne, installé à Londres en 1933, naturalisé britannique en 1939. - Peintre, sculpteur, dessinateur et graveur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1922/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/2011/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Peinture" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/750/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Berlin" ;
+        rdagroup2elements:placeOfDeath  "Londres" ;
+        bio:birth                       "1922-12-08" ;
+        bio:death                       "2011-07-20" ;
+        owl:sameAs                      <http://dbpedia.org/resource/Lucian_Freud> , <http://viaf.org/viaf/96543154> , <http://www.idref.fr/028946030> ;
+        foaf:birthday                   "12-08" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/LucienFreud.jpg?width=300> ;
+        foaf:familyName                 "Freud" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Lucian" ;
+        foaf:name                       "Lucian Freud" ;
+        foaf:page                       <http://data.bnf.fr/12067662/lucian_freud/> .
+
+<http://data.bnf.fr/ark:/12148/cb12067662k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12067662k> , <http://fr.wikipedia.org/wiki/Lucian_Freud> ;
+        bnf-onto:FRBNF        12067662 ;
+        isni:identifierValid  "0000000114526765" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114526765> ;
+        skos:editorialNote    "Lucian Freud, 1987. - . - Lucian Freud / Robert Hughes, 2002. - . - Lucian Freud : [exhibition, Tate Britain, 20 June - 22 September 2002, Fundació \"la Caixa\", Barcelona, 22 October 2002 - 12 January 2003, The Museum of contemporary art, Los Angeles, 9  February - 25 May 2003] / William Feaver, 2002. - . -"@fr , "[Conversation entre Lucian Freud et William Feaver] Contenu dans : Constable : le choix de Lucian Freud : [exposition]... Paris... 2002-2003, 2002. - . - Libération, 2011-07-22. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/028946030> , <http://viaf.org/viaf/96543154> , <http://fr.wikipedia.org/wiki/Lucian_Freud> , <http://dbpedia.org/resource/Lucian_Freud> , <http://isni-url.oclc.nl/isni/0000000114526765> ;
+        skos:note             "D'origine autrichienne, installé à Londres en 1933, naturalisé britannique en 1939. - Peintre, sculpteur, dessinateur et graveur"@fr ;
+        skos:prefLabel        "Lucian Freud (1922-2011)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12067662k#foaf:Person> .

@@ -1,0 +1,44 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb32821462b#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb15552191n#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb15552191n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15552191n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15552191n>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb15552191n> ;
+        bnf-onto:FRBNF   15552191 ;
+        skos:exactMatch  <http://viaf.org/viaf/47077536> , <http://www.idref.fr/085501158> ;
+        skos:note        "Titulaire d'un doctorat en droit (Université de Lille, 1913). - Avocat au Barreau de Lille"@fr ;
+        skos:prefLabel   "Fernand Lefèvre (juriste)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb15552191n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15552191n#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Titulaire d'un doctorat en droit (Université de Lille, 1913). - Avocat au Barreau de Lille" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/085501158> , <http://viaf.org/viaf/47077536> ;
+        foaf:familyName  "Lefèvre" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Fernand" ;
+        foaf:name        "Fernand Lefèvre" ;
+        foaf:page        <http://data.bnf.fr/15552191/fernand_lefevre/> .
+
+<http://data.bnf.fr/ark:/12148/cb37150293x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15552191n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15552191n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15552191n#foaf:Person> .

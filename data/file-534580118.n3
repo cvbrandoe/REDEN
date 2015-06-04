@@ -1,0 +1,50 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb372355973#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11909206n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11909206n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11909206n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11909206n#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1755 ;
+        bnf-onto:lastYear              1821 ;
+        rdagroup2elements:biographicalInformation
+                "Prêtre. - Député du bas-clergé aux États-généraux pour la province de Béarn et à l'Assemblée constituante. - Juge de paix du Canton de Nay (Pyrénées-Atlantiques) de 1798 à 1803. - Prêta le serment exigé par la Constitution civile du Clergé" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1755/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1821/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1755-05-07" ;
+        bio:death                      "1821" ;
+        owl:sameAs                     <http://www.idref.fr/026942828> , <http://viaf.org/viaf/59084325> ;
+        foaf:birthday                  "05-07" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k452387.thumbnail> ;
+        foaf:familyName                "Julien" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Julien" ;
+        foaf:page                      <http://data.bnf.fr/11909206/jean_julien/> .
+
+<http://data.bnf.fr/11909206/jean_julien/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11909206n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11909206n>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb11909206n> ;
+        bnf-onto:FRBNF   11909206 ;
+        skos:exactMatch  <http://viaf.org/viaf/59084325> , <http://www.idref.fr/026942828> ;
+        skos:note        "Prêtre. - Député du bas-clergé aux États-généraux pour la province de Béarn et à l'Assemblée constituante. - Juge de paix du Canton de Nay (Pyrénées-Atlantiques) de 1798 à 1803. - Prêta le serment exigé par la Constitution civile du Clergé"@fr ;
+        skos:prefLabel   "Jean Julien (1755-1821)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb11909206n#foaf:Person> .

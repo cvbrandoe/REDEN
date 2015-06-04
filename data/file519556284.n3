@@ -1,0 +1,132 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb325511889#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1866 ;
+        bnf-onto:lastYear              1925 ;
+        rdagroup2elements:biographicalInformation
+                "Physiologiste et biologiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1866/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1925/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Médecine" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/610/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1866" ;
+        bio:death                      "1925" ;
+        owl:sameAs                     <http://dbpedia.org/resource/René_Quinton> , <http://www.idref.fr/029629764> , <http://viaf.org/viaf/59116213> ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/René_Quinton_1908.jpg?width=300> , <http://gallica.bnf.fr/ark:/12148/bpt6k746094.thumbnail> ;
+        foaf:familyName                "Quinton" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "René" ;
+        foaf:name                      "René Quinton" ;
+        foaf:page                      <http://data.bnf.fr/12121456/rene_quinton/> .
+
+<http://data.bnf.fr/ark:/12148/cb42091770z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31166001q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31165999h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31166003d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32551187z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/12121456/rene_quinton/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30668055v#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31166000c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb365662129#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31226370q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311659985#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36635485c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36566213n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121214560>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb121214560> , <http://fr.wikipedia.org/wiki/René_Quinton> ;
+        bnf-onto:FRBNF        12121456 ;
+        isni:identifierValid  "0000000076897302" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000076897302> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000076897302> , <http://viaf.org/viaf/59116213> , <http://fr.wikipedia.org/wiki/René_Quinton> , <http://dbpedia.org/resource/René_Quinton> , <http://www.idref.fr/029629764> ;
+        skos:note             "Physiologiste et biologiste"@fr ;
+        skos:prefLabel        "René Quinton (1866-1925)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb365689899#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311660022#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35853704h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .

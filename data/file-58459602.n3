@@ -1,0 +1,65 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb35368283t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370593382#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35262812b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37452208v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12452429g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12452429g> ;
+        bnf-onto:FRBNF        12452429 ;
+        isni:identifierValid  "0000000107822400" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000107822400> ;
+        skos:editorialNote    "The correspondence of John Bartram / ed. by Edmund Berkeley and Dorothy Smith Berkeley, 1992. - . - LCNA (CD OCLC), 1994-09. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000107822400> , <http://viaf.org/viaf/59180208> , <http://www.idref.fr/033681384> ;
+        skos:note             "Historien des sciences et biographe"@fr ;
+        skos:prefLabel        "Edmund Berkeley"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35157784r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Historien des sciences et biographe" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://www.idref.fr/033681384> , <http://viaf.org/viaf/59180208> ;
+        foaf:familyName  "Berkeley" ;
+        foaf:givenName   "Edmund" ;
+        foaf:name        "Edmund Berkeley" ;
+        foaf:page        <http://data.bnf.fr/12452429/edmund_berkeley/> .
+
+<http://data.bnf.fr/ark:/12148/cb353888173#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12452429g#foaf:Person> .

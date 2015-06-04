@@ -1,0 +1,102 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb38931021v#frbr:Expression>
+        bnfroles:r1860       <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400411809#frbr:Expression>
+        bnfroles:r1850       <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38431339w#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390585150#frbr:Expression>
+        bnfroles:r1860       <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39275177g#frbr:Expression>
+        bnfroles:r1860       <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38526233q#frbr:Expression>
+        bnfroles:r1760       <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38521459r#frbr:Expression>
+        bnfroles:r1860       <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389266058#frbr:Expression>
+        bnfroles:r1860       <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39058514n#frbr:Expression>
+        bnfroles:r1860       <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Disc jockey et remixeur. - Membre du groupe Compulsion" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        owl:sameAs       <http://viaf.org/viaf/292957222> ;
+        foaf:familyName  "Lee" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Jacknife" ;
+        foaf:name        "Jacknife Lee" ;
+        foaf:page        <http://data.bnf.fr/14023913/jacknife_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb14023913p>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14023913p> ;
+        bnf-onto:FRBNF   14023913 ;
+        skos:exactMatch  <http://viaf.org/viaf/292957222> ;
+        skos:note        "Disc jockey et remixeur. - Membre du groupe Compulsion"@fr ;
+        skos:prefLabel   "Jacknife Lee"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38526410m#frbr:Expression>
+        bnfroles:r1860       <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38516978d#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384356328#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385393092#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392929312#frbr:Expression>
+        bnfroles:r1860       <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14023913p#foaf:Person> .

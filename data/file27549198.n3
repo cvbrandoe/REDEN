@@ -1,0 +1,27 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb16020003f#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1717 ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1717/> ;
+        rdagroup2elements:placeOfBirth  "Bonn [?]" ;
+        rdagroup2elements:placeOfDeath  "Bonn" ;
+        bio:birth                       "1717" ;
+        bio:death                       "1804-09-02" ;
+        owl:sameAs                      <http://viaf.org/viaf/292790622> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b69493120.thumbnail> ;
+        foaf:familyName                 "Rousseau" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Johann Franz" ;
+        foaf:name                       "Johann Franz Rousseau" .

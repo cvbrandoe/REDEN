@@ -1,0 +1,83 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:lastYear               1836 ;
+        rdagroup2elements:biographicalInformation
+                "Auteur dramatique et romancier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1836/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Londres" ;
+        bio:birth                       "18.." ;
+        bio:death                       "1836" ;
+        owl:sameAs                      <http://viaf.org/viaf/25003514> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6364947b.thumbnail> ;
+        foaf:familyName                 "Mars" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Prosper" ;
+        foaf:name                       "Prosper Mars" ;
+        foaf:page                       <http://data.bnf.fr/10280578/prosper_mars/> .
+
+<http://data.bnf.fr/ark:/12148/cb308904492#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30890451m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31166695j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311667051#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb308904508#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311666946#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30890452z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb308904539#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10280578g>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb10280578g> ;
+        bnf-onto:FRBNF      10280578 ;
+        skos:editorialNote  "Le concert de village, folie-vaudeville en 1 acte, par MM. Ch. Hubert et Prosper Mars, 1823. - . - Histoire des cafés de Paris : extraite des mémoires d'un viveur / revue et augmentée par M. Constantin, 1857 [p. 80-81]. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/25003514> ;
+        skos:note           "Auteur dramatique et romancier"@fr ;
+        skos:prefLabel      "Prosper Mars (18..?-1836)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb10280578g#foaf:Person> .

@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb140156134>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb140156134> ;
+        bnf-onto:FRBNF        14015613 ;
+        isni:identifierValid  "0000000083696533" ;
+        owl:sameAs            <http://isni.org/isni/0000000083696533> ;
+        skos:editorialNote    "L'amour sorcier / Falla, compositeur ; Nati Mistral mezzo-soprano, 2000. - . - La Perrichola / comédie musicale de Juan Ignacio Luca de Tena ; mise en scène de Luis Escobar ; [La Perrichola [et costumes] : Nati Mistral], Paris 1964. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/32195935> , <http://isni.org/isni/0000000083696533> ;
+        skos:note             "Actrice et chanteuse (mezzo-soprano). - Nom de scène de Macho Álvarez, Natividad"@fr ;
+        skos:prefLabel        "Nati Mistral"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37974334f#frbr:Expression>
+        bnfroles:r1130       <http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394640653#frbr:Expression>
+        bnfroles:r2080       <http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person> ;
+        marcrel:cst          <http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb378516161#frbr:Expression>
+        bnfroles:r1130       <http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37977356g#frbr:Expression>
+        bnfroles:r1130       <http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38481536f#frbr:Expression>
+        bnfroles:r1130       <http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb140156134#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1928 ;
+        rdagroup2elements:biographicalInformation
+                "Actrice et chanteuse (mezzo-soprano). - Nom de scène de Macho Álvarez, Natividad" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/sp> ;
+        owl:sameAs          <http://viaf.org/viaf/32195935> ;
+        foaf:depiction      <http://gallica.bnf.fr/ark:/12148/bpt6k8816754n.thumbnail> ;
+        foaf:familyName     "Mistral" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Nati" ;
+        foaf:name           "Nati Mistral" ;
+        foaf:page           <http://data.bnf.fr/14015613/nati_mistral/> .

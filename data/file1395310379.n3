@@ -1,0 +1,85 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb425333343#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42077700t#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411273461#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13176461z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13176461z> ;
+        bnf-onto:FRBNF        13176461 ;
+        isni:identifierValid  "0000000018772245" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000018772245> ;
+        skos:altLabel         "Peter De Bode"@fr ;
+        skos:editorialNote    "W. L. & J. Brusse's Uitgeversmaatschappij, 1903-1965 / onder red. van Sjoerd van Faassen, Hans Oldewarris en Kees Thomassen ; met bijdragen van Sjaak Hubregtse, Frank de Glas, Koosje Sierman... [et al.] ; samenstelling fondscatalogus onder verantwoordelijkheid van de Koninklijke Bibliotheek door Peter van Beest en Peter de Bode, cop. 1993. - . - Internet, telnet://www.konbib.nl, 1997-11-26 (Algemene catalogus KB). - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/32137119> , <http://isni-url.oclc.nl/isni/0000000018772245> ;
+        skos:note             "En poste à la Bibliothèque royale des Pays-Bas, La Haye (en 1993)"@fr ;
+        skos:prefLabel        "Peter de Bode"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37323521b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37316027j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42533387p#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37423518m#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1960 ;
+        rdagroup2elements:biographicalInformation
+                "En poste à la Bibliothèque royale des Pays-Bas, La Haye (en 1993)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ne#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/dut> ;
+        owl:sameAs          <http://viaf.org/viaf/32137119> ;
+        foaf:familyName     "Bode" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Peter de" ;
+        foaf:name           "Peter de Bode" ;
+        foaf:page           <http://data.bnf.fr/13176461/peter_de_bode/> .
+
+<http://data.bnf.fr/ark:/12148/cb37323519s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42077702h#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13176461z#foaf:Person> .

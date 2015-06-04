@@ -1,0 +1,69 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb384719021#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38308559z#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1936 ;
+        rdagroup2elements:biographicalInformation
+                "Acteur, scénariste, réalisateur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        owl:sameAs                      <http://viaf.org/viaf/51892628> , <http://www.idref.fr/119447126> ;
+        foaf:familyName                 "Valmont" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jean" ;
+        foaf:name                       "Jean Valmont" ;
+        foaf:page                       <http://data.bnf.fr/14056634/jean_valmont/> .
+
+<http://data.bnf.fr/ark:/12148/cb38161342w#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38529871n#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38157259k#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384719428#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb140566345>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb140566345> ;
+        bnf-onto:FRBNF        14056634 ;
+        isni:identifierValid  "0000000083823264" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000083823264> ;
+        skos:exactMatch       <http://www.idref.fr/119447126> , <http://viaf.org/viaf/51892628> , <http://isni-url.oclc.nl/isni/0000000083823264> ;
+        skos:note             "Acteur, scénariste, réalisateur"@fr ;
+        skos:prefLabel        "Jean Valmont"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb140566345#foaf:Person> .

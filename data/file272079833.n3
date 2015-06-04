@@ -1,0 +1,68 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38400369z#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38400518m#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381593340#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43716403w#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14111987q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Richard_LaSalle> , <http://catalogue.bnf.fr/ark:/12148/cb14111987q> ;
+        bnf-onto:FRBNF        14111987 ;
+        isni:identifierValid  "0000000399481221" ;
+        owl:sameAs            <http://isni.org/isni/0000000399481221> ;
+        skos:altLabel         "Richard LaSalle"@fr ;
+        skos:editorialNote    "La fureur des apaches [Multimédia multisupport] / Richard LaSalle, comp. 2013. - . - IMdB. - http://www.imdb.com/name/nm0006161. - 2013-12-26"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Richard_LaSalle> , <http://isni.org/isni/0000000399481221> , <http://dbpedia.org/resource/Richard_LaSalle> , <http://viaf.org/viaf/293970585> ;
+        skos:note             "Compositeur, chef d'orchestre, pianiste"@fr ;
+        skos:prefLabel        "Richard La Salle"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38158405f#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381584194#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14111987q#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1918 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur, chef d'orchestre, pianiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        owl:sameAs          <http://viaf.org/viaf/293970585> , <http://dbpedia.org/resource/Richard_LaSalle> ;
+        foaf:familyName     "La Salle" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Richard" ;
+        foaf:name           "Richard La Salle" ;
+        foaf:page           <http://data.bnf.fr/14111987/richard_la_salle/> .

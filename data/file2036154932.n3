@@ -1,0 +1,109 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb41381302j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421061417#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14568137c>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14568137c> ;
+        bnf-onto:FRBNF   14568137 ;
+        skos:exactMatch  <http://viaf.org/viaf/7631205> ;
+        skos:prefLabel   "Benjamin Samson"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421791135#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41381312v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb413902983#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb434779633#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41381789j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41381293d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392000944#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1975 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/7631205> ;
+        foaf:familyName     "Samson" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Benjamin" ;
+        foaf:name           "Benjamin Samson" ;
+        foaf:page           <http://data.bnf.fr/14568137/benjamin_samson/> .
+
+<http://data.bnf.fr/ark:/12148/cb399556738#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437299334#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427808584#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39146287h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423155769#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39238694b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14568137c#foaf:Person> .

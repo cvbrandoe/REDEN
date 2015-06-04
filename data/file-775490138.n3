@@ -1,0 +1,40 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12221314z>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12221314z> ;
+        bnf-onto:FRBNF      12221314 ;
+        skos:editorialNote  "Dickens of the Mounted / E. Nicol, ed., 1989. - . - LCNA, 1987-1992. - . -"@fr ;
+        skos:note           "Troisième fils de Charles Dickens"@fr ;
+        skos:prefLabel      "Francis Jeffrey Dickens (1844-1886)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12221314z#foaf:Person> .
+
+<http://data.bnf.fr/12221314/francis_jeffrey_dickens/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12221314z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12221314z#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1844 ;
+        bnf-onto:lastYear              1886 ;
+        rdagroup2elements:biographicalInformation
+                "Troisième fils de Charles Dickens" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1844/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1886/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1844-01-15" ;
+        bio:death                      "1886-06-11" ;
+        foaf:birthday                  "01-15" ;
+        foaf:familyName                "Dickens" ;
+        foaf:givenName                 "Francis Jeffrey" ;
+        foaf:name                      "Francis Jeffrey Dickens" ;
+        foaf:page                      <http://data.bnf.fr/12221314/francis_jeffrey_dickens/> .

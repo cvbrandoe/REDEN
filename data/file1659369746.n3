@@ -1,0 +1,66 @@
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpprop: <http://dbpedia.org/property/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://dbpedia.org/resource/Paul_LaRocque>
+        dbpprop:predecessor  <http://dbpedia.org/resource/Antoine_Racine> .
+
+<http://fr.dbpedia.org/resource/Antoine_Racine>
+        owl:sameAs  <http://dbpedia.org/resource/Antoine_Racine> .
+
+<http://en.wikipedia.org/wiki/Antoine_Racine>
+        foaf:primaryTopic  <http://dbpedia.org/resource/Antoine_Racine> .
+
+<http://dbpedia.org/resource/Antoine_Racine>
+        a                               owl:Thing , <http://schema.org/Person> , <http://dbpedia.org/class/yago/CausalAgent100007347> , <http://dbpedia.org/class/yago/SpiritualLeader109505153> , dbpedia-owl:Person , dbpedia-owl:ChristianBishop , <http://dbpedia.org/class/yago/Bishop109857200> , <http://dbpedia.org/class/yago/Clergyman109927451> , <http://umbel.org/umbel/rc/Bishop_Clerical> , <http://dbpedia.org/class/yago/Organism100004475> , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> , foaf:Person , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> , <http://dbpedia.org/class/yago/LivingThing100004258> , <http://dbpedia.org/class/yago/Leader109623038> , <http://dbpedia.org/class/yago/PhysicalEntity100001930> , <http://dbpedia.org/class/yago/YagoLegalActor> , <http://dbpedia.org/class/yago/19th-centuryRomanCatholicBishops> , <http://dbpedia.org/class/yago/Object100002684> , dbpedia-owl:Cleric , <http://umbel.org/umbel/rc/Cleric> , <http://wikidata.dbpedia.org/resource/Q5> , <http://dbpedia.org/class/yago/CanadianRomanCatholicBishops> , <http://dbpedia.org/class/yago/Person100007846> , dbpedia-owl:Agent , <http://wikidata.dbpedia.org/resource/Q215627> , <http://dbpedia.org/class/yago/YagoLegalActorGeo> , <http://dbpedia.org/class/yago/Whole100003553> , <http://dbpedia.org/class/yago/Priest110470779> ;
+        rdfs:comment                    "Mgr Antoine Racine (né le 26 janvier 1822, à Saint-Ambroise-de-la-Jeune-Lorette, près de Québec, au Canada, mort le 17 juillet 1893 à Sherbrooke à l'âge de 71 ans), premier évêque de Sherbrooke et des Cantons de l'Est."@fr , "Antoine Racine (January 26, 1822 – \tJuly 17, 1893) was a Canadian Roman Catholic priest and the 1st Bishop of Sherbrooke from 1874 to 1893. He is buried in the Cathedral in Sherbrooke."@en ;
+        rdfs:label                      "Antoine Racine"@fr , "Antoine Racine"@en ;
+        dbpedia-owl:abstract            "Antoine Racine (January 26, 1822 – \tJuly 17, 1893) was a Canadian Roman Catholic priest and the 1st Bishop of Sherbrooke from 1874 to 1893. He is buried in the Cathedral in Sherbrooke."@en , "Mgr Antoine Racine (né le 26 janvier 1822, à Saint-Ambroise-de-la-Jeune-Lorette, près de Québec, au Canada, mort le 17 juillet 1893 à Sherbrooke à l'âge de 71 ans), premier évêque de Sherbrooke et des Cantons de l'Est."@fr ;
+        dbpedia-owl:activeYearsEndYear  "1893+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:activeYearsStartYear
+                "1874+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:birthDate           "1822-01-26+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:birthYear           "1822+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:deathDate           "1893-07-17+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpedia-owl:deathPlace          <http://dbpedia.org/resource/Roman_Catholic_Archdiocese_of_Sherbrooke> ;
+        dbpedia-owl:deathYear           "1893+02:00"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        dbpedia-owl:thumbnail           <http://commons.wikimedia.org/wiki/Special:FilePath/Antoine_Racine.jpg?width=300> ;
+        dbpedia-owl:viafId              "56599309" ;
+        dbpedia-owl:wikiPageID          14229880 ;
+        dbpedia-owl:wikiPageRevisionID  545029067 ;
+        dbpprop:archdiocese             <http://dbpedia.org/resource/Roman_Catholic_Archdiocese_of_Sherbrooke> ;
+        dbpprop:birthDate               "1822-01-26+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:birthPlace              "Saint-Ambroise , Lower Canada"@en ;
+        dbpprop:bishopOf                "Sherbrooke"@en ;
+        dbpprop:dateOfBirth             "1822-01-26+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:dateOfDeath             "1893-07-17+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathDate               "1893-07-17+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:deathPlace              "Sherbrooke, Quebec"@en ;
+        dbpprop:ended                   "1893-07-17+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:enthroned               "1874-09-01+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:hasPhotoCollection      <http://wifo5-03.informatik.uni-mannheim.de/flickrwrappr/photos/Antoine_Racine> ;
+        dbpprop:name                    "Racine, Antoine"@en , "Antoine Racine"@en ;
+        dbpprop:ordination              "1844-09-12+02:00"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dbpprop:placeOfBirth            "Saint-Ambroise , Lower Canada"@en ;
+        dbpprop:placeOfDeath            "Sherbrooke, Quebec"@en ;
+        dbpprop:predecessor             "--08-28+02:00"^^<http://www.w3.org/2001/XMLSchema#gMonthDay> ;
+        dbpprop:shortDescription        "Catholic bishop"@en ;
+        dbpprop:successor               <http://dbpedia.org/resource/Paul_LaRocque> ;
+        dc:description                  "Catholic bishop" , "Catholic bishop"@en ;
+        dcterms:subject                 <http://dbpedia.org/resource/Category:1822_births> , <http://dbpedia.org/resource/Category:1893_deaths> , <http://dbpedia.org/resource/Category:19th-century_Roman_Catholic_bishops> , <http://dbpedia.org/resource/Category:Canadian_Roman_Catholic_bishops> , <http://dbpedia.org/resource/Category:Burials_in_Canada> ;
+        owl:sameAs                      <http://fr.dbpedia.org/resource/Antoine_Racine> , <http://wikidata.dbpedia.org/resource/Q2856657> , <http://wikidata.org/entity/Q2856657> , <http://rdf.freebase.com/ns/m.03cyhwq> , <http://dbpedia.org/resource/Antoine_Racine> , <http://yago-knowledge.org/resource/Antoine_Racine> ;
+        prov:wasDerivedFrom             <http://en.wikipedia.org/wiki/Antoine_Racine?oldid=545029067> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Antoine_Racine.jpg> ;
+        foaf:givenName                  "Antoine"@en ;
+        foaf:isPrimaryTopicOf           <http://en.wikipedia.org/wiki/Antoine_Racine> ;
+        foaf:name                       "Antoine Racine"@en , "Racine, Antoine"@en ;
+        foaf:surname                    "Racine"@en .
+
+<http://wikidata.dbpedia.org/resource/Q2856657>
+        owl:sameAs  <http://dbpedia.org/resource/Antoine_Racine> .

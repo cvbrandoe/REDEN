@@ -1,0 +1,72 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1940 ;
+        rdagroup2elements:biographicalInformation
+                "Écrit aussi en anglais" , "En poste à l'Université de Leyde, Pays-Bas (en 2001)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ne#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/dut> ;
+        owl:sameAs                     <http://viaf.org/viaf/102402632> , <http://www.idref.fr/060577584> ;
+        foaf:birthday                  "03-03" ;
+        foaf:familyName                "Du Bois-Reymond" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Manuela" ;
+        foaf:name                      "Manuela Du Bois-Reymond" ;
+        foaf:page                      <http://data.bnf.fr/14464766/manuela_du_bois-reymond/> .
+
+<http://data.bnf.fr/ark:/12148/cb43512652b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401753542#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39272645h#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38862408f#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14464766g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14464766g> ;
+        bnf-onto:FRBNF        14464766 ;
+        isni:identifierValid  "0000000117782705" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000117782705> ;
+        skos:altLabel         "Manuela Du Bois- Reymond (1940-....)"@fr ;
+        skos:editorialNote    "Childhood in Europe : approaches, trends, findings / ed. by Manuela Du Bois-Reymond, Heinz Sünker and Heinz-Hermann Krüger, 2001. - . - Bibliothèque Royale, Pays-Bas. - www.kb.nl. - 2003-03-28"@fr ;
+        skos:exactMatch       <http://www.idref.fr/060577584> , <http://viaf.org/viaf/102402632> , <http://isni-url.oclc.nl/isni/0000000117782705> ;
+        skos:note             "Écrit aussi en anglais"@fr , "En poste à l'Université de Leyde, Pays-Bas (en 2001)"@fr ;
+        skos:prefLabel        "Manuela Du Bois-Reymond (1940-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392874023#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40964740d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14464766g#foaf:Person> .

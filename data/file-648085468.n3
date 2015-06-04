@@ -1,0 +1,87 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb38100420c#frbr:Expression>
+        bnfroles:r1560       <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39714654k#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37875715b#frbr:Expression>
+        bnfroles:r1590       <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1948 ;
+        rdagroup2elements:biographicalInformation
+                "Pianiste, organiste et compositeur. - Pianiste de l'Opéra de Paris de 1979 à 1990" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs          <http://viaf.org/viaf/2735900> ;
+        foaf:familyName     "Parmentier" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Gérard" ;
+        foaf:name           "Gérard Parmentier" ;
+        foaf:page           <http://data.bnf.fr/14810470/gerard_parmentier/> .
+
+<http://data.bnf.fr/ark:/12148/cb39634320p#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb397146537#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39625337f#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381481867#frbr:Expression>
+        bnfroles:r1560       <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39714946s#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14810470k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14810470k> ;
+        bnf-onto:FRBNF        14810470 ;
+        isni:identifierValid  "0000000129427583" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000129427583> ;
+        skos:editorialNote    "Un baiser [musique imprimée] pour piano / Gérard Parmentier, 1999. - . - Site personnel. - http://www.gerardparmentier.com. - 2013-10-14"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/2735900> , <http://isni-url.oclc.nl/isni/0000000129427583> ;
+        skos:note             "Pianiste, organiste et compositeur. - Pianiste de l'Opéra de Paris de 1979 à 1990"@fr ;
+        skos:prefLabel        "Gérard Parmentier"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383065464#frbr:Expression>
+        bnfroles:r1560       <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb396253363#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14810470k#foaf:Person> .

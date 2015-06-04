@@ -1,0 +1,121 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/12731181/eugene_gilbert/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1864 ;
+        bnf-onto:lastYear               1919 ;
+        rdagroup2elements:biographicalInformation
+                "Critique littéraire et essayiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/be#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1864/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1919/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Louvain, Belgique" ;
+        rdagroup2elements:placeOfDeath  "Tailfer-Lustin, Belgique" ;
+        bio:birth                       "1864-07-17" ;
+        bio:death                       "1919-11-18" ;
+        owl:sameAs                      <http://www.idref.fr/067058450> , <http://viaf.org/viaf/224335940> ;
+        foaf:birthday                   "07-17" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k63711h.thumbnail> ;
+        foaf:familyName                 "Gilbert" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Eugène" ;
+        foaf:name                       "Eugène Gilbert" ;
+        foaf:page                       <http://data.bnf.fr/12731181/eugene_gilbert/> .
+
+<http://data.bnf.fr/ark:/12148/cb416502069#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30505990q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12731181m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12731181m> ;
+        bnf-onto:FRBNF        12731181 ;
+        isni:identifierValid  "0000000361606914" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000361606914> ;
+        skos:editorialNote    "BN Cat. gén.. - . - BN Cat. gén. suppl.. - . -"@fr , "Le roman en France pendant le XIXe siècle / Eugène Gilbert, 1900. - . - BAB. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/067058450> , <http://viaf.org/viaf/224335940> , <http://isni-url.oclc.nl/isni/0000000361606914> ;
+        skos:note             "Critique littéraire et essayiste"@fr ;
+        skos:prefLabel        "Eugène Gilbert (1864-1919)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb321653185#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305059885#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30505986g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32165314s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305059912#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb321653154#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32165319h#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30505989h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39136279p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30596216g#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30505987t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12731181m#foaf:Person> .

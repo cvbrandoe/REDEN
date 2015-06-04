@@ -1,0 +1,69 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Réalisatrice" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/296793078> ;
+        foaf:familyName  "David" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Marie-Laurence" ;
+        foaf:name        "Marie-Laurence David" ;
+        foaf:page        <http://data.bnf.fr/14169389/marie-laurence_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb42675470q#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42675386t#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42675448j#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42675524t#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14169389q>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14169389q> ;
+        bnf-onto:FRBNF   14169389 ;
+        skos:exactMatch  <http://viaf.org/viaf/296793078> ;
+        skos:note        "Réalisatrice"@fr ;
+        skos:prefLabel   "Marie-Laurence David"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb426754027#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42675455t#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38354002p#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14169389q#foaf:Person> .

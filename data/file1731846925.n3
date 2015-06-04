@@ -1,0 +1,40 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13941366z#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1880 ;
+        bnf-onto:lastYear               1958 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur d'origine écossaise" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1880/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1958/> ;
+        rdagroup2elements:placeOfBirth  "Hawick" ;
+        bio:birth                       "1880" ;
+        bio:death                       "1958" ;
+        owl:sameAs                      <http://viaf.org/viaf/22332611> , <http://dbpedia.org/resource/Francis_George_Scott> , <http://www.idref.fr/109050061> ;
+        foaf:familyName                 "Scott" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Francis George" ;
+        foaf:name                       "Francis George Scott" ;
+        foaf:page                       <http://data.bnf.fr/13941366/francis_george_scott/> .
+
+<http://data.bnf.fr/ark:/12148/cb13941366z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Francis_George_Scott> , <http://catalogue.bnf.fr/ark:/12148/cb13941366z> ;
+        bnf-onto:FRBNF        13941366 ;
+        isni:identifierValid  "0000000055165006" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000055165006> ;
+        skos:exactMatch       <http://viaf.org/viaf/22332611> , <http://fr.wikipedia.org/wiki/Francis_George_Scott> , <http://dbpedia.org/resource/Francis_George_Scott> , <http://www.idref.fr/109050061> , <http://isni-url.oclc.nl/isni/0000000055165006> ;
+        skos:note             "Compositeur d'origine écossaise"@fr ;
+        skos:prefLabel        "Francis George Scott (1880-1958)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13941366z#foaf:Person> .

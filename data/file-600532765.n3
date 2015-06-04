@@ -1,0 +1,59 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb36158368s#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36159091q#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361582733#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361582702#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1959 ;
+        rdagroup2elements:biographicalInformation
+                "Photographe" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/71534960> ;
+        foaf:familyName     "Charles" ;
+        foaf:givenName      "Robert" ;
+        foaf:name           "Robert Charles" ;
+        foaf:page           <http://data.bnf.fr/13197651/robert_charles/> .
+
+<http://data.bnf.fr/ark:/12148/cb361582586#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13197651v>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb13197651v> ;
+        bnf-onto:FRBNF   13197651 ;
+        skos:exactMatch  <http://viaf.org/viaf/71534960> ;
+        skos:note        "Photographe"@fr ;
+        skos:prefLabel   "Robert Charles"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb13197651v#foaf:Person> .

@@ -1,0 +1,58 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12609751g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12609751g> ;
+        bnf-onto:FRBNF        12609751 ;
+        isni:identifierValid  "0000000120273821" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000120273821> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000120273821> , <http://viaf.org/viaf/64916705> , <http://www.idref.fr/090316231> ;
+        skos:note             "Auteure et scénariste"@fr ;
+        skos:prefLabel        "Mildred Gordon"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34676601v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Auteure et scénariste" ;
+        owl:sameAs       <http://www.idref.fr/090316231> , <http://viaf.org/viaf/64916705> ;
+        foaf:familyName  "Gordon" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Mildred" ;
+        foaf:name        "Mildred Gordon" ;
+        foaf:page        <http://data.bnf.fr/12609751/mildred_gordon/> .
+
+<http://data.bnf.fr/ark:/12148/cb436088153#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34603346t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345817714#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34574651r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12609751g#foaf:Person> .

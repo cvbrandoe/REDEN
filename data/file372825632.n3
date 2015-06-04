@@ -1,0 +1,100 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb320073156#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> .
+
+<http://data.bnf.fr/10849730/jean_delage/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32007313h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb436085398#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32007311t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste. - Rédacteur à \"l'Echo de Paris\" (en 1927). - A été journaliste au \"Journal\" (en 1939)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Sciences de l'information et de la documentation" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/020/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://www.idref.fr/139520562> , <http://viaf.org/viaf/63997266> , <http://www.idref.fr/092271030> ;
+        foaf:familyName                "Delage" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Delage" ;
+        foaf:page                      <http://data.bnf.fr/10849730/jean_delage/> .
+
+<http://data.bnf.fr/ark:/12148/cb10849730d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10849730d> ;
+        bnf-onto:FRBNF        10849730 ;
+        isni:identifierValid  "0000000081428228" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081428228> ;
+        skos:editorialNote    "L'artisanat / Jean Delage, rédacteur à \"l'Echo de Paris\", 1927. - . - Le Journal de la Foire internationale de Casablanca  [Quotidien pendant la Foire puis trimestriel]  / Dir. : Mohamed Dadoun. Réd. : Jean Delage, 1957. - . -"@fr , "BnF - Département de la recherche bibliographique [Recueil. Dossiers biographiques Boutillier du Retail. Documentation sur Jean Berthet], 1939-1945. - . - BN Cat. gén. suppl.: Delage (Jean). - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/63997266> , <http://www.idref.fr/092271030> , <http://isni-url.oclc.nl/isni/0000000081428228> , <http://www.idref.fr/139520562> ;
+        skos:note             "Journaliste. - Rédacteur à \"l'Echo de Paris\" (en 1927). - A été journaliste au \"Journal\" (en 1939)"@fr ;
+        skos:prefLabel        "Jean Delage (journaliste, 18..-19..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34190033x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33901652g#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41239631p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb320073125#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32007316j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32007314v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10849730d#foaf:Person> .

@@ -1,0 +1,78 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb420937577#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435118352#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41340615n#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41340613z#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35350388p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12200878x>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12200878x> ;
+        bnf-onto:FRBNF   12200878 ;
+        skos:exactMatch  <http://www.idref.fr/030631459> , <http://viaf.org/viaf/39424581> ;
+        skos:note        "Professeur de lettres"@fr ;
+        skos:prefLabel   "Marie-Hélène Philippe"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de lettres" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/030631459> , <http://viaf.org/viaf/39424581> ;
+        foaf:familyName  "Philippe" ;
+        foaf:givenName   "Marie-Hélène" ;
+        foaf:name        "Marie-Hélène Philippe" ;
+        foaf:page        <http://data.bnf.fr/12200878/marie-helene_philippe/> .
+
+<http://data.bnf.fr/ark:/12148/cb399433534#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb436102627#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392364600#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41134496b#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12200878x#foaf:Person> .

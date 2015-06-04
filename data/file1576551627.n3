@@ -1,0 +1,119 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb350685745#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42657403n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1959 ;
+        rdagroup2elements:biographicalInformation
+                "Maître de conférences en égyptologie à l'Université de Montpellier III, Institut d'Égyptologie François Daumas (depuis 1993). - Agrégé de lettres classiques (1983). - Docteur d'Égyptologie (1989)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/41886784> , <http://www.idref.fr/030609607> ;
+        foaf:familyName     "Mathieu" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Bernard" ;
+        foaf:name           "Bernard Mathieu" ;
+        foaf:page           <http://data.bnf.fr/12199053/bernard_mathieu/> .
+
+<http://data.bnf.fr/ark:/12148/cb343338438#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366537227#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35862002v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36166067b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366666299#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36697723c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40067996r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121990537>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb121990537> ;
+        bnf-onto:FRBNF        12199053 ;
+        isni:identifierValid  "0000000108912782" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108912782> ;
+        skos:editorialNote    "Cours d'égyptien hiéroglyphique / P. Grandet, B. Mathieu, 1990. - . - Université Paul-Valéry, Montpellier III : liste des enseignants : Bernard Mathieu. - http://recherche.univ-montp3.fr/egyptologie/index.php?page=equipe. - 2010-01-12"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/41886784> , <http://isni-url.oclc.nl/isni/0000000108912782> , <http://www.idref.fr/030609607> ;
+        skos:note             "Maître de conférences en égyptologie à l'Université de Montpellier III, Institut d'Égyptologie François Daumas (depuis 1993). - Agrégé de lettres classiques (1983). - Docteur d'Égyptologie (1989)"@fr ;
+        skos:prefLabel        "Bernard Mathieu"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39422614j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37076956b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35580707x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb391847141#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40175082g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35410756h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41283130j#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121990537#foaf:Person> .

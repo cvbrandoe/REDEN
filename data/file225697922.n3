@@ -1,0 +1,119 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1942 ;
+        bnf-onto:lastYear               2003 ;
+        rdagroup2elements:biographicalInformation
+                "Universitaire. - Agrégé de droit public et de sciences politiques. - Recteur de l'académie de Montpellier. - Professeur à l'Université de Metz" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1942/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/2003/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Bastia (Corse)" ;
+        rdagroup2elements:placeOfDeath  "Nice (Alpes-Maritimes)" ;
+        bio:birth                       "1942-06-21" ;
+        bio:death                       "2003-11-22" ;
+        owl:sameAs                      <http://viaf.org/viaf/120710176> , <http://www.idref.fr/033126364> ;
+        foaf:birthday                   "06-21" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b8427420x.thumbnail> ;
+        foaf:familyName                 "Ferrari" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Pierre" ;
+        foaf:name                       "Pierre Ferrari" ;
+        foaf:page                       <http://data.bnf.fr/12402424/pierre_ferrari/> .
+
+<http://data.bnf.fr/ark:/12148/cb404130421#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb403571062#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb336013555#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40413032q#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32258390k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304300491#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb403565821#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383369116#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12402424q>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12402424q> ;
+        bnf-onto:FRBNF      12402424 ;
+        skos:editorialNote  "Les régions italiennes / [textes choisis, traduits de l'italien et présentés par] Pierre Ferrari, 1972. - . - Annuaire des juristes et politistes universitaires, 1986. - . -"@fr , "Qui était qui, XXe s. / Béatrice et Michel Wattel, 2005. - . - BN Cat. gén. 1960-1969. - . -"@fr , "Monde, 1996-05-15. - . - Monde, 2003-11-30. - . - WW, France 2002-2003. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/120710176> , <http://www.idref.fr/033126364> ;
+        skos:note           "Universitaire. - Agrégé de droit public et de sciences politiques. - Recteur de l'académie de Montpellier. - Professeur à l'Université de Metz"@fr ;
+        skos:prefLabel      "Pierre Ferrari (1942-2003)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb323369581#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34106072d#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32406813b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35188950v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40469414c#frbr:Expression>
+        bnfroles:r530        <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        marcrel:pht          <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb397224731#frbr:Expression>
+        bnfroles:r470        <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        marcrel:lbt          <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb330870709#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12402424q#foaf:Person> .

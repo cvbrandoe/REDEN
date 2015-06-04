@@ -1,0 +1,65 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/13484672/john_florio/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13484672d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb419446029#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13484672d#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13484672d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13484672d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30967323b#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13484672d#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13484672d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13484672d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13484672d#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1553 ;
+        bnf-onto:lastYear              1625 ;
+        rdagroup2elements:biographicalInformation
+                "Philologue et lexicographe. - Enseigna le français et l'italien à l'Université d'Oxford, puis fut chargé d'apprendre ces langues au prince Henri, fils de Jacques Ier. - Appartenait à une famille italienne protestante réfugiée en Angleterre" , "A aussi écrit en italien, en latin, en français, et traduit du français et de l'italien en anglais" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1553/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1625/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1553" ;
+        bio:death                      "1625" ;
+        owl:sameAs                     <http://www.idref.fr/078183413> , <http://www.idref.fr/03557562X> , <http://viaf.org/viaf/49375066> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k71710w.thumbnail> ;
+        foaf:familyName                "Florio" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "John" ;
+        foaf:name                      "John Florio" ;
+        foaf:page                      <http://data.bnf.fr/13484672/john_florio/> .
+
+<http://data.bnf.fr/ark:/12148/cb13484672d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13484672d> ;
+        bnf-onto:FRBNF        13484672 ;
+        isni:identifierValid  "0000000108992719" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108992719> ;
+        skos:altLabel         "Jean Florio (1553?-1625)"@fr , "Giovanni Florio (1553?-1625)"@fr ;
+        skos:editorialNote    "A worlde of wordes : 1598 / John Florio, 1598. - . - Lippotopo, novelletta / [di Giovanni Florio] sulla quale narrasi uno singolare tratto di accidia, con altra novelletta d'un avaro, 1591. - . - Essays / of Montaigne done into English ; by John Florio, anno 1603 ; with an introduction by George Saintsbury, 1892-1893. - . -"@fr , "BBA. - . - Larousse 19e s. : Florio (Jean). - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/078183413> , <http://isni-url.oclc.nl/isni/0000000108992719> , <http://www.idref.fr/03557562X> , <http://viaf.org/viaf/49375066> ;
+        skos:note             "Philologue et lexicographe. - Enseigna le français et l'italien à l'Université d'Oxford, puis fut chargé d'apprendre ces langues au prince Henri, fils de Jacques Ier. - Appartenait à une famille italienne protestante réfugiée en Angleterre"@fr , "A aussi écrit en italien, en latin, en français, et traduit du français et de l'italien en anglais"@fr ;
+        skos:prefLabel        "John Florio (1553?-1625)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13484672d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30967336p#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13484672d#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13484672d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13484672d#foaf:Person> .

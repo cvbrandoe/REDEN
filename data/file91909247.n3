@@ -1,0 +1,29 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14960539x#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1445 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1301-1400/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1445/> ;
+        bio:birth                      "13.." ;
+        bio:death                      "1445" ;
+        foaf:familyName                "Rousseau" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Henri" ;
+        foaf:name                      "Henri Rousseau" ;
+        foaf:page                      <http://data.bnf.fr/14960539/henri_rousseau/> .
+
+<http://data.bnf.fr/ark:/12148/cb14960539x>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb14960539x> ;
+        bnf-onto:FRBNF  14960539 ;
+        skos:prefLabel  "Henri Rousseau (13..-1445)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb14960539x#foaf:Person> .

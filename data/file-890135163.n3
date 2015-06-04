@@ -1,0 +1,64 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb37486630q#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37464047w#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37453790h#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37552755x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37453791v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1944 ;
+        rdagroup2elements:biographicalInformation
+                "Juriste. - Professeur à Centre for commercial law studies, Queen Mary and Westfield college, University of London, GB (en 1994)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/067729681> , <http://viaf.org/viaf/105094193> ;
+        foaf:familyName     "Fletcher" ;
+        foaf:givenName      "Ian Frank" ;
+        foaf:name           "Ian Frank Fletcher" ;
+        foaf:page           <http://data.bnf.fr/12452158/ian_frank_fletcher/> .
+
+<http://data.bnf.fr/ark:/12148/cb124521587>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb124521587> ;
+        bnf-onto:FRBNF        12452158 ;
+        isni:identifierValid  "0000000120321563" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000120321563> ;
+        skos:altLabel         "Ian Fletcher"@fr ;
+        skos:editorialNote    "International banking operations ad practices : current developments / ed. by J.J. Norton, Chia-Jui Cheng, I. Fletcher, cop. 1994. - . - BLNA, 1994-08. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/105094193> , <http://www.idref.fr/067729681> , <http://isni-url.oclc.nl/isni/0000000120321563> ;
+        skos:note             "Juriste. - Professeur à Centre for commercial law studies, Queen Mary and Westfield college, University of London, GB (en 1994)"@fr ;
+        skos:prefLabel        "Ian Frank Fletcher"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb124521587#foaf:Person> .

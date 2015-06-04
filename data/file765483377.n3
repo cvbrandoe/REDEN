@@ -1,0 +1,46 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb30775011w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13010068d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13010068d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13010068d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13010068d#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "A écrit aussi en latin" , "Professeur de philosophie à la Faculté des lettres de Bordeaux. - Titulaire d'une thèse de philosophie (Paris, 1843)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://www.idref.fr/033796238> , <http://viaf.org/viaf/22275159> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k65037r.thumbnail> ;
+        foaf:familyName                "Lefranc" ;
+        foaf:givenName                 "Louis" ;
+        foaf:name                      "Louis Lefranc" ;
+        foaf:page                      <http://data.bnf.fr/13010068/louis_lefranc/> .
+
+<http://data.bnf.fr/ark:/12148/cb13010068d>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13010068d> ;
+        bnf-onto:FRBNF      13010068 ;
+        skos:altLabel       "Louis Le Franc"@fr ;
+        skos:editorialNote  "Lorenz : Lefranc (L.). - . -"@fr , "Leibnitii judicium de nonnullis Baylii sententiis examini critico subjicit / L. Lefranc, 1843 [thèse]. - . - Un mot sur la situation politique / [signé : Le Franc], [1848]. - . - Introduction à la philosophie / par M. Lefranc, 1857. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/22275159> , <http://www.idref.fr/033796238> ;
+        skos:note           "Professeur de philosophie à la Faculté des lettres de Bordeaux. - Titulaire d'une thèse de philosophie (Paris, 1843)"@fr , "A écrit aussi en latin"@fr ;
+        skos:prefLabel      "Louis Lefranc"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13010068d#foaf:Person> .

@@ -1,0 +1,61 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb36179931r#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Traduit de l'anglais en français" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/162488687> , <http://www.idref.fr/02979630X> ;
+        foaf:familyName  "Dreyfus" ;
+        foaf:givenName   "Sylvie" ;
+        foaf:name        "Sylvie Dreyfus" ;
+        foaf:page        <http://data.bnf.fr/12134534/sylvie_dreyfus/> .
+
+<http://data.bnf.fr/ark:/12148/cb35046413s#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35188116g#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351881243#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35190107s#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12134534w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12134534w> ;
+        bnf-onto:FRBNF        12134534 ;
+        isni:identifierValid  "000000011709980X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000011709980X> ;
+        skos:exactMatch       <http://www.idref.fr/02979630X> , <http://isni-url.oclc.nl/isni/000000011709980X> , <http://viaf.org/viaf/162488687> ;
+        skos:note             "Traduit de l'anglais en français"@fr ;
+        skos:prefLabel        "Sylvie Dreyfus (traductrice)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12134534w#foaf:Person> .

@@ -1,0 +1,140 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Actif entre 1533 et 1578. - Compositeur de chansons publiées par Le Roy et Ballard en 1547 et 1578. - Peut-être le même que Guillaume Nicolas, chanteur et chapelain de François Ier en 1533. - Parfois confondu avec Nicolas de La Grotte (1530-1600)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1501-1600/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1501-1600/> ;
+        bio:birth                      "15.." ;
+        bio:death                      "15.." ;
+        owl:sameAs                     <http://viaf.org/viaf/28703572> , <http://www.idref.fr/171950143> ;
+        foaf:familyName                "Nicolas" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/14771140/nicolas/> .
+
+<http://data.bnf.fr/ark:/12148/cb42164803c#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42169675w#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42164638g#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42163116j#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb147711404>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb147711404> ;
+        bnf-onto:FRBNF        14771140 ;
+        isni:identifierValid  "0000000066572467" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000066572467> ;
+        skos:altLabel         "Guillaume Nicolas (compositeur, 15..-15..)"@fr ;
+        skos:editorialNote    "Complete chansons published by Le Roy and Ballard [Musique imprimée] / Nicolas ; edited by Hyunjung Choi, 1991. - . - Grove music online. - http://www.oxfordmusiconline.com. - 2009-04-30"@fr ;
+        skos:exactMatch       <http://www.idref.fr/171950143> , <http://viaf.org/viaf/28703572> , <http://isni-url.oclc.nl/isni/0000000066572467> ;
+        skos:note             "Actif entre 1533 et 1578. - Compositeur de chansons publiées par Le Roy et Ballard en 1547 et 1578. - Peut-être le même que Guillaume Nicolas, chanteur et chapelain de François Ier en 1533. - Parfois confondu avec Nicolas de La Grotte (1530-1600)"@fr ;
+        skos:prefLabel        "Nicolas (compositeur, 15..-15..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42164768p#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414768085#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421732599#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42166451m#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421631125#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42164779b#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41474006s#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42164081z#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421631601#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421601411#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42166461x#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42173746b#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421646494#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39617186c#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421603976#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42164077q#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147711404#foaf:Person> .

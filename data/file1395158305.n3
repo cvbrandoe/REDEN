@@ -1,0 +1,56 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb41338201k#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13484252p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13484252p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13484252p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345507927#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13484252p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13484252p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13484252p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38813706s#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13484252p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13484252p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13484252p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37527974b#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13484252p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13484252p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13484252p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13484252p>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13484252p> ;
+        bnf-onto:FRBNF      13484252 ;
+        skos:editorialNote  "Oceanic art / by Adrienne L. Kaeppler, Christian Kaufmann, Douglas Newton ; transl. from the French by Nora Scott and Sabine Bouladon, with the collab. of Fiona Leibrick, 1997. - . - Internet : http://www.loc.gov, 1998-06-22. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/035553251> , <http://viaf.org/viaf/167237452> ;
+        skos:note           "Traduit du français en anglais"@fr ;
+        skos:prefLabel      "Nora Scott"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13484252p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347074405#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb13484252p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13484252p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13484252p#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Traduit du français en anglais" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://www.idref.fr/035553251> , <http://viaf.org/viaf/167237452> ;
+        foaf:familyName  "Scott" ;
+        foaf:givenName   "Nora" ;
+        foaf:name        "Nora Scott" ;
+        foaf:page        <http://data.bnf.fr/13484252/nora_scott/> .

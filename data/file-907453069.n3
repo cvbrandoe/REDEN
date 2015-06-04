@@ -1,0 +1,81 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb438036986#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Avocat associé dans le cabinet Ernst & Young. - Maître de conférence à l'Université Montpellier I (en 1996)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/026856441> , <http://viaf.org/viaf/2469971> ;
+        foaf:familyName  "Fabre" ;
+        foaf:givenName   "Régis" ;
+        foaf:name        "Régis Fabre" ;
+        foaf:page        <http://data.bnf.fr/11902125/regis_fabre/> .
+
+<http://data.bnf.fr/ark:/12148/cb34865023d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36623122z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389138396#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370222374#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40937818m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346962793#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41468383t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11902125z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11902125z> ;
+        bnf-onto:FRBNF        11902125 ;
+        isni:identifierValid  "0000000080815648" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000080815648> ;
+        skos:exactMatch       <http://viaf.org/viaf/2469971> , <http://www.idref.fr/026856441> , <http://isni-url.oclc.nl/isni/0000000080815648> ;
+        skos:note             "Avocat associé dans le cabinet Ernst & Young. - Maître de conférence à l'Université Montpellier I (en 1996)"@fr ;
+        skos:prefLabel        "Régis Fabre"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34761797r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902125z#foaf:Person> .

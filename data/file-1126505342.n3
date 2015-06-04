@@ -1,0 +1,51 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34778025v#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb126300394#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb126300394#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126300394#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb126300394>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb126300394> ;
+        bnf-onto:FRBNF        12630039 ;
+        isni:identifierValid  "0000000066834164" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000066834164> ;
+        skos:editorialNote    "Perspectives / [texte et dessins de] David Pascal, 1985. - . - Karikaturisten-Lexikon / Kurt Flemig, 1993. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000066834164> , <http://viaf.org/viaf/60093663> ;
+        skos:note             "Peintre et dessinateur. - Caricaturiste et illustrateur"@fr ;
+        skos:prefLabel        "David Pascal"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb126300394#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb434422818#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb126300394#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb126300394#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126300394#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41626187p#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb126300394#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb126300394#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126300394#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb126300394#foaf:Person>
+        bnf-onto:firstYear  1918 ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/60093663> ;
+        foaf:familyName     "Pascal" ;
+        foaf:gender         "male" ;
+        foaf:name           "David Pascal" ;
+        foaf:page           <http://data.bnf.fr/12630039/david_pascal/> .
+
+<http://data.bnf.fr/12630039/david_pascal/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb126300394#foaf:Person> .

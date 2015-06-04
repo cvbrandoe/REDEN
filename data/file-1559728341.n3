@@ -1,0 +1,62 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Dessinateur de bandes dessinées" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        owl:sameAs       <http://viaf.org/viaf/74188718> , <http://www.idref.fr/144641313> ;
+        foaf:familyName  "Marinetti" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Antonio" ;
+        foaf:name        "Antonio Marinetti" ;
+        foaf:page        <http://data.bnf.fr/15904399/antonio_marinetti/> .
+
+<http://data.bnf.fr/ark:/12148/cb159043993>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb159043993> ;
+        bnf-onto:FRBNF        15904399 ;
+        isni:identifierValid  "0000000002681197" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000002681197> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000002681197> , <http://www.idref.fr/144641313> , <http://viaf.org/viaf/74188718> ;
+        skos:note             "Dessinateur de bandes dessinées"@fr ;
+        skos:prefLabel        "Antonio Marinetti"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42190329b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42220803r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42169821h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb413994399#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42267877t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb159043993#foaf:Person> .

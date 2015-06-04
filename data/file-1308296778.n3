@@ -1,0 +1,41 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14971645k>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb14971645k> ;
+        bnf-onto:FRBNF  14971645 ;
+        skos:note       "Scientifique, archéologue. - Professeur de l'Académie de Leipzig. - Collectionneur d'estampes"@fr ;
+        skos:prefLabel  "Johann Friedrich Christ (1700-1756)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb14971645k#foaf:Person> .
+
+<http://data.bnf.fr/14971645/johann_friedrich_christ/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14971645k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14971645k#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1700 ;
+        bnf-onto:lastYear               1756 ;
+        rdagroup2elements:biographicalInformation
+                "Scientifique, archéologue. - Professeur de l'Académie de Leipzig. - Collectionneur d'estampes" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1700/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1756/> ;
+        rdagroup2elements:placeOfBirth  "Cobourg (Allemagne)" ;
+        rdagroup2elements:placeOfDeath  "Leipzig (Allemagne)" ;
+        bio:birth                       "1700-04-26" ;
+        bio:death                       "1756-09" ;
+        foaf:birthday                   "04-26" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k380638f.thumbnail> ;
+        foaf:familyName                 "Christ" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Johann Friedrich" ;
+        foaf:name                       "Johann Friedrich Christ" ;
+        foaf:page                       <http://data.bnf.fr/14971645/johann_friedrich_christ/> .

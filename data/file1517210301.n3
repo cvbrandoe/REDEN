@@ -1,0 +1,124 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb381218146#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1925 ;
+        rdagroup2elements:biographicalInformation
+                "Actrice de théâtre et de cinéma" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        owl:sameAs          <http://viaf.org/viaf/7648150> ;
+        foaf:depiction      <http://gallica.bnf.fr/ark:/12148/bpt6k8817006g.thumbnail> ;
+        foaf:familyName     "Duhamel" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Claire" ;
+        foaf:name           "Claire Duhamel" ;
+        foaf:page           <http://data.bnf.fr/14654647/claire_duhamel/> .
+
+<http://data.bnf.fr/ark:/12148/cb40173462g#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb146546472>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb146546472> ;
+        bnf-onto:FRBNF        14654647 ;
+        isni:identifierValid  "0000000078439137" ;
+        owl:sameAs            <http://isni.org/isni/0000000078439137> ;
+        skos:altLabel         "Marie-Claire Viraut"@fr ;
+        skos:editorialNote    "Pour un oui ou pour un non / mise en scène de Simone Benmussa...; avec Claire Duhamel...-Paris, Comédie des Champs-Elysées, 25-10-1998. - . - Les gens du cinéma / André Siscot, 1998. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/7648150> , <http://isni.org/isni/0000000078439137> ;
+        skos:note             "Actrice de théâtre et de cinéma"@fr ;
+        skos:prefLabel        "Claire Duhamel"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381151172#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39464779q#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37835374x#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc588917/ca59945732548740#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394948459#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37900339r#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37900326d#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435042248#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37974750s#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc588917/ca59914550843264#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb378353847#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43507307p#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb379002562#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38120999f#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39464256p#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146546472#foaf:Person> .

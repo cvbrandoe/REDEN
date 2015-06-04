@@ -1,0 +1,34 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/14977480/charles/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb149774800#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149774800#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1684 ;
+        bnf-onto:lastYear              1753 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1684/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1753/> ;
+        bio:birth                      "1684" ;
+        bio:death                      "1753" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b69471897.thumbnail> ;
+        foaf:familyName                "Charles" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/14977480/charles/> .
+
+<http://data.bnf.fr/ark:/12148/cb149774800>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb149774800> ;
+        bnf-onto:FRBNF  14977480 ;
+        skos:altLabel   "Charles de Lorraine-Armagnac (1684-1753)"@fr ;
+        skos:prefLabel  "Charles (prince, 1684-1753)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb149774800#foaf:Person> .

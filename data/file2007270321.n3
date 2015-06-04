@@ -1,0 +1,76 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb375110161#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37511017c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39217379z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37511018q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1928 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur émérite, Animal husbandry, University college, Dublin (en 1996)" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/100307654> , <http://www.idref.fr/153230517> ;
+        foaf:familyName     "Gordon" ;
+        foaf:givenName      "Ian" ;
+        foaf:name           "Ian Gordon" ;
+        foaf:page           <http://data.bnf.fr/13490482/ian_gordon/> .
+
+<http://data.bnf.fr/ark:/12148/cb37511015p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb375191674#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390563943#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13490482d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13490482d> ;
+        bnf-onto:FRBNF        13490482 ;
+        isni:identifierValid  "0000000109289021" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109289021> ;
+        skos:editorialNote    "Controlled reproduction in cattle and buffaloes / Ian Gordon, 1996. - . - BLNA, 1996-10. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000109289021> , <http://www.idref.fr/153230517> , <http://viaf.org/viaf/100307654> ;
+        skos:note             "Professeur émérite, Animal husbandry, University college, Dublin (en 1996)"@fr ;
+        skos:prefLabel        "Ian Gordon"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373484430#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13490482d#foaf:Person> .

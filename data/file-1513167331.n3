@@ -1,0 +1,28 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/14802201/paul_julien/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14802201g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14802201g#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Violoniste français né à Crest (Drôme) le 13février 1841. - Premier prix du Conservatoire (élève d'Alard) en 1850" ;
+        foaf:depiction   <http://gallica.bnf.fr/ark:/12148/btv1b8421373v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8426504v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b84213748.thumbnail> ;
+        foaf:familyName  "Julien" ;
+        foaf:givenName   "Paul" ;
+        foaf:name        "Paul Julien" ;
+        foaf:page        <http://data.bnf.fr/14802201/paul_julien/> .
+
+<http://data.bnf.fr/ark:/12148/cb14802201g>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb14802201g> ;
+        bnf-onto:FRBNF  14802201 ;
+        skos:note       "Violoniste français né à Crest (Drôme) le 13février 1841. - Premier prix du Conservatoire (élève d'Alard) en 1850"@fr ;
+        skos:prefLabel  "Paul Julien (violoniste)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb14802201g#foaf:Person> .

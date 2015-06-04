@@ -1,0 +1,66 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb425335726#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39962216t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1964 ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste indépendante, spécialiste de la décoration" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/074614045> , <http://viaf.org/viaf/200963278> ;
+        foaf:familyName     "Prudhomme" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Anne" ;
+        foaf:name           "Anne Prudhomme" ;
+        foaf:page           <http://data.bnf.fr/14501085/anne_prudhomme/> .
+
+<http://data.bnf.fr/ark:/12148/cb145010851>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb145010851> ;
+        bnf-onto:FRBNF   14501085 ;
+        skos:altLabel    "Anne Prudhomme-Béné"@fr , "Anne Prudhomme- Béné"@fr ;
+        skos:exactMatch  <http://www.idref.fr/074614045> , <http://viaf.org/viaf/200963278> ;
+        skos:note        "Journaliste indépendante, spécialiste de la décoration"@fr ;
+        skos:prefLabel   "Anne Prudhomme"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42677901r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38979120j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42062823b#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42533524b#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb145010851#foaf:Person> .

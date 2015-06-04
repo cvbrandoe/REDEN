@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35643593v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xc> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/slo> ;
+        owl:sameAs       <http://www.idref.fr/170370399> , <http://viaf.org/viaf/44343498> ;
+        foaf:familyName  "Petrus" ;
+        foaf:givenName   "Pavol" ;
+        foaf:name        "Pavol Petrus" ;
+        foaf:page        <http://data.bnf.fr/12189485/pavol_petrus/> .
+
+<http://data.bnf.fr/ark:/12148/cb354426419#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35345240d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354301072#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35442645p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12189485r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12189485r> ;
+        bnf-onto:FRBNF        12189485 ;
+        isni:identifierValid  "0000000061324069" ;
+        owl:sameAs            <http://isni.org/isni/0000000061324069> ;
+        skos:exactMatch       <http://www.idref.fr/170370399> , <http://isni.org/isni/0000000061324069> , <http://viaf.org/viaf/44343498> ;
+        skos:prefLabel        "Pavol Petrus"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35443765t#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12189485r#foaf:Person> .

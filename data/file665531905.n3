@@ -1,0 +1,66 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb324106277#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb113332581#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb113332581#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb113332581#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb113332581#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1886 ;
+        bnf-onto:lastYear               1944 ;
+        rdagroup2elements:biographicalInformation
+                "Amiral. - A été ministre des Colonies de l'État français. - Jugé par le Tribunal militaire des FFI de Limoges, il fut condamné à mort le 24 juillet 1944 et exécuté" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1886/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1944/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de la France" , "Art et science militaires" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/355/> , <http://dewey.info/class/944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Pujols-sur-Dordogne (Gironde)" ;
+        rdagroup2elements:placeOfDeath  "Limoges (Haute-Vienne)" ;
+        bio:birth                       "1886-09-19" ;
+        bio:death                       "1944-08-28" ;
+        owl:sameAs                      <http://www.idref.fr/077362691> , <http://viaf.org/viaf/17216488> ;
+        foaf:birthday                   "09-19" ;
+        foaf:familyName                 "Platon" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Charles" ;
+        foaf:name                       "Charles Platon" ;
+        foaf:page                       <http://data.bnf.fr/11333258/charles_platon/> .
+
+<http://data.bnf.fr/ark:/12148/cb113332581>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb113332581> ;
+        bnf-onto:FRBNF        11333258 ;
+        isni:identifierValid  "0000000035062245" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000035062245> ;
+        skos:altLabel         "Amiral Platon (1886-1944)"@fr ;
+        skos:editorialNote    "Le vice-amiral Platon ou Les risques d'un mauvais choix / Jean-Marc Van Hille, 2003. - . - BN Cat. gén. suppl.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/17216488> , <http://www.idref.fr/077362691> , <http://isni-url.oclc.nl/isni/0000000035062245> ;
+        skos:note             "Amiral. - A été ministre des Colonies de l'État français. - Jugé par le Tribunal militaire des FFI de Limoges, il fut condamné à mort le 24 juillet 1944 et exécuté"@fr ;
+        skos:prefLabel        "Charles Platon (1886-1944)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb113332581#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31842043g#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb113332581#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb113332581#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb113332581#foaf:Person> .
+
+<http://data.bnf.fr/11333258/charles_platon/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb113332581#foaf:Person> .

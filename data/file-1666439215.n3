@@ -1,0 +1,83 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb302350356#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30928461k#frbr:Expression>
+        bnfroles:r260        <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> ;
+        marcrel:ctb          <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb393129129#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30235037w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16196319q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb16196319q> ;
+        bnf-onto:FRBNF        16196319 ;
+        isni:identifierValid  "000000011066006X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000011066006X> ;
+        skos:altLabel         "Antoine Le Chevallier (1507-1572)"@fr , "Antonius Cevallerius (1507-1572)"@fr , "Antoine Le Chevalier (1507-1572)"@fr , "Antoine Chevallier (1507-1572)"@fr ;
+        skos:editorialNote    "Alphabetum hebraicum / ex Antonii Cevallerii recognitione, 1566. - . - DBF. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000011066006X> , <http://www.idref.fr/078146364> , <http://viaf.org/viaf/61979768> ;
+        skos:note             "Hébraïsant. - Professeur d'hébreu à l'Académie de Genève (1559-1567) vécut aussi en Suisse et en Grande-Bretagne"@fr ;
+        skos:prefLabel        "Antoine Chevalier (1507-1572)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1507 ;
+        bnf-onto:lastYear               1572 ;
+        rdagroup2elements:biographicalInformation
+                "Hébraïsant. - Professeur d'hébreu à l'Académie de Genève (1559-1567) vécut aussi en Suisse et en Grande-Bretagne" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1507/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1572/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Montchamp (Calvados)" ;
+        rdagroup2elements:placeOfDeath  "Guernesey" ;
+        bio:birth                       "1507" ;
+        bio:death                       "1572-09" ;
+        owl:sameAs                      <http://viaf.org/viaf/61979768> , <http://www.idref.fr/078146364> ;
+        foaf:familyName                 "Chevalier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Antoine" ;
+        foaf:name                       "Antoine Chevalier" ;
+        foaf:page                       <http://data.bnf.fr/16196319/antoine_chevalier/> .
+
+<http://data.bnf.fr/ark:/12148/cb30235036j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31940433z#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30235034v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16196319q#foaf:Person> .

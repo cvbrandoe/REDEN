@@ -1,0 +1,72 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34969404c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1946 ;
+        rdagroup2elements:biographicalInformation
+                "Photographe, historien d'art, cinéaste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/93775673> , <http://www.idref.fr/026897431> ;
+        foaf:familyName     "Gordon" ;
+        foaf:givenName      "Robert" ;
+        foaf:name           "Robert Gordon" ;
+        foaf:page           <http://data.bnf.fr/11905428/robert_gordon/> .
+
+<http://data.bnf.fr/ark:/12148/cb358806927#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37517572b#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347640726#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347155018#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34960970c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11905428j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11905428j> ;
+        bnf-onto:FRBNF        11905428 ;
+        isni:identifierValid  "0000000109261694" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109261694> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000109261694> , <http://www.idref.fr/026897431> , <http://viaf.org/viaf/93775673> ;
+        skos:note             "Photographe, historien d'art, cinéaste"@fr ;
+        skos:prefLabel        "Robert Gordon"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36182966x#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11905428j#foaf:Person> .

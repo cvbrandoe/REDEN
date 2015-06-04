@@ -1,0 +1,43 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/14974720/john_gilbert/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb149747207#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423876666#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149747207#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149747207#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149747207#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149747207>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb149747207> ;
+        bnf-onto:FRBNF        14974720 ;
+        isni:identifierValid  "0000000110317464" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000110317464> ;
+        skos:altLabel         "Sir John Gilbert (1817-1897)"@fr ;
+        skos:editorialNote    "Sir John Gilbert : art and imagination in the Victorian age : [exhibition, London, Guildhall art gallery, 29 April-29 August 2011] / edited by Spike Bucklow and Sally Woodcock ; with contributions by Mark Bills... [et al.], cop. 2011. - . - Bénézit, 1999. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/129724777> , <http://isni-url.oclc.nl/isni/0000000110317464> , <http://viaf.org/viaf/100227960> ;
+        skos:note             "Peintre, aquarelliste, graveur, dessinateur, illustrateur"@fr ;
+        skos:prefLabel        "John Gilbert (1817-1897)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb149747207#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41682262w#frbr:Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb149747207#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb149747207#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149747207#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149747207#foaf:Person>
+        rdagroup2elements:biographicalInformation
+                "Peintre, aquarelliste, graveur, dessinateur, illustrateur" ;
+        foaf:depiction  <http://gallica.bnf.fr/ark:/12148/btv1b84387958.thumbnail> .

@@ -1,0 +1,93 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1924 ;
+        bnf-onto:lastYear               2004 ;
+        rdagroup2elements:biographicalInformation
+                "Conseiller-maître à la Cour des Comptes" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1924/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/2004/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1924-03-19" ;
+        bio:death                       "2004-01-13" ;
+        owl:sameAs                      <http://viaf.org/viaf/108835440> , <http://www.idref.fr/030106265> ;
+        foaf:birthday                   "03-19" ;
+        foaf:familyName                 "Giraud" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Pierre" ;
+        foaf:name                       "Pierre Giraud" ;
+        foaf:page                       <http://data.bnf.fr/12158857/pierre_giraud/> .
+
+<http://data.bnf.fr/ark:/12148/cb35674210c#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35110791h#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34825939f#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12158857r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12158857r> ;
+        bnf-onto:FRBNF        12158857 ;
+        isni:identifierValid  "0000000084062401" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000084062401> ;
+        skos:editorialNote    "La Santé choisie : rapport du groupe Régulation de l'activité et des dépenses de santé / Secrétariat d'État auprès du Premier ministre, Commissariat général du plan ; [président M. Giraud], 1983. - . - WW, France 1989-1990. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000084062401> , <http://www.idref.fr/030106265> , <http://viaf.org/viaf/108835440> ;
+        skos:note             "Conseiller-maître à la Cour des Comptes"@fr ;
+        skos:prefLabel        "Pierre Giraud (1924-2004)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35251076x#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36713749m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366103128#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb352510778#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb348768263#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356742095#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12158857r#foaf:Person> .

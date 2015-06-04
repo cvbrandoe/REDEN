@@ -1,0 +1,73 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb34694748q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb321014512#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42189340t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32101452d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33920995r#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1878 ;
+        bnf-onto:lastYear               1949 ;
+        rdagroup2elements:biographicalInformation
+                "Bibliographe et historien du livre. - Bibliothécaire en chef de la Bibliothèque nationale Marciana, Venise" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1878/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1949/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        rdagroup2elements:placeOfBirth  "Padoue, Italie" ;
+        rdagroup2elements:placeOfDeath  "Venise, Italie" ;
+        bio:birth                       "1878-05-15" ;
+        bio:death                       "1949-01-02" ;
+        owl:sameAs                      <http://viaf.org/viaf/127857> , <http://www.idref.fr/034978127> ;
+        foaf:birthday                   "05-15" ;
+        foaf:familyName                 "Ferrari" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Luigi" ;
+        foaf:name                       "Luigi Ferrari" ;
+        foaf:page                       <http://data.bnf.fr/12567135/luigi_ferrari/> .
+
+<http://data.bnf.fr/ark:/12148/cb125671355>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb125671355> ;
+        bnf-onto:FRBNF        12567135 ;
+        isni:identifierValid  "0000000122755787" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000122755787> ;
+        skos:editorialNote    "Le traduzione italiane del teatro tragico francese nei secoli XVIIe e XVIIIe : saggio bibliografico / di Luigi Ferrari, 1925. - . - Per una storia dei bibliotecari italiani del secolo XX : dizionario bio-bibliografico / a cura di Giorgio De Gregori e Simonetta Buttò, 1999. - . -"@fr , "Istituto centrale per il catalogo unico. - http://opac.sbn.it. - 2014-11-07 BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000122755787> , <http://viaf.org/viaf/127857> , <http://www.idref.fr/034978127> ;
+        skos:note             "Bibliographe et historien du livre. - Bibliothécaire en chef de la Bibliothèque nationale Marciana, Venise"@fr ;
+        skos:prefLabel        "Luigi Ferrari (1878-1949)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb125671355#foaf:Person> .

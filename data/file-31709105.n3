@@ -1,0 +1,73 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb39044229p#frbr:Expression>
+        bnfroles:r230        <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392398259#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39239558f#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385482250#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385644626#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39040493c#frbr:Expression>
+        bnfroles:r230        <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Producteur et réalisateur de films documentaires" ;
+        owl:sameAs       <http://viaf.org/viaf/86513235> , <http://www.idref.fr/081260091> ;
+        foaf:familyName  "James" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Jasper" ;
+        foaf:name        "Jasper James" ;
+        foaf:page        <http://data.bnf.fr/14108373/jasper_james/> .
+
+<http://data.bnf.fr/ark:/12148/cb39038029w#frbr:Expression>
+        bnfroles:r230        <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14108373v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14108373v> ;
+        bnf-onto:FRBNF        14108373 ;
+        isni:identifierValid  "0000000116821848" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000116821848> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000116821848> , <http://www.idref.fr/081260091> , <http://viaf.org/viaf/86513235> ;
+        skos:note             "Producteur et réalisateur de films documentaires"@fr ;
+        skos:prefLabel        "Jasper James"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42655816m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108373v#foaf:Person> .

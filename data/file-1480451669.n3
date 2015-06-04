@@ -1,0 +1,111 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb438352161#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37676482j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43543776g#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438607086#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35438019q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1903 ;
+        bnf-onto:lastYear              1938 ;
+        rdagroup2elements:biographicalInformation
+                "Compagne de Boris Souvarine puis de Georges Bataille et amie de Michel Leiris" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1903/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1938/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1903-10-08" ;
+        bio:death                      "1938-11-07" ;
+        owl:sameAs                     <http://viaf.org/viaf/59085020> , <http://dbpedia.org/resource/Colette_Peignot> , <http://www.idref.fr/026968975> ;
+        foaf:birthday                  "10-08" ;
+        foaf:familyName                "Laure" ;
+        foaf:page                      <http://data.bnf.fr/11911299/laure/> .
+
+<http://data.bnf.fr/ark:/12148/cb11911299r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Colette_Peignot> , <http://catalogue.bnf.fr/ark:/12148/cb11911299r> ;
+        bnf-onto:FRBNF        11911299 ;
+        isni:identifierValid  "0000000109052147" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109052147> ;
+        skos:altLabel         "Colette Peignot"@fr , "Claude Araxe"@fr ;
+        skos:editorialNote    "Écrits retrouvés / Laure ; préf. de J. Peignot, 1987. - . - Laure : la sainte de l'abîme / Élisabeth Barillé, 1997. - . -"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Colette_Peignot> , <http://viaf.org/viaf/59085020> , <http://dbpedia.org/resource/Colette_Peignot> , <http://www.idref.fr/026968975> , <http://isni-url.oclc.nl/isni/0000000109052147> ;
+        skos:note             "Compagne de Boris Souvarine puis de Georges Bataille et amie de Michel Leiris"@fr ;
+        skos:prefLabel        "Laure (1903-1938)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> .
+
+<http://data.bnf.fr/11911299/laure/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345950701#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394746471#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345779174#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41202679c#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc127961#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39474649q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb350231532#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346099834#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11911299r#foaf:Person> .

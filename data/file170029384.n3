@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38195677z#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347374147#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1923 ;
+        rdagroup2elements:biographicalInformation
+                "Titulaire d'une thèse de 3e cycle en sociologie (Paris 5, 1972). - Auteur de chansons" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/223154678> , <http://www.idref.fr/026932695> ;
+        foaf:familyName     "Jacob" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Pierre" ;
+        foaf:name           "Pierre Jacob" ;
+        foaf:page           <http://data.bnf.fr/12614326/pierre_jacob/> .
+
+<http://data.bnf.fr/ark:/12148/cb126143265>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb126143265> ;
+        bnf-onto:FRBNF        12614326 ;
+        isni:identifierValid  "0000000361767136" ;
+        owl:sameAs            <http://isni.org/isni/0000000361767136> ;
+        skos:exactMatch       <http://viaf.org/viaf/223154678> , <http://www.idref.fr/026932695> , <http://isni.org/isni/0000000361767136> ;
+        skos:note             "Titulaire d'une thèse de 3e cycle en sociologie (Paris 5, 1972). - Auteur de chansons"@fr ;
+        skos:prefLabel        "Pierre Jacob"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36644823w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345834337#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34668305p#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126143265#foaf:Person> .

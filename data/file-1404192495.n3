@@ -1,0 +1,74 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12110684b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12110684b> ;
+        bnf-onto:FRBNF        12110684 ;
+        isni:identifierValid  "0000000114517789" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114517789> ;
+        skos:editorialNote    "Colonial consequences : essays in Irish literature and culture / John Wilson Foster, 1991. - . - Bibliothèque nationale, Canada. - http://amicus.collectionscanada.ca. - 2007-07-26"@fr ;
+        skos:exactMatch       <http://www.idref.fr/029490502> , <http://isni-url.oclc.nl/isni/0000000114517789> , <http://viaf.org/viaf/91472716> ;
+        skos:note             "A été professeur d'anglais, University of British Columbia, Vancouver, Canada"@fr ;
+        skos:prefLabel        "John Wilson Foster"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35425629r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40985477k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41221871b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1944 ;
+        rdagroup2elements:biographicalInformation
+                "A été professeur d'anglais, University of British Columbia, Vancouver, Canada" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxc> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://www.idref.fr/029490502> , <http://viaf.org/viaf/91472716> ;
+        foaf:familyName     "Foster" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "John Wilson" ;
+        foaf:name           "John Wilson Foster" ;
+        foaf:page           <http://data.bnf.fr/12110684/john_wilson_foster/> .
+
+<http://data.bnf.fr/ark:/12148/cb35696755m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420997012#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374916254#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb350089234#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12110684b#foaf:Person> .

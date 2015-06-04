@@ -1,0 +1,81 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb350160868#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39267324q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Scénariste de bandes dessinées depuis 1986 (en 2008)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/029132320> , <http://viaf.org/viaf/36943602> ;
+        foaf:familyName  "Chevalier" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Bruno" ;
+        foaf:name        "Bruno Chevalier" ;
+        foaf:page        <http://data.bnf.fr/12082190/bruno_chevalier/> .
+
+<http://data.bnf.fr/ark:/12148/cb34347390k#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39266928h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34946249n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12082190n>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12082190n> ;
+        bnf-onto:FRBNF      12082190 ;
+        skos:altLabel       "Chevalier (scénariste de bandes dessinées)"@fr ;
+        skos:editorialNote  "La Saison de cendres / texte, Chevalier ; dessins, Ségur, 1987. - . - Légendes des contrées oubliées / scénario, Bruno Chevalier ; dessin, Thierry Ségur, impr. 2008. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/029132320> , <http://viaf.org/viaf/36943602> ;
+        skos:note           "Scénariste de bandes dessinées depuis 1986 (en 2008)"@fr ;
+        skos:prefLabel      "Bruno Chevalier (scénariste de bandes dessinées)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361558375#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41380252k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb343122220#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42303410d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12082190n#foaf:Person> .

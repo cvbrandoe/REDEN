@@ -1,0 +1,64 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1974 ;
+        rdagroup2elements:biographicalInformation
+                "Romancière" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/83620061> ;
+        foaf:familyName     "James" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Julie" ;
+        foaf:name           "Julie James" ;
+        foaf:page           <http://data.bnf.fr/16535976/julie_james/> .
+
+<http://data.bnf.fr/ark:/12148/cb43559801h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42495907d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16535976d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb16535976d> ;
+        bnf-onto:FRBNF        16535976 ;
+        isni:identifierValid  "0000000057147573" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000057147573> ;
+        skos:editorialNote    "Mon ange gardien : roman / Julie James ; traduit de l'américain par Cécile Ardilly, impr. 2011. - . - LC authorities. - http://authorities.loc.gov. - 2011-09-08"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000057147573> , <http://viaf.org/viaf/83620061> ;
+        skos:note             "Romancière"@fr ;
+        skos:prefLabel        "Julie James"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42559588f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42587365c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42698022w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16535976d#foaf:Person> .

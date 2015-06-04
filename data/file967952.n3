@@ -1,0 +1,65 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35600410h#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35930861n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1943 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en médecine (Bordeaux, 1969). - En poste au Département d'anesthésie-réanimation IV, Hôpital Pellegrin-Enfants, Bordeaux (en 2003)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/030563054> , <http://viaf.org/viaf/51735788> ;
+        foaf:familyName     "Cros" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Anne-Marie" ;
+        foaf:name           "Anne-Marie Cros" ;
+        foaf:page           <http://data.bnf.fr/12195357/anne-marie_cros/> .
+
+<http://data.bnf.fr/ark:/12148/cb39085144c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370954533#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12195357g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12195357g> ;
+        bnf-onto:FRBNF        12195357 ;
+        isni:identifierValid  "0000000031458664" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000031458664> ;
+        skos:altLabel         "Anne-Marie Hadan"@fr ;
+        skos:editorialNote    "Anesthésie-réanimation en chirurgie de la tête et du cou. Tome I, Anesthésie-réanimation en chirurgie oto-rhino-laryngologique et maxillo-faciale / J.-L. Bourgain, M. Cathelin, A.-M. Cros, 2003. - . - Rosenwald, 2002. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/030563054> , <http://isni-url.oclc.nl/isni/0000000031458664> , <http://viaf.org/viaf/51735788> ;
+        skos:note             "Docteur en médecine (Bordeaux, 1969). - En poste au Département d'anesthésie-réanimation IV, Hôpital Pellegrin-Enfants, Bordeaux (en 2003)"@fr ;
+        skos:prefLabel        "Anne-Marie Cros"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36177458x#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195357g#foaf:Person> .

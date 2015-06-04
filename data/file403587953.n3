@@ -1,0 +1,82 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb31904979s#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb334320190#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Traduit du tchèque en français" , "Il s'agit peut-être de Madeleine V. David, née en 1902, auteur d'ouvrages sur la religion mésopotamienne, à ne pas confondre avec Madeleine Paul-David (1908?-1989), spécialiste des arts de l'Extrême-Orient" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "19.." ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://www.idref.fr/030684013> , <http://viaf.org/viaf/273323688> ;
+        foaf:familyName                "David" ;
+        foaf:givenName                 "Madeleine" ;
+        foaf:name                      "Madeleine David" ;
+        foaf:page                      <http://data.bnf.fr/12205075/madeleine_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb12205075w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12205075w> ;
+        bnf-onto:FRBNF        12205075 ;
+        isni:identifierValid  "0000000384080249" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000384080249> ;
+        skos:editorialNote    "Entretiens avec Masaryk / Karel Čapek ; trad. par Madeleine David, 1991 [1re éd. en 1936]. - . - BN Cat. gén. suppl. : David (Madeleine). - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000384080249> , <http://www.idref.fr/030684013> , <http://viaf.org/viaf/273323688> ;
+        skos:note             "Traduit du tchèque en français"@fr , "Il s'agit peut-être de Madeleine V. David, née en 1902, auteur d'ouvrages sur la religion mésopotamienne, à ne pas confondre avec Madeleine Paul-David (1908?-1989), spécialiste des arts de l'Extrême-Orient"@fr ;
+        skos:prefLabel        "Madeleine David (traductrice, 19..-19..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31998958n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31998956z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32259812d#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354196959#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb324299817#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32259813r#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12205075w#foaf:Person> .

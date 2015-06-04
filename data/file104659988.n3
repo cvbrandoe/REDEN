@@ -1,0 +1,77 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb351130005#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37532112k#frbr:Expression>
+        bnfroles:r540        <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> ;
+        marcrel:aft          <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37463700x#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1951 ;
+        rdagroup2elements:biographicalInformation
+                "Assistant de littérature allemande moderne à l'Université de Sarrebruck (en 1990)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        owl:sameAs          <http://viaf.org/viaf/262104802> , <http://www.idref.fr/028490606> ;
+        foaf:familyName     "Marx" ;
+        foaf:givenName      "Reiner" ;
+        foaf:name           "Reiner Marx" ;
+        foaf:page           <http://data.bnf.fr/12031606/reiner_marx/> .
+
+<http://data.bnf.fr/ark:/12148/cb357141430#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb348137663#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39234067t#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120316061>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb120316061> ;
+        bnf-onto:FRBNF        12031606 ;
+        isni:identifierValid  "000000038168635X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000038168635X> ;
+        skos:exactMatch       <http://www.idref.fr/028490606> , <http://isni-url.oclc.nl/isni/000000038168635X> , <http://viaf.org/viaf/262104802> ;
+        skos:note             "Assistant de littérature allemande moderne à l'Université de Sarrebruck (en 1990)"@fr ;
+        skos:prefLabel        "Reiner Marx"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39234072d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36179500c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120316061#foaf:Person> .

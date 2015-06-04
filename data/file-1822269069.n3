@@ -1,0 +1,29 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14122931j>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14122931j> ;
+        bnf-onto:FRBNF   14122931 ;
+        skos:exactMatch  <http://viaf.org/viaf/17430200> ;
+        skos:note        "Scénariste de séries télévisées"@fr ;
+        skos:prefLabel   "Darin Morgan"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14122931j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14122931j#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Scénariste de séries télévisées" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://viaf.org/viaf/17430200> ;
+        foaf:familyName  "Morgan" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Darin" ;
+        foaf:name        "Darin Morgan" ;
+        foaf:page        <http://data.bnf.fr/14122931/darin_morgan/> .

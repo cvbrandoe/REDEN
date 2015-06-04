@@ -1,0 +1,25 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13334073w>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13334073w> ;
+        bnf-onto:FRBNF      13334073 ;
+        skos:altLabel       "Famille Wagner"@fr ;
+        skos:editorialNote  "Hinter Wahnfrieds Mauern : Gertrud Wagner : ein Leben / Renate Schostack, 1998. - . - Dict. biogr. des musiciens / Baker, Slonimsky, 1995. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/035752378> ;
+        skos:note           "Famille de compositeurs et de metteurs en scène d'opéra"@fr ;
+        skos:prefLabel      "Wagner (famille)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13334073w#foaf:Person> .
+
+<http://data.bnf.fr/13334073/wagner/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13334073w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13334073w#foaf:Person>
+        a       foaf:Person .

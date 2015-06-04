@@ -1,0 +1,92 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb34764068z#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34875413d#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119188215>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb119188215> ;
+        bnf-onto:FRBNF        11918821 ;
+        isni:identifierValid  "0000000017866952" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000017866952> ;
+        skos:editorialNote    "Le malentendu : quatre récits et une pièce / Monika Maron ; trad. de l'allemand par Georges Pauline, 1991. - . - Monde, 1995-09-15 et 2007-12-14. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/027060888> , <http://viaf.org/viaf/7395305> , <http://isni-url.oclc.nl/isni/0000000017866952> ;
+        skos:note             "Germaniste"@fr ;
+        skos:prefLabel        "Georges Pauline (1919-1995)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361436028#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb350067771#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1919 ;
+        bnf-onto:lastYear              1995 ;
+        rdagroup2elements:biographicalInformation
+                "Germaniste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1919/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1995/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1919" ;
+        bio:death                      "1995-09-11" ;
+        owl:sameAs                     <http://www.idref.fr/027060888> , <http://viaf.org/viaf/7395305> ;
+        foaf:familyName                "Pauline" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Georges" ;
+        foaf:name                      "Georges Pauline" ;
+        foaf:page                      <http://data.bnf.fr/11918821/georges_pauline/> .
+
+<http://data.bnf.fr/ark:/12148/cb37218126s#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35469002v#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40943787d#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36688604v#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353874032#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36171828n#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119188215#foaf:Person> .

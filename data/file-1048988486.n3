@@ -1,0 +1,54 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42019401k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42665013k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person>
+        a           foaf:Person ;
+        owl:sameAs  <http://viaf.org/viaf/104259762> , <http://www.idref.fr/085852171> ;
+        foaf:page   <http://data.bnf.fr/12267703/robert_a__gilbert/> .
+
+<http://data.bnf.fr/ark:/12148/cb413640230#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39033258t#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38881949k#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12267703p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12267703p> ;
+        bnf-onto:FRBNF        12267703 ;
+        isni:identifierValid  "0000000109300702" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109300702> ;
+        skos:altLabel         "G. A. Gilbert"@fr , "R. A. Gilbert"@fr ;
+        skos:editorialNote    "Trésors et secrets de Montségur / W.N. Birks, G.A [i.e. R.A.] Gilbert, 1991. - . - BLNA, 1992 et LCNA, 1986 : Gilbert, R. A.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/104259762> , <http://isni-url.oclc.nl/isni/0000000109300702> , <http://www.idref.fr/085852171> ;
+        skos:note             "Libraire spécialisé dans les livres anciens, biographe de A.E. Waite"@fr ;
+        skos:prefLabel        "Robert A. Gilbert"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12267703p#foaf:Person> .

@@ -1,0 +1,33 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12337923d>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12337923d> ;
+        bnf-onto:FRBNF      12337923 ;
+        skos:altLabel       "Dēmosthenēs (04..-0413 av. J.-C.)"@fr ;
+        skos:editorialNote  "GDEL. - . - Kleine Pauly. - . -"@fr ;
+        skos:note           "Général athénien"@fr ;
+        skos:prefLabel      "Démosthène (04..-0413 av. J.-C.)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12337923d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12337923d#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              -413 ;
+        rdagroup2elements:biographicalInformation
+                "Général athénien" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/-0500--0401/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/-0413/> ;
+        bio:birth                      "- 04.." ;
+        bio:death                      "- 413" ;
+        foaf:familyName                "Démosthène" ;
+        foaf:page                      <http://data.bnf.fr/12337923/demosthene/> .
+
+<http://data.bnf.fr/12337923/demosthene/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12337923d#foaf:Person> .

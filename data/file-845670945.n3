@@ -1,0 +1,55 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb16201782p>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16201782p> ;
+        bnf-onto:FRBNF      16201782 ;
+        skos:editorialNote  "Cover Africa Privat Club : Heimo Zobernig : catalogue : [exposition, 15 mai-16 août 2009], Bordeaux, CAPC-Musée d'art contemporain / [catalogue par Charlotte Laubard, Heimo Zobernig, Peter Weibel, et al.] ; [coordonné par Catherine Chevalier], cop. 2009. - . - EHESS. - http://www.ehess.fr/fr/enseignement/enseignements/2007/ue/1070/. - 2010-05-12"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/173361428> , <http://www.idref.fr/14621594X> ;
+        skos:note           "Historienne et critique d'art. - Professeur de culture générale à l'École supérieure d'art de Cambrai (en 2010). - Coéditrice de la revue \"May\" (en 2010)"@fr ;
+        skos:prefLabel      "Catherine Chevalier (critique d'art)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16201782p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435117333#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16201782p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16201782p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16201782p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42461066v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb16201782p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb16201782p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16201782p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43636976q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16201782p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16201782p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16201782p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42185658r#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb16201782p#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb16201782p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16201782p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16201782p#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Historienne et critique d'art. - Professeur de culture générale à l'École supérieure d'art de Cambrai (en 2010). - Coéditrice de la revue \"May\" (en 2010)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/14621594X> , <http://viaf.org/viaf/173361428> ;
+        foaf:familyName  "Chevalier" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Catherine" ;
+        foaf:name        "Catherine Chevalier" ;
+        foaf:page        <http://data.bnf.fr/16201782/catherine_chevalier/> .

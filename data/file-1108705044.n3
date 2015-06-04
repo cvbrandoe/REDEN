@@ -1,0 +1,60 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb30773273h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13004429c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13004429c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13004429c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30773270g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13004429c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13004429c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13004429c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13004429c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13004429c> ;
+        bnf-onto:FRBNF        13004429 ;
+        isni:identifierValid  "0000000115741133" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000115741133> ;
+        skos:altLabel         "Georges Lefèvre"@fr ;
+        skos:editorialNote    "Lorenz : Lefèvre (G.). - . - BN Cat. gén.. - . -"@fr , "Le traité \"De usura\" / [Robert de Courson] ; éd. par Georges-Joseph Lefèvre], 1902. - . - De Anselmo Laudunensi scholastico : 1050-1117 / G. Lefèvre, 1895. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/71525208> , <http://isni-url.oclc.nl/isni/0000000115741133> , <http://www.idref.fr/07657508X> ;
+        skos:note             "Docteur en philosophie. - Doyen de la Faculté des lettres de Lille"@fr , "A aussi écrit en latin"@fr ;
+        skos:prefLabel        "Georges-Joseph Lefèvre"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13004429c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30773274v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13004429c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13004429c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13004429c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307732698#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13004429c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13004429c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13004429c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13004429c#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1862 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en philosophie. - Doyen de la Faculté des lettres de Lille" , "A aussi écrit en latin" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/71525208> , <http://www.idref.fr/07657508X> ;
+        foaf:depiction      <http://gallica.bnf.fr/ark:/12148/bpt6k1116419.thumbnail> ;
+        foaf:familyName     "Lefèvre" ;
+        foaf:givenName      "Georges-Joseph" ;
+        foaf:name           "Georges-Joseph Lefèvre" ;
+        foaf:page           <http://data.bnf.fr/13004429/georges-joseph_lefevre/> .

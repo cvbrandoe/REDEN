@@ -1,0 +1,37 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14416612q#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1829 ;
+        bnf-onto:lastYear              1915 ;
+        rdagroup2elements:biographicalInformation
+                "Archéologue amateur, collectionneur, propriétaire d'un dossier de 168 plans (plans-minutes de places fortes de France, d'opérations de siège, de batailles des 17e et 18e siècles) aujourd'hui conservé aux Archives du Cher. - Conducteur des ponts et chaussées à Saint-Amand-Montrond, Cher" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1829/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1915/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1829-09-19" ;
+        bio:death                      "1915-10-01" ;
+        foaf:birthday                  "09-19" ;
+        foaf:familyName                "Auclair" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "François-Xavier" ;
+        foaf:name                      "François-Xavier Auclair" ;
+        foaf:page                      <http://data.bnf.fr/14416612/francois-xavier_auclair/> .
+
+<http://data.bnf.fr/ark:/12148/cb14416612q>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb14416612q> ;
+        bnf-onto:FRBNF      14416612 ;
+        skos:editorialNote  "DBF. - . - Plans de fortifications et de batailles, 1677-1779 : catalogue de la collection Auclair, 21 Fi / Archives départementales du Cher, 2000. - . -"@fr ;
+        skos:note           "Archéologue amateur, collectionneur, propriétaire d'un dossier de 168 plans (plans-minutes de places fortes de France, d'opérations de siège, de batailles des 17e et 18e siècles) aujourd'hui conservé aux Archives du Cher. - Conducteur des ponts et chaussées à Saint-Amand-Montrond, Cher"@fr ;
+        skos:prefLabel      "François-Xavier Auclair (1829-1915)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb14416612q#foaf:Person> .

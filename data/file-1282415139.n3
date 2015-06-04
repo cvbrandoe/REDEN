@@ -1,0 +1,37 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/12457086/antigonos_58/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12457086d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12457086d#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             -320 ;
+        bnf-onto:lastYear              -239 ;
+        rdagroup2elements:biographicalInformation
+                "Antigonos I (GLU) ou II (Mourre) : voir note sous Antigonos I (roi de Macédoine / 0382-0301 av. J.-C.)" , "Roi de Macédoine de 276 à 239 av. J.-C., fils de Démétrios Poliorcète" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/-0320/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/-0239/> ;
+        bio:birth                      "- 320" ;
+        bio:death                      "- 239" ;
+        owl:sameAs                     <http://www.idref.fr/076101894> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b8538614q.thumbnail> ;
+        foaf:familyName                "Antigonos" ;
+        foaf:page                      <http://data.bnf.fr/12457086/antigonos_58/> .
+
+<http://data.bnf.fr/ark:/12148/cb12457086d>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12457086d> ;
+        bnf-onto:FRBNF   12457086 ;
+        skos:altLabel    "Antigone (roi de Macédoine, 0320?-0239 av. J.-C.)"@fr , "Antigone Gonatas (roi de Macédoine, 0320?-0239 av. J.-C.)"@fr , "Antigonos Gonatas (roi de Macédoine, 0320?-0239 av. J.-C.)"@fr ;
+        skos:exactMatch  <http://www.idref.fr/076101894> ;
+        skos:note        "Antigonos I (GLU) ou II (Mourre) : voir note sous Antigonos I (roi de Macédoine / 0382-0301 av. J.-C.)"@fr , "Roi de Macédoine de 276 à 239 av. J.-C., fils de Démétrios Poliorcète"@fr ;
+        skos:prefLabel   "Antigonos (roi de Macédoine, 0320?-0239 av. J.-C.)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12457086d#foaf:Person> .

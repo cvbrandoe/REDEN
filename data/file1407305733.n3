@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1967 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de géographie, Department of economics and geography, Hofstra university, New York (en 2006)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxc> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/119343590> , <http://www.idref.fr/060249250> ;
+        foaf:familyName     "Rodrigue" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jean-Paul" ;
+        foaf:name           "Jean-Paul Rodrigue" ;
+        foaf:page           <http://data.bnf.fr/12785220/jean-paul_rodrigue/> .
+
+<http://data.bnf.fr/ark:/12148/cb388485391#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35235424b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12785220p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12785220p> ;
+        bnf-onto:FRBNF        12785220 ;
+        isni:identifierValid  "0000000109394067" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109394067> ;
+        skos:editorialNote    "The geography of transport systems / Jean-Paul Rodrigue, 2006. - . - LC Authorities. - http://authorities.loc.gov. - 2007-01-04"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000109394067> , <http://www.idref.fr/060249250> , <http://viaf.org/viaf/119343590> ;
+        skos:note             "Professeur de géographie, Department of economics and geography, Hofstra university, New York (en 2006)"@fr ;
+        skos:prefLabel        "Jean-Paul Rodrigue"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402090945#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42031862c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43569023t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12785220p#foaf:Person> .

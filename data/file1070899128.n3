@@ -1,0 +1,65 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb413683720#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40228510v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38325061t#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb140978652>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb140978652> ;
+        bnf-onto:FRBNF        14097865 ;
+        isni:identifierValid  "0000000107743534" ;
+        owl:sameAs            <http://isni.org/isni/0000000107743534> ;
+        skos:editorialNote    "Le malin [Images animées] / John Huston, réal. ; Benedict et Michael Fitzgerald, scénario [...], 1993. - . - Adolf Hitler : a portrait / Michael Fitzgerald, 2006. - . -"@fr , "British Library integrated catalogue. - http://catalogue.bl.uk/. - 2007-03-08 LC authorities. - http://authorities.loc.gov/. - 2007-03-08 IMDB. - http://www.imdb.com. - 2005-02-24"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000107743534> , <http://viaf.org/viaf/75627892> , <http://www.idref.fr/073648213> ;
+        skos:note             "Producteur et scénariste, actif dès les années 1980. - Diplômé en philosophie. - Poète, traducteur. - Spécialiste de l'Allemagne de 1918 à 1945"@fr ;
+        skos:prefLabel        "Michael Fitzgerald"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38223297q#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38485109d#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb140978652#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1949 ;
+        rdagroup2elements:biographicalInformation
+                "Producteur et scénariste, actif dès les années 1980. - Diplômé en philosophie. - Poète, traducteur. - Spécialiste de l'Allemagne de 1918 à 1945" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Londres" ;
+        owl:sameAs                      <http://viaf.org/viaf/75627892> , <http://www.idref.fr/073648213> ;
+        foaf:familyName                 "Fitzgerald" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Michael" ;
+        foaf:name                       "Michael Fitzgerald" ;
+        foaf:page                       <http://data.bnf.fr/14097865/michael_fitzgerald/> .

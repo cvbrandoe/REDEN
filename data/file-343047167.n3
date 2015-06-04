@@ -1,0 +1,81 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb34007204j#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb315242725#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31524270g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1814 ;
+        bnf-onto:lastYear               1876 ;
+        rdagroup2elements:biographicalInformation
+                "Bibliothécaire au palais du Louvre" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1814/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1876/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Corbigny (Nièvre)" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1814-02-05" ;
+        bio:death                       "1876" ;
+        owl:sameAs                      <http://viaf.org/viaf/29524639> , <http://www.idref.fr/166977802> ;
+        foaf:birthday                   "02-05" ;
+        foaf:familyName                 "Vallery-Radot" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Vincent-Félix" ;
+        foaf:name                       "Vincent-Félix Vallery-Radot" ;
+        foaf:page                       <http://data.bnf.fr/10656655/vincent-felix_vallery-radot/> .
+
+<http://data.bnf.fr/ark:/12148/cb31524273h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302806408#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10656655m>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb10656655m> ;
+        bnf-onto:FRBNF      10656655 ;
+        skos:altLabel       "Vincent-Félix Vallery- Radot (1814-1876)"@fr , "Vallery Radot (1814-1876)"@fr ;
+        skos:editorialNote  "Chefs-d'oeuvre des classiques français du dix-septième siècle, ou Extraits de nos meilleurs écrivains en prose, avec des notices et des explications / par MM. Aurélien de Courson et Vallery Radot,... Nouv. éd., 1869. - . - Oeuvres complètes d'Hégésippe Moreau. Oeuvres choisies de Gilbert. Souvenirs d'un ami de Moreau / par M. Vallery-Radot, 1864. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/166977802> , <http://viaf.org/viaf/29524639> ;
+        skos:note           "Bibliothécaire au palais du Louvre"@fr ;
+        skos:prefLabel      "Vincent-Félix Vallery-Radot (1814-1876)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb315242698#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33989344m#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10656655m#foaf:Person> .

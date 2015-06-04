@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42257730p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420408792#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41281015w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1962 ;
+        rdagroup2elements:biographicalInformation
+                "Poète et essayiste. - Prêtre du Diocèse de Limoges (ordonné en 1990), vicaire épiscopal (en 2010). - Curé de la paroisse Notre-Dame de Haute-Marche (Creuse ; en 2007)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/32312002> , <http://www.idref.fr/118820494> ;
+        foaf:familyName     "Morin" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Pierre" ;
+        foaf:name           "Pierre Morin" ;
+        foaf:page           <http://data.bnf.fr/15561292/pierre_morin/> .
+
+<http://data.bnf.fr/ark:/12148/cb155612927>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb155612927> ;
+        bnf-onto:FRBNF        15561292 ;
+        isni:identifierValid  "0000000005085948" ;
+        owl:sameAs            <http://isni.org/isni/0000000005085948> ;
+        skos:editorialNote    "Partir au champ d'étoiles / Pierre Morin, 2007. - . - Petites graines de sagesse / Pierre Morin, 2010. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/118820494> , <http://isni.org/isni/0000000005085948> , <http://viaf.org/viaf/32312002> ;
+        skos:note             "Poète et essayiste. - Prêtre du Diocèse de Limoges (ordonné en 1990), vicaire épiscopal (en 2010). - Curé de la paroisse Notre-Dame de Haute-Marche (Creuse ; en 2007)"@fr ;
+        skos:prefLabel        "Pierre Morin"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41470950s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41073090k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb155612927#foaf:Person> .

@@ -1,0 +1,80 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb363535345#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36353512v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb308011604#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30801162t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb105887894>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb105887894> ;
+        bnf-onto:FRBNF      10588789 ;
+        skos:editorialNote  "Dictionnaire des régicides. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/19668227> ;
+        skos:note           "Député d'Eure-et-Loir à la Convention"@fr ;
+        skos:prefLabel      "Denis Toussaint Lesage (1758-1796)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1758 ;
+        bnf-onto:lastYear               1796 ;
+        rdagroup2elements:biographicalInformation
+                "Député d'Eure-et-Loir à la Convention" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1758/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1796/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Chartres" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1758-08-15" ;
+        bio:death                       "1796-06-08" ;
+        owl:sameAs                      <http://viaf.org/viaf/19668227> ;
+        foaf:birthday                   "08-15" ;
+        foaf:familyName                 "Lesage" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Denis Toussaint" ;
+        foaf:name                       "Denis Toussaint Lesage" ;
+        foaf:page                       <http://data.bnf.fr/10588789/denis_toussaint_lesage/> .
+
+<http://data.bnf.fr/ark:/12148/cb308011635#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36353607j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30801161g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105887894#foaf:Person> .

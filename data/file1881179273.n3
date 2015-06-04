@@ -1,0 +1,72 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb400285215#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37103185q#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37734152n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12875485s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12875485s> ;
+        bnf-onto:FRBNF        12875485 ;
+        isni:identifierValid  "000000011568639X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000011568639X> ;
+        skos:exactMatch       <http://www.idref.fr/069810575> , <http://isni-url.oclc.nl/isni/000000011568639X> , <http://viaf.org/viaf/44427691> ;
+        skos:note             "Diplômé du Royal college of art de Londres. - Peintre, designer, graphiste. - Enseigne les beaux-arts (en 2005)"@fr ;
+        skos:prefLabel        "Simon Jennings"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Diplômé du Royal college of art de Londres. - Peintre, designer, graphiste. - Enseigne les beaux-arts (en 2005)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://www.idref.fr/069810575> , <http://viaf.org/viaf/44427691> ;
+        foaf:familyName  "Jennings" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Simon" ;
+        foaf:name        "Simon Jennings" ;
+        foaf:page        <http://data.bnf.fr/12875485/simon_jennings/> .
+
+<http://data.bnf.fr/ark:/12148/cb358537840#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37175627v#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35414242d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42038287r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12875485s#foaf:Person> .

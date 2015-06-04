@@ -1,0 +1,44 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb157274488#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Acteur de théâtre" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/15100337> ;
+        foaf:familyName  "Morin" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Pierre" ;
+        foaf:name        "Pierre Morin" ;
+        foaf:page        <http://data.bnf.fr/15727448/pierre_morin/> .
+
+<http://data.bnf.fr/ark:/12148/cb41297162b#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb157274488#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb157274488#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb157274488#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb157274488>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb157274488> ;
+        bnf-onto:FRBNF   15727448 ;
+        skos:exactMatch  <http://viaf.org/viaf/15100337> ;
+        skos:note        "Acteur de théâtre"@fr ;
+        skos:prefLabel   "Pierre Morin (acteur)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb157274488#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43686626c#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb157274488#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb157274488#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb157274488#foaf:Person> .

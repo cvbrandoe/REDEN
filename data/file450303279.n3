@@ -1,0 +1,58 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb40574277w#frbr:Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb15312632b#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb15312632b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15312632b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb407343065#frbr:Expression>
+        bnfroles:r3060       <http://data.bnf.fr/ark:/12148/cb15312632b#foaf:Person> ;
+        marcrel:prt          <http://data.bnf.fr/ark:/12148/cb15312632b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15312632b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40625224p#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb15312632b#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb15312632b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15312632b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15312632b>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb15312632b> ;
+        bnf-onto:FRBNF   15312632 ;
+        skos:exactMatch  <http://viaf.org/viaf/66768055> ;
+        skos:note        "Graveur en taille douce, de Lyon, où il travailla de 1722 à 1744 env. Père de Robert II Daudet. Grava une carte du lac de Genève pour l'Histoire de Genève de Spon"@fr ;
+        skos:prefLabel   "Jean-Louis Daudet (graveur)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb15312632b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15312632b#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Graveur en taille douce, de Lyon, où il travailla de 1722 à 1744 env. Père de Robert II Daudet. Grava une carte du lac de Genève pour l'Histoire de Genève de Spon" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/66768055> ;
+        foaf:depiction   <http://gallica.bnf.fr/ark:/12148/btv1b53012090x.thumbnail> ;
+        foaf:familyName  "Daudet" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Jean-Louis" ;
+        foaf:name        "Jean-Louis Daudet" ;
+        foaf:page        <http://data.bnf.fr/15312632/jean-louis_daudet/> .
+
+<http://data.bnf.fr/ark:/12148/cb406252251#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb15312632b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15312632b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb407396662#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb15312632b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15312632b#foaf:Person> .

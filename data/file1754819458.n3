@@ -1,0 +1,78 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb38795580m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43529320s#frbr:Expression>
+        bnfroles:r152        <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303135304#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15295486x>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb15295486x> ;
+        bnf-onto:FRBNF   15295486 ;
+        skos:exactMatch  <http://viaf.org/viaf/7725095> ;
+        skos:note        "Membre du bureau des longitudes et de l'Académie des sciences. Découvrit des comètes et établit les tables de Jupiter, Saturne et Uranus"@fr ;
+        skos:prefLabel   "Alexis Bouvard (1787-1843)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40671945n#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40673749z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb328278815#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301504131#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15295486x#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1787 ;
+        bnf-onto:lastYear               1843 ;
+        rdagroup2elements:biographicalInformation
+                "Membre du bureau des longitudes et de l'Académie des sciences. Découvrit des comètes et établit les tables de Jupiter, Saturne et Uranus" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1787/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1843/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Les Contamines" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1787-06-27" ;
+        bio:death                       "1843-06-07" ;
+        owl:sameAs                      <http://viaf.org/viaf/7725095> ;
+        foaf:birthday                   "06-27" ;
+        foaf:familyName                 "Bouvard" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Alexis" ;
+        foaf:name                       "Alexis Bouvard" ;
+        foaf:page                       <http://data.bnf.fr/15295486/alexis_bouvard/> .

@@ -1,0 +1,84 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38907648c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40190704t#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13776093h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13776093h> ;
+        bnf-onto:FRBNF        13776093 ;
+        isni:identifierValid  "0000000115853178" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000115853178> ;
+        skos:editorialNote    "L'entreprise et la gestion des déchets / sous la dir. de R. Andersen, J. Malherbe, F. Ost, 1993. - . - Constantin XI : dernier empereur des Romains / Jacques Malherbe, 2001. - . -"@fr , "Bibliothèque royale, Belgique. - www.kbr.be. - 2002-06-10 CORC. - http://www.corc.oclc.org. - 2002-06-10"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000115853178> , <http://viaf.org/viaf/1181950> , <http://www.idref.fr/066895561> ;
+        skos:note             "Avocat chez Coopens, Horsmans et Malherbe, Bruxelles (en 1987)"@fr ;
+        skos:prefLabel        "Jacques Malherbe"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34715373k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1940 ;
+        rdagroup2elements:biographicalInformation
+                "Avocat chez Coopens, Horsmans et Malherbe, Bruxelles (en 1987)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/be#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/1181950> , <http://www.idref.fr/066895561> ;
+        foaf:familyName     "Malherbe" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jacques" ;
+        foaf:name           "Jacques Malherbe" ;
+        foaf:page           <http://data.bnf.fr/13776093/jacques_malherbe/> .
+
+<http://data.bnf.fr/ark:/12148/cb377602292#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb426689086#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42639943b#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37666426v#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437745613#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43661263v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13776093h#foaf:Person> .

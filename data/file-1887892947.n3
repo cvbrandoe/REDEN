@@ -1,0 +1,134 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35301946m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38991579s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34964138n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354242282#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353019756#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb376466260#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345572033#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35744222x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414941383#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119010243>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb119010243> ;
+        bnf-onto:FRBNF        11901024 ;
+        isni:identifierValid  "0000000078297124" ;
+        owl:sameAs            <http://isni.org/isni/0000000078297124> ;
+        skos:altLabel         "Pierre Georges Duhamel"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/93105719> , <http://isni.org/isni/0000000078297124> , <http://www.idref.fr/026842270> ;
+        skos:note             "Médecin (depuis 1957). - Romancier. - Vice-président du Conseil général des Hauts-de-Seine (en 1993)"@fr ;
+        skos:prefLabel        "Pierre Duhamel"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1927 ;
+        rdagroup2elements:biographicalInformation
+                "Médecin (depuis 1957). - Romancier. - Vice-président du Conseil général des Hauts-de-Seine (en 1993)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/026842270> , <http://viaf.org/viaf/93105719> ;
+        foaf:familyName     "Duhamel" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Pierre" ;
+        foaf:name           "Pierre Duhamel" ;
+        foaf:page           <http://data.bnf.fr/11901024/pierre_duhamel/> .
+
+<http://data.bnf.fr/ark:/12148/cb35832118w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389578379#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353907847#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36170757q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347525737#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb352115665#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35607983s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36133119d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40168419b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346444314#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119010243#foaf:Person> .

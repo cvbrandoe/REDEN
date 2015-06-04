@@ -1,0 +1,85 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb369930935#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34642854d#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Illustrateur à la \"Vie parisienne\" de 1910 à 1940. - A signé des illustrations érotiques sous le pseudonyme Herric" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/111193591> , <http://viaf.org/viaf/41841350> ;
+        foaf:familyName  "Hérouard" ;
+        foaf:givenName   "Charles" ;
+        foaf:name        "Charles Hérouard" ;
+        foaf:page        <http://data.bnf.fr/11907384/charles_herouard/> .
+
+<http://data.bnf.fr/ark:/12148/cb34642867r#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32114808z#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319967934#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb369856933#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31470409v#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> .
+
+<http://data.bnf.fr/11907384/charles_herouard/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34686236m#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347706634#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119073847>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb119073847> ;
+        bnf-onto:FRBNF        11907384 ;
+        isni:identifierValid  "0000000000020483" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000000020483> ;
+        skos:altLabel         "Herric"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000000020483> , <http://www.idref.fr/111193591> , <http://viaf.org/viaf/41841350> ;
+        skos:note             "Illustrateur à la \"Vie parisienne\" de 1910 à 1940. - A signé des illustrations érotiques sous le pseudonyme Herric"@fr ;
+        skos:prefLabel        "Charles Hérouard"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb119073847#foaf:Person> .

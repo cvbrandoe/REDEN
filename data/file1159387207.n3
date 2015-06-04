@@ -1,0 +1,61 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38339190v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1935 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en médecine (Alger, 1962). - Chef du service d'hépato-gastro-entérologie, Clinique Dieulafoy, Hôpital Purpan, Toulouse (en 1993)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/12375585> , <http://www.idref.fr/031985998> ;
+        foaf:familyName     "Pascal" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jean-Pierre" ;
+        foaf:name           "Jean-Pierre Pascal" ;
+        foaf:page           <http://data.bnf.fr/12310095/jean-pierre_pascal/> .
+
+<http://data.bnf.fr/ark:/12148/cb12310095p>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12310095p> ;
+        bnf-onto:FRBNF      12310095 ;
+        skos:editorialNote  "Les Hémorragies digestives hautes / sous la dir. de J.-P. Pascal et R. Colin, 1981. - . - Le Pancréas exocrine : physiologie, introduction à l'exploration fonctionnelle / par André Ribet, Jean-Pierre Pascal, 1968. - . -"@fr , "Rosenwald, 1991. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/031985998> , <http://viaf.org/viaf/12375585> ;
+        skos:note           "Docteur en médecine (Alger, 1962). - Chef du service d'hépato-gastro-entérologie, Clinique Dieulafoy, Hôpital Purpan, Toulouse (en 1993)"@fr ;
+        skos:prefLabel      "Jean-Pierre Pascal"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346638244#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38543732f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385402581#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb331538912#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12310095p#foaf:Person> .

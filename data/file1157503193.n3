@@ -1,0 +1,39 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb150249310>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb150249310> ;
+        bnf-onto:FRBNF      15024931 ;
+        skos:altLabel       "Willelmus (moine de Cluse, 11..-1100 ?)"@la , "Guillaume de Chiusa (11..-1100 ?)"@fr , "Guillaume (moine de Cluse, 11..-1100 ?)"@fr , "Guillelmus (moine de Cluse, 11..-1100 ?)"@la ;
+        skos:editorialNote  "DHGE. - . - BHL 1144 (Benoît II) et 5954-5955 (histoire de Saint-Michel de Cluse). - . - Histoire littéraire de la France, t. VIII, 1868, p. 451-454 ; et table des t. I à XV, p. 322. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/7666518> ;
+        skos:note           "Hagiographe. - Moine de l'Abbaye bénédictine Saint-Michel de Cluse (Sagra di San Michele, à Chiusa di San Michele, province de Turin). - Auteur de la «Vie» de deux abbés de Cluse : Benoît Ier († 1034) et Benoît II († 1091), la «Vie de Benoît Ier» constituant la seconde partie de l'«Histoire du monastère de Cluse» (chronique dont la première partie est anonyme)"@fr ;
+        skos:prefLabel      "Guillaume de Cluse (11..-1100 ?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb150249310#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb150249310#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1100 ;
+        dcterms:contributor            <http://data.bnf.fr/ark:/12148/cb14559283v#frbr:Work> ;
+        rdagroup2elements:biographicalInformation
+                "Hagiographe. - Moine de l'Abbaye bénédictine Saint-Michel de Cluse (Sagra di San Michele, à Chiusa di San Michele, province de Turin). - Auteur de la «Vie» de deux abbés de Cluse : Benoît Ier († 1034) et Benoît II († 1091), la «Vie de Benoît Ier» constituant la seconde partie de l'«Histoire du monastère de Cluse» (chronique dont la première partie est anonyme)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1001-1100/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1100/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        bio:birth                      "10.." ;
+        bio:death                      "1100" ;
+        owl:sameAs                     <http://viaf.org/viaf/7666518> ;
+        foaf:familyName                "Guillaume de Cluse" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/15024931/guillaume_de_cluse/> .

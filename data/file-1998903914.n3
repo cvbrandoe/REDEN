@@ -1,0 +1,35 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14693199h>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14693199h> ;
+        bnf-onto:FRBNF   14693199 ;
+        skos:exactMatch  <http://viaf.org/viaf/49486725> ;
+        skos:note        "Régisseur plateau"@fr ;
+        skos:prefLabel   "Guy Nicolas"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14693199h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14693199h#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Régisseur plateau" ;
+        owl:sameAs       <http://viaf.org/viaf/49486725> ;
+        foaf:familyName  "Nicolas" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Guy" ;
+        foaf:name        "Guy Nicolas" ;
+        foaf:page        <http://data.bnf.fr/14693199/guy_nicolas/> .
+
+<http://data.bnf.fr/ark:/12148/cb394974390#frbr:Expression>
+        bnfroles:r2260       <http://data.bnf.fr/ark:/12148/cb14693199h#foaf:Person> ;
+        marcrel:prd          <http://data.bnf.fr/ark:/12148/cb14693199h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14693199h#foaf:Person> .

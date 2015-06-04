@@ -1,0 +1,132 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14410725w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14410725w> , <http://fr.wikipedia.org/wiki/Lorenzo_Ferrero> ;
+        bnf-onto:FRBNF        14410725 ;
+        isni:identifierValid  "0000000114761634" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000114761634> ;
+        skos:editorialNote    "Nascita di un'opera : \"Salvatore Giuliano\" : libretto di Giuseppe Di Leva, musica di Lorenzo Ferrero / Lorenzo Capellini ; , 1987. - . - Int. WWM 1996-1997. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000114761634> , <http://www.idref.fr/118774956> , <http://dbpedia.org/resource/Lorenzo_Ferrero> , <http://viaf.org/viaf/84234400> , <http://fr.wikipedia.org/wiki/Lorenzo_Ferrero> ;
+        skos:note             "Compositeur. - Directeur artistique du Festival de Vérone"@fr ;
+        skos:prefLabel        "Lorenzo Ferrero (1951-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb148424622#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1951 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur. - Directeur artistique du Festival de Vérone" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1951/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        rdagroup2elements:placeOfBirth  "Turin (Italie)" ;
+        owl:sameAs                      <http://viaf.org/viaf/84234400> , <http://dbpedia.org/resource/Lorenzo_Ferrero> , <http://www.idref.fr/118774956> ;
+        foaf:birthday                   "11-17" ;
+        foaf:familyName                 "Ferrero" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Lorenzo" ;
+        foaf:name                       "Lorenzo Ferrero" ;
+        foaf:page                       <http://data.bnf.fr/14410725/lorenzo_ferrero/> .
+
+<http://data.bnf.fr/ark:/12148/cb397485735#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39682875w#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39748493h#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394751487#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb167346473#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14842464r#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/14410725/lorenzo_ferrero/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41479101j#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38545845j#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39748572t#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39497224d#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb140424631#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb148424088#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15951150h#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb148274787#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43586225r#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39748571g#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14446931f#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41373540x#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39748533x#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14842277j#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14410725w#foaf:Person> .

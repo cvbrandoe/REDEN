@@ -1,0 +1,78 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12096181v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12096181v> ;
+        bnf-onto:FRBNF        12096181 ;
+        isni:identifierValid  "0000000050912172" ;
+        owl:sameAs            <http://isni.org/isni/0000000050912172> ;
+        skos:editorialNote    "Écrits sur l'abîme : les derniers romans de Henry James / Évelyne Labbé, 1990. - . - Sceaux magazine, (2005-03)n° 346, p. 33. - http://bibnum.sceaux.fr/sites/default/files/fonds/bulletin-municipal/AM_SCEAUX_BM_0346_2005_MARS.pdf. -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/22170174> , <http://www.idref.fr/029308208> , <http://isni.org/isni/0000000050912172> ;
+        skos:note             "Agrégée d'anglais, docteur ès lettres (1985). - Professeur de littérature anglo-américaine à l'Université du Maine (en 1990)"@fr ;
+        skos:prefLabel        "Évelyne Labbé (angliciste)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34978721r#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41270948w#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390842730#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425176694#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39084287p#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35222232g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41110562x#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb375948665#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12096181v#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Agrégée d'anglais, docteur ès lettres (1985). - Professeur de littérature anglo-américaine à l'Université du Maine (en 1990)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/029308208> , <http://viaf.org/viaf/22170174> ;
+        foaf:familyName  "Labbé" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Évelyne" ;
+        foaf:name        "Évelyne Labbé" ;
+        foaf:page        <http://data.bnf.fr/12096181/evelyne_labbe/> .

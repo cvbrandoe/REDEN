@@ -1,0 +1,40 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12230265j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12230265j> ;
+        bnf-onto:FRBNF        12230265 ;
+        isni:identifierValid  "0000000110463410" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000110463410> ;
+        skos:editorialNote    "Timperley. - . - Plomer, Bushnell, Dix. - . - Todd. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/24455888> , <http://www.idref.fr/157275558> , <http://isni-url.oclc.nl/isni/0000000110463410> ;
+        skos:note             "Imprimeur-libraire. - Fils d'un apothicaire, en apprentissage de sept. 1749 à déc. 1756, il s'établit en 1759 ou peu avant. Imprimeur des périodiques : \"Saint James's Chronicle\" et \"London Magazine\". Maître de la \"Stationers'company\" en 1792. A publié également sous la raison : \"Britannia Printing Office\""@fr ;
+        skos:prefLabel        "Henry Baldwin (173.-1813)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12230265j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12230265j#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1813 ;
+        rdagroup2elements:biographicalInformation
+                "Imprimeur-libraire. - Fils d'un apothicaire, en apprentissage de sept. 1749 à déc. 1756, il s'établit en 1759 ou peu avant. Imprimeur des périodiques : \"Saint James's Chronicle\" et \"London Magazine\". Maître de la \"Stationers'company\" en 1792. A publié également sous la raison : \"Britannia Printing Office\"" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1813/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1759-1813" ;
+        bio:birth                      "173." ;
+        bio:death                      "1813" ;
+        owl:sameAs                     <http://www.idref.fr/157275558> , <http://viaf.org/viaf/24455888> ;
+        foaf:familyName                "Baldwin" ;
+        foaf:givenName                 "Henry" ;
+        foaf:name                      "Henry Baldwin" ;
+        foaf:page                      <http://data.bnf.fr/12230265/henry_baldwin/> .

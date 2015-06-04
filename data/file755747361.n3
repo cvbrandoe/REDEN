@@ -1,0 +1,90 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31664748p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31664751k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31664754m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316647538#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10541651n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10541651n> ;
+        bnf-onto:FRBNF        10541651 ;
+        isni:identifierValid  "0000000083992703" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000083992703> ;
+        skos:editorialNote    "JBA. - . - BN Cat. gén.. - . -"@fr , "Les banques populaires au point de vue coopératif, conférence faite au VIe Congrès des banques populaires françaises tenu à Bordeaux en 1894 / par Henry W. Wolff, 1894. - . - BBA. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/89542438> , <http://isni-url.oclc.nl/isni/0000000083992703> , <http://www.idref.fr/095262245> ;
+        skos:note             "Coopérateur. - Créateur des coopératives de crédit en Irlande (1894)"@fr ;
+        skos:prefLabel        "Henry William Wolff (1840-1931)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316647491#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31664755z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1840 ;
+        bnf-onto:lastYear               1931 ;
+        rdagroup2elements:biographicalInformation
+                "Coopérateur. - Créateur des coopératives de crédit en Irlande (1894)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1840/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1931/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Économie politique. Travail" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/330/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Leeds (Royaume-Uni)" ;
+        rdagroup2elements:placeOfDeath  "Charterhouse, Londres (Royaume-Uni)" ;
+        bio:birth                       "1840-12-30" ;
+        bio:death                       "1931-03-07" ;
+        owl:sameAs                      <http://www.idref.fr/095262245> , <http://viaf.org/viaf/89542438> ;
+        foaf:birthday                   "12-30" ;
+        foaf:familyName                 "Wolff" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Henry William" ;
+        foaf:name                       "Henry William Wolff" ;
+        foaf:page                       <http://data.bnf.fr/10541651/henry_william_wolff/> .
+
+<http://data.bnf.fr/ark:/12148/cb316647507#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> .
+
+<http://data.bnf.fr/10541651/henry_william_wolff/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb10541651n#foaf:Person> .

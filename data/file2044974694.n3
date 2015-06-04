@@ -1,0 +1,38 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb121198664>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb121198664> ;
+        bnf-onto:FRBNF   12119866 ;
+        skos:altLabel    "Bertrand Bernard Léon Pujo"@fr ;
+        skos:exactMatch  <http://www.idref.fr/029608783> ;
+        skos:note        "Général et aviateur français"@fr ;
+        skos:prefLabel   "Bertrand Pujo (1878-1964)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb121198664#foaf:Person> .
+
+<http://data.bnf.fr/12119866/bertrand_pujo/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb121198664#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121198664#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1878 ;
+        bnf-onto:lastYear              1964 ;
+        rdagroup2elements:biographicalInformation
+                "Général et aviateur français" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1878/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1964/> ;
+        bio:birth                      "1878" ;
+        bio:death                      "1964" ;
+        owl:sameAs                     <http://www.idref.fr/029608783> ;
+        foaf:familyName                "Pujo" ;
+        foaf:givenName                 "Bertrand" ;
+        foaf:name                      "Bertrand Pujo" ;
+        foaf:page                      <http://data.bnf.fr/12119866/bertrand_pujo/> .

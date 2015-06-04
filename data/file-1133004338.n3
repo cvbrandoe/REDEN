@@ -1,0 +1,66 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12437762x>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12437762x> ;
+        bnf-onto:FRBNF        12437762 ;
+        isni:identifierValid  "0000000057942657" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000057942657> ;
+        skos:exactMatch       <http://www.idref.fr/033518467> , <http://isni-url.oclc.nl/isni/0000000057942657> , <http://viaf.org/viaf/2564369> ;
+        skos:note             "Directrice de crèche (en 1994)"@fr ;
+        skos:prefLabel        "Anne Wagner"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35867161v#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357252202#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38936540q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb358566504#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb367056786#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Directrice de crèche (en 1994)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/2564369> , <http://www.idref.fr/033518467> ;
+        foaf:familyName  "Wagner" ;
+        foaf:givenName   "Anne" ;
+        foaf:name        "Anne Wagner" ;
+        foaf:page        <http://data.bnf.fr/12437762/anne_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb366967474#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12437762x#foaf:Person> .

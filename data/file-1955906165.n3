@@ -1,0 +1,46 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb167098446#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Également éditeur. - En activité dès 1817 au moins. Breveté libraire le 14 juin 1821. Bénéficie en oct. 1830 du prêt accordé par l'État au commerce et à l'industrie ; signe, le 29 déc. 1835, la \"Pétition des libraires qui ont participé au prêt de 30 millions et qui ne sont pas encore libérés envers le Trésor\", adressée le 16 avril 1836 à la Chambre des députés. Encore en activité en 1845" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1817-1845" ;
+        bio:birth                      "17.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://www.idref.fr/150008562> , <http://viaf.org/viaf/189812606> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k6438745g.thumbnail> ;
+        foaf:familyName                "Rousseau" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Pierre-Jean-Baptiste" ;
+        foaf:name                      "Pierre-Jean-Baptiste Rousseau" ;
+        foaf:page                      <http://data.bnf.fr/16709844/pierre-jean-baptiste_rousseau/> .
+
+<http://data.bnf.fr/ark:/12148/cb167098446>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb167098446> ;
+        bnf-onto:FRBNF      16709844 ;
+        skos:editorialNote  "Annuaire de l'imprimerie, 1821. - . - Annuaire de l'imprimerie, 1826. - . - Imbert. - . -"@fr , "Annuaire des imprimeurs, 1828. - . - Annuaire des imprimeurs, 1829. - . - Annuaire des imprimeurs, 1835. - . -"@fr , "Annuaire de l'imprimerie, 1841. - . - Annuaire de l'imprimerie, 1845 : mentionne en plus un autre \"Rousseau\", libraire établi rue Saint-Victor, n° 139. - . - Felkay. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/189812606> , <http://www.idref.fr/150008562> ;
+        skos:note           "Également éditeur. - En activité dès 1817 au moins. Breveté libraire le 14 juin 1821. Bénéficie en oct. 1830 du prêt accordé par l'État au commerce et à l'industrie ; signe, le 29 déc. 1835, la \"Pétition des libraires qui ont participé au prêt de 30 millions et qui ne sont pas encore libérés envers le Trésor\", adressée le 16 avril 1836 à la Chambre des députés. Encore en activité en 1845"@fr ;
+        skos:prefLabel      "Pierre-Jean-Baptiste Rousseau (libraire, 17..-18..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb167098446#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30334872j#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb167098446#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb167098446#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb167098446#foaf:Person> .

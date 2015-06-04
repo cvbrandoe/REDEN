@@ -1,0 +1,49 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb148510638#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Danseuse. - Danse à l'Opéra de Paris entre 1837 et 1848 . - Née avant 1825, morte après 1858 selon Pipers. - Peut-être la même que Mlle Maria faisant ses débuts à l'Opéra en 1821" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1701-1800/> ;
+        bio:birth                      "18  " ;
+        bio:death                      "18  " ;
+        owl:sameAs                     <http://viaf.org/viaf/194148532> , <http://www.idref.fr/155983660> ;
+        foaf:familyName                "Jacob" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Maria" ;
+        foaf:name                      "Maria Jacob" ;
+        foaf:page                      <http://data.bnf.fr/14851063/maria_jacob/> .
+
+<http://data.bnf.fr/ark:/12148/cb39684335r#frbr:Expression>
+        bnfroles:r1060       <http://data.bnf.fr/ark:/12148/cb148510638#foaf:Person> ;
+        marcrel:dnc          <http://data.bnf.fr/ark:/12148/cb148510638#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148510638#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb148510638>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb148510638> ;
+        bnf-onto:FRBNF      14851063 ;
+        skos:altLabel       "Mademoiselle Maria (danseuse, 18..-18.. )"@fr ;
+        skos:editorialNote  "Pipers Enzyklopädie des Musiktheaters, Register. - . - RIPM (Répertoire international de la presse musicale) en ligne, 2005-07-21 : Mlle Maria . - . - Archives du Théâtre National de l'Opéra / Labat-Poussin. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/155983660> , <http://viaf.org/viaf/194148532> ;
+        skos:note           "Danseuse. - Danse à l'Opéra de Paris entre 1837 et 1848 . - Née avant 1825, morte après 1858 selon Pipers. - Peut-être la même que Mlle Maria faisant ses débuts à l'Opéra en 1821"@fr ;
+        skos:prefLabel      "Maria Jacob (danseuse, 18..-18.. )"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb148510638#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb396847784#frbr:Expression>
+        bnfroles:r1060       <http://data.bnf.fr/ark:/12148/cb148510638#foaf:Person> ;
+        marcrel:dnc          <http://data.bnf.fr/ark:/12148/cb148510638#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148510638#foaf:Person> .

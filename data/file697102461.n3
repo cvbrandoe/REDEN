@@ -1,0 +1,45 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb16569933q>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16569933q> ;
+        bnf-onto:FRBNF      16569933 ;
+        skos:altLabel       "Mathieu fils (ingénieur, 17..-18..?)"@fr ;
+        skos:editorialNote  "Nouvelle forme de Globe aërostatique.... : [estampe] / Composé dessiné et Gravé par le S.r Mathieu, Mechanicien Auteur de différentes Machines connües, 1784. - . - Journal de Paris, 1779. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/232433433> ;
+        skos:note           "Ingénieur. - Dessinateur et graveur. - Inventeur d'un lit mécanique pour l'Académie royale de chirurgie en 1779. - Adresse en 1784 : Pont-au-Change, Au Roi David"@fr ;
+        skos:prefLabel      "Mathieu (ingénieur, 17..-18..?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16569933q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42172324p#frbr:Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb16569933q#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb16569933q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16569933q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16569933q#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Ingénieur. - Dessinateur et graveur. - Inventeur d'un lit mécanique pour l'Académie royale de chirurgie en 1779. - Adresse en 1784 : Pont-au-Change, Au Roi David" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "17.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/232433433> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b8509584h.thumbnail> ;
+        foaf:familyName                "Mathieu" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/16569933/mathieu/> .

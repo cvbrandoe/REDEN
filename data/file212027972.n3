@@ -1,0 +1,99 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12672491n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12672491n> ;
+        bnf-onto:FRBNF        12672491 ;
+        isni:identifierValid  "0000000115630708" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000115630708> ;
+        skos:altLabel         "H. Ekkehard Wolff"@fr ;
+        skos:editorialNote    "Our people's own (Ina Lamang) : traditions and specimens of oral literature from Gwad Lamang speaking peoples in the Southern Lake Chad Basin in Central Africa / ed. by H. Ekkehard Wolff. - . - Kürschners dtsch. Gel.-Kal., 2003. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000115630708> , <http://viaf.org/viaf/27188813> , <http://www.idref.fr/071043942> ;
+        skos:note             "Africaniste"@fr ;
+        skos:prefLabel        "Ekkehard Wolff"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422511537#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388740724#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1944 ;
+        rdagroup2elements:biographicalInformation
+                "Africaniste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        owl:sameAs          <http://www.idref.fr/071043942> , <http://viaf.org/viaf/27188813> ;
+        foaf:familyName     "Wolff" ;
+        foaf:givenName      "Ekkehard" ;
+        foaf:name           "Ekkehard Wolff" ;
+        foaf:page           <http://data.bnf.fr/12672491/ekkehard_wolff/> .
+
+<http://data.bnf.fr/ark:/12148/cb347919372#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40964485j#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42254609v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34920507p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38875521v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390562448#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34829159t#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35667516s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43613074d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34824091t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12672491n#foaf:Person> .

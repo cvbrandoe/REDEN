@@ -1,0 +1,86 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb43704096x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437968160#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1970 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur d'histoire, University of Toronto, Canada (en 2001)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxc> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1970/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs                     <http://viaf.org/viaf/37133836> ;
+        foaf:birthday                  "07-26" ;
+        foaf:familyName                "Jennings" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Eric Thomas" ;
+        foaf:name                      "Eric Thomas Jennings" ;
+        foaf:page                      <http://data.bnf.fr/14428676/eric_thomas_jennings/> .
+
+<http://data.bnf.fr/ark:/12148/cb39286179m#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42430676z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb391627609#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38806765t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41099745j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42516870n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14428676n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14428676n> ;
+        bnf-onto:FRBNF        14428676 ;
+        isni:identifierValid  "0000000121283976" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121283976> ;
+        skos:editorialNote    "Vichy in the tropics : Pétain's national revolution in Madagascar, Guadeloupe, and Indochina, 1940-1944 / Eric T. Jennings, 2001. - . - LC Authorities. - http://authorities.loc.gov. - 2008-07-02"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000121283976> , <http://viaf.org/viaf/37133836> ;
+        skos:note             "Professeur d'histoire, University of Toronto, Canada (en 2001)"@fr ;
+        skos:prefLabel        "Eric Thomas Jennings (1970-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43877356v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14428676n#foaf:Person> .

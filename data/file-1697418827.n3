@@ -1,0 +1,97 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb31795837b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11138945g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11138945g> ;
+        bnf-onto:FRBNF        11138945 ;
+        isni:identifierValid  "0000000054260263" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000054260263> ;
+        skos:editorialNote    "Les Méthodes chirurgicales du traitement de l'angine de poitrine : évolution et résultats / Marcel Bérard ; préf. par le Pr René Leriche, 1937. - . - Qui était qui, XXe siècle / Béatrice et Michel Wattel, 2005. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000054260263> , <http://www.idref.fr/148181120> , <http://viaf.org/viaf/46753786> ;
+        skos:note             "Chirurgien des hôpitaux de Lyon et professeur de pathologie chirurgicale. - Docteur en médecine (Lyon, 1936-1937). - Fils de Léon Bérard (1870-1956)"@fr ;
+        skos:prefLabel        "Marcel Bérard (1908-1956)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb338810827#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb317958360#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32603649d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32603638r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb326036482#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32603643b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1908 ;
+        bnf-onto:lastYear               1956 ;
+        rdagroup2elements:biographicalInformation
+                "Chirurgien des hôpitaux de Lyon et professeur de pathologie chirurgicale. - Docteur en médecine (Lyon, 1936-1937). - Fils de Léon Bérard (1870-1956)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1908/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1956/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Lyon" ;
+        bio:birth                       "1908-11-06" ;
+        bio:death                       "1956-01-19" ;
+        owl:sameAs                      <http://www.idref.fr/148181120> , <http://viaf.org/viaf/46753786> ;
+        foaf:birthday                   "11-06" ;
+        foaf:familyName                 "Bérard" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Marcel" ;
+        foaf:name                       "Marcel Bérard" ;
+        foaf:page                       <http://data.bnf.fr/11138945/marcel_berard/> .
+
+<http://data.bnf.fr/ark:/12148/cb32115917f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb326036451#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31845161d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11138945g#foaf:Person> .

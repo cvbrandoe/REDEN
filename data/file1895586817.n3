@@ -1,0 +1,83 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39275859g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38998610s#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42658456g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427813340#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb424655081#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37095356v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42007118s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40108865c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb134860351>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb134860351> ;
+        bnf-onto:FRBNF        13486035 ;
+        isni:identifierValid  "0000000116622427" ;
+        owl:sameAs            <http://isni.org/isni/0000000116622427> ;
+        skos:editorialNote    "Heilige Poesie : zu einem literarischen Modell bei Pyra, Klopstock und Wieland / Joachim Jacob, 1997. - . - Apocalypse und Erinnerung in der deutsch-jüdischen Kultur des frühen 20. Jahrhunderts / hrsg. von Jürgen Brokoff und Joachim Jacob, cop. 2002. - . -"@fr , "Bibliogr., Allemagne (CD) 1998-04. - . - Internet://www.loc.gov, 1998-08-05. - . - LC Authorities. - http://authorities.loc.gov. - 2004-08-13"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000116622427> , <http://viaf.org/viaf/66618616> , <http://www.idref.fr/035632569> ;
+        skos:note             "Diplômé en sociologie de l'Université de Giessen, Allemagne (en 1998)"@fr ;
+        skos:prefLabel        "Joachim Jacob"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1965 ;
+        rdagroup2elements:biographicalInformation
+                "Diplômé en sociologie de l'Université de Giessen, Allemagne (en 1998)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        owl:sameAs          <http://www.idref.fr/035632569> , <http://viaf.org/viaf/66618616> ;
+        foaf:familyName     "Jacob" ;
+        foaf:givenName      "Joachim" ;
+        foaf:name           "Joachim Jacob" ;
+        foaf:page           <http://data.bnf.fr/13486035/joachim_jacob/> .
+
+<http://data.bnf.fr/ark:/12148/cb422001471#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134860351#foaf:Person> .

@@ -1,0 +1,27 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/14839267/joan_carlyle/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14839267q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14839267q#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Soprano anglaise." ;
+        foaf:familyName  "Carlyle" ;
+        foaf:givenName   "Joan" ;
+        foaf:name        "Joan Carlyle" ;
+        foaf:page        <http://data.bnf.fr/14839267/joan_carlyle/> .
+
+<http://data.bnf.fr/ark:/12148/cb14839267q>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb14839267q> ;
+        bnf-onto:FRBNF  14839267 ;
+        skos:note       "Soprano anglaise."@fr ;
+        skos:prefLabel  "Joan Carlyle"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb14839267q#foaf:Person> .

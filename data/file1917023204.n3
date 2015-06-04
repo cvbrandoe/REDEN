@@ -1,0 +1,78 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/13332102/aharon_david_gordon/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31799051n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb326298939#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb317038626#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb133321025>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb133321025> , <http://fr.wikipedia.org/wiki/Aharon_David_Gordon> ;
+        bnf-onto:FRBNF        13332102 ;
+        isni:identifierValid  "0000000084035059" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000084035059> ;
+        skos:altLabel         "ʾAharon Dawid Gwrdwn (1856-1922)"@he , "ʾAharwn Dawid Gwrdwn (1856-1922)"@he , "Aaron David Gordon (1856-1922)"@fr , "אהרון דוד גורדון (1856-1922)"@he , "אהרן דוד גורדון (1856-1922)"@he ;
+        skos:editorialNote    "ʾWr haḥayyim b\"Ywm qṭanwt\" : mišnat ʾA. D. Gwrdwn wmqwrwteyha baQabalah wbaḤasiydwt / ʾAbraham Šapiyraʾ, 5756, 1996. - . - Aharon David Gordon : le pionnier de la vie / présenté par Ami Bouganim, 1998 [contient des textes d'A. D. Gordon]. - . -"@fr , "JNUL. - http://jnul.huji.ac.il. - 2008-04-03 CORC. - http://corc.oclc.org. - 2003-10-21 Encycl. Judaïca, 1971. - . -"@fr , "BN Cat. gén. 1955-1959, 1970-1979, 1980-1995, hébreu. - . - BnF Service hébreu, 2008-04-03. - . -"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/Aharon_David_Gordon> , <http://isni-url.oclc.nl/isni/0000000084035059> , <http://fr.wikipedia.org/wiki/Aharon_David_Gordon> , <http://viaf.org/viaf/100305983> ;
+        skos:note             "Idéologue sioniste. - Dirigeant du mouvement ouvrier juif en Palestine"@fr ;
+        skos:prefLabel        "Aharon David Gordon (1856-1922)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb430604305#frbr:Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32334378h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb133321025#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1856 ;
+        bnf-onto:lastYear               1922 ;
+        rdagroup2elements:biographicalInformation
+                "Idéologue sioniste. - Dirigeant du mouvement ouvrier juif en Palestine" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/is#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1856/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1922/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/heb> ;
+        rdagroup2elements:placeOfBirth  "Trojanov [région de Žitomir] (Ukraine)" ;
+        rdagroup2elements:placeOfDeath  "Kibboutz Deganyah-Aleph (Israël)" ;
+        bio:birth                       "1856-06-09" ;
+        bio:death                       "1922-02-22" ;
+        owl:sameAs                      <http://viaf.org/viaf/100305983> , <http://dbpedia.org/resource/Aharon_David_Gordon> ;
+        foaf:birthday                   "06-09" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Gordon_A.D2.jpg?width=300> ;
+        foaf:familyName                 "Gordon" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Aharon David" ;
+        foaf:name                       "Aharon David Gordon" ;
+        foaf:page                       <http://data.bnf.fr/13332102/aharon_david_gordon/> .

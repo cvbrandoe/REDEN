@@ -1,0 +1,61 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb355064830#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374101088#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Conservateur de la Gemäldegalerie Alte Meister des Staatliche Kunstsammlungen de Dresde (en 1990)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        owl:sameAs       <http://www.idref.fr/031179223> , <http://viaf.org/viaf/27121903> ;
+        foaf:familyName  "Marx" ;
+        foaf:givenName   "Harald" ;
+        foaf:name        "Harald Marx" ;
+        foaf:page        <http://data.bnf.fr/12244473/harald_marx/> .
+
+<http://data.bnf.fr/ark:/12148/cb39166893h#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12244473w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12244473w> ;
+        bnf-onto:FRBNF        12244473 ;
+        isni:identifierValid  "0000000108817638" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108817638> ;
+        skos:exactMatch       <http://www.idref.fr/031179223> , <http://viaf.org/viaf/27121903> , <http://isni-url.oclc.nl/isni/0000000108817638> ;
+        skos:note             "Conservateur de la Gemäldegalerie Alte Meister des Staatliche Kunstsammlungen de Dresde (en 1990)"@fr ;
+        skos:prefLabel        "Harald Marx"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392945694#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388700218#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12244473w#foaf:Person> .

@@ -1,0 +1,119 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cc619163#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41219613b#frbr:Expression>
+        bnfroles:r73         <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        marcrel:dub          <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc784937#frbr:Expression>
+        bnfroles:r73         <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        marcrel:dub          <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12527406k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12527406k> ;
+        bnf-onto:FRBNF        12527406 ;
+        isni:identifierValid  "0000000121180352" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121180352> ;
+        skos:altLabel         "Aristotle (auteur prétendu, 0099-0001 av. J.-C.)"@en , "Aristotele (auteur prétendu, 0099-0001 av. J.-C.)"@it , "Pseudo-Aristotle (0099-0001 av. J.-C.)"@en , "Aristotelēs (auteur prétendu, 0099-0001 av. J.-C.)" , "Pseudo-Aristoteles Stagirites (0099-0001 av. J.-C.)"@la , "Pseudo-Aristotele (0099-0001 av. J.-C.)"@it , "Aristoteles Stagirites (auteur prétendu, 0099-0001 av. J.-C.)"@la , "Aristoteles (auteur prétendu, 0099-0001 av. J.-C.)"@la , "Pseudo-Aristote (0099-0001 av. J.-C.)"@fr , "Pseudo-Aristoteles (0099-0001 av. J.-C.)"@la , "Pseudo-Aristotelēs (0099-0001 av. J.-C.)" ;
+        skos:editorialNote    "Il trattato Sul cosmo per Alessandro attribuito ad Aristotele : monografia introduttiva, testo greco con traduzione a fronte, commentario, bibliografia ragionata e indici / Giovanni Reale, Abraham P. Bos, 1995. - . - Oeuvres philosophiques, 1992 : Aristote (pseudo-). - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/2581859> , <http://www.idref.fr/034526706> , <http://isni-url.oclc.nl/isni/0000000121180352> ;
+        skos:note             "Auteur du \"Traité du monde\" dédié à Alexandre, longtemps attribué à Aristote"@fr ;
+        skos:prefLabel        "Aristote (auteur prétendu, 0099-0001 av. J.-C.)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37062049d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41878565b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11975064r#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             -99 ;
+        bnf-onto:lastYear              -1 ;
+        dcterms:contributor            <http://data.bnf.fr/ark:/12148/cb14442558d#frbr:Work> ;
+        rdagroup2elements:biographicalInformation
+                "Auteur du \"Traité du monde\" dédié à Alexandre, longtemps attribué à Aristote" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/-0099/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/-0001/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/grc> ;
+        bio:birth                      "- 99" ;
+        bio:death                      "- 1" ;
+        owl:sameAs                     <http://viaf.org/viaf/2581859> , <http://www.idref.fr/034526706> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k535661.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k527650.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k1093734.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k109372r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k53567c.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k52764n.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k606674.thumbnail> ;
+        foaf:familyName                "Aristote" ;
+        foaf:page                      <http://data.bnf.fr/12527406/aristote/> .
+
+<http://data.bnf.fr/ark:/12148/cb41876915d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb331709199#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc83421q/cd0e93#frbr:Expression>
+        bnfroles:r73         <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        marcrel:dub          <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41879568m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .
+
+<http://data.bnf.fr/12527406/aristote/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37268820p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33170918z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc839199/cd0e349#frbr:Expression>
+        bnfroles:r73         <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        marcrel:dub          <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc61991j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41266291b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12527406k#foaf:Person> .

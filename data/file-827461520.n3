@@ -1,0 +1,62 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Retraité des Musées départementaux du Conseil général de Seine-Maritime (en 2012). - Historien de la Seine-Maritime" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/45641033> ;
+        foaf:familyName  "Sorel" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Patrick" ;
+        foaf:name        "Patrick Sorel" ;
+        foaf:page        <http://data.bnf.fr/12639995/patrick_sorel/> .
+
+<http://data.bnf.fr/ark:/12148/cb42618974z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34679965n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34646524m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb342991864#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34294909p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb126399958>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb126399958> ;
+        bnf-onto:FRBNF        12639995 ;
+        isni:identifierValid  "0000000026933141" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000026933141> ;
+        skos:exactMatch       <http://viaf.org/viaf/45641033> , <http://isni-url.oclc.nl/isni/0000000026933141> ;
+        skos:note             "Retraité des Musées départementaux du Conseil général de Seine-Maritime (en 2012). - Historien de la Seine-Maritime"@fr ;
+        skos:prefLabel        "Patrick Sorel"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb126399958#foaf:Person> .

@@ -1,0 +1,70 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb41008683q#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb144416693>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb144416693> ;
+        bnf-onto:FRBNF        14441669 ;
+        isni:identifierValid  "0000000109733209" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109733209> ;
+        skos:editorialNote    "The topology of chaos : Alice in stretch and queezeland / Robert Gilmore, Marc Lefranc, 2002. - . - Comptes-rendus de la 9e Rencontre du non-linéaire / M. Lefranc, C. Letellier & L. Pastur, éditeurs, DL 2006. - . - Résumés des exposés de la 12e Rencontre du non-linéaire / [organisée par l'Institut Henri Poincaré] ; M. Lefranc, C. Letellier & L. Pastur éditeurs, 2009. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/070754470> , <http://viaf.org/viaf/54367361> , <http://isni-url.oclc.nl/isni/0000000109733209> ;
+        skos:note             "En poste au Laboratoire de Physique des lasers, atomes, molécules, Université des sciences et technologie de Lille (en 2006)"@fr ;
+        skos:prefLabel        "Marc Lefranc (1965-....)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425918974#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40143199c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1965 ;
+        rdagroup2elements:biographicalInformation
+                "En poste au Laboratoire de Physique des lasers, atomes, molécules, Université des sciences et technologie de Lille (en 2006)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1965/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> , <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs                     <http://viaf.org/viaf/54367361> , <http://www.idref.fr/070754470> ;
+        foaf:familyName                "Lefranc" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Marc" ;
+        foaf:name                      "Marc Lefranc" ;
+        foaf:page                      <http://data.bnf.fr/14441669/marc_lefranc/> .
+
+<http://data.bnf.fr/ark:/12148/cb42127922t#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412573653#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388246764#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb144416693#foaf:Person> .

@@ -1,0 +1,44 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38434343v#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14048779p#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14048779p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14048779p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14048779p#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/64208416> ;
+        foaf:familyName  "Henry" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Paul" ;
+        foaf:name        "Paul Henry" ;
+        foaf:page        <http://data.bnf.fr/14048779/paul_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb38570165n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14048779p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14048779p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14048779p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381626210#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb14048779p#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb14048779p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14048779p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14048779p>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14048779p> ;
+        bnf-onto:FRBNF   14048779 ;
+        skos:exactMatch  <http://viaf.org/viaf/64208416> ;
+        skos:prefLabel   "Paul Henry"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14048779p#foaf:Person> .

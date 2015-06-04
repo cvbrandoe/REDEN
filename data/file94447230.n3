@@ -1,0 +1,35 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12509559h>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12509559h> ;
+        bnf-onto:FRBNF   12509559 ;
+        skos:exactMatch  <http://www.idref.fr/034298592> ;
+        skos:note        "Navigateur et aventurier français. - Traversée en solitaire de l'Atlantique en ULM (1992) puis à la nage (des îles du Cap-Vert à la Barbade, 16-12-1994/09-02-1995)"@fr ;
+        skos:prefLabel   "Guy Delage"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12509559h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12509559h#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1952 ;
+        rdagroup2elements:biographicalInformation
+                "Navigateur et aventurier français. - Traversée en solitaire de l'Atlantique en ULM (1992) puis à la nage (des îles du Cap-Vert à la Barbade, 16-12-1994/09-02-1995)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/034298592> ;
+        foaf:familyName     "Delage" ;
+        foaf:givenName      "Guy" ;
+        foaf:name           "Guy Delage" ;
+        foaf:page           <http://data.bnf.fr/12509559/guy_delage/> .
+
+<http://data.bnf.fr/12509559/guy_delage/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12509559h#foaf:Person> .

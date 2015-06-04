@@ -1,0 +1,50 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb165259259#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1990 ;
+        rdagroup2elements:biographicalInformation
+                "Poète. - Étudiant-chercheur spécialisé en littérature classique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/173003861> ;
+        foaf:familyName     "Lopez" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Geoffrey" ;
+        foaf:name           "Geoffrey Lopez" ;
+        foaf:page           <http://data.bnf.fr/16525925/geoffrey_lopez/> .
+
+<http://data.bnf.fr/ark:/12148/cb43855610g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb165259259#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb165259259#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165259259#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb165259259>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb165259259> ;
+        bnf-onto:FRBNF   16525925 ;
+        skos:exactMatch  <http://viaf.org/viaf/173003861> ;
+        skos:note        "Poète. - Étudiant-chercheur spécialisé en littérature classique"@fr ;
+        skos:prefLabel   "Geoffrey Lopez"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb165259259#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42439439c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb165259259#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb165259259#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165259259#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43582927d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb165259259#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb165259259#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165259259#foaf:Person> .

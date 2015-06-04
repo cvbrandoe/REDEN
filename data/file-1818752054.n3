@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30413618q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb406184373#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb153194643>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb153194643> ;
+        bnf-onto:FRBNF   15319464 ;
+        skos:exactMatch  <http://www.idref.fr/091475538> , <http://viaf.org/viaf/71695277> ;
+        skos:note        "Ingénieur ordinaire aux fortifications de France, auteur d'un manuel de fortification (1624)"@fr ;
+        skos:prefLabel   "Jean Fabre"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40619050f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40619057v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Ingénieur ordinaire aux fortifications de France, auteur d'un manuel de fortification (1624)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/71695277> , <http://www.idref.fr/091475538> ;
+        foaf:familyName  "Fabre" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Jean" ;
+        foaf:name        "Jean Fabre" ;
+        foaf:page        <http://data.bnf.fr/15319464/jean_fabre/> .
+
+<http://data.bnf.fr/ark:/12148/cb40874271b#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb406043725#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153194643#foaf:Person> .

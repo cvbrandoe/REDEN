@@ -1,0 +1,73 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb413799247#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43762466v#frbr:Expression>
+        bnfroles:r50         <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> ;
+        marcrel:arr          <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42047768t#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42098379n#frbr:Expression>
+        bnfroles:r790        <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42192542k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Contrebassiste et pédagogue" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/7720865> ;
+        foaf:familyName  "Prudhomme" ;
+        foaf:givenName   "Régis" ;
+        foaf:name        "Régis Prudhomme" ;
+        foaf:page        <http://data.bnf.fr/15846023/regis_prudhomme/> .
+
+<http://data.bnf.fr/ark:/12148/cb42607238q#frbr:Expression>
+        bnfroles:r50         <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> ;
+        marcrel:arr          <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb158460235>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb158460235> ;
+        bnf-onto:FRBNF   15846023 ;
+        skos:exactMatch  <http://viaf.org/viaf/7720865> ;
+        skos:note        "Contrebassiste et pédagogue"@fr ;
+        skos:prefLabel   "Régis Prudhomme"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437624823#frbr:Expression>
+        bnfroles:r50         <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> ;
+        marcrel:arr          <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420983638#frbr:Expression>
+        bnfroles:r790        <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> ;
+        marcrel:adp          <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb158460235#foaf:Person> .

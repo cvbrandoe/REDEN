@@ -1,0 +1,68 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb41151652z#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40994197b#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15536394s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15536394s> , <http://fr.wikipedia.org/wiki/Shooter_Jennings> ;
+        bnf-onto:FRBNF        15536394 ;
+        isni:identifierValid  "0000000055246228" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000055246228> ;
+        skos:editorialNote    "Put the o back in country [Enregistrement sonore] / Shooter Jennings, chant, guit., guit. électr. Hump head records HUMP010. - . - LC authorities. - http://authorities.loc.gov/. -"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/Shooter_Jennings> , <http://isni-url.oclc.nl/isni/0000000055246228> , <http://fr.wikipedia.org/wiki/Shooter_Jennings> , <http://viaf.org/viaf/54458861> ;
+        skos:note             "Guitariste et chanteur de rock (southern rock). - Fondateur du groupe Stargunn (1996?-2003)"@fr ;
+        skos:prefLabel        "Shooter Jennings"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42294375n#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42452933d#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1979 ;
+        rdagroup2elements:biographicalInformation
+                "Guitariste et chanteur de rock (southern rock). - Fondateur du groupe Stargunn (1996?-2003)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        owl:sameAs          <http://viaf.org/viaf/54458861> , <http://dbpedia.org/resource/Shooter_Jennings> ;
+        foaf:depiction      <http://commons.wikimedia.org/wiki/Special:FilePath/ShooterJennings.jpg?width=300> ;
+        foaf:familyName     "Jennings" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Shooter" ;
+        foaf:name           "Shooter Jennings" ;
+        foaf:page           <http://data.bnf.fr/15536394/shooter_jennings/> .
+
+<http://data.bnf.fr/ark:/12148/cb413371837#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40986853x#frbr:Expression>
+        bnfroles:r1289       <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15536394s#foaf:Person> .

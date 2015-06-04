@@ -1,0 +1,44 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cc706927#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb167437371#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb167437371#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb167437371#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb167437371>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb167437371> ;
+        bnf-onto:FRBNF        16743737 ;
+        isni:identifierValid  "0000000062855320" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000062855320> ;
+        skos:editorialNote    "BnF, Paris, Département des manuscrits, NAL 2488. - . - GDEL [sous : Savoie]. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/88716695> , <http://isni-url.oclc.nl/isni/0000000062855320> ;
+        skos:note             "Fils de Charles Ier (duc de Savoie ; 1468-1490) et de Blanche de Montferrat. - Duc de Savoie sous la régence de sa mère de 1490 à 1496"@fr ;
+        skos:prefLabel        "Charles II (duc de Savoie, 1489-1496)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb167437371#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb167437371#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1489 ;
+        bnf-onto:lastYear              1496 ;
+        rdagroup2elements:biographicalInformation
+                "Fils de Charles Ier (duc de Savoie ; 1468-1490) et de Blanche de Montferrat. - Duc de Savoie sous la régence de sa mère de 1490 à 1496" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1489/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1496/> ;
+        bio:birth                      "1489" ;
+        bio:death                      "1496" ;
+        owl:sameAs                     <http://viaf.org/viaf/88716695> ;
+        foaf:familyName                "Charles" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/16743737/charles_2/> .

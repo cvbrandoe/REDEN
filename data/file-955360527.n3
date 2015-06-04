@@ -1,0 +1,48 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb34589165g#frbr:Expression>
+        bnfroles:r71         <http://data.bnf.fr/ark:/12148/cb126364506#foaf:Person> ;
+        marcrel:att          <http://data.bnf.fr/ark:/12148/cb126364506#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126364506#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb126364506#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "17.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/292829598> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k856087.thumbnail> ;
+        foaf:familyName                "Roux" ;
+        foaf:givenName                 "Prosper Charles" ;
+        foaf:name                      "Prosper Charles Roux" ;
+        foaf:page                      <http://data.bnf.fr/12636450/prosper_charles_roux/> .
+
+<http://data.bnf.fr/ark:/12148/cb312624209#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126364506#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126364506#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126364506#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb126364506>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb126364506> ;
+        bnf-onto:FRBNF      12636450 ;
+        skos:altLabel       "P. C. R (historien, 17..-18..)"@fr ;
+        skos:editorialNote  "Histoire parlementaire de la Révolution / par Philippe-Joseph-Benjamin Buchez et Prosper-Charles Roux, 1834-1838. - . - Lettre d'un disciple de la science nouvelle aux religionnaires prétendus saint-simoniens / par P. C. R...x, 1831. - . -"@fr , "Barbier. - . - LCNA (CD), 1996-06. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/292829598> ;
+        skos:prefLabel      "Prosper Charles Roux (17..-18..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb126364506#foaf:Person> .

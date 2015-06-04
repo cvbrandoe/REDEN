@@ -1,0 +1,65 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb358100777#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35585475s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb409599748#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34868972t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12051036q>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12051036q> ;
+        bnf-onto:FRBNF   12051036 ;
+        skos:exactMatch  <http://viaf.org/viaf/242880255> , <http://www.idref.fr/028735560> ;
+        skos:note        "Président d'honneur de la Société des sciences et lettres de Loir-et-Cher (en 1995)"@fr ;
+        skos:prefLabel   "André Prudhomme"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb409556405#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40059076x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12051036q#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1920 ;
+        rdagroup2elements:biographicalInformation
+                "Président d'honneur de la Société des sciences et lettres de Loir-et-Cher (en 1995)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/242880255> , <http://www.idref.fr/028735560> ;
+        foaf:familyName     "Prudhomme" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "André" ;
+        foaf:name           "André Prudhomme" ;
+        foaf:page           <http://data.bnf.fr/12051036/andre_prudhomme/> .

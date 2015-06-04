@@ -1,0 +1,107 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1738 ;
+        bnf-onto:lastYear               1809 ;
+        rdagroup2elements:biographicalInformation
+                "Le patronyme est Michel ; Le Blond est un nom d'usage choisi par l'auteur lui-même" , "Ecclésiastique (à partir de 1772). - Conservateur de la Bibliothèque Mazarine (1791-18..). - Député au Corps législatif (1799-1802). - Membre de l'Académie des inscriptions et belles-lettres (élu en 1772 ; confirmé en 1795 et 1803)" , "Écrivit aussi en latin" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1738/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1809/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de la France" , "Savoir et érudition. Musées" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Caen" ;
+        rdagroup2elements:placeOfDeath  "L'Aigle (Orne)" ;
+        bio:birth                       "1738-11-24" ;
+        bio:death                       "1809-06-17" ;
+        owl:sameAs                      <http://www.idref.fr/059797347> , <http://reliures.bnf.fr/ark:/12148/cdt9x55t> , <http://viaf.org/viaf/52585055> ;
+        foaf:birthday                   "11-24" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k877198p.thumbnail> ;
+        foaf:familyName                 "Le Blond" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Gaspard Michel" ;
+        foaf:name                       "Gaspard Michel Le Blond" ;
+        foaf:page                       <http://data.bnf.fr/10692820/gaspard_michel_le_blond/> .
+
+<http://data.bnf.fr/ark:/12148/cb30760819f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30760817r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30760811p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30760820n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> .
+
+<http://data.bnf.fr/10692820/gaspard_michel_le_blond/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30760816d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307608183#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30760813c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307608121#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30760814q#frbr:Expression>
+        bnfroles:r71         <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        marcrel:att          <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb334921363#frbr:Expression>
+        bnfroles:r71         <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        marcrel:att          <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10692820c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10692820c> ;
+        bnf-onto:FRBNF        10692820 ;
+        isni:identifierValid  "0000000083436678" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000083436678> ;
+        skos:altLabel         "Gaspard Michel Leblond (1738-1809)"@fr , "Gaspardus Michael Le Blond (1738-1809)"@la , "Gaspard Michel (1738-1809)"@fr ;
+        skos:editorialNote    "Dictionnaire des parlementaires français. 1789-1889, 1891. - . - Le premier siècle de l'Institut de France / par le comte de Franqueville, 1895-1896, t. Ier, p. 104. - . -"@fr , "Thesis theologico-hebraica : in Sorbona propugnanda a Gaspardo Michaele Le Blond, 1762. - . - Frère. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000083436678> , <http://viaf.org/viaf/52585055> , <http://www.idref.fr/059797347> ;
+        skos:note             "Le patronyme est Michel ; Le Blond est un nom d'usage choisi par l'auteur lui-même"@fr , "Écrivit aussi en latin"@fr , "Ecclésiastique (à partir de 1772). - Conservateur de la Bibliothèque Mazarine (1791-18..). - Député au Corps législatif (1799-1802). - Membre de l'Académie des inscriptions et belles-lettres (élu en 1772 ; confirmé en 1795 et 1803)"@fr ;
+        skos:prefLabel        "Gaspard Michel Le Blond (1738-1809)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10692820c#foaf:Person> .

@@ -1,0 +1,70 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38482299r#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1903 ;
+        bnf-onto:lastYear              1990 ;
+        rdagroup2elements:biographicalInformation
+                "Nom d'état-civil : Alvina Croter" , "Auteur dramatique, novelliste et scénariste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1903/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1990/> ;
+        bio:birth                      "1903-01-29" ;
+        bio:death                      "1990-01-19" ;
+        owl:sameAs                     <http://www.idref.fr/069122008> , <http://viaf.org/viaf/64212771> , <http://dbpedia.org/resource/Viña_Delmar> ;
+        foaf:birthday                  "01-29" ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Vina_Delmar_in_Sadie_McKee_trailer.jpg?width=300> ;
+        foaf:familyName                "Delmar" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Viña" ;
+        foaf:name                      "Viña Delmar" ;
+        foaf:page                      <http://data.bnf.fr/14092236/vina_delmar/> .
+
+<http://data.bnf.fr/ark:/12148/cb41291396r#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb329606859#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43530473p#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32978070r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14092236m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14092236m> , <http://fr.wikipedia.org/wiki/Viña_Delmar> ;
+        bnf-onto:FRBNF        14092236 ;
+        isni:identifierValid  "0000000031827095" ;
+        owl:sameAs            <http://isni.org/isni/0000000031827095> ;
+        skos:editorialNote    "The awful truth [Images animées] / Leo Mc Carey, réal. ; Arthur Richman, aut. adapté ; Viña Delmar, scénario... [et al.], [1996]. - . - LC authorities. - http://authorities.loc.gov/. - 2008-09-30"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/Viña_Delmar> , <http://fr.wikipedia.org/wiki/Viña_Delmar> , <http://isni.org/isni/0000000031827095> , <http://viaf.org/viaf/64212771> , <http://www.idref.fr/069122008> ;
+        skos:note             "Nom d'état-civil : Alvina Croter"@fr , "Auteur dramatique, novelliste et scénariste"@fr ;
+        skos:prefLabel        "Viña Delmar (1903-1990)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14092236m#foaf:Person> .

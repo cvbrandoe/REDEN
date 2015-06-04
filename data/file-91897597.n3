@@ -1,0 +1,49 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb36683853d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124679534#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124679534#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124679534#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124679534#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1776 ;
+        bnf-onto:lastYear              1847 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1776/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1847/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1776-12-21" ;
+        bio:death                      "1847-07-04" ;
+        owl:sameAs                     <http://viaf.org/viaf/29631740> ;
+        foaf:birthday                  "12-21" ;
+        foaf:familyName                "Rolland" ;
+        foaf:givenName                 "Thomas Pierre" ;
+        foaf:name                      "Thomas Pierre Rolland" ;
+        foaf:page                      <http://data.bnf.fr/12467953/thomas_pierre_rolland/> .
+
+<http://data.bnf.fr/12467953/thomas_pierre_rolland/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb124679534#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124679534>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb124679534> ;
+        bnf-onto:FRBNF        12467953 ;
+        isni:identifierValid  "0000000063069778" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000063069778> ;
+        skos:exactMatch       <http://viaf.org/viaf/29631740> , <http://isni-url.oclc.nl/isni/0000000063069778> ;
+        skos:prefLabel        "Thomas Pierre Rolland (1776-1847)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb124679534#foaf:Person> .

@@ -1,0 +1,54 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14821456g#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur dont une seule pièce pour piano semble subsister" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        bio:birth                      "18  " ;
+        bio:death                      "19  " ;
+        owl:sameAs                     <http://viaf.org/viaf/51955542> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b90702213.thumbnail> ;
+        foaf:familyName                "Ars" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "N. " ;
+        foaf:name                      "N.  Ars" ;
+        foaf:page                      <http://data.bnf.fr/14821456/n___ars/> .
+
+<http://data.bnf.fr/ark:/12148/cb14821456g>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14821456g> ;
+        bnf-onto:FRBNF   14821456 ;
+        skos:exactMatch  <http://viaf.org/viaf/51955542> ;
+        skos:note        "Compositeur dont une seule pièce pour piano semble subsister"@fr ;
+        skos:prefLabel   "N.  Ars (compositeur, 18..-19..?)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14821456g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb396445135#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14821456g#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14821456g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14821456g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42820205t#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14821456g#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14821456g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14821456g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb428202065#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb14821456g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14821456g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14821456g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14821856k#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14821456g#foaf:Person> .

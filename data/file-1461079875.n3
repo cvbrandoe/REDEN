@@ -1,0 +1,74 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb41051283z#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43609942h#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb426252092#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb416609022#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15557373g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15557373g> ;
+        bnf-onto:FRBNF        15557373 ;
+        isni:identifierValid  "0000000079839124" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000079839124> ;
+        skos:altLabel         "James H. Lee (1923-2002)"@fr ;
+        skos:editorialNote    "Change of habit [Images animées] / William A. Graham, réal. ; James Lee, scénario. Bach films, 2007. - . - IMDB. - http://www.us.imdb.com/name/nm0497458/. - 2007-08-22"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000079839124> , <http://viaf.org/viaf/13873316> ;
+        skos:note             "Scénariste"@fr ;
+        skos:prefLabel        "James Lee (1923-2002)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42701659h#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15557373g#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1923 ;
+        bnf-onto:lastYear               2002 ;
+        rdagroup2elements:biographicalInformation
+                "Scénariste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1923/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/2002/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Pleasant Ridge (Mich.)" ;
+        rdagroup2elements:placeOfDeath  "Santa Monica (Calif.)" ;
+        bio:birth                       "1923-01-04" ;
+        bio:death                       "2002-07-02" ;
+        owl:sameAs                      <http://viaf.org/viaf/13873316> ;
+        foaf:birthday                   "01-04" ;
+        foaf:familyName                 "Lee" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "James" ;
+        foaf:name                       "James Lee" ;
+        foaf:page                       <http://data.bnf.fr/15557373/james_lee/> .

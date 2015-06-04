@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42285889r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42034296r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42034302v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb413623867#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42285919v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb160452833>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb160452833> ;
+        bnf-onto:FRBNF   16045283 ;
+        skos:exactMatch  <http://viaf.org/viaf/89830626> , <http://www.idref.fr/112866565> ;
+        skos:note        "Directeur d'école d'application, enseignant-ressource en sciences"@fr ;
+        skos:prefLabel   "Bernard Henry (enseignant)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Directeur d'école d'application, enseignant-ressource en sciences" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/112866565> , <http://viaf.org/viaf/89830626> ;
+        foaf:familyName  "Henry" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Bernard" ;
+        foaf:name        "Bernard Henry" ;
+        foaf:page        <http://data.bnf.fr/16045283/bernard_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb41362065f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb160452833#foaf:Person> .

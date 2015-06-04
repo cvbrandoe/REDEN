@@ -1,0 +1,41 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14146224q#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1502 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur. - Mort avant le 6 mars 1502" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1401-1500/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1502/> ;
+        bio:birth                      "14.." ;
+        bio:death                      "1502" ;
+        owl:sameAs                     <http://viaf.org/viaf/219465> ;
+        foaf:familyName                "Wolff" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Martin" ;
+        foaf:name                      "Martin Wolff" ;
+        foaf:page                      <http://data.bnf.fr/14146224/martin_wolff/> .
+
+<http://data.bnf.fr/ark:/12148/cb14146224q>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb14146224q> ;
+        bnf-onto:FRBNF      14146224 ;
+        skos:altLabel       "Martin Wolf (14..-1502?)"@fr ;
+        skos:editorialNote  "Conserva me Domine / Martin Wolf, in : Psalmi selecti [Musique imprimée] : Psalmmotetten deutscher Komponisten der Generation Ludwig Senfls / herausgegeben von Christian Meyer, 1999. - . - Grove music online. - http://www.oxfordmusiconline.com. - 2008-08-19"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/219465> ;
+        skos:note           "Compositeur. - Mort avant le 6 mars 1502"@fr ;
+        skos:prefLabel      "Martin Wolff (14..-1502?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb14146224q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15757901m#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14146224q#foaf:Person> .

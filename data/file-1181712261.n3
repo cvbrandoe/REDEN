@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1986 ;
+        rdagroup2elements:biographicalInformation
+                "Acteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        owl:sameAs          <http://dbpedia.org/resource/Colin_Morgan> , <http://viaf.org/viaf/12399138> ;
+        foaf:depiction      <http://commons.wikimedia.org/wiki/Special:FilePath/SDCC10_-_Colin_Morgan.jpg?width=300> ;
+        foaf:familyName     "Morgan" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Colin" ;
+        foaf:name           "Colin Morgan" ;
+        foaf:page           <http://data.bnf.fr/16260630/colin_morgan/> .
+
+<http://data.bnf.fr/ark:/12148/cb427555446#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42755764c#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43696298b#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43696316f#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423315653#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb162606305>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb162606305> , <http://fr.wikipedia.org/wiki/Colin_Morgan> ;
+        bnf-onto:FRBNF        16260630 ;
+        isni:identifierValid  "0000000108706604" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108706604> ;
+        skos:editorialNote    "Les aventures de Merlin. L'intégrale de la saison 2 [Images animées] / Julian Jones, idée orig. ; Colin Morgan, act. Universal pictures video France, 2010. - . - IMDB. - http://www.imdb.fr/name/nm2959880/. - 2011-01-28"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000108706604> , <http://dbpedia.org/resource/Colin_Morgan> , <http://fr.wikipedia.org/wiki/Colin_Morgan> , <http://viaf.org/viaf/12399138> ;
+        skos:note             "Acteur"@fr ;
+        skos:prefLabel        "Colin Morgan"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb162606305#foaf:Person> .

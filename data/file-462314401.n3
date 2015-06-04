@@ -1,0 +1,84 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Devise(s) : Veritas odiosa" , "Pierre II Le Bert lui succède, puis Denis et Philippe Du Pré" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1501-1600/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1501-1600/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1544-1562" ;
+        bio:birth                      "15.." ;
+        bio:death                      "15.." ;
+        owl:sameAs                     <http://www.idref.fr/069038937> , <http://viaf.org/viaf/99769780> ;
+        foaf:familyName                "David" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Mathieu" ;
+        foaf:name                      "Mathieu David" ;
+        foaf:page                      <http://data.bnf.fr/12495696/mathieu_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb35781990f#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42290735j#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30402507b#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42642711p#frbr:Expression>
+        bnfroles:r3060       <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> ;
+        marcrel:prt          <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12495696q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12495696q> ;
+        bnf-onto:FRBNF        12495696 ;
+        isni:identifierValid  "0000000077304994" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000077304994> ;
+        skos:altLabel         "Matthaeus David (imprimeur-libraire, 15..-15..)"@fr ;
+        skos:editorialNote    "Charon-Parent, Métiers. - . - STC French books, 1470-1600, Suppl.. - . - Veyrin-Forrer. - . -"@fr , "Renouard, Marques. - . - Renouard. - . - Rép. 16 s. - . -"@fr , "La Caille. - . - Lottin. - . - Silvestre. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/069038937> , <http://isni-url.oclc.nl/isni/0000000077304994> , <http://viaf.org/viaf/99769780> ;
+        skos:note             "Pierre II Le Bert lui succède, puis Denis et Philippe Du Pré"@fr , "Devise(s) : Veritas odiosa"@fr ;
+        skos:prefLabel        "Mathieu David (imprimeur-libraire, 15..-15..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42642758b#frbr:Expression>
+        bnfroles:r3060       <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> ;
+        marcrel:prt          <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42642722b#frbr:Expression>
+        bnfroles:r3060       <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> ;
+        marcrel:prt          <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42642611d#frbr:Expression>
+        bnfroles:r3060       <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> ;
+        marcrel:prt          <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414842939#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12495696q#foaf:Person> .

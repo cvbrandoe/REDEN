@@ -1,0 +1,39 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/16725070/julien/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb167250700#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb167250700>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb167250700> ;
+        bnf-onto:FRBNF      16725070 ;
+        skos:altLabel       "Julianus (saint, 02..?-0250)"@la ;
+        skos:editorialNote  "S. IVLIAN MAR. 27. feb. In [Les images des saints. Dix-septième planche] [Image fixe] : [estampe] / [Jacques Callot], [1636]. - . - Nominis. - http://nominis.cef.fr/contenus/saint/601/Saint-Nicephore-d-Antioche.html. - 2013-11-22"@fr ;
+        skos:note           "Martyr en Égypte. - Il fut arrêté avec son serviteur saint Eunus ; ils furent promenés à dos de chameau à travers toute la ville, fouettés puis brûlés avec de la chaux vive. - Fête le 27 février"@fr ;
+        skos:prefLabel      "Julien (saint, 02..?-0250)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb167250700#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb167250700#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              250 ;
+        rdagroup2elements:biographicalInformation
+                "Martyr en Égypte. - Il fut arrêté avec son serviteur saint Eunus ; ils furent promenés à dos de chameau à travers toute la ville, fouettés puis brûlés avec de la chaux vive. - Fête le 27 février" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/0201-0300/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/0250/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Religion" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/200/> ;
+        bio:birth                      "02.." ;
+        bio:death                      "250" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b8496272k.thumbnail> ;
+        foaf:familyName                "Julien" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/16725070/julien/> .

@@ -1,0 +1,72 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb347792218#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35592450x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb348706817#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Auteur d'ouvrages sentimentaux" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/49346504> ;
+        foaf:familyName  "Monet" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Nicole" ;
+        foaf:name        "Nicole Monet" ;
+        foaf:page        <http://data.bnf.fr/12658130/nicole_monet/> .
+
+<http://data.bnf.fr/ark:/12148/cb12658130n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12658130n> ;
+        bnf-onto:FRBNF        12658130 ;
+        isni:identifierValid  "0000000000298557" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000000298557> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000000298557> , <http://viaf.org/viaf/49346504> ;
+        skos:note             "Auteur d'ouvrages sentimentaux"@fr ;
+        skos:prefLabel        "Nicole Monet"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34765526n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347553962#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41071587k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34838924b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12658130n#foaf:Person> .

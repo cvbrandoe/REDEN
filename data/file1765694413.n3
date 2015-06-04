@@ -1,0 +1,99 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb42105095n#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41241885f#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14688161t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14688161t> ;
+        bnf-onto:FRBNF        14688161 ;
+        isni:identifierValid  "0000000078451654" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000078451654> ;
+        skos:editorialNote    "Splendid's [Spectacle] / mise en scène Laurent Gutmann ; avec Francis Leplay...-Montreuil, Centre dramatique national, 2005. - . - Après le spectacle / Francis Leplay, DL 2006. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/95405426> , <http://www.idref.fr/133563103> , <http://isni-url.oclc.nl/isni/0000000078451654> ;
+        skos:note             "Romancier. - Acteur"@fr ;
+        skos:prefLabel        "Francis Leplay"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39500928b#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38555421n#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43711704v#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41427033c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401197557#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41439005t#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1967 ;
+        rdagroup2elements:biographicalInformation
+                "Romancier. - Acteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/133563103> , <http://viaf.org/viaf/95405426> ;
+        foaf:familyName     "Leplay" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Francis" ;
+        foaf:name           "Francis Leplay" ;
+        foaf:page           <http://data.bnf.fr/14688161/francis_leplay/> .
+
+<http://data.bnf.fr/ark:/12148/cb424525021#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41070975f#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401313350#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40069162q#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14688161t#foaf:Person> .

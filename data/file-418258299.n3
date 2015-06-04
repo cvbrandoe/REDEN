@@ -1,0 +1,90 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb39495313j#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39496934d#frbr:Expression>
+        bnfroles:r2010       <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        marcrel:prd          <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39482933w#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39482932j#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39487060h#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394903391#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39494173m#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb146812900>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb146812900> ;
+        bnf-onto:FRBNF   14681290 ;
+        skos:exactMatch  <http://viaf.org/viaf/42103237> ;
+        skos:note        "Décorateur de théâtre. - Accessoiriste"@fr ;
+        skos:prefLabel   "Bernard Giraud"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394903407#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394865076#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39495629r#frbr:Expression>
+        bnfroles:r2280       <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Décorateur de théâtre. - Accessoiriste" ;
+        owl:sameAs       <http://viaf.org/viaf/42103237> ;
+        foaf:familyName  "Giraud" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Bernard" ;
+        foaf:name        "Bernard Giraud" ;
+        foaf:page        <http://data.bnf.fr/14681290/bernard_giraud/> .
+
+<http://data.bnf.fr/ark:/12148/cb39486505h#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394901818#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146812900#foaf:Person> .

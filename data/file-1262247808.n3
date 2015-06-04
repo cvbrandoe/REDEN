@@ -1,0 +1,130 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37731553c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41098319n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354834603#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35032366x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42361953t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1952 ;
+        rdagroup2elements:biographicalInformation
+                "Essayiste. - Poète et prosateur. - D'origine roumaine, vit à Berlin depuis 1987 (en 1992)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/rm#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Lowrin (Roumanie)" ;
+        owl:sameAs                      <http://viaf.org/viaf/99347454> , <http://www.idref.fr/029682754> ;
+        foaf:familyName                 "Wagner" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Richard" ;
+        foaf:name                       "Richard Wagner" ;
+        foaf:page                       <http://data.bnf.fr/12125440/richard_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb38858841m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35602280m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12125440k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12125440k> ;
+        bnf-onto:FRBNF        12125440 ;
+        isni:identifierValid  "0000000121449606" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121449606> ;
+        skos:editorialNote    "Völker ohne Signale / Richard Wagner, 1992. - . - Bibliothèque nationale, Allemagne. - http://www.ddb.de. - 2008-01-10"@fr ;
+        skos:exactMatch       <http://www.idref.fr/029682754> , <http://isni-url.oclc.nl/isni/0000000121449606> , <http://viaf.org/viaf/99347454> ;
+        skos:note             "Essayiste. - Poète et prosateur. - D'origine roumaine, vit à Berlin depuis 1987 (en 1992)"@fr ;
+        skos:prefLabel        "Richard Wagner"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42573540d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401126360#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35033263v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38910291x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39293875n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb355039709#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392938807#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38854898m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37737047h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38854708j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34984101q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12125440k#foaf:Person> .

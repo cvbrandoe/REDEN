@@ -1,0 +1,58 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Scénariste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/27273686> ;
+        foaf:familyName  "Jacob" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Didier" ;
+        foaf:name        "Didier Jacob" ;
+        foaf:page        <http://data.bnf.fr/14108104/didier_jacob/> .
+
+<http://data.bnf.fr/ark:/12148/cb40950879j#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389999205#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14108104g>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb14108104g> ;
+        bnf-onto:FRBNF      14108104 ;
+        skos:editorialNote  "Ça n'arrive qu'à moi [Multimédia multisupport] / Francis Perrin, réal., adapt. ; Gilles Jacob, scénario, dial., adapt., [2006]. - . - IMDB. - http://us.imdb.com. - 2007-03-09"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/27273686> ;
+        skos:note           "Scénariste"@fr ;
+        skos:prefLabel      "Didier Jacob"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382901855#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381578984#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38333770f#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14108104g#foaf:Person> .

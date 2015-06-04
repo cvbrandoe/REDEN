@@ -1,0 +1,75 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/10944674/pierre_daudet/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb10944674q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10944674q#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1904 ;
+        bnf-onto:lastYear               1945 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur à la Faculté de droit de Dijon. - Archiviste paléographe (1931), agrégé des facultés de droit, docteur en droit (Paris, 1933). - Chevalier de la Légion d'honneur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1904/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1945/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Droit" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/340/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Nîmes" ;
+        rdagroup2elements:placeOfDeath  "Mort en déportation au camp de Stassfurt (Allemagne)" ;
+        bio:birth                       "1904-11-09" ;
+        bio:death                       "1945-04-07" ;
+        owl:sameAs                      <http://www.idref.fr/144811111> , <http://viaf.org/viaf/71383075> ;
+        foaf:birthday                   "11-09" ;
+        foaf:familyName                 "Daudet" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Pierre" ;
+        foaf:name                       "Pierre Daudet" ;
+        foaf:page                       <http://data.bnf.fr/10944674/pierre_daudet/> .
+
+<http://data.bnf.fr/ark:/12148/cb319969941#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10944674q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10944674q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10944674q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31996996q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10944674q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10944674q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10944674q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10944674q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10944674q> ;
+        bnf-onto:FRBNF        10944674 ;
+        isni:identifierValid  "0000000000127897" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000000127897> ;
+        skos:editorialNote    "Études sur l'histoire de la juridiction matrimoniale / par Pierre Daudet, 1933-1941. - . - Livret de l'École des chartes 1821-1966. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/71383075> , <http://isni-url.oclc.nl/isni/0000000000127897> , <http://www.idref.fr/144811111> ;
+        skos:note             "Professeur à la Faculté de droit de Dijon. - Archiviste paléographe (1931), agrégé des facultés de droit, docteur en droit (Paris, 1933). - Chevalier de la Légion d'honneur"@fr ;
+        skos:prefLabel        "Pierre Daudet (1904-1945)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10944674q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb342197268#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb10944674q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb10944674q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10944674q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31996995c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10944674q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10944674q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10944674q#foaf:Person> .

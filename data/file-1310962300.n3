@@ -1,0 +1,67 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb37428024c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37438712h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43573020j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37332141t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37332147w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Juriste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        owl:sameAs       <http://www.idref.fr/067007856> , <http://viaf.org/viaf/9933764> ;
+        foaf:familyName  "Marx" ;
+        foaf:givenName   "Reinhard" ;
+        foaf:name        "Reinhard Marx" ;
+        foaf:page        <http://data.bnf.fr/12401531/reinhard_marx/> .
+
+<http://data.bnf.fr/ark:/12148/cb374280231#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124015311>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb124015311> ;
+        bnf-onto:FRBNF        12401531 ;
+        isni:identifierValid  "0000000115932423" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000115932423> ;
+        skos:editorialNote    "Asylrecht und Menschenrechte / Reinhard Marx, 1991. - . - LCNA (CD OCLC), 1994-03. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/9933764> , <http://isni-url.oclc.nl/isni/0000000115932423> , <http://www.idref.fr/067007856> ;
+        skos:note             "Juriste"@fr ;
+        skos:prefLabel        "Reinhard Marx"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb124015311#foaf:Person> .

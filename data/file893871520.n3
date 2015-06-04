@@ -1,0 +1,64 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/32133999> , <http://www.idref.fr/057424578> ;
+        foaf:familyName  "Garnier" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Donatien" ;
+        foaf:name        "Donatien Garnier" ;
+        foaf:page        <http://data.bnf.fr/13084591/donatien_garnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb40052386c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42704410b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438092240#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13084591q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13084591q> ;
+        bnf-onto:FRBNF        13084591 ;
+        isni:identifierValid  "0000000001854375" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000001854375> ;
+        skos:exactMatch       <http://viaf.org/viaf/32133999> , <http://www.idref.fr/057424578> , <http://isni-url.oclc.nl/isni/0000000001854375> ;
+        skos:prefLabel        "Donatien Garnier"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41183148f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42164387v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357861924#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13084591q#foaf:Person> .

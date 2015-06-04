@@ -1,0 +1,27 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12116314s>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb12116314s> ;
+        bnf-onto:FRBNF  12116314 ;
+        skos:note       "Peintre français"@fr ;
+        skos:prefLabel  "Jérôme César"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb12116314s#foaf:Person> .
+
+<http://data.bnf.fr/12116314/jerome_cesar/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12116314s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12116314s#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Peintre français" ;
+        foaf:familyName  "César" ;
+        foaf:givenName   "Jérôme" ;
+        foaf:name        "Jérôme César" ;
+        foaf:page        <http://data.bnf.fr/12116314/jerome_cesar/> .

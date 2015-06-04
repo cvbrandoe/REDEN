@@ -1,0 +1,30 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb149767003#foaf:Person>
+        a                               foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Prince Henry, duc de Gloucester et comte d'Ulster, 4e enfant du duc et de la duchesse d'York, frère du roi Georges VI. - A été gouverneur général de l'Australie (1943)" ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1900/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1974/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/940/> ;
+        rdagroup2elements:placeOfBirth  "Sandringham (GB)" ;
+        bio:birth                       "1900-03-31" ;
+        bio:death                       "1974-06-10" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b53052281z.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6924567j.thumbnail> ;
+        foaf:familyName                 "Henry" ;
+        foaf:gender                     "male" ;
+        foaf:page                       <http://data.bnf.fr/14976700/henry/> .

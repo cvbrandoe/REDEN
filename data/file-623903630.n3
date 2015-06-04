@@ -1,0 +1,39 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12100745h#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1903 ;
+        bnf-onto:lastYear              1943 ;
+        rdagroup2elements:biographicalInformation
+                "Condamnée à mort pour avortement" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1903/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1943/> ;
+        bio:birth                      "1903-11-17" ;
+        bio:death                      "1943-07-30" ;
+        owl:sameAs                     <http://www.idref.fr/086221582> ;
+        foaf:birthday                  "11-17" ;
+        foaf:familyName                "Giraud" ;
+        foaf:givenName                 "Marie Louise" ;
+        foaf:name                      "Marie Louise Giraud" ;
+        foaf:page                      <http://data.bnf.fr/12100745/marie_louise_giraud/> .
+
+<http://data.bnf.fr/ark:/12148/cb12100745h>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12100745h> ;
+        bnf-onto:FRBNF   12100745 ;
+        skos:altLabel    "Marie Louise Lempérière"@fr ;
+        skos:exactMatch  <http://www.idref.fr/086221582> ;
+        skos:note        "Condamnée à mort pour avortement"@fr ;
+        skos:prefLabel   "Marie Louise Giraud (1903-1943)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12100745h#foaf:Person> .
+
+<http://data.bnf.fr/12100745/marie_louise_giraud/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12100745h#foaf:Person> .

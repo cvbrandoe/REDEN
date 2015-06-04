@@ -1,0 +1,78 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb30304962w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30304961j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12459632m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12459632m> ;
+        bnf-onto:FRBNF        12459632 ;
+        isni:identifierValid  "0000000072483495" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000072483495> ;
+        skos:altLabel         "Abbé Pierre David (1749-1832)"@fr , "David (1749-1832)"@fr , "Le Citoyen David (1749-1832)"@fr , "Pierre Drapeyron de David (1749-1832)"@fr ;
+        skos:editorialNote    "DBF : David (Pierre Drapeyron de). - . - BN Cat. gén. : David (Abbé Pierre). - . -"@fr , "Histoire chronologique des opérations de l'armée du Nord et de celle de Sambre-et-Meuse... / par le citoyen David [ca 1795]. - . - Épître à l'abbé Sicard sur les mots avec lesquels on nous a gouvernés pendant la révolution / [David], [1801]. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000072483495> , <http://viaf.org/viaf/49321809> ;
+        skos:note             "Curé d'Arnac-Pompadour puis curé constitutionnel d'Uzerche. - Pamphlétaire. - Auteur également d'un opéra héroïque"@fr ;
+        skos:prefLabel        "Pierre David (1749-1832)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303049637#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37287417v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30304964k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36040516s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12459632m#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1749 ;
+        bnf-onto:lastYear              1832 ;
+        rdagroup2elements:biographicalInformation
+                "Curé d'Arnac-Pompadour puis curé constitutionnel d'Uzerche. - Pamphlétaire. - Auteur également d'un opéra héroïque" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1749/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1832/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1749-03-22" ;
+        bio:death                      "1832-12-03" ;
+        owl:sameAs                     <http://viaf.org/viaf/49321809> ;
+        foaf:birthday                  "03-22" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k44258m.thumbnail> ;
+        foaf:familyName                "David" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Pierre" ;
+        foaf:name                      "Pierre David" ;
+        foaf:page                      <http://data.bnf.fr/12459632/pierre_david/> .

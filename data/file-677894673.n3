@@ -1,0 +1,117 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb43801536w#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437340371#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42754786f#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb428051040#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42752193k#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42756915z#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb166651927>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb166651927> , <http://fr.wikipedia.org/wiki/Alex_Ferrari> ;
+        bnf-onto:FRBNF        16665192 ;
+        isni:identifierValid  "0000000401674584" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000401674584> ;
+        skos:editorialNote    "Hits rentrée 2012 [Enregistrement sonore] / Alex Ferrari, Keen' V, Matt Houston, chant... [et al.]. EMI 509999159362 7. - . - Wikipedia. - http://fr.wikipedia.org/wiki/Alex_Ferrari. - 2013-02-22"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Alex_Ferrari> , <http://dbpedia.org/resource/Alex_Ferrari> , <http://isni-url.oclc.nl/isni/0000000401674584> , <http://viaf.org/viaf/296347989> ;
+        skos:note             "Compositeur et interprète de pop latino"@fr ;
+        skos:prefLabel        "Alex Ferrari"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43627592w#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42754790p#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1982 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur et interprète de pop latino" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/bl#> ;
+        owl:sameAs          <http://dbpedia.org/resource/Alex_Ferrari> , <http://viaf.org/viaf/296347989> ;
+        foaf:familyName     "Ferrari" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Alex" ;
+        foaf:name           "Alex Ferrari" ;
+        foaf:page           <http://data.bnf.fr/16665192/alex_ferrari/> .
+
+<http://data.bnf.fr/ark:/12148/cb427337007#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42753190s#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43558928k#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb428033193#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42747899k#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42752191w#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42782563c#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43536787n#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166651927#foaf:Person> .

@@ -1,0 +1,147 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb318200380#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31428481g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31428478k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1871 ;
+        bnf-onto:lastYear               1951 ;
+        rdagroup2elements:biographicalInformation
+                "Ecrivain. - Peintre. - Musicien. - Professeur, Indian society for Oriental art, Calcutta, Inde (dès sa fondation en 1907). - Vice-recteur, Bengal school of arts, Calcutta. - Neveu de Rabindranath Tagore" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ii#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1871/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1951/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ben> ;
+        rdagroup2elements:placeOfBirth  "Jorasanko, Calcutta, Bengal, Inde" ;
+        bio:birth                       "1871-08-07" ;
+        bio:death                       "1951" ;
+        owl:sameAs                      <http://www.idref.fr/085983314> , <http://viaf.org/viaf/7401708> , <http://dbpedia.org/resource/Abanîndranâth_Tagore> ;
+        foaf:birthday                   "08-07" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Abanindranath_Tagore_photo.jpg?width=300> , <http://gallica.bnf.fr/ark:/12148/btv1b6904045p.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69040463.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69040448.thumbnail> ;
+        foaf:familyName                 "Tagore" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Abanindranath" ;
+        foaf:name                       "Abanindranath Tagore" ;
+        foaf:page                       <http://data.bnf.fr/12014816/abanindranath_tagore/> .
+
+<http://data.bnf.fr/ark:/12148/cb120148166>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Abanîndranâth_Tagore> , <http://catalogue.bnf.fr/ark:/12148/cb120148166> ;
+        bnf-onto:FRBNF        12014816 ;
+        isni:identifierValid  "0000000121192935" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121192935> ;
+        skos:altLabel         "Abanindra Nath Tagore (1871-1951)"@fr , "Obina Ṭhākura (1871-1951)"@fr , "Avanīndranātha Ṭhākura (1871-1951)"@fr , "Avanīndranātha Ṭhākura (1871-1951)"@fr , "Abanindro Nath Tagore (1871-1951)"@fr , "Obina Ṭhākura (1871-1951)"@fr , "Abanindra Natha Tagore (1871-1951)"@fr ;
+        skos:editorialNote    "La poupée de fromage / A. Tagore, 1984. - . - BEPI, 1984. - . -"@fr , "Dict. de la civilisation indienne / L. Frédéric, 1987. - . - LCNA, 1986. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000121192935> , <http://www.idref.fr/085983314> , <http://viaf.org/viaf/7401708> , <http://fr.wikipedia.org/wiki/Abanîndranâth_Tagore> , <http://dbpedia.org/resource/Abanîndranâth_Tagore> ;
+        skos:note             "Ecrivain. - Peintre. - Musicien. - Professeur, Indian society for Oriental art, Calcutta, Inde (dès sa fondation en 1907). - Vice-recteur, Bengal school of arts, Calcutta. - Neveu de Rabindranath Tagore"@fr ;
+        skos:prefLabel        "Abanindranath Tagore (1871-1951)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42044446z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/12014816/abanindranath_tagore/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35771459q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32654658n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357707119#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31428479x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357707657#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb326546590#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb314284835#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41657872f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35770757m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319349244#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357707192#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347597902#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31428482t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41632589q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37504922z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120148166#foaf:Person> .

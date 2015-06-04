@@ -1,0 +1,29 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/14979554/dominique_gautier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb149795546#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149795546>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb149795546> ;
+        bnf-onto:FRBNF  14979554 ;
+        skos:prefLabel  "Dominique Gautier"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb149795546#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149795546#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1951 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:placeOfBirth  "Mazé (Maine-et-Loire)" ;
+        foaf:familyName                 "Gautier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Dominique" ;
+        foaf:name                       "Dominique Gautier" ;
+        foaf:page                       <http://data.bnf.fr/14979554/dominique_gautier/> .

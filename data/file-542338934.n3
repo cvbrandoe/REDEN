@@ -1,0 +1,132 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12488274t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12488274t> ;
+        bnf-onto:FRBNF        12488274 ;
+        isni:identifierValid  "0000000080780377" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000080780377> ;
+        skos:editorialNote    "L'art gaulois / André Varagnac, Gabrielle Fabre, 1964. - . - BBF, 1960, n. 5, pp. 132-133. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000080780377> , <http://viaf.org/viaf/88694602> , <http://www.idref.fr/034091211> ;
+        skos:note             "Conservateur au Cabinet des Médailles, Bibliothèque nationale (1955-)"@fr ;
+        skos:prefLabel        "Gabrielle Fabre (1907-1960)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347701972#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1907 ;
+        bnf-onto:lastYear               1960 ;
+        rdagroup2elements:biographicalInformation
+                "Conservateur au Cabinet des Médailles, Bibliothèque nationale (1955-)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1907/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1960/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Montpellier" ;
+        bio:birth                       "1907-06-04" ;
+        bio:death                       "1960-03-14" ;
+        owl:sameAs                      <http://viaf.org/viaf/88694602> , <http://www.idref.fr/034091211> ;
+        foaf:birthday                   "06-04" ;
+        foaf:familyName                 "Fabre" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Gabrielle" ;
+        foaf:name                       "Gabrielle Fabre" ;
+        foaf:page                       <http://data.bnf.fr/12488274/gabrielle_fabre/> .
+
+<http://data.bnf.fr/ark:/12148/cb34196352g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32088199d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37431884z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32409463h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb320881982#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32088196c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb320882014#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb332077718#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb320881951#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32088193b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36263551s#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32088197q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31543177s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32088200s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32088194p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb324094625#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12488274t#foaf:Person> .

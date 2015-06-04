@@ -1,0 +1,91 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Écrivain, auteur d'essais sur la Russie" , "Traduit du russe en français" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/034847561> , <http://viaf.org/viaf/195502384> ;
+        foaf:familyName  "Bernstein" ;
+        foaf:givenName   "Louis" ;
+        foaf:name        "Louis Bernstein" ;
+        foaf:page        <http://data.bnf.fr/12555693/louis_bernstein/> .
+
+<http://data.bnf.fr/ark:/12148/cb35293988q#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43711094q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36971087b#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31804276n#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31113039n#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311130389#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125556931>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb125556931> ;
+        bnf-onto:FRBNF        12555693 ;
+        isni:identifierValid  "0000000385488000" ;
+        owl:sameAs            <http://isni.org/isni/0000000385488000> ;
+        skos:editorialNote    "L'année nue / Boris Pilniak ; trad. du russe par L. Bernstein et L. Desormonts, 1926. - . - BN Cat. gén. suppl.. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000385488000> , <http://www.idref.fr/034847561> , <http://viaf.org/viaf/195502384> ;
+        skos:note             "Écrivain, auteur d'essais sur la Russie"@fr , "Traduit du russe en français"@fr ;
+        skos:prefLabel        "Louis Bernstein"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31804271x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31804274z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31804273m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34661434v#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb318042728#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125556931#foaf:Person> .

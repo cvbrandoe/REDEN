@@ -1,0 +1,67 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40235757j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14066604f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14066604f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14066604f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14066604f#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1946 ;
+        rdagroup2elements:biographicalInformation
+                "Instituteur de 1968 à 2002. - Participe au film documentaire de Nicolas Philibert \"Être et avoir\" (en 2002)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Éducation" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/370/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Millas, Pyrénées-Orientales" ;
+        owl:sameAs                      <http://www.idref.fr/092419518> , <http://viaf.org/viaf/39582184> ;
+        foaf:familyName                 "Lopez" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Georges" ;
+        foaf:name                       "Georges Lopez" ;
+        foaf:page                       <http://data.bnf.fr/14066604/georges_lopez/> .
+
+<http://data.bnf.fr/ark:/12148/cb39994783f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14066604f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14066604f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14066604f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14066604f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14066604f> ;
+        bnf-onto:FRBNF        14066604 ;
+        isni:identifierValid  "0000000053830260" ;
+        owl:sameAs            <http://isni.org/isni/0000000053830260> ;
+        skos:editorialNote    "Les petits cailloux : mémoires d'un instituteur / Georges Lopez, impr. 2005. - . - Libération, 2002-09-20. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/092419518> , <http://isni.org/isni/0000000053830260> , <http://viaf.org/viaf/39582184> ;
+        skos:note             "Instituteur de 1968 à 2002. - Participe au film documentaire de Nicolas Philibert \"Être et avoir\" (en 2002)"@fr ;
+        skos:prefLabel        "Georges Lopez"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14066604f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40108928f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14066604f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14066604f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14066604f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40077067w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14066604f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14066604f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14066604f#foaf:Person> .
+
+<http://data.bnf.fr/14066604/georges_lopez/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14066604f#foaf:Person> .

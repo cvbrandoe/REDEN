@@ -1,0 +1,87 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb354218447#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1910 ;
+        rdagroup2elements:biographicalInformation
+                "Auteur de romans et nouvelles humoristiques, de pièces de théâtre et de scénarios de films. - Un temps éditeur de \"Poetry\" (Chicago), membre de la rédaction du \"New Yorker\" (1944-1987)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/109967510> , <http://www.idref.fr/026653923> ;
+        foaf:familyName     "De Vries" ;
+        foaf:givenName      "Peter" ;
+        foaf:name           "Peter De Vries" ;
+        foaf:page           <http://data.bnf.fr/11886122/peter_de_vries/> .
+
+<http://data.bnf.fr/ark:/12148/cb35426757h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356328728#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb369672514#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34807602b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb369672634#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11886122c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11886122c> ;
+        bnf-onto:FRBNF        11886122 ;
+        isni:identifierValid  "0000000109339703" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109339703> ;
+        skos:altLabel         "Peter Devries"@fr ;
+        skos:editorialNote    "Slouching towards Kalamazoo / by Peter De Vries, 1983. - . - LCNA (CD), 1994-12. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/109967510> , <http://isni-url.oclc.nl/isni/0000000109339703> , <http://www.idref.fr/026653923> ;
+        skos:note             "Auteur de romans et nouvelles humoristiques, de pièces de théâtre et de scénarios de films. - Un temps éditeur de \"Poetry\" (Chicago), membre de la rédaction du \"New Yorker\" (1944-1987)"@fr ;
+        skos:prefLabel        "Peter De Vries"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34923625m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34924252n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> .
+
+<http://data.bnf.fr/11886122/peter_de_vries/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35632873m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886122c#foaf:Person> .

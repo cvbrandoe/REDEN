@@ -1,0 +1,59 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb15543160d>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb15543160d> ;
+        bnf-onto:FRBNF   15543160 ;
+        skos:exactMatch  <http://www.idref.fr/149154089> , <http://viaf.org/viaf/103661299> ;
+        skos:note        "Journaliste. - Actrice et chanteuse"@fr ;
+        skos:prefLabel   "Anne Comte"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42057464t#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste. - Actrice et chanteuse" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/103661299> , <http://www.idref.fr/149154089> ;
+        foaf:familyName  "Comte" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Anne" ;
+        foaf:name        "Anne Comte" ;
+        foaf:page        <http://data.bnf.fr/15543160/anne_comte/> .
+
+<http://data.bnf.fr/ark:/12148/cb421231966#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42125746s#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb44209963x#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb410589064#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15543160d#foaf:Person> .

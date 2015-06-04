@@ -1,0 +1,105 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb140551754>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb140551754> ;
+        bnf-onto:FRBNF   14055175 ;
+        skos:exactMatch  <http://viaf.org/viaf/34660667> ;
+        skos:prefLabel   "Michel Prudhomme (graphiste)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38586111c#frbr:Expression>
+        bnfroles:r660        <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb399692871#frbr:Expression>
+        bnfroles:r570        <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        marcrel:drt          <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38572972m#frbr:Expression>
+        bnfroles:r2100       <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        marcrel:drt          <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383740759#frbr:Expression>
+        bnfroles:r660        <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38382212p#frbr:Expression>
+        bnfroles:r2100       <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        marcrel:drt          <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb434614334#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/34660667> ;
+        foaf:familyName  "Prudhomme" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Michel" ;
+        foaf:name        "Michel Prudhomme" ;
+        foaf:page        <http://data.bnf.fr/14055175/michel_prudhomme/> .
+
+<http://data.bnf.fr/ark:/12148/cb389630589#frbr:Expression>
+        bnfroles:r2100       <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        bnfroles:r660        <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        marcrel:drt          <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38580302h#frbr:Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38586105f#frbr:Expression>
+        bnfroles:r660        <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385802983#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38580308k#frbr:Expression>
+        bnfroles:r660        <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38580306w#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383392846#frbr:Expression>
+        bnfroles:r2100       <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        marcrel:drt          <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38447327j#frbr:Expression>
+        bnfroles:r2100       <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        marcrel:drt          <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383709316#frbr:Expression>
+        bnfroles:r2100       <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        marcrel:drt          <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140551754#foaf:Person> .

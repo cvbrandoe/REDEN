@@ -1,0 +1,78 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb355068922#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42175412p#frbr:Expression>
+        bnfroles:r540        <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> ;
+        marcrel:aft          <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372022372#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34916152n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34720229t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35043064v#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12236745r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12236745r> ;
+        bnf-onto:FRBNF        12236745 ;
+        isni:identifierValid  "000000011904882X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000011904882X> ;
+        skos:editorialNote    "Schopenhauer et la création littéraire en Europe / sous la dir. d'Anne Henry, 1989. - . - Charlie Chaplin : his reflection in modern times / ed. by Adolph Nysenholc, 1991. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000011904882X> , <http://www.idref.fr/031081177> , <http://viaf.org/viaf/59136692> ;
+        skos:note             "Professeur de littérature française à l'Université de Montpellier III (en 1991), spécialiste de Proust"@fr ;
+        skos:prefLabel        "Anne Henry"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34736608m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356817943#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12236745r#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1934 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de littérature française à l'Université de Montpellier III (en 1991), spécialiste de Proust" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/59136692> , <http://www.idref.fr/031081177> ;
+        foaf:familyName     "Henry" ;
+        foaf:givenName      "Anne" ;
+        foaf:name           "Anne Henry" ;
+        foaf:page           <http://data.bnf.fr/12236745/anne_henry/> .

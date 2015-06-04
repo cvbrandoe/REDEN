@@ -1,0 +1,72 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb31262415q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107228594#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107228594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107228594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb107228594>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb107228594> ;
+        bnf-onto:FRBNF        10722859 ;
+        isni:identifierValid  "0000000121243712" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121243712> ;
+        skos:editorialNote    "Ornithologie provençale, ou Description, avec figures coloriées, de tous les oiseaux qui habitent... la Provence, ou qui n'y sont que de passage, suivie d'un abrégé des chasses, de quelques instructions de taxidermie...  / par Polydore Roux, 1825. - . - Quérard : Roux (Jean-Louis-Florent-Polydore). - . -"@fr , "Les Marseillais dans l'histoire  : sous la dir. de Pierre Guiral et de Félix Reynaud,  1988. - . - BN Cat. gén. : Roux (Jean-Louis-Florent-Polydore). - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000121243712> , <http://viaf.org/viaf/24593209> , <http://www.idref.fr/147978319> ;
+        skos:note             "Naturaliste. - Peintre. - Conservateur du Museum d'histoire naturelle de Marseille"@fr ;
+        skos:prefLabel        "Polydore Roux (1792-1833)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb107228594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb312624162#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107228594#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107228594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107228594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31262418r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107228594#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107228594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107228594#foaf:Person> .
+
+<http://data.bnf.fr/10722859/polydore_roux/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb107228594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb107228594#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1792 ;
+        bnf-onto:lastYear               1833 ;
+        rdagroup2elements:biographicalInformation
+                "Naturaliste. - Peintre. - Conservateur du Museum d'histoire naturelle de Marseille" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1792/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1833/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Marseille" ;
+        rdagroup2elements:placeOfDeath  "Bombay (Inde)" ;
+        bio:birth                       "1792-07-29" ;
+        bio:death                       "1833-04-12" ;
+        owl:sameAs                      <http://viaf.org/viaf/24593209> , <http://www.idref.fr/147978319> ;
+        foaf:birthday                   "07-29" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6580907m.thumbnail> ;
+        foaf:familyName                 "Roux" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Polydore" ;
+        foaf:name                       "Polydore Roux" ;
+        foaf:page                       <http://data.bnf.fr/10722859/polydore_roux/> .
+
+<http://data.bnf.fr/ark:/12148/cb31262417d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107228594#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107228594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107228594#foaf:Person> .

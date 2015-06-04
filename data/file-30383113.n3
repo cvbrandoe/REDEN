@@ -1,0 +1,46 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12321634k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12321634k> , <http://fr.wikipedia.org/wiki/Jeanne-Élisabeth_Bichier_des_Ages> ;
+        bnf-onto:FRBNF        12321634 ;
+        isni:identifierValid  "0000000092605787" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000092605787> ;
+        skos:altLabel         "Jeanne-Élisabeth Bichier des Ages (1773-1838)"@fr , "Jeanne-Élisabeth (sainte, 1773-1838)"@fr , "Élisabeth Bichier des Ages (sainte, 1773-1838)"@fr , "Élisabeth Bichier Des Ages (1773-1838)"@fr , "Jeanne-Élisabeth Bichier Des Ages (1773-1838)"@fr , "Élisabeth Bichier des Ages (1773-1838)"@fr , "Élisabeth (sainte, 1773-1838)"@fr ;
+        skos:editorialNote    "Sainte Jeanne-Élisabeth, fondatrice des Filles de la Croix / Madeline Guillebault, 1992. - . - GDEL et DBF : JEANNE-ÉLISABETH BICHIER DES AGES (sainte). - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/032126220> , <http://isni-url.oclc.nl/isni/0000000092605787> , <http://fr.wikipedia.org/wiki/Jeanne-Élisabeth_Bichier_des_Ages> , <http://dbpedia.org/resource/Jeanne-Élisabeth_Bichier_des_Ages> , <http://viaf.org/viaf/39447134> ;
+        skos:note             "Fille d'Antoine Bichier, seigneur des Ages, et de Marie Augier de Moussac"@fr , "Fondatrice des Filles de la Croix (en 1807). - Béatifiée en 1934, canonisée en 1947"@fr ;
+        skos:prefLabel        "Jeanne-Élisabeth Bichier des Ages (sainte, 1773-1838)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12321634k#foaf:Person> .
+
+<http://data.bnf.fr/12321634/jeanne-elisabeth_bichier_des_ages/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12321634k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12321634k#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1773 ;
+        bnf-onto:lastYear              1838 ;
+        rdagroup2elements:biographicalInformation
+                "Fondatrice des Filles de la Croix (en 1807). - Béatifiée en 1934, canonisée en 1947" , "Fille d'Antoine Bichier, seigneur des Ages, et de Marie Augier de Moussac" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1773/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1838/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1773-07-05" ;
+        bio:death                      "1838-08-26" ;
+        owl:sameAs                     <http://www.idref.fr/032126220> , <http://viaf.org/viaf/39447134> , <http://dbpedia.org/resource/Jeanne-Élisabeth_Bichier_des_Ages> ;
+        foaf:birthday                  "07-05" ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Jeanne-Élisabeth_Bichier_des_Ages.jpg?width=300> ;
+        foaf:familyName                "Jeanne-Élisabeth Bichier des Ages" ;
+        foaf:page                      <http://data.bnf.fr/12321634/jeanne-elisabeth_bichier_des_ages/> .

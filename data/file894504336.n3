@@ -1,0 +1,40 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14055870b#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1977 ;
+        rdagroup2elements:biographicalInformation
+                "Joueur de football" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/116387351> , <http://dbpedia.org/resource/Thierry_Henry> , <http://viaf.org/viaf/56132248> ;
+        foaf:depiction      <http://commons.wikimedia.org/wiki/Special:FilePath/Thierry_Henry_Montreal_Impact_vs_NY_Red_Bulls_2012_2.jpg?width=300> ;
+        foaf:familyName     "Henry" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Thierry" ;
+        foaf:name           "Thierry Henry" ;
+        foaf:page           <http://data.bnf.fr/14055870/thierry_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb14055870b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14055870b> , <http://fr.wikipedia.org/wiki/Thierry_Henry> ;
+        bnf-onto:FRBNF        14055870 ;
+        isni:identifierValid  "0000000078407602" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000078407602> ;
+        skos:exactMatch       <http://dbpedia.org/resource/Thierry_Henry> , <http://isni-url.oclc.nl/isni/0000000078407602> , <http://viaf.org/viaf/56132248> , <http://fr.wikipedia.org/wiki/Thierry_Henry> , <http://www.idref.fr/116387351> ;
+        skos:note             "Joueur de football"@fr ;
+        skos:prefLabel        "Thierry Henry"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14055870b#foaf:Person> .
+
+<http://data.bnf.fr/14055870/thierry_henry/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14055870b#foaf:Person> .

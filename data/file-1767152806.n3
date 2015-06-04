@@ -1,0 +1,68 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/14811682/houston_stewart_chamberlain/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42900419t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14811682c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Houston_Stewart_Chamberlain> , <http://catalogue.bnf.fr/ark:/12148/cb14811682c> ;
+        bnf-onto:FRBNF        14811682 ;
+        isni:identifierValid  "0000000110571825" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000110571825> ;
+        skos:exactMatch       <http://dbpedia.org/resource/Houston_Stewart_Chamberlain> , <http://viaf.org/viaf/39455347> , <http://www.idref.fr/032623240> , <http://isni-url.oclc.nl/isni/0000000110571825> , <http://fr.wikipedia.org/wiki/Houston_Stewart_Chamberlain> ;
+        skos:note             "Ecrivain allemand d'origine anglaise, a été l'un des théoriciens du nationalisme pangermaniste fondé sur la notion de race aryenne"@fr ;
+        skos:prefLabel        "Houston Stewart Chamberlain (1855-1927)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42900418g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb429004201#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1855 ;
+        bnf-onto:lastYear              1927 ;
+        rdagroup2elements:biographicalInformation
+                "Ecrivain allemand d'origine anglaise, a été l'un des théoriciens du nationalisme pangermaniste fondé sur la notion de race aryenne" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1855/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1927/> ;
+        bio:birth                      "1855" ;
+        bio:death                      "1927" ;
+        owl:sameAs                     <http://dbpedia.org/resource/Houston_Stewart_Chamberlain> , <http://viaf.org/viaf/39455347> , <http://www.idref.fr/032623240> ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv_Bild_119-1600-06,_Houston_Stewart_Chamberlain.jpg?width=300> ;
+        foaf:familyName                "Chamberlain" ;
+        foaf:givenName                 "Houston Stewart" ;
+        foaf:name                      "Houston Stewart Chamberlain" ;
+        foaf:page                      <http://data.bnf.fr/14811682/houston_stewart_chamberlain/> .
+
+<http://data.bnf.fr/ark:/12148/cb43328456g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb433294123#frbr:Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14811682c#foaf:Person> .

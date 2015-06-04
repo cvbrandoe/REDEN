@@ -1,0 +1,37 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb150023365#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1977 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre. - Donne des cours à la maison d'arrêt de Strasbourg et au musée de Brou (en 2005)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Peinture" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/750/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        foaf:familyName     "Renaud" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jean-Xavier" ;
+        foaf:name           "Jean-Xavier Renaud" ;
+        foaf:page           <http://data.bnf.fr/15002336/jean-xavier_renaud/> .
+
+<http://data.bnf.fr/ark:/12148/cb150023365>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb150023365> ;
+        bnf-onto:FRBNF  15002336 ;
+        skos:note       "Peintre. - Donne des cours à la maison d'arrêt de Strasbourg et au musée de Brou (en 2005)"@fr ;
+        skos:prefLabel  "Jean-Xavier Renaud"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb150023365#foaf:Person> .
+
+<http://data.bnf.fr/15002336/jean-xavier_renaud/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb150023365#foaf:Person> .

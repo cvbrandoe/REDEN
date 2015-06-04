@@ -1,0 +1,45 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb167279196#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1956 ;
+        rdagroup2elements:biographicalInformation
+                "Mosaïste. - Fondatrice de l'école Maverick mosaics, Vienna, (Va., États-Unis)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/268794104> ;
+        foaf:familyName     "Fitzgerald" ;
+        foaf:gender         "female" ;
+        foaf:givenName      "Bonnie" ;
+        foaf:homepage       <http://www.maverickmosaics.com> ;
+        foaf:name           "Bonnie Fitzgerald" ;
+        foaf:page           <http://data.bnf.fr/16727919/bonnie_fitzgerald/> .
+
+<http://data.bnf.fr/ark:/12148/cb43719993s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb167279196#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb167279196#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb167279196#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb167279196>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb167279196> ;
+        bnf-onto:FRBNF        16727919 ;
+        isni:identifierValid  "0000000383222671" ;
+        owl:sameAs            <http://isni.org/isni/0000000383222671> ;
+        skos:editorialNote    "Mosaïque : 300 astuces, techniques et secrets de fabrication / Bonnie Fitzgerald ; [traduit par Hélène Nicolas], DL 2013. - . - LC authorities. - http://authorities.loc.gov. - 2013-12-04"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/268794104> , <http://isni.org/isni/0000000383222671> ;
+        skos:note             "Mosaïste. - Fondatrice de l'école Maverick mosaics, Vienna, (Va., États-Unis)"@fr ;
+        skos:prefLabel        "Bonnie Fitzgerald"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb167279196#foaf:Person> .

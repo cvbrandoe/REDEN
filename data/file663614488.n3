@@ -1,0 +1,171 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb331167414#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1906 ;
+        bnf-onto:lastYear              1999 ;
+        rdagroup2elements:biographicalInformation
+                "Marie-Joseph est le nom en religion d'Yves Nicolas" , "Dominicain (profès en 1927 ; provincial de Toulouse de 1946 à 1954). - Professeur de théologie à l'Institut catholique de Toulouse. - Docteur en théologie" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1906/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1999/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1906-07-31" ;
+        bio:death                      "1999" ;
+        owl:sameAs                     <http://viaf.org/viaf/115174309> , <http://www.idref.fr/027047652> ;
+        foaf:birthday                  "07-31" ;
+        foaf:familyName                "Nicolas" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Marie-Joseph" ;
+        foaf:name                      "Marie-Joseph Nicolas" ;
+        foaf:page                      <http://data.bnf.fr/11917672/marie-joseph_nicolas/> .
+
+<http://data.bnf.fr/ark:/12148/cb32658886d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34976185v#frbr:Expression>
+        bnfroles:r540        <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aft          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35164136q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33116743t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb348655631#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb426563065#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119176728>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb119176728> ;
+        bnf-onto:FRBNF        11917672 ;
+        isni:identifierValid  "0000000109380925" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109380925> ;
+        skos:altLabel         "Joseph-Marie Nicolas (1906-1999)"@fr ;
+        skos:editorialNote    "Quand Rome condamne / par François Leprieur, 1989, p. 700 : NICOLAS, Marie-Joseph (Yves). - . - BN Cat. gén. 1960/1969 : NICOLAS (le P. Marie-Joseph), O. P.. - . -"@fr , "Théologie de la résurrection / Marie-Joseph Nicolas, 1982. - . - Croire en la Providence ? / J.-M. [i.e M.-J.] Nicolas, 1995. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/027047652> , <http://viaf.org/viaf/115174309> , <http://isni-url.oclc.nl/isni/0000000109380925> ;
+        skos:note             "Marie-Joseph est le nom en religion d'Yves Nicolas"@fr , "Dominicain (profès en 1927 ; provincial de Toulouse de 1946 à 1954). - Professeur de théologie à l'Institut catholique de Toulouse. - Docteur en théologie"@fr ;
+        skos:prefLabel        "Marie-Joseph Nicolas (1906-1999)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33116742g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34952276s#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373893355#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34442423p#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb358274688#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346121169#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36038060m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346947957#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32485684q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353763249#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb324856852#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb339505880#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35809516c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb360576117#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb324856821#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347402773#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb324855922#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35104744r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119176728#foaf:Person> .

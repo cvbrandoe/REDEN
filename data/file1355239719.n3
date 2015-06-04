@@ -1,0 +1,58 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35011497t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34693123g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34907079f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Directeur du Bureau de normalisation de la sidérurgie (en 1987)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/37053243> , <http://www.idref.fr/031475671> ;
+        foaf:familyName  "Rousseau" ;
+        foaf:givenName   "Pierre" ;
+        foaf:name        "Pierre Rousseau" ;
+        foaf:page        <http://data.bnf.fr/13092389/pierre_rousseau/> .
+
+<http://data.bnf.fr/ark:/12148/cb34903178d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13092389b>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb13092389b> ;
+        bnf-onto:FRBNF   13092389 ;
+        skos:exactMatch  <http://www.idref.fr/031475671> , <http://viaf.org/viaf/37053243> ;
+        skos:note        "Directeur du Bureau de normalisation de la sidérurgie (en 1987)"@fr ;
+        skos:prefLabel   "Pierre Rousseau (de l'AFNOR)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347660820#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13092389b#foaf:Person> .

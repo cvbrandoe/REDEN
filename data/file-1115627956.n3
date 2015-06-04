@@ -1,0 +1,94 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb302236235#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb332407942#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30223622t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30223621g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302236177#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb333376488#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30223624h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302236204#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1622 ;
+        bnf-onto:lastYear               1660 ;
+        rdagroup2elements:biographicalInformation
+                "Roi de Suède de 1654 à 1660. - Petit-fils de Charles IX, il succède à sa cousine la reine Christine" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1622/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1660/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        rdagroup2elements:placeOfBirth  "Nyköping (Suède)" ;
+        rdagroup2elements:placeOfDeath  "Göteborg (Suède)" ;
+        bio:birth                       "1622-11-08" ;
+        bio:death                       "1660-02-13" ;
+        owl:sameAs                      <http://www.idref.fr/050567659> , <http://viaf.org/viaf/29524809> ;
+        foaf:birthday                   "11-08" ;
+        foaf:familyName                 "Charles" ;
+        foaf:gender                     "male" ;
+        foaf:page                       <http://data.bnf.fr/10680274/charles_49/> .
+
+<http://data.bnf.fr/ark:/12148/cb10680274z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10680274z> ;
+        bnf-onto:FRBNF        10680274 ;
+        isni:identifierValid  "0000000121257604" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121257604> ;
+        skos:altLabel         "Karl X Gustav (roi de Suède, 1622-1660VB)"@sv , "Carolus Gustavus (roi de Suède, 1622-1660)"@la , "Carl Gustaf X (roi de Suède, 1622-1660)"@nl ;
+        skos:editorialNote    "Ad... Ferdinandum III... Regis Sueciae Caroli Gustavi literae, in quibus exponuntur caussae susceptae nuper Polonicae expeditionis, 1655. - . - Declaratie van Sijn Konickl. Majest. van Sweeden (Carl Gustaf X) door sijne gesanten aen den Turcksen Kaiser overgeleevert hoe datse met de selve gesocht hebben een Alliantie te sluyten, 1657. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000121257604> , <http://viaf.org/viaf/29524809> , <http://www.idref.fr/050567659> ;
+        skos:note             "Roi de Suède de 1654 à 1660. - Petit-fils de Charles IX, il succède à sa cousine la reine Christine"@fr ;
+        skos:prefLabel        "Charles X Gustave (roi de Suède, 1622-1660)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33234175w#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30223618k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10680274z#foaf:Person> .

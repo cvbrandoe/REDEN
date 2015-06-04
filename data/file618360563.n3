@@ -1,0 +1,71 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1934 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur d'histoire des pays de l'Est, Gesamthochschule Kassel, Allemagne (en 1981)" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        owl:sameAs          <http://www.idref.fr/08613504X> , <http://viaf.org/viaf/24815491> ;
+        foaf:familyName     "Lorenz" ;
+        foaf:givenName      "Richard" ;
+        foaf:name           "Richard Lorenz" ;
+        foaf:page           <http://data.bnf.fr/13620807/richard_lorenz/> .
+
+<http://data.bnf.fr/ark:/12148/cb37637475p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13620807n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13620807n> ;
+        bnf-onto:FRBNF        13620807 ;
+        isni:identifierValid  "0000000108302458" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108302458> ;
+        skos:editorialNote    "LCNA (CD), 1996-06. - . - BN Cat. gén. 1960-1969. - . -"@fr , "Sozialgeschichte der Sowjetunion / Richard Lorenz, 1976-. - . - Kürschners dtsch. Gel.-Kal., 1992. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/24815491> , <http://isni-url.oclc.nl/isni/0000000108302458> , <http://www.idref.fr/08613504X> ;
+        skos:note             "Professeur d'histoire des pays de l'Est, Gesamthochschule Kassel, Allemagne (en 1981)"@fr ;
+        skos:prefLabel        "Richard Lorenz"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb376578845#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35220241z#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33196870n#frbr:Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb343253017#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb352201979#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb330827794#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13620807n#foaf:Person> .

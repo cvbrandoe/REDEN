@@ -1,0 +1,56 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14268726v#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1877 ;
+        bnf-onto:lastYear               1961 ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste sportif. - Promoteur du Tour de France cycliste. - Premier directeur sportif du Tour de France cycliste (1903). - Directeur de l'\"Auto\". - Prénoms complets : Georges, Louis" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1877/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1961/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Sompuis (Marne)" ;
+        bio:birth                       "1877-02-12" ;
+        bio:death                       "1961-07-27" ;
+        owl:sameAs                      <http://www.idref.fr/080881440> , <http://viaf.org/viaf/44512369> ;
+        foaf:birthday                   "02-12" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b9020486r.thumbnail> ;
+        foaf:familyName                 "Lefèvre" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Géo" ;
+        foaf:name                       "Géo Lefèvre" ;
+        foaf:page                       <http://data.bnf.fr/14268726/geo_lefevre/> .
+
+<http://data.bnf.fr/14268726/geo_lefevre/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14268726v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14268726v>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb14268726v> ;
+        bnf-onto:FRBNF      14268726 ;
+        skos:editorialNote  "Le tour de France [Enregistrement sonore] / Jean-Paul Brouchon ; Géo Lefèvre, participant. EMI Music France 590 666-2. - . - Qui était qui, XXe siècle / Béatrice et Michel Wattel, 2005. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/44512369> , <http://www.idref.fr/080881440> ;
+        skos:note           "Journaliste sportif. - Promoteur du Tour de France cycliste. - Premier directeur sportif du Tour de France cycliste (1903). - Directeur de l'\"Auto\". - Prénoms complets : Georges, Louis"@fr ;
+        skos:prefLabel      "Géo Lefèvre (1877-1961)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb14268726v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb380720770#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb14268726v#foaf:Person> ;
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb14268726v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14268726v#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb14268726v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14268726v#foaf:Person> .

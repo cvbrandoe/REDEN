@@ -1,0 +1,50 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb43621870z#frbr:Expression>
+        bnfroles:r152        <http://data.bnf.fr/ark:/12148/cb15299278q#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15299278q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15299278q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40750243j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15299278q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15299278q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15299278q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15299278q#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "La conquête de l'Algérie mit l'accent sur la nécessité d'avoir de bonnes cartes de la Méditerranée. En 1831, le ministre de la Marine ordonna des levés sur les côtes de la nouvelle colonie dont la direction fut confiée à Bérard" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/76616723> ;
+        foaf:depiction   <http://gallica.bnf.fr/ark:/12148/btv1b7759113q.thumbnail> ;
+        foaf:familyName  "Bérard" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Antoine" ;
+        foaf:name        "Antoine Bérard" ;
+        foaf:page        <http://data.bnf.fr/15299278/antoine_berard/> .
+
+<http://data.bnf.fr/ark:/12148/cb15299278q>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb15299278q> ;
+        bnf-onto:FRBNF   15299278 ;
+        skos:exactMatch  <http://viaf.org/viaf/76616723> ;
+        skos:note        "La conquête de l'Algérie mit l'accent sur la nécessité d'avoir de bonnes cartes de la Méditerranée. En 1831, le ministre de la Marine ordonna des levés sur les côtes de la nouvelle colonie dont la direction fut confiée à Bérard"@fr ;
+        skos:prefLabel   "Antoine Bérard (capitaine de corvette)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb15299278q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40672311x#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15299278q#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15299278q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15299278q#foaf:Person> .

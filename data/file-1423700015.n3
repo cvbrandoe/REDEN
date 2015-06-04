@@ -1,0 +1,81 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb310610887#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb387369603#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31061087w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb105086865>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb105086865> ;
+        bnf-onto:FRBNF      10508686 ;
+        skos:editorialNote  "De Patris Josephi capucini publica vita, qualis ex ejus cum Richelio commerciis appareat, thesim proponebat Facultati litterarum parisiensi J. Parmentier, 1877. - . - Étude sur un supplément inédit des Mémoires de Richelieu, manuscrit qui, sur la foi de M. Léopold Ranke, célèbre historien allemand, a passé pour les mémoires du Père Joseph / par J. Parmentier, 1878. - . - A short history of the English language and literature, for the use of French students / by J. Parmentier, 1887. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/64379703> , <http://www.idref.fr/087291568> ;
+        skos:note           "Homme de lettres. - Docteur ès lettres (Paris, 1877)"@fr , "A aussi écrit en latin, en anglais et en allemand"@fr ;
+        skos:prefLabel      "Jacques Parmentier (docteur ès lettres, 18..-19..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31061086j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31061084v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb310610856#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31061083h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42550039p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb105086865#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "A aussi écrit en latin, en anglais et en allemand" , "Homme de lettres. - Docteur ès lettres (Paris, 1877)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://viaf.org/viaf/64379703> , <http://www.idref.fr/087291568> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k55109596.thumbnail> ;
+        foaf:familyName                "Parmentier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jacques" ;
+        foaf:name                      "Jacques Parmentier" ;
+        foaf:page                      <http://data.bnf.fr/10508686/jacques_parmentier/> .

@@ -1,0 +1,123 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb30981508z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb309815099#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30981511v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1795 ;
+        bnf-onto:lastYear               1880 ;
+        rdagroup2elements:biographicalInformation
+                "Prénom complet : Arthur-Jules. - Général et mathématicien. - Professeur de mécanique industrielle au Conservatoire des arts et métiers, Paris. - Membre de l'Académie des sciences (1843)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1795/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1880/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1795-10-17" ;
+        bio:death                       "1880-02-07" ;
+        owl:sameAs                      <http://dbpedia.org/resource/Arthur_Morin> , <http://viaf.org/viaf/4977156> , <http://www.idref.fr/030567963> ;
+        foaf:birthday                   "10-17" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6210469b.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Morin.png?width=300> ;
+        foaf:familyName                 "Morin" ;
+        foaf:givenName                  "Arthur" ;
+        foaf:name                       "Arthur Morin" ;
+        foaf:page                       <http://data.bnf.fr/12195734/arthur_morin/> .
+
+<http://data.bnf.fr/ark:/12148/cb30981523v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb364996713#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30981553s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35398932g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12195734x>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Arthur_Morin> , <http://catalogue.bnf.fr/ark:/12148/cb12195734x> ;
+        bnf-onto:FRBNF        12195734 ;
+        isni:identifierValid  "0000000111721717" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000111721717> ;
+        skos:editorialNote    "Larousse 19e s.. - . - Les Morin / Marie-Odile Mergnac, Marie-Anne Pirez, Marie-Hékène Trouvelot, 1994. - . -"@fr , "Aide-mémoire de mécanique pratique : à l'usage des officiers d'artillerie et des ingénieurs civils et militaires / par Arthur Morin, 1838. - . - Catalogue des collections, publié par ordre de M. le ministre de l'Agriculture et du commerce / par A. Morin, 1851. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/4977156> , <http://fr.wikipedia.org/wiki/Arthur_Morin> , <http://www.idref.fr/030567963> , <http://dbpedia.org/resource/Arthur_Morin> , <http://isni-url.oclc.nl/isni/0000000111721717> ;
+        skos:note             "Prénom complet : Arthur-Jules. - Général et mathématicien. - Professeur de mécanique industrielle au Conservatoire des arts et métiers, Paris. - Membre de l'Académie des sciences (1843)"@fr ;
+        skos:prefLabel        "Arthur Morin (1795-1880)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb309815602#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30981534h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30981532t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb309815424#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30981531g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30981538w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30981556t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30981555g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12195734x#foaf:Person> .

@@ -1,0 +1,83 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb304823121#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35179714g#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32146153z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32146152m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb321461549#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30482313c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12038972b>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12038972b> ;
+        bnf-onto:FRBNF      12038972 ;
+        skos:editorialNote  "Le Verger fleuri / Georges Garnier, 1909. - . - Lady Roxana / Daniel De Foe ; trad. par Georges Garnier, [1919]. - . -"@fr , "DBF : à l'article concernant son père \"Garnier, Jules-Benjamin-Philibert\". - . - Lorenz 1919-1921. - . - WBI. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/028582810> , <http://viaf.org/viaf/189401591> ;
+        skos:note           "Poète. - Avocat à Nancy, co-fondateur de la société \"Le Couarail\""@fr , "Traduit de l'anglais en français"@fr ;
+        skos:prefLabel      "Georges Garnier (1881-1945)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb320046902#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1881 ;
+        bnf-onto:lastYear              1945 ;
+        rdagroup2elements:biographicalInformation
+                "Traduit de l'anglais en français" , "Poète. - Avocat à Nancy, co-fondateur de la société \"Le Couarail\"" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1881/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1945/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1881-11-26" ;
+        bio:death                      "1945" ;
+        owl:sameAs                     <http://viaf.org/viaf/189401591> , <http://www.idref.fr/028582810> ;
+        foaf:birthday                  "11-26" ;
+        foaf:familyName                "Garnier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Georges" ;
+        foaf:name                      "Georges Garnier" ;
+        foaf:page                      <http://data.bnf.fr/12038972/georges_garnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb30482311p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12038972b#foaf:Person> .

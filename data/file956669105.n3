@@ -1,0 +1,86 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1790 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur et violoncelliste. - Maître de musique à Laon, puis violoncelliste à l'Opéra de Paris entre 1752 et 1767. - A également composé divers ballets (aujourd'hui perdus) pour la Comédie française" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1790/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "17.." ;
+        bio:death                      "1790" ;
+        owl:sameAs                     <http://viaf.org/viaf/71658135> , <http://www.idref.fr/154176915> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b9062849k.thumbnail> ;
+        foaf:familyName                "Giraud" ;
+        foaf:givenName                 "François-Joseph" ;
+        foaf:name                      "François-Joseph Giraud" ;
+        foaf:page                      <http://data.bnf.fr/13326936/francois-joseph_giraud/> .
+
+<http://data.bnf.fr/ark:/12148/cb397639995#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42379606m#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb430153186#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39784933w#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42377953g#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb397849347#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39607176v#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13326936f>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13326936f> ;
+        bnf-onto:FRBNF      13326936 ;
+        skos:editorialNote  "Deucalion et Pirrha : ballet / paroles de Saint-Foix ; musique de Giraud et Le Breton, 1995 [document électronique : reprod. de l'éd. de 1755]. - . - DBF. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/71658135> , <http://www.idref.fr/154176915> ;
+        skos:note           "Compositeur et violoncelliste. - Maître de musique à Laon, puis violoncelliste à l'Opéra de Paris entre 1752 et 1767. - A également composé divers ballets (aujourd'hui perdus) pour la Comédie française"@fr ;
+        skos:prefLabel      "François-Joseph Giraud (17..-1790?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42404701p#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43015317v#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13326936f#foaf:Person> .

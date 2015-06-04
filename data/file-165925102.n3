@@ -1,0 +1,57 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb36893767c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10473416h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10473416h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10473416h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb306443330#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10473416h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10473416h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10473416h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10473416h#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1880 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en médecine (Lyon, 1905)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1880/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Prats de Molo (Pyrénées orientales)" ;
+        bio:birth                       "1880-10-25" ;
+        bio:death                       "19.." ;
+        owl:sameAs                      <http://viaf.org/viaf/4919988> ;
+        foaf:birthday                   "10-25" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k58078337.thumbnail> ;
+        foaf:familyName                 "Jammes" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Ernest" ;
+        foaf:name                       "Ernest Jammes" ;
+        foaf:page                       <http://data.bnf.fr/10473416/ernest_jammes/> .
+
+<http://data.bnf.fr/ark:/12148/cb10473416h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10473416h> ;
+        bnf-onto:FRBNF        10473416 ;
+        isni:identifierValid  "0000000006548609" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000006548609> ;
+        skos:editorialNote    "Du diagnostic de l'hydrocéphalie congénitale pendant la grossesse et le travail. Sur un signe nouveau : le ″coup de hache circulaire″ / par le Dr Ernest Jammes, 1905 [thèse]. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/4919988> , <http://isni-url.oclc.nl/isni/0000000006548609> ;
+        skos:note             "Docteur en médecine (Lyon, 1905)"@fr ;
+        skos:prefLabel        "Ernest Jammes (1880-19..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10473416h#foaf:Person> .

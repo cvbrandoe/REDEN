@@ -1,0 +1,60 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb122612940>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb122612940> ;
+        bnf-onto:FRBNF        12261294 ;
+        isni:identifierValid  "000000012378490X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000012378490X> ;
+        skos:altLabel         "Thomas Volfius (14..-1535?)"@fr , "Thomas von Pfortzheim (14..-1535?)"@fr ;
+        skos:editorialNote    "Lonchamp. - . - STC German books, 1455-1600. - . - Benzing. - . -"@fr , "Stockmeyer, Reber. - . - ADB. - . - Heckethorn. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/07374459X> , <http://isni-url.oclc.nl/isni/000000012378490X> , <http://viaf.org/viaf/166503256> ;
+        skos:note             "Devise(s) : Multa quidem audienda, pauca vero dicenda. - Digito compesce libellum. - Dixisse, aliquando poenituit (ou : poenitet), tacuisse nunquam. - Pas logos sapros ek tou stomatos umon me ekporenesto"@fr , "Imprimeur. - Fils de l'imprimeur Jacob Wolff, auquel il succède. Immatriculé à l'université de Bâle en 1503. Expulsé de la ville en 1516 à la suite d'une querelle"@fr ;
+        skos:prefLabel        "Thomas Wolff (14..-1535?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122612940#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36123701s#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb122612940#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb122612940#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122612940#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316561009#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122612940#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122612940#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122612940#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31096171m#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122612940#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122612940#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122612940#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122612940#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1535 ;
+        rdagroup2elements:biographicalInformation
+                "Imprimeur. - Fils de l'imprimeur Jacob Wolff, auquel il succède. Immatriculé à l'université de Bâle en 1503. Expulsé de la ville en 1516 à la suite d'une querelle" , "Devise(s) : Multa quidem audienda, pauca vero dicenda. - Digito compesce libellum. - Dixisse, aliquando poenituit (ou : poenitet), tacuisse nunquam. - Pas logos sapros ek tou stomatos umon me ekporenesto" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/sz#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1401-1500/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1535/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1519-1535" ;
+        bio:birth                      "14.." ;
+        bio:death                      "1535" ;
+        owl:sameAs                     <http://www.idref.fr/07374459X> , <http://viaf.org/viaf/166503256> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k503766b.thumbnail> ;
+        foaf:familyName                "Wolff" ;
+        foaf:givenName                 "Thomas" ;
+        foaf:name                      "Thomas Wolff" ;
+        foaf:page                      <http://data.bnf.fr/12261294/thomas_wolff/> .

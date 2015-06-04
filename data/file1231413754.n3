@@ -1,0 +1,44 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb15530975q#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:lastYear              1791 ;
+        rdagroup2elements:biographicalInformation
+                "Aussi connu sous le nom de Charles le géomètre. - Associé géomètre de l'Académie royale des sciences (1785). - Professeur royal d'hydrodynamique. - Souvent confondu avec Jacques-Alexandre-César Charles (1746-1823)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1791/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "17.." ;
+        bio:death                      "1791" ;
+        owl:sameAs                     <http://viaf.org/viaf/32306151> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k5828214p.thumbnail> ;
+        foaf:familyName                "Charles" ;
+        foaf:page                      <http://data.bnf.fr/15530975/charles/> .
+
+<http://data.bnf.fr/ark:/12148/cb307222361#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15530975q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15530975q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15530975q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15530975q>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb15530975q> ;
+        bnf-onto:FRBNF      15530975 ;
+        skos:editorialNote  "Encyclopédie méthodique. Mathématiques / Charles, 1784-1789. - . - Dictionary of scientific biography / C. C. Gillispie éd., 1981 (art. : Charles (Jacques-Alexandre-César)). - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/32306151> ;
+        skos:note           "Aussi connu sous le nom de Charles le géomètre. - Associé géomètre de l'Académie royale des sciences (1785). - Professeur royal d'hydrodynamique. - Souvent confondu avec Jacques-Alexandre-César Charles (1746-1823)"@fr ;
+        skos:prefLabel      "Charles (17..-1791)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb15530975q#foaf:Person> .

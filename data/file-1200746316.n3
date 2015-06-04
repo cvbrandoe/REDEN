@@ -1,0 +1,38 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12084741k#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1787 ;
+        bnf-onto:lastYear              1856 ;
+        rdagroup2elements:biographicalInformation
+                "Précurseur du catholicisme social" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1787/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1856/> ;
+        bio:birth                      "1787-04-18" ;
+        bio:death                      "1856-09-24" ;
+        owl:sameAs                     <http://www.idref.fr/029164397> ;
+        foaf:birthday                  "04-18" ;
+        foaf:familyName                "Rousseau" ;
+        foaf:givenName                 "Louis" ;
+        foaf:name                      "Louis Rousseau" ;
+        foaf:page                      <http://data.bnf.fr/12084741/louis_rousseau/> .
+
+<http://data.bnf.fr/ark:/12148/cb12084741k>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12084741k> ;
+        bnf-onto:FRBNF   12084741 ;
+        skos:exactMatch  <http://www.idref.fr/029164397> ;
+        skos:note        "Précurseur du catholicisme social"@fr ;
+        skos:prefLabel   "Louis Rousseau (1787-1856)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12084741k#foaf:Person> .
+
+<http://data.bnf.fr/12084741/louis_rousseau/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12084741k#foaf:Person> .

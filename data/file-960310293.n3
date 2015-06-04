@@ -1,0 +1,59 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb40769414w#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb153045957#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb153045957#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153045957#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb153045957>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb153045957> ;
+        bnf-onto:FRBNF        15304595 ;
+        isni:identifierValid  "0000000032948382" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000032948382> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000032948382> , <http://viaf.org/viaf/24901776> , <http://www.idref.fr/170325075> ;
+        skos:note             "Jésuite. - Se destina à la médecine avant d'entrer dans la Compagnie de Jésus en 1871. Envoyé en Chine, prit la dir. d'un observatoire proche de Changhaï. En 1897 chargé d'une mission d'étude sur le cours supérieur du Yang-Tse dont il tira un remarquable atlas"@fr ;
+        skos:prefLabel        "Stanislas Chevalier (1852-1930)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb153045957#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb153045957#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1852 ;
+        bnf-onto:lastYear               1930 ;
+        rdagroup2elements:biographicalInformation
+                "Jésuite. - Se destina à la médecine avant d'entrer dans la Compagnie de Jésus en 1871. Envoyé en Chine, prit la dir. d'un observatoire proche de Changhaï. En 1897 chargé d'une mission d'étude sur le cours supérieur du Yang-Tse dont il tira un remarquable atlas" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1852/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1930/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Saint-Laurent-des-Autels" ;
+        bio:birth                       "1852-10-22" ;
+        bio:death                       "1930-10-27" ;
+        owl:sameAs                      <http://viaf.org/viaf/24901776> , <http://www.idref.fr/170325075> ;
+        foaf:birthday                   "10-22" ;
+        foaf:familyName                 "Chevalier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Stanislas" ;
+        foaf:name                       "Stanislas Chevalier" ;
+        foaf:page                       <http://data.bnf.fr/15304595/stanislas_chevalier/> .
+
+<http://data.bnf.fr/15304595/stanislas_chevalier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb153045957#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40768426n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb153045957#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb153045957#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153045957#foaf:Person> .

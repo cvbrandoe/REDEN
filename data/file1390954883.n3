@@ -1,0 +1,41 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42368144b#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb16264389z#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb16264389z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16264389z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16264389z#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        bio:birth                      "18.." ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://viaf.org/viaf/263965085> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b8594933h.thumbnail> ;
+        foaf:familyName                "Brandt" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Johannes" ;
+        foaf:name                      "Johannes Brandt" ;
+        foaf:page                      <http://data.bnf.fr/16264389/johannes_brandt/> .
+
+<http://data.bnf.fr/ark:/12148/cb16264389z>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb16264389z> ;
+        bnf-onto:FRBNF   16264389 ;
+        skos:exactMatch  <http://viaf.org/viaf/263965085> ;
+        skos:note        "Compositeur"@fr ;
+        skos:prefLabel   "Johannes Brandt (compositeur, 18..-19..)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb16264389z#foaf:Person> .

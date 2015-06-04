@@ -1,0 +1,117 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13940338g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13940338g> ;
+        bnf-onto:FRBNF        13940338 ;
+        isni:identifierValid  "0000000055173006" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000055173006> ;
+        skos:editorialNote    "Jazz in Hollywood [Enregistrement sonore] / Herbie Harper, trb ; Bob Gordon, saxo ;  Jimmy Rowles... [et al.], p. Nocturne records 0025218188722. - . - Grove jazz. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/37106408> , <http://isni-url.oclc.nl/isni/0000000055173006> ;
+        skos:note             "Saxophoniste de jazz"@fr ;
+        skos:prefLabel        "Bob Gordon (1928-1955)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42375084s#frbr:Expression>
+        bnfroles:r1450       <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38474800s#frbr:Expression>
+        bnfroles:r1450       <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1928 ;
+        bnf-onto:lastYear               1955 ;
+        rdagroup2elements:biographicalInformation
+                "Saxophoniste de jazz" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1928/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1955/> ;
+        rdagroup2elements:placeOfBirth  "St. Louis (Mo.)" ;
+        rdagroup2elements:placeOfDeath  "Californie" ;
+        bio:birth                       "1928-06-11" ;
+        bio:death                       "1955-08-28" ;
+        owl:sameAs                      <http://viaf.org/viaf/37106408> ;
+        foaf:birthday                   "06-11" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k8800559w.thumbnail> ;
+        foaf:familyName                 "Gordon" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Bob" ;
+        foaf:name                       "Bob Gordon" ;
+        foaf:page                       <http://data.bnf.fr/13940338/bob_gordon/> .
+
+<http://data.bnf.fr/ark:/12148/cb41477824n#frbr:Expression>
+        bnfroles:r1450       <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38152555t#frbr:Expression>
+        bnfroles:r1450       <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42374382p#frbr:Expression>
+        bnfroles:r1450       <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42381288z#frbr:Expression>
+        bnfroles:r1450       <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40238338w#frbr:Expression>
+        bnfroles:r1450       <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381943667#frbr:Expression>
+        bnfroles:r1450       <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38048328f#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38138094c#frbr:Expression>
+        bnfroles:r1450       <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381384516#frbr:Expression>
+        bnfroles:r1450       <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38608750x#frbr:Expression>
+        bnfroles:r1450       <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38259413g#frbr:Expression>
+        bnfroles:r1450       <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38474875p#frbr:Expression>
+        bnfroles:r1450       <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13940338g#foaf:Person> .

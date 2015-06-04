@@ -1,0 +1,79 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Astrologue, médium et tarologue" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://www.idref.fr/033969027> , <http://viaf.org/viaf/32098151> ;
+        foaf:familyName  "Morin" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Georges" ;
+        foaf:name        "Georges Morin" ;
+        foaf:page        <http://data.bnf.fr/12477215/georges_morin/> .
+
+<http://data.bnf.fr/ark:/12148/cb371943992#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37208607p#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36689110n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb358293345#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36700340g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35765150j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12477215v>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12477215v> ;
+        bnf-onto:FRBNF   12477215 ;
+        skos:exactMatch  <http://viaf.org/viaf/32098151> , <http://www.idref.fr/033969027> ;
+        skos:note        "Astrologue, médium et tarologue"@fr ;
+        skos:prefLabel   "Georges Morin (astrologue)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37217724h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40224265b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37213024m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12477215v#foaf:Person> .

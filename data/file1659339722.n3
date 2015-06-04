@@ -1,0 +1,77 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb13483925g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13483925g> ;
+        bnf-onto:FRBNF        13483925 ;
+        isni:identifierValid  "0000000109093731" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000109093731> ;
+        skos:altLabel         "Harris Nicolas (1799-1848)"@fr , "Nicholas Harris Nicholas (1799-1848)"@fr ;
+        skos:editorialNote    "BLNA, 2000-12. - . - Larousse 19e s. : Nicolas (sir Harris). - . - LCNA (CD), 1996-06. - . -"@fr , "A history of the Royal navy : from the earliest times to the wars of the French revolution / by Sir Nicholas Harris Nicolas, 1847. - . - The chronology of history / by Sir Harris Nicolas, 1833. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000109093731> , <http://www.idref.fr/035541806> , <http://viaf.org/viaf/64156745> ;
+        skos:note             "Archéologue, lieutenant de marine puis avocat. - A écrit des ouvrages de héraldique et d'histoire, et publié des auteurs anciens"@fr ;
+        skos:prefLabel        "Nicholas Harris Nicolas (1799-1848)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32485627w#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33913779g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30342701g#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316439415#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb325060588#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30229044x#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13483925g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1799 ;
+        bnf-onto:lastYear              1848 ;
+        rdagroup2elements:biographicalInformation
+                "Archéologue, lieutenant de marine puis avocat. - A écrit des ouvrages de héraldique et d'histoire, et publié des auteurs anciens" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1799/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1848/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1799" ;
+        bio:death                      "1848" ;
+        owl:sameAs                     <http://viaf.org/viaf/64156745> , <http://www.idref.fr/035541806> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k75496k.thumbnail> ;
+        foaf:familyName                "Nicolas" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Nicholas Harris" ;
+        foaf:name                      "Nicholas Harris Nicolas" ;
+        foaf:page                      <http://data.bnf.fr/13483925/nicholas_harris_nicolas/> .

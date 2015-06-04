@@ -1,0 +1,56 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb40147569h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15076764x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15076764x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15076764x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15076764x#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1945 ;
+        rdagroup2elements:biographicalInformation
+                "Diplômé de l'École des beaux-arts de Saint-Étienne (1966) et de l'École nationale supérieure des beaux-arts de Paris (1966-1967), titulaire d'un DEA d'arts plastiques (Université de Rennes 2-Haute-Bretagne, 1992). - Peintre, dessinateur, infographiste, auteur de courts-métrages. - Maître assistant à l'École nationale supérieure d'architecture de Nantes (en 2006)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Peinture" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/750/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/3628426> ;
+        foaf:familyName     "Giraud" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jean-Luc" ;
+        foaf:name           "Jean-Luc Giraud" ;
+        foaf:page           <http://data.bnf.fr/15076764/jean-luc_giraud/> .
+
+<http://data.bnf.fr/ark:/12148/cb15076764x>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15076764x> ;
+        bnf-onto:FRBNF        15076764 ;
+        isni:identifierValid  "000000007847096X" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/000000007847096X> ;
+        skos:editorialNote    "Jean-Luc Giraud, Autoportraits embordurés : [exposition, Paris... 2006] / [catalogue par Laurent Danchin et Jean-Luc Giraud], impr. 2006. - . - Halle Saint-Pierre, Service presse. - http://www.presse-hallesaintpierre.org. - 2006-06-27"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/000000007847096X> , <http://viaf.org/viaf/3628426> ;
+        skos:note             "Diplômé de l'École des beaux-arts de Saint-Étienne (1966) et de l'École nationale supérieure des beaux-arts de Paris (1966-1967), titulaire d'un DEA d'arts plastiques (Université de Rennes 2-Haute-Bretagne, 1992). - Peintre, dessinateur, infographiste, auteur de courts-métrages. - Maître assistant à l'École nationale supérieure d'architecture de Nantes (en 2006)"@fr ;
+        skos:prefLabel        "Jean-Luc Giraud"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15076764x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43788874f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15076764x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15076764x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15076764x#foaf:Person> .
+
+<http://data.bnf.fr/15076764/jean-luc_giraud/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb15076764x#foaf:Person> .

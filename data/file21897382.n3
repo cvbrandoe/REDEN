@@ -1,0 +1,87 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb31061110k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb310611128#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Concessionnaire des mines de Gouhenans (Haute-Saône)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://viaf.org/viaf/76306880> ;
+        foaf:familyName                "Parmentier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Auguste" ;
+        foaf:name                      "Auguste Parmentier" ;
+        foaf:page                      <http://data.bnf.fr/10720544/auguste_parmentier/> .
+
+<http://data.bnf.fr/ark:/12148/cb36322559n#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb363235874#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb367814879#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10720544s>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb10720544s> ;
+        bnf-onto:FRBNF      10720544 ;
+        skos:altLabel       "Marie-Nicolas-Philippe-Auguste Parmentier"@fr ;
+        skos:editorialNote  "Cour des pairs. Affaire des mines de Gouhenans / observations de M. Parmentier, 1847. - . - BN Cat. gén. : Parmentier (Marie-Nicolas-Philippe-Auguste). - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/76306880> ;
+        skos:note           "Concessionnaire des mines de Gouhenans (Haute-Saône)"@fr ;
+        skos:prefLabel      "Auguste Parmentier"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb363225589#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31061109c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36322545z#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31061111x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36376106z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10720544s#foaf:Person> .

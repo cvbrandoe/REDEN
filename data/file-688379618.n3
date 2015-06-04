@@ -1,0 +1,29 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/14970478/andreas_brandt/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14970478r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14970478r>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb14970478r> ;
+        bnf-onto:FRBNF  14970478 ;
+        skos:prefLabel  "Andreas Brandt"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb14970478r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14970478r#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1935 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:placeOfBirth  "Halle (Allemagne)" ;
+        foaf:familyName                 "Brandt" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Andreas" ;
+        foaf:name                       "Andreas Brandt" ;
+        foaf:page                       <http://data.bnf.fr/14970478/andreas_brandt/> .

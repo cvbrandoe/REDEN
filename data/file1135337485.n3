@@ -1,0 +1,52 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb33163012x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11571831b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11571831b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11571831b#foaf:Person> .
+
+<http://data.bnf.fr/11571831/katharina_wilhelmine_friederike_benigne_von_sagan/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11571831b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11571831b#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1781 ;
+        bnf-onto:lastYear              1839 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1781/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1839/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        bio:birth                      "1781-12-08" ;
+        bio:death                      "1839-11-29" ;
+        owl:sameAs                     <http://viaf.org/viaf/13100007> , <http://www.idref.fr/154239402> ;
+        foaf:birthday                  "12-08" ;
+        foaf:familyName                "Sagan" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Katharina Wilhelmine Friederike Benigne von" ;
+        foaf:name                      "Katharina Wilhelmine Friederike Benigne von Sagan" ;
+        foaf:page                      <http://data.bnf.fr/11571831/katharina_wilhelmine_friederike_benigne_von_sagan/> .
+
+<http://data.bnf.fr/ark:/12148/cb11571831b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11571831b> ;
+        bnf-onto:FRBNF        11571831 ;
+        isni:identifierValid  "0000000058864769" ;
+        owl:sameAs            <http://isni.org/isni/0000000058864769> ;
+        skos:altLabel         "Katharina Wilhelmine Friederike Benigne Herzogin von Sagan Kurland (princesse von, 1781-1839)"@fr , "Wilhelmine von Sagan (1781-1839)"@fr ;
+        skos:editorialNote    "Ein Briefwechsel : 1813-1815 / Clemens Metternich, Wilhelmine von Sagan, 1966. - . - DBA = Katharina Wilhelmine Friederike Benigne Herzogin von Sagan, Prinzessin von Kurland. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/13100007> , <http://www.idref.fr/154239402> , <http://isni.org/isni/0000000058864769> ;
+        skos:prefLabel        "Katharina Wilhelmine Friederike Benigne von Sagan (duchesse, 1781-1839)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11571831b#foaf:Person> .

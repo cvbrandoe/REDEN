@@ -1,0 +1,37 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14704105w>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14704105w> ;
+        bnf-onto:FRBNF   14704105 ;
+        skos:exactMatch  <http://viaf.org/viaf/304549446> ;
+        skos:note        "Décorateur de théâtre"@fr ;
+        skos:prefLabel   "Pierre Voisin (19..-....)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14704105w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39493050f#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb14704105w#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb14704105w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14704105w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14704105w#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Décorateur de théâtre" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/304549446> ;
+        foaf:familyName  "Voisin" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Pierre" ;
+        foaf:name        "Pierre Voisin" ;
+        foaf:page        <http://data.bnf.fr/14704105/pierre_voisin/> .

@@ -1,0 +1,44 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb43696833d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12068697g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12068697g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12068697g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12068697g>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12068697g> ;
+        bnf-onto:FRBNF   12068697 ;
+        skos:altLabel    "Thomas Julien"@fr ;
+        skos:exactMatch  <http://www.idref.fr/028959353> , <http://viaf.org/viaf/27088265> ;
+        skos:note        "Exégète protestant"@fr ;
+        skos:prefLabel   "Tom Julien"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12068697g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12068697g#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Exégète protestant" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs       <http://viaf.org/viaf/27088265> , <http://www.idref.fr/028959353> ;
+        foaf:familyName  "Julien" ;
+        foaf:givenName   "Tom" ;
+        foaf:name        "Tom Julien" ;
+        foaf:page        <http://data.bnf.fr/12068697/tom_julien/> .
+
+<http://data.bnf.fr/ark:/12148/cb34929795h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12068697g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12068697g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12068697g#foaf:Person> .

@@ -1,0 +1,104 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb412147738#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb371124338#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412577358#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1958 ;
+        rdagroup2elements:biographicalInformation
+                "En poste, Fakultät für Soziologie der Universität Bielefeld, Allemagne (en 2001)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Donzdorf, Allemagne" ;
+        owl:sameAs                      <http://viaf.org/viaf/56776072> , <http://www.idref.fr/081904304> ;
+        foaf:familyName                 "Wagner" ;
+        foaf:givenName                  "Gerhard" ;
+        foaf:name                       "Gerhard Wagner" ;
+        foaf:page                       <http://data.bnf.fr/13562732/gerhard_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb38980160t#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13562732q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13562732q> ;
+        bnf-onto:FRBNF        13562732 ;
+        isni:identifierValid  "0000000083848891" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000083848891> ;
+        skos:editorialNote    "Gesellschaftstheorie als politische Theologie ? : zur Kritik und Überwindung der Theorien normativer Integration / von Dr. Gerhard Wagner, cop. 1993. - . - Soziologie und Anti-Soziologie / Peter-Ulrich Merz-Benz, Gerhard Wagner (Hg.), 2001. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000083848891> , <http://viaf.org/viaf/56776072> , <http://www.idref.fr/081904304> ;
+        skos:note             "En poste, Fakultät für Soziologie der Universität Bielefeld, Allemagne (en 2001)"@fr ;
+        skos:prefLabel        "Gerhard Wagner"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39078075w#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392145653#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412578106#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39046216t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39078099w#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39078084v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390781081#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41059781k#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422524748#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13562732q#foaf:Person> .

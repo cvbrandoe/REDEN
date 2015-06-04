@@ -1,0 +1,46 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb16656953k#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Imprimeur et libraire juré de l'université [de Paris] ; relieur. - Entre en apprentissage chez l'imprimeur-libraire parisien Jean de La Coste en mai 1637. Reçu maître le 22 avril 1649. Semble ne plus être en activité après 1660. Peut-être mort en nov. 1660 (inventaire après décès d'un \"Jean Jullien\") ou bien peu avant avril 1690. Antoine II Chrestien serait reçu libraire juré et imprimeur de l'université de Paris, le 4 avril 1690, en sa succession. Son fils Jean-François (dit Jean II) Julien, né en juillet 1659, est reçu imprimeur-libraire en oct. 1694 mais décède très rapidement, avant même que son acte de réception ne soit ratifié" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1649-1660" ;
+        bio:birth                      "16.." ;
+        bio:death                      "16.." ;
+        owl:sameAs                     <http://www.idref.fr/073780715> , <http://viaf.org/viaf/195989136> ;
+        foaf:familyName                "Julien" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Julien" ;
+        foaf:page                      <http://data.bnf.fr/16656953/jean_julien/> .
+
+<http://data.bnf.fr/ark:/12148/cb16656953k>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16656953k> ;
+        bnf-onto:FRBNF      16656953 ;
+        skos:altLabel       "Jean Julien I (imprimeur-libraire, 16..-16..)"@fr , "Jean Jullien (imprimeur-libraire, 16..-16..)"@fr , "Joannes Julien (imprimeur-libraire, 16..-16..)"@fr , "Jean I Julien (imprimeur-libraire, 16..-16..)"@fr ;
+        skos:editorialNote  "La Caille. - . - Lottin : le qualifie de libraire seulement. - . - Roquet. - . -"@fr , "Martin, Paris, 1598-1701 : mentionne l'inventaire après décès d'un Jean Jullien, le 16 nov. 1660. - . - Goldsmith, STC French books : occurrences 1650-1659. - . - Renouard, 17 s. : date de réception 21 avril 1649 ; date de fin d'activité 1660 au plus tôt. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/195989136> , <http://www.idref.fr/073780715> ;
+        skos:note           "Imprimeur et libraire juré de l'université [de Paris] ; relieur. - Entre en apprentissage chez l'imprimeur-libraire parisien Jean de La Coste en mai 1637. Reçu maître le 22 avril 1649. Semble ne plus être en activité après 1660. Peut-être mort en nov. 1660 (inventaire après décès d'un \"Jean Jullien\") ou bien peu avant avril 1690. Antoine II Chrestien serait reçu libraire juré et imprimeur de l'université de Paris, le 4 avril 1690, en sa succession. Son fils Jean-François (dit Jean II) Julien, né en juillet 1659, est reçu imprimeur-libraire en oct. 1694 mais décède très rapidement, avant même que son acte de réception ne soit ratifié"@fr ;
+        skos:prefLabel      "Jean Julien (imprimeur-libraire, 16..-16..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16656953k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb361171356#frbr:Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb16656953k#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb16656953k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16656953k#foaf:Person> .

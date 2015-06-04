@@ -1,0 +1,59 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38458686b#frbr:Expression>
+        bnfroles:r230        <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38461504d#frbr:Expression>
+        bnfroles:r660        <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384706399#frbr:Expression>
+        bnfroles:r90         <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> ;
+        marcrel:anm          <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/2677383> ;
+        foaf:familyName  "Gilbert" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Véronique" ;
+        foaf:name        "Véronique Gilbert" ;
+        foaf:page        <http://data.bnf.fr/14101299/veronique_gilbert/> .
+
+<http://data.bnf.fr/ark:/12148/cb385731134#frbr:Expression>
+        bnfroles:r630        <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> ;
+        marcrel:aus          <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38573271k#frbr:Expression>
+        bnfroles:r660        <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14101299k>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14101299k> ;
+        bnf-onto:FRBNF   14101299 ;
+        skos:exactMatch  <http://viaf.org/viaf/2677383> ;
+        skos:prefLabel   "Véronique Gilbert"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39091457s#frbr:Expression>
+        bnfroles:r570        <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> ;
+        marcrel:drt          <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14101299k#foaf:Person> .

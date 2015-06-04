@@ -1,0 +1,114 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb35375674f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1910 ;
+        bnf-onto:lastYear              1994 ;
+        rdagroup2elements:biographicalInformation
+                "Philosophe" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1910/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1994/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        bio:birth                      "1910" ;
+        bio:death                      "1994-11-21" ;
+        owl:sameAs                     <http://viaf.org/viaf/108297116> , <http://www.idref.fr/028559134> ;
+        foaf:familyName                "Marx" ;
+        foaf:givenName                 "Werner" ;
+        foaf:name                      "Werner Marx" ;
+        foaf:page                      <http://data.bnf.fr/12037079/werner_marx/> .
+
+<http://data.bnf.fr/ark:/12148/cb37394937h#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37456826d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35381560q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35191671h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34918127x#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37146065c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34887286r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120370791>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb120370791> ;
+        bnf-onto:FRBNF        12037079 ;
+        isni:identifierValid  "0000000081731200" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000081731200> ;
+        skos:editorialNote    "Die Vernunft in Hegels Phänomenologie des Geistes / Klaus Erich Kaehler, Werner Marx, 1992. - . - Monde, 1994-11-25. - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000081731200> , <http://www.idref.fr/028559134> , <http://viaf.org/viaf/108297116> ;
+        skos:note             "Philosophe"@fr ;
+        skos:prefLabel        "Werner Marx (1910-1994)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35194305m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353698037#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb348298363#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34887285d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35194374f#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374568252#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120370791#foaf:Person> .

@@ -1,0 +1,79 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb407118877#frbr:Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb406761805#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40571652x#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15241828v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15241828v> ;
+        bnf-onto:FRBNF        15241828 ;
+        isni:identifierValid  "0000000073702768" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000073702768> ;
+        skos:exactMatch       <http://viaf.org/viaf/56911935> , <http://isni-url.oclc.nl/isni/0000000073702768> ;
+        skos:note             "Négociant à Paris, au 61 rue de Provence en 1852. - Membre de la Société de Géographie vers 1850, membre de la commission centrale en 1852, Conseil impérial de l'Instruction publique qui retient le travail de Garnier dans sa session de 1861"@fr ;
+        skos:prefLabel        "F.A.  Garnier (1803-1863)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40572227v#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1803 ;
+        bnf-onto:lastYear              1863 ;
+        rdagroup2elements:biographicalInformation
+                "Négociant à Paris, au 61 rue de Provence en 1852. - Membre de la Société de Géographie vers 1850, membre de la commission centrale en 1852, Conseil impérial de l'Instruction publique qui retient le travail de Garnier dans sa session de 1861" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1803/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1863/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1803" ;
+        bio:death                      "1863" ;
+        owl:sameAs                     <http://viaf.org/viaf/56911935> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b84909368.thumbnail> ;
+        foaf:familyName                "Garnier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "F.A. " ;
+        foaf:name                      "F.A.  Garnier" ;
+        foaf:page                      <http://data.bnf.fr/15241828/f_a___garnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb40711888k#frbr:Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40601249n#frbr:Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40764183p#frbr:Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15241828v#foaf:Person> .

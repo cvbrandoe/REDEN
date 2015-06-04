@@ -1,0 +1,42 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/13516345/dwarkanath_tagore/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13516345w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13516345w#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1794 ;
+        bnf-onto:lastYear               1846 ;
+        rdagroup2elements:biographicalInformation
+                "Homme d'affaires et philanthrope. - Collaborateur de Rammohun Roy. - Grand-père de Rabindranath Tagore" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ii#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1794/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1846/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ben> ;
+        rdagroup2elements:placeOfBirth  "Kolkata" ;
+        bio:birth                       "1794" ;
+        bio:death                       "1846-08-01" ;
+        foaf:familyName                 "Tagore" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Dwarkanath" ;
+        foaf:name                       "Dwarkanath Tagore" ;
+        foaf:page                       <http://data.bnf.fr/13516345/dwarkanath_tagore/> .
+
+<http://data.bnf.fr/ark:/12148/cb13516345w>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13516345w> ;
+        bnf-onto:FRBNF      13516345 ;
+        skos:altLabel       "Dvārakānātha Ṭhākura (1794-1846)"@fr ;
+        skos:editorialNote  "Dwarkanath Tagore, a forgotten pioneer : a life / Krishna Kripalani, 1981. - . - Natl. bibliogr. of Indian lit. / gen. ed. B.S. Kesavan, V.Y . Kulkarni, 1962, vol. 1 : Dvārakānātha Ṭhākura. - . -"@fr ;
+        skos:note           "Homme d'affaires et philanthrope. - Collaborateur de Rammohun Roy. - Grand-père de Rabindranath Tagore"@fr ;
+        skos:prefLabel      "Dwarkanath Tagore (1794-1846)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13516345w#foaf:Person> .

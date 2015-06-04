@@ -1,0 +1,70 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb36653822h#frbr:Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35501035t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42565707d#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36678223t#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35412151m#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121311133>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb121311133> ;
+        bnf-onto:FRBNF      12131113 ;
+        skos:editorialNote  "Les Paysans cantaliens et la Révolution française : 1789-1794 / Jonathan R. Dalby ; trad. de l'anglais par Catherine Marion, 1989. - . - Seigneuries de la Brie champenoise, les archives des châteaux de Brugny, Mareuil-en-Brie et Baye : répertoire numérique détaillé de la sous-série 2 J / [réd.] par René Gandilhon et Sylvie Mirot ; Répertoire numérique détaillé de la sous-série 21 J et inventaire sommaire analytique de la sous-série 43 J / [réd.] par Xavier de La Selle ; sous la dir. de Catherine Marion, 1993. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/2505822> , <http://www.idref.fr/029755832> ;
+        skos:note           "Archiviste-paléographe. - Directeur des services d'archives du Cantal (1982-1989). - Conservateur du patrimoine, directeur des Archives départementales de la Marne (en 1995)"@fr , "Traduit de l'anglais en français"@fr ;
+        skos:prefLabel      "Catherine Marion"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35038703k#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1945 ;
+        rdagroup2elements:biographicalInformation
+                "Traduit de l'anglais en français" , "Archiviste-paléographe. - Directeur des services d'archives du Cantal (1982-1989). - Conservateur du patrimoine, directeur des Archives départementales de la Marne (en 1995)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/2505822> , <http://www.idref.fr/029755832> ;
+        foaf:familyName     "Marion" ;
+        foaf:givenName      "Catherine" ;
+        foaf:name           "Catherine Marion" ;
+        foaf:page           <http://data.bnf.fr/12131113/catherine_marion/> .
+
+<http://data.bnf.fr/ark:/12148/cb428034677#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121311133#foaf:Person> .

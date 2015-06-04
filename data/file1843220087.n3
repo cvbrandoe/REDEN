@@ -1,0 +1,69 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39288484h#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42192969q#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42790692z#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42737666v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1954 ;
+        rdagroup2elements:biographicalInformation
+                "Ancien élève de l'ENS de Saint-Cloud, agrégé de lettres modernes, docteur en littérature générale et comparée de l'Université de Paris III. - Membre du CÉRÉdi, Centre d'Études et de Recherche Éditer, et maître de conférences à l'université de Rouen (en 2010)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/035473754> , <http://viaf.org/viaf/76458788> ;
+        foaf:familyName     "Kahn" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Robert" ;
+        foaf:name           "Robert Kahn" ;
+        foaf:page           <http://data.bnf.fr/13206869/robert_kahn/> .
+
+<http://data.bnf.fr/ark:/12148/cb13206869j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13206869j> ;
+        bnf-onto:FRBNF        13206869 ;
+        isni:identifierValid  "0000000066527092" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000066527092> ;
+        skos:editorialNote    "Images, passages : Marcel Proust et Walter Benjamin / Robert Kahn, 1998. - . - CÉRÉdi. - http://ceredi.labos.univ-rouen.fr. - 2010-05-17"@fr ;
+        skos:exactMatch       <http://www.idref.fr/035473754> , <http://isni-url.oclc.nl/isni/0000000066527092> , <http://viaf.org/viaf/76458788> ;
+        skos:note             "Ancien élève de l'ENS de Saint-Cloud, agrégé de lettres modernes, docteur en littérature générale et comparée de l'Université de Paris III. - Membre du CÉRÉdi, Centre d'Études et de Recherche Éditer, et maître de conférences à l'université de Rouen (en 2010)"@fr ;
+        skos:prefLabel        "Robert Kahn"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb392582861#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36701937g#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13206869j#foaf:Person> .

@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb425970930#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1964 ;
+        rdagroup2elements:biographicalInformation
+                "Maître de conférences en science politique à l'Université de Perpignan (en 2011)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/034829318> , <http://viaf.org/viaf/39492093> ;
+        foaf:familyName     "Jacob" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jean" ;
+        foaf:name           "Jean Jacob" ;
+        foaf:page           <http://data.bnf.fr/12554046/jean_jacob/> .
+
+<http://data.bnf.fr/ark:/12148/cb401880603#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36975897t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36154308z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12554046m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12554046m> ;
+        bnf-onto:FRBNF        12554046 ;
+        isni:identifierValid  "000000011759099X" ;
+        owl:sameAs            <http://isni.org/isni/000000011759099X> ;
+        skos:editorialNote    "Les sources de l'écologie politique / Jean Jacob, 1995. - . - Egdar Morin, la fabrique d'une pensée et ses réseaux influents / Jean Jacob, impr. 2011. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/000000011759099X> , <http://www.idref.fr/034829318> , <http://viaf.org/viaf/39492093> ;
+        skos:note             "Maître de conférences en science politique à l'Université de Perpignan (en 2011)"@fr ;
+        skos:prefLabel        "Jean Jacob"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400570126#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12554046m#foaf:Person> .

@@ -1,0 +1,74 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12026704m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12026704m> ;
+        bnf-onto:FRBNF        12026704 ;
+        isni:identifierValid  "0000000080984871" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000080984871> ;
+        skos:editorialNote    "Lettrisme : into the present / guest ed., Stephen C. Foster, 1983. - . - LCNA (CD), 1996-06 : Foster, Stephen C.. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/070170975> , <http://viaf.org/viaf/19722103> , <http://isni-url.oclc.nl/isni/0000000080984871> ;
+        skos:note             "Professeur d'histoire de l'art, University of Iowa, Iowa city (en 1996). - Directeur, Fine arts Dada archive and research center, University of Iowa (en 1996)"@fr ;
+        skos:prefLabel        "Stephen Charles Foster"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39173284c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37506911s#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37345176d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1941 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur d'histoire de l'art, University of Iowa, Iowa city (en 1996). - Directeur, Fine arts Dada archive and research center, University of Iowa (en 1996)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/19722103> , <http://www.idref.fr/070170975> ;
+        foaf:familyName     "Foster" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Stephen Charles" ;
+        foaf:name           "Stephen Charles Foster" ;
+        foaf:page           <http://data.bnf.fr/12026704/stephen_charles_foster/> .
+
+<http://data.bnf.fr/ark:/12148/cb34224424r#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb348019330#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37546295j#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37219010c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12026704m#foaf:Person> .

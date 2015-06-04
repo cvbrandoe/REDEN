@@ -1,0 +1,61 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Écrit aussi en anglais" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/mx#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+        owl:sameAs       <http://www.idref.fr/055304060> , <http://viaf.org/viaf/61719542> ;
+        foaf:familyName  "Spenser" ;
+        foaf:givenName   "Daniela" ;
+        foaf:name        "Daniela Spenser" ;
+        foaf:page        <http://data.bnf.fr/13605588/daniela_spenser/> .
+
+<http://data.bnf.fr/ark:/12148/cb41248088z#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37210468m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42039605x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40106489s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41281676r#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13605588f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13605588f> ;
+        bnf-onto:FRBNF        13605588 ;
+        isni:identifierValid  "0000000110657370" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000110657370> ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000110657370> , <http://www.idref.fr/055304060> , <http://viaf.org/viaf/61719542> ;
+        skos:note             "Écrit aussi en anglais"@fr ;
+        skos:prefLabel        "Daniela Spenser"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13605588f#foaf:Person> .

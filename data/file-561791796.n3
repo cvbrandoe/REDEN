@@ -1,0 +1,65 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40699676f#frbr:Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40737083h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb407273598#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40710688s#frbr:Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "D'abord collab. de Jules Gaultier, dessina ses propres cartes à partir de 1902 (Chemins de fer, département, Maroc)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/39678444> ;
+        foaf:depiction   <http://gallica.bnf.fr/ark:/12148/btv1b53063396n.thumbnail> ;
+        foaf:familyName  "Cuénot" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "A. " ;
+        foaf:name        "A.  Cuénot" ;
+        foaf:page        <http://data.bnf.fr/15308126/a___cuenot/> .
+
+<http://data.bnf.fr/ark:/12148/cb40693141z#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb153081268>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb153081268> ;
+        bnf-onto:FRBNF   15308126 ;
+        skos:exactMatch  <http://viaf.org/viaf/39678444> ;
+        skos:note        "D'abord collab. de Jules Gaultier, dessina ses propres cartes à partir de 1902 (Chemins de fer, département, Maroc)"@fr ;
+        skos:prefLabel   "A.  Cuénot"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40712112n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb153081268#foaf:Person> .

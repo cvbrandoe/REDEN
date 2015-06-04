@@ -1,0 +1,66 @@
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb31282954d#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107311684#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107311684#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107311684#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31282955r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107311684#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107311684#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107311684#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb107311684>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb107311684> ;
+        bnf-onto:FRBNF      10731168 ;
+        skos:editorialNote  "Lettres de M. de Saint-Martin, évêque de Caradre,... à ses père et mère et à son frère / précédées d'une notice biographique, et suivies de notes, par M. l'abbé Labouderie, 1822. - . - ABF. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/64954284> ;
+        skos:note           "Prêtre des Missions étrangères de Paris, missionnaire en Chine. - Évêque titulaire de Caradre (à partir de 1782/1784) et vicaire apostolique du Seu-Tchoan (à partir de 1792 ; coadjuteur dès 1782/1784)"@fr ;
+        skos:prefLabel      "Jean Didier de Saint-Martin (1743-1801)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb107311684#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb107311684#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1743 ;
+        bnf-onto:lastYear               1801 ;
+        rdagroup2elements:biographicalInformation
+                "Prêtre des Missions étrangères de Paris, missionnaire en Chine. - Évêque titulaire de Caradre (à partir de 1782/1784) et vicaire apostolique du Seu-Tchoan (à partir de 1792 ; coadjuteur dès 1782/1784)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1743/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1801/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Tson King tchéou (Chine)" ;
+        bio:birth                       "1743-01-18" ;
+        bio:death                       "1801-11-15" ;
+        owl:sameAs                      <http://viaf.org/viaf/64954284> ;
+        foaf:birthday                   "01-18" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k5808589w.thumbnail> ;
+        foaf:familyName                 "Saint-Martin" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jean Didier de" ;
+        foaf:name                       "Jean Didier de Saint-Martin" ;
+        foaf:page                       <http://data.bnf.fr/10731168/jean_didier_de_saint-martin/> .
+
+<http://data.bnf.fr/ark:/12148/cb35594819c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107311684#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107311684#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107311684#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30318614c#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107311684#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107311684#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107311684#foaf:Person> .

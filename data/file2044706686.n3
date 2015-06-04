@@ -1,0 +1,51 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb408938835#frbr:Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb14997871j#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb14997871j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14997871j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14997871j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14997871j> ;
+        bnf-onto:FRBNF        14997871 ;
+        isni:identifierValid  "0000000097268767" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000097268767> ;
+        skos:altLabel         "Madame Georges Courteline"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000097268767> , <http://viaf.org/viaf/143862177> ;
+        skos:note             "Epouse de Georges Courteline (1858-1929)"@fr ;
+        skos:prefLabel        "Marie-Jeanne Courteline"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14997871j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14997871j#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Epouse de Georges Courteline (1858-1929)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "18.." ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://viaf.org/viaf/143862177> ;
+        foaf:familyName                "Courteline" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Marie-Jeanne" ;
+        foaf:name                      "Marie-Jeanne Courteline" ;
+        foaf:page                      <http://data.bnf.fr/14997871/marie-jeanne_courteline/> .
+
+<http://data.bnf.fr/14997871/marie-jeanne_courteline/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14997871j#foaf:Person> .

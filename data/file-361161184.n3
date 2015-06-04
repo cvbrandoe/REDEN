@@ -1,0 +1,39 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb13747569n#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1818 ;
+        bnf-onto:lastYear              1901 ;
+        rdagroup2elements:biographicalInformation
+                "Négociant en dentelles, puis banquier. - Vécut en Espagne à partir de 1835" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1818/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1818-04-18" ;
+        bio:death                      "1901-02-13" ;
+        foaf:birthday                  "04-18" ;
+        foaf:familyName                "Rolland" ;
+        foaf:givenName                 "Guillaume" ;
+        foaf:name                      "Guillaume Rolland" ;
+        foaf:page                      <http://data.bnf.fr/13747569/guillaume_rolland/> .
+
+<http://data.bnf.fr/ark:/12148/cb13747569n>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb13747569n> ;
+        bnf-onto:FRBNF  13747569 ;
+        skos:note       "Négociant en dentelles, puis banquier. - Vécut en Espagne à partir de 1835"@fr ;
+        skos:prefLabel  "Guillaume Rolland (1818-1901)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb13747569n#foaf:Person> .
+
+<http://data.bnf.fr/13747569/guillaume_rolland/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13747569n#foaf:Person> .

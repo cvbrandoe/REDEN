@@ -1,0 +1,132 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38351791b#frbr:Expression>
+        bnfroles:r1160       <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1899 ;
+        bnf-onto:lastYear              1985 ;
+        rdagroup2elements:biographicalInformation
+                "Artiste lyrique (baryton)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1899/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1985/> ;
+        bio:birth                      "1899" ;
+        bio:death                      "1985" ;
+        owl:sameAs                     <http://viaf.org/viaf/51954396> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b55006800s.thumbnail> ;
+        foaf:familyName                "Rousseau" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Emile" ;
+        foaf:name                      "Emile Rousseau" ;
+        foaf:page                      <http://data.bnf.fr/14803800/emile_rousseau/> .
+
+<http://data.bnf.fr/ark:/12148/cb37830263s#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38111425j#frbr:Expression>
+        bnfroles:r1180       <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38064844h#frbr:Expression>
+        bnfroles:r1160       <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37917047f#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37917179b#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37917239c#frbr:Expression>
+        bnfroles:r1990       <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:prf          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/14803800/emile_rousseau/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38393093d#frbr:Expression>
+        bnfroles:r1180       <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39726444d#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb397264432#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39726850f#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39726441c#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381214201#frbr:Expression>
+        bnfroles:r1180       <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb378939719#frbr:Expression>
+        bnfroles:r1160       <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb386087309#frbr:Expression>
+        bnfroles:r1160       <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383083222#frbr:Expression>
+        bnfroles:r1160       <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb148038001>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb148038001> ;
+        bnf-onto:FRBNF        14803800 ;
+        isni:identifierValid  "0000000055213557" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000055213557> ;
+        skos:editorialNote    "Les mamelles de Tirésias [Enregistrement sonore] / Poulenc, comp.  ; Denise Duval, S, (Thérèse, la cartomancienne) ; Marguerite Legouhy, MS (La marchande de journaux) ; Jean Giraudeau, T, (le mari),... [et al.] ; choeur et Orchestre du Théatre National de l'Opéra comique ; André Cluytens, dir. La voix de son maître 2C 061 12510. - . - Pipers Enzyklopädie des Musiktheaters. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/51954396> , <http://isni-url.oclc.nl/isni/0000000055213557> ;
+        skos:note             "Artiste lyrique (baryton)"@fr ;
+        skos:prefLabel        "Emile Rousseau (1899-1985)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38076977f#frbr:Expression>
+        bnfroles:r1160       <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148038001#foaf:Person> .

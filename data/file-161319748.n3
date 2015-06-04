@@ -1,0 +1,87 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39500935m#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41438456k#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394987408#frbr:Expression>
+        bnfroles:r2090       <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        marcrel:std          <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Eclairagiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/7650417> ;
+        foaf:familyName  "Mathieu" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Philippe" ;
+        foaf:name        "Philippe Mathieu" ;
+        foaf:page        <http://data.bnf.fr/14690720/philippe_mathieu/> .
+
+<http://data.bnf.fr/ark:/12148/cb412406651#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394950560#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394991803#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb146907205>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb146907205> ;
+        bnf-onto:FRBNF   14690720 ;
+        skos:exactMatch  <http://viaf.org/viaf/7650417> ;
+        skos:note        "Eclairagiste"@fr ;
+        skos:prefLabel   "Philippe Mathieu (éclairagiste)"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40977372v#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb395007608#frbr:Expression>
+        bnfroles:r2280       <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412404106#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43749041p#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39494587d#frbr:Expression>
+        bnfroles:r2140       <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        marcrel:lgd          <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146907205#foaf:Person> .

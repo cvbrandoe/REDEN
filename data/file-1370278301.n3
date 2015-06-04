@@ -1,0 +1,44 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/16537519/william_footit/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb16537519z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16537519z#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1920 ;
+        bnf-onto:lastYear               1989 ;
+        rdagroup2elements:biographicalInformation
+                "Clown, fils de Georges Footit" ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1920/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1989/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Arts du spectacle" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/790/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Issoudin" ;
+        rdagroup2elements:placeOfDeath  "Boulogne" ;
+        bio:birth                       "1920-10-13" ;
+        bio:death                       "1989-09-20" ;
+        foaf:birthday                   "10-13" ;
+        foaf:familyName                 "Footit" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "William" ;
+        foaf:name                       "William Footit" ;
+        foaf:page                       <http://data.bnf.fr/16537519/william_footit/> .
+
+<http://data.bnf.fr/ark:/12148/cb16537519z>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb16537519z> ;
+        bnf-onto:FRBNF  16537519 ;
+        skos:note       "Clown, fils de Georges Footit"@fr ;
+        skos:prefLabel  "William Footit (1920-1989)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb16537519z#foaf:Person> .

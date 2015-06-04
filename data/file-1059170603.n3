@@ -1,0 +1,59 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35472150h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12231246h>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb12231246h> ;
+        bnf-onto:FRBNF   12231246 ;
+        skos:exactMatch  <http://www.idref.fr/031012167> , <http://viaf.org/viaf/41892510> ;
+        skos:note        "Maître de conférence à l'Institut d'Etudes politiques de Paris. - Journaliste (en 1991). - Grand reporter à France 3 Paris Île-de-France (en 2011). - Directeur pédagogique à l'Institut supérieur de formation au journalisme (en 2011)"@fr ;
+        skos:prefLabel   "Jean-Jacques Cros"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35744482b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435695534#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42493664x#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414102273#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12231246h#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Maître de conférence à l'Institut d'Etudes politiques de Paris. - Journaliste (en 1991). - Grand reporter à France 3 Paris Île-de-France (en 2011). - Directeur pédagogique à l'Institut supérieur de formation au journalisme (en 2011)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/41892510> , <http://www.idref.fr/031012167> ;
+        foaf:familyName  "Cros" ;
+        foaf:gender      "male" ;
+        foaf:givenName   "Jean-Jacques" ;
+        foaf:name        "Jean-Jacques Cros" ;
+        foaf:page        <http://data.bnf.fr/12231246/jean-jacques_cros/> .

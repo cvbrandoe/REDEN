@@ -1,0 +1,78 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37708022s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35813106q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40982948n#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1950 ;
+        rdagroup2elements:biographicalInformation
+                "Écrit aussi en anglais" , "Ingénieur au CNRS, en poste à l'Observatoire de Meudon (en 1989). - Organiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/22179852> , <http://dbpedia.org/resource/Dominique_Proust> , <http://www.idref.fr/030079683> ;
+        foaf:depiction      <http://commons.wikimedia.org/wiki/Special:FilePath/DominiqueProust.jpg?width=300> ;
+        foaf:familyName     "Proust" ;
+        foaf:givenName      "Dominique" ;
+        foaf:name           "Dominique Proust" ;
+        foaf:page           <http://data.bnf.fr/12156836/dominique_proust/> .
+
+<http://data.bnf.fr/ark:/12148/cb121568369>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb121568369> , <http://fr.wikipedia.org/wiki/Dominique_Proust> ;
+        bnf-onto:FRBNF        12156836 ;
+        isni:identifierValid  "0000000116056955" ;
+        owl:sameAs            <http://isni.org/isni/0000000116056955> ;
+        skos:exactMatch       <http://viaf.org/viaf/22179852> , <http://fr.wikipedia.org/wiki/Dominique_Proust> , <http://dbpedia.org/resource/Dominique_Proust> , <http://isni.org/isni/0000000116056955> , <http://www.idref.fr/030079683> ;
+        skos:note             "Ingénieur au CNRS, en poste à l'Observatoire de Meudon (en 1989). - Organiste"@fr , "Écrit aussi en anglais"@fr ;
+        skos:prefLabel        "Dominique Proust"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42251902j#frbr:Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42694012m#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36169468h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb350780609#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39098437v#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121568369#foaf:Person> .

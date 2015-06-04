@@ -1,0 +1,123 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39204081r#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42421759p#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1952 ;
+        rdagroup2elements:biographicalInformation
+                "Ancien officier de la marine marchande. - Spécialiste de la Seconde guerre mondiale. - Journaliste, rédacteur en chef (en 2008)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://viaf.org/viaf/122217462> , <http://www.idref.fr/033126402> ;
+        foaf:familyName     "Lopez" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Jean" ;
+        foaf:name           "Jean Lopez" ;
+        foaf:page           <http://data.bnf.fr/12402428/jean_lopez/> .
+
+<http://data.bnf.fr/ark:/12148/cb124024283>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb124024283> ;
+        bnf-onto:FRBNF        12402428 ;
+        isni:identifierValid  "0000000081906955" ;
+        owl:sameAs            <http://isni.org/isni/0000000081906955> ;
+        skos:exactMatch       <http://isni.org/isni/0000000081906955> , <http://viaf.org/viaf/122217462> , <http://www.idref.fr/033126402> ;
+        skos:note             "Ancien officier de la marine marchande. - Spécialiste de la Seconde guerre mondiale. - Journaliste, rédacteur en chef (en 2008)"@fr ;
+        skos:prefLabel        "Jean Lopez"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42597323n#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb442535909#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb413619828#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421163383#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb377070874#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb411964753#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41867341b#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37207565b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42435437q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356881615#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437682313#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43841929j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389297387#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42387235t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437148443#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124024283#foaf:Person> .

@@ -1,0 +1,47 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb11899162j>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb11899162j> ;
+        bnf-onto:FRBNF   11899162 ;
+        skos:altLabel    "Michelle Delacroix"@fr ;
+        skos:exactMatch  <http://www.idref.fr/026818361> , <http://viaf.org/viaf/17221519> ;
+        skos:note        "Professeur d'éducation physique à l'Institut national d'éducation populaire (en 1977)"@fr ;
+        skos:prefLabel   "Michèle Delacroix"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb11899162j#foaf:Person> .
+
+<http://data.bnf.fr/11899162/michele_delacroix/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11899162j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34649705m#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb11899162j#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb11899162j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11899162j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11899162j#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Professeur d'éducation physique à l'Institut national d'éducation populaire (en 1977)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs       <http://viaf.org/viaf/17221519> , <http://www.idref.fr/026818361> ;
+        foaf:familyName  "Delacroix" ;
+        foaf:givenName   "Michèle" ;
+        foaf:name        "Michèle Delacroix" ;
+        foaf:page        <http://data.bnf.fr/11899162/michele_delacroix/> .
+
+<http://data.bnf.fr/ark:/12148/cb34709725k#frbr:Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11899162j#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11899162j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11899162j#foaf:Person> .

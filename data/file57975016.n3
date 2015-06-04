@@ -1,0 +1,47 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb43737470p#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14218997w#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14218997w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14218997w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414090908#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14218997w#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14218997w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14218997w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14218997w>
+        a                skos:Concept ;
+        rdfs:seeAlso     <http://catalogue.bnf.fr/ark:/12148/cb14218997w> ;
+        bnf-onto:FRBNF   14218997 ;
+        skos:exactMatch  <http://viaf.org/viaf/56821618> ;
+        skos:note        "Actrice"@fr ;
+        skos:prefLabel   "Nathalie Raphaël"@fr ;
+        foaf:focus       <http://data.bnf.fr/ark:/12148/cb14218997w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38169176k#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14218997w#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14218997w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14218997w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14218997w#foaf:Person>
+        a                foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Actrice" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        owl:sameAs       <http://viaf.org/viaf/56821618> ;
+        foaf:familyName  "Raphaël" ;
+        foaf:gender      "female" ;
+        foaf:givenName   "Nathalie" ;
+        foaf:name        "Nathalie Raphaël" ;
+        foaf:page        <http://data.bnf.fr/14218997/nathalie_raphael/> .

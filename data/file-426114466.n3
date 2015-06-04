@@ -1,0 +1,57 @@
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/ark:/12148/cb14183576w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14183576w> ;
+        bnf-onto:FRBNF        14183576 ;
+        isni:identifierValid  "0000000121261793" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000121261793> ;
+        skos:editorialNote    "Arabella [Enregistrement sonore] / Richard Strauss, comp. ; Christel Goltz (Arabella), Anny Schlemm (Zdenka), S ; Erich Witte, T (Matteo) ; Josef Metternich, BAR (Mandryka)... [et al.] ; Chor und Orchester der Staatsoper Berlin ; Joseph Kelberth, dir. Walhall eternity series WLCD 0185. Interprété aussi par : Heinrich Pflanzl, BAR B (Graf Waldner) ; Carola Goerlich, A (Adelaïde) ; Alfred Hülgert, T (Graf Elemer) ; Heinz Friedrich (Graf Dominik), Hans-Günther Grimm (Graf Lamoral), BAR ; Irmgard Armgart, S (Fiakermilli) ; Anni Kley, A (Kartenaufschlägerin) ; Friedrich Radtke, B (Welko) ; Heinz Braun, BAR (Djura) ; Gerhard Witting, T (Jankel). - . - Int. WWM, 2000-2001. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/29742695> , <http://isni-url.oclc.nl/isni/0000000121261793> ;
+        skos:note             "Artiste lyrique (baryton)"@fr ;
+        skos:prefLabel        "Hans Gunther Grimm"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14183576w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14183576w#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1925 ;
+        rdagroup2elements:biographicalInformation
+                "Artiste lyrique (baryton)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw#> ;
+        owl:sameAs          <http://viaf.org/viaf/29742695> ;
+        foaf:familyName     "Grimm" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Hans Gunther" ;
+        foaf:name           "Hans Gunther Grimm" ;
+        foaf:page           <http://data.bnf.fr/14183576/hans_gunther_grimm/> .
+
+<http://data.bnf.fr/ark:/12148/cb380796989#frbr:Expression>
+        bnfroles:r1160       <http://data.bnf.fr/ark:/12148/cb14183576w#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14183576w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14183576w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38186484q#frbr:Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb14183576w#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14183576w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14183576w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420439761#frbr:Expression>
+        bnfroles:r1160       <http://data.bnf.fr/ark:/12148/cb14183576w#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14183576w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14183576w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421260610#frbr:Expression>
+        bnfroles:r1160       <http://data.bnf.fr/ark:/12148/cb14183576w#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb14183576w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14183576w#foaf:Person> .

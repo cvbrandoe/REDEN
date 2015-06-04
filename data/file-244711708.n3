@@ -1,0 +1,84 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb135983300>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb135983300> ;
+        bnf-onto:FRBNF        13598330 ;
+        isni:identifierValid  "0000000080846495" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000080846495> ;
+        skos:editorialNote    "Éclipses 2000 / Lino Aldani ; trad. de l'italien par Francis Rousseau, 1980. - . - Les métiers d'art / textes, Francis Rousseau, Frédérique Crestin-Billet, 1998. - . - François Seigneur / Institut français d'architecture ; [textes de Francis Rousseau], 1999. - . -"@fr , "Abbaye de Lessay : l'histoire millénaire d'un édifice au coeur des batailles / Francis Rousseau, [2009]. - . - Journal l'Alsace (http://www.alsapresse.com), 2000-10-06 (Bouquin, 1998-10-15). - . -"@fr ;
+        skos:exactMatch       <http://isni-url.oclc.nl/isni/0000000080846495> , <http://viaf.org/viaf/5103228> , <http://www.idref.fr/059514825> ;
+        skos:note             "Journaliste, écrivain, auteur d'ouvrages traitant d'architecture, du mobilier, de la mode et des arts décoratifs"@fr ;
+        skos:prefLabel        "Francis Rousseau"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb371782175#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38835303j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37004074v#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb370037438#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38938334q#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346377099#frbr:Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb400549646#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37175777p#frbr:Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1951 ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste, écrivain, auteur d'ouvrages traitant d'architecture, du mobilier, de la mode et des arts décoratifs" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        owl:sameAs          <http://www.idref.fr/059514825> , <http://viaf.org/viaf/5103228> ;
+        foaf:familyName     "Rousseau" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Francis" ;
+        foaf:name           "Francis Rousseau" ;
+        foaf:page           <http://data.bnf.fr/13598330/francis_rousseau/> .
+
+<http://data.bnf.fr/ark:/12148/cb42101975j#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135983300#foaf:Person> .

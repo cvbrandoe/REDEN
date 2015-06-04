@@ -1,0 +1,208 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39939326g#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38346993k#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38161362h#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1953 ;
+        bnf-onto:lastYear               1996 ;
+        rdagroup2elements:biographicalInformation
+                "Actrice, scénariste et cinéaste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1953/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1996/> ;
+        rdagroup2elements:placeOfBirth  "Lyon" ;
+        bio:birth                       "1953-11-29" ;
+        bio:death                       "1996-08-30" ;
+        owl:sameAs                      <http://dbpedia.org/resource/Christine_Pascal> , <http://viaf.org/viaf/34644219> , <http://www.idref.fr/059159510> ;
+        foaf:birthday                   "11-29" ;
+        foaf:familyName                 "Pascal" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Christine" ;
+        foaf:name                       "Christine Pascal" ;
+        foaf:page                       <http://data.bnf.fr/13898272/christine_pascal/> .
+
+<http://data.bnf.fr/ark:/12148/cb39916261k#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41461382s#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38237985t#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381427466#frbr:Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb138982725>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb138982725> , <http://fr.wikipedia.org/wiki/Christine_Pascal> ;
+        bnf-onto:FRBNF        13898272 ;
+        isni:identifierValid  "0000000108870471" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000108870471> ;
+        skos:editorialNote    "Zanzibar / [Film de Christine Pascal. Plaquette de présentation], [c. 1989]. - . - Tulard. - . -"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/Christine_Pascal> , <http://www.idref.fr/059159510> , <http://fr.wikipedia.org/wiki/Christine_Pascal> , <http://viaf.org/viaf/34644219> , <http://isni-url.oclc.nl/isni/0000000108870471> ;
+        skos:note             "Actrice, scénariste et cinéaste"@fr ;
+        skos:prefLabel        "Christine Pascal (1953-1996)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381675886#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383240293#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38157737n#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383611640#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38363697t#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38162500r#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/13898272/christine_pascal/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385903737#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383042204#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438960190#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41157374w#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39770232f#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381613615#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40017872f#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38157642z#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381594437#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38157505g#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38158850c#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38158001z#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38288744z#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42111932g#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb409232419#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38253610j#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38304218k#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38287404n#frbr:Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383804509#frbr:Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb138982725#foaf:Person> .

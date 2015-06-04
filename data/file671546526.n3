@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12346867q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12346867q> ;
+        bnf-onto:FRBNF        12346867 ;
+        isni:identifierValid  "0000000109344932" ;
+        owl:sameAs            <http://isni.org/isni/0000000109344932> ;
+        skos:altLabel         "Valpy FitzGerald"@fr , "E. V. K. FitzGerald"@fr ;
+        skos:editorialNote    "The macroeconomics of development finance / E. V. K. FitzGerald, 1993. - . - Overcoming the persistence of inequality and poverty / edited by Valpy FitzGerald, Judith Heyer, Rosemary Thorp, 2011. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/110344486> , <http://isni.org/isni/0000000109344932> , <http://www.idref.fr/032438923> ;
+        skos:note             "Économiste. - Professeur à l'Institut des études sociales, La Haye, Pays-Bas (en 1993). - Directeur des études financières, Queen Elizabeth House, Oxford, GB (en 1993)"@fr ;
+        skos:prefLabel        "Edmund Valpy Knox FitzGerald"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34799486t#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402090318#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389185178#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1947 ;
+        rdagroup2elements:biographicalInformation
+                "Économiste. - Professeur à l'Institut des études sociales, La Haye, Pays-Bas (en 1993). - Directeur des études financières, Queen Elizabeth House, Oxford, GB (en 1993)" ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/110344486> , <http://www.idref.fr/032438923> ;
+        foaf:familyName     "FitzGerald" ;
+        foaf:gender         "male" ;
+        foaf:givenName      "Edmund Valpy Knox" ;
+        foaf:name           "Edmund Valpy Knox FitzGerald" ;
+        foaf:page           <http://data.bnf.fr/12346867/edmund_valpy_knox_fitzgerald/> .
+
+<http://data.bnf.fr/ark:/12148/cb42728440n#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37392680b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12346867q#foaf:Person> .

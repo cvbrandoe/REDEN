@@ -1,0 +1,36 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://data.bnf.fr/14974744/richard_1er_beaumont/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb149747447#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149747447#foaf:Person>
+        a                              foaf:Person ;
+        rdagroup2elements:biographicalInformation
+                "Vicomte de Beaumont" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr#> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1101-1200/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1101-1200/> ;
+        bio:birth                      "11.." ;
+        bio:death                      "119." ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b6905038v.thumbnail> ;
+        foaf:familyName                "Beaumont" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Richard 1er" ;
+        foaf:name                      "Richard 1er Beaumont" ;
+        foaf:page                      <http://data.bnf.fr/14974744/richard_1er_beaumont/> .
+
+<http://data.bnf.fr/ark:/12148/cb149747447>
+        a               skos:Concept ;
+        rdfs:seeAlso    <http://catalogue.bnf.fr/ark:/12148/cb149747447> ;
+        bnf-onto:FRBNF  14974744 ;
+        skos:note       "Vicomte de Beaumont"@fr ;
+        skos:prefLabel  "Richard 1er Beaumont (11..-119.)"@fr ;
+        foaf:focus      <http://data.bnf.fr/ark:/12148/cb149747447#foaf:Person> .

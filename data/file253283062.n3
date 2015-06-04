@@ -1,0 +1,78 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37323877s#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42101232b#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> .
+
+<http://data.bnf.fr/12176992/abraham_hermanus_de_vries/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb352177812#frbr:Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12176992g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12176992g> ;
+        bnf-onto:FRBNF        12176992 ;
+        isni:identifierValid  "0000000021612728" ;
+        owl:sameAs            <http://isni-url.oclc.nl/isni/0000000021612728> ;
+        skos:altLabel         "Abraham Hermanus de Vries"@fr , "Thys van Der Vyver"@fr , "Thys Van der Vyver"@fr , "Thys van der Vyver"@fr ;
+        skos:editorialNote    "Versamelde werke / I. Jonker ; 2e hersiene uitg. geredigeer deur A.H. De Vries. - . - Postmodernisme en prosa : vertelstrategieë in vyf verhale van Abraham H. de Vries / Etienne van Heerden, 1997. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/084717858> , <http://isni-url.oclc.nl/isni/0000000021612728> , <http://viaf.org/viaf/59126481> ;
+        skos:note             "Nouvelliste et poète. - Auteur de romans à suspens sous le pseudonyme de Thys van der Vyver"@fr ;
+        skos:prefLabel        "Abraham Hermanus De Vries"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1937 ;
+        rdagroup2elements:biographicalInformation
+                "Nouvelliste et poète. - Auteur de romans à suspens sous le pseudonyme de Thys van der Vyver" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/None> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/afr> ;
+        rdagroup2elements:placeOfBirth  "Ladismith (Afrique du Sud)" ;
+        owl:sameAs                      <http://www.idref.fr/084717858> , <http://viaf.org/viaf/59126481> ;
+        foaf:familyName                 "De Vries" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Abraham Hermanus" ;
+        foaf:name                       "Abraham Hermanus De Vries" ;
+        foaf:page                       <http://data.bnf.fr/12176992/abraham_hermanus_de_vries/> .
+
+<http://data.bnf.fr/ark:/12148/cb390815404#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43692133h#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421012372#frbr:Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12176992g#foaf:Person> .
