@@ -27,7 +27,7 @@ import fr.lip6.LDcrawler.query.QuerySourceInterface;
 /**
  * This class queries the authors catalog in the BnF SPARQL end point.
  * 
- * @author <TEMP. REMOVED>
+ * @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC LIP6
  */
 public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface {
 
