@@ -1,6 +1,8 @@
 # REDEN
 Graph-based tool for disambiguation and linking of named entities to Linked Data sets for Digital Humanities and heritage texts.
 
+REDEN implemention details: indexes are implemented with Lucene (https://lucene.apache.org/core/); RDF data is processed with the Apache Jena API (https://jena.apache.org/); graphs are manipulated by the JgraphT API (http://jgrapht.org) and implementation of centrality measures are available in the Social Network analysis tool JgraphT-SNA (https://bitbucket.org/sorend/jgrapht-sna).
+
 Java binaries will soon be available!
 
 Authors: 
