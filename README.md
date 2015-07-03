@@ -9,10 +9,15 @@ Authors:
 - Carmen Brando, Labex OBVIL - Laboratoire d’informatique de Paris 6 - Université Pierre et Marie Curie, Paris
 - Francesca Frontini, Istituto di Linguistica Computazionale A. Zampolli, CNR Pisa
 
-Cite:
+Publications:
 
 Frontini F, Brando C, Ganascia J-G, (2015) Semantic Web based Named Entity Linking for digital humanities and heritage texts, in Proceedings of the First International Workshop Semantic Web for Scientific Heritage
 at the 12th ESWC 2015 Conference, Portorož, Slovenia, June 1st, 2015, pp. 77-88, URL: http://ceur-ws.org/Vol-1364/paper9.pdf
+
+Frontini, F., Brando, C., Ganascia, J.G.: Domain-adapted named-entity linker using linked data. In: Proceedings of the 20th International Conference on Applications of Natural Language to Information Systems in Conjunction with the 1st Workshop on Natural Language Applications: completing the puzzle (2015), Passau, Germany, June 17-19, http://ceur-ws.org/Vol-1386/named_entity.pdf
+
+Brando, C., Frontini, F., Ganascia, J.G.: Disambiguation of named entities in cultural heritage texts using linked data sets (accepted). In: Proceedings of the First International Workshop on Semantic Web for Cultural Heritage in Conjunction with 19th East-European Conference on Advances in Databases and Information Systems (2015)
+
 
 Related URLs:
 
