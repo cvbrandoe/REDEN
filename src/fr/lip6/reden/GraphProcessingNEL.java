@@ -1,4 +1,4 @@
-package fr.lip6.nel.V3;
+package fr.lip6.reden;
 
 import java.io.BufferedReader;
 import java.io.File;

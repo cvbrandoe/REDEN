@@ -1,4 +1,4 @@
-package fr.lip6.nel.V3;
+package fr.lip6.reden;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
