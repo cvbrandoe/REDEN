@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fr.lip6</groupId>
+  <artifactId>REDEN</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>REDEN</name>
+  <description>Graph-based tool for disambiguation and linking of named entities to Linked Data sets for Digital Humanities and heritage texts.</description>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.3</version>
+        <configuration>
+          <source/>
+          <target/>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <url>https://github.com/cvbrandoe/REDEN</url>
+  <organization>
+  	<name>Labex OBVIL - Paris-Sorbonne - UPMC LIP6</name>
+  	<url>http://obvil.paris-sorbonne.fr/</url>
+  </organization>
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.apache.jena</groupId>
+    	<artifactId>jena-core</artifactId>
+    	<version>2.12.1</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.apache.lucene</groupId>
+    	<artifactId>lucene-core</artifactId>
+    	<version>5.0.0</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.apache.lucene</groupId>
+    	<artifactId>lucene-queryparser</artifactId>
+    	<version>5.0.0</version>
+    </dependency>
+    <dependency>
+    	<groupId>au.com.bytecode</groupId>
+    	<artifactId>opencsv</artifactId>
+    	<version>2.4</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.apache.lucene</groupId>
+    	<artifactId>lucene-analyzers-common</artifactId>
+    	<version>5.0.0</version>
+    </dependency>
+    <dependency>
+    	<groupId>commons-io</groupId>
+    	<artifactId>commons-io</artifactId>
+    	<version>2.4</version>
+    </dependency>
+  </dependencies>
+</project>
