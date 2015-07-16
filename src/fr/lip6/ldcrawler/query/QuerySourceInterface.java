@@ -5,7 +5,7 @@ import java.util.List;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.ResultSet;
 
-import fr.lip6.LDcrawler.domainParam.DomainExtent;
+import fr.lip6.ldcrawler.domainparam.DomainExtent;
 
 /**
  * Interface that must be implemented for querying a particular source.

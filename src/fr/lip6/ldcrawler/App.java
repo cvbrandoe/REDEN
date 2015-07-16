@@ -19,9 +19,9 @@ import org.reflections.Reflections;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.ResultSet;
 
-import fr.lip6.LDcrawler.domainParam.DomainExtent;
-import fr.lip6.LDcrawler.domainParam.TemporalExtent;
-import fr.lip6.LDcrawler.query.QuerySource;
+import fr.lip6.ldcrawler.domainparam.DomainExtent;
+import fr.lip6.ldcrawler.domainparam.TemporalExtent;
+import fr.lip6.ldcrawler.query.QuerySource;
 
 /**
  * Main class to launch the Linked Data crawler for handling domain-adaptation during named-entity linking.

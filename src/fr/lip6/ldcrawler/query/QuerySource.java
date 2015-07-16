@@ -8,7 +8,7 @@ import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.query.ResultSetFactory;
 
-import fr.lip6.LDcrawler.domainParam.DomainExtent;
+import fr.lip6.ldcrawler.domainparam.DomainExtent;
 
 /**
  * Class for querying a particular source. New queries per source must extend this class.
