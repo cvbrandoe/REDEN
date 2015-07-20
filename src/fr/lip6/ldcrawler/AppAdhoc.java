@@ -80,8 +80,8 @@ public class AppAdhoc
 				}
 				
 				//bnf				
-				Query qbnf = bnf.formulateSPARQLQuery(domainParams, letter);
-				ResultSet rsbnf = bnf.executeQuery(qbnf, bnf.TIMEOUT.toString(), bnf.SPARQL_END_POINT);
+				Query qbnf = bnf.formulateSPARQLQuery(domainParams, letter, "");
+				ResultSet rsbnf = bnf.executeQuery(qbnf, bnf.TIMEOUT.toString(), bnf.SPARQL_END_POINT, "", "");
 				bnf.processResults(rsbnf, outDictionnaireDir, letter);
 				counter++;
 			}
@@ -101,8 +101,8 @@ public class AppAdhoc
 				}
 				
 				//dbpedia 
-				Query qdb = dbp.formulateSPARQLQuery(domainParams, letter);
-				ResultSet rsdbp = dbp.executeQuery(qdb, dbp.TIMEOUT.toString(), dbp.SPARQL_END_POINT);
+				Query qdb = dbp.formulateSPARQLQuery(domainParams, letter, "");
+				ResultSet rsdbp = dbp.executeQuery(qdb, dbp.TIMEOUT.toString(), dbp.SPARQL_END_POINT, "", "");
 				dbp.processResults(rsdbp, outDictionnaireDir, letter);
 				
 				counter++;

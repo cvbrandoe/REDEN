@@ -23,7 +23,8 @@ public class QuerySource implements QuerySourceInterface {
 	 * @param firstleter, optional filtering for queries
 	 * @return
 	 */
-	public Query formulateSPARQLQuery(List<DomainExtent> domainParams, String firstleter) {
+	public Query formulateSPARQLQuery(List<DomainExtent> domainParams, String firstleter, 
+			String outDictionnaireDir) {
 		return null;
 	}
 
@@ -36,7 +37,7 @@ public class QuerySource implements QuerySourceInterface {
 	 * @return the result
 	 */
 	public ResultSet executeQuery(Query query, String sparqlendpoint,
-			String timeout) {
+			String timeout, String outDictionnaireDir, String letter) {
 		
 		try {
 			// wait 20 seconds for every query

@@ -40,6 +40,8 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 	
 	public Boolean LARGE_REPO = true;
 	
+	public String prefixDictionnaireFile = "authorBNF";
+	
 	/**
 	 * Default constructor.
 	 */
@@ -52,64 +54,82 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 	 *  
 	 */
 	@Override
-	public Query formulateSPARQLQuery(List<DomainExtent> domainParams, String firstLetter) {
-		System.out.println("entering BNF: formulateSPARQLQuery");
-		//temporal information can be incorporated into the query in many ways
-		String filterDate = "";
-		for (DomainExtent d : domainParams) {
-			if (d instanceof TemporalExtent) {
-				TemporalExtent tem = (TemporalExtent) d;
-				if (tem.getLesserThan() != null) {
-					SimpleDateFormat df = new SimpleDateFormat("yyyy");
-					String year = df.format(tem.getLesserThan());
-					filterDate += "OPTIONAL { FILTER (?birthdate < '"+year+"'^^xsd:integer ) } . ";
-				}
-				if (tem.getGreaterThan() != null) {
-					SimpleDateFormat df = new SimpleDateFormat("yyyy");
-					String year = df.format(tem.getGreaterThan());
-					filterDate += "OPTIONAL { FILTER (?birthdate > '"+year+"'^^xsd:integer ) } . ";
-				}
-			} else if (d instanceof SpatialExtent) {
-				//TODO include query statement (geo vocabulary) to handle spatial delimitation
-				//concerning placeOfBirth for instance
-			}
-		}
-		String filterRegex = "";
-		if (firstLetter.equalsIgnoreCase("other")) {
-			filterRegex = "FILTER (!regex(STR(?nom), '^a|^b|^c|^d|^e|^f|^g|^h|^i|^j|^k|^l|^m|^n|^o|^p|^q|^r|^s|^t|^u|^v|^w|^x|^y|^z', 'i')) . ";			
-		} else {
-			filterRegex = "FILTER (regex(STR(?nom), '^"+firstLetter+"', 'i')) . ";			
-		}
+	public Query formulateSPARQLQuery(List<DomainExtent> domainParams, 
+			String firstLetter, String outDictionnaireDir) {
 		
-		String queryString = "PREFIX dcterms: <http://purl.org/dc/terms/> "
-					+ "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
-					+ "PREFIX foaf: <http://xmlns.com/foaf/0.1/> "
-					+ "PREFIX owl: <http://www.w3.org/2002/07/owl#> "
-					+ "PREFIX bio: <http://vocab.org/bio/0.1/> "
-					+ "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "
-					+ "PREFIX bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> "
-					+ "SELECT ?auteur ?nom ?prenom ?gender ?birthdate ?deathdate ?ref WHERE { "
-					+ "?auteur rdf:type foaf:Person . "
-					+ "OPTIONAL {?auteur foaf:givenName ?prenom } . " //enables empty first names (eg. Voltaire)
-					+ "?auteur foaf:familyName ?nom . "
-					+ "OPTIONAL { ?auteur bnf-onto:firstYear ?birthdate } . "
-					+ "OPTIONAL { ?auteur bnf-onto:lastYear ?deathdate } . "
-					+ filterRegex
-					+ filterDate
-					+ "OPTIONAL { ?auteur foaf:gender ?gender } . "
-					+ "OPTIONAL { ?auteur owl:sameAs ?ref . "
-					+ "FILTER regex(STR(?ref), '^http://www.idref.fr|^http://dbpedia.org/resource', 'i') }}";
-		Query query = QueryFactory.create(queryString);
-		System.out.println("query: " + query.toString());
-		System.out.println("exiting BNF: formulateSPARQLQuery");
-		return query;
+		File fexists = new File(outDictionnaireDir+"/PER/"+prefixDictionnaireFile+firstLetter+".tsv");
+		
+		if (fexists.exists() && fexists.length() > 0) {
+			System.out.println("entering BNF: skip, file exists - "+
+					outDictionnaireDir+"/PER/"+prefixDictionnaireFile+firstLetter+".tsv");
+			return null; //skip processing
+		} else {
+			System.out.println("entering BNF: formulateSPARQLQuery");
+			//temporal information can be incorporated into the query in many ways
+			String filterDate = "";
+			for (DomainExtent d : domainParams) {
+				if (d instanceof TemporalExtent) {
+					TemporalExtent tem = (TemporalExtent) d;
+					if (tem.getLesserThan() != null) {
+						SimpleDateFormat df = new SimpleDateFormat("yyyy");
+						String year = df.format(tem.getLesserThan());
+						filterDate += "OPTIONAL { FILTER (?birthdate < '"+year+"'^^xsd:integer ) } . ";
+					}
+					if (tem.getGreaterThan() != null) {
+						SimpleDateFormat df = new SimpleDateFormat("yyyy");
+						String year = df.format(tem.getGreaterThan());
+						filterDate += "OPTIONAL { FILTER (?birthdate > '"+year+"'^^xsd:integer ) } . ";
+					}
+				} else if (d instanceof SpatialExtent) {
+					//TODO include query statement (geo vocabulary) to handle spatial delimitation
+					//concerning placeOfBirth for instance
+				}
+			}
+			String filterRegex = "";
+			if (firstLetter.equalsIgnoreCase("other")) {
+				filterRegex = "FILTER (!regex(STR(?nom), '^a|^b|^c|^d|^e|^f|^g|^h|^i|^j|^k|^l|^m|^n|^o|^p|^q|^r|^s|^t|^u|^v|^w|^x|^y|^z', 'i')) . ";			
+			} else {
+				filterRegex = "FILTER (regex(STR(?nom), '^"+firstLetter+"', 'i')) . ";			
+			}
+			
+			String queryString = "PREFIX dcterms: <http://purl.org/dc/terms/> "
+						+ "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
+						+ "PREFIX foaf: <http://xmlns.com/foaf/0.1/> "
+						+ "PREFIX owl: <http://www.w3.org/2002/07/owl#> "
+						+ "PREFIX bio: <http://vocab.org/bio/0.1/> "
+						+ "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "
+						+ "PREFIX bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> "
+						+ "SELECT ?auteur ?nom ?prenom ?gender ?birthdate ?deathdate ?ref WHERE { "
+						+ "?auteur rdf:type foaf:Person . "
+						+ "OPTIONAL {?auteur foaf:givenName ?prenom } . " //enables empty first names (eg. Voltaire)
+						+ "?auteur foaf:familyName ?nom . "
+						+ "OPTIONAL { ?auteur bnf-onto:firstYear ?birthdate } . "
+						+ "OPTIONAL { ?auteur bnf-onto:lastYear ?deathdate } . "
+						+ filterRegex
+						+ filterDate
+						+ "OPTIONAL { ?auteur foaf:gender ?gender } . "
+						+ "OPTIONAL { ?auteur owl:sameAs ?ref . "
+						+ "FILTER regex(STR(?ref), '^http://www.idref.fr|^http://dbpedia.org/resource', 'i') }}";
+			Query query = QueryFactory.create(queryString);
+			System.out.println("query: " + query.toString());
+			System.out.println("exiting BNF: formulateSPARQLQuery");
+			return query;
+		}		
 	}
 	
 	@Override
-	public ResultSet executeQuery(Query query, String timeout, String sparqlendpoint) {
-		System.out.println("entering BNF: executeQuery");
-		System.out.println("exiting BNF: executeQuery");
-		return super.executeQuery(query, SPARQL_END_POINT, timeout);
+	public ResultSet executeQuery(Query query, String timeout, String sparqlendpoint, 
+			String outDictionnaireDir, String letter) {
+		File fexists = new File(outDictionnaireDir+"/PER/"+prefixDictionnaireFile+letter+".tsv");
+		if (fexists.exists() && fexists.length() > 0) {
+			System.out.println("entering BNF: skip, file exists - "+outDictionnaireDir+"/PER/"+prefixDictionnaireFile+letter+".tsv");
+			return null; //file exists, skip processing
+		} else {
+			System.out.println("entering BNF: executeQuery");
+			System.out.println("exiting BNF: executeQuery");
+			return super.executeQuery(query, SPARQL_END_POINT, timeout, 
+					outDictionnaireDir, letter);
+		}
 	}
 	
 	/**
@@ -117,180 +137,191 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 	 */
 	@Override
 	public void processResults(ResultSet res, String outDictionnaireDir, String letter) {
-		System.out.println("entering BNF: processResults");
-		try {
-			String prefixDictionnaireFile = "authorBNF";
-			if (letter != null) {
-				prefixDictionnaireFile += letter;
-			}
-			if (!new File(outDictionnaireDir).exists()) {
-				new File(outDictionnaireDir).mkdir();			
-			}
-			if (!new File(outDictionnaireDir+"/PER").exists()) {
-				new File(outDictionnaireDir+"/PER").mkdir();
-			}
-			CSVWriter writer = new CSVWriter(new FileWriter(outDictionnaireDir+"/PER/"+prefixDictionnaireFile+".tsv"), 
-					'\t', CSVWriter.NO_QUOTE_CHARACTER);
-			Map<String, Author> authors = new HashMap<String, Author>();
-			while (res.hasNext()) {
-				QuerySolution sol = res.next();
-				Author a = new Author();
-				if (sol.get("nom") != null)
-					a.setLastname(sol.get("nom").toString());
-				else
-					a.setLastname("-");
-				
-				if (sol.get("prenom") != null)
-					a.setFirstname(sol.get("prenom").toString());
-				else 
-					a.setFirstname("-");
-				
-				if (sol.get("gender") != null)
-					a.setGender(sol.get("gender").toString());
-				else 
-					a.setGender("-");
-				
-				if (sol.get("birthdate") != null)
-					a.setBirthdate(sol.get("birthdate").toString().replace("^^http://www.w3.org/2001/XMLSchema#integer", ""));
-				else 
-					a.setBirthdate("-");
-				//System.out.println("birthdate: "+a.getBirthdate());
-				
-				if (sol.get("deathdate") != null)
-					a.setDeathdate(sol.get("deathdate").toString().replace("^^http://www.w3.org/2001/XMLSchema#integer", ""));
-				else 
-					a.setDeathdate("-");
-				//System.out.println("death: "+a.getDeathdate());
-				
-				if (sol.get("auteur") != null)
-					a.setUri(sol.get("auteur").toString());
-				else 
-					a.setUri("-");
-				
-				if (sol.get("ref") != null)
-					a.setRef(sol.get("ref").toString());
-				else 
-					a.setRef("");
-				
-				if (authors.containsKey(a.getUri())) {
-					String oldref = authors.get(a.getUri()).getRef();
-					authors.get(a.getUri()).setRef(oldref+"\t"+a.getRef());
-				} else {
-					boolean in = false;
-					for (String uri : authors.keySet()) {
-						if (authors.get(uri).getLastname().equals(a.getLastname()) && 
-								(a.getFirstname().equals("") || a.getFirstname().equals(" ")) &&
-								a.getGender().equals("") &&
-								a.getRef().equals("") &&
-								a.getRejectedForms().isEmpty() &&
-								a.getDeathdate().equals("") &&
-								a.getBirthdate().equals("")) {
-							in = true;
+		
+		//TODO ici: faire les authors aliasing (python) et repenser cette methode, trop de requetes à la bnf pour avoir les
+		//noms alternatifs, pas possible
+		
+		File fexists = new File(outDictionnaireDir+"/PER/"+prefixDictionnaireFile+letter+".tsv");
+	
+		if (fexists.exists() && fexists.length() > 0) {
+			System.out.println("entering BNF: skip, file exists - "+outDictionnaireDir+"/PER/"+prefixDictionnaireFile+letter+".tsv");
+			return; //file exists, skip processing
+		} else {
+			System.out.println("entering BNF: processResults");
+			try {
+				if (letter != null) {
+					prefixDictionnaireFile += letter;
+				}
+				if (!new File(outDictionnaireDir).exists()) {
+					new File(outDictionnaireDir).mkdir();			
+				}
+				if (!new File(outDictionnaireDir+"/PER").exists()) {
+					new File(outDictionnaireDir+"/PER").mkdir();
+				}
+				CSVWriter writer = new CSVWriter(new FileWriter(outDictionnaireDir+"/PER/"+prefixDictionnaireFile+".tsv"), 
+						'\t', CSVWriter.NO_QUOTE_CHARACTER);
+				Map<String, Author> authors = new HashMap<String, Author>();
+				while (res.hasNext()) {
+					QuerySolution sol = res.next();
+					Author a = new Author();
+					if (sol.get("nom") != null)
+						a.setLastname(sol.get("nom").toString());
+					else
+						a.setLastname("-");
+					
+					if (sol.get("prenom") != null)
+						a.setFirstname(sol.get("prenom").toString());
+					else 
+						a.setFirstname("-");
+					
+					if (sol.get("gender") != null)
+						a.setGender(sol.get("gender").toString());
+					else 
+						a.setGender("-");
+					
+					if (sol.get("birthdate") != null)
+						a.setBirthdate(sol.get("birthdate").toString().replace("^^http://www.w3.org/2001/XMLSchema#integer", ""));
+					else 
+						a.setBirthdate("-");
+					//System.out.println("birthdate: "+a.getBirthdate());
+					
+					if (sol.get("deathdate") != null)
+						a.setDeathdate(sol.get("deathdate").toString().replace("^^http://www.w3.org/2001/XMLSchema#integer", ""));
+					else 
+						a.setDeathdate("-");
+					//System.out.println("death: "+a.getDeathdate());
+					
+					if (sol.get("auteur") != null)
+						a.setUri(sol.get("auteur").toString());
+					else 
+						a.setUri("-");
+					
+					if (sol.get("ref") != null)
+						a.setRef(sol.get("ref").toString());
+					else 
+						a.setRef("");
+					
+					if (authors.containsKey(a.getUri())) {
+						String oldref = authors.get(a.getUri()).getRef();
+						authors.get(a.getUri()).setRef(oldref+"\t"+a.getRef());
+					} else {
+						boolean in = false;
+						for (String uri : authors.keySet()) {
+							if (authors.get(uri).getLastname().equals(a.getLastname()) && 
+									(a.getFirstname().equals("") || a.getFirstname().equals(" ")) &&
+									a.getGender().equals("") &&
+									a.getRef().equals("") &&
+									a.getRejectedForms().isEmpty() &&
+									a.getDeathdate().equals("") &&
+									a.getBirthdate().equals("")) {
+								in = true;
+							}
 						}
+						if (!in)
+							authors.put(a.getUri(), a);
 					}
-					if (!in)
-						authors.put(a.getUri(), a);
+					//In BnF, we need to make a separate query for each author entry in order to get their alternative names.
+					//look for altNames
+					String query2 = "PREFIX skos: <http://www.w3.org/2004/02/skos/core#> "
+							+ "SELECT ?rejectedForm WHERE { "
+							+ " <"+a.getUri().split("#")[0]+"> skos:altLabel ?rejectedForm . filter(langMatches(lang(?rejectedForm),'FR'))} ";
+					System.out.println(query2);
+					QueryExecution qexec2 = null;
+					//default
+					qexec2 = QueryExecutionFactory.sparqlService(SPARQL_END_POINT, query2);
+					// Execute.
+					ResultSet rs2 = qexec2.execSelect();
+					if (rs2 != null) {
+						while (rs2.hasNext()) {
+							QuerySolution sol2 = rs2.next();
+							String val = sol2.getLiteral("rejectedForm").getLexicalForm();
+							if (val.contains("("))
+								val = val.substring(0, val.indexOf("(")).trim();
+							a.getRejectedForms().add(val);
+						}	
+					}
+					qexec2.close();
 				}
-				//In BnF, we need to make a separate query for each author entry in order to get their alternative names.
-				//look for altNames
-				String query2 = "PREFIX skos: <http://www.w3.org/2004/02/skos/core#> "
-						+ "SELECT ?rejectedForm WHERE { "
-						+ " <"+a.getUri().split("#")[0]+"> skos:altLabel ?rejectedForm . filter(langMatches(lang(?rejectedForm),'FR'))} ";
-				//System.out.println(query2);
-				QueryExecution qexec2 = null;
-				//default
-				qexec2 = QueryExecutionFactory.sparqlService(SPARQL_END_POINT, query2);
-				// Execute.
-				ResultSet rs2 = qexec2.execSelect();
-				if (rs2 != null) {
-					while (rs2.hasNext()) {
-						QuerySolution sol2 = rs2.next();
-						String val = sol2.getLiteral("rejectedForm").getLexicalForm();
-						if (val.contains("("))
-							val = val.substring(0, val.indexOf("(")).trim();
-						a.getRejectedForms().add(val);
-					}	
-				}
-				qexec2.close();
-			}
-			
-			System.out.println("count: "+authors.size());
-			Iterator<String> it = authors.keySet().iterator();
-			while (it.hasNext()) {
-				String k = it.next();
-				//adapt dates
-				String bdate = "",ddate = "";
-				if (authors.get(k).getBirthdate().matches("\\d{4}") 
-						|| authors.get(k).getBirthdate().matches("\\d{2}"+"\\.\\.") 
-						|| authors.get(k).getBirthdate().matches("\\d{1}"+"\\.\\."))
-					bdate = authors.get(k).getBirthdate();
-				else if (authors.get(k).getBirthdate().matches("\\d{4}"+"-"+"\\d{2}"+"-"+"\\d{2}"))
-					bdate = authors.get(k).getBirthdate().substring(0, 4);
 				
-				
-				if (authors.get(k).getDeathdate().matches("\\d{4}") 
-						|| authors.get(k).getDeathdate().matches("\\d{2}"+"\\.\\.")
-						|| authors.get(k).getBirthdate().matches("\\d{1}"+"\\.\\."))
-					ddate = authors.get(k).getDeathdate();
-				else if (authors.get(k).getDeathdate().matches("\\d{4}"+"-"+"\\d{2}"+"-"+"\\d{2}"))
-					ddate = authors.get(k).getDeathdate().substring(0, 4);
-				
-				/*//TODO aliases handling
-				
-				String normalisedName = authors.get(k).makeNormalisedName();
-				
-				List<String> alternativeNameForms = authors.get(k).makeAliases();
-				
-				for (String alias : alternativeNameForms) {
-					if (bdate.equals("") && ddate.equals("")) {
-						String [] o = {alias, normalisedName,
+				System.out.println("count: "+authors.size());
+				Iterator<String> it = authors.keySet().iterator();
+				while (it.hasNext()) {
+					String k = it.next();
+					//adapt dates
+					String bdate = "",ddate = "";
+					if (authors.get(k).getBirthdate().matches("\\d{4}") 
+							|| authors.get(k).getBirthdate().matches("\\d{2}"+"\\.\\.") 
+							|| authors.get(k).getBirthdate().matches("\\d{1}"+"\\.\\."))
+						bdate = authors.get(k).getBirthdate();
+					else if (authors.get(k).getBirthdate().matches("\\d{4}"+"-"+"\\d{2}"+"-"+"\\d{2}"))
+						bdate = authors.get(k).getBirthdate().substring(0, 4);
+					
+					
+					if (authors.get(k).getDeathdate().matches("\\d{4}") 
+							|| authors.get(k).getDeathdate().matches("\\d{2}"+"\\.\\.")
+							|| authors.get(k).getBirthdate().matches("\\d{1}"+"\\.\\."))
+						ddate = authors.get(k).getDeathdate();
+					else if (authors.get(k).getDeathdate().matches("\\d{4}"+"-"+"\\d{2}"+"-"+"\\d{2}"))
+						ddate = authors.get(k).getDeathdate().substring(0, 4);
+					
+					
+					/*//TODO aliases handling
+					
+					String normalisedName = authors.get(k).makeNormalisedName();
+					
+					List<String> alternativeNameForms = authors.get(k).makeAliases();
+					
+					for (String alias : alternativeNameForms) {
+						if (bdate.equals("") && ddate.equals("")) {
+							String [] o = {alias, normalisedName,
+									authors.get(k).getUri() + "\t" +authors.get(k).getRef()};
+							writer.writeNext(o);
+						} else {
+							String [] o = { alias, normalisedName+ " ("+bdate+"-"+ddate+")", 
 								authors.get(k).getUri() + "\t" +authors.get(k).getRef()};
+							writer.writeNext(o);
+						}
+					}*/
+					
+					String normalisedName = "";
+					
+					if (authors.get(k).getFirstname().equals("") || authors.get(k).getFirstname().equals(" ")) {
+						normalisedName = authors.get(k).getLastname();
+					} else {
+						normalisedName = authors.get(k).getLastname() + ", "+authors.get(k).getFirstname();
+					}
+					normalisedName = normalisedName.replaceAll("'", "' ").replaceAll("  ", " ");
+					
+					StringBuilder commaSepValueBuilder = new StringBuilder();
+				 
+				    for ( int i = 0; i< authors.get(k).getRejectedForms().size(); i++){
+				      //append the value into the builder
+				      commaSepValueBuilder.append(authors.get(k).getRejectedForms().get(i));
+				       
+				      //if the value is not the last element of the list
+				      //then append the comma(,) as well
+				      if ( i != authors.get(k).getRejectedForms().size()-1){
+				        commaSepValueBuilder.append("| ");
+				      }
+				    }
+				   
+					if (bdate.equals("") && ddate.equals("")) {
+						String [] o = { authors.get(k).getUri(), normalisedName,
+								authors.get(k).getLastname(), authors.get(k).getFirstname(), commaSepValueBuilder.toString(),
+								authors.get(k).getGender(), "-", authors.get(k).getRef()};
 						writer.writeNext(o);
 					} else {
-						String [] o = { alias, normalisedName+ " ("+bdate+"-"+ddate+")", 
-							authors.get(k).getUri() + "\t" +authors.get(k).getRef()};
+						String [] o = { authors.get(k).getUri(), normalisedName+ " ("+bdate+"-"+ddate+")",
+							authors.get(k).getLastname(), authors.get(k).getFirstname(), commaSepValueBuilder.toString(),
+							authors.get(k).getGender(), bdate, authors.get(k).getRef()};
 						writer.writeNext(o);
 					}
-				}*/
-				
-				String normalisedName = "";
-				
-				if (authors.get(k).getFirstname().equals("") || authors.get(k).getFirstname().equals(" ")) {
-					normalisedName = authors.get(k).getLastname();
-				} else {
-					normalisedName = authors.get(k).getLastname() + ", "+authors.get(k).getFirstname();
 				}
-				normalisedName = normalisedName.replaceAll("'", "' ").replaceAll("  ", " ");
-				
-				StringBuilder commaSepValueBuilder = new StringBuilder();
-			 
-			    for ( int i = 0; i< authors.get(k).getRejectedForms().size(); i++){
-			      //append the value into the builder
-			      commaSepValueBuilder.append(authors.get(k).getRejectedForms().get(i));
-			       
-			      //if the value is not the last element of the list
-			      //then append the comma(,) as well
-			      if ( i != authors.get(k).getRejectedForms().size()-1){
-			        commaSepValueBuilder.append("| ");
-			      }
-			    }
-			   
-				if (bdate.equals("") && ddate.equals("")) {
-					String [] o = { authors.get(k).getUri(), normalisedName,
-							authors.get(k).getLastname(), authors.get(k).getFirstname(), commaSepValueBuilder.toString(),
-							authors.get(k).getGender(), "-", authors.get(k).getRef()};
-					writer.writeNext(o);
-				} else {
-					String [] o = { authors.get(k).getUri(), normalisedName+ " ("+bdate+"-"+ddate+")",
-						authors.get(k).getLastname(), authors.get(k).getFirstname(), commaSepValueBuilder.toString(),
-						authors.get(k).getGender(), bdate, authors.get(k).getRef()};
-					writer.writeNext(o);
-				}
+				writer.close();
+				System.out.println("exiting BNF: processResults");
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
-			writer.close();
-			System.out.println("exiting BNF: processResults");
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
 	}	
 }

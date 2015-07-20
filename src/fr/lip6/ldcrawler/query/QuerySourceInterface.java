@@ -19,7 +19,8 @@ public interface QuerySourceInterface {
 	 * @param firstleter, optional filtering for queries
 	 * @return the query
 	 */
-	Query formulateSPARQLQuery(List<DomainExtent> domainParams, String firstleter);
+	Query formulateSPARQLQuery(List<DomainExtent> domainParams, String firstleter, 
+			String outDictionnaireDir);
 		
 	/**
 	 * Execute query in SPARQL endpoint.
@@ -28,7 +29,8 @@ public interface QuerySourceInterface {
 	 * @param timeout, query timeout
 	 * @return the result
 	 */
-	ResultSet executeQuery(Query query, String sparqlendpoint, String timeout);
+	ResultSet executeQuery(Query query, String sparqlendpoint, String timeout, 
+			String outDictionnaireDir, String letter);
 	
 	/**
 	 * Process and write results.

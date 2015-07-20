@@ -62,7 +62,8 @@ public class App
 			List<DomainExtent> domainParams = loadDomainParams(greaterThan, lesserThan, spatialExtent);
 			
 			//execute all queries defined in classes implementing the QuerySource interface
-			Reflections reflections = new Reflections("fr.lip6.LDcrawler.queryImpl");  
+			System.out.println("THIS MAY TAKE A VERY LONG TIME due to query limitations of the sparql endpoints...");
+			Reflections reflections = new Reflections("fr.lip6.ldcrawler.queryimpl");  
 			Set<Class<? extends QuerySource>> classes = reflections.getSubTypesOf(QuerySource.class);
 			for (Class<? extends QuerySource> clazz : classes) {
 				System.out.println("processing class: "+clazz.getName());
@@ -76,32 +77,36 @@ public class App
 				int counter = 0;
 				Boolean out = false;
 				//one solution to handle limitations of large repositories
-				//String[] let =  {"a","b","c","d","e","f","g","h","i","j","k","l","m","n",
-				//		"o","p","q","r","s","t","u","v","w","x", "y", "z", "other"};
-				String[] let =  {"x"}; //testing
+				String[] let =  {"a","b","c","d","e","f","g","h","i","j","k","l","m","n",
+						"o","p","q","r","s","t","u","v","w","x", "y", "z", "other"};
+				//String[] let =  {"x"}; //testing
 				while (counter < let.length && !out) {
 					String letter = null;
 					if (!lr) {
 						out = true; //enters once
 					} else {
 						letter = let[counter];
-						System.out.println("processing letter:" +letter);
+						System.out.println("processing letter:" +letter);						
 					}
+					
 					//formulateSPARQLQuery
-					Class[] cArg0 = new Class[2];
+					Class[] cArg0 = new Class[3];
 			        cArg0[0] = List.class;
 			        cArg0[1] = String.class;
+			        cArg0[2] = String.class;
 				    Method buildqueryMethod = c.getDeclaredMethod("formulateSPARQLQuery", cArg0);
-				    Object o = buildqueryMethod.invoke(t, domainParams, letter);
+				    Object o = buildqueryMethod.invoke(t, domainParams, letter, outDictionnaireDir);
 					Query q = (Query) o;
 				    
 					//executeQuery
-					Class[] cArg = new Class[3];
+					Class[] cArg = new Class[5];
 			        cArg[0] = Query.class;
 			        cArg[1] = String.class;
 			        cArg[2] = String.class;
+			        cArg[3] = String.class;
+			        cArg[4] = String.class;
 			        Method lMethod = c.getDeclaredMethod("executeQuery", cArg);
-			        Object o2 = lMethod.invoke(t, q, "", timeout); //get timout from class instead of config
+			        Object o2 = lMethod.invoke(t, q, "", timeout, outDictionnaireDir, letter); //get timeout from class instead of config
 			        ResultSet rs = (ResultSet) o2;
 			        
 			        //processResults

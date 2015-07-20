@@ -1,0 +1,1 @@
+Generate dictionary files using the fr.lip6.ldcrawler.App class. Otherwise, you can download pre-generated dictionaries adapted to French critical literary texts from this URL: http://obvil-dev.paris-sorbonne.fr/unerd/unerd-tool/lookups/
