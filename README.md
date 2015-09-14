@@ -16,8 +16,7 @@ at the 12th ESWC 2015 Conference, Portorož, Slovenia, June 1st, 2015, pp. 77-88
 
 Frontini, F., Brando, C., Ganascia, J.G. (2015): Domain-adapted named-entity linker using linked data. In: Proceedings of the 1st Workshop on Natural Language Applications: completing the puzzle in conjunction with the 20th International Conference on Applications of Natural Language to Information Systems, Passau, Germany, June 17-19, http://ceur-ws.org/Vol-1386/named_entity.pdf
 
-Brando, C., Frontini, F., Ganascia, J.G. (2015): Disambiguation of named entities in cultural heritage texts using linked data sets (accepted). In: Proceedings of the First International Workshop on Semantic Web for Cultural Heritage in Conjunction with 19th East-European Conference on Advances in Databases and Information Systems
-
+Brando, C., Frontini, F., Ganascia, J.G. (2015): Disambiguation of named entities in cultural heritage texts using linked data sets (accepted). In: Proceedings of the First International Workshop on Semantic Web for Cultural Heritage in Conjunction with 19th East-European Conference on Advances in Databases and Information Systems, Poitiers, France, New Trends in Databases and Information Systems, Springer, 539
 
 Related URLs:
 
