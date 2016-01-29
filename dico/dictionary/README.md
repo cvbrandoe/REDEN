@@ -1,1 +1,3 @@
+In this folder, there should be at most folders, namely, PER, LOC and ORG (depending on the chosen named-entity classes). Inside each folder, there should be TSV files containing dictionary entries.
+
 Generate dictionary files using the fr.lip6.ldcrawler.App class. Otherwise, you can download pre-generated dictionaries adapted to French critical literary texts from this URL: http://obvil-dev.paris-sorbonne.fr/unerd/unerd-tool/lookups/

@@ -71,17 +71,38 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 			}
 			
 			String queryString = "PREFIX db-owl: <http://dbpedia.org/ontology/> "
+					+ "PREFIX owl: <http://www.w3.org/2002/07/owl#> "
 					+ "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
 					+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
 					+ "PREFIX dbr: <http://dbpedia.org/resource/> "
-					+ "select distinct ?val ?labelfr ?labelred where { "
-					+ " ?val rdf:type db-owl:Place . "
+					+ "PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> "
+					+ "PREFIX  prop-fr: <http://fr.dbpedia.org/property/> "
+					+ "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/> "
+					+ "select distinct ?val ?labelfr ?labelred ?otherLinks where { "					
+					/*
+					 * Other predicates to filter places:
+					 * prop-fr:longitude 
+					 * prop-fr:latitude
+					 * prop-fr:population
+					 * rdf:type geo:SpatialThing
+					 * dbpedia-owl:place
+					 * prop-fr:lieu
+					 * prop-fr:territoire
+					 * prop-fr:région -- it doesn't work as we want
+					 * prop-fr:régions -- idem
+					 * dbpedia-owl:region -- idem
+					*/
+					+ " ?val rdf:type db-owl:Place ."
+					+ " ?val prop-fr:régions ?reg ."
 					+ " ?val rdfs:label ?labelfr . "
 					+ " filter(langMatches(lang(?labelfr),'FR')) ."
 					+ filterRegex
 					+ " OPTIONAL {?red db-owl:wikiPageRedirects ?val ."
 					+ " ?red rdfs:label ?labelred ."
-					+ " filter(langMatches(lang(?labelred),'FR')) } }";
+					+ " filter(langMatches(lang(?labelred),'FR')) } . "
+					+ " OPTIONAL { ?val owl:sameAs ?otherLinks ."
+					+ " FILTER regex(str(?otherLinks), '^http://dbpedia.org/', 'i')} }"
+					/*+ " LIMIT 10000 OFFSET 20000" -- sometimes it's necessary */;
 			Query query = QueryFactory.create(queryString);
 			System.out.println("query: " + query.toString());
 			System.out.println("exiting DBpedia: formulateSPARQLQuery");
@@ -180,7 +201,8 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 	 */
 	public static void writeToFile(List<Place> results, String filename, String outDictionnaireDir) {
 		try {
-			CSVWriter writer = new CSVWriter(new FileWriter(outDictionnaireDir+"/"+filename+".tsv"), '\t', 
+			FileWriter mFileWriter = new FileWriter(outDictionnaireDir+"/"+filename+".tsv", true); //append true
+			CSVWriter writer = new CSVWriter(mFileWriter, '\t', 
 					CSVWriter.NO_QUOTE_CHARACTER);
 			int count = 0;
 			for (int k = 0; k < results.size(); k++) {

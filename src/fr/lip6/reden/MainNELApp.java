@@ -8,6 +8,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -179,6 +180,17 @@ public class MainNELApp {
 							annotationsParagraph);
 					// Regular case
 					if (caseR.equalsIgnoreCase("OK")) {
+						
+						//printing number of ambiguous URIs per mention
+						Iterator<String> mentions = mentionsWithURIs.keySet().iterator();
+						while (mentions.hasNext()) {
+							String mention = mentions.next();
+							Integer sizeReferents = mentionsWithURIs.get(mention).size();
+							if (sizeReferents > 1) {
+								System.out.println("Number of ambiguous referents (URIs) for "+mention+ " is "+sizeReferents);
+							}
+						}
+						
 						// create inverted index
 						Map<String, String> invertedIndex = DicoProcessingNEL.buildInvertedIndex(mentionsWithURIs);
 						// create RDF sub-graph from URIs of mentions in the
@@ -232,11 +244,12 @@ public class MainNELApp {
 			if ((args.length >= 2 && args[1].equals("-printEval"))
 					|| (args.length >= 3 && args[2].equals("-printEval"))) {
 				String output = args[0].replace(".xml", "-outV3.xml");
-				if (new File(outDir+output).exists()) {
+				String[] output2 = output.split("/");
+				if (new File(outDir+output2[output2.length-1]).exists()) {
 					System.out.println("Printing evaluation");
 					ResultsAndEvaluationNEL.evaluation(args[0], annotationTag, xpathExpresion, outDir, propertyTagRef);
 				} else {
-					System.out.println("Output file doesn't exist: " + outDir+output);
+					System.out.println("Output file doesn't exist: " + outDir+output2[output2.length-1]);
 				}
 			}
 		} catch (ParserConfigurationException e1) {

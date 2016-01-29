@@ -195,18 +195,18 @@ public class ResultsAndEvaluationNEL {
 		HashMap<String, Integer> countOccurenceCorrectMentions = new HashMap<String, Integer>();
 		float manualkeys = 0, correctkey = 0, emptyChoice = 0, emptyManualAnnot = 0;
 		try {
-			System.out.println("Check evaluation results in "
-					+ outDir+namefile.replace(".xml", "-resEvalV3.txt"));
-			PrintWriter writer = new PrintWriter(outDir+namefile.replace(".xml",
+			String namefileA[] = namefile.split("/");
+			
+			PrintWriter writer = new PrintWriter(outDir+namefileA[namefileA.length-1].replace(".xml",
 					"-resEvalV3.txt"), "UTF-8");
 			
-			PrintWriter writerCE = new PrintWriter(outDir+namefile.replace(".xml",
+			PrintWriter writerCE = new PrintWriter(outDir+namefileA[namefileA.length-1].replace(".xml",
 					"-resCorrectMentionsV3.txt"), "UTF-8");
 						
 			// output file
 			DocumentBuilder b = DocumentBuilderFactory.newInstance()
 					.newDocumentBuilder();
-			org.w3c.dom.Document doc = b.parse(new FileInputStream(outDir+namefile
+			org.w3c.dom.Document doc = b.parse(new FileInputStream(outDir+namefileA[namefileA.length-1]
 					.replace(".xml", "-outV3.xml")));
 
 			XPath xPath = XPathFactory.newInstance().newXPath();
@@ -297,6 +297,8 @@ public class ResultsAndEvaluationNEL {
 			writer.println("Evaluation: " + correctkey / manualkeys);
 			writer.close();
 			writerCE.close();
+			System.out.println("Check evaluation results in "
+					+ outDir+namefileA[namefileA.length-1].replace(".xml", "-resEvalV3.txt"));			
 		} catch (ParserConfigurationException e1) {
 			e1.printStackTrace();
 		} catch (XPathExpressionException e1) {

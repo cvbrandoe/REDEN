@@ -4,24 +4,17 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-import java.util.Set;
-
-import org.reflections.Reflections;
 
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.ResultSet;
 
 import fr.lip6.ldcrawler.domainparam.DomainExtent;
 import fr.lip6.ldcrawler.domainparam.TemporalExtent;
-import fr.lip6.ldcrawler.query.QuerySource;
 import fr.lip6.ldcrawler.queryimpl.QueryAuthorBNF;
 import fr.lip6.ldcrawler.queryimpl.QueryPlaceDBpedia;
 
@@ -43,7 +36,6 @@ public class AppAdhoc
 	 * Crawls Linked Data.
 	 * @param propertiesFile, the configuration file
 	 */
-	@SuppressWarnings("rawtypes")
 	public static void crawlsLinkedData(String propertiesFile) {
 		
 		// reading parameters
@@ -63,9 +55,8 @@ public class AppAdhoc
 			
 			//execute all queries defined in classes implementing the QuerySource interface -- adhoc way so far
 			String[] let =  {"a","b","c","d","e","f","g","h","i","j","k","l","m","n",
-					"o","p","q","r","s","t","u","v","w","x", "y", "z", "other"};
+					"o","p","q","r","s","t","u","v","w","x", "y","z", "other"};
 			//String[] let =  {"x"}; //testing
-			
 			int counter = 0;
 			Boolean out = false;
 			while (counter < let.length && !out) {

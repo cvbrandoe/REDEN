@@ -1,4 +1,4 @@
-package fr.lip6.reden;
+package fr.lip6.reden.util;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -7,6 +7,13 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+/**
+ * Auxiliary class to highlight differences and similarities 
+ * among two NEL outputs according to the LD referents chosen.
+ * 
+ * @author @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC
+ *         LIP6
+ */
 public class CompareResults {
 
 	public static Set<String> read(String file) {

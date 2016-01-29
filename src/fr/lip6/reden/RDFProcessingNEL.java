@@ -75,18 +75,18 @@ public class RDFProcessingNEL {
 			if (!f.exists() || FileUtils.readFileToString(f).trim().isEmpty()) {
 				model = ModelFactory.createDefaultModel();
 				if (uri.contains("dbpedia")) {
-					uri = uri + ".rdf";
+					uri = uri.replace("/resource/", "/data/")+".ntriples";
 					InputStream in = FileManager.get().open(uri);
 					if (in != null) {
 						// check rdf repos are available
-						URL u = new URL(baseURL);
+						URL u = new URL(uri);
 						HttpURLConnection huc = (HttpURLConnection) u
 								.openConnection();
 						huc.setRequestMethod("GET");
 						huc.connect();
 						int code = huc.getResponseCode();
 						if (code != 503 && code != 404) {
-							model.read(in, null, "RDF/XML");
+							model.read(in, null, "N3");
 						} else {
 							System.out.println("RDF repo is not available "
 									+ baseURL);
@@ -98,7 +98,7 @@ public class RDFProcessingNEL {
 					}
 				} else {
 					// check rdf repos are available
-					URL u = new URL(baseURL);
+					URL u = new URL(uri);
 					HttpURLConnection huc = (HttpURLConnection) u
 							.openConnection();
 					huc.setRequestMethod("GET");
@@ -153,8 +153,7 @@ public class RDFProcessingNEL {
 							Resource individualSameAs = model.getResource(uri);
 							SimpleSelector ss = new SimpleSelector(
 									individualSameAs, prop, (RDFNode) null);
-							ExtendedIterator<Statement> iter = model
-									.listStatements(ss);
+							ExtendedIterator<Statement> iter = model.listStatements(ss);
 							while (iter.hasNext()) {
 								Statement stmt = iter.next();
 								RDFNode object = stmt.getObject();
