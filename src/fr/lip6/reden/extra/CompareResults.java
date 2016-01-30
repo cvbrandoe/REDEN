@@ -1,4 +1,4 @@
-package fr.lip6.reden.util;
+package fr.lip6.reden.extra;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
