@@ -13,8 +13,6 @@ import java.util.Properties;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.ResultSet;
 
-import fr.lip6.ldcrawler.domainparam.DomainExtent;
-import fr.lip6.ldcrawler.domainparam.TemporalExtent;
 import fr.lip6.ldcrawler.queryimpl.QueryAuthorBNF;
 import fr.lip6.ldcrawler.queryimpl.QueryPlaceDBpedia;
 

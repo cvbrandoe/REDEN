@@ -1,4 +1,4 @@
-package fr.lip6.ldcrawler.domainparam;
+package fr.lip6.ldcrawler;
 
 /**
  * Class for defining spatial parameters by a bounding box (or rectangle).

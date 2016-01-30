@@ -1,4 +1,4 @@
-package fr.lip6.ldcrawler.query;
+package fr.lip6.ldcrawler;
 
 import java.util.List;
 
@@ -7,8 +7,6 @@ import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.query.ResultSetFactory;
-
-import fr.lip6.ldcrawler.domainparam.DomainExtent;
 
 /**
  * Class for querying a particular source. New queries per source must extend this class.

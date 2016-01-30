@@ -18,11 +18,11 @@ import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.opencsv.CSVWriter;
 
-import fr.lip6.ldcrawler.domainparam.DomainExtent;
-import fr.lip6.ldcrawler.domainparam.SpatialExtent;
-import fr.lip6.ldcrawler.domainparam.TemporalExtent;
-import fr.lip6.ldcrawler.query.QuerySource;
-import fr.lip6.ldcrawler.query.QuerySourceInterface;
+import fr.lip6.ldcrawler.DomainExtent;
+import fr.lip6.ldcrawler.QuerySource;
+import fr.lip6.ldcrawler.QuerySourceInterface;
+import fr.lip6.ldcrawler.SpatialExtent;
+import fr.lip6.ldcrawler.TemporalExtent;
 
 /**
  * This class queries the authors catalog in the BnF SPARQL end point.

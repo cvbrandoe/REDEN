@@ -97,12 +97,10 @@ public class MainNELApp {
 			Properties prop = new Properties();
 			InputStream input = new FileInputStream(propertiesFile);
 			prop.load(input);
-			// String fileName = prop.getProperty("teiFileName");
 			String annotationTag = prop.getProperty("namedEntityTag");
 			String cl = prop.getProperty("NERclassName");
 			String[] baseUris = prop.getProperty("baseURIs").split(",");
-			String[] provBaseURI = prop.getProperty("avoidPredicatesBaseURI")
-					.split(",");
+			String[] provBaseURI = prop.getProperty("avoidPredicatesBaseURI").split(",");
 			String measure = prop.getProperty("centralityMeasure");
 			String useindex = prop.getProperty("useDicoIndex");
 			String indexDir = prop.getProperty("indexDir");
@@ -188,6 +186,7 @@ public class MainNELApp {
 							Integer sizeReferents = mentionsWithURIs.get(mention).size();
 							if (sizeReferents > 1) {
 								System.out.println("Number of ambiguous referents (URIs) for "+mention+ " is "+sizeReferents);
+								//TODO output to a file
 							}
 						}
 						
