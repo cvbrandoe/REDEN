@@ -30,6 +30,8 @@ import org.xml.sax.SAXException;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
+import fr.lip6.ldcrawler.AppAdhoc;
+
 /**
  * This class implements the main method to launch the proposed 
  * graph-based algorithm and domain-adapted named entity linker (NEL).
@@ -45,8 +47,9 @@ public class MainNELApp {
 		if (args.length > 0 && args.length <= 5) {
 			namedEntityLinking("config/config.properties", args);
 		} else {
-			System.out
-					.println("namedEntityLinking <fileName> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>]");
+			System.out.println("Two modes possible for providing arguments: "
+							+ "1) <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
+							+ "2) -createDico");
 		}
 	}
 
@@ -62,9 +65,18 @@ public class MainNELApp {
 		try {
 
 			Date startMain = new Date();
+			
+			//only builds the dico, skips NEL
+			if (args[0].equals("-createDico")) {
+				AppAdhoc.crawlsLinkedData("config/config.properties");
+				System.out.println("Building dictionary for NEL");
+				return;
+			}
+						
 			if (!args[0].endsWith(".xml")) {
-				System.out
-						.println("namedEntityLinking <fileName> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>]");
+				System.out.println("Two modes possible for providing arguments: "
+						+ "1) <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
+						+ "2) -createDico");
 				return;
 			}
 

@@ -1,4 +1,4 @@
-package fr.lip6.ldcrawler.queryimpl;
+package fr.lip6.ldcrawler;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -11,11 +11,6 @@ import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.opencsv.CSVWriter;
-
-import fr.lip6.ldcrawler.DomainExtent;
-import fr.lip6.ldcrawler.QuerySource;
-import fr.lip6.ldcrawler.QuerySourceInterface;
-import fr.lip6.ldcrawler.SpatialExtent;
 
 /**
  * This class queries places in the DBoedia SPARQL end point.
@@ -47,7 +42,7 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 	 *  
 	 */
 	@Override
-	public Query formulateSPARQLQuery(List<DomainExtent> domainParams, String firstLetter, 
+	public Query formulateSPARQLQuery(List<TopicExtent> domainParams, String firstLetter, 
 			String outDictionnaireDir) {
 		
 		File fexists = new File(outDictionnaireDir+prefixDictionnaireFile+firstLetter+".tsv");
@@ -57,7 +52,7 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 		} else {
 			System.out.println("entering DBpedia: formulateSPARQLQuery");
 			//temporal information can be incorporated into the query in many ways
-			for (DomainExtent d : domainParams) {
+			for (TopicExtent d : domainParams) {
 				if (d instanceof SpatialExtent) {
 					//TODO include query statement (geo vocabulary) to handle spatial delimitation
 					//concerning Lat,Lon of the place

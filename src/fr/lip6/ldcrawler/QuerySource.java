@@ -21,7 +21,7 @@ public class QuerySource implements QuerySourceInterface {
 	 * @param firstleter, optional filtering for queries
 	 * @return
 	 */
-	public Query formulateSPARQLQuery(List<DomainExtent> domainParams, String firstleter, 
+	public Query formulateSPARQLQuery(List<TopicExtent> domainParams, String firstleter, 
 			String outDictionnaireDir) {
 		return null;
 	}

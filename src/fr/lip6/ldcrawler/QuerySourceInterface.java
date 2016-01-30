@@ -17,7 +17,7 @@ public interface QuerySourceInterface {
 	 * @param firstleter, optional filtering for queries
 	 * @return the query
 	 */
-	Query formulateSPARQLQuery(List<DomainExtent> domainParams, String firstleter, 
+	Query formulateSPARQLQuery(List<TopicExtent> domainParams, String firstleter, 
 			String outDictionnaireDir);
 		
 	/**

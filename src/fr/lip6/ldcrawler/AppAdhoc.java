@@ -13,9 +13,6 @@ import java.util.Properties;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.ResultSet;
 
-import fr.lip6.ldcrawler.queryimpl.QueryAuthorBNF;
-import fr.lip6.ldcrawler.queryimpl.QueryPlaceDBpedia;
-
 /**
  * Main class to launch the Linked Data crawler for handling domain-adaptation during named-entity linking.
  * @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC LIP6
@@ -49,9 +46,9 @@ public class AppAdhoc
 			String spatialExtent = prop.getProperty("spatialExtent");
 			
 			//prepare domain-adaptation parameters from config file
-			List<DomainExtent> domainParams = loadDomainParams(greaterThan, lesserThan, spatialExtent);
+			List<TopicExtent> domainParams = loadDomainParams(greaterThan, lesserThan, spatialExtent);
 			
-			//execute all queries defined in classes implementing the QuerySource interface -- adhoc way so far
+			//Adhoc way so far
 			String[] let =  {"a","b","c","d","e","f","g","h","i","j","k","l","m","n",
 					"o","p","q","r","s","t","u","v","w","x", "y","z", "other"};
 			//String[] let =  {"x"}; //testing
@@ -115,9 +112,9 @@ public class AppAdhoc
 	 * @param spatialExtent
 	 * @return
 	 */
-	public static List<DomainExtent> loadDomainParams(String timePeriodBegin, String timePeriodEnd, String spatialExtent) {
+	public static List<TopicExtent> loadDomainParams(String timePeriodBegin, String timePeriodEnd, String spatialExtent) {
 		System.out.println("Entering: loadDomainParams");
-		List<DomainExtent> domainParams = new ArrayList<DomainExtent>();
+		List<TopicExtent> domainParams = new ArrayList<TopicExtent>();
 		try {
 			//temporal information
 			TemporalExtent temEx = new TemporalExtent();

@@ -4,7 +4,7 @@ package fr.lip6.ldcrawler;
  * Class for defining spatial parameters by a bounding box (or rectangle).
  * @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC LIP6
  */
-public class SpatialExtent extends DomainExtent {
+public class SpatialExtent extends TopicExtent {
 
 	private Double lat1;
 	

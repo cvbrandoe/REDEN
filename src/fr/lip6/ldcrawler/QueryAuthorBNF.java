@@ -1,4 +1,4 @@
-package fr.lip6.ldcrawler.queryimpl;
+package fr.lip6.ldcrawler;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -17,12 +17,6 @@ import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.opencsv.CSVWriter;
-
-import fr.lip6.ldcrawler.DomainExtent;
-import fr.lip6.ldcrawler.QuerySource;
-import fr.lip6.ldcrawler.QuerySourceInterface;
-import fr.lip6.ldcrawler.SpatialExtent;
-import fr.lip6.ldcrawler.TemporalExtent;
 
 /**
  * This class queries the authors catalog in the BnF SPARQL end point.
@@ -54,7 +48,7 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 	 *  
 	 */
 	@Override
-	public Query formulateSPARQLQuery(List<DomainExtent> domainParams, 
+	public Query formulateSPARQLQuery(List<TopicExtent> domainParams, 
 			String firstLetter, String outDictionnaireDir) {
 		
 		File fexists = new File(outDictionnaireDir+"/PER/"+prefixDictionnaireFile+firstLetter+".tsv");
@@ -67,7 +61,7 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 			System.out.println("entering BNF: formulateSPARQLQuery");
 			//temporal information can be incorporated into the query in many ways
 			String filterDate = "";
-			for (DomainExtent d : domainParams) {
+			for (TopicExtent d : domainParams) {
 				if (d instanceof TemporalExtent) {
 					TemporalExtent tem = (TemporalExtent) d;
 					if (tem.getLesserThan() != null) {

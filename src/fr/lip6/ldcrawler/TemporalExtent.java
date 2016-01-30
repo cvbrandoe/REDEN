@@ -6,7 +6,7 @@ import java.util.Date;
  * Class for defining temporal parameters.
  * @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC LIP6
  */
-public class TemporalExtent extends DomainExtent {
+public class TemporalExtent extends TopicExtent {
 	
 	/**
 	 * A date must be lesser than this date 
