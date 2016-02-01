@@ -6,8 +6,10 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryFactory;
@@ -344,26 +346,16 @@ class Author {
 	
 	public String getNormalisedName() {
 		String normalisedName = "";
-		if (this.getFirstname().equals("-")) {
+		if (this.getFirstname().equals("-") || this.getFirstname().equals("")) {
 			normalisedName = this.getLastname();
 		} else {
 			normalisedName = this.getLastname() + ", "+this.getFirstname();
 		}
-		normalisedName = normalisedName.replaceAll("'", "' ").replaceAll("  ", " ");
+		normalisedName = normalisedName.replaceAll("'", "' ");
 		if (this.getBirthdate() != null && this.getDeathdate() != null) {
 			normalisedName = normalisedName+ " ("+this.getBirthdate()+"-"+this.getDeathdate()+")";					
 		}
 		return normalisedName.replaceAll("  ", " ");		
-	}
-	
-	public String makeLastNameInitials() {
-		String initials = "";
-		for (int i = 0; i < this.getLastname().length(); i++) {
-			if(Character.isUpperCase(this.getLastname().charAt(i))){
-				initials +=  " "+this.getLastname().charAt(i);
-			}
-		}
-		return initials.trim();
 	}
 	
 	public String makeFirstNameInitials() {
@@ -397,14 +389,26 @@ class Author {
 	 * Rules to generate alternative names for authors (Francesca)
 	 * @return
 	 */
-	public List<String> makeAliases() {
-		List<String> aliases = new ArrayList<String>();
+	public Set<String> makeAliases() {
+		Set<String> aliases = new HashSet<String>();
 		
 		//generate_full_name
-		aliases.add(this.getFirstname() + " " + this.getLastname());
+		if (!this.getFirstname().equals("-") && !this.getFirstname().equals(""))
+			aliases.add(this.getFirstname() + " " + this.getLastname());		
 				
 		//generate_family_name_only
 		aliases.add(this.getLastname());
+		
+		//generate_titles
+		aliases.add(this.getTitle() + " " + this.getLastname());
+		if (!this.getFirstname().equals("-") && !this.getFirstname().equals(""))
+			aliases.add(this.getTitle() + " " + this.getFirstname() + " " + this.getLastname());
+		
+		//generate_titles_with dots
+		aliases.add(this.getTitle() + ". " + this.getLastname());
+		if (!this.getFirstname().equals("-") && !this.getFirstname().equals(""))
+			aliases.add(this.getTitle() + ". " + this.getFirstname() + " " + this.getLastname());
+		
 		//if there is a honorific it generates the version with the honorific as well
 		if (this.getHonorific() != null) {
 			aliases.add(this.getHonorific() + " " + this.getLastname());
@@ -412,9 +416,8 @@ class Author {
 		}			
 		
 		//generate_initials_with_family_name
-		String initials = "", initials_dot = "", honorific = "";
-				
-		if (this.makeFirstNameInitials() != null) {
+		String initials = "", initials_dot = "", honorific = "";			
+		if (this.makeFirstNameInitials() != null && !this.makeFirstNameInitials().equals("")) {
 			initials = this.makeFirstNameInitials();
 			initials_dot = this.makeFirstNameInitials().replaceAll(" ", ". ");
 			initials_dot += ".";
@@ -425,21 +428,19 @@ class Author {
 		
 		if (this.getHonorific() != null) {
 			honorific = this.getHonorific() + " ";
-			aliases.add(initials + " " + honorific + this.getLastname());
-			aliases.add(initials + " " + Character.toUpperCase(honorific.charAt(0)) + honorific.substring(1) + this.getLastname());
-			aliases.add(initials_dot + " " + Character.toUpperCase(honorific.charAt(0)) + honorific.substring(1) + this.getLastname());
-			aliases.add(initials_dot + " " + honorific + this.getLastname());
 			aliases.add(this.getTitle() + " " + honorific + this.getLastname());
-			aliases.add(this.getTitle() + " " + this.getLastname());
+			aliases.add(this.getTitle() + ". " + honorific + this.getLastname());
+			aliases.add(this.getTitle() + " " + Character.toUpperCase(honorific.charAt(0)) + honorific.substring(1) + this.getLastname());
+			aliases.add(this.getTitle() + ". " + Character.toUpperCase(honorific.charAt(0)) + honorific.substring(1) + this.getLastname());
+			
+			if (!initials.equals("") && !initials_dot.equals("")) {
+				aliases.add(initials + " " + honorific + this.getLastname());
+				aliases.add(initials + " " + Character.toUpperCase(honorific.charAt(0)) + honorific.substring(1) + this.getLastname());
+				aliases.add(initials_dot + " " + Character.toUpperCase(honorific.charAt(0)) + honorific.substring(1) + this.getLastname());
+				aliases.add(initials_dot + " " + honorific + this.getLastname());
+			}
+			
 		}
-		
-		//generate_titles
-		aliases.add(this.getTitle() + " " + this.getLastname());
-		aliases.add(this.getTitle() + " " + this.getFirstname() + " " + this.getLastname());
-				
-		//with dots
-		aliases.add(this.getTitle() + ". " + this.getLastname());
-		aliases.add(this.getTitle() + ". " + this.getFirstname() + " " + this.getLastname());
 		
 		return aliases;
 	}
