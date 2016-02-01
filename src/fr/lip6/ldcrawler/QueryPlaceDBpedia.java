@@ -138,8 +138,8 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 			if (!new File(outDictionnaireDir).exists()) {
 				new File(outDictionnaireDir).mkdir();			
 			}
-			if (!new File(outDictionnaireDir+"/LOC").exists()) {
-				new File(outDictionnaireDir+"/LOC").mkdir();
+			if (!new File(outDictionnaireDir).exists()) {
+				new File(outDictionnaireDir).mkdir();
 			}
 			while (res.hasNext()) {
 				QuerySolution sol = res.next();
@@ -181,7 +181,7 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 				}			
 			}
 			if (results != null) {
-				writeToFile(results, prefixDictionnaireFile, outDictionnaireDir+"/LOC");
+				writeToFile(results, prefixDictionnaireFile, outDictionnaireDir);
 			}
 			System.out.println("exiting DBpedia: processResults");
 		}

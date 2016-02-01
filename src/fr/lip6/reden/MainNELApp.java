@@ -49,7 +49,7 @@ public class MainNELApp {
 		} else {
 			System.out.println("Two modes possible for providing arguments: "
 							+ "1) <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
-							+ "2) -createDico");
+							+ "2) -createDico bnf|dbpediafr|all");
 		}
 	}
 
@@ -68,7 +68,7 @@ public class MainNELApp {
 			
 			//only builds the dico, skips NEL
 			if (args[0].equals("-createDico")) {
-				AppAdhoc.crawlsLinkedData("config/config.properties");
+				AppAdhoc.crawlsLinkedData("config/config.properties", args[1]);
 				System.out.println("Building dictionary for NEL");
 				return;
 			}
@@ -76,7 +76,7 @@ public class MainNELApp {
 			if (!args[0].endsWith(".xml")) {
 				System.out.println("Two modes possible for providing arguments: "
 						+ "1) <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
-						+ "2) -createDico");
+						+ "2) -createDico bnf|dbpediafr|all");
 				return;
 			}
 

@@ -24,14 +24,14 @@ public class AppAdhoc
 	 * @param args
 	 */
 	public static void main(String [] args) {
-		crawlsLinkedData("config/config.properties");		
+		crawlsLinkedData("config/config.properties", "all");		
 	}
 	
 	/**
 	 * Crawls Linked Data.
 	 * @param propertiesFile, the configuration file
 	 */
-	public static void crawlsLinkedData(String propertiesFile) {
+	public static void crawlsLinkedData(String propertiesFile, String dicLabel) {
 		
 		// reading parameters
 		try {
@@ -51,49 +51,53 @@ public class AppAdhoc
 			//Adhoc way so far
 			String[] let =  {"a","b","c","d","e","f","g","h","i","j","k","l","m","n",
 					"o","p","q","r","s","t","u","v","w","x", "y","z", "other"};
-			//String[] let =  {"x"}; //testing
+			//String[] let =  {"b"}; //testing
 			int counter = 0;
 			Boolean out = false;
-			while (counter < let.length && !out) {
-				QueryAuthorBNF bnf = new QueryAuthorBNF();
-				Boolean lr = bnf.LARGE_REPO;
-				String letter = null;
-				if (!lr) {
-					out = true; //enters once
-				} else {
-					letter = let[counter];
-					System.out.println("processing letter:" +letter);
-				}
-				
-				//bnf				
-				Query qbnf = bnf.formulateSPARQLQuery(domainParams, letter, "");
-				ResultSet rsbnf = bnf.executeQuery(qbnf, bnf.TIMEOUT.toString(), bnf.SPARQL_END_POINT, "", "");
-				bnf.processResults(rsbnf, outDictionnaireDir, letter);
-				counter++;
-			}
 			
-			counter = 0;
-			out = false;
-			while (counter < let.length && !out) {
-				QueryPlaceDBpedia dbp = new QueryPlaceDBpedia();
-				Boolean lr = dbp.LARGE_REPO;
-				
-				String letter = null;
-				if (!lr) {
-					out = true; //enters once
-				} else {
-					letter = let[counter];
-					System.out.println("processing letter:" +letter);
+			if (dicLabel.equalsIgnoreCase("bnf") || dicLabel.equalsIgnoreCase("all")) {
+				// QUERY AUTHORS IN BNF
+				while (counter < let.length && !out) {
+					QueryAuthorBNF bnf = new QueryAuthorBNF();
+					Boolean lr = bnf.LARGE_REPO;
+					String letter = null;
+					if (!lr) {
+						out = true; //enters once
+					} else {
+						letter = let[counter];
+						System.out.println("processing letter:" +letter);
+					}
+					
+					//bnf				
+					Query qbnf = bnf.formulateSPARQLQuery(domainParams, letter, "");
+					ResultSet rsbnf = bnf.executeQuery(qbnf, bnf.TIMEOUT.toString(), bnf.SPARQL_END_POINT, "", "");
+					bnf.processResults(rsbnf, outDictionnaireDir, letter);
+					counter++;
 				}
-				
-				//dbpedia 
-				Query qdb = dbp.formulateSPARQLQuery(domainParams, letter, "");
-				ResultSet rsdbp = dbp.executeQuery(qdb, dbp.TIMEOUT.toString(), dbp.SPARQL_END_POINT, "", "");
-				dbp.processResults(rsdbp, outDictionnaireDir, letter);
-				
-				counter++;
+			} else if (dicLabel.equalsIgnoreCase("dbpediafr") || dicLabel.equalsIgnoreCase("all")) {
+				// QUERY PLACES IN DBPEDIA
+				counter = 0;
+				out = false;
+				while (counter < let.length && !out) {
+					QueryPlaceDBpedia dbp = new QueryPlaceDBpedia();
+					Boolean lr = dbp.LARGE_REPO;
+					
+					String letter = null;
+					if (!lr) {
+						out = true; //enters once
+					} else {
+						letter = let[counter];
+						System.out.println("processing letter:" +letter);
+					}
+					
+					//dbpedia 
+					Query qdb = dbp.formulateSPARQLQuery(domainParams, letter, "");
+					ResultSet rsdbp = dbp.executeQuery(qdb, dbp.TIMEOUT.toString(), dbp.SPARQL_END_POINT, "", "");
+					dbp.processResults(rsdbp, outDictionnaireDir, letter);
+					
+					counter++;
+				}
 			}
-			
 			System.out.println("exiting: crawlsLinkedData");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

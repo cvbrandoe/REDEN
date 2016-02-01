@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
 
@@ -68,15 +70,14 @@ public class RDFProcessingNEL {
 
 		try {
 			System.out.println("uri: " + uri + " and file " + dir + "/file"
-					+ uri.hashCode() + ".n3");
-			File f = new File(dir + "/file" + uri.hashCode() + ".n3");
+					+ replaceNonAlphabeticCharacters(uri) + ".n3");
+			File f = new File(dir + "/file" + replaceNonAlphabeticCharacters(uri) + ".n3");
 			// to go faster (remove f.exists if we want
 			// to update local triples)
 			if (!f.exists() || FileUtils.readFileToString(f).trim().isEmpty()) {
 				model = ModelFactory.createDefaultModel();
 				if (uri.contains("dbpedia")) {
-					uri = uri.replace("/resource/", "/data/")+".ntriples";
-					InputStream in = FileManager.get().open(uri);
+					InputStream in = FileManager.get().open(uri.replace("/resource/", "/data/")+".ntriples");
 					if (in != null) {
 						// check rdf repos are available
 						URL u = new URL(uri);
@@ -87,10 +88,11 @@ public class RDFProcessingNEL {
 						int code = huc.getResponseCode();
 						if (code != 503 && code != 404) {
 							model.read(in, null, "N3");
+							System.out.println("dowloadling from uri (dbpedia): " + uri);
 						} else {
 							System.out.println("RDF repo is not available "
 									+ baseURL);
-							return null;
+							//return null;
 						}
 
 					} else {
@@ -106,10 +108,11 @@ public class RDFProcessingNEL {
 					int code = huc.getResponseCode();
 					if (code != 503 && code != 404) {
 						model.read(uri);
+						System.out.println("dowloadling from uri: " + uri);
 					} else {
 						System.out.println("RDF repo is not available "
 								+ baseURL);
-						return null;
+						//return null;
 					}
 				}
 
@@ -119,8 +122,6 @@ public class RDFProcessingNEL {
 				model.write(out, "N3");
 
 			} else {
-				// System.out.println("file exists: " + dir + "/file"
-				// + uri.hashCode() + ".n3");
 			}
 		} catch (IOException ignore) {
 			System.out.println("problem storing RDF subgraph of URI: " + uri);
@@ -226,9 +227,9 @@ public class RDFProcessingNEL {
 							if (uri.contains(baseURL)) { // avoiding reading
 															// idref uri
 								if (!alreadyProcessedURI.contains(uri)) {
-									if (new File(dir + "/file" + uri.hashCode()+ ".n3").exists()) {
+									if (new File(dir + "/file" + replaceNonAlphabeticCharacters(uri)+ ".n3").exists()) {
 										model.read(dir + "/file"
-												+ uri.hashCode() + ".n3");
+												+ replaceNonAlphabeticCharacters(uri) + ".n3");
 										alreadyProcessedURI.add(uri);
 									}
 								}
@@ -292,6 +293,13 @@ public class RDFProcessingNEL {
 			out.add(uri);
 			return out;
 
+		}
+		
+		public static String replaceNonAlphabeticCharacters(String in) {
+			Pattern p = Pattern.compile("\\s|'|-");
+			Matcher m = p.matcher(in);
+			String texteRemplace = m.replaceAll("").replaceAll("/", "-").replaceAll(":", "");
+			return texteRemplace.toLowerCase();
 		}
 
 }
