@@ -1,0 +1,96 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30511627c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1748 ;
+        bnf-onto:lastYear              1821 ;
+        rdagroup2elements:biographicalInformation
+                "Magistrat et homme politique. - Fut député de la Charente-Inférieure à la Convention nationale, puis au Conseil des Cinq-Cents. - Fit une mission à Saint-Domingue, sous le Directoire" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1748/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1821/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1748-09-30" ;
+        bio:death                      "1821-08-20" ;
+        owl:sameAs                     <http://viaf.org/viaf/14883830> , <http://data.bnf.fr/ark:/12148/cb12539305n#about> ;
+        foaf:birthday                  "09-30" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k43617w.thumbnail> ;
+        foaf:familyName                "Giraud" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Marc-Antoine-Alexis" ;
+        foaf:name                      "Marc-Antoine-Alexis Giraud" ;
+        foaf:page                      <http://data.bnf.fr/12539305/marc-antoine-alexis_giraud/> .
+
+<http://data.bnf.fr/ark:/12148/cb36353343k#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36465972p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb363533427#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30511628q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb363544375#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30511625p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305116261#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12539305n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12539305n> ;
+        bnf-onto:FRBNF        12539305 ;
+        isni:identifierValid  "0000000015659060" ;
+        dcterms:created       "1996-11-13" ;
+        dcterms:modified      "2013-07-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000015659060> ;
+        skos:editorialNote    "Rapport et projet de décret sur la nécessité de rapporter la loi sur le maximum / présentés au nom du Comité de commerce et d'approvisionnemens ; par M.-A.-A. Giraud ; impr. par ordre de la Convention nationale, 1995 [document électronique : reprod. de l'éd. de 1794-1795]. - . - DBF. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/14883830> , <http://isni.org/isni/0000000015659060> ;
+        skos:note             "Magistrat et homme politique. - Fut député de la Charente-Inférieure à la Convention nationale, puis au Conseil des Cinq-Cents. - Fit une mission à Saint-Domingue, sous le Directoire"@fr ;
+        skos:prefLabel        "Marc-Antoine-Alexis Giraud (1748-1821)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37244004v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32169464k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12539305n#foaf:Person> .

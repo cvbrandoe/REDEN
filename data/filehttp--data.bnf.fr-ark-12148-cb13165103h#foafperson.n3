@@ -1,0 +1,45 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13165103h#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1860 ;
+        bnf-onto:lastYear              1933 ;
+        rdagroup2elements:biographicalInformation
+                "Épouse de Gustave Kahn, elle se convertit au judaïsme par solidarité avec son mari, juif et antidreyfusard" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1860/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1933/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1860-05-01" ;
+        bio:death                      "1933" ;
+        owl:sameAs                     <http://www.idref.fr/03507146X> , <http://data.bnf.fr/ark:/12148/cb13165103h#about> ;
+        foaf:birthday                  "05-01" ;
+        foaf:familyName                "Kahn" ;
+        foaf:givenName                 "Rachel" ;
+        foaf:name                      "Rachel Kahn" ;
+        foaf:page                      <http://data.bnf.fr/13165103/rachel_kahn/> .
+
+<http://data.bnf.fr/13165103/rachel_kahn/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13165103h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13165103h>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb13165103h> ;
+        bnf-onto:FRBNF    13165103 ;
+        dcterms:created   "1997-08-07" ;
+        dcterms:modified  "1997-08-08" ;
+        skos:altLabel     "Élizabeth Kahn (1860-1933)"@fr ;
+        skos:exactMatch   <http://www.idref.fr/03507146X> ;
+        skos:note         "Épouse de Gustave Kahn, elle se convertit au judaïsme par solidarité avec son mari, juif et antidreyfusard"@fr ;
+        skos:prefLabel    "Rachel Kahn (1860-1933)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb13165103h#foaf:Person> .

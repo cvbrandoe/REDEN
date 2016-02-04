@@ -1,0 +1,84 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31962833z#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30958270m#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1860 ;
+        rdagroup2elements:biographicalInformation
+                "Agrégé de l'Université. - Professeur au Lycée Carnot, Versailles. - Chevalier de la Légion d'honneur (1924)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1860/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris (16e arrondissement)" ;
+        bio:birth                       "1860-05-06" ;
+        bio:death                       "19.." ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb103472284#about> , <http://viaf.org/viaf/250349735> ;
+        foaf:birthday                   "05-06" ;
+        foaf:familyName                 "Comte" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Théodore" ;
+        foaf:name                       "Théodore Comte" ;
+        foaf:page                       <http://data.bnf.fr/10347228/theodore_comte/> .
+
+<http://data.bnf.fr/ark:/12148/cb103472284>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb103472284> ;
+        bnf-onto:FRBNF        10347228 ;
+        isni:identifierValid  "0000000373811149" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-12-17" ;
+        owl:sameAs            <http://isni.org/isni/0000000373811149> ;
+        skos:altLabel         "Théodore François Comte (1860-19..)"@fr , "Theodoro Comte (1860-19..)"@fr ;
+        skos:editorialNote    "Leonore. - http://www.culture.gouv.fr/documentation/leonore. - 2013-04-11 BN Cat. gén.. - . -"@fr , "Les plaideurs / Racine ; par Théodore Comte, 1887. - . - Los poetas latinos / por Raoul Vèze ; con prólogo de Theodoro Comte, 1909. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/250349735> , <http://isni.org/isni/0000000373811149> ;
+        skos:note             "Agrégé de l'Université. - Professeur au Lycée Carnot, Versailles. - Chevalier de la Légion d'honneur (1924)"@fr ;
+        skos:prefLabel        "Théodore Comte (1860-19..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31169417x#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31169414w#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb315688551#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31169416k#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30958269d#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb103472284#foaf:Person> .

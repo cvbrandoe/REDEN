@@ -1,0 +1,58 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42102998f#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb143972083#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb143972083#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb143972083#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb143972083#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1884 ;
+        bnf-onto:lastYear               1951 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre, illustrateur, influencé par le post-impresionnisme, disciple de Bonnard et de Renoir. - Pendant la Première Guerre mondiale, il réalise, sur la demande du gouvernement français,  plusieurs affiches patriotiques. - Il passe une dizaine d'années aux USA entre 1939 et 1948 , d'abord à New York puis dans une ferme dans le Vermont.  Il meurt en 1951" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1884/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1951/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Senlis" ;
+        rdagroup2elements:placeOfDeath  "lieu inconnu" ;
+        bio:birth                       "1884" ;
+        bio:death                       "1951" ;
+        owl:sameAs                      <http://viaf.org/viaf/11288492> , <http://data.bnf.fr/ark:/12148/cb143972083#about> ;
+        foaf:familyName                 "Malherbe" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "William" ;
+        foaf:name                       "William Malherbe" ;
+        foaf:page                       <http://data.bnf.fr/14397208/william_malherbe/> .
+
+<http://data.bnf.fr/ark:/12148/cb143972083>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb143972083> ;
+        bnf-onto:FRBNF        14397208 ;
+        isni:identifierValid  "0000000118501151" ;
+        dcterms:created       "2008-11-10" ;
+        dcterms:modified      "2015-03-31" ;
+        owl:sameAs            <http://isni.org/isni/0000000118501151> ;
+        skos:exactMatch       <http://isni.org/isni/0000000118501151> , <http://viaf.org/viaf/11288492> ;
+        skos:note             "Peintre, illustrateur, influencé par le post-impresionnisme, disciple de Bonnard et de Renoir. - Pendant la Première Guerre mondiale, il réalise, sur la demande du gouvernement français,  plusieurs affiches patriotiques. - Il passe une dizaine d'années aux USA entre 1939 et 1948 , d'abord à New York puis dans une ferme dans le Vermont.  Il meurt en 1951"@fr ;
+        skos:prefLabel        "William Malherbe (1884-1951)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb143972083#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39839388v#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb143972083#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb143972083#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb143972083#foaf:Person> .

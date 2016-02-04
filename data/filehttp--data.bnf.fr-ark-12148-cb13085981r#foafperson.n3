@@ -1,0 +1,104 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13085981r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13085981r> ;
+        bnf-onto:FRBNF        13085981 ;
+        isni:identifierValid  "0000000121366288" ;
+        dcterms:created       "1997-02-20" ;
+        dcterms:modified      "2013-07-31" ;
+        owl:sameAs            <http://isni.org/isni/0000000121366288> ;
+        skos:editorialNote    "Livres Hebdo, n°563, 2004-06-25. - . - Skyrock. - http://angelrimbe.skyrock.com. - 2008-04-09"@fr , "Mon frère Arthur / Isabelle Rimbaud, 1920. - . - Lorenz. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/64141385> , <http://isni.org/isni/0000000121366288> , <http://www.idref.fr/034829032> ;
+        skos:note             "Soeur du poète Arthur Rimbaud (1854-1891) et épouse de Pierre Dufour (1855-1922) artiste sous le pseud. de Paterne Berrichon"@fr ;
+        skos:prefLabel        "Isabelle Rimbaud (1860-1917)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34179394q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421125182#Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb325725584#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb341793921#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> .
+
+<http://data.bnf.fr/13085981/isabelle_rimbaud/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36568938d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32572623r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1860 ;
+        bnf-onto:lastYear               1917 ;
+        rdagroup2elements:biographicalInformation
+                "Soeur du poète Arthur Rimbaud (1854-1891) et épouse de Pierre Dufour (1855-1922) artiste sous le pseud. de Paterne Berrichon" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1860/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1917/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Charleville (Marne)" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1860-06-01" ;
+        bio:death                       "1917-06-20" ;
+        owl:sameAs                      <http://www.idref.fr/034829032> , <http://viaf.org/viaf/64141385> , <http://data.bnf.fr/ark:/12148/cb13085981r#about> ;
+        foaf:birthday                   "06-01" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k55445112.thumbnail> ;
+        foaf:familyName                 "Rimbaud" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Isabelle" ;
+        foaf:name                       "Isabelle Rimbaud" ;
+        foaf:page                       <http://data.bnf.fr/13085981/isabelle_rimbaud/> .
+
+<http://data.bnf.fr/ark:/12148/cb442506769#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb340841731#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420859243#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31218255t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13085981r#foaf:Person> .

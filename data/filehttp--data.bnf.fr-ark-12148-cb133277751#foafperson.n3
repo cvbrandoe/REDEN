@@ -1,0 +1,40 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb133277751#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1669 ;
+        bnf-onto:lastYear              1742 ;
+        rdagroup2elements:biographicalInformation
+                "Mère de famille britannique. - Mère de John Wesley, fondateur du méthodisme" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1669/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1742/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1669-01-20" ;
+        bio:death                      "1742-07-30" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb133277751#about> ;
+        foaf:birthday                  "01-20" ;
+        foaf:familyName                "Wesley" ;
+        foaf:givenName                 "Susanna" ;
+        foaf:name                      "Susanna Wesley" ;
+        foaf:page                      <http://data.bnf.fr/13327775/susanna_wesley/> .
+
+<http://data.bnf.fr/ark:/12148/cb133277751>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb133277751> ;
+        bnf-onto:FRBNF    13327775 ;
+        dcterms:created   "1998-09-09" ;
+        dcterms:modified  "1998-09-09" ;
+        skos:note         "Mère de famille britannique. - Mère de John Wesley, fondateur du méthodisme"@fr ;
+        skos:prefLabel    "Susanna Wesley (1669-1742)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb133277751#foaf:Person> .

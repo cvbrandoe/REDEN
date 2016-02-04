@@ -1,0 +1,74 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31398790j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137437039#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137437039#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137437039#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34020879t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137437039#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137437039#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137437039#foaf:Person> .
+
+<http://data.bnf.fr/13743703/edward_stanley/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb137437039#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb137437039>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb137437039> ;
+        bnf-onto:FRBNF        13743703 ;
+        isni:identifierValid  "0000000116008902" ;
+        dcterms:created       "2001-09-12" ;
+        dcterms:modified      "2013-08-01" ;
+        owl:sameAs            <http://isni.org/isni/0000000116008902> ;
+        skos:editorialNote    "BN Cat. gén. : STANLEY (Edward), évêque de Norwich. - . - BN Cat. gén.. - . -"@fr , "Before and after Waterloo : letters from Edward Stanley : 1802-[1803] ; 1814-1816 / ed. by Jane H. Adeane and Maud Grenfell, 1907. - . - Un Anglais sur les traces de Napoléon Bonaparte : lettres, 1802-[1803] ; 1814-1816 / Edward Stanley ; trad. d'Hubert Pichelin, 2003. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/066994616> , <http://isni.org/isni/0000000116008902> , <http://viaf.org/viaf/17401071> ;
+        skos:note             "Évêque de Norwich (à partir de 1837). - Recteur d'Alderley (1805-1837 ; ordonné dès 1803). - Naturaliste et ornithologiste"@fr ;
+        skos:prefLabel        "Edward Stanley (1779-1849)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb137437039#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31398805r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137437039#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137437039#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137437039#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb137437039#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1779 ;
+        bnf-onto:lastYear               1849 ;
+        rdagroup2elements:biographicalInformation
+                "Évêque de Norwich (à partir de 1837). - Recteur d'Alderley (1805-1837 ; ordonné dès 1803). - Naturaliste et ornithologiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1779/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1849/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Londres" ;
+        rdagroup2elements:placeOfDeath  "Norwich, GB" ;
+        bio:birth                       "1779-01-01" ;
+        bio:death                       "1849-09-06" ;
+        owl:sameAs                      <http://viaf.org/viaf/17401071> , <http://www.idref.fr/066994616> , <http://data.bnf.fr/ark:/12148/cb137437039#about> ;
+        foaf:birthday                   "01-01" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k103478p.thumbnail> ;
+        foaf:familyName                 "Stanley" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Edward" ;
+        foaf:name                       "Edward Stanley" ;
+        foaf:page                       <http://data.bnf.fr/13743703/edward_stanley/> .
+
+<http://data.bnf.fr/ark:/12148/cb39017499h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137437039#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137437039#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137437039#foaf:Person> .

@@ -1,0 +1,65 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12570154z#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1893 ;
+        bnf-onto:lastYear              1976 ;
+        rdagroup2elements:biographicalInformation
+                "Sculpteur, peintre et illustrateur. - Fondateur de l'Association des peintres et sculpteurs français au Maroc. - Spécialiste des arts orientaux" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1893/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1976/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1893-09-29" ;
+        bio:death                      "1976" ;
+        owl:sameAs                     <http://viaf.org/viaf/41958524> , <http://data.bnf.fr/ark:/12148/cb12570154z#about> , <http://www.idref.fr/035012579> ;
+        foaf:birthday                  "09-29" ;
+        foaf:familyName                "Vicaire" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Marcel" ;
+        foaf:name                      "Marcel Vicaire" ;
+        foaf:page                      <http://data.bnf.fr/12570154/marcel_vicaire/> .
+
+<http://data.bnf.fr/ark:/12148/cb354512117#Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb12570154z#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb12570154z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12570154z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12570154z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12570154z> ;
+        bnf-onto:FRBNF        12570154 ;
+        isni:identifierValid  "0000000109660265" ;
+        dcterms:created       "1997-06-24" ;
+        dcterms:modified      "2013-07-29" ;
+        owl:sameAs            <http://isni.org/isni/0000000109660265> ;
+        skos:editorialNote    "Bénézit, 1976. - . - Chantilly en 14-18 : photographies inédites de Georges et Marcel Vicaire / [organisée par la] Ville de Chantilly [et le] Château de Chantilly-[Musée Condé], [2008]. - . -"@fr , "Histoire des lettres. Deuxième volume, De Ronsard à nos jours / par Fortunat Strowski ; ill. de G. Ripart et Marcel Vicaire ; [éd. par] Gabriel Hanotaux, 1995 [Document électronique : reprod. de l'éd. de 1923]. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/41958524> , <http://isni.org/isni/0000000109660265> , <http://www.idref.fr/035012579> ;
+        skos:note             "Sculpteur, peintre et illustrateur. - Fondateur de l'Association des peintres et sculpteurs français au Maroc. - Spécialiste des arts orientaux"@fr ;
+        skos:prefLabel        "Marcel Vicaire (1893-1976)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12570154z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37272310r#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12570154z#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12570154z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12570154z#foaf:Person> .
+
+<http://data.bnf.fr/12570154/marcel_vicaire/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12570154z#foaf:Person> .

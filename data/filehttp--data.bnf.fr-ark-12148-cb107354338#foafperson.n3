@@ -1,0 +1,101 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30532750t#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30532749m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1797 ;
+        bnf-onto:lastYear               1877 ;
+        rdagroup2elements:biographicalInformation
+                "Magistrat. - Homme de lettres" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/be> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1797/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1877/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Namur, Belgique" ;
+        rdagroup2elements:placeOfDeath  "Embourg, Belgique" ;
+        bio:birth                       "1797-06-20" ;
+        bio:death                       "1877-02-19" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb107354338#about> , <http://viaf.org/viaf/37350313> ;
+        foaf:birthday                   "06-20" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k5414662n.thumbnail> ;
+        foaf:familyName                 "Grandgagnage" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Joseph" ;
+        foaf:name                       "Joseph Grandgagnage" ;
+        foaf:page                       <http://data.bnf.fr/10735433/joseph_grandgagnage/> .
+
+<http://data.bnf.fr/ark:/12148/cb30532746k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305327546#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb107354338>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb107354338> ;
+        bnf-onto:FRBNF        10735433 ;
+        isni:identifierValid  "0000000007519228" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2011-12-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000007519228> ;
+        skos:altLabel         "Justin (1797-1877)"@fr ;
+        skos:editorialNote    "Biographie nationale, Belgique : Grandgagnage, François Charles Joseph. - . - BN Cat. gén. : Grandgagnage, Joseph François Charles. - . -"@fr , "Glossaire des coutumes de Namur / par Joseph Grandgagnage, 1874. - . - Alfred Nicolas, ou La littérature monstre : satire / par Justin*** [J.-F.-C. Grandgagnage], 1836. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000007519228> , <http://viaf.org/viaf/37350313> ;
+        skos:note             "Magistrat. - Homme de lettres"@fr ;
+        skos:prefLabel        "Joseph Grandgagnage (1797-1877)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305327515#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30532752h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305327488#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30532747x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb332375313#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30532753v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107354338#foaf:Person> .

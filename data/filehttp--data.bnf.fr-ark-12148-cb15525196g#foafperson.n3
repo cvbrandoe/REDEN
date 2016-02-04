@@ -1,0 +1,79 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31571492n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb315714930#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31571494b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32667865d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1710 ;
+        bnf-onto:lastYear               1795 ;
+        rdagroup2elements:biographicalInformation
+                "A aussi écrit en latin" , "Professeur (?) au collège Mazarin à Paris en 1749. - Recteur de l'Université de Paris. - Professeur d'éloquence au collège de Navarre à Paris (attesté en 1763)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1710/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1795/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Fontaine-les-Clercs (Aisne)" ;
+        bio:birth                       "1710" ;
+        bio:death                       "1795" ;
+        owl:sameAs                      <http://viaf.org/viaf/10155939> , <http://www.idref.fr/075416484> , <http://data.bnf.fr/ark:/12148/cb15525196g#about> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k65285999.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k6540553c.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k6540554s.thumbnail> ;
+        foaf:familyName                 "Vicaire" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Antoine" ;
+        foaf:name                       "Antoine Vicaire" ;
+        foaf:page                       <http://data.bnf.fr/15525196/antoine_vicaire/> .
+
+<http://data.bnf.fr/ark:/12148/cb31571490z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb315714919#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15525196g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15525196g> ;
+        bnf-onto:FRBNF        15525196 ;
+        isni:identifierValid  "000000005058624X" ;
+        dcterms:created       "2007-04-16" ;
+        dcterms:modified      "2013-08-06" ;
+        skos:altLabel         "Antonius Vicaire (1710-1795)"@fr ;
+        skos:editorialNote    "Regi pacifico, cùm gratulatoriam de pace orationem, Universitatis nomine & jussu, haberet V. C. Carolus Le Beau, in ejusdem universitatis collegio Grassinæo rhetorices professor, die Jovis vigesimâ-septimâ mensis februarii, anno Domini 1749. Carmen [signé : \"Antonius Vicaire, è collegio Mazarinæo\"], 1749. - . - Cioranescu, 18e s.. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/075416484> , <http://viaf.org/viaf/10155939> ;
+        skos:note             "A aussi écrit en latin"@fr , "Professeur (?) au collège Mazarin à Paris en 1749. - Recteur de l'Université de Paris. - Professeur d'éloquence au collège de Navarre à Paris (attesté en 1763)"@fr ;
+        skos:prefLabel        "Antoine Vicaire (1710-1795)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15525196g#foaf:Person> .

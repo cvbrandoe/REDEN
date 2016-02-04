@@ -1,0 +1,200 @@
+@prefix schema: <http://schema.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb16714777w#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39626466j#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139209121#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139446268#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39626503x#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13920913c#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38426453q#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13944625x#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13944622w#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16714783t#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13944624k#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381232308#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/13901107/samuel_sebastian_wesley/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb380962668#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1810 ;
+        bnf-onto:lastYear               1876 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur et organiste anglais" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1810/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1876/> ;
+        rdagroup2elements:placeOfBirth  "Londres (Grande-Bretagne)" ;
+        rdagroup2elements:placeOfDeath  "Gloucester (Grande-Bretagne)" ;
+        schema:sameAs                   <http://imslp.org/wiki/Category:Wesley,_Samuel_Sebastian> ;
+        bio:birth                       "1810-08-14" ;
+        bio:death                       "1876-04-19" ;
+        owl:sameAs                      <http://viaf.org/viaf/69117195> , <http://fr.dbpedia.org/resource/Samuel_Sebastian_Wesley> , <http://data.bnf.fr/ark:/12148/cb139011072#about> ;
+        foaf:birthday                   "08-14" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Samuel_Sebastian_Wesley.jpg?width=300> , <http://commons.wikimedia.org/wiki/Special:FilePath/Samuel_Sebastian_Wesley.jpg> ;
+        foaf:familyName                 "Wesley" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Samuel Sebastian" ;
+        foaf:name                       "Samuel Sebastian Wesley" ;
+        foaf:page                       <http://data.bnf.fr/13901107/samuel_sebastian_wesley/> .
+
+<http://data.bnf.fr/ark:/12148/cb42984453m#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42072764v#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38604315b#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb433621759#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43358341s#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39752942r#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16520302s#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13944627m#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38141352s#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43527171n#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16266062k#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39683419j#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139446237#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14845972g#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39626460g#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14803181x#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42580406f#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422183393#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43336018j#Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139011072>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Samuel_Sebastian_Wesley> , <http://catalogue.bnf.fr/ark:/12148/cb139011072> ;
+        bnf-onto:FRBNF        13901107 ;
+        isni:identifierValid  "0000000115071336" ;
+        dcterms:created       "1989-06-01" ;
+        dcterms:modified      "2013-10-04" ;
+        owl:sameAs            <http://isni.org/isni/0000000115071336> ;
+        skos:closeMatch       <http://imslp.org/wiki/Category:Wesley,_Samuel_Sebastian> ;
+        skos:editorialNote    "Ave verum [Enregistrement sonore] : sacred choral favourites / Joseph Haydn, Gabriel Fauré, Samuel Sebastian Wesley... [et al.], comp. Brilliant classics  9148. - . - Grove 6. - . -"@fr ;
+        skos:exactMatch       <http://fr.dbpedia.org/resource/Samuel_Sebastian_Wesley> , <http://isni.org/isni/0000000115071336> , <http://fr.wikipedia.org/wiki/Samuel_Sebastian_Wesley> , <http://viaf.org/viaf/69117195> ;
+        skos:note             "Compositeur et organiste anglais"@fr ;
+        skos:prefLabel        "Samuel Sebastian Wesley (1810-1876)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42459391m#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38142570h#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16520293n#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139011072#foaf:Person> .

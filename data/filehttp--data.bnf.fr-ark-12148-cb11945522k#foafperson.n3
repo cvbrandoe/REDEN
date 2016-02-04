@@ -1,0 +1,59 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb11945522k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11945522k> ;
+        bnf-onto:FRBNF        11945522 ;
+        isni:identifierValid  "0000000121211366" ;
+        dcterms:created       "1985-07-06" ;
+        dcterms:modified      "2013-07-25" ;
+        owl:sameAs            <http://isni.org/isni/0000000121211366> ;
+        skos:altLabel         "Robert Cavelier de La Salle (1643-1687)"@fr ;
+        skos:editorialNote    "GDEL. - . - Cavelier de La Salle à la recherche du Mississipi : le journal du survivant rouennais Henri Joutel / préf. de Étienne Taillemite, 2003. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/119736772> , <http://viaf.org/viaf/12609996> , <http://isni.org/isni/0000000121211366> ;
+        skos:note             "Explorateur français. - Gouverneur du Canada de 1672 à 1682"@fr ;
+        skos:prefLabel        "René Robert Cavelier de La Salle (1643-1687)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11945522k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302092086#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11945522k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11945522k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11945522k#foaf:Person> .
+
+<http://data.bnf.fr/11945522/rene_robert_cavelier_de_la_salle/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11945522k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11945522k#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1643 ;
+        bnf-onto:lastYear               1687 ;
+        rdagroup2elements:biographicalInformation
+                "Explorateur français. - Gouverneur du Canada de 1672 à 1682" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1643/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1687/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Rouen" ;
+        bio:birth                       "1643-11-22" ;
+        bio:death                       "1687-03-19" ;
+        owl:sameAs                      <http://viaf.org/viaf/12609996> , <http://data.bnf.fr/ark:/12148/cb11945522k#about> , <http://www.idref.fr/119736772> ;
+        foaf:birthday                   "11-22" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b67002692.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8596044t.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8596046n.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53011640s.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8596043d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b67002714.thumbnail> ;
+        foaf:familyName                 "La Salle" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "René Robert Cavelier de" ;
+        foaf:name                       "René Robert Cavelier de La Salle" ;
+        foaf:page                       <http://data.bnf.fr/11945522/rene_robert_cavelier_de_la_salle/> .

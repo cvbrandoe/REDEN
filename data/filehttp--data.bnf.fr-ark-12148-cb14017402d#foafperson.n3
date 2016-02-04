@@ -1,0 +1,54 @@
+@prefix schema: <http://schema.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14017402d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/James_Reese_Europe> , <http://catalogue.bnf.fr/ark:/12148/cb14017402d> ;
+        bnf-onto:FRBNF        14017402 ;
+        isni:identifierValid  "0000000117427906" ;
+        dcterms:created       "1998-12-24" ;
+        dcterms:modified      "2002-10-29" ;
+        owl:sameAs            <http://isni.org/isni/0000000117427906> ;
+        skos:altLabel         "Jim Europe"@fr ;
+        skos:closeMatch       <http://imslp.org/wiki/Category:Europe,_James_Reese> ;
+        skos:exactMatch       <http://fr.dbpedia.org/resource/James_Reese_Europe> , <http://viaf.org/viaf/11189440> , <http://isni.org/isni/0000000117427906> , <http://dbpedia.org/resource/James_Reese_Europe> , <http://fr.wikipedia.org/wiki/James_Reese_Europe> ;
+        skos:note             "Chef d'orchestre de ragtime à New York"@fr ;
+        skos:prefLabel        "James Reese Europe (1884-1919?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14017402d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14017402d#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1884 ;
+        bnf-onto:lastYear              1919 ;
+        rdagroup2elements:biographicalInformation
+                "Chef d'orchestre de ragtime à New York" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1884/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1919/> ;
+        schema:sameAs                  <http://imslp.org/wiki/Category:Europe,_James_Reese> ;
+        bio:birth                      "1884" ;
+        bio:death                      "1919" ;
+        owl:sameAs                     <http://fr.dbpedia.org/resource/James_Reese_Europe> , <http://dbpedia.org/resource/James_Reese_Europe> , <http://viaf.org/viaf/11189440> , <http://data.bnf.fr/ark:/12148/cb14017402d#about> ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Vernon_Castle_and_Irene_Castle_-_Castle_House_Rag.jpg?width=300> , <http://commons.wikimedia.org/wiki/Special:FilePath/Vernon_Castle_and_Irene_Castle_-_Castle_House_Rag.jpg> ;
+        foaf:familyName                "Europe" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "James Reese" ;
+        foaf:name                      "James Reese Europe" ;
+        foaf:page                      <http://data.bnf.fr/14017402/james_reese_europe/> .
+
+<http://data.bnf.fr/ark:/12148/cb38606107n#Expression>
+        bnfroles:r1040       <http://data.bnf.fr/ark:/12148/cb14017402d#foaf:Person> ;
+        marcrel:cnd          <http://data.bnf.fr/ark:/12148/cb14017402d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14017402d#foaf:Person> .

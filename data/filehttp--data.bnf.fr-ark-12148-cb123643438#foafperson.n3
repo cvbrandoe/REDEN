@@ -1,0 +1,41 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/12364343/sydney_haldane_olivier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb123643438#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123643438>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb123643438> ;
+        bnf-onto:FRBNF      12364343 ;
+        dcterms:created     "1994-01-25" ;
+        dcterms:modified    "1994-01-26" ;
+        skos:editorialNote  "LCNA, 1977-1986. - . - Fabianism and colonialism / F. Lee, 1988. - . -"@fr ;
+        skos:note           "Haut-fonctionnaire du Colonial Office"@fr ;
+        skos:prefLabel      "Sydney Haldane Olivier (1859-1943)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb123643438#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123643438#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1859 ;
+        bnf-onto:lastYear              1943 ;
+        rdagroup2elements:biographicalInformation
+                "Haut-fonctionnaire du Colonial Office" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1859/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1943/> ;
+        bio:birth                      "1859-04-16" ;
+        bio:death                      "1943-02-15" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb123643438#about> ;
+        foaf:birthday                  "04-16" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b9053212h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9053210p.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b90532024.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b90532076.thumbnail> ;
+        foaf:familyName                "Olivier" ;
+        foaf:givenName                 "Sydney Haldane" ;
+        foaf:name                      "Sydney Haldane Olivier" ;
+        foaf:page                      <http://data.bnf.fr/12364343/sydney_haldane_olivier/> .

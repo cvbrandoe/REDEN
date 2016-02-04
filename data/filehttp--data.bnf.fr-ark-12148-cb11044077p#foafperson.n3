@@ -1,0 +1,103 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31735139v#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb317351375#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31735142r#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31735138h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb317351344#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31735135g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb317351433#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1864 ;
+        bnf-onto:lastYear               1944 ;
+        rdagroup2elements:biographicalInformation
+                "Auteur et traductrice de romans sentimentaux. - Pseudonyme de la journaliste Gabrielle Dumont (1864-1944)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1864/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Limoges (Haute-Vienne)" ;
+        rdagroup2elements:placeOfDeath  "Clermont-Ferrand (Puy-de-Dôme)" ;
+        bio:birth                       "1864-11-06" ;
+        bio:death                       "1944-01-14" ;
+        owl:sameAs                      <http://viaf.org/viaf/162392481> , <http://www.idref.fr/143875361> , <http://data.bnf.fr/ark:/12148/cb11044077p#about> ;
+        foaf:birthday                   "11-06" ;
+        foaf:familyName                 "Arvers" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Louis d'" ;
+        foaf:name                       "Louis d' Arvers" ;
+        foaf:page                       <http://data.bnf.fr/11044077/louis_d__arvers/> .
+
+<http://data.bnf.fr/ark:/12148/cb11044077p>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb11044077p> ;
+        bnf-onto:FRBNF      11044077 ;
+        dcterms:created     "1997-07-01" ;
+        dcterms:modified    "2015-03-31" ;
+        skos:altLabel       "Louis Arvers (1864-1944)"@fr ;
+        skos:editorialNote  "Le mariage de Lord Loveland / Charles Norris Williamson ; roman traduit de l'anglais par Louis d'Arvers, 1912. - . - Beautés rivales / Louis d'Arvers, 1938. - . -"@fr , "BN Cat. gén. : Arvers (Louis d'). - . - BN Cat. gén. suppl.. - . -"@fr , "BnF - Département de la recherche bibliographique [Recueil. Dossiers biographiques Boutillier du Retail. Documentation sur Gabrielle Dumont], 1944. - . - Leonore : Dumont, Louise Gabrielle Marie (pseud. Louis d'Arvers). - http://www.culture.gouv.fr/documentation/leonore/. - 2014-12-18 Encyclopédie des pseudonymes. Tome II / Henry Coston et Emmanuel Ratier, 1994 : Arvers, Louis (pseud. de Mme Gabrielle Dumont). - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/143875361> , <http://viaf.org/viaf/162392481> ;
+        skos:note           "Auteur et traductrice de romans sentimentaux. - Pseudonyme de la journaliste Gabrielle Dumont (1864-1944)"@fr ;
+        skos:prefLabel      "Louis d' Arvers (1864-1944)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb317351402#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31039020x#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31735141d#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31653373b#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11044077p#foaf:Person> .

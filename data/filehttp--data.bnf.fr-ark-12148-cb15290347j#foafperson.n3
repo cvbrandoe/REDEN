@@ -1,0 +1,70 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb15290347j#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1796 ;
+        bnf-onto:lastYear               1852 ;
+        rdagroup2elements:biographicalInformation
+                "Contre-amiral. - En 1817-1820 fit un voyage de circumnavigation sur l'Uranie. Campagnes hydrographiques: en Méditerranée, 1831-1833; dans le golfe du Mexique, 1838-1839; en Nouvelle-Zélande, 1842-1846. Affecté au Dépôt des Cartes et Plans en 1846, contre-amiral en 1848, il devient Major général de Toulon." ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1796/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1852/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Montpellier" ;
+        rdagroup2elements:placeOfDeath  "Toulon" ;
+        bio:birth                       "1796" ;
+        bio:death                       "1852" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb15290347j#about> , <http://viaf.org/viaf/93205253> , <http://www.idref.fr/149526865> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b8446401t.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53029673f.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8445560q.thumbnail> ;
+        foaf:familyName                 "Bérard" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Auguste" ;
+        foaf:name                       "Auguste Bérard" ;
+        foaf:page                       <http://data.bnf.fr/15290347/auguste_berard/> .
+
+<http://data.bnf.fr/ark:/12148/cb407282984#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15290347j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15290347j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15290347j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15290347j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15290347j> ;
+        bnf-onto:FRBNF        15290347 ;
+        isni:identifierValid  "0000000121437613" ;
+        dcterms:created       "1991-12-26" ;
+        dcterms:modified      "2013-08-06" ;
+        owl:sameAs            <http://isni.org/isni/0000000121437613> ;
+        skos:editorialNote    "Dictionnaire de biographie française, t.5, Paris, 1951, col. 1462. - . - Marins de France conquérants d'empires, 19e-20e siècle, Contre-Amiral Hubert Granier, Paris, 1991. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/93205253> , <http://www.idref.fr/149526865> , <http://isni.org/isni/0000000121437613> ;
+        skos:note             "Contre-amiral. - En 1817-1820 fit un voyage de circumnavigation sur l'Uranie. Campagnes hydrographiques: en Méditerranée, 1831-1833; dans le golfe du Mexique, 1838-1839; en Nouvelle-Zélande, 1842-1846. Affecté au Dépôt des Cartes et Plans en 1846, contre-amiral en 1848, il devient Major général de Toulon."@fr ;
+        skos:prefLabel        "Auguste Bérard (1796-1852)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15290347j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb300859988#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15290347j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15290347j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15290347j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40718279n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15290347j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15290347j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15290347j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb406764773#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15290347j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15290347j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15290347j#foaf:Person> .

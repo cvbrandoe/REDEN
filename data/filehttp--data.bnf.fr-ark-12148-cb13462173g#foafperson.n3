@@ -1,0 +1,56 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31282957f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13462173g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13462173g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13462173g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13462173g>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13462173g> ;
+        bnf-onto:FRBNF      13462173 ;
+        dcterms:created     "1999-11-01" ;
+        dcterms:modified    "2014-01-07" ;
+        skos:editorialNote  "Contribution à l'étude du traitement des fractures par la pointe de Malgaigne... / par Julien Saint-Martin, 1879 [thèse]. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/306258675> ;
+        skos:note           "Docteur en médecine (Paris, 1879)"@fr ;
+        skos:prefLabel      "Julien Saint-Martin (1842-19..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13462173g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb369292137#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13462173g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13462173g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13462173g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13462173g#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1842 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en médecine (Paris, 1879)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1842/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Aydie (Pyrénées-Atlantiques)" ;
+        bio:birth                       "1842-12-01" ;
+        bio:death                       "19.." ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb13462173g#about> , <http://viaf.org/viaf/306258675> ;
+        foaf:birthday                   "12-01" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k5619436h.thumbnail> ;
+        foaf:familyName                 "Saint-Martin" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Julien" ;
+        foaf:name                       "Julien Saint-Martin" ;
+        foaf:page                       <http://data.bnf.fr/13462173/julien_saint-martin/> .

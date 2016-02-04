@@ -1,0 +1,80 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb105038019>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb105038019> ;
+        bnf-onto:FRBNF        10503801 ;
+        isni:identifierValid  "0000000032378607" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-07-16" ;
+        owl:sameAs            <http://isni.org/isni/0000000032378607> ;
+        skos:editorialNote    "Le Château de la Pommeraie / par A[uguste] de Lacroix, 1848. - . - Lorenz. - . -"@fr , "WBI : Lacroix, Gustave-Auguste de. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/4920135> , <http://www.idref.fr/166521744> , <http://isni.org/isni/0000000032378607> ;
+        skos:note             "Conseiller de préfecture à Marseille puis à Versailles. - Sous-chef au ministère de l'Intérieur (1862). - Romancier"@fr ;
+        skos:prefLabel        "Auguste de Lacroix (1805-1891)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30710667q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307106682#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30710669d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30710670m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307106651#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30710666c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb105038019#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1805 ;
+        bnf-onto:lastYear               1891 ;
+        rdagroup2elements:biographicalInformation
+                "Conseiller de préfecture à Marseille puis à Versailles. - Sous-chef au ministère de l'Intérieur (1862). - Romancier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1805/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1891/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Lons-le-Saunier" ;
+        bio:birth                       "1805-06-10" ;
+        bio:death                       "1891-12-02" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb105038019#about> , <http://www.idref.fr/166521744> , <http://viaf.org/viaf/4920135> ;
+        foaf:birthday                   "06-10" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k5811781c.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k6566298b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k56614424.thumbnail> ;
+        foaf:familyName                 "Lacroix" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Auguste de" ;
+        foaf:name                       "Auguste de Lacroix" ;
+        foaf:page                       <http://data.bnf.fr/10503801/auguste_de_lacroix/> .

@@ -1,0 +1,47 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/15947813/william_augustus_spencer/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb15947813g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15947813g#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1855 ;
+        bnf-onto:lastYear               1912 ;
+        rdagroup2elements:biographicalInformation
+                "Bibliophile. - Périt dans le naufrage du Titanic" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1855/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1912/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "New York, N.Y." ;
+        rdagroup2elements:placeOfDeath  "en mer" ;
+        bio:birth                       "1855-01-07" ;
+        bio:death                       "1912-04-15" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb15947813g#about> ;
+        foaf:birthday                   "01-07" ;
+        foaf:familyName                 "Spencer" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "William Augustus" ;
+        foaf:name                       "William Augustus Spencer" ;
+        foaf:page                       <http://data.bnf.fr/15947813/william_augustus_spencer/> .
+
+<http://data.bnf.fr/ark:/12148/cb15947813g>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb15947813g> ;
+        bnf-onto:FRBNF      15947813 ;
+        dcterms:created     "2009-02-19" ;
+        dcterms:modified    "2009-02-20" ;
+        skos:editorialNote  "The Spencer collection of modern bookbindings / The New York public library,..., 1914. - . - Encyclopedia Titanica. - http://www.encyclopedia-titanica.org. - 2009-02-19"@fr ;
+        skos:note           "Bibliophile. - Périt dans le naufrage du Titanic"@fr ;
+        skos:prefLabel      "William Augustus Spencer (1855-1912)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb15947813g#foaf:Person> .

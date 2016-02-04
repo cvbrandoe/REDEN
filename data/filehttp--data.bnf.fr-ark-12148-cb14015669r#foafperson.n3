@@ -1,0 +1,79 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1882 ;
+        bnf-onto:lastYear               1981 ;
+        rdagroup2elements:biographicalInformation
+                "Pianiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1882/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1981/> ;
+        rdagroup2elements:placeOfBirth  "Londres" ;
+        rdagroup2elements:placeOfDeath  "Londres" ;
+        bio:birth                       "1882-12-15" ;
+        bio:death                       "1981-04-21" ;
+        owl:sameAs                      <http://viaf.org/viaf/86568452> , <http://data.bnf.fr/ark:/12148/cb14015669r#about> ;
+        foaf:birthday                   "12-15" ;
+        foaf:familyName                 "Newton" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Ivor" ;
+        foaf:name                       "Ivor Newton" ;
+        foaf:page                       <http://data.bnf.fr/14015669/ivor_newton/> .
+
+<http://data.bnf.fr/ark:/12148/cb38098441z#Expression>
+        bnfroles:r1560       <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383236610#Expression>
+        bnfroles:r1560       <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385011585#Expression>
+        bnfroles:r1560       <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38308394x#Expression>
+        bnfroles:r1560       <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb380752282#Expression>
+        bnfroles:r1560       <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38540199b#Expression>
+        bnfroles:r1560       <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14015669r>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb14015669r> ;
+        bnf-onto:FRBNF    14015669 ;
+        dcterms:created   "1998-11-13" ;
+        dcterms:modified  "2001-03-27" ;
+        skos:exactMatch   <http://viaf.org/viaf/86568452> ;
+        skos:note         "Pianiste"@fr ;
+        skos:prefLabel    "Ivor Newton (1882-1981)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38529837g#Expression>
+        bnfroles:r1560       <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> ;
+        marcrel:itr          <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14015669r#foaf:Person> .

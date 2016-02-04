@@ -1,0 +1,123 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb410083967#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13924904c#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb165491484#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13946734n#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42436198b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32206616g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb421058021#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32206992d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35367907d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32206617t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30557483k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43665466d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1071 ;
+        bnf-onto:lastYear              1127 ;
+        rdagroup2elements:biographicalInformation
+                "Duc d'Aquitaine, comte de Poitou et de Gascogne de 1086 à 1127. - Poète occitan" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1071/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1127/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/pro> ;
+        bio:birth                      "1071-10-22" ;
+        bio:death                      "1127-02-11" ;
+        owl:sameAs                     <http://fr.dbpedia.org/resource/Guillaume_IX_de_Poitiers> , <http://viaf.org/viaf/25851162> , <http://www.idref.fr/027273253> , <http://data.bnf.fr/ark:/12148/cb11886486f#about> ;
+        foaf:birthday                  "10-22" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k372299z.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/BnF_ms._12473_fol._128_-_Guillaume_IX_d'Aquitaine_(2).jpg?width=300> , <http://commons.wikimedia.org/wiki/Special:FilePath/BnF_ms._12473_fol._128_-_Guillaume_IX_d'Aquitaine_(2).jpg> ;
+        foaf:familyName                "Guillaume" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/11886486/guillaume_9/> .
+
+<http://data.bnf.fr/ark:/12148/cb14513782m#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb389742480#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305574827#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11886486f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Guillaume_IX_de_Poitiers> , <http://catalogue.bnf.fr/ark:/12148/cb11886486f> ;
+        bnf-onto:FRBNF        11886486 ;
+        isni:identifierValid  "0000000120227008" ;
+        dcterms:created       "1985-06-22" ;
+        dcterms:modified      "2013-07-25" ;
+        owl:sameAs            <http://isni.org/isni/0000000120227008> ;
+        skos:altLabel         "Guillem IX (duc d'Aquitaine, 1071-1127)"@fr , "Guglielmo IX (duc d'Aquitaine, 1071-1127)"@it , "Guilhem IX (duc d'Aquitaine, 1071-1127)"@oc , "Guillaume de Poitiers (1071-1127)"@fr , "Guillaume d'Aquitaine (1071-1127)"@fr , "Guilhem de Peiteus (1071-1127)"@oc , "Guilhem de Peitieu (1071-1127)"@oc , "Coms de Peitieus (1071-1127)" , "Wilhelm IX (duc d'Aquitaine, 1071-1127)"@de , "Guillaume le Troubadour (1071-1127)"@fr , "Guillaume VII (comte de Poitiers, 1071-1127)"@fr ;
+        skos:editorialNote    "GDEL. - . - DBF : Guillaume IX d'Aquitaine [mort le 10 février 1127]. - . -"@fr , "Lexikon des Mittelalters : Guillaume IX [mort en le 11-02-1126]. - . - Dictionnaire du Moyen âge / sous la direction de Claude Gauvard, Alain de Libera, Michel Zink, 2002 : Guillaume IX d'Aquitaine [mort en 1127]. - . - Los trovadores : historia literaria y textos / Martin de Riquer, 1992 : Guilhem de Peitieu [mort en 1126]. - . -"@fr , "Guillaume le Troubadour : duc d'Aquitaine fastueux et scandaleux / Bernard Félix, 2002. - . - BN Cat. gén.. - . -"@fr , "BnF, Paris, département des Manuscrits, Français 1749 : Coms de Peitieus. - . - Poesie / Guglielmo IX ; ed. critica a cura di Nicolo Pasero, 1973. - . - La tròba [Enregistrement sonore] : anthologie chantée des troubadours : XIIème-XIIIème siècles / Guilhelm de Peiteus, Jaufre Rudel, Marcabru... [et al.], comp. ; Troubadours art ensemble ; Gérad Zuchetto, dir. Trob'art-Tròba vox TR015. - . -"@fr , "Les chansons d'amour et de Joy de Guillaume de Poitiers, IXe duc d'Aquitaine / Jean de Poitiers, 1926. - . - Lieder Guillems IX, Grafen von Peitieu, Herzogs von Aquitanien / herausgegeben von Adelbert Keller, 1848. - . - Der \"Vers de dreyt nien\" Wilhelms IX. von Aquitanien : rätselhaftes Gedicht oder Rätselgedicht / Dietmar Rieger, Werner Peek, 1975. - . -"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Guillaume_IX_de_Poitiers> , <http://viaf.org/viaf/25851162> , <http://fr.dbpedia.org/resource/Guillaume_IX_de_Poitiers> , <http://isni.org/isni/0000000120227008> , <http://www.idref.fr/027273253> ;
+        skos:note             "Duc d'Aquitaine, comte de Poitou et de Gascogne de 1086 à 1127. - Poète occitan"@fr ;
+        skos:prefLabel        "Guillaume IX (duc d'Aquitaine, 1071-1127)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/11886486/guillaume_9/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34813693q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11886486f#foaf:Person> .

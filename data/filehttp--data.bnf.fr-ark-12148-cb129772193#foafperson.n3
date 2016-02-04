@@ -1,0 +1,60 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb129772193>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb129772193> ;
+        bnf-onto:FRBNF        12977219 ;
+        isni:identifierValid  "0000000120204084" ;
+        dcterms:created       "1994-03-08" ;
+        dcterms:modified      "2013-10-24" ;
+        owl:sameAs            <http://isni.org/isni/0000000120204084> ;
+        skos:altLabel         "Madeleine Rondeaux (1867-1938)"@fr ;
+        skos:editorialNote    "Madeleine et André Gide / Jean Schlumberger, 1956 [Contient de nombreux extraits de lettres de Madeleine Gide]. - . - [Lettres à Élie Allégret / Madeleine Rondeaux] in L'Enfance de l'art : correspondances avec Élie Allégret, 1886-1896... / André Gide, 1998. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000120204084> , <http://www.idref.fr/032793510> , <http://viaf.org/viaf/7520403> ;
+        skos:note             "Epouse de l'écrivain André Gide"@fr ;
+        skos:prefLabel        "Madeleine Gide (1867-1938)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb129772193#foaf:Person> .
+
+<http://data.bnf.fr/12977219/madeleine_gide/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb129772193#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb129772193#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1867 ;
+        bnf-onto:lastYear              1938 ;
+        rdagroup2elements:biographicalInformation
+                "Epouse de l'écrivain André Gide" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1867/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1938/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1867" ;
+        bio:death                      "1938-04-17" ;
+        owl:sameAs                     <http://www.idref.fr/032793510> , <http://data.bnf.fr/ark:/12148/cb129772193#about> , <http://viaf.org/viaf/7520403> ;
+        foaf:familyName                "Gide" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Madeleine" ;
+        foaf:name                      "Madeleine Gide" ;
+        foaf:page                      <http://data.bnf.fr/12977219/madeleine_gide/> .
+
+<http://data.bnf.fr/ark:/12148/cb356715601#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129772193#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129772193#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129772193#foaf:Person> .

@@ -1,0 +1,120 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb147937938>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb147937938> ;
+        bnf-onto:FRBNF        14793793 ;
+        isni:identifierValid  "0000000066635843" ;
+        dcterms:created       "1996-09-23" ;
+        dcterms:modified      "2013-08-03" ;
+        owl:sameAs            <http://isni.org/isni/0000000066635843> ;
+        skos:altLabel         "Henri Émilien Rousseau (1875-1933)"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/64324641> , <http://isni.org/isni/0000000066635843> , <http://www.idref.fr/123528313> ;
+        skos:note             "Peintre de genre et de portraits. - Aquarelliste et illustrateur"@fr ;
+        skos:prefLabel        "Henri Rousseau (1875-1933)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30838830f#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39620763w#Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30838881b#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39602287k#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39625211g#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31256728n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39624414t#Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1875 ;
+        bnf-onto:lastYear               1933 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre de genre et de portraits. - Aquarelliste et illustrateur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1875/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1933/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Peinture" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/750/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Le Caire, Égypte" ;
+        rdagroup2elements:placeOfDeath  "Aix-en-Provence (Bouches-du-Rhône)" ;
+        bio:birth                       "1875-12-17" ;
+        bio:death                       "1933-03-28" ;
+        owl:sameAs                      <http://viaf.org/viaf/64324641> , <http://www.idref.fr/123528313> , <http://data.bnf.fr/ark:/12148/cb147937938#about> ;
+        foaf:birthday                   "12-17" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b8424925s.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b84154520.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8424415p.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8424419b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8422637b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8421471c.thumbnail> ;
+        foaf:familyName                 "Rousseau" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Henri" ;
+        foaf:name                       "Henri Rousseau" ;
+        foaf:page                       <http://data.bnf.fr/14793793/henri_rousseau/> .
+
+<http://data.bnf.fr/ark:/12148/cb308388297#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb396104855#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30838839j#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39624428h#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb308388800#Expression>
+        bnfroles:r40         <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        marcrel:ann          <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb435881191#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> .
+
+<http://data.bnf.fr/14793793/henri_rousseau/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb147937938#foaf:Person> .

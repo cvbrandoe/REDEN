@@ -1,0 +1,73 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12734722g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12734722g> ;
+        bnf-onto:FRBNF        12734722 ;
+        isni:identifierValid  "0000000108884371" ;
+        dcterms:created       "1989-10-12" ;
+        dcterms:modified      "2013-07-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000108884371> ;
+        skos:editorialNote    "An American emperor / Louis Tracy, 2001 [reprod. de l'éd. de 1897]. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/37041838> , <http://isni.org/isni/0000000108884371> ;
+        skos:note             "Journaliste et romancier"@fr ;
+        skos:prefLabel        "Louis Tracy (1863-1928)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb323134873#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31488616t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb314886175#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb314886144#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31488615g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12734722g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1863 ;
+        bnf-onto:lastYear              1928 ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste et romancier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1863/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1928/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1863-03-18" ;
+        bio:death                      "1928-08-13" ;
+        owl:sameAs                     <http://viaf.org/viaf/37041838> , <http://data.bnf.fr/ark:/12148/cb12734722g#about> ;
+        foaf:birthday                  "03-18" ;
+        foaf:familyName                "Tracy" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Louis" ;
+        foaf:name                      "Louis Tracy" ;
+        foaf:page                      <http://data.bnf.fr/12734722/louis_tracy/> .

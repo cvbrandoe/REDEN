@@ -1,0 +1,113 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb41080241d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37590005s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319090189#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40406294b#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> .
+
+<http://data.bnf.fr/11895230/sadi_carnot/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb118952307>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb118952307> ;
+        bnf-onto:FRBNF        11895230 ;
+        isni:identifierValid  "0000000081223476" ;
+        dcterms:created       "1985-06-22" ;
+        dcterms:modified      "2013-10-15" ;
+        owl:sameAs            <http://isni.org/isni/0000000081223476> ;
+        skos:altLabel         "Nicolas Léonard Sadi Carnot (1796-1832)"@fr , "Sadi-Nicolas-Léonard Carnot (1796-1832)"@fr ;
+        skos:editorialNote    "Réflexions sur la puissance motrice du feu et sur les machines propres à développer cette puissance / par S. Carnot, 1824. - . - DBF : Carnot (Sadi, [Nicolas-Léonard-Sadi]). - . -"@fr , "WBI : Carnot (Nicolas Léonard Sadi). - . - BN Cat. gén. : Carnot (Sadi-Nicolas-Léonard). - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/026767724> , <http://viaf.org/viaf/44296404> , <http://isni.org/isni/0000000081223476> ;
+        skos:note             "Ancien élève de l'École polytechnique. - Officier. - Physicien spécialiste de thermodynamique. - Fils de"@fr ;
+        skos:prefLabel        "Sadi Carnot (1796-1832)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31909009b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301979237#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1796 ;
+        bnf-onto:lastYear               1832 ;
+        rdagroup2elements:biographicalInformation
+                "Ancien élève de l'École polytechnique. - Officier. - Physicien spécialiste de thermodynamique. - Fils de" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1796/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1832/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Physique" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/530/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        bio:birth                       "1796-06-01" ;
+        bio:death                       "1832-08-24" ;
+        owl:sameAs                      <http://www.idref.fr/026767724> , <http://data.bnf.fr/ark:/12148/cb118952307#about> , <http://viaf.org/viaf/44296404> ;
+        foaf:birthday                   "06-01" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b86266609.thumbnail> ;
+        foaf:familyName                 "Carnot" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Sadi" ;
+        foaf:name                       "Sadi Carnot" ;
+        foaf:page                       <http://data.bnf.fr/11895230/sadi_carnot/> .
+
+<http://data.bnf.fr/ark:/12148/cb365982519#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb350678633#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30197924k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31909010j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb375900064#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb118952307#foaf:Person> .

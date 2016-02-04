@@ -1,0 +1,47 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb167603081#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1854 ;
+        bnf-onto:lastYear               1946 ;
+        rdagroup2elements:biographicalInformation
+                "Chirurgien orthopédique. - Père de Konrad Lorenz" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/au> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1854/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1946/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Weidenau (Autriche)" ;
+        rdagroup2elements:placeOfDeath  "Altenberg (Autriche)" ;
+        bio:birth                       "1854-04-21" ;
+        bio:death                       "1946-02-12" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb167603081#about> ;
+        foaf:birthday                   "04-21" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b530787788.thumbnail> ;
+        foaf:familyName                 "Lorenz" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Adolf" ;
+        foaf:name                       "Adolf Lorenz" ;
+        foaf:page                       <http://data.bnf.fr/16760308/adolf_lorenz/> .
+
+<http://data.bnf.fr/ark:/12148/cb167603081>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb167603081> ;
+        bnf-onto:FRBNF    16760308 ;
+        dcterms:created   "2014-05-05" ;
+        dcterms:modified  "2014-05-05" ;
+        skos:note         "Chirurgien orthopédique. - Père de Konrad Lorenz"@fr ;
+        skos:prefLabel    "Adolf Lorenz (1854-1946)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb167603081#foaf:Person> .
+
+<http://data.bnf.fr/16760308/adolf_lorenz/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb167603081#foaf:Person> .

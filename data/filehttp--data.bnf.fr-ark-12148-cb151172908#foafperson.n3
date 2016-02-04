@@ -1,0 +1,81 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb393660553#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30823765d#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39366056f#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39365255d#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb151172908>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb151172908> ;
+        bnf-onto:FRBNF      15117290 ;
+        dcterms:created     "2006-11-30" ;
+        dcterms:modified    "2012-05-30" ;
+        skos:editorialNote  "Liste des libraires, 1719. - . - Lottin : date de mort erronée 1723. - . - Lepreux, Bretagne : le prénomme seulement Michel. - . -"@fr , "Renouard, 17 s. : notice \"Chardon, Étienne\". - . - Arbour, Femmes, 1470-1870 : le dit, à tort, décédé v. 1720. - . - Barbier, Juratic, Mellerio : notice \"Chardon, Étienne, veuve\". - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/124821340> , <http://viaf.org/viaf/223448493> ;
+        skos:note           "Imprimeur-libraire. - Fils de l'imprimeur-libraire de Rennes Pierre II Garnier. Marié le 19 fév. 1703 à la veuve de l'imprimeur parisien Étienne Chardon (voir aussi cette notice), il tient imprimerie à Paris dès 1702. Reçu maître officiellement le 16 mars 1718. Encore en activité en juin 1721 (procès-verbal de visite des imprimeries de Paris) et le 24 déc. 1721 (enregistrement à cette date d'un privilège obtenu par lui). Décédé le 31 mars 1722. Sa veuve lui succède à cette date"@fr ;
+        skos:prefLabel      "Jean-Michel Garnier (1675-1722)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36382610t#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304784445#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36296669g#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb151172908#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1675 ;
+        bnf-onto:lastYear              1722 ;
+        rdagroup2elements:biographicalInformation
+                "Imprimeur-libraire. - Fils de l'imprimeur-libraire de Rennes Pierre II Garnier. Marié le 19 fév. 1703 à la veuve de l'imprimeur parisien Étienne Chardon (voir aussi cette notice), il tient imprimerie à Paris dès 1702. Reçu maître officiellement le 16 mars 1718. Encore en activité en juin 1721 (procès-verbal de visite des imprimeries de Paris) et le 24 déc. 1721 (enregistrement à cette date d'un privilège obtenu par lui). Décédé le 31 mars 1722. Sa veuve lui succède à cette date" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1675/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1722/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1702-1722" ;
+        bio:birth                      "1675-06-09" ;
+        bio:death                      "1722-03-31" ;
+        owl:sameAs                     <http://viaf.org/viaf/223448493> , <http://data.bnf.fr/ark:/12148/cb151172908#about> , <http://www.idref.fr/124821340> ;
+        foaf:birthday                  "06-09" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k3105448.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k65532d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k3103828.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k310787d.thumbnail> ;
+        foaf:familyName                "Garnier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean-Michel" ;
+        foaf:name                      "Jean-Michel Garnier" ;
+        foaf:page                      <http://data.bnf.fr/15117290/jean-michel_garnier/> .

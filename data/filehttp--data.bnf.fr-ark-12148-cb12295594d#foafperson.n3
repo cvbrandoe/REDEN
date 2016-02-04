@@ -1,0 +1,158 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb319912221#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31991223c#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/12295594/gustave_julien/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb330593522#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32293805h#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32293808j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32293806v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb341378536#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32045249k#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1870 ;
+        bnf-onto:lastYear               1936 ;
+        rdagroup2elements:biographicalInformation
+                "Malgachisant. - Gouverneur général des colonies, secrétaire général de l'Académie malgache (1902-1903), gouverneur de l'Océanie (1915-1922). - A enseigné à l'École coloniale et à l'École des langues orientales. - Membre de l'Académie des sciences coloniales" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1870/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1936/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Administration publique" , "Langues" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/350/> , <http://dewey.info/class/400/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Toulouse" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1870-03-15" ;
+        bio:death                       "1936-08-02" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb12295594d#about> , <http://www.idref.fr/067044263> , <http://viaf.org/viaf/68993529> ;
+        foaf:birthday                   "03-15" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k58071095.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k65408505.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k65408483.thumbnail> ;
+        foaf:familyName                 "Julien" ;
+        foaf:givenName                  "Gustave" ;
+        foaf:name                       "Gustave Julien" ;
+        foaf:page                       <http://data.bnf.fr/12295594/gustave_julien/> .
+
+<http://data.bnf.fr/ark:/12148/cb33923749r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32257770t#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb320418498#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30667193f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34136750n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33464064x#Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12295594d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12295594d> ;
+        bnf-onto:FRBNF        12295594 ;
+        isni:identifierValid  "0000000061336107" ;
+        dcterms:created       "1993-02-22" ;
+        dcterms:modified      "2013-07-27" ;
+        owl:sameAs            <http://isni.org/isni/0000000061336107> ;
+        skos:altLabel         "Gustave-Henri Julien (1870-1936)"@fr ;
+        skos:editorialNote    "Précis théorique et pratique de la langue malgache pour faciliter l'usage rapide du hova, chef des autres dialectes / par Gustave Julien, 1904. - . - Pages arabico-madécasses: Histoire, Légendes et Mythes / traduction, annotations et commentaires par G. H. Julien, 1929 [14 mars 1933]. - . -"@fr , "BN Cat. gén.. - . - BN Cat. gén. suppl.. - . - BN Cat. gén. 1960-1969. - . -"@fr , "DBF : Julien (Gustave-Henri-Jacques). - . - Hommes et destins. 3, Madagascar, 1976. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/067044263> , <http://viaf.org/viaf/68993529> , <http://isni.org/isni/0000000061336107> ;
+        skos:note             "Malgachisant. - Gouverneur général des colonies, secrétaire général de l'Académie malgache (1902-1903), gouverneur de l'Océanie (1915-1922). - A enseigné à l'École coloniale et à l'École des langues orientales. - Membre de l'Académie des sciences coloniales"@fr ;
+        skos:prefLabel        "Gustave Julien (1870-1936)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb312243331#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33085835h#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30667194s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb324317662#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb306671954#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31074841q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12295594d#foaf:Person> .

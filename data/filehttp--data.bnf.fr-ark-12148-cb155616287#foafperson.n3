@@ -1,0 +1,49 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/15561628/louise_elisabeth_nicole_de_la_rochefoucauld/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb155616287#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb155616287>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb155616287> ;
+        bnf-onto:FRBNF    15561628 ;
+        dcterms:created   "2007-09-06" ;
+        dcterms:modified  "2007-09-06" ;
+        skos:altLabel     "Louise Élisabeth Nicole de La Rochefoucauld d' Enville (1716-1797)"@fr , "Duchesse d' Enville (1716-1797)"@fr , "Louise Élisabeth Nicole de La Rochefoucauld d'Enville (1716-1797)"@fr , "Louise Élisabeth Nicole de La Rochefoucauld d' Anville (1716-1797)"@fr ;
+        skos:note         "Comtesse d'Aubijoux, marquise de Barbezieux, baronne d'Artye. - Tenait un salon à La Roche-Guyon"@fr ;
+        skos:prefLabel    "Louise Élisabeth Nicole de La Rochefoucauld (1716-1797)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb155616287#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb155616287#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1716 ;
+        bnf-onto:lastYear              1797 ;
+        rdagroup2elements:biographicalInformation
+                "Comtesse d'Aubijoux, marquise de Barbezieux, baronne d'Artye. - Tenait un salon à La Roche-Guyon" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1716/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1797/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Archéologie. Préhistoire. Histoire ancienne" , "Littératures" , "Économie politique. Travail" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/800/> , <http://dewey.info/class/930/> , <http://dewey.info/class/330/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1716-09-22" ;
+        bio:death                      "1797-05-31" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb155616287#about> ;
+        foaf:birthday                  "09-22" ;
+        foaf:familyName                "La Rochefoucauld" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Louise Élisabeth Nicole de" ;
+        foaf:name                      "Louise Élisabeth Nicole de La Rochefoucauld" ;
+        foaf:page                      <http://data.bnf.fr/15561628/louise_elisabeth_nicole_de_la_rochefoucauld/> .

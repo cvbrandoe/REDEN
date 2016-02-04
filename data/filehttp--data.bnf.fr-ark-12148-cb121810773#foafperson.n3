@@ -1,0 +1,57 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb305935099#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121810773#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121810773#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121810773#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121810773#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1804 ;
+        bnf-onto:lastYear              1881 ;
+        rdagroup2elements:biographicalInformation
+                "Chanoine de Saint-Dié. - Directeur de l'institution de la Trinité à La Marche (Vosges)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1804/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1881/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1804" ;
+        bio:death                      "1881" ;
+        owl:sameAs                     <http://viaf.org/viaf/22184735> , <http://data.bnf.fr/ark:/12148/cb121810773#about> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k6437757c.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k5731580k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k6458786z.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k6433952r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k6458773b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k5731560t.thumbnail> ;
+        foaf:familyName                "Henry" ;
+        foaf:givenName                 "Augustin" ;
+        foaf:name                      "Augustin Henry" ;
+        foaf:page                      <http://data.bnf.fr/12181077/augustin_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb121810773>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb121810773> ;
+        bnf-onto:FRBNF        12181077 ;
+        isni:identifierValid  "0000000061558762" ;
+        dcterms:created       "1991-01-08" ;
+        dcterms:modified      "2013-07-26" ;
+        owl:sameAs            <http://isni.org/isni/0000000061558762> ;
+        skos:editorialNote    "Histoire de la poésie, avec des jugements critiques sur les plus célèbres poètes... / par l'abbé A. Henry. Tome 5 : Poèsie chrétienne, depuis l'origine jusqu'à la formation des langues modernes, 1855. - . - Lorenz. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/22184735> , <http://isni.org/isni/0000000061558762> ;
+        skos:note             "Chanoine de Saint-Dié. - Directeur de l'institution de la Trinité à La Marche (Vosges)"@fr ;
+        skos:prefLabel        "Augustin Henry (1804-1881)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb121810773#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30593526w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121810773#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121810773#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121810773#foaf:Person> .

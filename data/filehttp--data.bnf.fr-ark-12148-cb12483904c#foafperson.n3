@@ -1,0 +1,128 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb436693067#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb320796316#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12483904c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12483904c> ;
+        bnf-onto:FRBNF        12483904 ;
+        isni:identifierValid  "0000000081486989" ;
+        dcterms:created       "1995-09-28" ;
+        dcterms:modified      "2013-07-30" ;
+        skos:altLabel         "̓Eratosthénēs (0284?-0192? av. J.-C.)"@fr , "̓Eratosthénīs (0284?-0192? av. J.-C.)"@fr , "Eratosthenes Cyrenaeus philosophus (0284?-0192? av. J.-C.)"@la , "Ératosthène de Cyrène (0284?-0192? av. J.-C.)"@fr , "Ἐρατοσθένης (0284?-0192? av. J.-C.)"@fr , "Eratostene (0284?-0192? av. J.-C.)"@it ;
+        skos:editorialNote    "Clavis SGL : Eratosthenes Cyrenaeus philosophus. - . - Laffont-Bompiani, Auteurs ; Oeuvres philosophiques, 1992 : Ératosthène de Cyrène. - . - Kleine Pauly ; LCNA 1987-1994 : Eratosthenes. - . -"@fr , "Encicl. italiana : Eratostene. - . - DOC / V. Volpi, 1994. - . - Encycl. Grèce. - . -"@fr , "Die Erigone des Eratosthenes : eine kommentierte Ausgabe der Fragmente / Alexandra Rosokoki, 1995. - . - GDEL ; Larousse 19e s. : Ératosthène. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/181367732> , <http://www.idref.fr/034042709> ;
+        skos:note             "Astronome, géographe, mathématicien, musicien, historien, philosophe, philologue et poète. - Disciple d'Ariston de Chios, de Lysanias de Cyrène et de Callimaque. - Il fut précepteur du futur Ptolémée IV et directeur de la bibliothèque d'Alexandrie. - Il ne reste que des fragments de ses oeuvres"@fr ;
+        skos:prefLabel        "Ératosthène (0284?-0192? av. J.-C.)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41608493h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40750956t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             -284 ;
+        bnf-onto:lastYear              -192 ;
+        rdagroup2elements:biographicalInformation
+                "Astronome, géographe, mathématicien, musicien, historien, philosophe, philologue et poète. - Disciple d'Ariston de Chios, de Lysanias de Cyrène et de Callimaque. - Il fut précepteur du futur Ptolémée IV et directeur de la bibliothèque d'Alexandrie. - Il ne reste que des fragments de ses oeuvres" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/-0284/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/-0192/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/grc> ;
+        bio:birth                      "- 284" ;
+        bio:death                      "- 192" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb12483904c#about> , <http://viaf.org/viaf/181367732> , <http://www.idref.fr/034042709> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b8490796v.thumbnail> ;
+        foaf:familyName                "Ératosthène" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/12483904/eratosthene/> .
+
+<http://data.bnf.fr/ark:/12148/cb13506597g#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37028632z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30403093m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304030959#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30850423j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30403096n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30403099p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/12483904/eratosthene/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304031002#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42431939t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30403098b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304030970#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13506595s#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32079630v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12483904c#foaf:Person> .

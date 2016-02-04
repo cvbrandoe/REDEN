@@ -1,0 +1,51 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb118927092#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1746 ;
+        bnf-onto:lastYear              1785 ;
+        rdagroup2elements:biographicalInformation
+                "Père de Napoléon Bonaparte. - Député d'Ajaccio à l'Assemblée provinciale de Corse" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1746/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1785/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1746-03-29" ;
+        bio:death                      "1785-02-24" ;
+        owl:sameAs                     <http://fr.dbpedia.org/resource/Charles_Bonaparte> , <http://data.bnf.fr/ark:/12148/cb118927092#about> , <http://viaf.org/viaf/56606237> ;
+        foaf:birthday                  "03-29" ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Carlo_Maria_Bonaparte.jpg> , <http://commons.wikimedia.org/wiki/Special:FilePath/Carlo_Maria_Bonaparte.jpg?width=300> ;
+        foaf:familyName                "Bonaparte" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Charles" ;
+        foaf:name                      "Charles Bonaparte" ;
+        foaf:page                      <http://data.bnf.fr/11892709/charles_bonaparte/> .
+
+<http://data.bnf.fr/11892709/charles_bonaparte/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb118927092#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb118927092>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb118927092> , <http://fr.wikipedia.org/wiki/Charles_Bonaparte> ;
+        bnf-onto:FRBNF        11892709 ;
+        isni:identifierValid  "0000000080747817" ;
+        dcterms:created       "1985-06-22" ;
+        dcterms:modified      "2013-07-25" ;
+        owl:sameAs            <http://isni.org/isni/0000000080747817> ;
+        skos:altLabel         "Carlo de Buonaparte (1746-1785)"@fr , "Carlo-Maria Buonaparte (1746-1785)"@fr , "Charles de Bonaparte (1746-1785)"@fr , "Charles-Marie Bonaparte (1746-1785)"@fr ;
+        skos:editorialNote    "[Le livre de raison / de Charles Bonaparte] i̲n̲ M. de Buonaparte ou le Livre inachevé / Xavier Versini, 1977. - . - DBF et Dictionnaire des francs-maçons français / Michel Gaudart de Soulages, Hubert Lamant, 1995 : Bonaparte (Charles-Marie). - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000080747817> , <http://fr.dbpedia.org/resource/Charles_Bonaparte> , <http://viaf.org/viaf/56606237> , <http://fr.wikipedia.org/wiki/Charles_Bonaparte> ;
+        skos:note             "Père de Napoléon Bonaparte. - Député d'Ajaccio à l'Assemblée provinciale de Corse"@fr ;
+        skos:prefLabel        "Charles Bonaparte (1746-1785)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb118927092#foaf:Person> .

@@ -1,0 +1,49 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb433170218#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12163742f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12163742f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12163742f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12163742f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12163742f> ;
+        bnf-onto:FRBNF        12163742 ;
+        isni:identifierValid  "0000000139879575" ;
+        dcterms:created       "1990-10-01" ;
+        dcterms:modified      "2013-07-26" ;
+        owl:sameAs            <http://isni.org/isni/0000000139879575> ;
+        skos:exactMatch       <http://isni.org/isni/0000000139879575> , <http://viaf.org/viaf/205829594> , <http://www.idref.fr/030165385> ;
+        skos:note             "Magistrat rémois, père de saint Jean-Baptiste de La Salle"@fr ;
+        skos:prefLabel        "Louis de La Salle (1625-1672)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12163742f#foaf:Person> .
+
+<http://data.bnf.fr/12163742/louis_de_la_salle/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12163742f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12163742f#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1625 ;
+        bnf-onto:lastYear              1672 ;
+        rdagroup2elements:biographicalInformation
+                "Magistrat rémois, père de saint Jean-Baptiste de La Salle" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1625/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1672/> ;
+        bio:birth                      "1625" ;
+        bio:death                      "1672" ;
+        owl:sameAs                     <http://www.idref.fr/030165385> , <http://viaf.org/viaf/205829594> , <http://data.bnf.fr/ark:/12148/cb12163742f#about> ;
+        foaf:familyName                "La Salle" ;
+        foaf:givenName                 "Louis de" ;
+        foaf:name                      "Louis de La Salle" ;
+        foaf:page                      <http://data.bnf.fr/12163742/louis_de_la_salle/> .

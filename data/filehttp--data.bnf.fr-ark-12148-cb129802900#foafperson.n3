@@ -1,0 +1,79 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb309271338#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb358466309#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30927131k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31975168m#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb129802900>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb129802900> ;
+        bnf-onto:FRBNF        12980290 ;
+        isni:identifierValid  "0000000081790059" ;
+        dcterms:created       "1994-04-01" ;
+        dcterms:modified      "2013-07-31" ;
+        owl:sameAs            <http://isni.org/isni/0000000081790059> ;
+        skos:editorialNote    "Cournot et la renaissance du probabilisme qu XIXe siècle / François Mentré, 1908. - . - ABF. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/112082482> , <http://isni.org/isni/0000000081790059> , <http://www.idref.fr/057077649> ;
+        skos:note             "Professeur de philosophie"@fr ;
+        skos:prefLabel        "François Mentré (1877-1950)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30927132x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356815549#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb129802900#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1877 ;
+        bnf-onto:lastYear               1950 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de philosophie" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1877/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1950/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Abbéville (Meurthe-et-Moselle)" ;
+        bio:birth                       "1877-03-29" ;
+        bio:death                       "1950-12-20" ;
+        owl:sameAs                      <http://www.idref.fr/057077649> , <http://data.bnf.fr/ark:/12148/cb129802900#about> , <http://viaf.org/viaf/112082482> ;
+        foaf:birthday                   "03-29" ;
+        foaf:familyName                 "Mentré" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "François" ;
+        foaf:name                       "François Mentré" ;
+        foaf:page                       <http://data.bnf.fr/12980290/francois_mentre/> .

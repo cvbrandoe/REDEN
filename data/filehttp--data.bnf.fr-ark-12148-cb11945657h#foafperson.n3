@@ -1,0 +1,102 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42372626j#Expression>
+        bnfroles:r190        <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        marcrel:spn          <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31108537b#Expression>
+        bnfroles:r71         <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        marcrel:att          <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41321646r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11945657h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Pierre_Ier_de_Russie> , <http://catalogue.bnf.fr/ark:/12148/cb11945657h> ;
+        bnf-onto:FRBNF        11945657 ;
+        isni:identifierValid  "0000000121263465" ;
+        dcterms:created       "1985-07-06" ;
+        dcterms:modified      "2013-12-17" ;
+        owl:sameAs            <http://isni.org/isni/0000000121263465> ;
+        skos:altLabel         "Pierre le Grand (empereur de Russie, 1672-1725)"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Pierre_Ier_de_Russie> , <http://viaf.org/viaf/30329184> , <http://fr.dbpedia.org/resource/Pierre_Ier_de_Russie> , <http://www.idref.fr/027408183> , <http://isni.org/isni/0000000121263465> ;
+        skos:note             "Coempereur (1682) puis empereur de Russie de 1689 à 1725"@fr ;
+        skos:prefLabel        "Pierre I (empereur de Russie, 1672-1725)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1672 ;
+        bnf-onto:lastYear              1725 ;
+        rdagroup2elements:biographicalInformation
+                "Coempereur (1682) puis empereur de Russie de 1689 à 1725" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/ru> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1672/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1725/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/rus> ;
+        bio:birth                      "1672-06-09" ;
+        bio:death                      "1725-02-08" ;
+        owl:sameAs                     <http://fr.dbpedia.org/resource/Pierre_Ier_de_Russie> , <http://www.idref.fr/027408183> , <http://viaf.org/viaf/30329184> , <http://data.bnf.fr/ark:/12148/cb11945657h#about> ;
+        foaf:birthday                  "06-09" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b55003057x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530411937.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b59730349.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53039408b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530411541.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53040533x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b5903779c.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69296253.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53011750k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530391442.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b59663718.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53039303q.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b84914378.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8408602f.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b59036724.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b59730364.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Peter_der-Grosse_1838.jpg?width=300> , <http://gallica.bnf.fr/ark:/12148/btv1b5966372p.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b59036954.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53040781v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8490978m.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53039569n.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b5903867h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53040821r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6948012n.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6929624p.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b5905372q.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6929626h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53039325f.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b5973037j.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b84904888.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b5903914q.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Peter_der-Grosse_1838.jpg> , <http://gallica.bnf.fr/ark:/12148/btv1b5903824r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8491386d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b84920161.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b5963671c.thumbnail> ;
+        foaf:familyName                "Pierre" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/11945657/pierre_1/> .
+
+<http://data.bnf.fr/11945657/pierre_1/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31709974x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40609830t#Expression>
+        bnfroles:r190        <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        marcrel:spn          <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40609835j#Expression>
+        bnfroles:r190        <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        marcrel:spn          <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31108542x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119407160>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40762542q#Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31108556m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11945657h#foaf:Person> .

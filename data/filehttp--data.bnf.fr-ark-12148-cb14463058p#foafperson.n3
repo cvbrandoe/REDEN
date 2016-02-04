@@ -1,0 +1,128 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1544 ;
+        bnf-onto:lastYear              1612 ;
+        rdagroup2elements:biographicalInformation
+                "Homme de lettres. - Précepteur de Louis XIII" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1544/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1612/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1544" ;
+        bio:death                      "1612" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb14463058p#about> , <http://viaf.org/viaf/12529052> , <http://www.idref.fr/055672450> ;
+        foaf:familyName                "Le Fèvre" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Nicolas" ;
+        foaf:name                      "Nicolas Le Fèvre" ;
+        foaf:page                      <http://data.bnf.fr/14463058/nicolas_le_fevre/> .
+
+<http://data.bnf.fr/ark:/12148/cb14463058p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14463058p> ;
+        bnf-onto:FRBNF        14463058 ;
+        isni:identifierValid  "0000000121210910" ;
+        dcterms:created       "2003-03-21" ;
+        dcterms:modified      "2013-08-02" ;
+        owl:sameAs            <http://isni.org/isni/0000000121210910> ;
+        skos:altLabel         "Nicolaus Faber (1544-1612)"@la ;
+        skos:editorialNote    "M. Annaei Senecae Rhetoris opera, quae exstant / integris Nicolai Fabri commentariis illustrata, 1672. - . - ABF. - . -"@fr , "Cioranescu, 16e s.. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/12529052> , <http://www.idref.fr/055672450> , <http://isni.org/isni/0000000121210910> ;
+        skos:note             "Homme de lettres. - Précepteur de Louis XIII"@fr ;
+        skos:prefLabel        "Nicolas Le Fèvre (1544-1612)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30815545h#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30604350r#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30773480b#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33996262r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307734821#Expression>
+        bnfroles:r120        <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        marcrel:cwt          <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30773478s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30604352f#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb306043513#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc599625/cd0e1820#Expression>
+        bnfroles:r4010       <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        marcrel:fmo          <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31351579z#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30773477f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb308155445#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb313515805#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30048960g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb313515836#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33985546w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14463058p#foaf:Person> .

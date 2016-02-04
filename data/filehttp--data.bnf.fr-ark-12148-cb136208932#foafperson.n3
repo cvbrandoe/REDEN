@@ -1,0 +1,52 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb136208932>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb136208932> ;
+        bnf-onto:FRBNF        13620893 ;
+        isni:identifierValid  "0000000080873530" ;
+        dcterms:created       "2001-06-20" ;
+        dcterms:modified      "2013-08-01" ;
+        owl:sameAs            <http://isni.org/isni/0000000080873530> ;
+        skos:altLabel         "Kegan Paul (1828-1902)"@fr ;
+        skos:editorialNote    "Kegan Paul : a Victorian imprint : publishers, books and cultural history / Leslie Howsam, 1998. - . - Bibliothèque nationale, Grande-Bretagne. - . - 2009-12-10"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/7759669> , <http://isni.org/isni/0000000080873530> ;
+        skos:note             "É́diteur, spécialisé dans les livres scolaires et pour la jeunesse. - Prêtre de l'église anglicane"@fr ;
+        skos:prefLabel        "Charles Kegan Paul (1828-1902)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb136208932#foaf:Person> .
+
+<http://data.bnf.fr/13620893/charles_kegan_paul/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb136208932#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb136208932#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1828 ;
+        bnf-onto:lastYear               1902 ;
+        rdagroup2elements:biographicalInformation
+                "É́diteur, spécialisé dans les livres scolaires et pour la jeunesse. - Prêtre de l'église anglicane" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1828/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1902/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "White Lackington (GB)" ;
+        rdagroup2elements:placeOfDeath  "Londres" ;
+        bio:birth                       "1828-03-08" ;
+        bio:death                       "1902-07-19" ;
+        owl:sameAs                      <http://viaf.org/viaf/7759669> , <http://data.bnf.fr/ark:/12148/cb136208932#about> ;
+        foaf:birthday                   "03-08" ;
+        foaf:familyName                 "Paul" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Charles Kegan" ;
+        foaf:name                       "Charles Kegan Paul" ;
+        foaf:page                       <http://data.bnf.fr/13620893/charles_kegan_paul/> .

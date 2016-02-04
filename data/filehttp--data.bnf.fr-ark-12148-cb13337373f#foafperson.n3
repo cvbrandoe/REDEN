@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb304104429#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb13337373f#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb13337373f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13337373f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb367164721#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb13337373f#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb13337373f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13337373f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13337373f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13337373f> ;
+        bnf-onto:FRBNF        13337373 ;
+        isni:identifierValid  "0000000080005549" ;
+        dcterms:created       "1999-01-04" ;
+        dcterms:modified      "2013-07-31" ;
+        owl:sameAs            <http://isni.org/isni/0000000080005549> ;
+        skos:altLabel         "James I Fletcher (1710?-1795)"@fr , "James Fletcher I (1710?-1795)"@fr ;
+        skos:editorialNote    "Timperley : le dit âgé de 87 ans et 7 mois lors de son décès. - . - Plomer, Bushnell, Dix. - . - Mc Kenzie. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/66613219> , <http://www.idref.fr/070148449> , <http://isni.org/isni/0000000080005549> ;
+        skos:note             "Libraire. - Originaire de Salisbury. En 1731, loue sa boutique d'Oxford. \"Privilegiatus bookseller\" le 13 janv. 1730. - À partir de 1769, travaille en association avec son fils James II Fletcher sous la raison : \"Fletcher and Co\""@fr ;
+        skos:prefLabel        "James Fletcher (1710?-1795)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13337373f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13337373f#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1710 ;
+        bnf-onto:lastYear              1795 ;
+        rdagroup2elements:biographicalInformation
+                "Libraire. - Originaire de Salisbury. En 1731, loue sa boutique d'Oxford. \"Privilegiatus bookseller\" le 13 janv. 1730. - À partir de 1769, travaille en association avec son fils James II Fletcher sous la raison : \"Fletcher and Co\"" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1710/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1795/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1730-1795" ;
+        bio:birth                      "1710" ;
+        bio:death                      "1795-06-12" ;
+        owl:sameAs                     <http://viaf.org/viaf/66613219> , <http://www.idref.fr/070148449> , <http://data.bnf.fr/ark:/12148/cb13337373f#about> ;
+        foaf:familyName                "Fletcher" ;
+        foaf:givenName                 "James" ;
+        foaf:name                      "James Fletcher" ;
+        foaf:page                      <http://data.bnf.fr/13337373/james_fletcher/> .
+
+<http://data.bnf.fr/ark:/12148/cb39943959v#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb13337373f#foaf:Person> ;
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb13337373f#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb13337373f#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb13337373f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13337373f#foaf:Person> .

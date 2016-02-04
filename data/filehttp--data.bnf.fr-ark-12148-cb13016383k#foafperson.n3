@@ -1,0 +1,148 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1856 ;
+        bnf-onto:lastYear              1931 ;
+        rdagroup2elements:biographicalInformation
+                "Chef de cabinet de Gambetta. - Inspecteur général au Ministère de l'Intérieur. - Rédacteur de la loi Waldeck-Rousseau sur les syndicats (1884). - Membre de sociétés philanthropiques, collaborateur de la \"Revue pénitentiaire\", de la \"Revue politique et parlementaire\" et de la \"Revue philanthropique\"" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1856/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1931/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1856-02-27" ;
+        bio:death                      "1931-04" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb13016383k#about> , <http://viaf.org/viaf/232811321> , <http://www.idref.fr/033850828> ;
+        foaf:birthday                  "02-27" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k741715/f1.item.thumbnail> ;
+        foaf:familyName                "Brunot" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Charles" ;
+        foaf:name                      "Charles Brunot" ;
+        foaf:page                      <http://data.bnf.fr/13016383/charles_brunot/> .
+
+<http://data.bnf.fr/ark:/12148/cb30170655x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31883590f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30170654k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31883582t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30170657m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13016383k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13016383k> ;
+        bnf-onto:FRBNF        13016383 ;
+        isni:identifierValid  "0000000366194285" ;
+        dcterms:created       "1995-06-07" ;
+        dcterms:modified      "2015-03-14" ;
+        skos:editorialNote    "Temps, 1931-04-21. - . - BN Cat. gén. suppl.. - . -"@fr , "Les déclassés asolidaires : délinquants de droit commun, mécontents politiques, etc. : notes présentées au Congrès international de l'éducation sociale / par Charles Brunot, 1901. - . - DBF : Brunot (Charles-Bernard) ; mourut après 1929. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/033850828> , <http://viaf.org/viaf/232811321> ;
+        skos:note             "Chef de cabinet de Gambetta. - Inspecteur général au Ministère de l'Intérieur. - Rédacteur de la loi Waldeck-Rousseau sur les syndicats (1884). - Membre de sociétés philanthropiques, collaborateur de la \"Revue pénitentiaire\", de la \"Revue politique et parlementaire\" et de la \"Revue philanthropique\""@fr ;
+        skos:prefLabel        "Charles Brunot (1856-1931)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31883581g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30170658z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31883576w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb318835804#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31883584h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301706568#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31883587j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb318835777#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31883585v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb318835835#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301706599#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31883578k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31883588w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb318835866#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb318835897#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13016383k#foaf:Person> .

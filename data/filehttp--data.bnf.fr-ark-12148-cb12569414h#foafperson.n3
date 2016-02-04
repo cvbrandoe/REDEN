@@ -1,0 +1,84 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12569414h>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12569414h> ;
+        bnf-onto:FRBNF      12569414 ;
+        dcterms:created     "1997-06-18" ;
+        dcterms:modified    "2014-01-20" ;
+        skos:editorialNote  "BN Cat. gén. : David (Henri), pseud. H. Darsay. - . - BN Cat. gén. suppl.. - . -"@fr , "Ingénuité / Henri David, 1914. - . - DBF. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/73970165> ;
+        skos:note           "A été avocat à la cour de Paris. - Collabora à de nombreux journaux politiques et littéraires. - A été député puis sénateur"@fr ;
+        skos:prefLabel      "Henri David (1857-1914)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1857 ;
+        bnf-onto:lastYear              1914 ;
+        rdagroup2elements:biographicalInformation
+                "A été avocat à la cour de Paris. - Collabora à de nombreux journaux politiques et littéraires. - A été député puis sénateur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1857/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1914/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1857-04-18" ;
+        bio:death                      "1914-08-07" ;
+        owl:sameAs                     <http://viaf.org/viaf/73970165> , <http://data.bnf.fr/ark:/12148/cb12569414h#about> ;
+        foaf:birthday                  "04-18" ;
+        foaf:familyName                "David" ;
+        foaf:givenName                 "Henri" ;
+        foaf:name                      "Henri David" ;
+        foaf:page                      <http://data.bnf.fr/12569414/henri_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb429247207#Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42881922t#Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31998770z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42881972c#Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb314913333#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42981725g#Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb431582953#Expression>
+        bnfroles:r510        <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> ;
+        marcrel:lyr          <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38758139z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12569414h#foaf:Person> .

@@ -1,0 +1,44 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/16241598/michel_dreyfus/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb16241598b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16241598b>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb16241598b> ;
+        bnf-onto:FRBNF    16241598 ;
+        dcterms:created   "2010-11-03" ;
+        dcterms:modified  "2010-11-12" ;
+        skos:note         "Installé à Paris depuis 1924. - Agent général de \"White horse distillers ltd\" en France. - A été assitant manager du Savoy hotel de Londres. - Membre de l' \"American chamber of commerce\" et de \"British chamber of commerce\" de Paris"@fr ;
+        skos:prefLabel    "Michel Dreyfus (1883?-19..)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb16241598b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16241598b#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1883 ;
+        rdagroup2elements:biographicalInformation
+                "Installé à Paris depuis 1924. - Agent général de \"White horse distillers ltd\" en France. - A été assitant manager du Savoy hotel de Londres. - Membre de l' \"American chamber of commerce\" et de \"British chamber of commerce\" de Paris" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/sz> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1883/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Économie domestique. Cuisine" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/640/> ;
+        bio:birth                      "1883" ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb16241598b#about> ;
+        foaf:familyName                "Dreyfus" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Michel" ;
+        foaf:name                      "Michel Dreyfus" ;
+        foaf:page                      <http://data.bnf.fr/16241598/michel_dreyfus/> .

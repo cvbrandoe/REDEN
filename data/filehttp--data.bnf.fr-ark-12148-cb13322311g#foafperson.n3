@@ -1,0 +1,67 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/13322311/francois_sabatier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13322311g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13322311g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1818 ;
+        bnf-onto:lastYear              1891 ;
+        rdagroup2elements:biographicalInformation
+                "A aussi traduit de l'allemand et du latin en français" , "Homme de lettres, critique d'art. - Époux de la cantatrice Caroline Ungher (1841-1877)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1818/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1891/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1818-07-02" ;
+        bio:death                      "1891-12-01" ;
+        owl:sameAs                     <http://www.idref.fr/035576804> , <http://viaf.org/viaf/24746360> , <http://data.bnf.fr/ark:/12148/cb13322311g#about> ;
+        foaf:birthday                  "07-02" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k67613w.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k5818139w.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k67747g.thumbnail> ;
+        foaf:familyName                "Sabatier" ;
+        foaf:givenName                 "François" ;
+        foaf:name                      "François Sabatier" ;
+        foaf:page                      <http://data.bnf.fr/13322311/francois_sabatier/> .
+
+<http://data.bnf.fr/ark:/12148/cb13322311g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13322311g> ;
+        bnf-onto:FRBNF        13322311 ;
+        isni:identifierValid  "0000000107786964" ;
+        dcterms:created       "1998-07-17" ;
+        dcterms:modified      "2013-07-31" ;
+        owl:sameAs            <http://isni.org/isni/0000000107786964> ;
+        skos:altLabel         "François Sabatier-Ungher"@fr , "François Sabatier- Ungher"@fr ;
+        skos:editorialNote    "Le Faust / Goethe ; trad. en français par François Sabatier, 1995 [document électronique : reprod. de l'éd. de 1893]. - . - Wilhelm Tell : poème dramatique / de Schiller ; traduit dans le mètre de l'original par François Sabatier-Ungher, 1859. - . -"@fr , "Berthelot. - . - Lorenz. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/035576804> , <http://viaf.org/viaf/24746360> , <http://isni.org/isni/0000000107786964> ;
+        skos:note             "Homme de lettres, critique d'art. - Époux de la cantatrice Caroline Ungher (1841-1877)"@fr , "A aussi traduit de l'allemand et du latin en français"@fr ;
+        skos:prefLabel        "François Sabatier (1818-1891)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13322311g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30525248d#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13322311g#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13322311g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13322311g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb313153279#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13322311g#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13322311g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13322311g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31273939j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13322311g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13322311g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13322311g#foaf:Person> .

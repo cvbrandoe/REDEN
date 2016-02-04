@@ -1,0 +1,81 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34100954h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30457914z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123445840>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb123445840> ;
+        bnf-onto:FRBNF        12344584 ;
+        isni:identifierValid  "0000000054628283" ;
+        dcterms:created       "1993-10-27" ;
+        dcterms:modified      "2003-04-10" ;
+        owl:sameAs            <http://isni.org/isni/0000000054628283> ;
+        skos:altLabel         "Jean de Kerual (1831-1895)"@fr ;
+        skos:editorialNote    "Kerduel, ou Les missionnaires du XVIIe siècle au pays de Lannion / par l'abbé France, 1890. - . - Autour de mon clocher / Jean de Kerual, 1895. - . -"@fr , "DBF. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/19751849> , <http://www.idref.fr/032410751> , <http://isni.org/isni/0000000054628283> ;
+        skos:note             "Prêtre (1855). - Historien et préhistorien spécialiste de la Bretagne"@fr ;
+        skos:prefLabel        "Pierre France (1831-1895)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34117162t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1831 ;
+        bnf-onto:lastYear               1895 ;
+        rdagroup2elements:biographicalInformation
+                "Prêtre (1855). - Historien et préhistorien spécialiste de la Bretagne" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1831/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1895/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Goudelin, Côtes d'Armor" ;
+        bio:birth                       "1831-02-07" ;
+        bio:death                       "1895" ;
+        owl:sameAs                      <http://viaf.org/viaf/19751849> , <http://www.idref.fr/032410751> , <http://data.bnf.fr/ark:/12148/cb123445840#about> ;
+        foaf:birthday                   "02-07" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k57666750.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k96035213.thumbnail> ;
+        foaf:familyName                 "France" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Pierre" ;
+        foaf:name                       "Pierre France" ;
+        foaf:page                       <http://data.bnf.fr/12344584/pierre_france/> .
+
+<http://data.bnf.fr/ark:/12148/cb36015769h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb341858694#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35551516z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123445840#foaf:Person> .

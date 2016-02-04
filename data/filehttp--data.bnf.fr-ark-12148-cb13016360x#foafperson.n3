@@ -1,0 +1,49 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/13016360/pauline/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13016360x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13016360x#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1878 ;
+        bnf-onto:lastYear               1899 ;
+        rdagroup2elements:biographicalInformation
+                "Pauline est le nom en religion d'Alix de Laplane, fille de la Charité de saint Vincent de Paul (à partir de 1896/1898)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1878/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1899/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Religion" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/200/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfDeath  "Pau" ;
+        bio:birth                       "1878" ;
+        bio:death                       "1899-12-10" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb13016360x#about> , <http://viaf.org/viaf/144860> ;
+        foaf:familyName                 "Pauline" ;
+        foaf:gender                     "female" ;
+        foaf:page                       <http://data.bnf.fr/13016360/pauline/> .
+
+<http://data.bnf.fr/ark:/12148/cb13016360x>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13016360x> ;
+        bnf-onto:FRBNF      13016360 ;
+        dcterms:created     "1995-06-07" ;
+        dcterms:modified    "2009-08-19" ;
+        skos:altLabel       "Alix Rouger de Laplane (1878-1899)"@fr , "Alix de Laplane (1878-1899)"@fr , "Marie-Alix Rouger de Laplane (1878-1899)"@fr , "Marie-Alix de Laplane (1878-1899)"@fr ;
+        skos:editorialNote  "[Lettres de sœur Pauline], [dans] : Sœur Pauline, fille de la Charité : sa vie, sa correspondance / G. d'Anticamareta, 1904. - . - BN Cat. gén. : LAPLANE (Marie-Alix), en religion sœur Pauline. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/144860> ;
+        skos:note           "Pauline est le nom en religion d'Alix de Laplane, fille de la Charité de saint Vincent de Paul (à partir de 1896/1898)"@fr ;
+        skos:prefLabel      "Pauline (fille de la Charité, 1878-1899)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13016360x#foaf:Person> .

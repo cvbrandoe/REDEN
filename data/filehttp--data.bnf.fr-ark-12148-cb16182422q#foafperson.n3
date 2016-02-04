@@ -1,0 +1,42 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/16182422/marie-therese-catherine_corneille/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb16182422q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16182422q#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1775 ;
+        rdagroup2elements:biographicalInformation
+                "Fille de Jean-François Corneille (1714-1802) et de sa seconde épouse Suzanne-Claudine Quemper de La Ville-Brunard (1746-18..). - Arrière-petite-nièce de Pierre Corneille" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1775/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1775" ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb16182422q#about> ;
+        foaf:familyName                "Corneille" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Marie-Thérèse-Catherine" ;
+        foaf:name                      "Marie-Thérèse-Catherine Corneille" ;
+        foaf:page                      <http://data.bnf.fr/16182422/marie-therese-catherine_corneille/> .
+
+<http://data.bnf.fr/ark:/12148/cb16182422q>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb16182422q> ;
+        bnf-onto:FRBNF    16182422 ;
+        dcterms:created   "2010-02-22" ;
+        dcterms:modified  "2010-02-22" ;
+        skos:note         "Fille de Jean-François Corneille (1714-1802) et de sa seconde épouse Suzanne-Claudine Quemper de La Ville-Brunard (1746-18..). - Arrière-petite-nièce de Pierre Corneille"@fr ;
+        skos:prefLabel    "Marie-Thérèse-Catherine Corneille (1775-18..)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb16182422q#foaf:Person> .

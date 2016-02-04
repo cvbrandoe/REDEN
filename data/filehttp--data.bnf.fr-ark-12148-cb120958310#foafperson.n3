@@ -1,0 +1,81 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38939104g#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35748363r#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349761599#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39121127r#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402159132#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1850 ;
+        bnf-onto:lastYear              1924 ;
+        rdagroup2elements:biographicalInformation
+                "Traduit de l'arabe en français" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1850/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1924/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1850" ;
+        bio:death                      "1924" ;
+        owl:sameAs                     <http://viaf.org/viaf/96504145> , <http://fr.dbpedia.org/resource/Lucien_Charles_Gautier> , <http://www.idref.fr/029303400> , <http://data.bnf.fr/ark:/12148/cb120958310#about> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k58088554.thumbnail> ;
+        foaf:familyName                "Gautier" ;
+        foaf:givenName                 "Lucien" ;
+        foaf:name                      "Lucien Gautier" ;
+        foaf:page                      <http://data.bnf.fr/12095831/lucien_gautier/> .
+
+<http://data.bnf.fr/ark:/12148/cb43880098g#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120958310>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb120958310> , <http://fr.wikipedia.org/wiki/Lucien_Charles_Gautier> ;
+        bnf-onto:FRBNF        12095831 ;
+        isni:identifierValid  "000000011776841X" ;
+        dcterms:created       "1988-12-19" ;
+        dcterms:modified      "2013-07-25" ;
+        skos:altLabel         "Lucien Gauthier (1850-1924)"@fr , "Lucien-Charles Gautier"@fr ;
+        skos:editorialNote    "Au-delà du Jourdain / par Lucien Gautier, 1896. - . - La perle précieuse / Ghâzâli ; trad. de l'arabe par Lucien Gauthier [i.e. Gautier], 1995. - . -"@fr ;
+        skos:exactMatch       <http://fr.dbpedia.org/resource/Lucien_Charles_Gautier> , <http://viaf.org/viaf/96504145> , <http://www.idref.fr/029303400> , <http://fr.wikipedia.org/wiki/Lucien_Charles_Gautier> ;
+        skos:note             "Traduit de l'arabe en français"@fr ;
+        skos:prefLabel        "Lucien Gautier (1850-1924)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304900854#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120958310#foaf:Person> .

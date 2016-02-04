@@ -1,0 +1,131 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12227808v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Jean_Rousseau_(musicien)> , <http://catalogue.bnf.fr/ark:/12148/cb12227808v> ;
+        bnf-onto:FRBNF        12227808 ;
+        isni:identifierValid  "0000000121475388" ;
+        dcterms:created       "1991-12-06" ;
+        dcterms:modified      "2013-07-26" ;
+        owl:sameAs            <http://isni.org/isni/0000000121475388> ;
+        skos:editorialNote    "Grove music online. - http://www.grovemusic.com. - 2007-10-24 BN Cat. gén. : Rousseau (Jean), maître de viole. - . -"@fr , "Jean Rousseau's \"Traité de la viole\", 1980 [reprod. de l'éd. de 1687]. - . - Fétis. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000121475388> , <http://fr.dbpedia.org/resource/Jean_Rousseau_(musicien)> , <http://viaf.org/viaf/110070066> , <http://fr.wikipedia.org/wiki/Jean_Rousseau_(musicien)> ;
+        skos:note             "Maître de viole, théoricien et compositeur"@fr ;
+        skos:prefLabel        "Jean Rousseau (1644-1699)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35658647c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31256854g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36955564m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31256857h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42956727r#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1644 ;
+        bnf-onto:lastYear              1699 ;
+        rdagroup2elements:biographicalInformation
+                "Maître de viole, théoricien et compositeur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1644/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1699/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1644-10-01" ;
+        bio:death                      "1699-06-01" ;
+        owl:sameAs                     <http://fr.dbpedia.org/resource/Jean_Rousseau_(musicien)> , <http://data.bnf.fr/ark:/12148/cb12227808v#about> , <http://viaf.org/viaf/110070066> ;
+        foaf:birthday                  "10-01" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f10.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f15.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f3.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f19.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k581157.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f6.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f2.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f13.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f17.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f9.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f18.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f8.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f7.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f4.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f14.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f16.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f12.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f5.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53059254g/f11.item.thumbnail> ;
+        foaf:familyName                "Rousseau" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Rousseau" ;
+        foaf:page                      <http://data.bnf.fr/12227808/jean_rousseau/> .
+
+<http://data.bnf.fr/ark:/12148/cb312568565#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37240078f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43550622r#Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb325887799#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43246072c#Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb432460711#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43246073q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39741303r#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb432460742#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31256855t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb397416712#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12227808v#foaf:Person> .

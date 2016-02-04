@@ -1,0 +1,288 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb347650070#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31975172v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302804939#Expression>
+        bnfroles:r40         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:ann          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31975178x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30280487c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11897951m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Antoine-Augustin_Cournot> , <http://catalogue.bnf.fr/ark:/12148/cb11897951m> ;
+        bnf-onto:FRBNF        11897951 ;
+        isni:identifierValid  "0000000121235464" ;
+        dcterms:created       "1985-06-22" ;
+        dcterms:modified      "2015-07-17" ;
+        owl:sameAs            <http://isni.org/isni/0000000121235464> ;
+        skos:editorialNote    "GLU. - . - Sous le voile du cosmos : quand les scientifiques parlent de Dieu / Jacques Arnould, 2015 : né le 28 août 1801, mort le 30 mars 1877. - . -"@fr , "Matérialisme, vitalisme, rationalisme : étude sur l'emploi des données de la science en philosophie / A. A. Cournot ; éd. par Claire Salomon-Bayet, 1987. - . - DBF. - . -"@fr ;
+        skos:exactMatch       <http://fr.dbpedia.org/resource/Antoine-Augustin_Cournot> , <http://isni.org/isni/0000000121235464> , <http://fr.wikipedia.org/wiki/Antoine-Augustin_Cournot> , <http://viaf.org/viaf/22140393> ;
+        skos:note             "Mathématicien. - Philosophe. - Économiste. - Recteur de l'académie de Lyon"@fr ;
+        skos:prefLabel        "Antoine-Augustin Cournot (1801-1877)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1801 ;
+        bnf-onto:lastYear               1877 ;
+        rdagroup2elements:biographicalInformation
+                "Mathématicien. - Philosophe. - Économiste. - Recteur de l'académie de Lyon" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1801/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1877/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Philosophie" , "Mathématiques" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/510/> , <http://dewey.info/class/100/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Gray" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1801-08-20" ;
+        bio:death                       "1877-04-02" ;
+        owl:sameAs                      <http://viaf.org/viaf/22140393> , <http://data.bnf.fr/ark:/12148/cb11897951m#about> , <http://fr.dbpedia.org/resource/Antoine-Augustin_Cournot> ;
+        foaf:birthday                   "08-20" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k68125r.thumbnail> ;
+        foaf:familyName                 "Cournot" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Antoine-Augustin" ;
+        foaf:name                       "Antoine-Augustin Cournot" ;
+        foaf:page                       <http://data.bnf.fr/11897951/antoine-augustin_cournot/> .
+
+<http://data.bnf.fr/ark:/12148/cb34669328k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302804830#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30674646s#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302804892#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34674407w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30280482n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34674406j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30280488q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422962108#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319751736#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34696449q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34570331b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34662812w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30599313f#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37472760r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37249990z#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34311051s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31975168m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302804908#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31975175w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30280484b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb347704569#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30280491m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30280480z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35127202k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302804861#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34302978b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34670986f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31975169z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37714498c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34958826b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30280485p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/11897951/antoine-augustin_cournot/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30280492z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319751705#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319751767#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351873906#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302804819#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31975177k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372420349#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34872966n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37401404r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11897951m#foaf:Person> .

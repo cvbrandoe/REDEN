@@ -1,0 +1,53 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb127407530>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb127407530> ;
+        bnf-onto:FRBNF      12740753 ;
+        dcterms:created     "1990-04-04" ;
+        dcterms:modified    "2010-08-07" ;
+        skos:editorialNote  "Bibi-la-Purée : roman / par Saint-Martin ; d'après la pièce de MM. Mouézy Éon et Alexandre Fontanes, 1926. - . - ABF. - . -"@fr , "Anthologie des écrivains morts à la guerre, 1939-1945, 1960. - . - BN Cat. gén. : Saint-Martin, romancier. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/32123022> ;
+        skos:note           "Pseudonyme de: Georges Martin-Israël"@fr ;
+        skos:prefLabel      "Saint-Martin (1892-1944)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb127407530#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb127407530#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1892 ;
+        bnf-onto:lastYear              1944 ;
+        rdagroup2elements:biographicalInformation
+                "Pseudonyme de: Georges Martin-Israël" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1892/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1892-02-14" ;
+        bio:death                      "1944-10-22" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb127407530#about> , <http://viaf.org/viaf/32123022> ;
+        foaf:birthday                  "02-14" ;
+        foaf:familyName                "Saint-Martin" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/12740753/saint-martin/> .
+
+<http://data.bnf.fr/ark:/12148/cb30987211g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb127407530#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb127407530#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127407530#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb312828424#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb127407530#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb127407530#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127407530#foaf:Person> .

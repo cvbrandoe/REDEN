@@ -1,0 +1,72 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37235043s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1726 ;
+        rdagroup2elements:biographicalInformation
+                "Membre de l'Assemblée nationale constituante. - Prêtre du Diocèse de Tarbes (ordonné en 1755). - Curé de Vic-en-Bigorre, Hautes-Pyrénées (depuis 1773). - Docteur en théologie de la Faculté de Toulouse" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1726/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1726-05-26" ;
+        bio:death                      "18.." ;
+        owl:sameAs                     <http://www.idref.fr/034474870> , <http://viaf.org/viaf/217097129> , <http://data.bnf.fr/ark:/12148/cb12522747s#about> ;
+        foaf:birthday                  "05-26" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k46291x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k46407r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k454034.thumbnail> ;
+        foaf:familyName                "Rivière" ;
+        foaf:givenName                 "Jacques" ;
+        foaf:name                      "Jacques Rivière" ;
+        foaf:page                      <http://data.bnf.fr/12522747/jacques_riviere/> .
+
+<http://data.bnf.fr/ark:/12148/cb37235319r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31223324t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12522747s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12522747s> ;
+        bnf-onto:FRBNF        12522747 ;
+        isni:identifierValid  "0000000359360580" ;
+        dcterms:created       "1996-07-24" ;
+        dcterms:modified      "2013-12-17" ;
+        owl:sameAs            <http://isni.org/isni/0000000359360580> ;
+        skos:editorialNote    "WBI. - . - BN Cat. gén. : Rivière, Jacques. - . -"@fr , "Lettre de M. Rivière, curé de Vic, député de Bigorre, à MM. ses vicaires, au sujet du serment civique, 1995 [document électronique : reprod. de l'éd. de 1791]. - . - Dictionnaire des constituants / Edna Hindie Lemay, 1991. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000359360580> , <http://viaf.org/viaf/217097129> , <http://www.idref.fr/034474870> ;
+        skos:note             "Membre de l'Assemblée nationale constituante. - Prêtre du Diocèse de Tarbes (ordonné en 1755). - Curé de Vic-en-Bigorre, Hautes-Pyrénées (depuis 1773). - Docteur en théologie de la Faculté de Toulouse"@fr ;
+        skos:prefLabel        "Jacques Rivière (1726-18..?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31223323g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37238779f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12522747s#foaf:Person> .

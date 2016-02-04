@@ -1,0 +1,76 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1827 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1827/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:placeOfBirth  "Châlons-sur-Marne" ;
+        bio:birth                       "1827" ;
+        bio:death                       "187." ;
+        owl:sameAs                      <http://fr.dbpedia.org/resource/Louis-Camille_d'Olivier> , <http://data.bnf.fr/ark:/12148/cb14976654r#about> , <http://viaf.org/viaf/15045654> ;
+        foaf:familyName                 "Olivier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Louis Camille d'" ;
+        foaf:name                       "Louis Camille d' Olivier" ;
+        foaf:page                       <http://data.bnf.fr/14976654/louis_camille_d__olivier/> .
+
+<http://data.bnf.fr/ark:/12148/cb405629952#Expression>
+        bnfroles:r530        <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> ;
+        marcrel:pht          <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43822202d#Expression>
+        bnfroles:r530        <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> ;
+        marcrel:pht          <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43822180x#Expression>
+        bnfroles:r530        <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> ;
+        marcrel:pht          <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43822215r#Expression>
+        bnfroles:r530        <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> ;
+        marcrel:pht          <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438201181#Expression>
+        bnfroles:r530        <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> ;
+        marcrel:pht          <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14976654r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14976654r> , <http://fr.wikipedia.org/wiki/Louis-Camille_d'Olivier> ;
+        bnf-onto:FRBNF        14976654 ;
+        isni:identifierValid  "0000000002970132" ;
+        dcterms:created       "2003-12-05" ;
+        dcterms:modified      "2015-03-13" ;
+        owl:sameAs            <http://isni.org/isni/0000000002970132> ;
+        skos:exactMatch       <http://viaf.org/viaf/15045654> , <http://fr.dbpedia.org/resource/Louis-Camille_d'Olivier> , <http://isni.org/isni/0000000002970132> , <http://fr.wikipedia.org/wiki/Louis-Camille_d'Olivier> ;
+        skos:prefLabel        "Louis Camille d' Olivier (1827-ap.1870)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb404731536#Expression>
+        bnfroles:r530        <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> ;
+        marcrel:pht          <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43822224q#Expression>
+        bnfroles:r530        <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> ;
+        marcrel:pht          <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14976654r#foaf:Person> .

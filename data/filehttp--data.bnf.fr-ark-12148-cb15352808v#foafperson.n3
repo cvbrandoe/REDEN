@@ -1,0 +1,144 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1813 ;
+        bnf-onto:lastYear               1887 ;
+        rdagroup2elements:biographicalInformation
+                "Zoologue et naturaliste. - Directeur du musée ethnographique de Munich" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1813/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1887/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Bayreuth (Allemagne)" ;
+        rdagroup2elements:placeOfDeath  "Munich (Allemagne)" ;
+        bio:birth                       "1813-10-03" ;
+        bio:death                       "1887-05-31" ;
+        owl:sameAs                      <http://www.idref.fr/166978639> , <http://data.bnf.fr/ark:/12148/cb15352808v#about> , <http://viaf.org/viaf/12608048> ;
+        foaf:birthday                   "10-03" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b84508859.thumbnail> ;
+        foaf:familyName                 "Wagner" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Moritz" ;
+        foaf:name                       "Moritz Wagner" ;
+        foaf:page                       <http://data.bnf.fr/15352808/moritz_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb31613950h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31613953j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316139437#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31613945x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb444294085#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31613951v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15352808v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15352808v> ;
+        bnf-onto:FRBNF        15352808 ;
+        isni:identifierValid  "0000000080922427" ;
+        dcterms:created       "2000-03-14" ;
+        dcterms:modified      "2014-12-17" ;
+        owl:sameAs            <http://isni.org/isni/0000000080922427> ;
+        skos:altLabel         "Moritz Friedrich Wagner (1813-1887)"@fr ;
+        skos:editorialNote    "Reise nach dem Ararat und dem Hochland Armenien / von Dr. Moriz Wagner, 1848. - . - Deutsche biographische Enzyklopädie. Bd 10, 1999. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000080922427> , <http://viaf.org/viaf/12608048> , <http://www.idref.fr/166978639> ;
+        skos:note             "Zoologue et naturaliste. - Directeur du musée ethnographique de Munich"@fr ;
+        skos:prefLabel        "Moritz Wagner (1813-1887)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb44428790s#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31613954w#Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31613944k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316139526#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31613947m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41692113m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31613948z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316139468#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33267062m#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316139499#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40706969k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40645421m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .
+
+<http://data.bnf.fr/15352808/moritz_wagner/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb15352808v#foaf:Person> .

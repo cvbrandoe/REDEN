@@ -1,0 +1,53 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb11093315r#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1883 ;
+        bnf-onto:lastYear               1914 ;
+        bnf-onto:mortPourLaFrance       true ;
+        rdagroup2elements:biographicalInformation
+                "Juge d'instruction à Mauriac. - Docteur en droit (Paris, 1909)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1883/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1914/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Chenérailles (Creuse)" ;
+        rdagroup2elements:placeOfDeath  "Jonquery (Marne)" ;
+        bio:birth                       "1883-05-25" ;
+        bio:death                       "1914-12-21" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb11093315r#about> , <http://viaf.org/viaf/78768786> ;
+        foaf:birthday                   "05-25" ;
+        foaf:familyName                 "Auclair" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "François" ;
+        foaf:name                       "François Auclair" ;
+        foaf:page                       <http://data.bnf.fr/11093315/francois_auclair/> .
+
+<http://data.bnf.fr/ark:/12148/cb11093315r>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb11093315r> ;
+        bnf-onto:FRBNF      11093315 ;
+        dcterms:created     "1997-07-01" ;
+        dcterms:modified    "2009-02-09" ;
+        skos:editorialNote  "Les Lois ouvrières et l'agriculture : les ouvriers agricoles, prud'hommes agricoles, accidents du travail, repos hebdomadaire, retraites ouvrières / par François Auclair, 1909. - . - Mémoire des hommes. - http://www.memoiredeshommes.sga.defense.gouv.fr/. - 2009-02-09"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/78768786> ;
+        skos:note           "Juge d'instruction à Mauriac. - Docteur en droit (Paris, 1909)"@fr ;
+        skos:prefLabel      "François Auclair (1883-1914)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb11093315r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31739785n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11093315r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11093315r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11093315r#foaf:Person> .

@@ -1,0 +1,78 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34921874w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32496406t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1810 ;
+        bnf-onto:lastYear               1888 ;
+        rdagroup2elements:biographicalInformation
+                "Auteur de romans et de récits moraux. - Frère du poète Juste Olivier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/sz> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1810/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1888/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Eysins, Suisse" ;
+        rdagroup2elements:placeOfDeath  "Givrins, Suisse" ;
+        bio:birth                       "1810-06-03" ;
+        bio:death                       "1888-02-25" ;
+        owl:sameAs                      <http://www.idref.fr/067046312> , <http://data.bnf.fr/ark:/12148/cb120599918#about> , <http://viaf.org/viaf/32259> ;
+        foaf:birthday                   "06-03" ;
+        foaf:familyName                 "Olivier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Urbain" ;
+        foaf:name                       "Urbain Olivier" ;
+        foaf:page                       <http://data.bnf.fr/12059991/urbain_olivier/> .
+
+<http://data.bnf.fr/ark:/12148/cb120599918>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb120599918> ;
+        bnf-onto:FRBNF        12059991 ;
+        isni:identifierValid  "0000000032261388" ;
+        dcterms:created       "1987-11-16" ;
+        dcterms:modified      "2013-07-25" ;
+        owl:sameAs            <http://isni.org/isni/0000000032261388> ;
+        skos:editorialNote    "L'orphelin : roman / Urbain Olivier, 1975. - . - Larousse, 20e s.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/32259> , <http://isni.org/isni/0000000032261388> , <http://www.idref.fr/067046312> ;
+        skos:note             "Auteur de romans et de récits moraux. - Frère du poète Juste Olivier"@fr ;
+        skos:prefLabel        "Urbain Olivier (1810-1888)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35286160n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> .
+
+<http://data.bnf.fr/12059991/urbain_olivier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb310352497#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31035250f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120599918#foaf:Person> .

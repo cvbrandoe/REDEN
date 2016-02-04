@@ -1,0 +1,82 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14801953d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14801953d> ;
+        bnf-onto:FRBNF        14801953 ;
+        isni:identifierValid  "0000000046090962" ;
+        dcterms:created       "1998-04-10" ;
+        dcterms:modified      "2013-08-03" ;
+        owl:sameAs            <http://isni.org/isni/0000000046090962> ;
+        skos:editorialNote    "Boetius und die griechische Harmonik : des Anicius Manlius Severinus Boetius fünf Bücher über die Musik / aus der lateinischen in die deutsche Sprache übertragen... von Oscar Paul, 1872. - . - Dictionnaire biographique des musiciens / Theodore Baker, Nicolas Slonimsky, 1995. - . -"@fr , "Grove music online. - http://www.oxfordmusiconline.com. - 2012-01-18 BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/30277577> , <http://isni.org/isni/0000000046090962> ;
+        skos:note             "Théoricien de la musique. - Professeur au conservatoire et à l'université de Leipzig, Allemagne. - Critique musical"@fr ;
+        skos:prefLabel        "Oscar Paul (1836-1898)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301184076#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31067860h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32511814v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32511816j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31067858z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1836 ;
+        bnf-onto:lastYear              1898 ;
+        rdagroup2elements:biographicalInformation
+                "Théoricien de la musique. - Professeur au conservatoire et à l'université de Leipzig, Allemagne. - Critique musical" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1836/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1898/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        bio:birth                      "1836-04-08" ;
+        bio:death                      "1898-04-18" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb14801953d#about> , <http://viaf.org/viaf/30277577> ;
+        foaf:birthday                  "04-08" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b84234495.thumbnail> ;
+        foaf:familyName                "Paul" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Oscar" ;
+        foaf:name                      "Oscar Paul" ;
+        foaf:page                      <http://data.bnf.fr/14801953/oscar_paul/> .
+
+<http://data.bnf.fr/14801953/oscar_paul/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb310678599#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14801953d#foaf:Person> .

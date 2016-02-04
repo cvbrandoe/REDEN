@@ -1,0 +1,67 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39500080z#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb16551281h#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb16551281h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16551281h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16551281h>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb16551281h> ;
+        bnf-onto:FRBNF      16551281 ;
+        dcterms:created     "2011-11-18" ;
+        dcterms:modified    "2014-06-02" ;
+        skos:altLabel       "Pierre (Juliette)"@fr ;
+        skos:editorialNote  "Dictionnaire des comédiens / Henry Lyonnet, 1969. - . - BnF. Département des Arts du spectacle. Collection de manuscrits. Correspondances.. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/215948521> ;
+        skos:note           "Actrice au Théâtre de la Porte St-Martin et à la Gaité. - Epousa le comédien : Clarence (1819-1866)"@fr ;
+        skos:prefLabel      "Juliette Clarence (1836-19..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb16551281h#foaf:Person> .
+
+<http://data.bnf.fr/16551281/juliette_clarence/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb16551281h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39500069f#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb16551281h#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb16551281h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16551281h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc98991t/cd0e3703#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb16551281h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16551281h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16551281h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16551281h#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1836 ;
+        rdagroup2elements:biographicalInformation
+                "Actrice au Théâtre de la Porte St-Martin et à la Gaité. - Epousa le comédien : Clarence (1819-1866)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1836/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1836" ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://viaf.org/viaf/215948521> , <http://data.bnf.fr/ark:/12148/cb16551281h#about> ;
+        foaf:familyName                "Clarence" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Juliette" ;
+        foaf:name                      "Juliette Clarence" ;
+        foaf:page                      <http://data.bnf.fr/16551281/juliette_clarence/> .
+
+<http://data.bnf.fr/ark:/12148/cb39500079r#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb16551281h#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb16551281h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16551281h#foaf:Person> .

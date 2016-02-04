@@ -1,0 +1,55 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38848799f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14414154s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14414154s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14414154s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14414154s#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1865 ;
+        bnf-onto:lastYear              1947 ;
+        rdagroup2elements:biographicalInformation
+                "Dame à la Cour de la Princesse Viktoria zu Schaumburg-Lippe. Elle fut élevée au rang de Baronne en 1912 par le Prince Adolf zu Schaumburg-Lippe" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1865/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1947/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        bio:birth                      "1865-01-03" ;
+        bio:death                      "1947-01-10" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb14414154s#about> , <http://viaf.org/viaf/37131151> ;
+        foaf:birthday                  "01-03" ;
+        foaf:familyName                "Blücher" ;
+        foaf:givenName                 "Elisabeth von" ;
+        foaf:name                      "Elisabeth von Blücher" ;
+        foaf:page                      <http://data.bnf.fr/14414154/elisabeth_von_blucher/> .
+
+<http://data.bnf.fr/14414154/elisabeth_von_blucher/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14414154s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14414154s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14414154s> ;
+        bnf-onto:FRBNF        14414154 ;
+        isni:identifierValid  "0000000016314611" ;
+        dcterms:created       "2002-07-05" ;
+        dcterms:modified      "2013-08-02" ;
+        owl:sameAs            <http://isni.org/isni/0000000016314611> ;
+        skos:editorialNote    "Tagebuch meiner Reise als Hofdame in den Orient (Dezember 1890-Februar 1891) / Baronin Elisabeth v. Blücher, [2000]. - . - OCLC. - http://newfirstsearch.oclc.org. - 2002-07-05"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/37131151> , <http://isni.org/isni/0000000016314611> ;
+        skos:note             "Dame à la Cour de la Princesse Viktoria zu Schaumburg-Lippe. Elle fut élevée au rang de Baronne en 1912 par le Prince Adolf zu Schaumburg-Lippe"@fr ;
+        skos:prefLabel        "Elisabeth von Blücher (1865-1947)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14414154s#foaf:Person> .

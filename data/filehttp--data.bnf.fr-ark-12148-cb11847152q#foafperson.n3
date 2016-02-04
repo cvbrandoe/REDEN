@@ -1,0 +1,72 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34031832m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11847152q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11847152q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11847152q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11847152q#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1814 ;
+        bnf-onto:lastYear               1847 ;
+        rdagroup2elements:biographicalInformation
+                "Fils de : Jérôme (roi de Westphalie ; 1784-1860). - Colonel d'infanterie dans l'armée du Wurtemberg. - Prince de Montfort (titre wurtembourgeois)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1814/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1847/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de la France" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Trieste (Italie)" ;
+        rdagroup2elements:placeOfDeath  "Florence (Italie)" ;
+        bio:birth                       "1814-08-24" ;
+        bio:death                       "1847-05-12" ;
+        owl:sameAs                      <http://viaf.org/viaf/2464494> , <http://data.bnf.fr/ark:/12148/cb11847152q#about> ;
+        foaf:birthday                   "08-24" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k5657422z.thumbnail> ;
+        foaf:familyName                 "Bonaparte" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jérome Napoléon" ;
+        foaf:name                       "Jérome Napoléon Bonaparte" ;
+        foaf:page                       <http://data.bnf.fr/11847152/jerome_napoleon_bonaparte/> .
+
+<http://data.bnf.fr/11847152/jerome_napoleon_bonaparte/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11847152q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11847152q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11847152q> ;
+        bnf-onto:FRBNF        11847152 ;
+        isni:identifierValid  "0000000004479611" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2015-03-13" ;
+        skos:altLabel         "Napoléon Bonaparte (1814-1847)"@fr , "Jérôme Napoléon Montfort (prince de, 1814-1847)"@fr ;
+        skos:editorialNote    "Demande d'une pension viagère pour le prince Jérôme Bonaparte (prince de Montfort), adressée au roi des Français, au ministère et aux chambres législatives. Février 1844. - . - Napoléon III - généalogie. - http://napoleontrois.free.fr. - 2004-11-09"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/2464494> ;
+        skos:note             "Fils de : Jérôme (roi de Westphalie ; 1784-1860). - Colonel d'infanterie dans l'armée du Wurtemberg. - Prince de Montfort (titre wurtembourgeois)"@fr ;
+        skos:prefLabel        "Jérome Napoléon Bonaparte (1814-1847)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11847152q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb364095055#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11847152q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11847152q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11847152q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31838466g#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb11847152q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11847152q#foaf:Person> .

@@ -1,0 +1,76 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1871 ;
+        bnf-onto:lastYear               1951 ;
+        rdagroup2elements:biographicalInformation
+                "Fille de Louis-Philippe d'Orléans (1838-1894), comte de Paris et de Marie-Isabelle d'Orléans, infante d'Espagne ; épouse du duc d'Aoste Emmanuel-Philibert de Savoie (1869-1931) puis d'Otto Campini. - Appelée Hélène de France par les orléanistes" ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1871/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1951/> ;
+        rdagroup2elements:placeOfBirth  "Twickenham (GB)" ;
+        rdagroup2elements:placeOfDeath  "Castellammare di Stabia (Italie)" ;
+        bio:birth                       "1871-06-13" ;
+        bio:death                       "1951-01-21" ;
+        owl:sameAs                      <http://www.idref.fr/166501344> , <http://viaf.org/viaf/122295582> , <http://data.bnf.fr/ark:/12148/cb11340502q#about> ;
+        foaf:birthday                   "06-13" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b53030891b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530309010.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6909051z.thumbnail> ;
+        foaf:familyName                 "Orléans" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Hélène d'" ;
+        foaf:name                       "Hélène d' Orléans" ;
+        foaf:page                       <http://data.bnf.fr/11340502/helene_d__orleans/> .
+
+<http://data.bnf.fr/ark:/12148/cb31725334g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32233570w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31725335t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42778190d#Expression>
+        bnfroles:r290        <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> ;
+        marcrel:dte          <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32233569p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11340502q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11340502q> ;
+        bnf-onto:FRBNF        11340502 ;
+        isni:identifierValid  "0000000080711777" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-12-17" ;
+        owl:sameAs            <http://isni.org/isni/0000000080711777> ;
+        skos:altLabel         "Hélène d' Aoste (1871-1951)"@fr , "Hélène (princesse de France, 1871-1951)"@fr ;
+        skos:editorialNote    "Vie errante, sensations d'Afrique / S.A.R. la princesse Hélène de France duchesse d'Aoste, 1921. - . - GDEL, art. : Orléans (famille d'). - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000080711777> , <http://www.idref.fr/166501344> , <http://viaf.org/viaf/122295582> ;
+        skos:note             "Fille de Louis-Philippe d'Orléans (1838-1894), comte de Paris et de Marie-Isabelle d'Orléans, infante d'Espagne ; épouse du duc d'Aoste Emmanuel-Philibert de Savoie (1869-1931) puis d'Otto Campini. - Appelée Hélène de France par les orléanistes"@fr ;
+        skos:prefLabel        "Hélène d' Orléans (1871-1951)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> .
+
+<http://data.bnf.fr/11340502/helene_d__orleans/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11340502q#foaf:Person> .

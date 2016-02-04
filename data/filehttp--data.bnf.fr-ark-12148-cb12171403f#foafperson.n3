@@ -1,0 +1,68 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb310154528#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12171403f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12171403f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12171403f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35157772r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12171403f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12171403f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12171403f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12171403f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12171403f> ;
+        bnf-onto:FRBNF        12171403 ;
+        isni:identifierValid  "0000000062364871" ;
+        dcterms:created       "1990-11-28" ;
+        dcterms:modified      "2014-07-09" ;
+        owl:sameAs            <http://isni.org/isni/0000000062364871> ;
+        skos:altLabel         "Νικόλαος Αʹ (patriarche de Constantinople, 0853?-0925)"@fr , "Nicolaus Mysticus (0853?-0925)"@la , "Nicholas I (patriarche de Constantinople, 0853?-0925)"@en , "Νικόλαος Αʹ Μυστικός (0853?-0925)"@fr , "Nicolas (saint, 0853?-0925)"@fr , "Nikólaos A´ Mystikós (0853?-0925)"@fr , "Nicolaus I (patriarche de Constantinople, 0853?-0925)"@la , "Nicolas le Mystique (0853?-0925)"@fr , "Nikolaos A´ (patriarche de Constantinople, 0853?-0925)"@fr ;
+        skos:editorialNote    "Letters / Nicholas I patriarch of Constantinople ; Greek text and English translation by R. J. H. Jenkins and L. G. Westerink, 1973. - . - GLU : Nicolas Ier le Mystique. - . -"@fr , "Oxford Dict. of Byzantium. - . - BN Cat. gén. : Nicolas Ier (Saint), patriarche de Constantinople. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/078193931> , <http://isni.org/isni/0000000062364871> , <http://viaf.org/viaf/89258784> ;
+        skos:note             "Patriarche de Constantinople (901-907, 912-925)"@fr ;
+        skos:prefLabel        "Nicolas I (patriarche de Constantinople, 0853?-0925)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12171403f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37393746p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12171403f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12171403f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12171403f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37544799t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12171403f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12171403f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12171403f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12171403f#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              853 ;
+        bnf-onto:lastYear               925 ;
+        rdagroup2elements:biographicalInformation
+                "Patriarche de Constantinople (901-907, 912-925)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/0853/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/0925/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/grc> ;
+        rdagroup2elements:placeOfBirth  "Italie" ;
+        rdagroup2elements:placeOfDeath  "Constantinople" ;
+        bio:birth                       "853" ;
+        bio:death                       "0925-05-15" ;
+        owl:sameAs                      <http://viaf.org/viaf/89258784> , <http://data.bnf.fr/ark:/12148/cb12171403f#about> , <http://www.idref.fr/078193931> ;
+        foaf:familyName                 "Nicolas" ;
+        foaf:gender                     "male" ;
+        foaf:page                       <http://data.bnf.fr/12171403/nicolas_1/> .

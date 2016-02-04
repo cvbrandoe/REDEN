@@ -1,0 +1,105 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30638760r#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb393430131#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb306387586#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35696923j#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1758 ;
+        bnf-onto:lastYear              1835 ;
+        rdagroup2elements:biographicalInformation
+                "Variante(s) de prénom : Charles-Abraham. - Imprimeur-libraire ; imprimeur du Châtelet [d'Orléans] (1788-1790) ; de la préfecture [du Loiret]. - Fils aîné et successeur de l'imprimeur-libraire d'Orléans Jacques-Philippe Jacob. Reçu imprimeur par arrêt du Conseil du 28 fév. 1785. Auteur d'\"Idées générales sur les causes de l'anéantissement de l'imprimerie...\"  (Orléans, 1806) et éditeur à partir de 1791 d'un almanach et d'un annuaire du département du Loiret. Breveté imprimeur le 15 juillet 1811 et libraire le 1er janv. 1813 (brevets renouvelés en nov. et juillet 1818). Cède son imprimerie à son fils Henri-Alexandre Jacob, breveté en sa succession le 3 fév. 1824" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1758/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1835/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1776-1824" ;
+        bio:birth                      "1758-06-08" ;
+        bio:death                      "1835-12-14" ;
+        owl:sameAs                     <http://viaf.org/viaf/59137392> , <http://www.idref.fr/119072297> , <http://data.bnf.fr/ark:/12148/cb122392213#about> ;
+        foaf:birthday                  "06-08" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k54857805.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k6336742c.thumbnail> ;
+        foaf:familyName                "Jacob" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Charles-Abraham-Isaac" ;
+        foaf:name                      "Charles-Abraham-Isaac Jacob" ;
+        foaf:page                      <http://data.bnf.fr/12239221/charles-abraham-isaac_jacob/> .
+
+<http://data.bnf.fr/ark:/12148/cb122392213>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb122392213> ;
+        bnf-onto:FRBNF        12239221 ;
+        isni:identifierValid  "0000000000406044" ;
+        dcterms:created       "1992-03-04" ;
+        dcterms:modified      "2013-12-17" ;
+        owl:sameAs            <http://isni.org/isni/0000000000406044> ;
+        skos:altLabel         "C. A. I. Jacob natu major (1758-1835)"@fr , "Jacob l'aîné (1758-1835)"@fr ;
+        skos:editorialNote    "Herluison. - . - Martin, A. : date de naissance 9 juin 1758. - . - DBF. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/59137392> , <http://www.idref.fr/119072297> , <http://isni.org/isni/0000000000406044> ;
+        skos:note             "Variante(s) de prénom : Charles-Abraham. - Imprimeur-libraire ; imprimeur du Châtelet [d'Orléans] (1788-1790) ; de la préfecture [du Loiret]. - Fils aîné et successeur de l'imprimeur-libraire d'Orléans Jacques-Philippe Jacob. Reçu imprimeur par arrêt du Conseil du 28 fév. 1785. Auteur d'\"Idées générales sur les causes de l'anéantissement de l'imprimerie...\"  (Orléans, 1806) et éditeur à partir de 1791 d'un almanach et d'un annuaire du département du Loiret. Breveté imprimeur le 15 juillet 1811 et libraire le 1er janv. 1813 (brevets renouvelés en nov. et juillet 1818). Cède son imprimerie à son fils Henri-Alexandre Jacob, breveté en sa succession le 3 fév. 1824"@fr ;
+        skos:prefLabel        "Charles-Abraham-Isaac Jacob (1758-1835)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32694646g#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30638759j#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42638633z#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311005122#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36696671q#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40203443x#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33426645z#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122392213#foaf:Person> .

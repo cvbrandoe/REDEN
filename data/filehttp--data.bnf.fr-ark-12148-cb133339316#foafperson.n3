@@ -1,0 +1,62 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/13333931/emile_henriot/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb133339316#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30593159r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133339316#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133339316#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133339316#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb133339316#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1885 ;
+        bnf-onto:lastYear              1961 ;
+        rdagroup2elements:biographicalInformation
+                "Physicien. - Professeur de sciences physiques à l'Université libre de Bruxelles. - Ancien élève de l'École normale supérieure. - Agrégé de sciences physiques de la Faculté de Paris. - Docteur ès-sciences (en 1912). - Après la Première guerre mondiale, est nommé secrétaire du Conseil international scientifique Solvay, Bruxelles" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/be> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1885/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1961/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1885-07-02" ;
+        bio:death                      "1961-02-01" ;
+        owl:sameAs                     <http://viaf.org/viaf/77116871> , <http://data.bnf.fr/ark:/12148/cb133339316#about> , <http://www.idref.fr/150217307> ;
+        foaf:birthday                  "07-02" ;
+        foaf:familyName                "Henriot" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Émile" ;
+        foaf:name                      "Émile Henriot" ;
+        foaf:page                      <http://data.bnf.fr/13333931/emile_henriot/> .
+
+<http://data.bnf.fr/ark:/12148/cb133339316>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb133339316> ;
+        bnf-onto:FRBNF        13333931 ;
+        isni:identifierValid  "000000011771469X" ;
+        dcterms:created       "1998-11-18" ;
+        dcterms:modified      "2015-05-28" ;
+        owl:sameAs            <http://isni.org/isni/000000011771469X> ;
+        skos:altLabel         "Émile Jean Charles Henriot (1885-1961)"@fr ;
+        skos:editorialNote    "Les couples de radiation et les moments électromagnétiques / par M. E. Henriot, 1995 [document électronique : reprod. de l'éd. de 1936]. - . - DBF : Henriot (Émile-Jean-Charles). - . -"@fr , "ABF. - . - BN Cat. gén. : Henriot (E.). - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/150217307> , <http://viaf.org/viaf/77116871> , <http://isni.org/isni/000000011771469X> ;
+        skos:note             "Physicien. - Professeur de sciences physiques à l'Université libre de Bruxelles. - Ancien élève de l'École normale supérieure. - Agrégé de sciences physiques de la Faculté de Paris. - Docteur ès-sciences (en 1912). - Après la Première guerre mondiale, est nommé secrétaire du Conseil international scientifique Solvay, Bruxelles"@fr ;
+        skos:prefLabel        "Émile Henriot (1885-1961)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb133339316#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb322371686#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133339316#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133339316#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133339316#foaf:Person> .

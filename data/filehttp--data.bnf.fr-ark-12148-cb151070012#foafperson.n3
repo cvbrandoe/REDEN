@@ -1,0 +1,46 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb151070012#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1095 ;
+        bnf-onto:lastYear              1164 ;
+        rdagroup2elements:biographicalInformation
+                "Antipape élu le 7 septembre 1159. Un autre antipape, le cardinal Grégoire Conti fut élu en 1138 sous le nom de Victor IV et abdiqua le 29 mai 1138" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1095/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1164/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Religion" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/200/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        bio:birth                      "1095" ;
+        bio:death                      "1164-04-20" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb151070012#about> ;
+        foaf:familyName                "Victor" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/15107001/victor_4/> .
+
+<http://data.bnf.fr/15107001/victor_4/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb151070012#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb151070012>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb151070012> ;
+        bnf-onto:FRBNF    15107001 ;
+        dcterms:created   "2006-10-25" ;
+        dcterms:modified  "2014-02-13" ;
+        skos:altLabel     "Victor V (antipape, 1095-1164)"@fr , "Octavien de Monticelli (1095-1144)"@fr , "Ottaviano de Monticello (1095-1144)"@fr ;
+        skos:note         "Antipape élu le 7 septembre 1159. Un autre antipape, le cardinal Grégoire Conti fut élu en 1138 sous le nom de Victor IV et abdiqua le 29 mai 1138"@fr ;
+        skos:prefLabel    "Victor IV (antipape, 1095-1164)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb151070012#foaf:Person> .

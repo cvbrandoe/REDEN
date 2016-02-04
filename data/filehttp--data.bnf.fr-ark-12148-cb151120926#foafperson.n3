@@ -1,0 +1,53 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/15112092/philipp_von_hessen/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb151120926#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb151120926#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1896 ;
+        bnf-onto:lastYear               1980 ;
+        rdagroup2elements:biographicalInformation
+                "Landgrave de Hesse. - Membre du NSDAP (1930), SA-Obergruppenführer et Oberpräsident de la province de Hesse-Nassau (1938-1943). - Épouse à Turin en 1925 Mafalda de Savoie (1902-1944). - Fils de Frédéric-Charles de Hesse-Cassel qui fut élu roi de Finlande en 1918 sans jamais en occuper le trône et de Marguerite de Prusse, sœur du Kaiser Guillaume II. - Petit-fils du landgrave Frédéric-Guillame II de Hesse-Cassel et de la princesse Anne de Prusse (1836-1918)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1896/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1980/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Château de Rumpenheim (Hesse, Allemagne)" ;
+        rdagroup2elements:placeOfDeath  "Rome (Italie)" ;
+        bio:birth                       "1896-11-06" ;
+        bio:death                       "1980-10-25" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb151120926#about> ;
+        foaf:birthday                   "11-06" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b53096889f.thumbnail> ;
+        foaf:familyName                 "Hessen" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Philipp von" ;
+        foaf:name                       "Philipp von Hessen" ;
+        foaf:page                       <http://data.bnf.fr/15112092/philipp_von_hessen/> .
+
+<http://data.bnf.fr/ark:/12148/cb151120926>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb151120926> ;
+        bnf-onto:FRBNF      15112092 ;
+        dcterms:created     "2006-11-14" ;
+        dcterms:modified    "2012-09-13" ;
+        skos:altLabel       "Philippe (landgrave de Hesse, 1896-1980)"@fr , "Philippe de Hesse-Cassel (1896-1980)"@fr , "Philippe de Hesse (1896-1980)"@fr , "Philipp Von Hessen (1896-1980)"@fr , "Philipp Landgraf von Hessen (1896-1980)"@fr ;
+        skos:editorialNote  "Royals and the Reich : the princes von Hessen in nazi Germany / Jonathan Petropoulos, 2006. - . - DBA: Hessen, Philipp Landgraf von. - . -"@fr ;
+        skos:note           "Landgrave de Hesse. - Membre du NSDAP (1930), SA-Obergruppenführer et Oberpräsident de la province de Hesse-Nassau (1938-1943). - Épouse à Turin en 1925 Mafalda de Savoie (1902-1944). - Fils de Frédéric-Charles de Hesse-Cassel qui fut élu roi de Finlande en 1918 sans jamais en occuper le trône et de Marguerite de Prusse, sœur du Kaiser Guillaume II. - Petit-fils du landgrave Frédéric-Guillame II de Hesse-Cassel et de la princesse Anne de Prusse (1836-1918)"@fr ;
+        skos:prefLabel      "Philipp von Hessen (1896-1980)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb151120926#foaf:Person> .

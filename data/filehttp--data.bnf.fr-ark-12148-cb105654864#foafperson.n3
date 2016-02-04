@@ -1,0 +1,83 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb363081587#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1761 ;
+        bnf-onto:lastYear               1823 ;
+        rdagroup2elements:biographicalInformation
+                "Officier militaire. - Frère de : André et Marie-Joseph Chénier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1761/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1823/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Istanbul, Turquie" ;
+        bio:birth                       "1761-03-27" ;
+        bio:death                       "1823-12-14" ;
+        owl:sameAs                      <http://viaf.org/viaf/59072901> , <http://data.bnf.fr/ark:/12148/cb105654864#about> ;
+        foaf:birthday                   "03-27" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6261025g.thumbnail> ;
+        foaf:familyName                 "Chénier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Louis Sauveur" ;
+        foaf:name                       "Louis Sauveur Chénier" ;
+        foaf:page                       <http://data.bnf.fr/10565486/louis_sauveur_chenier/> .
+
+<http://data.bnf.fr/ark:/12148/cb36308159k#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30232791w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30232789b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302329171#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302327927#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30232790j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb105654864>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb105654864> ;
+        bnf-onto:FRBNF        10565486 ;
+        isni:identifierValid  "0000000081375752" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2015-03-13" ;
+        skos:altLabel         "Louis Sauveur de Chénier (1761-1823)"@fr ;
+        skos:editorialNote    "Martin et Walter : Chénier (Louis Sauveur). - . - BN Cat. gén. : Chénier (Louis Sauveur). - . -"@fr , "L.-S. Chénier, lieutenant-colonel de cavalerie, à la convention nationale, [179.]. - . - DBF : Chénier (Louis Sauveur de). - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/59072901> ;
+        skos:note             "Officier militaire. - Frère de : André et Marie-Joseph Chénier"@fr ;
+        skos:prefLabel        "Louis Sauveur Chénier (1761-1823)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb105654864#foaf:Person> .

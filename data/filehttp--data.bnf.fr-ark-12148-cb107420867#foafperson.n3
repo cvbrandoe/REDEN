@@ -1,0 +1,100 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30489888b#Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30730629k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30652420n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30652416d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb107420867>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb107420867> ;
+        bnf-onto:FRBNF        10742086 ;
+        isni:identifierValid  "000000007358006X" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-07-16" ;
+        skos:editorialNote    "Annales de Tukulti Ninip II, roi d'Assyrie, 889-884 / par V. Scheil ; avec la collab. de J.-Ét. Gautier, 1909. - . - ABF. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/66865218> , <http://www.idref.fr/070423288> ;
+        skos:note             "Archéologue. - Attaché libre l'Institut français d'archéologie orientale du Caire"@fr ;
+        skos:prefLabel        "Joseph-Étienne Gautier (1861-1924)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1861 ;
+        bnf-onto:lastYear               1924 ;
+        rdagroup2elements:biographicalInformation
+                "Archéologue. - Attaché libre l'Institut français d'archéologie orientale du Caire" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1861/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1924/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Oullins (Rhône)" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1861-09-06" ;
+        bio:death                       "1924-02-10" ;
+        owl:sameAs                      <http://www.idref.fr/070423288> , <http://data.bnf.fr/ark:/12148/cb107420867#about> , <http://viaf.org/viaf/66865218> ;
+        foaf:birthday                   "09-06" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k62345274.thumbnail> ;
+        foaf:familyName                 "Gautier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Joseph-Étienne" ;
+        foaf:name                       "Joseph-Étienne Gautier" ;
+        foaf:page                       <http://data.bnf.fr/10742086/joseph-etienne_gautier/> .
+
+<http://data.bnf.fr/ark:/12148/cb31312355t#Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30980371x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33245768q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30980322q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31312391p#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30489886n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107420867#foaf:Person> .

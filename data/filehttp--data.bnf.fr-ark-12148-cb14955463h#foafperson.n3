@@ -1,0 +1,38 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/14955463/louis_cesar_maupassant/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14955463h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14955463h>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb14955463h> ;
+        bnf-onto:FRBNF    14955463 ;
+        dcterms:created   "1988-10-24" ;
+        dcterms:modified  "1989-06-21" ;
+        skos:note         "Député à l'Assemblée Nationale Constituante , France, Bretagne. - Famille politique : Tiers-Etat"@fr ;
+        skos:prefLabel    "Louis César Maupassant (1750-1793)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb14955463h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14955463h#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1750 ;
+        bnf-onto:lastYear              1793 ;
+        rdagroup2elements:biographicalInformation
+                "Député à l'Assemblée Nationale Constituante , France, Bretagne. - Famille politique : Tiers-Etat" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1750/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1793/> ;
+        bio:birth                      "1750" ;
+        bio:death                      "1793" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb14955463h#about> ;
+        foaf:familyName                "Maupassant" ;
+        foaf:givenName                 "Louis César" ;
+        foaf:name                      "Louis César Maupassant" ;
+        foaf:page                      <http://data.bnf.fr/14955463/louis_cesar_maupassant/> .

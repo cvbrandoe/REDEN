@@ -1,0 +1,65 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb149621515#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1706 ;
+        bnf-onto:lastYear               1780 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre, dessinateur, graveur (techniques utilisées : burin, eau-forte). - Éditeur. - Travaille en Italie, en Angleterre et en France. - Élève de Jacopo Amigoni (1675?-1752)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1706/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1780/> ;
+        rdagroup2elements:placeOfBirth  "Thalendorf" ;
+        rdagroup2elements:placeOfDeath  "Venise" ;
+        bio:birth                       "1706" ;
+        bio:death                       "1780" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb149621515#about> , <http://viaf.org/viaf/17494731> ;
+        foaf:familyName                 "Wagner" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Giuseppe" ;
+        foaf:name                       "Giuseppe Wagner" ;
+        foaf:page                       <http://data.bnf.fr/14962151/giuseppe_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb40346818j#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149621515#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149621515#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149621515#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42383024n#Expression>
+        bnfroles:r810        <http://data.bnf.fr/ark:/12148/cb149621515#foaf:Person> ;
+        marcrel:mfr          <http://data.bnf.fr/ark:/12148/cb149621515#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149621515#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149621515>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb149621515> ;
+        bnf-onto:FRBNF        14962151 ;
+        isni:identifierValid  "0000000066295199" ;
+        dcterms:created       "1996-11-05" ;
+        dcterms:modified      "2013-08-03" ;
+        owl:sameAs            <http://isni.org/isni/0000000066295199> ;
+        skos:altLabel         "Joseph Wagner (1706-1780)"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/17494731> , <http://isni.org/isni/0000000066295199> ;
+        skos:note             "Peintre, dessinateur, graveur (techniques utilisées : burin, eau-forte). - Éditeur. - Travaille en Italie, en Angleterre et en France. - Élève de Jacopo Amigoni (1675?-1752)"@fr ;
+        skos:prefLabel        "Giuseppe Wagner (1706-1780)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb149621515#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438611690#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149621515#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149621515#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149621515#foaf:Person> .
+
+<http://data.bnf.fr/14962151/giuseppe_wagner/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb149621515#foaf:Person> .

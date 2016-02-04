@@ -1,0 +1,59 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/12214803/andre_lefevre/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb122148036#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35458366g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122148036#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122148036#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122148036#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122148036>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb122148036> ;
+        bnf-onto:FRBNF        12214803 ;
+        isni:identifierValid  "0000000030604287" ;
+        dcterms:created       "1991-08-05" ;
+        dcterms:modified      "2013-07-26" ;
+        owl:sameAs            <http://isni.org/isni/0000000030604287> ;
+        skos:editorialNote    "Le Reichsbank a fait de la fausse monnaie : la plus grande escroquerie des temps / André Lefèvre ; Comité Dupleix, 1926. - . - Assemblée nationale. - http://www.assemblee-nationale.fr. - 1869-1929"@fr ;
+        skos:exactMatch       <http://www.idref.fr/154480886> , <http://isni.org/isni/0000000030604287> , <http://viaf.org/viaf/22191549> ;
+        skos:note             "Homme politique, député des Bouches-du-Rhône (1910-1924)"@fr ;
+        skos:prefLabel        "André Lefèvre (1869-1929)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122148036#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122148036#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1869 ;
+        bnf-onto:lastYear               1929 ;
+        rdagroup2elements:biographicalInformation
+                "Homme politique, député des Bouches-du-Rhône (1910-1924)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1869/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1929/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1869-06-17" ;
+        bio:death                       "1929-11-05" ;
+        owl:sameAs                      <http://viaf.org/viaf/22191549> , <http://data.bnf.fr/ark:/12148/cb122148036#about> , <http://www.idref.fr/154480886> ;
+        foaf:birthday                   "06-17" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b90339376.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530513509.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b90338247.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9043135w.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9037587z.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53051269c.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53053142q.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53051358w.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53051378q.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b90339057.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9033830z.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53051240h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53051270r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53051366d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9033886b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53051346k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53051365z.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9033828w.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53051766x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530513526.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b90334770.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530517607.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9042915k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53051242d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9033875j.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53051284z.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53051250x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9033924k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9037591v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530517802.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9033834m.thumbnail> ;
+        foaf:familyName                 "Lefèvre" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "André" ;
+        foaf:name                       "André Lefèvre" ;
+        foaf:page                       <http://data.bnf.fr/12214803/andre_lefevre/> .

@@ -1,0 +1,34 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/12006215/agnes/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12006215g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12006215g>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb12006215g> ;
+        bnf-onto:FRBNF    12006215 ;
+        dcterms:created   "1987-01-22" ;
+        dcterms:modified  "2000-01-02" ;
+        skos:altLabel     "Agnes von Waiblingen"@fr , "Agnès (duchesse de Souabe)"@fr ;
+        skos:prefLabel    "Agnès (margrave d'Autriche, 1072-1143)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb12006215g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12006215g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1072 ;
+        bnf-onto:lastYear              1143 ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1072/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1143/> ;
+        bio:birth                      "1072" ;
+        bio:death                      "1143" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb12006215g#about> ;
+        foaf:familyName                "Agnès" ;
+        foaf:page                      <http://data.bnf.fr/12006215/agnes/> .

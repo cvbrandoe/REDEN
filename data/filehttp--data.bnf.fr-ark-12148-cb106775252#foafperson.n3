@@ -1,0 +1,81 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb312923617#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1579 ;
+        bnf-onto:lastYear               1643 ;
+        rdagroup2elements:biographicalInformation
+                "Théologien et prédicateur luthérien. - Surintendant des Églises luthériennes de Livonie (1622-1643). - Annobli en 1640" ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1579/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1643/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> , <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        rdagroup2elements:placeOfBirth  "Riga" ;
+        bio:birth                       "1579-03-04" ;
+        bio:death                       "1643-12-16" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb106775252#about> , <http://viaf.org/viaf/23070453> ;
+        foaf:birthday                   "03-04" ;
+        foaf:familyName                 "Samson" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Hermann" ;
+        foaf:name                       "Hermann Samson" ;
+        foaf:page                       <http://data.bnf.fr/10677525/hermann_samson/> .
+
+<http://data.bnf.fr/ark:/12148/cb31292362k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb420835386#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> .
+
+<http://data.bnf.fr/10677525/hermann_samson/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb106775252>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb106775252> ;
+        bnf-onto:FRBNF        10677525 ;
+        isni:identifierValid  "0000000071395071" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-07-16" ;
+        owl:sameAs            <http://isni.org/isni/0000000071395071> ;
+        skos:altLabel         "Hermannus Samsonius (1579-1643)"@la , "Hermann Samson von Himmelstierna (1579-1643)"@fr ;
+        skos:editorialNote    "Regina : Samson von Himmelstierna. - http://www.kb.se/english/find/catalogs/regina/. - 2009-10-23 Die evangelischen Prediger Livlands bis 1918, 1977 : Samson, Hermann. - . - Die Religion in Geschichte und Gegenwart, 3. Augl., 1957-1965 : Samson (Hermann). - . -"@fr , "ADB : Samson Hermann. - . - BN Cat. gén. : Samson (Claude Hermann) [classé à : Samson (Herman) ; confondu avec Samson, Claudius Hermann (1670-1737)]. - . -"@fr , "Hermannus Samsonius to Axel Oxenstierna : Latin correspondence from 1621 to 1630, 2006. - . - Bibliothèque nationale de Lettonie : Samson, Hermann. - http://www.lnb.lv. - 2009-12-02"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000071395071> , <http://viaf.org/viaf/23070453> ;
+        skos:note             "Théologien et prédicateur luthérien. - Surintendant des Églises luthériennes de Livonie (1622-1643). - Annobli en 1640"@fr ;
+        skos:prefLabel        "Hermann Samson (1579-1643)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31292360w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31292365m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb312923648#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106775252#foaf:Person> .

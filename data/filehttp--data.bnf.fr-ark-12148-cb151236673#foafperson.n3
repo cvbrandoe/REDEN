@@ -1,0 +1,49 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/15123667/elisabeth_de_l_eucharistie/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb151236673#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb151236673>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb151236673> ;
+        bnf-onto:FRBNF    15123667 ;
+        dcterms:created   "2006-12-26" ;
+        dcterms:modified  "2007-06-01" ;
+        skos:altLabel     "Élise Rivet (1890-1945)"@fr , "Élisabeth (sœur de Sainte-Élisabeth, 1890-1945)"@fr , "Marie Élisabeth de l'Eucharistie (sœur de Sainte-Élisabeth, 1890-1945)"@fr , "Élisabeth Rivet (1890-1945)"@fr ;
+        skos:note         "Supérieure générale des Sœurs de Sainte-Élisabeth (de Lyon)"@fr ;
+        skos:prefLabel    "Élisabeth de l'Eucharistie (sœur de Sainte-Élisabeth, 1890-1945)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb151236673#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb151236673#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1890 ;
+        bnf-onto:lastYear               1945 ;
+        rdagroup2elements:biographicalInformation
+                "Supérieure générale des Sœurs de Sainte-Élisabeth (de Lyon)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1890/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1945/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Religion" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/200/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Draïa (Algérie)" ;
+        rdagroup2elements:placeOfDeath  "Ravensbrück (Allemagne)" ;
+        bio:birth                       "1890-01-19" ;
+        bio:death                       "1945-03-30" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb151236673#about> ;
+        foaf:birthday                   "01-19" ;
+        foaf:familyName                 "Élisabeth de l'Eucharistie" ;
+        foaf:gender                     "female" ;
+        foaf:page                       <http://data.bnf.fr/15123667/elisabeth_de_l_eucharistie/> .

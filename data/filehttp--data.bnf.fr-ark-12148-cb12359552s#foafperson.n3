@@ -1,0 +1,76 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35941438g#Expression>
+        bnfroles:r71         <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> ;
+        marcrel:att          <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30242542b#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12359552s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12359552s> ;
+        bnf-onto:FRBNF        12359552 ;
+        isni:identifierValid  "0000000081721539" ;
+        dcterms:created       "1994-01-06" ;
+        dcterms:modified      "2013-07-26" ;
+        owl:sameAs            <http://isni.org/isni/0000000081721539> ;
+        skos:exactMatch       <http://isni.org/isni/0000000081721539> , <http://www.idref.fr/133007855> , <http://viaf.org/viaf/106962950> ;
+        skos:note             "Jésuite. - Né à Paris. - Admis le 16 septembre 1665. - Enseigne succesivement les humanités, la rhétorique et l'Ecriture Sainte à La Flèche. - Erudit et dramaturge néo-latin"@fr ;
+        skos:prefLabel        "Jacques Proust (1649-1694)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33603364m#Expression>
+        bnfroles:r71         <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> ;
+        marcrel:att          <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311551157#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1649 ;
+        bnf-onto:lastYear              1694 ;
+        rdagroup2elements:biographicalInformation
+                "Jésuite. - Né à Paris. - Admis le 16 septembre 1665. - Enseigne succesivement les humanités, la rhétorique et l'Ecriture Sainte à La Flèche. - Erudit et dramaturge néo-latin" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1649/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1694/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        bio:birth                      "1649-02-03" ;
+        bio:death                      "1694-11-06" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb12359552s#about> , <http://viaf.org/viaf/106962950> , <http://www.idref.fr/133007855> ;
+        foaf:birthday                  "02-03" ;
+        foaf:familyName                "Proust" ;
+        foaf:givenName                 "Jacques" ;
+        foaf:name                      "Jacques Proust" ;
+        foaf:page                      <http://data.bnf.fr/12359552/jacques_proust/> .
+
+<http://data.bnf.fr/ark:/12148/cb30039807s#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35941439t#Expression>
+        bnfroles:r71         <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> ;
+        marcrel:att          <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12359552s#foaf:Person> .

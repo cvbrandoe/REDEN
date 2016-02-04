@@ -1,0 +1,1 @@
+Here, you can find files which are the result of the execution of REDEN on the XML-TEI: input\thibaudet_reflexions.xml

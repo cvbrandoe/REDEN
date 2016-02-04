@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14004800w#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14004797t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb140047985#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14004797t#foaf:Person> .
+
+<http://data.bnf.fr/14004797/pierre_1/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14004797t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14004799h#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14004797t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43576869t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14004797t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14004797t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14004797t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb140048435#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14004797t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14004797t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1190 ;
+        bnf-onto:lastYear              1250 ;
+        rdagroup2elements:biographicalInformation
+                "Fils de Robert II comte de Dreux, comte de Bretagne de 1213 à 1237. - Renonce au comté en 1237. - Meurt au cours de la 7e croisade" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1190/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1250/> ;
+        bio:birth                      "1190" ;
+        bio:death                      "1250-06-22" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb14004797t#about> , <http://viaf.org/viaf/281530740> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b7741390f.thumbnail> ;
+        foaf:familyName                "Pierre" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/14004797/pierre_1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14004797t>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb14004797t> ;
+        bnf-onto:FRBNF    14004797 ;
+        dcterms:created   "1997-08-28" ;
+        dcterms:modified  "2011-05-26" ;
+        skos:altLabel     "Pierre Mauclerc (comte de Bretagne, 1190-1250)"@fr , "Pierre de Dreux (comte de Bretagne, 1190-1250)"@fr ;
+        skos:exactMatch   <http://viaf.org/viaf/281530740> ;
+        skos:note         "Fils de Robert II comte de Dreux, comte de Bretagne de 1213 à 1237. - Renonce au comté en 1237. - Meurt au cours de la 7e croisade"@fr ;
+        skos:prefLabel    "Pierre Ier (comte de Bretagne, 1190-1250)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb14004797t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14020122q#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14004797t#foaf:Person> .

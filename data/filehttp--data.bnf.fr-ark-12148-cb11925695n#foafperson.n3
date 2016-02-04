@@ -1,0 +1,118 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/11925695/rene_sturel/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32651353c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31416661q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb314166622#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34697247q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30882582f#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11925695n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11925695n> ;
+        bnf-onto:FRBNF        11925695 ;
+        isni:identifierValid  "000000004659049X" ;
+        dcterms:created       "1985-06-22" ;
+        dcterms:modified      "2015-09-10" ;
+        owl:sameAs            <http://isni.org/isni/000000004659049X> ;
+        skos:editorialNote    "Jacques Amyot, traducteur des \"Vies parallèles\" de Plutarque / René Sturel, 1995 [document électronique : reprod. de l'éd. de 1974]. - . - Anthologie des écrivains morts à la guerre 1914-1918 / publiée par l'Association des écrivains combattants, 1924. - . -"@fr , "Mémoire des hommes : Sturel, René Jules Eugène. - http://www.memoiredeshommes.sga.defense.gouv.fr. - 2008-06-04 BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/44305836> , <http://www.idref.fr/027150917> , <http://isni.org/isni/000000004659049X> ;
+        skos:note             "Agrégé de l'Université. - Spécialiste de la littérature du 16e siècle"@fr ;
+        skos:prefLabel        "René Sturel (1885-1914)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31416663d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1885 ;
+        bnf-onto:lastYear               1914 ;
+        bnf-onto:mortPourLaFrance       true ;
+        rdagroup2elements:biographicalInformation
+                "Agrégé de l'Université. - Spécialiste de la littérature du 16e siècle" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1885/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1914/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Châtelet (Belgisue)" ;
+        bio:birth                       "1885-04-23" ;
+        bio:death                       "1914-08-22" ;
+        owl:sameAs                      <http://www.idref.fr/027150917> , <http://viaf.org/viaf/44305836> , <http://data.bnf.fr/ark:/12148/cb11925695n#about> ;
+        foaf:birthday                   "04-23" ;
+        foaf:familyName                 "Sturel" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "René" ;
+        foaf:name                       "René Sturel" ;
+        foaf:page                       <http://data.bnf.fr/11925695/rene_sturel/> .
+
+<http://data.bnf.fr/ark:/12148/cb38691008c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb354380903#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31416660c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31416664r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb314166653#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38649968m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11925695n#foaf:Person> .

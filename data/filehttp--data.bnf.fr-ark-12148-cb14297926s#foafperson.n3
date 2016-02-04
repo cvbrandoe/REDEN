@@ -1,0 +1,128 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb310272930#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31027294b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38670492j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38706001g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc874524/ca59818113905177#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb386704916#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1882 ;
+        rdagroup2elements:biographicalInformation
+                "Auteur dramatique. - Éditeur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1882/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1882" ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb14297926s#about> , <http://viaf.org/viaf/64218840> ;
+        foaf:familyName                "Bossuet" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Pierre" ;
+        foaf:name                      "Pierre Bossuet" ;
+        foaf:page                      <http://data.bnf.fr/14297926/pierre_bossuet/> .
+
+<http://data.bnf.fr/ark:/12148/cb38663003h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb386704947#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39774603x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14297926s>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb14297926s> ;
+        bnf-onto:FRBNF      14297926 ;
+        dcterms:created     "2004-12-09" ;
+        dcterms:modified    "2010-11-02" ;
+        skos:editorialNote  "Attelage parisien / Pierre Bossuet, Georges Leglise, 1910. - . - LCNA. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/64218840> ;
+        skos:note           "Auteur dramatique. - Éditeur"@fr ;
+        skos:prefLabel      "Pierre Bossuet (1882-19..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41225304s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31848884q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31848886d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb318488852#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38737035n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31848887r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc874524/ca59818113905179#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb318488883#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14297926s#foaf:Person> .

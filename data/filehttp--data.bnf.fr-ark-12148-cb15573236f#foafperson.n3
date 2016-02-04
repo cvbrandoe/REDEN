@@ -1,0 +1,41 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb15573236f>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb15573236f> ;
+        bnf-onto:FRBNF    15573236 ;
+        dcterms:created   "2007-10-16" ;
+        dcterms:modified  "2008-12-31" ;
+        skos:altLabel     "Jean Molière (1689?-174.)"@fr ;
+        skos:exactMatch   <http://viaf.org/viaf/39694928> ;
+        skos:note         "Libraire et papetier. - Natif d'Avignon. Apprenti du libraire-relieur avignonnais André Hécart en 1704-1707. Établi peu après. Encore en activité en 1746. Veuve attestée en 1750"@fr ;
+        skos:prefLabel    "Jean-Christophe Molière (1689?-174.)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb15573236f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15573236f#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1689 ;
+        rdagroup2elements:biographicalInformation
+                "Libraire et papetier. - Natif d'Avignon. Apprenti du libraire-relieur avignonnais André Hécart en 1704-1707. Établi peu après. Encore en activité en 1746. Veuve attestée en 1750" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1689/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1710-1746" ;
+        bio:birth                      "1689" ;
+        bio:death                      "174." ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb15573236f#about> , <http://viaf.org/viaf/39694928> ;
+        foaf:familyName                "Molière" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean-Christophe" ;
+        foaf:name                      "Jean-Christophe Molière" ;
+        foaf:page                      <http://data.bnf.fr/15573236/jean-christophe_moliere/> .

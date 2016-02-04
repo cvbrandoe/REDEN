@@ -1,0 +1,62 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12951582t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1824 ;
+        bnf-onto:lastYear              1897 ;
+        rdagroup2elements:biographicalInformation
+                "Agrégé de l'Université. - Fut professeur titulaire à l'Académie de Dijon" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1824/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1897/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1824" ;
+        bio:death                      "1897-03-03" ;
+        owl:sameAs                     <http://www.idref.fr/032411103> , <http://data.bnf.fr/ark:/12148/cb12951582t#about> , <http://viaf.org/viaf/22272796> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k6322975x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k65163k.thumbnail> ;
+        foaf:familyName                "Amiel" ;
+        foaf:givenName                 "Émile" ;
+        foaf:name                      "Émile Amiel" ;
+        foaf:page                      <http://data.bnf.fr/12951582/emile_amiel/> .
+
+<http://data.bnf.fr/ark:/12148/cb30016598z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12951582t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12951582t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12951582t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb300165999#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12951582t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12951582t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12951582t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30016597m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12951582t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12951582t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12951582t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12951582t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12951582t> ;
+        bnf-onto:FRBNF        12951582 ;
+        isni:identifierValid  "0000000066513563" ;
+        dcterms:created       "1993-10-27" ;
+        dcterms:modified      "2013-07-31" ;
+        owl:sameAs            <http://isni.org/isni/0000000066513563> ;
+        skos:editorialNote    "Un publiciste du XVIe siècle : Juste-Lipse / Émile Amiel, 1995 [document électronique : reprod. de l'éd. de 1884]. - . - DBF. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000066513563> , <http://viaf.org/viaf/22272796> , <http://www.idref.fr/032411103> ;
+        skos:note             "Agrégé de l'Université. - Fut professeur titulaire à l'Académie de Dijon"@fr ;
+        skos:prefLabel        "Émile Amiel (1824-1897)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12951582t#foaf:Person> .

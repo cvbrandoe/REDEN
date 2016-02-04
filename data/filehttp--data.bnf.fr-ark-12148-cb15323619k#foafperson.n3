@@ -1,0 +1,98 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40627664h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15323619k>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb15323619k> ;
+        bnf-onto:FRBNF      15323619 ;
+        dcterms:created     "1996-10-31" ;
+        dcterms:modified    "2011-12-14" ;
+        skos:editorialNote  "Commission météorologique du département des Vosges. Compte rendu des observations faites en 1885-1886 [1889-1890] / [par Ad. Garnier]. 2e [-6e] année, 1885-1890. - . - DBF. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/191810976> , <http://www.idref.fr/109354338> ;
+        skos:note           "Ingénieur des Ponts et Chaussées. - Fondateur de la Commission météorologique des Vosges. - Cartographe. - Archiviste"@fr ;
+        skos:prefLabel      "Adolphe Garnier (1839-1916)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1839 ;
+        bnf-onto:lastYear               1916 ;
+        rdagroup2elements:biographicalInformation
+                "Ingénieur des Ponts et Chaussées. - Fondateur de la Commission météorologique des Vosges. - Cartographe. - Archiviste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1839/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1916/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Remiremont (Vosges)" ;
+        rdagroup2elements:placeOfDeath  "Épinal" ;
+        bio:birth                       "1839-10-24" ;
+        bio:death                       "1916-02-27" ;
+        owl:sameAs                      <http://viaf.org/viaf/191810976> , <http://www.idref.fr/109354338> , <http://data.bnf.fr/ark:/12148/cb15323619k#about> ;
+        foaf:birthday                   "10-24" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b530621290.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53032856m.thumbnail> ;
+        foaf:familyName                 "Garnier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Adolphe" ;
+        foaf:name                       "Adolphe Garnier" ;
+        foaf:page                       <http://data.bnf.fr/15323619/adolphe_garnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb406311328#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb406278286#Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40754609f#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40627827v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb340175068#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40648875c#Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30481966c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40620673s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb406488501#Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15323619k#foaf:Person> .

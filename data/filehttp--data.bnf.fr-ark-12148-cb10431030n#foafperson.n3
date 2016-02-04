@@ -1,0 +1,82 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb364312547#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30282002j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30281998n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1802 ;
+        bnf-onto:lastYear               1872 ;
+        rdagroup2elements:biographicalInformation
+                "Archéologue et historien local. - Avocat. - Membre fondateur et président de la \"Société dunkerquoise pour l'encouragement des sciences, des lettres et des arts″." ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1802/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1872/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Boulogne-sur-Mer (Pas-de-Calais)" ;
+        rdagroup2elements:placeOfDeath  "Wormhoudt (Pas-de-Calais)" ;
+        bio:birth                       "1802" ;
+        bio:death                       "1872-09-17" ;
+        owl:sameAs                      <http://viaf.org/viaf/46750631> , <http://data.bnf.fr/ark:/12148/cb10431030n#about> , <http://www.idref.fr/131549782> ;
+        foaf:familyName                 "Cousin" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Louis" ;
+        foaf:name                       "Louis Cousin" ;
+        foaf:page                       <http://data.bnf.fr/10431030/louis_cousin/> .
+
+<http://data.bnf.fr/ark:/12148/cb30282000v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10431030n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10431030n> ;
+        bnf-onto:FRBNF        10431030 ;
+        isni:identifierValid  "0000000023142141" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-07-16" ;
+        owl:sameAs            <http://isni.org/isni/0000000023142141> ;
+        skos:editorialNote    "Nouveaux Éclaircissements sur l'emplacement de Quentowic / par M. Louis Cousin, 1864. - . - DBF. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000023142141> , <http://viaf.org/viaf/46750631> , <http://www.idref.fr/131549782> ;
+        skos:note             "Archéologue et historien local. - Avocat. - Membre fondateur et président de la \"Société dunkerquoise pour l'encouragement des sciences, des lettres et des arts″."@fr ;
+        skos:prefLabel        "Louis Cousin (1802-1872)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302820016#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36431072m#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302819990#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10431030n#foaf:Person> .

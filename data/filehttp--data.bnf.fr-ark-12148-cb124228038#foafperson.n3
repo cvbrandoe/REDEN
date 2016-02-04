@@ -1,0 +1,53 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb124228038>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb124228038> ;
+        bnf-onto:FRBNF        12422803 ;
+        isni:identifierValid  "0000000006486671" ;
+        dcterms:created       "1994-10-07" ;
+        dcterms:modified      "2015-03-13" ;
+        owl:sameAs            <http://isni.org/isni/0000000006486671> ;
+        skos:editorialNote    "Sujets de circonstances, panégyriques de saints et instructions sur un certain nombre de fêtes / recueillis, corrigés ou composés par M. l'abbé Ag. Sabatier. 2e éd., 1875. - . - Lorenz 1866/1875 : SABATIER (l'abbé Agathon). - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000006486671> , <http://www.idref.fr/033353638> , <http://viaf.org/viaf/100131> ;
+        skos:note             "Prêtre du Diocèse de Beauvais. - Curé d'Allonne (Oise)"@fr ;
+        skos:prefLabel        "Agathon Sabatier (1814-18..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb124228038#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124228038#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1814 ;
+        rdagroup2elements:biographicalInformation
+                "Prêtre du Diocèse de Beauvais. - Curé d'Allonne (Oise)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1814/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Remigny (Aisne)" ;
+        bio:birth                       "1814" ;
+        bio:death                       "18.." ;
+        owl:sameAs                      <http://viaf.org/viaf/100131> , <http://www.idref.fr/033353638> , <http://data.bnf.fr/ark:/12148/cb124228038#about> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k91384r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k913853.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k91383d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k91386f.thumbnail> ;
+        foaf:familyName                 "Sabatier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Agathon" ;
+        foaf:name                       "Agathon Sabatier" ;
+        foaf:page                       <http://data.bnf.fr/12422803/agathon_sabatier/> .
+
+<http://data.bnf.fr/ark:/12148/cb30015023f#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb124228038#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb124228038#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124228038#foaf:Person> .

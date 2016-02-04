@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb123828876>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb123828876> , <http://fr.wikipedia.org/wiki/Léopoldine_Hugo> ;
+        bnf-onto:FRBNF        12382887 ;
+        isni:identifierValid  "0000000055108933" ;
+        dcterms:created       "1994-04-06" ;
+        dcterms:modified      "2013-10-24" ;
+        owl:sameAs            <http://isni.org/isni/0000000055108933> ;
+        skos:altLabel         "Léopoldine Vacquerie (1824-1843)"@fr , "Léopoldine-Cécile-Marie-Pierre-Catherine Hugo (1824-1843)"@fr ;
+        skos:editorialNote    "Correspondance / L. Hugo ; éd. critique par P. Georgel, 1976. - . - DBF. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/032886020> , <http://isni.org/isni/0000000055108933> , <http://dbpedia.org/resource/Léopoldine_Hugo> , <http://viaf.org/viaf/51770927> , <http://fr.wikipedia.org/wiki/Léopoldine_Hugo> ;
+        skos:note             "Fille aînée de Victor Hugo et d'Adèle Foucher, elle épousa le 15 février 1843 Charles Vacquerie. - Les deux jeunes époux se noyèrent dans la Seine entre Villequier et Caudebec"@fr ;
+        skos:prefLabel        "Léopoldine Hugo (1824-1843)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb123828876#foaf:Person> .
+
+<http://data.bnf.fr/12382887/leopoldine_hugo/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb123828876#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb345844800#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123828876#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123828876#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828876#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb306250617#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123828876#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123828876#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828876#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123828876#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1824 ;
+        bnf-onto:lastYear              1843 ;
+        rdagroup2elements:biographicalInformation
+                "Fille aînée de Victor Hugo et d'Adèle Foucher, elle épousa le 15 février 1843 Charles Vacquerie. - Les deux jeunes époux se noyèrent dans la Seine entre Villequier et Caudebec" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1824/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1843/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1824-08-28" ;
+        bio:death                      "1843-09-04" ;
+        owl:sameAs                     <http://dbpedia.org/resource/Léopoldine_Hugo> , <http://www.idref.fr/032886020> , <http://data.bnf.fr/ark:/12148/cb123828876#about> , <http://viaf.org/viaf/51770927> ;
+        foaf:birthday                  "08-28" ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Maison_de_Victor_Hugo_Leopoldine_Chatillon_27122012.jpg?width=300> ;
+        foaf:familyName                "Hugo" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Léopoldine" ;
+        foaf:name                      "Léopoldine Hugo" ;
+        foaf:page                      <http://data.bnf.fr/12382887/leopoldine_hugo/> .

@@ -1,0 +1,44 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb114823437>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb114823437> ;
+        bnf-onto:FRBNF    11482343 ;
+        dcterms:created   "1997-07-01" ;
+        dcterms:modified  "2006-10-25" ;
+        skos:note         "Coureur cycliste"@fr ;
+        skos:prefLabel    "Marcel Berthet (1888-1953)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb114823437#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb114823437#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1888 ;
+        bnf-onto:lastYear              1953 ;
+        rdagroup2elements:biographicalInformation
+                "Coureur cycliste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1888/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1953/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1888" ;
+        bio:death                      "1953" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb114823437#about> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b6928192g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53084504r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6922343t.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6914556g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6911787s.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53062944m.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53094465m.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6913869t.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6926017j.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6914402k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69223447.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6904852k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6920185v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69146896.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b90214209.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53035495b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530680789.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53016397k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530164003.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6921567m.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6922342d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69138670.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b90318021.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9021421q.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6921281v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530844854.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53084482s.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53016424q.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53052408j.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6910762n.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b90223579.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69161433.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530628519.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530164272.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69281912.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6928193w.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69215681.thumbnail> ;
+        foaf:familyName                "Berthet" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Marcel" ;
+        foaf:name                      "Marcel Berthet" ;
+        foaf:page                      <http://data.bnf.fr/11482343/marcel_berthet/> .
+
+<http://data.bnf.fr/11482343/marcel_berthet/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb114823437#foaf:Person> .

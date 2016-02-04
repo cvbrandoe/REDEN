@@ -1,0 +1,76 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb422908872#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb395003605#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1840 ;
+        bnf-onto:lastYear              1887 ;
+        rdagroup2elements:biographicalInformation
+                "Actrice" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1840/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1887/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1840" ;
+        bio:death                      "1887" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb146535822#about> , <http://viaf.org/viaf/271641> ;
+        foaf:familyName                "Fromentin" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Léontine" ;
+        foaf:name                      "Léontine Fromentin" ;
+        foaf:page                      <http://data.bnf.fr/14653582/leontine_fromentin/> .
+
+<http://data.bnf.fr/ark:/12148/cc98991t/cd0e10997#Expression>
+        bnfroles:r290        <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> ;
+        marcrel:dte          <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39459049v#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41459795z#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb395003369#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb146535822>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb146535822> ;
+        bnf-onto:FRBNF        14653582 ;
+        isni:identifierValid  "0000000008837885" ;
+        dcterms:created       "2005-08-26" ;
+        dcterms:modified      "2013-08-03" ;
+        owl:sameAs            <http://isni.org/isni/0000000008837885> ;
+        skos:exactMatch       <http://isni.org/isni/0000000008837885> , <http://viaf.org/viaf/271641> ;
+        skos:note             "Actrice"@fr ;
+        skos:prefLabel        "Léontine Fromentin (1840-1887)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb146535822#foaf:Person> .

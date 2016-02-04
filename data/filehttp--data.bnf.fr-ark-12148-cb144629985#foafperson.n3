@@ -1,0 +1,48 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb144629985>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb144629985> ;
+        bnf-onto:FRBNF    14462998 ;
+        dcterms:created   "2003-03-20" ;
+        dcterms:modified  "2012-04-12" ;
+        skos:altLabel     "Marie-Stéphanie Simonin (1820?-1875)"@fr ;
+        skos:note         "A enseigné l'art équestre à l'École de cavalerie de Saumur"@fr ;
+        skos:prefLabel    "Marie Isabelle (1820?-1875)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb144629985#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb144629985#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1820 ;
+        bnf-onto:lastYear              1875 ;
+        rdagroup2elements:biographicalInformation
+                "A enseigné l'art équestre à l'École de cavalerie de Saumur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1820/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1875/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Arts du spectacle" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/790/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1820" ;
+        bio:death                      "1875-09-15" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb144629985#about> ;
+        foaf:familyName                "Isabelle" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Marie" ;
+        foaf:name                      "Marie Isabelle" ;
+        foaf:page                      <http://data.bnf.fr/14462998/marie_isabelle/> .
+
+<http://data.bnf.fr/14462998/marie_isabelle/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb144629985#foaf:Person> .

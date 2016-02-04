@@ -1,0 +1,110 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40251273v#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40251275j#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40251818c#Expression>
+        bnfroles:r312        <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402523783#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14955518z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14955518z> ;
+        bnf-onto:FRBNF        14955518 ;
+        isni:identifierValid  "0000000066583107" ;
+        dcterms:created       "1988-10-25" ;
+        dcterms:modified      "2013-08-03" ;
+        owl:sameAs            <http://isni.org/isni/0000000066583107> ;
+        skos:editorialNote    "Bén.. - . - George. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000066583107> , <http://www.idref.fr/055827071> , <http://viaf.org/viaf/54416987> ;
+        skos:prefLabel        "Richard Newton (1777-1798)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40256356r#Expression>
+        bnfroles:r312        <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40256329v#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40251272h#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1777 ;
+        bnf-onto:lastYear              1798 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1777/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1798/> ;
+        bio:birth                      "1777" ;
+        bio:death                      "1798" ;
+        owl:sameAs                     <http://viaf.org/viaf/54416987> , <http://data.bnf.fr/ark:/12148/cb14955518z#about> , <http://www.idref.fr/055827071> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b6953566n.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69482160.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b84117232.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69482197.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6948218t.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6948217d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6948310v.thumbnail> ;
+        foaf:familyName                "Newton" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Richard" ;
+        foaf:name                      "Richard Newton" ;
+        foaf:page                      <http://data.bnf.fr/14955518/richard_newton/> .
+
+<http://data.bnf.fr/ark:/12148/cb40426853t#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402563244#Expression>
+        bnfroles:r312        <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402512746#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40254018w#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14955518z#foaf:Person> .

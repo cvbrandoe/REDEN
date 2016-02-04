@@ -1,0 +1,83 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb319990301#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30644023v#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30628408m#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33046735n#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1885 ;
+        bnf-onto:lastYear               1914 ;
+        bnf-onto:mortPourLaFrance       true ;
+        rdagroup2elements:biographicalInformation
+                "Philosophe et sociologue" , "A aussi traduit de l'anglais et de l'allemand en français" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1885/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1914/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Philosophie" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/100/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Saint-Mard-les-Triots (Somme)" ;
+        bio:birth                       "1885-05-30" ;
+        bio:death                       "1914-10-01" ;
+        owl:sameAs                      <http://viaf.org/viaf/14900526> , <http://www.idref.fr/067182879> , <http://data.bnf.fr/ark:/12148/cb128850867#about> ;
+        foaf:birthday                   "05-30" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k5482216b.thumbnail> ;
+        foaf:familyName                 "David" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Maxime" ;
+        foaf:name                       "Maxime David" ;
+        foaf:page                       <http://data.bnf.fr/12885086/maxime_david/> .
+
+<http://data.bnf.fr/12885086/maxime_david/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb128850867>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb128850867> ;
+        bnf-onto:FRBNF        12885086 ;
+        isni:identifierValid  "000000010855409X" ;
+        dcterms:created       "1991-07-09" ;
+        dcterms:modified      "2013-07-31" ;
+        skos:editorialNote    "Histoire de l'antiquité. Tome Ier. Introduction à l'étude des sociétés anciennes (évolution des groupements humains) / Eduard Meyer ; traduit par Maxime David, 1912. - . - Anthologie des écrivains morts à la guerre (1914-1918). T. IV, 1926. - . -"@fr , "BN Cat. gén.. - . - BN Cat. gén. suppl.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/14900526> , <http://www.idref.fr/067182879> ;
+        skos:note             "Philosophe et sociologue"@fr , "A aussi traduit de l'anglais et de l'allemand en français"@fr ;
+        skos:prefLabel        "Maxime David (1885-1914)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35190822m#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb128850867#foaf:Person> .

@@ -1,0 +1,97 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1808 ;
+        bnf-onto:lastYear              1867 ;
+        rdagroup2elements:biographicalInformation
+                "Historien. - Professeur d'histoire et de littérature. - Docteur ès-lettres. - Membre honoraire de l'Académie de Reims" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1808/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1867/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1808" ;
+        bio:death                      "1867" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb13488171n#about> , <http://viaf.org/viaf/51843263> , <http://www.idref.fr/035749571> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k2044102.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k5613346p.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k65474002.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k36101n.thumbnail> ;
+        foaf:familyName                "Henry" ;
+        foaf:givenName                 "Édouard" ;
+        foaf:name                      "Édouard Henry" ;
+        foaf:page                      <http://data.bnf.fr/13488171/edouard_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb305937253#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33340668d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31159520w#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305937222#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13488171n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13488171n> ;
+        bnf-onto:FRBNF        13488171 ;
+        isni:identifierValid  "0000000029201579" ;
+        dcterms:created       "1998-11-18" ;
+        dcterms:modified      "2013-07-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000029201579> ;
+        skos:editorialNote    "Correspondance de Philibert Babou de la Bourdaisière / publ. sur le ms. de la Bibliothèque de Reims par E. Henry et Ch. Loriquet, 1995 [document électronique : reprod. de l'éd. de 1859]. - . - Lorenz. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/51843263> , <http://www.idref.fr/035749571> , <http://isni.org/isni/0000000029201579> ;
+        skos:note             "Historien. - Professeur d'histoire et de littérature. - Docteur ès-lettres. - Membre honoraire de l'Académie de Reims"@fr ;
+        skos:prefLabel        "Édouard Henry (1808-1867)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30593727s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb364797202#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30593720c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb300441531#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30593724r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305937284#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13488171n#foaf:Person> .

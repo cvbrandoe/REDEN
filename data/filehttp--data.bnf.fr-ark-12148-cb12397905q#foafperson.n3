@@ -1,0 +1,98 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12397905q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12397905q> ;
+        bnf-onto:FRBNF        12397905 ;
+        isni:identifierValid  "0000000079805442" ;
+        dcterms:created       "1994-06-07" ;
+        dcterms:modified      "2013-07-27" ;
+        skos:altLabel         "David l'aîné (1706?-1769)"@fr ;
+        skos:editorialNote    "Lottin. - . - Delalain, Marques : l'appelle à tort Michel-Antoine I. - . - Sgard, Journaux. - . -"@fr , "Tableau des libraires, 1732. - . - Tableau des libraires, 1740. - . - Tableau des libraires, 1742. - . -"@fr , "Tableau des libraires, 1762. - . - Tableau des libraires, 1764. - . - Tableau des libraires, 1768. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/033075948> , <http://viaf.org/viaf/103936852> ;
+        skos:note             "Libraire. - Fils aîné du libraire parisien Michel-Étienne I David ; gendre du libraire Pierre Witte. Reçu maître en mai 1732. L'\"Historique des libraires\" de l'inspecteur d'Hémery le dit âgé de 45 ans au 1er janv. 1752. Jusqu'en 1769, il est l'un des quatre éditeurs de l'\"Encyclopédie\", avec Antoine-Claude Briasson, André-François Le Breton et Laurent Durand. Décédé à Paris en mars 1769 ; sa veuve lui succède"@fr ;
+        skos:prefLabel        "Michel-Antoine David (1706?-1769)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1706 ;
+        bnf-onto:lastYear              1769 ;
+        rdagroup2elements:biographicalInformation
+                "Libraire. - Fils aîné du libraire parisien Michel-Étienne I David ; gendre du libraire Pierre Witte. Reçu maître en mai 1732. L'\"Historique des libraires\" de l'inspecteur d'Hémery le dit âgé de 45 ans au 1er janv. 1752. Jusqu'en 1769, il est l'un des quatre éditeurs de l'\"Encyclopédie\", avec Antoine-Claude Briasson, André-François Le Breton et Laurent Durand. Décédé à Paris en mars 1769 ; sa veuve lui succède" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1706/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1769/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1732-1769" ;
+        bio:birth                      "1706" ;
+        bio:death                      "1769-03-17" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb12397905q#about> , <http://viaf.org/viaf/103936852> , <http://www.idref.fr/033075948> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k714133.thumbnail> ;
+        foaf:familyName                "David" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Michel-Antoine" ;
+        foaf:name                      "Michel-Antoine David" ;
+        foaf:page                      <http://data.bnf.fr/12397905/michel-antoine_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb35982150k#Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39345305q#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304458427#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39369371w#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37104344x#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37155717d#Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33569661x#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35949619p#Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39344338f#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31358225w#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12397905q#foaf:Person> .

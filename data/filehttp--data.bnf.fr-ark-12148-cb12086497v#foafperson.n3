@@ -1,0 +1,68 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/12086497/caroline_de_la_motte_fouque/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12086497v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33397822c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12086497v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12086497v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12086497v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30453637t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12086497v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12086497v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12086497v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12086497v#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1774 ;
+        bnf-onto:lastYear              1831 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1774/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1831/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        bio:birth                      "1774-10-07" ;
+        bio:death                      "1831-07-21" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb12086497v#about> , <http://viaf.org/viaf/34482994> , <http://www.idref.fr/029185653> ;
+        foaf:birthday                  "10-07" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k54698554.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k5470228n.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k5469748n.thumbnail> ;
+        foaf:familyName                "Fouqué" ;
+        foaf:givenName                 "Caroline de La Motte" ;
+        foaf:name                      "Caroline de La Motte Fouqué" ;
+        foaf:page                      <http://data.bnf.fr/12086497/caroline_de_la_motte_fouque/> .
+
+<http://data.bnf.fr/ark:/12148/cb12086497v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12086497v> ;
+        bnf-onto:FRBNF        12086497 ;
+        isni:identifierValid  "0000000108863546" ;
+        dcterms:created       "1988-09-30" ;
+        dcterms:modified      "2013-07-25" ;
+        owl:sameAs            <http://isni.org/isni/0000000108863546> ;
+        skos:altLabel         "Caroline de La Motte-Fouqué"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000108863546> , <http://viaf.org/viaf/34482994> , <http://www.idref.fr/029185653> ;
+        skos:prefLabel        "Caroline de La Motte Fouqué (1774-1831)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12086497v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35504496v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12086497v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12086497v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12086497v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34951890r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12086497v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12086497v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12086497v#foaf:Person> .

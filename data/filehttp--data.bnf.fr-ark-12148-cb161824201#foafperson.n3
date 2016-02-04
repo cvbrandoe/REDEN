@@ -1,0 +1,51 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb161824201#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1742 ;
+        bnf-onto:lastYear               1805 ;
+        rdagroup2elements:biographicalInformation
+                "Fille de Jean-François Corneille (1714-1802) et de Marie-Louise Rosset. - Adoptée par Voltaire. - Elle épouse le 9 février 1763 à Gex, Ain, Pierre-Jacques Dupuits de Maconnex (17..-1805?), officier des armées du roi et gentilhomme de sa vénerie. - Arrière-petite-nièce de Pierre Corneille" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1742/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1805/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de la France" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Evreux" ;
+        rdagroup2elements:placeOfDeath  "Genève (Suisse)" ;
+        bio:birth                       "1742" ;
+        bio:death                       "1805-05-08" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb161824201#about> ;
+        foaf:familyName                 "Corneille" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Marie-Françoise" ;
+        foaf:name                       "Marie-Françoise Corneille" ;
+        foaf:page                       <http://data.bnf.fr/16182420/marie-francoise_corneille/> .
+
+<http://data.bnf.fr/16182420/marie-francoise_corneille/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb161824201#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb161824201>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb161824201> ;
+        bnf-onto:FRBNF      16182420 ;
+        dcterms:created     "2010-02-22" ;
+        dcterms:modified    "2010-04-07" ;
+        skos:altLabel       "Marie-Françoise Dupuits de Maconnex (1742-1805)"@fr , "Marie-Françoise Corneille Dupuits (1742-1805)"@fr ;
+        skos:editorialNote  "Les demoiselles Corneille à Genève / Edouard Chapuisat, 1913. - . - Dictionnaire général de Voltaire, 2003: article: Corneille (Marie-Françoise). - . - Société Genevoise de Généalogie - Profil de Marie Françoise CORNEILLE. - http://www.gen-gen.ch/p.aspx?a=20&p=471&IndID=809421&CheckCookie=1. - 2010-02-22"@fr ;
+        skos:note           "Fille de Jean-François Corneille (1714-1802) et de Marie-Louise Rosset. - Adoptée par Voltaire. - Elle épouse le 9 février 1763 à Gex, Ain, Pierre-Jacques Dupuits de Maconnex (17..-1805?), officier des armées du roi et gentilhomme de sa vénerie. - Arrière-petite-nièce de Pierre Corneille"@fr ;
+        skos:prefLabel      "Marie-Françoise Corneille (1742-1805)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb161824201#foaf:Person> .

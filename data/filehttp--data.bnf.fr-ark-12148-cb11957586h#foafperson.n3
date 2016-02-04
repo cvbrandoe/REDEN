@@ -1,0 +1,49 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/11957586/lionel_lemoine_fitzgerald/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11957586h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11957586h>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb11957586h> ;
+        bnf-onto:FRBNF      11957586 ;
+        dcterms:created     "1985-07-06" ;
+        dcterms:modified    "2005-11-08" ;
+        skos:altLabel       "L. L. FitzGerald (1890-1956)"@fr ;
+        skos:editorialNote  "LCNA 1987-1992. - . - FitzGerald as printmaker : a catalogue raisonné of the first complete exhibition of the printed works, 1982. - . -"@fr ;
+        skos:note           "Graveur et dessinateur"@fr ;
+        skos:prefLabel      "Lionel LeMoine FitzGerald (1890-1956)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb11957586h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11957586h#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1890 ;
+        bnf-onto:lastYear              1956 ;
+        rdagroup2elements:biographicalInformation
+                "Graveur et dessinateur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1890/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1956/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Art" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/700/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1890-03-17" ;
+        bio:death                      "1956-08-05" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb11957586h#about> ;
+        foaf:birthday                  "03-17" ;
+        foaf:familyName                "FitzGerald" ;
+        foaf:givenName                 "Lionel LeMoine" ;
+        foaf:name                      "Lionel LeMoine FitzGerald" ;
+        foaf:page                      <http://data.bnf.fr/11957586/lionel_lemoine_fitzgerald/> .

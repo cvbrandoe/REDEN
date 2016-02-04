@@ -1,0 +1,83 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb10390784b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10390784b> ;
+        bnf-onto:FRBNF        10390784 ;
+        isni:identifierValid  "0000000085832543" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-07-16" ;
+        owl:sameAs            <http://isni.org/isni/0000000085832543> ;
+        skos:altLabel         "Joannes Cognatus (1568-1636)"@fr ;
+        skos:editorialNote    "De Prosperitate et exitio Salomonis, auctore Joanne Cognato, 1599. - . - Histoire de Tournay, ou Quatre livres des chroniques, annales ou démonstrations du christianisme de l'évesché de Tournay, par Mre Jean Cousin, 1619-1620. - . -"@fr , "WBIS. - http://galenet.galegroup.com. - 2005-02-09 Larousse 19e s. : mort en 1621. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/34446208> , <http://www.idref.fr/120772159> , <http://isni.org/isni/0000000085832543> ;
+        skos:note             "Écrivit aussi en latin"@fr , "Chanoine à Tournai (Belgique)"@fr ;
+        skos:prefLabel        "Jean Cousin (1568-1636)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42114440f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30281952b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39369691b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31622840w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30281953p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302819541#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1568 ;
+        bnf-onto:lastYear              1636 ;
+        rdagroup2elements:biographicalInformation
+                "Écrivit aussi en latin" , "Chanoine à Tournai (Belgique)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/be> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1568/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1636/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1568" ;
+        bio:death                      "1636" ;
+        owl:sameAs                     <http://viaf.org/viaf/34446208> , <http://www.idref.fr/120772159> , <http://data.bnf.fr/ark:/12148/cb10390784b#about> ;
+        foaf:familyName                "Cousin" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Cousin" ;
+        foaf:page                      <http://data.bnf.fr/10390784/jean_cousin/> .
+
+<http://data.bnf.fr/ark:/12148/cb302819510#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10390784b#foaf:Person> .

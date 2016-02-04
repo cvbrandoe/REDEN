@@ -1,0 +1,40 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12105700r#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             -270 ;
+        bnf-onto:lastYear              -221 ;
+        rdagroup2elements:biographicalInformation
+                "Épouse du roi d'Égypte Ptolémée III" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/-0270/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/-0221/> ;
+        bio:birth                      "- 270" ;
+        bio:death                      "- 221" ;
+        owl:sameAs                     <http://www.idref.fr/079973426> , <http://data.bnf.fr/ark:/12148/cb12105700r#about> ;
+        foaf:familyName                "Bérénice" ;
+        foaf:gender                    "female" ;
+        foaf:page                      <http://data.bnf.fr/12105700/berenice_2/> .
+
+<http://data.bnf.fr/ark:/12148/cb12105700r>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12105700r> ;
+        bnf-onto:FRBNF      12105700 ;
+        dcterms:created     "1989-03-06" ;
+        dcterms:modified    "2014-12-03" ;
+        skos:altLabel       "Βερενίκη II (reine d'Égypte, 0270?-0221 av J.-C)"@fr , "Berenike II (reine d'Égypte, 0270?-0221 av. J.-C.)"@de , "Berenice II (reine d'Égypte, 0270?-0221 av. J.-C.)"@it , "Vereníkī II (reine d'Égypte, 0270?-0221 av. J.-C.)"@fr , "Bereníkē II (reine d'Égypte, 0270?-0221 av. J.-C.)"@fr ;
+        skos:editorialNote  "GDEL : Bérénice II. - . - Kleine Pauly : Berenike II. - . - Berenice da Callimaco a Catullo / Nino Marinone, 1984. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/079973426> ;
+        skos:note           "Épouse du roi d'Égypte Ptolémée III"@fr ;
+        skos:prefLabel      "Bérénice II (reine d'Égypte, 0270?-0221 av. J.-C.)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12105700r#foaf:Person> .
+
+<http://data.bnf.fr/12105700/berenice_2/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12105700r#foaf:Person> .

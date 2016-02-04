@@ -1,0 +1,59 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb16049513q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb16049513q> ;
+        bnf-onto:FRBNF        16049513 ;
+        isni:identifierValid  "0000000078520023" ;
+        dcterms:created       "2009-06-09" ;
+        dcterms:modified      "2013-08-07" ;
+        owl:sameAs            <http://isni.org/isni/0000000078520023> ;
+        skos:altLabel         "Jean II Garnier (1706-1765)"@fr , "Jean Garnier II (1706-1765)"@fr ;
+        skos:editorialNote    "Corrard de Breban. - . - Morin, Garnier. - . - Morin, Hist. corporative. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/087395320> , <http://isni.org/isni/0000000078520023> , <http://viaf.org/viaf/89834361> ;
+        skos:note             "Imprimeur-libraire ; fondeur de caractères ; également relieur et cartonnier. - Fils de l'imprimeur-libraire de Troyes Pierre Garnier. Libraire en activité dès 1732. Sollicite plusieurs fois en vain, de janv. 1736 à 1739, une place d'imprimeur à Troyes (en 1739 en succession de son père, alors décédé). Capitaine de la milice bourgeoise de Troyes en 1749. Finit par être reçu imprimeur, par arrêt du Conseil du 7 janv. 1754, en succession de sa mère, veuve de Pierre Garnier. En nov. 1762, ayant à agrandir les locaux de son entreprise, il rachète la maison de la veuve de Jean IV Oudot, au coin de la rue du Temple. Dit à tort âgé de 60 ans lors de l'enquête royale de 1764. Décédé à Troyes en déc. 1765. Ses fils Jean-Antoine et Étienne Garnier lui succèdent"@fr ;
+        skos:prefLabel        "Jean Garnier (1706-1765)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb16049513q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35218458z#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb16049513q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb16049513q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16049513q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16049513q#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1706 ;
+        bnf-onto:lastYear              1765 ;
+        rdagroup2elements:biographicalInformation
+                "Imprimeur-libraire ; fondeur de caractères ; également relieur et cartonnier. - Fils de l'imprimeur-libraire de Troyes Pierre Garnier. Libraire en activité dès 1732. Sollicite plusieurs fois en vain, de janv. 1736 à 1739, une place d'imprimeur à Troyes (en 1739 en succession de son père, alors décédé). Capitaine de la milice bourgeoise de Troyes en 1749. Finit par être reçu imprimeur, par arrêt du Conseil du 7 janv. 1754, en succession de sa mère, veuve de Pierre Garnier. En nov. 1762, ayant à agrandir les locaux de son entreprise, il rachète la maison de la veuve de Jean IV Oudot, au coin de la rue du Temple. Dit à tort âgé de 60 ans lors de l'enquête royale de 1764. Décédé à Troyes en déc. 1765. Ses fils Jean-Antoine et Étienne Garnier lui succèdent" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1706/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1765/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1732-1765" ;
+        bio:birth                      "1706-12-02" ;
+        bio:death                      "1765-12-13" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb16049513q#about> , <http://viaf.org/viaf/89834361> , <http://www.idref.fr/087395320> ;
+        foaf:birthday                  "12-02" ;
+        foaf:familyName                "Garnier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Garnier" ;
+        foaf:page                      <http://data.bnf.fr/16049513/jean_garnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb32688283b#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb16049513q#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb16049513q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16049513q#foaf:Person> .

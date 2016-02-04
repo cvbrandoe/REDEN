@@ -1,0 +1,158 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb424369062#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1492 ;
+        bnf-onto:lastYear               1560 ;
+        rdagroup2elements:biographicalInformation
+                "A aussi écrit en latin" , "Cardinal" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1492/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1560/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Souday (Loir-et-Cher)" ;
+        rdagroup2elements:placeOfDeath  "Rome" ;
+        bio:birth                       "1492" ;
+        bio:death                       "1560-02-16" ;
+        owl:sameAs                      <http://viaf.org/viaf/68938939> , <http://fr.dbpedia.org/resource/Jean_du_Bellay_(1492-1560)> , <http://dbpedia.org/resource/Jean_du_Bellay_(1492-1560)> , <http://data.bnf.fr/ark:/12148/cb11997756z#about> , <http://www.idref.fr/028068629> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/JeanDuBellay.jpg?width=300> , <http://gallica.bnf.fr/ark:/12148/bpt6k52842m/f1.item.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/JeanDuBellay.jpg> , <http://gallica.bnf.fr/ark:/12148/bpt6k115771r.thumbnail> ;
+        foaf:familyName                 "Du Bellay" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jean" ;
+        foaf:name                       "Jean Du Bellay" ;
+        foaf:page                       <http://data.bnf.fr/11997756/jean_du_bellay/> .
+
+<http://data.bnf.fr/ark:/12148/cb363780828#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42642945j#Expression>
+        bnfroles:r290        <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:dte          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374741163#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34044274t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30357436q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb442769195#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11997756z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Jean_du_Bellay_(1492-1560)> , <http://catalogue.bnf.fr/ark:/12148/cb11997756z> ;
+        bnf-onto:FRBNF        11997756 ;
+        isni:identifierValid  "0000000118334488" ;
+        dcterms:created       "1986-06-05" ;
+        dcterms:modified      "2015-03-12" ;
+        owl:sameAs            <http://isni.org/isni/0000000118334488> ;
+        skos:altLabel         "Joannes Bellaius (1492?-1560)"@fr ;
+        skos:editorialNote    "Correspondance du cardinal Jean Du Bellay ; publ. pour la Société de l'histoire de France par Rémy Scheurer, 1969. - . - Cioranescu, 16e s.. - . -"@fr , "DBF. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://fr.dbpedia.org/resource/Jean_du_Bellay_(1492-1560)> , <http://viaf.org/viaf/68938939> , <http://fr.wikipedia.org/wiki/Jean_du_Bellay_(1492-1560)> , <http://isni.org/isni/0000000118334488> , <http://www.idref.fr/028068629> , <http://dbpedia.org/resource/Jean_du_Bellay_(1492-1560)> ;
+        skos:note             "A aussi écrit en latin"@fr , "Cardinal"@fr ;
+        skos:prefLabel        "Jean Du Bellay (1492?-1560)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30357429f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30357432b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41003597x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303574341#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30357435c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30861831q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303574372#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb343276962#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42589446v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb368176840#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41294014g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35118308z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30459136j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/11997756/jean_du_bellay/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36118832b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11997756z#foaf:Person> .

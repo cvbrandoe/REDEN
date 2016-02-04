@@ -1,0 +1,70 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb394992346#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> ;
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14653911n>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb14653911n> ;
+        bnf-onto:FRBNF      14653911 ;
+        dcterms:created     "2005-08-26" ;
+        dcterms:modified    "2011-07-01" ;
+        skos:altLabel       "Antoine, Victor Lerebours"@fr , "Pierre-Victor (1791-1864)"@fr ;
+        skos:editorialNote  "BNF-ASP. Harald ou Les scandinaves / Pierre-Victor, Odéon, 1824; avec Victor (Harald). - . - Lyonnet. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/66726399> , <http://www.idref.fr/153357827> ;
+        skos:note           "Acteur. - Auteur dramatique"@fr ;
+        skos:prefLabel      "Victor (1791-1864)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1791 ;
+        bnf-onto:lastYear              1864 ;
+        rdagroup2elements:biographicalInformation
+                "Acteur. - Auteur dramatique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1791/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1864/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1791" ;
+        bio:death                      "1864" ;
+        owl:sameAs                     <http://viaf.org/viaf/66726399> , <http://data.bnf.fr/ark:/12148/cb14653911n#about> , <http://www.idref.fr/153357827> ;
+        foaf:familyName                "Victor" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/14653911/victor/> .
+
+<http://data.bnf.fr/ark:/12148/cb39499235j#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39459575s#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> ;
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39496225h#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> .
+
+<http://data.bnf.fr/14653911/victor/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14653911n#foaf:Person> .

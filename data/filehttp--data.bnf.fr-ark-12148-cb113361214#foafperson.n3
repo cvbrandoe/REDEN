@@ -1,0 +1,79 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1880 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de langues romanes à l'université du Colorado (1914-1916) puis de de Denver (1916-1920). - Professeur d'anthropologie à l'université de Denver (1920-1948)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1880/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Boulogne-Billancourt (Hauts-de-Seine)" ;
+        bio:birth                       "1880-06-14" ;
+        bio:death                       "19.." ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb113361214#about> , <http://www.idref.fr/176731865> , <http://viaf.org/viaf/8927738> ;
+        foaf:birthday                   "06-14" ;
+        foaf:familyName                 "Renaud" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "E. B." ;
+        foaf:name                       "E. B. Renaud" ;
+        foaf:page                       <http://data.bnf.fr/11336121/e__b__renaud/> .
+
+<http://data.bnf.fr/ark:/12148/cb32564438h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32564435g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb325644375#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32564436t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31196405t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb325644344#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb113361214>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb113361214> ;
+        bnf-onto:FRBNF        11336121 ;
+        isni:identifierValid  "000000003021983X" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-07-25" ;
+        owl:sameAs            <http://isni.org/isni/000000003021983X> ;
+        skos:altLabel         "Etienne Renaud (1880-19..)"@fr , "Etienne Bernardeau Renaud (1880-19..)"@fr ;
+        skos:editorialNote    "WW, France 1959-1960 : Renaud (Etienne). - . - BN  Cat. gén. : Renaud (E. B.). - . -"@fr , "Pictographs and petroglyphs of the High Western Plains / by E. B. Renaud, 1936 (The Archaeological survey of the High Western Plains, eighth report). - . - LC authorities : Renaud, E. B. (Etienne Bernardeau), b. 1880. - http://authorities.loc.gov. - 2012-12-03"@fr ;
+        skos:exactMatch       <http://isni.org/isni/000000003021983X> , <http://www.idref.fr/176731865> , <http://viaf.org/viaf/8927738> ;
+        skos:note             "Professeur de langues romanes à l'université du Colorado (1914-1916) puis de de Denver (1916-1920). - Professeur d'anthropologie à l'université de Denver (1920-1948)"@fr ;
+        skos:prefLabel        "E. B. Renaud (1880-19..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb113361214#foaf:Person> .

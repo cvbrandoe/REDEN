@@ -1,0 +1,54 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb139593036>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb139593036> ;
+        bnf-onto:FRBNF        13959303 ;
+        isni:identifierValid  "0000000108694287" ;
+        dcterms:created       "1993-11-05" ;
+        dcterms:modified      "2013-08-01" ;
+        owl:sameAs            <http://isni.org/isni/0000000108694287> ;
+        skos:altLabel         "Henry Franklin Belknap Gilbert (1868-1928)"@fr ;
+        skos:exactMatch       <http://www.idref.fr/166527629> , <http://viaf.org/viaf/10040211> , <http://isni.org/isni/0000000108694287> ;
+        skos:note             "Compositeur"@fr ;
+        skos:prefLabel        "Henry F. Gilbert (1868-1928)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb139593036#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139593036#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1868 ;
+        bnf-onto:lastYear               1928 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1868/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1928/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Somerville, Mass." ;
+        rdagroup2elements:placeOfDeath  "Cambridge, Mass." ;
+        bio:birth                       "1868-09-26" ;
+        bio:death                       "1928-05-19" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb139593036#about> , <http://www.idref.fr/166527629> , <http://viaf.org/viaf/10040211> ;
+        foaf:birthday                   "09-26" ;
+        foaf:familyName                 "Gilbert" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Henry F." ;
+        foaf:name                       "Henry F. Gilbert" ;
+        foaf:page                       <http://data.bnf.fr/13959303/henry_f__gilbert/> .
+
+<http://data.bnf.fr/ark:/12148/cb13959302v#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139593036#foaf:Person> .
+
+<http://data.bnf.fr/13959303/henry_f__gilbert/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb139593036#foaf:Person> .

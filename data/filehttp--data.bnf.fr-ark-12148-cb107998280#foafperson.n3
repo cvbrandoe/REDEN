@@ -1,0 +1,90 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb368694123#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36869413f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb437069183#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30281922d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1863 ;
+        bnf-onto:lastYear               1936 ;
+        rdagroup2elements:biographicalInformation
+                "Pharmacien des hôpitaux (1889). - Docteur ès sciences physiques (1897). - Agrégé en pharmacie (Paris, 1899). - A été pharmacien-chef de l'Hospice d'Ivry (1889-1897), de la clinique Tarnier (1897-1901), de la clinique Hérold (1901-1902), de l'Hôpital Broussais (1902-1906), de l'Hôpital Cochin (1907-1928). - Membre de la Société de pharmacie (1900)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1863/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1936/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Pharmacie" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/615/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Chaumont" ;
+        bio:birth                       "1863" ;
+        bio:death                       "1936-01-17" ;
+        owl:sameAs                      <http://viaf.org/viaf/107588784> , <http://www.idref.fr/115255982> , <http://data.bnf.fr/ark:/12148/cb107998280#about> ;
+        foaf:familyName                 "Cousin" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Henri-Charles" ;
+        foaf:name                       "Henri-Charles Cousin" ;
+        foaf:page                       <http://data.bnf.fr/10799828/henri-charles_cousin/> .
+
+<http://data.bnf.fr/10799828/henri-charles_cousin/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb107998280>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb107998280> ;
+        bnf-onto:FRBNF        10799828 ;
+        isni:identifierValid  "0000000077696377" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2015-03-13" ;
+        owl:sameAs            <http://isni.org/isni/0000000077696377> ;
+        skos:editorialNote    "BnF - Département de la recherche bibliographique [Recueil. Dossiers biographiques Boutillier du Retail. Documentation sur Henri-Charles Cousin], 1936: contient 1 liste des travaux scientifiques de H. Cousin. - . - BN Cat. gén.: Cousin (H.) ET Cousin (Henri). - . -"@fr , "Contribution à l'étude des dérivés de la pyrocatéchine et de l'homopyrocatéchine: [thèse] / par M. H. Cousin, 1897. - . - Sur l'Iodhydrate de pyramidon, 1909. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/107588784> , <http://www.idref.fr/115255982> , <http://isni.org/isni/0000000077696377> ;
+        skos:note             "Pharmacien des hôpitaux (1889). - Docteur ès sciences physiques (1897). - Agrégé en pharmacie (Paris, 1899). - A été pharmacien-chef de l'Hospice d'Ivry (1889-1897), de la clinique Tarnier (1897-1901), de la clinique Hérold (1901-1902), de l'Hôpital Broussais (1902-1906), de l'Hôpital Cochin (1907-1928). - Membre de la Société de pharmacie (1900)"@fr ;
+        skos:prefLabel        "Henri-Charles Cousin (1863-1936)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31976509f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30596538m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30281923r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107998280#foaf:Person> .

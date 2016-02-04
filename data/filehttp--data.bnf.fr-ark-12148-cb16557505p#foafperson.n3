@@ -1,0 +1,60 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/16557505/amedee_garnier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb16557505p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16557505p>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb16557505p> ;
+        bnf-onto:FRBNF    16557505 ;
+        dcterms:created   "2011-12-13" ;
+        dcterms:modified  "2011-12-13" ;
+        skos:altLabel     "Amédée Joseph Garnier (1887-1915)"@fr ;
+        skos:exactMatch   <http://viaf.org/viaf/221094036> ;
+        skos:note         "A collaboré à \"L'intransigeant\". - A été canonnier servant à la 33e batterie du 8e régiment d'artillerie"@fr ;
+        skos:prefLabel    "Amédée Garnier (1887-1915)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb16557505p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16557505p#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1887 ;
+        bnf-onto:lastYear               1915 ;
+        bnf-onto:mortPourLaFrance       true ;
+        rdagroup2elements:biographicalInformation
+                "A collaboré à \"L'intransigeant\". - A été canonnier servant à la 33e batterie du 8e régiment d'artillerie" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1887/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1915/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de la France" , "Sciences de l'information et de la documentation" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/020/> , <http://dewey.info/class/944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Baugé (Maine-et-Loire)" ;
+        rdagroup2elements:placeOfDeath  "Eski-Hissarlik, Dardanelles (Turquie)" ;
+        bio:birth                       "1887-05-20" ;
+        bio:death                       "1915-12-25" ;
+        owl:sameAs                      <http://viaf.org/viaf/221094036> , <http://data.bnf.fr/ark:/12148/cb16557505p#about> ;
+        foaf:birthday                   "05-20" ;
+        foaf:familyName                 "Garnier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Amédée" ;
+        foaf:name                       "Amédée Garnier" ;
+        foaf:page                       <http://data.bnf.fr/16557505/amedee_garnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb42566025n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16557505p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16557505p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16557505p#foaf:Person> .

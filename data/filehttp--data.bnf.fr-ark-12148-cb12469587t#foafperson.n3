@@ -1,0 +1,53 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12469587t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1340 ;
+        bnf-onto:lastYear              1410 ;
+        rdagroup2elements:biographicalInformation
+                "Pape de 1409 à 1410. - Franciscain. - Théologien. - Né en Crète (anciennement Candie) de parents grecs" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1340/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1410/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        bio:birth                      "1340" ;
+        bio:death                      "1410-05-03" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb12469587t#about> , <http://viaf.org/viaf/41592920> , <http://fr.dbpedia.org/resource/Alexandre_V_(antipape)> , <http://www.idref.fr/033884374> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b85291712.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Antipope_Alexander_V_(1409-1410).JPG?width=300> , <http://commons.wikimedia.org/wiki/Special:FilePath/Antipope_Alexander_V_(1409-1410).JPG> ;
+        foaf:familyName                "Alexandre" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/12469587/alexandre_5/> .
+
+<http://data.bnf.fr/ark:/12148/cb12469587t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Alexandre_V_(antipape)> , <http://catalogue.bnf.fr/ark:/12148/cb12469587t> ;
+        bnf-onto:FRBNF        12469587 ;
+        isni:identifierValid  "0000000079739959" ;
+        dcterms:created       "1995-06-23" ;
+        dcterms:modified      "2013-10-24" ;
+        owl:sameAs            <http://isni.org/isni/0000000079739959> ;
+        skos:altLabel         "Peter of Candia (1340?-1410)"@en , "Pierre Philargès (1340?-1410)"@fr , "Alessandro V (pape, 1340?-1410)"@it , "Pietro Filargo (1340?-1410)"@it , "Petrus de Candia (1340?-1410)"@la , "Petros Filargès (1340?-1410)" , "Petros Philargos (1340?-1410)" , "Petros Philargis (1340?-1410)" , "Petrus Philargus (1340?-1410)"@la , "Alexander V (pape, 1340?-1410)"@la , "Pierre de Candie (1340?-1410)"@fr ;
+        skos:editorialNote    "[Petri de Candia Prologus \"Libri sententiarum\"] i̲n̲ Medieval philosophy and theology. Vol. 1 / ed. board Norman Kretzmann [et al.], 1991. - . - Dictionnaire historique de la papauté / sous la dir. de Philippe Levillain, 1994. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/41592920> , <http://fr.wikipedia.org/wiki/Alexandre_V_(antipape)> , <http://fr.dbpedia.org/resource/Alexandre_V_(antipape)> , <http://www.idref.fr/033884374> , <http://isni.org/isni/0000000079739959> ;
+        skos:note             "Pape de 1409 à 1410. - Franciscain. - Théologien. - Né en Crète (anciennement Candie) de parents grecs"@fr ;
+        skos:prefLabel        "Alexandre V (pape, 1340?-1410)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12469587t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33764908f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12469587t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12469587t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12469587t#foaf:Person> .
+
+<http://data.bnf.fr/12469587/alexandre_5/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12469587t#foaf:Person> .

@@ -1,0 +1,56 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14641233b#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1510 ;
+        bnf-onto:lastYear              1557 ;
+        rdagroup2elements:biographicalInformation
+                "Humaniste et théologien de Kronstadt (aujourd'hui Braşov) en Roumanie" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1510/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1557/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        bio:birth                      "1510" ;
+        bio:death                      "1557-09-02" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb14641233b#about> , <http://viaf.org/viaf/34714333> , <http://www.idref.fr/124777937> ;
+        foaf:familyName                "Wagner" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Valentin" ;
+        foaf:name                      "Valentin Wagner" ;
+        foaf:page                      <http://data.bnf.fr/14641233/valentin_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb39904819r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14641233b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14641233b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14641233b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14641233b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14641233b> ;
+        bnf-onto:FRBNF        14641233 ;
+        isni:identifierValid  "0000000038160318" ;
+        dcterms:created       "2005-06-30" ;
+        dcterms:modified      "2013-08-03" ;
+        owl:sameAs            <http://isni.org/isni/0000000038160318> ;
+        skos:editorialNote    "Reformation zwischen Ost und West : Valentin Wagners griechischer Katechismus (Kronstadt 1550) / eingeleitet, ediert und kommentierend übersetzt von Andreas Müller, 2000. - . - CORC. - http://corc.oclc.org. - 2005-06-30"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000038160318> , <http://viaf.org/viaf/34714333> , <http://www.idref.fr/124777937> ;
+        skos:note             "Humaniste et théologien de Kronstadt (aujourd'hui Braşov) en Roumanie"@fr ;
+        skos:prefLabel        "Valentin Wagner (1510?-1557)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14641233b#foaf:Person> .

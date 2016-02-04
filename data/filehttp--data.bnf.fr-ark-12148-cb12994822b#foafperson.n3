@@ -1,0 +1,110 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12994822b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12994822b> ;
+        bnf-onto:FRBNF        12994822 ;
+        isni:identifierValid  "000000000026543X" ;
+        dcterms:created       "1995-01-27" ;
+        dcterms:modified      "2013-07-31" ;
+        skos:altLabel         "Jean Denis Gustave Bazin (1824-1906)"@fr ;
+        skos:editorialNote    "Centre historique des Archives nationales, base Léonore : BAZIN, Jean Denis Gustave. - www.culture.gouv.fr/public/mistral/leonore. - 26 avril 2005 BN Cat. gén. : BAZIN (abbé G.), chanoine de Saint-Denis. - . -"@fr , "Vie de Mgr Maret / par M. l'abbé G. Bazin, 1891. - . - Bref de Paris 1864 ; 1873. - . -"@fr , "Ordo divini officii... ad usum... dioecesis Montis Pessulani... 1907, p. 22. - . - Le Chapitre national et épiscopal de Saint-Denis / abbé Adrien Friedmann, 1938, f. 249. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/41973481> , <http://www.idref.fr/140536388> ;
+        skos:note             "Prêtre du Diocèse de Montpellier (ordonné vers 1848), chanoine honoraire de Troyes et de Montpellier (en 1891). - Secrétaire de la Faculté de théologie en Sorbonne (186.-1885). - Chanoine honoraire (1875-1878), puis chanoine du second ordre du Chapitre de Saint-Denis. - Chevalier de la Légion d'honneur"@fr ;
+        skos:prefLabel        "Gustave Bazin (1824-1906)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb428373457#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42837343j#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb300709787#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb340485738#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb428373426#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb341805600#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb431841855#Expression>
+        bnfroles:r50         <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        marcrel:arr          <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1824 ;
+        bnf-onto:lastYear               1906 ;
+        rdagroup2elements:biographicalInformation
+                "Prêtre du Diocèse de Montpellier (ordonné vers 1848), chanoine honoraire de Troyes et de Montpellier (en 1891). - Secrétaire de la Faculté de théologie en Sorbonne (186.-1885). - Chanoine honoraire (1875-1878), puis chanoine du second ordre du Chapitre de Saint-Denis. - Chevalier de la Légion d'honneur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1824/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1906/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Clermont-l'Hérault" ;
+        rdagroup2elements:placeOfDeath  "Clermont-l'Hérault ?" ;
+        bio:birth                       "1824" ;
+        bio:death                       "1906" ;
+        owl:sameAs                      <http://www.idref.fr/140536388> , <http://viaf.org/viaf/41973481> , <http://data.bnf.fr/ark:/12148/cb12994822b#about> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k67035j/f1.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k134549b.thumbnail> ;
+        foaf:familyName                 "Bazin" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Gustave" ;
+        foaf:name                       "Gustave Bazin" ;
+        foaf:page                       <http://data.bnf.fr/12994822/gustave_bazin/> .
+
+<http://data.bnf.fr/ark:/12148/cb359764238#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30070976j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36463974w#Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42837344w#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42837346k#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12994822b#foaf:Person> .

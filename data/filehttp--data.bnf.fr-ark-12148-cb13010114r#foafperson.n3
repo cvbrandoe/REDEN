@@ -1,0 +1,57 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30636148r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13010114r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13010114r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13010114r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb306361462#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13010114r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13010114r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13010114r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13010114r#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1806 ;
+        bnf-onto:lastYear              1879 ;
+        rdagroup2elements:biographicalInformation
+                "A aussi écrit en espagnol" , "Commerçant et voyageur en Amérique du Sud. - A collaboré à plusieurs journaux. - Franc-maçon, consul honoraire d'Urugay. - Né et mort au Havre (Seine-Maritime)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1806/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1879/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1806" ;
+        bio:death                      "1879-09" ;
+        owl:sameAs                     <http://www.idref.fr/109338626> , <http://data.bnf.fr/ark:/12148/cb13010114r#about> , <http://viaf.org/viaf/71525573> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k5818229v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k75746v.thumbnail> ;
+        foaf:familyName                "Isabelle" ;
+        foaf:givenName                 "Arsène" ;
+        foaf:name                      "Arsène Isabelle" ;
+        foaf:page                      <http://data.bnf.fr/13010114/arsene_isabelle/> .
+
+<http://data.bnf.fr/ark:/12148/cb13010114r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13010114r> ;
+        bnf-onto:FRBNF        13010114 ;
+        isni:identifierValid  "0000000081949170" ;
+        dcterms:created       "1995-05-10" ;
+        dcterms:modified      "2013-12-18" ;
+        skos:altLabel         "Louis-Frédéric Arsène Isabelle"@fr ;
+        skos:editorialNote    "DBF. - . - WBI : Isabelle, Louis Frédéric Arsène, 1807-1888. - . -"@fr , "Salvacion de las repúblicas sud-americanas : solucion del problema social / por Arsène Isabelle, 1872. - . - Circulaire adressée à toutes les Ll. ̇. chap. ̇. con. ̇. en France et à l'étranger par le F. ̇. Isabelle (du Havre), s.d.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/71525573> , <http://www.idref.fr/109338626> ;
+        skos:note             "Commerçant et voyageur en Amérique du Sud. - A collaboré à plusieurs journaux. - Franc-maçon, consul honoraire d'Urugay. - Né et mort au Havre (Seine-Maritime)"@fr , "A aussi écrit en espagnol"@fr ;
+        skos:prefLabel        "Arsène Isabelle (1806?-1879)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13010114r#foaf:Person> .

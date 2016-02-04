@@ -1,0 +1,59 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb162093788#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1849 ;
+        bnf-onto:lastYear               1930 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre de genre et de portraits. - Fresquiste. - Professeur de dessin et de peinture à l'École des beaux-arts de Valenciennes (1879-1889). - Chevalier de la Légion d'honneur (1894)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1849/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1930/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Peinture" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/750/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Solesme (Nord)" ;
+        rdagroup2elements:placeOfDeath  "Tonneins (Lot-et-Garonne)" ;
+        bio:birth                       "1849-01-16" ;
+        bio:death                       "1930-04-26" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb162093788#about> ;
+        foaf:birthday                   "01-16" ;
+        foaf:familyName                 "Delacroix" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Henry-Eugène" ;
+        foaf:name                       "Henry-Eugène Delacroix" ;
+        foaf:page                       <http://data.bnf.fr/16209378/henry-eugene_delacroix/> .
+
+<http://data.bnf.fr/ark:/12148/cb442208480#Expression>
+        bnfroles:r522        <http://data.bnf.fr/ark:/12148/cb162093788#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb162093788#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb162093788#foaf:Person> .
+
+<http://data.bnf.fr/16209378/henry-eugene_delacroix/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb162093788#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb162093788>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb162093788> ;
+        bnf-onto:FRBNF      16209378 ;
+        dcterms:created     "2010-06-14" ;
+        dcterms:modified    "2015-09-14" ;
+        skos:altLabel       "Eugène Henri Delacroix (1849-1930)"@fr , "Henri Eugène Delacroix (1849-1930)"@fr ;
+        skos:editorialNote  "Dictionnaire biographique des artistes contemporaines : 1910-1930 / René Edouard-Joseph, 1930. - . - Dictionnaire général des artistes de l'école française depuis l'origine des arts du dessin jusqu'à nos jours / ouvrage commencé par Émile Bellier de La Chavignerie; ontinué par Louis Auvray, 1882-1885 : Delacroix, Eugène Henri. - . - Bénézit, 1976. - . -"@fr , "BnF - Département de la recherche bibliographique [Recueil. Dossiers biographiques Boutillier du Retail. Documentation sur Henry-Eugène Delacroix], 1897. - . - Leonore : Delacroix, Eugène Henry. - http://www.culture.gouv.fr/documentation/leonore/. - 2015-09-14"@fr ;
+        skos:note           "Peintre de genre et de portraits. - Fresquiste. - Professeur de dessin et de peinture à l'École des beaux-arts de Valenciennes (1879-1889). - Chevalier de la Légion d'honneur (1894)"@fr ;
+        skos:prefLabel      "Henry-Eugène Delacroix (1849-1930)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb162093788#foaf:Person> .

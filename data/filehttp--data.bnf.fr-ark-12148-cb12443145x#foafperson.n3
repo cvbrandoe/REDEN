@@ -1,0 +1,78 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30265263m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30265275m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12443145x>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12443145x> ;
+        bnf-onto:FRBNF        12443145 ;
+        isni:identifierValid  "0000000108154897" ;
+        dcterms:created       "1995-01-26" ;
+        dcterms:modified      "2013-10-24" ;
+        owl:sameAs            <http://isni.org/isni/0000000108154897> ;
+        skos:editorialNote    "Lorenz : Constant (Le R. P.), des Frères prêcheurs. - . - BN Cat. gén. : Constant (Le P. J.), O. P.. - . -"@fr , "Nazareth ou Les lois chrétiennes de la famille : quinze conférences / par le R. P. Constant, 1903. - . - DBF : Constant (Julien-Roch Popot, dit Julien). - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000108154897> , <http://www.idref.fr/176663819> , <http://viaf.org/viaf/89549919> ;
+        skos:note             "Dominicain. - Pseudonyme de Julien-Roch Popot"@fr ;
+        skos:prefLabel        "Julien Constant (1832-1912)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb359597958#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1832 ;
+        bnf-onto:lastYear              1912 ;
+        rdagroup2elements:biographicalInformation
+                "Dominicain. - Pseudonyme de Julien-Roch Popot" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1832/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1912/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1832-11-25" ;
+        bio:death                      "1912-11-15" ;
+        owl:sameAs                     <http://www.idref.fr/176663819> , <http://viaf.org/viaf/89549919> , <http://data.bnf.fr/ark:/12148/cb12443145x#about> ;
+        foaf:birthday                  "11-25" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k664760.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k66475n.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k664718.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k664749.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k66470x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k66473z.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k66472m.thumbnail> ;
+        foaf:familyName                "Constant" ;
+        foaf:givenName                 "Julien" ;
+        foaf:name                      "Julien Constant" ;
+        foaf:page                      <http://data.bnf.fr/12443145/julien_constant/> .
+
+<http://data.bnf.fr/ark:/12148/cb35959796m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb359591003#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30265273x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12443145x#foaf:Person> .

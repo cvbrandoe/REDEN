@@ -1,0 +1,60 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb35441062c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12350308k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12350308k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12350308k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35686067g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12350308k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12350308k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12350308k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12350308k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12350308k> ;
+        bnf-onto:FRBNF        12350308 ;
+        isni:identifierValid  "0000000110805038" ;
+        dcterms:created       "1993-11-24" ;
+        dcterms:modified      "2013-07-27" ;
+        owl:sameAs            <http://isni.org/isni/0000000110805038> ;
+        skos:editorialNote    "The autobiography of Dr. Alexander Carlyle of Inveresk 1722-1805 / ed. by John Hill Burton, 1990 [reprod. de l'éd. de 1910]. - . - LCNA (CD ), 1993-06. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/107031944> , <http://www.idref.fr/032481349> , <http://isni.org/isni/0000000110805038> ;
+        skos:note             "Ecclésiastique"@fr ;
+        skos:prefLabel        "Alexander Carlyle (1722-1805)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12350308k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12350308k#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1722 ;
+        bnf-onto:lastYear              1805 ;
+        rdagroup2elements:biographicalInformation
+                "Ecclésiastique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1722/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1805/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1722-01-26" ;
+        bio:death                      "1805-08-25" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb12350308k#about> , <http://www.idref.fr/032481349> , <http://viaf.org/viaf/107031944> ;
+        foaf:birthday                  "01-26" ;
+        foaf:familyName                "Carlyle" ;
+        foaf:givenName                 "Alexander" ;
+        foaf:name                      "Alexander Carlyle" ;
+        foaf:page                      <http://data.bnf.fr/12350308/alexander_carlyle/> .
+
+<http://data.bnf.fr/12350308/alexander_carlyle/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12350308k#foaf:Person> .

@@ -1,0 +1,170 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37275788h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb313867362#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30124771c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/12560002/charles-lucien_bonaparte/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30124772q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30124774d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30124775r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30124780b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30124765f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1803 ;
+        bnf-onto:lastYear               1857 ;
+        rdagroup2elements:biographicalInformation
+                "Zoologue et homme politique, prince de Musignano et de Canino. - Fut député de Viterbe, vice-président de l'Assemblée nationale romaine. - Membre de la Philadelphia academy of natural sciences, de l'Académie royale de Turin, de l'Académie des sciences de Berlin et de l'Academy of sciences and literature de Baltimore" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1803/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1857/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1803-05-24" ;
+        bio:death                       "1857-07-29" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb125600027#about> , <http://www.idref.fr/053513126> , <http://fr.dbpedia.org/resource/Charles_Lucien_Bonaparte> , <http://viaf.org/viaf/9963712> ;
+        foaf:birthday                   "05-24" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Bonaparte_Charles_Lucien_1803-1857.png> , <http://gallica.bnf.fr/ark:/12148/bpt6k6350852s.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k6352537p.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Bonaparte_Charles_Lucien_1803-1857.png?width=300> ;
+        foaf:familyName                 "Bonaparte" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Charles-Lucien" ;
+        foaf:name                       "Charles-Lucien Bonaparte" ;
+        foaf:page                       <http://data.bnf.fr/12560002/charles-lucien_bonaparte/> .
+
+<http://data.bnf.fr/ark:/12148/cb30124781p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301247643#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30124768g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30124778s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301247701#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30124766s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301247674#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301247732#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30124769t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30124777f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372753694#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31317032j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125600027>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Charles_Lucien_Bonaparte> , <http://catalogue.bnf.fr/ark:/12148/cb125600027> ;
+        bnf-onto:FRBNF        12560002 ;
+        isni:identifierValid  "0000000108691529" ;
+        dcterms:created       "1997-04-02" ;
+        dcterms:modified      "2013-07-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000108691529> ;
+        skos:altLabel         "Lucien-Jules-Laurent Bonaparte (1803-1857)"@fr , "Charles-Lucien Bonaparte Canino (prince de, 1803-1857)"@fr , "Carlo Luciano Bonaparte (1803-1857)"@fr , "Charles-Lucien Bonaparte Musignano (prince de, 1803-1857)"@fr ;
+        skos:editorialNote    "Dictionary of scientific biography / ed. Charles Coulston Gillispie, 1981 : Bonaparte (Lucien Jules Laurent, called Charles Lucien). - . - BN Cat. gén.. - . -"@fr , "Classification parallélique des passereaux chanteurs / Charles-Lucien Bonaparte, 1854 [document électronique : reprod. de l'éd. de 1854]. - . - ABF. - . -"@fr ;
+        skos:exactMatch       <http://fr.dbpedia.org/resource/Charles_Lucien_Bonaparte> , <http://www.idref.fr/053513126> , <http://fr.wikipedia.org/wiki/Charles_Lucien_Bonaparte> , <http://viaf.org/viaf/9963712> , <http://isni.org/isni/0000000108691529> ;
+        skos:note             "Zoologue et homme politique, prince de Musignano et de Canino. - Fut député de Viterbe, vice-président de l'Assemblée nationale romaine. - Membre de la Philadelphia academy of natural sciences, de l'Académie royale de Turin, de l'Académie des sciences de Berlin et de l'Academy of sciences and literature de Baltimore"@fr ;
+        skos:prefLabel        "Charles-Lucien Bonaparte (1803-1857)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301247821#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304371568#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301247794#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125600027#foaf:Person> .

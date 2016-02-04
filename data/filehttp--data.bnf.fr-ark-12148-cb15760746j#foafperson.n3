@@ -1,0 +1,73 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb301250214#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15760746j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15760746j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15760746j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15760746j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15760746j> , <http://fr.wikipedia.org/wiki/Alexandrine_de_Bleschamp> ;
+        bnf-onto:FRBNF        15760746 ;
+        isni:identifierValid  "0000000112402072" ;
+        dcterms:created       "2008-08-22" ;
+        dcterms:modified      "2013-10-25" ;
+        owl:sameAs            <http://isni.org/isni/0000000112402072> ;
+        skos:altLabel         "Alexandrine Bonaparte Canino (princesse de, 1778-1855)"@fr , "Alexandrine de Bleschamp (1778-1855)"@fr , "Madame Lucien Bonaparte (1778-1855)"@fr , "Alexandrine Jauberthon de Vauberty (1778-1855)"@fr , "Alexandrine de Bleschamps (1778-1855)"@fr , "Alexandrine Bonaparte (princesse de Canino, 1778-1855)"@fr , "Alexandrine Jouberthou (1778-1855)"@fr , "Alexandrine Jouberthon (1778-1855)"@fr , "Alexandrine Jouberton (1778-1855)"@fr ;
+        skos:editorialNote    "Appel à la justice des contemporains de feu Lucien Bonaparte, en réfutation des assertions de M. Thiers, dans son ″Histoire du Consulat et de l'Empire″ / par Mme la princesse de Canino, veuve Lucien Bonaparte, 1845. - . - BnF - Département de la Recherche bibliographique [Recueil. Dossiers biographiques Boutillier du Retail. Documentation sur Lucien Bonaparte], 1882-1943. - . -"@fr ;
+        skos:exactMatch       <http://fr.dbpedia.org/resource/Alexandrine_de_Bleschamp> , <http://www.idref.fr/168981386> , <http://viaf.org/viaf/2814056> , <http://isni.org/isni/0000000112402072> , <http://fr.wikipedia.org/wiki/Alexandrine_de_Bleschamp> ;
+        skos:note             "D'une famille de la noblesse malouine. - Veuve d'un agent de change nantais, Jauberthon de Vauberty, elle épouse en secondes noces Lucien Bonaparte (1775-1840) à qui elle donne 13 enfants"@fr ;
+        skos:prefLabel        "Alexandrine Bonaparte (princesse, 1778-1855)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15760746j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30125022g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15760746j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15760746j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15760746j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30125023t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15760746j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15760746j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15760746j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301251233#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15760746j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15760746j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15760746j#foaf:Person> .
+
+<http://data.bnf.fr/15760746/alexandrine_bonaparte/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb15760746j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15760746j#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1778 ;
+        bnf-onto:lastYear              1853 ;
+        rdagroup2elements:biographicalInformation
+                "D'une famille de la noblesse malouine. - Veuve d'un agent de change nantais, Jauberthon de Vauberty, elle épouse en secondes noces Lucien Bonaparte (1775-1840) à qui elle donne 13 enfants" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1778/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1853/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1778-02-23" ;
+        bio:death                      "1853-07-12" ;
+        owl:sameAs                     <http://www.idref.fr/168981386> , <http://viaf.org/viaf/2814056> , <http://fr.dbpedia.org/resource/Alexandrine_de_Bleschamp> , <http://data.bnf.fr/ark:/12148/cb15760746j#about> ;
+        foaf:birthday                  "02-23" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k6278056g.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Fabre_Alexandrine_de_Bleschamp.jpg> , <http://commons.wikimedia.org/wiki/Special:FilePath/Fabre_Alexandrine_de_Bleschamp.jpg?width=300> ;
+        foaf:familyName                "Bonaparte" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Alexandrine" ;
+        foaf:name                      "Alexandrine Bonaparte" ;
+        foaf:page                      <http://data.bnf.fr/15760746/alexandrine_bonaparte/> .

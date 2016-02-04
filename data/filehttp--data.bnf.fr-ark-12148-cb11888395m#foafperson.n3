@@ -1,0 +1,147 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb416182261#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11888395m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11888395m> ;
+        bnf-onto:FRBNF        11888395 ;
+        isni:identifierValid  "0000000081402570" ;
+        dcterms:created       "1985-06-22" ;
+        dcterms:modified      "2013-07-25" ;
+        owl:sameAs            <http://isni.org/isni/0000000081402570> ;
+        skos:altLabel         "Charles-Émile Alexandre (1821-1890)"@fr ;
+        skos:editorialNote    "DBF : Alexandre (Charles-Émile). - . - BN Cat. gén. : Alexandre (Charles). - . -"@fr , "Souvenirs de Lamartine : fragment lu dans la séance publique de l'Académie de Mâcon, du jeudi 6 avril 1876 / par Charles Alexandre, 1876. - . - Correspondance : 1846-1869 : deux républicains bretons dans l'entourage de Lamartine et de Michelet : Guillaume Lejean, Charles Alexandre / établissement du texte, introd. et notes par Jean-Yves Guiomar, 1993. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/61540781> , <http://isni.org/isni/0000000081402570> , <http://www.idref.fr/026681455> ;
+        skos:note             "Secrétaire d'Alphonse de Lamartine (1849-1869). - Député de Saône-et-Loire (1871-1875)"@fr ;
+        skos:prefLabel        "Charles Alexandre (1821-1890)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30009644t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1821 ;
+        bnf-onto:lastYear               1890 ;
+        rdagroup2elements:biographicalInformation
+                "Secrétaire d'Alphonse de Lamartine (1849-1869). - Député de Saône-et-Loire (1871-1875)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1821/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1890/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Morlaix (Finitère)" ;
+        rdagroup2elements:placeOfDeath  "Mâcon" ;
+        bio:birth                       "1821-08-23" ;
+        bio:death                       "1890-01-09" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb11888395m#about> , <http://viaf.org/viaf/61540781> , <http://www.idref.fr/026681455> ;
+        foaf:birthday                   "08-23" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b8529268x.thumbnail> ;
+        foaf:familyName                 "Alexandre" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Charles" ;
+        foaf:name                       "Charles Alexandre" ;
+        foaf:page                       <http://data.bnf.fr/11888395/charles_alexandre/> .
+
+<http://data.bnf.fr/ark:/12148/cb30009643g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366632958#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb300096424#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30009646h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36571363g#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30009649j#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb300096455#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34584123b#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31709790m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb300096486#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb338525482#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36574539w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34724866n#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/11888395/charles_alexandre/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31850144t#Expression>
+        bnfroles:r170        <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        marcrel:clb          <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357496525#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30009641s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11888395m#foaf:Person> .

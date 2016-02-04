@@ -1,0 +1,139 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1605 ;
+        bnf-onto:lastYear               1683 ;
+        rdagroup2elements:biographicalInformation
+                "Missionnaire. - Pasteur à Rotterdam. - A séjourné aux Antilles" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1605/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1683/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "La Rochelle" ;
+        bio:birth                       "1605" ;
+        bio:death                       "1683-09-26" ;
+        owl:sameAs                      <http://viaf.org/viaf/100205999> , <http://data.bnf.fr/ark:/12148/cb15568216t#about> , <http://www.idref.fr/150416814> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f38.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f23.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f31.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f8.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f19.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f10.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f34.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f39.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f27.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f17.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f25.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f28.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f11.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f14.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f4.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f40.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f32.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f35.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f33.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f2.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f26.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f16.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f13.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f6.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f21.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f24.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f37.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f3.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f29.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f9.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f41.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f22.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f18.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f42.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f7.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f15.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f36.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f20.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f12.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f30.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b23000062/f5.item.thumbnail> ;
+        foaf:familyName                 "Rochefort" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Charles de" ;
+        foaf:name                       "Charles de Rochefort" ;
+        foaf:page                       <http://data.bnf.fr/15568216/charles_de_rochefort/> .
+
+<http://data.bnf.fr/ark:/12148/cb37240081b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb312307023#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37240082p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31230706g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37240079s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15568216t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15568216t> ;
+        bnf-onto:FRBNF        15568216 ;
+        isni:identifierValid  "0000000079801927" ;
+        dcterms:created       "2007-10-01" ;
+        dcterms:modified      "2013-08-06" ;
+        owl:sameAs            <http://isni.org/isni/0000000079801927> ;
+        skos:editorialNote    "Histoire naturelle et morale des îles Antilles de l'Amérique... / [C. de Rochefort], 1658. - . - Harvard library bulletin, n.s., vol. 2, n°3, p. 27-82, 1991. - . -"@fr , "Godgeleerd Nederland, biographisch woordenboeck van nederlandsche godgeleerden / door B. Glasius, 1851-1856.. - . - IBN : v. 1604. - . - Hommes et destins. 2 : César de Rochefort [ministre protestant ; peut-être français ; dates biographiques inconnues]. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/150416814> , <http://isni.org/isni/0000000079801927> , <http://viaf.org/viaf/100205999> ;
+        skos:note             "Missionnaire. - Pasteur à Rotterdam. - A séjourné aux Antilles"@fr ;
+        skos:prefLabel        "Charles de Rochefort (1605-1683)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb312307054#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb340023425#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42704694r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384953033#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39369346p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372843244#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31230701r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372843275#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372406992#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31230704s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34002341t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372407144#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31230703f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15568216t#foaf:Person> .

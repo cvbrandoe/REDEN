@@ -1,0 +1,275 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42139433s#Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40257121s#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1750 ;
+        bnf-onto:lastYear               1812 ;
+        rdagroup2elements:biographicalInformation
+                "Graveur et éditeur. - Illustrateur de livres, notamment ceux de Rétif de La Bretonne en collaboration avec Louis Binet" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1750/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1812/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1750-07-28" ;
+        bio:death                       "1812-02-19" ;
+        owl:sameAs                      <http://www.idref.fr/057489394> , <http://data.bnf.fr/ark:/12148/cb149545119#about> , <http://viaf.org/viaf/29800996> ;
+        foaf:birthday                   "07-28" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f31.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f85.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f17.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f56.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f93.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f10.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8411344v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f88.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f37.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f59.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f75.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f33.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f38.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f28.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f59.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f44.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f63.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f48.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f64.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f76.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f24.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f46.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f45.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f60.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f14.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f7.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f55.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f19.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f16.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f23.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f6.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f43.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f52.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6940526x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f73.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f91.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f16.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f9.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f9.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f76.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f29.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f68.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f84.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f51.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f15.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f41.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f39.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f18.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f78.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f43.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f34.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f25.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f55.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f64.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b84127486.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f87.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f2.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f34.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f6.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f19.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b55001637p.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f41.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f106.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f50.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f45.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f47.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b55001500x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f90.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f66.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f48.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6942975d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f82.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f74.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b55001531m.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f35.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f37.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b55001542g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f51.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f72.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f22.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f25.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f13.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f33.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f60.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f65.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f79.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f74.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f39.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f3.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f81.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f86.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f57.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f77.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f11.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f82.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f50.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f40.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f21.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f7.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f98.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f44.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6940525h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f80.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f54.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f14.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f71.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f103.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f56.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f101.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f20.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f79.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f53.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f69.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f12.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f17.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f97.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f24.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f42.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f20.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f22.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f30.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f77.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f61.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f35.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f67.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f99.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f70.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f30.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8509401w.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f21.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f72.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f40.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f28.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f49.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f65.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f70.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f52.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f27.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f10.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f100.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f73.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6940942d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f63.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f49.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f94.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f27.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f23.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f71.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f62.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8412651b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f62.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f54.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f68.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f57.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f29.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f69.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f38.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f105.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f58.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f89.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f102.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69422075.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f75.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f11.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f4.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f61.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f26.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f83.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f36.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f15.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8509391z.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f36.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f78.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6944630d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f47.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200100p.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f80.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f53.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f32.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f4.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f2.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f92.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f46.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b55001459n.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f95.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f58.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f66.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f13.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f42.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f32.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f67.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f3.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f5.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f18.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f8.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f81.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f31.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f96.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f104.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f26.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f5.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6944633n.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b22001458/f12.item.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b2200099g/f8.item.thumbnail> ;
+        foaf:familyName                 "Berthet" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Louis-Sébastien" ;
+        foaf:name                       "Louis-Sébastien Berthet" ;
+        foaf:page                       <http://data.bnf.fr/14954511/louis-sebastien_berthet/> .
+
+<http://data.bnf.fr/ark:/12148/cb40260605f#Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43005459v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb430054513#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40252089x#Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43005461d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40260195v#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402571255#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40254322z#Expression>
+        bnfroles:r312        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42105732p#Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb403609957#Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40257127v#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42082922p#Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384981216#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb430054602#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41513854j#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38498122j#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402522017#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40255741k#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402543777#Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40257124t#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149545119>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb149545119> ;
+        bnf-onto:FRBNF        14954511 ;
+        isni:identifierValid  "0000000115565213" ;
+        dcterms:created       "1988-08-19" ;
+        dcterms:modified      "2015-07-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000115565213> ;
+        skos:altLabel         "Louis Berthet (1750-1812)"@fr ;
+        skos:editorialNote    "Le graveur Louis-Sébastien Berthet (1750-1812) et ses proches / Georges Boulinier in \"Etudes rétiviennes\", n°33, 2001, p.55-72. - . - Bénézit, 1999 : Berthet, Louis. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/29800996> , <http://www.idref.fr/057489394> , <http://isni.org/isni/0000000115565213> ;
+        skos:note             "Graveur et éditeur. - Illustrateur de livres, notamment ceux de Rétif de La Bretonne en collaboration avec Louis Binet"@fr ;
+        skos:prefLabel        "Louis-Sébastien Berthet (1750-1812)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40257123g#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41512390s#Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402571224#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41513855w#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31200649v#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40256747w#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb429700958#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42100955p#Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40249363j#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40252364d#Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40256746j#Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43005458h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb384982862#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31200675d#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42139285g#Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41514252f#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40253475k#Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40248605z#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40249360h#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149545119#foaf:Person> .

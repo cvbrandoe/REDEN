@@ -1,0 +1,73 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb305113475#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30511346t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30511348h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305113444#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30511345g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10547932n>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10547932n> ;
+        bnf-onto:FRBNF        10547932 ;
+        isni:identifierValid  "0000000385979635" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2015-03-14" ;
+        skos:editorialNote    "Traité élémentaire d'agriculture pratique, à l'usage des cultivateurs et des propriétaires de Maine-et-Loire / par M. Ch. Giraud, 1842. - . - Études ornithologiques / par M. Ch. Giraud, 1857. - . -"@fr , "ABF. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/113375492> , <http://viaf.org/viaf/192906438> ;
+        skos:note             "Avocat et propriétaire à Corzé, Maine-et-Loire. - A été député du Maine-et-Loire (1831-1837). - Frère de : Giraud, Augustin (1796-1875)"@fr ;
+        skos:prefLabel        "Charles-Jules Giraud (1801-18..?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10547932n#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1801 ;
+        rdagroup2elements:biographicalInformation
+                "Avocat et propriétaire à Corzé, Maine-et-Loire. - A été député du Maine-et-Loire (1831-1837). - Frère de : Giraud, Augustin (1796-1875)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1801/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Angers (Maine-et-Loire)" ;
+        bio:birth                       "1801-04-26" ;
+        bio:death                       "18.." ;
+        owl:sameAs                      <http://www.idref.fr/113375492> , <http://viaf.org/viaf/192906438> , <http://data.bnf.fr/ark:/12148/cb10547932n#about> ;
+        foaf:birthday                   "04-26" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k65431513.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k6501689j.thumbnail> ;
+        foaf:familyName                 "Giraud" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Charles-Jules" ;
+        foaf:name                       "Charles-Jules Giraud" ;
+        foaf:page                       <http://data.bnf.fr/10547932/charles-jules_giraud/> .

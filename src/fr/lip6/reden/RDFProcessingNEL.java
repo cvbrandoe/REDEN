@@ -69,8 +69,6 @@ public class RDFProcessingNEL {
 			String dir) {
 
 		try {
-			System.out.println("uri: " + uri + " and file " + dir + "/file"
-					+ replaceNonAlphabeticCharacters(uri) + ".n3");
 			File f = new File(dir + "/file" + replaceNonAlphabeticCharacters(uri) + ".n3");
 			// to go faster (remove f.exists if we want
 			// to update local triples)
@@ -87,11 +85,10 @@ public class RDFProcessingNEL {
 						huc.connect();
 						int code = huc.getResponseCode();
 						if (code != 503 && code != 404) {
-							model.read(in, null, "N3");
-							System.out.println("dowloadling from uri (dbpedia): " + uri);
+							model.read(in, null, "N3");							
 						} else {
 							System.out.println("RDF repo is not available "
-									+ baseURL);
+									+ uri);
 							//return null;
 						}
 
@@ -108,10 +105,10 @@ public class RDFProcessingNEL {
 					int code = huc.getResponseCode();
 					if (code != 503 && code != 404) {
 						model.read(uri);
-						System.out.println("dowloadling from uri: " + uri);
+						//RDFDataMgr.read(model, uri) ;
 					} else {
 						System.out.println("RDF repo is not available "
-								+ baseURL);
+								+ uri);
 						//return null;
 					}
 				}
@@ -120,6 +117,10 @@ public class RDFProcessingNEL {
 				OutputStreamWriter out = new OutputStreamWriter(
 						fileOutputStream, "UTF-8");
 				model.write(out, "N3");
+				System.out.println("downloaded from uri: " + uri + " and file " + dir + "/file"
+						+ replaceNonAlphabeticCharacters(uri) + ".n3");				
+				out.close();
+				fileOutputStream.close();				
 
 			} else {
 			}

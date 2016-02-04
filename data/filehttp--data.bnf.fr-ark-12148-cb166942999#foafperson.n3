@@ -1,0 +1,58 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb41137685z#Expression>
+        bnfroles:r270        <http://data.bnf.fr/ark:/12148/cb166942999#foaf:Person> ;
+        marcrel:scr          <http://data.bnf.fr/ark:/12148/cb166942999#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166942999#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb396071803#Expression>
+        bnfroles:r270        <http://data.bnf.fr/ark:/12148/cb166942999#foaf:Person> ;
+        marcrel:scr          <http://data.bnf.fr/ark:/12148/cb166942999#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb166942999#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb166942999#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1719 ;
+        bnf-onto:lastYear               1789 ;
+        rdagroup2elements:biographicalInformation
+                "Ordinaire de la musique de la Chambre du Roi. - Bibliothécaire de la musique du Roi, Chambre et Chapelle. - Copiste de musique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1719/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1789/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Concots, Lot" ;
+        rdagroup2elements:placeOfDeath  "Versailles, Yvelines" ;
+        bio:birth                       "1719-08" ;
+        bio:death                       "1789-03-25" ;
+        owl:sameAs                      <http://viaf.org/viaf/304924667> , <http://data.bnf.fr/ark:/12148/cb166942999#about> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b8427221n.thumbnail> ;
+        foaf:familyName                 "Dumas" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jean-Pierre" ;
+        foaf:name                       "Jean-Pierre Dumas" ;
+        foaf:page                       <http://data.bnf.fr/16694299/jean-pierre_dumas/> .
+
+<http://data.bnf.fr/ark:/12148/cb166942999>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb166942999> ;
+        bnf-onto:FRBNF      16694299 ;
+        dcterms:created     "2013-07-01" ;
+        dcterms:modified    "2013-08-21" ;
+        skos:altLabel       "Jean-Pierre Mapatou dit Dumas (1719-1789)"@fr , "Jean-Pierre Mapatou (1719-1789)"@fr , "Pierre Dumas (1719-1789)"@fr ;
+        skos:editorialNote  "BnF, Paris, Département de la Musique, H 738 (copie de Jean-Pierre Mapatou, dit Dumas). - . - Archives nationales, Paris, O1 682. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/304924667> ;
+        skos:note           "Ordinaire de la musique de la Chambre du Roi. - Bibliothécaire de la musique du Roi, Chambre et Chapelle. - Copiste de musique"@fr ;
+        skos:prefLabel      "Jean-Pierre Dumas (1719-1789)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb166942999#foaf:Person> .

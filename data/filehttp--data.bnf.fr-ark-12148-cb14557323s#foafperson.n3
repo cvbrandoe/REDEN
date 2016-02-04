@@ -1,0 +1,51 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14557323s#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1548 ;
+        bnf-onto:lastYear              1626 ;
+        rdagroup2elements:biographicalInformation
+                "Duc de Bavière" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1548/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1626/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        bio:birth                      "1548" ;
+        bio:death                      "1626" ;
+        owl:sameAs                     <http://www.idref.fr/060612134> , <http://viaf.org/viaf/266916562> , <http://data.bnf.fr/ark:/12148/cb14557323s#about> ;
+        foaf:familyName                "Guillaume" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/14557323/guillaume_5/> .
+
+<http://data.bnf.fr/ark:/12148/cb14557323s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14557323s> ;
+        bnf-onto:FRBNF        14557323 ;
+        isni:identifierValid  "0000000386826147" ;
+        dcterms:created       "2004-07-20" ;
+        dcterms:modified      "2013-12-18" ;
+        owl:sameAs            <http://isni.org/isni/0000000386826147> ;
+        skos:altLabel         "Wilhelm der Fromme (duc de Bavière, 1548-1626)"@de , "Guillaume le Pieux (duc de Bavière, 1548-1626)"@fr , "Wilhelmus (duc de Bavière, 1548-1626)"@la , "Wilhelm V (duc de Bavière, 1548-1626)"@de ;
+        skos:editorialNote    "Der Landshuter Renaissancegarten Herzog Wilhelm V. von Bayern : ein Beitrag zur Garten- und Kulturgeschichte der Frühen Neuzeit / Hilda Lietzmann, 2001. - . - Bibliothèque nationale, Allemagne. - http://www.ddb.de. - 2004-07-20"@fr ;
+        skos:exactMatch       <http://www.idref.fr/060612134> , <http://isni.org/isni/0000000386826147> , <http://viaf.org/viaf/266916562> ;
+        skos:note             "Duc de Bavière"@fr ;
+        skos:prefLabel        "Guillaume V (duc de Bavière, 1548-1626)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14557323s#foaf:Person> .
+
+<http://data.bnf.fr/14557323/guillaume_5/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14557323s#foaf:Person> .

@@ -1,0 +1,92 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1853 ;
+        bnf-onto:lastYear               1925 ;
+        rdagroup2elements:biographicalInformation
+                "Frère de Ferdinand Brunetière (1849-1906). - Prénoms complets : Charles, Marie, André" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1853/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1925/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Brest (Finistère)" ;
+        rdagroup2elements:placeOfDeath  "Saint-Brieuc (Côtes-d'Armor)" ;
+        bio:birth                       "1853" ;
+        bio:death                       "1925-07-20" ;
+        owl:sameAs                      <http://viaf.org/viaf/306258229> , <http://data.bnf.fr/ark:/12148/cb10494973c#about> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k54585936.thumbnail> ;
+        foaf:familyName                 "Brunetière" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Charles" ;
+        foaf:name                       "Charles Brunetière" ;
+        foaf:page                       <http://data.bnf.fr/10494973/charles_brunetiere/> .
+
+<http://data.bnf.fr/ark:/12148/cb341522961#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31882714n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30169943q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301699442#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30460175g#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10494973c>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb10494973c> ;
+        bnf-onto:FRBNF      10494973 ;
+        dcterms:created     "1997-07-01" ;
+        dcterms:modified    "2014-01-14" ;
+        skos:editorialNote  "L'Autopsie du Dr Pascal, ou l'Anti-Zola / Charles Brunetière, 1894. - . - DBF. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/306258229> ;
+        skos:note           "Frère de Ferdinand Brunetière (1849-1906). - Prénoms complets : Charles, Marie, André"@fr ;
+        skos:prefLabel      "Charles Brunetière (1853-1925)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb321255553#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb318827139#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb318827150#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb318827270#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10494973c#foaf:Person> .

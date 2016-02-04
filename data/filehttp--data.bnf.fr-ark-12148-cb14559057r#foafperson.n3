@@ -1,0 +1,76 @@
+@prefix schema: <http://schema.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb43152953n#Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb14559057r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14559057r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14559057r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14559057r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14559057r> ;
+        bnf-onto:FRBNF        14559057 ;
+        isni:identifierValid  "0000000081544480" ;
+        dcterms:created       "2004-07-28" ;
+        dcterms:modified      "2013-08-03" ;
+        owl:sameAs            <http://isni.org/isni/0000000081544480> ;
+        skos:closeMatch       <http://imslp.org/wiki/Category:Kahn,_Robert> ;
+        skos:editorialNote    "Trios for clarinet, violoncello and piano  [Enregistrement sonore] / Hermann Zilcher, Robert Kahn, Wilhelm Berger, comp. Tacet 73. - . - Grove. - http://www.grovemusic.com. - 2004-07-28"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000081544480> , <http://viaf.org/viaf/74093566> ;
+        skos:note             "Compositeur et pédagogue"@fr ;
+        skos:prefLabel        "Robert Kahn (1865-1951)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14559057r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14559057r#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1865 ;
+        bnf-onto:lastYear               1951 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur et pédagogue" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1865/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1951/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Musique" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/780/> ;
+        rdagroup2elements:placeOfBirth  "Mannheim (Allemagne)" ;
+        rdagroup2elements:placeOfDeath  "Biddenden (GB)" ;
+        schema:sameAs                   <http://imslp.org/wiki/Category:Kahn,_Robert> ;
+        bio:birth                       "1865-07-21" ;
+        bio:death                       "1951-05-29" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb14559057r#about> , <http://viaf.org/viaf/74093566> ;
+        foaf:birthday                   "07-21" ;
+        foaf:familyName                 "Kahn" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Robert" ;
+        foaf:name                       "Robert Kahn" ;
+        foaf:page                       <http://data.bnf.fr/14559057/robert_kahn/> .
+
+<http://data.bnf.fr/14559057/robert_kahn/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14559057r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb162065485#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb14559057r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39024135x#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb14559057r#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb14559057r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14559057r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43057029b#Expression>
+        bnfroles:r990        <http://data.bnf.fr/ark:/12148/cb14559057r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14559057r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14559057r#foaf:Person> .

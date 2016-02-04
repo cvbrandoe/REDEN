@@ -1,0 +1,53 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb151234217#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1817 ;
+        bnf-onto:lastYear               1883 ;
+        rdagroup2elements:biographicalInformation
+                "Restaurateur de l'Ordre de Prémontré en France (à partir de 1856). - Abbé de Saint-Michel-de-Frigolet (à Tarascon, Bouches-du-Rhône ; 1869-1880). - Précédemment, moine cistercien de la stricte observance (1836-1856)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1817/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1883/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Religion" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/200/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Bordeaux" ;
+        bio:birth                       "1817-01-14" ;
+        bio:death                       "1883-03-07" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb151234217#about> , <http://viaf.org/viaf/6389611> , <http://www.idref.fr/050612395> ;
+        foaf:birthday                   "01-14" ;
+        foaf:familyName                 "Edmond" ;
+        foaf:gender                     "male" ;
+        foaf:page                       <http://data.bnf.fr/15123421/edmond/> .
+
+<http://data.bnf.fr/15123421/edmond/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb151234217#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb151234217>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb151234217> ;
+        bnf-onto:FRBNF        15123421 ;
+        isni:identifierValid  "0000000066601192" ;
+        dcterms:created       "2006-12-22" ;
+        dcterms:modified      "2013-10-25" ;
+        owl:sameAs            <http://isni.org/isni/0000000066601192> ;
+        skos:altLabel         "Edmond (moine cistercien, 1817-1883)"@fr , "Edmond Boulbon (1817-1883)"@fr , "Jean-Baptiste Boulbon (1817-1883)"@fr ;
+        skos:editorialNote    "[Invitation à souscrire pour l'érection du sanctuaire de Notre-Dame du Bon Remède] / [signé, Edmond, prieur du monastère de la primitive observance de Prémontré], [1866]. - . - DBF : BOULBON (Jean-Baptiste, en religion le P. Edmond), abbé de Saint-Michel de Frigolet. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/050612395> , <http://isni.org/isni/0000000066601192> , <http://viaf.org/viaf/6389611> ;
+        skos:note             "Restaurateur de l'Ordre de Prémontré en France (à partir de 1856). - Abbé de Saint-Michel-de-Frigolet (à Tarascon, Bouches-du-Rhône ; 1869-1880). - Précédemment, moine cistercien de la stricte observance (1836-1856)"@fr ;
+        skos:prefLabel        "Edmond (chanoine prémontré, 1817-1883)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb151234217#foaf:Person> .

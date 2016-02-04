@@ -1,0 +1,122 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb32393947w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43119761k#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12766524q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12766524q> ;
+        bnf-onto:FRBNF        12766524 ;
+        isni:identifierValid  "0000000109059883" ;
+        dcterms:created       "1990-11-28" ;
+        dcterms:modified      "2013-07-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000109059883> ;
+        skos:editorialNote    "Dict. biographique des musiciens / Baker, Slonimsky, 1995. - . - BN Cat. gén. suppl.. - . -"@fr , "Das Geheimnis der Form bei Richard Wagner / von Alfred Lorenz, 1966 [fac-sim.]. - . - Grove 6. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/080163319> , <http://viaf.org/viaf/59210559> , <http://isni.org/isni/0000000109059883> ;
+        skos:note             "Musicologue, compositeur et chef d'orchestre"@fr ;
+        skos:prefLabel        "Alfred Lorenz (1868-1939)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35161971q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43119762x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1868 ;
+        bnf-onto:lastYear               1939 ;
+        rdagroup2elements:biographicalInformation
+                "Musicologue, compositeur et chef d'orchestre" ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1868/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1939/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Vienne" ;
+        rdagroup2elements:placeOfDeath  "Munich, Allemagne" ;
+        bio:birth                       "1868-07-11" ;
+        bio:death                       "1939-11-20" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb12766524q#about> , <http://www.idref.fr/080163319> , <http://viaf.org/viaf/59210559> ;
+        foaf:birthday                   "07-11" ;
+        foaf:familyName                 "Lorenz" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Alfred" ;
+        foaf:name                       "Alfred Lorenz" ;
+        foaf:page                       <http://data.bnf.fr/12766524/alfred_lorenz/> .
+
+<http://data.bnf.fr/ark:/12148/cb43119764m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43119758p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb431197591#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb433636183#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb431197638#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> .
+
+<http://data.bnf.fr/12766524/alfred_lorenz/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43119757b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43333078p#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb431197607#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb433330222#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12766524q#foaf:Person> .

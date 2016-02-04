@@ -1,0 +1,75 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb302405765#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30240577h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30240578v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1803 ;
+        bnf-onto:lastYear               1877 ;
+        rdagroup2elements:biographicalInformation
+                "Pharmacien militaire et botaniste. - Professeur à l'hôpital militaire d'instruction de Strasbourg (1841-1852)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1803/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1877/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Toul (Meurthe-et-Moselle)" ;
+        rdagroup2elements:placeOfDeath  "Nice (Alpes-Maritimes)" ;
+        bio:birth                       "1803-10-21" ;
+        bio:death                       "1877-07-20" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb10522194c#about> , <http://viaf.org/viaf/9836796> ;
+        foaf:birthday                   "10-21" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6521466d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k58246832.thumbnail> ;
+        foaf:familyName                 "Choulette" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Sébastien" ;
+        foaf:name                       "Sébastien Choulette" ;
+        foaf:page                       <http://data.bnf.fr/10522194/sebastien_choulette/> .
+
+<http://data.bnf.fr/ark:/12148/cb30240575t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302405796#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10522194c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10522194c> ;
+        bnf-onto:FRBNF        10522194 ;
+        isni:identifierValid  "000000000000079X" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2014-09-23" ;
+        skos:editorialNote    "Études touloises. - http://www.etudes-touloises.com. - 2007-11-15 WBIS. - http://db.saur.de/WBIS. - 2007-11-15 DBF. - . -"@fr , "Observations pratiques de chimie, de pharmacie et de médecine légale / par S. Choulette, 1860. - . - Petit Cours de géographie physique et politique, et géographie de la France, à l'usage des écoles primaires et normales / par M. Choulette, 1843. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/9836796> ;
+        skos:note             "Pharmacien militaire et botaniste. - Professeur à l'hôpital militaire d'instruction de Strasbourg (1841-1852)"@fr ;
+        skos:prefLabel        "Sébastien Choulette (1803-1877)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10522194c#foaf:Person> .

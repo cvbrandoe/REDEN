@@ -1,0 +1,80 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1835 ;
+        rdagroup2elements:biographicalInformation
+                "Licencié ès sciences. - Chargé du cours de physique au lycée de Rennes, puis à celui de Nîmes. - Principal du collège de Cayenne" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1835/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1801-1900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Nîmes (Gard)" ;
+        bio:birth                       "1835-03-20" ;
+        bio:death                       "18.." ;
+        owl:sameAs                      <http://viaf.org/viaf/309574800> , <http://data.bnf.fr/ark:/12148/cb102120811#about> ;
+        foaf:birthday                   "03-20" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k9206620.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k920649z.thumbnail> ;
+        foaf:familyName                 "Chaptal" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Justin" ;
+        foaf:name                       "Justin Chaptal" ;
+        foaf:page                       <http://data.bnf.fr/10212081/justin_chaptal/> .
+
+<http://data.bnf.fr/ark:/12148/cb303935554#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30221957t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30221954s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302219554#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb340572931#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30221956g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb102120811>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb102120811> ;
+        bnf-onto:FRBNF      10212081 ;
+        dcterms:created     "1997-07-01" ;
+        dcterms:modified    "2014-06-20" ;
+        skos:editorialNote  "Souvenirs d'un galiniste / par J. Chaptal, 1860. - . - DBF. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/309574800> ;
+        skos:note           "Licencié ès sciences. - Chargé du cours de physique au lycée de Rennes, puis à celui de Nîmes. - Principal du collège de Cayenne"@fr ;
+        skos:prefLabel      "Justin Chaptal (1835-18..?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30221953f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb102120811#foaf:Person> .

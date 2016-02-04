@@ -1,0 +1,70 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb107280074>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb107280074> ;
+        bnf-onto:FRBNF        10728007 ;
+        isni:identifierValid  "0000000106529245" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-07-16" ;
+        owl:sameAs            <http://isni.org/isni/0000000106529245> ;
+        skos:editorialNote    "Catéchisme à l'usage du Diocèse d'Évreux / imprimé par ordre de Mgr Nicolas-Théodore Olivier, évêque d'Évreux, 1853. - . - Épiscopologe français des temps modernes / A. Chapeau, O.S.B., et F. Combaluzier, C.M., 1977 : OLIVIER (Nicolas-Théodore). - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/5700686> , <http://isni.org/isni/0000000106529245> , <http://www.idref.fr/160127645> ;
+        skos:note             "Évêque d'Évreux (à partir de 1841)"@fr ;
+        skos:prefLabel        "Nicolas-Théodore Olivier (1798-1854)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb107280074#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31035118p#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb107280074#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb107280074#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107280074#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31035115n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb107280074#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb107280074#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107280074#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb310351160#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb107280074#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb107280074#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107280074#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31035117b#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb107280074#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb107280074#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb107280074#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb107280074#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1798 ;
+        bnf-onto:lastYear               1854 ;
+        rdagroup2elements:biographicalInformation
+                "Évêque d'Évreux (à partir de 1841)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1798/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1854/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Évreux" ;
+        bio:birth                       "1798-04-28" ;
+        bio:death                       "1854-10-21" ;
+        owl:sameAs                      <http://viaf.org/viaf/5700686> , <http://www.idref.fr/160127645> , <http://data.bnf.fr/ark:/12148/cb107280074#about> ;
+        foaf:birthday                   "04-28" ;
+        foaf:familyName                 "Olivier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Nicolas-Théodore" ;
+        foaf:name                       "Nicolas-Théodore Olivier" ;
+        foaf:page                       <http://data.bnf.fr/10728007/nicolas-theodore_olivier/> .

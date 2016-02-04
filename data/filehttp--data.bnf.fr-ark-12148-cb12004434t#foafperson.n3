@@ -1,0 +1,89 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30829257v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30829259j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb315925990#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb323919927#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1767 ;
+        bnf-onto:lastYear              1812 ;
+        rdagroup2elements:biographicalInformation
+                "Appartenait à une famille de protestants français réfugiés en Allemagne. - Poète, secrétaire perpétuel de l'Académie de Berlin, secrétaire du roi Frédéric-Guillaume II" , "A aussi traduit du latin et de l'allemand en français" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1767/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1812/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1767-04-01" ;
+        bio:death                      "1812-04-28" ;
+        owl:sameAs                     <http://www.idref.fr/06772163X> , <http://www.idref.fr/155847422> , <http://data.bnf.fr/ark:/12148/cb12004434t#about> , <http://viaf.org/viaf/68939504> ;
+        foaf:birthday                  "04-01" ;
+        foaf:familyName                "Lombard" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean-Guillaume" ;
+        foaf:name                      "Jean-Guillaume Lombard" ;
+        foaf:page                      <http://data.bnf.fr/12004434/jean-guillaume_lombard/> .
+
+<http://data.bnf.fr/ark:/12148/cb310980965#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31042705g#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30829260r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12004434t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12004434t> ;
+        bnf-onto:FRBNF        12004434 ;
+        isni:identifierValid  "0000000121380151" ;
+        dcterms:created       "1986-12-02" ;
+        dcterms:modified      "2013-07-25" ;
+        owl:sameAs            <http://isni.org/isni/0000000121380151> ;
+        skos:altLabel         "Jean Lombard (1767-1812)"@fr , "Johann-Wilhelm Lombard (1767-1812)"@fr ;
+        skos:editorialNote    "Matériaux pour servir à l'histoire des années 1805, 1806 et 1807, dédié aux Prussiens / par un ancien compatriote [Jean-Guillaume Lombard], 1808. - . - ADB. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/06772163X> , <http://www.idref.fr/155847422> , <http://viaf.org/viaf/68939504> , <http://isni.org/isni/0000000121380151> ;
+        skos:note             "A aussi traduit du latin et de l'allemand en français"@fr , "Appartenait à une famille de protestants français réfugiés en Allemagne. - Poète, secrétaire perpétuel de l'Académie de Berlin, secrétaire du roi Frédéric-Guillaume II"@fr ;
+        skos:prefLabel        "Jean-Guillaume Lombard (1767-1812)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb308292586#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12004434t#foaf:Person> .
