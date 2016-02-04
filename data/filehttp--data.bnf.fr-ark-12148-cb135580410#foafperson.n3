@@ -1,0 +1,98 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb310630114#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31063010s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388402038#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39325032c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb135580410>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb135580410> ;
+        bnf-onto:FRBNF        13558041 ;
+        isni:identifierValid  "0000000083949203" ;
+        dcterms:created       "2000-05-24" ;
+        dcterms:modified      "2006-08-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000083949203> ;
+        skos:altLabel         "M. V. V. C. D. S. (1632-1680?)"@fr , "Françoise Paschal (1632-1680?)"@fr ;
+        skos:editorialNote    "La grande Bible renouvellée de Noels nouveaux / Fr. Pascal, Troyes, [entre 1766 et 1777]. - . - La grande Bible renouvellée, ou Noëls nouveaux / ... par M. V. V. C. D. S., 1728. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/052490807> , <http://viaf.org/viaf/75077839> , <http://isni.org/isni/0000000083949203> ;
+        skos:note             "Ecrivain né à Lyon. - Auteur de pièces de théâtre et de cantiques"@fr ;
+        skos:prefLabel        "Françoise Pascal (1632-1680?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31063007w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb388687824#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41298283t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1632 ;
+        bnf-onto:lastYear              1680 ;
+        rdagroup2elements:biographicalInformation
+                "Ecrivain né à Lyon. - Auteur de pièces de théâtre et de cantiques" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1632/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1680/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1632-02" ;
+        bio:death                      "1680" ;
+        owl:sameAs                     <http://www.idref.fr/052490807> , <http://data.bnf.fr/ark:/12148/cb135580410#about> , <http://viaf.org/viaf/75077839> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k5802215p.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k5467743z.thumbnail> ;
+        foaf:familyName                "Pascal" ;
+        foaf:givenName                 "Françoise" ;
+        foaf:name                      "Françoise Pascal" ;
+        foaf:page                      <http://data.bnf.fr/13558041/francoise_pascal/> .
+
+<http://data.bnf.fr/ark:/12148/cb39325033q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39332224s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb393253357#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135580410#foaf:Person> .

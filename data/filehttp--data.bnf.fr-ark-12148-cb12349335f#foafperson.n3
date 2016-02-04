@@ -1,0 +1,102 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1688 ;
+        bnf-onto:lastYear               1766 ;
+        rdagroup2elements:biographicalInformation
+                "Fils de Jacques II, roi d'Angleterre, d'Écosse et d'Irlande, prétendant à sa succession sous le nom de Jacques III d'Angleterre (Jacques VIII d'Écosse)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1688/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1766/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Londres" ;
+        rdagroup2elements:placeOfDeath  "Rome" ;
+        bio:birth                       "1688-06-10" ;
+        bio:death                       "1766-01-01" ;
+        owl:sameAs                      <http://fr.dbpedia.org/resource/Jacques_François_Stuart> , <http://data.bnf.fr/ark:/12148/cb12349335f#about> , <http://viaf.org/viaf/2446184> , <http://www.idref.fr/032469012> ;
+        foaf:birthday                   "06-10" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b8409719c.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8409721f.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b5971488m.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b55002393k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b71002833.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Portrait_of_James_Francis_Edward_Stuart_by_Antonio_David.jpg> , <http://gallica.bnf.fr/ark:/12148/btv1b71002796.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8409722v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6947132f.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b84097238.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b84097201.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Portrait_of_James_Francis_Edward_Stuart_by_Antonio_David.jpg?width=300> , <http://gallica.bnf.fr/ark:/12148/btv1b69472069.thumbnail> ;
+        foaf:familyName                 "Jacques Édouard Stuart" ;
+        foaf:gender                     "male" ;
+        foaf:page                       <http://data.bnf.fr/12349335/jacques_edouard_stuart/> .
+
+<http://data.bnf.fr/ark:/12148/cb31415778g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302239308#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> .
+
+<http://data.bnf.fr/12349335/jacques_edouard_stuart/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb314157801#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31415779t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12349335f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Jacques_François_Stuart> , <http://catalogue.bnf.fr/ark:/12148/cb12349335f> ;
+        bnf-onto:FRBNF        12349335 ;
+        isni:identifierValid  "0000000080147811" ;
+        dcterms:created       "1993-11-22" ;
+        dcterms:modified      "2013-07-27" ;
+        owl:sameAs            <http://isni.org/isni/0000000080147811> ;
+        skos:altLabel         "James Francis Edward (prince de Galles, 1688-1766)"@fr , "Jacques Édouard Stuart Galles (prince de, 1688-1766)"@fr , "Jacques VIII (roi d'Écosse, 1688-1766)"@fr , "James Edward Stuart (prince de Galles, 1688-1766)"@fr , "Jacques Édouard Stuart (prince de Galles, 1688-1766)"@fr , "Jacques François Édouard Stuart (1688-1766)"@fr , "Saint-George (chevalier de, 1688-1766)"@fr , "James III (roi d'Angleterre, 1688-1766)"@fr , "James (prince de Galles, 1688-1766)"@fr , "Jacques III (roi d'Angleterre, 1688-1766)"@fr , "James III (roi d'Écosse, 1688-1766)"@fr ;
+        skos:exactMatch       <http://www.idref.fr/032469012> , <http://isni.org/isni/0000000080147811> , <http://viaf.org/viaf/2446184> , <http://fr.dbpedia.org/resource/Jacques_François_Stuart> , <http://fr.wikipedia.org/wiki/Jacques_François_Stuart> ;
+        skos:note             "Fils de Jacques II, roi d'Angleterre, d'Écosse et d'Irlande, prétendant à sa succession sous le nom de Jacques III d'Angleterre (Jacques VIII d'Écosse)"@fr ;
+        skos:prefLabel        "Jacques Édouard Stuart (1688-1766)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31018845t#Expression>
+        bnfroles:r290        <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        marcrel:dte          <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb393682167#Expression>
+        bnfroles:r71         <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        marcrel:att          <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414503423#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40636781b#Expression>
+        bnfroles:r290        <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        marcrel:dte          <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb314157832#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31415782q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12349335f#foaf:Person> .

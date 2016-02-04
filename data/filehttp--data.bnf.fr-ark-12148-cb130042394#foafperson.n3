@@ -1,0 +1,72 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb302336430#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30233644b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36021011h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30233645p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb130042394>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb130042394> ;
+        bnf-onto:FRBNF      13004239 ;
+        dcterms:created     "1995-04-26" ;
+        dcterms:modified    "2014-09-09" ;
+        skos:editorialNote  "Mémoire sur le service de sûreté stratégique de la cavalerie : conférence faite le 3 mai 1874 / par Maxime Cherfils, 1874. - . - DBF. - . -"@fr ;
+        skos:note           "Général"@fr ;
+        skos:prefLabel      "Maxime Cherfils (1849-1933)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1849 ;
+        bnf-onto:lastYear               1933 ;
+        rdagroup2elements:biographicalInformation
+                "Général" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1849/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1933/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Saignon (Vaucluse)" ;
+        rdagroup2elements:placeOfDeath  "Fontainebleau (Seine-et-Marne)" ;
+        bio:birth                       "1849-03-20" ;
+        bio:death                       "1933-01-13" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb130042394#about> ;
+        foaf:birthday                   "03-20" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k5831467m.thumbnail> ;
+        foaf:familyName                 "Cherfils" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Maxime" ;
+        foaf:name                       "Maxime Cherfils" ;
+        foaf:page                       <http://data.bnf.fr/13004239/maxime_cherfils/> .
+
+<http://data.bnf.fr/ark:/12148/cb30233642n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb130042394#foaf:Person> .

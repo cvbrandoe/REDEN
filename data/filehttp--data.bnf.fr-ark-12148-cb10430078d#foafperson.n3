@@ -1,0 +1,94 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30235013w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34053502r#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30235009n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302350089#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30235010v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302350147#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10430078d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10430078d> ;
+        bnf-onto:FRBNF        10430078 ;
+        isni:identifierValid  "0000000078199006" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2015-03-13" ;
+        skos:editorialNote    "L'Hôtel-Dieu de Paris et les soeurs Augustines (650 à 1810) / par Alexis Chevalier, 1901. - . - DBF. - . -"@fr ;
+        skos:note             "Sociologue"@fr ;
+        skos:prefLabel        "Alexis Chevalier (1821-19..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1821 ;
+        rdagroup2elements:biographicalInformation
+                "Sociologue" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1821/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Angers (Maine-et-Loire)" ;
+        bio:birth                       "1821" ;
+        bio:death                       "19.." ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb10430078d#about> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k5529178v.thumbnail> ;
+        foaf:familyName                 "Chevalier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Alexis" ;
+        foaf:name                       "Alexis Chevalier" ;
+        foaf:page                       <http://data.bnf.fr/10430078/alexis_chevalier/> .
+
+<http://data.bnf.fr/ark:/12148/cb302350116#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41632946j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb340704652#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30235012j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10430078d#foaf:Person> .

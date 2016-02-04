@@ -1,0 +1,72 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13343328v#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1762 ;
+        bnf-onto:lastYear               1835 ;
+        rdagroup2elements:biographicalInformation
+                "Négociant en Extrême-Orient" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/sz> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1762/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1835/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire du reste du monde" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/950/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Genève" ;
+        rdagroup2elements:placeOfDeath  "Londres" ;
+        bio:birth                       "1762-10-03" ;
+        bio:death                       "1835-07-15" ;
+        owl:sameAs                      <http://www.idref.fr/061662119> , <http://data.bnf.fr/ark:/12148/cb13343328v#about> , <http://viaf.org/viaf/27214493> ;
+        foaf:birthday                   "10-03" ;
+        foaf:familyName                 "Constant" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Charles de" ;
+        foaf:name                       "Charles de Constant" ;
+        foaf:page                       <http://data.bnf.fr/13343328/charles_de_constant/> .
+
+<http://data.bnf.fr/ark:/12148/cb13343328v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13343328v> ;
+        bnf-onto:FRBNF        13343328 ;
+        isni:identifierValid  "000000007987742X" ;
+        dcterms:created       "1998-11-18" ;
+        dcterms:modified      "2013-07-31" ;
+        owl:sameAs            <http://isni.org/isni/000000007987742X> ;
+        skos:altLabel         "Charles de Constant de Rebecque (1762-1935)"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/27214493> , <http://www.idref.fr/061662119> , <http://isni.org/isni/000000007987742X> ;
+        skos:note             "Négociant en Extrême-Orient"@fr ;
+        skos:prefLabel        "Charles de Constant (1762-1835)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13343328v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41373250d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13343328v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13343328v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13343328v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39270604f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13343328v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13343328v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13343328v#foaf:Person> .
+
+<http://data.bnf.fr/13343328/charles_de_constant/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13343328v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37027214p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13343328v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13343328v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13343328v#foaf:Person> .

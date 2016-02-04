@@ -1,0 +1,42 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb123145920#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1102 ;
+        bnf-onto:lastYear              1167 ;
+        rdagroup2elements:biographicalInformation
+                "Fille de Henri Ier, roi d'Angleterre. - Épouse de l'empereur Henri V, puis du comte d'Anjou Geoffroi V Plantagenêt. - Mère de Henri II Plantagenêt, roi d'Angleterre" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1102/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1167/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        bio:birth                      "1102" ;
+        bio:death                      "1167-09-10" ;
+        owl:sameAs                     <http://www.idref.fr/032039905> , <http://data.bnf.fr/ark:/12148/cb123145920#about> ;
+        foaf:familyName                "Mathilde" ;
+        foaf:gender                    "female" ;
+        foaf:page                      <http://data.bnf.fr/12314592/mathilde/> .
+
+<http://data.bnf.fr/12314592/mathilde/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb123145920#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123145920>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb123145920> ;
+        bnf-onto:FRBNF      12314592 ;
+        dcterms:created     "1993-06-11" ;
+        dcterms:modified    "2013-07-16" ;
+        skos:altLabel       "Mathilde (comtesse d'Anjou, 1102-1167)"@fr , "Mathilde (impératrice germanique, 1102-1167)"@fr , "Matilda of England (1102-1167)"@fr , "Mathildis (reine d'Angleterre, 1102-1167)"@la , "Matilda (reine d'Angleterre, 1102-1167)"@fr , "Mahaut (reine d'Angleterre, 1102-1167)"@fr ;
+        skos:editorialNote  "GDEL : Mathilde ou Mahaut. - . - Clavis SGL : Mathildis imperatrix. - . - Oxford DNB: Matilda [Matilda of England]. - http://www.oxforddnb.com. - 2013-07-16"@fr ;
+        skos:exactMatch     <http://www.idref.fr/032039905> ;
+        skos:note           "Fille de Henri Ier, roi d'Angleterre. - Épouse de l'empereur Henri V, puis du comte d'Anjou Geoffroi V Plantagenêt. - Mère de Henri II Plantagenêt, roi d'Angleterre"@fr ;
+        skos:prefLabel      "Mathilde (reine d'Angleterre, 1102-1167)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb123145920#foaf:Person> .

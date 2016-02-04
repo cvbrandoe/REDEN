@@ -1,0 +1,71 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1713 ;
+        bnf-onto:lastYear              1752 ;
+        rdagroup2elements:biographicalInformation
+                "Violoniste et compositeur. - Fils de Jan Jiří Benda" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1713/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1752/> ;
+        bio:birth                      "1713-08-30" ;
+        bio:death                      "1752" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb16608539c#about> ;
+        foaf:birthday                  "08-30" ;
+        foaf:familyName                "Benda" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Johann Georg" ;
+        foaf:name                      "Johann Georg Benda" ;
+        foaf:page                      <http://data.bnf.fr/16608539/johann_georg_benda/> .
+
+<http://data.bnf.fr/ark:/12148/cb16608543m#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16608539c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb16608539c> ;
+        bnf-onto:FRBNF        16608539 ;
+        isni:identifierValid  "0000000371195899" ;
+        dcterms:created       "2012-06-29" ;
+        dcterms:modified      "2015-06-08" ;
+        skos:altLabel         "Jan Benda (1713-1752)"@fr ;
+        skos:editorialNote    "11 flute sonatas [Musique imprimée] / Johann Georg Benda ; ed. by Alejandro Garri, 2012. - . - Oxford music. - http://www.oxfordmusiconline.com. - 2012-06-29"@fr ;
+        skos:note             "Violoniste et compositeur. - Fils de Jan Jiří Benda"@fr ;
+        skos:prefLabel        "Johann Georg Benda (1713-1752)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb385460416#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb442554539#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38531678s#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412214341#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42654035f#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16608539c#foaf:Person> .

@@ -1,0 +1,53 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31258006w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134757078#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134757078#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134757078#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb134757078#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1645 ;
+        bnf-onto:lastYear              1711 ;
+        rdagroup2elements:biographicalInformation
+                "Diplomate. - Président de la Chambre des comptes de Paris" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1645/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1711/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1645" ;
+        bio:death                      "1711" ;
+        owl:sameAs                     <http://viaf.org/viaf/74001036> , <http://data.bnf.fr/ark:/12148/cb134757078#about> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k753740.thumbnail> ;
+        foaf:familyName                "Rousseau" ;
+        foaf:givenName                 "Louis" ;
+        foaf:name                      "Louis Rousseau" ;
+        foaf:page                      <http://data.bnf.fr/13475707/louis_rousseau/> .
+
+<http://data.bnf.fr/ark:/12148/cb134757078>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb134757078> ;
+        bnf-onto:FRBNF        13475707 ;
+        isni:identifierValid  "0000000080029428" ;
+        dcterms:created       "1997-09-23" ;
+        dcterms:modified      "2013-12-18" ;
+        owl:sameAs            <http://isni.org/isni/0000000080029428> ;
+        skos:altLabel         "Louis Rousseau de Chamoy"@fr ;
+        skos:editorialNote    "L'idée du parfait ambassadeur / par Louis Rousseau de Chamoy ; préf. de M. L. Delavaud, 1995 [document électronique : reprod. de l'éd. de 1912]. - . - Grente, 17e s.. - . -"@fr , "BN Cat. gén.. - . - BN Cat. gén. suppl.. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000080029428> , <http://viaf.org/viaf/74001036> ;
+        skos:note             "Diplomate. - Président de la Chambre des comptes de Paris"@fr ;
+        skos:prefLabel        "Louis Rousseau (1645-1711)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb134757078#foaf:Person> .

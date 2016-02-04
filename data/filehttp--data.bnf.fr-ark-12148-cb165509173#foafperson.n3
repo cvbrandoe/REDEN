@@ -1,0 +1,44 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb165509173#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1693 ;
+        bnf-onto:lastYear              1743 ;
+        rdagroup2elements:biographicalInformation
+                "Libraire. - Fils de l'imprimeur-libraire de Troyes Pierre I Garnier ; frère de l'imprimeur-libraire Jean II Garnier. D'abord compagnon à l'imprimerie de son père. Reçu libraire dès avant 1726. À l'été 1738, il se porte aspirant à la succession de d'imprimeur Pierre Michelin, puis y renonce en faveur du fils de celui-ci. Décédé en juillet 1743 à Troyes, avec le seul titre de libraire" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1693/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1743/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1725-1743" ;
+        bio:birth                      "1693-02-10" ;
+        bio:death                      "1743-07-12" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb165509173#about> , <http://viaf.org/viaf/201919193> ;
+        foaf:birthday                  "02-10" ;
+        foaf:familyName                "Garnier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Pierre" ;
+        foaf:name                      "Pierre Garnier" ;
+        foaf:page                      <http://data.bnf.fr/16550917/pierre_garnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb165509173>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb165509173> ;
+        bnf-onto:FRBNF      16550917 ;
+        dcterms:created     "2011-11-17" ;
+        dcterms:modified    "2011-11-21" ;
+        skos:altLabel       "Pierre Garnier II (1693-1743)"@fr , "Pierre Garnier le jeune (1693-1743)"@fr , "Pierre II Garnier (1693-1743)"@fr , "Pierre Garnier fils (1693-1743)"@fr ;
+        skos:editorialNote  "Corrard de Breban. - . - Morin, Garnier. - . - Morin, Hist. comparative : le mentionne en 1726-1727. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/201919193> ;
+        skos:note           "Libraire. - Fils de l'imprimeur-libraire de Troyes Pierre I Garnier ; frère de l'imprimeur-libraire Jean II Garnier. D'abord compagnon à l'imprimerie de son père. Reçu libraire dès avant 1726. À l'été 1738, il se porte aspirant à la succession de d'imprimeur Pierre Michelin, puis y renonce en faveur du fils de celui-ci. Décédé en juillet 1743 à Troyes, avec le seul titre de libraire"@fr ;
+        skos:prefLabel      "Pierre Garnier (1693-1743)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb165509173#foaf:Person> .

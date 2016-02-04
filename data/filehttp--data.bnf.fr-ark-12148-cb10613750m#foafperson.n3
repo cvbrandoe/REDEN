@@ -1,0 +1,57 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb10613750m#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1767 ;
+        bnf-onto:lastYear              1803 ;
+        rdagroup2elements:biographicalInformation
+                "Dame d'honneur de la comtesse de Provence. - Elle divorce en 1800 du comte Christophe de Beaumont. - Tenait un salon à Paris dans son hôtel de la rue Neuve-du-Luxembourg. - A été l'amie de Chateaubriand entre 1801 et 1803" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1767/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1803/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1767" ;
+        bio:death                      "1803-11-04" ;
+        owl:sameAs                     <http://viaf.org/viaf/28469852> , <http://data.bnf.fr/ark:/12148/cb10613750m#about> , <http://www.idref.fr/148068731> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k6501572x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k114093r.thumbnail> ;
+        foaf:familyName                "Beaumont" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Pauline de" ;
+        foaf:name                      "Pauline de Beaumont" ;
+        foaf:page                      <http://data.bnf.fr/10613750/pauline_de_beaumont/> .
+
+<http://data.bnf.fr/10613750/pauline_de_beaumont/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb10613750m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb309972481#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10613750m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10613750m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10613750m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10613750m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10613750m> ;
+        bnf-onto:FRBNF        10613750 ;
+        isni:identifierValid  "0000000121256177" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-10-24" ;
+        owl:sameAs            <http://isni.org/isni/0000000121256177> ;
+        skos:altLabel         "Pauline de Montmorin Saint-Hérem (1767-1803)"@fr , "Madame de Beaumont (1767-1803)"@fr , "Comtesse de Beaumont (1767-1803)"@fr ;
+        skos:editorialNote    "Bonnes fées d'antan / Mme d'Aulnoy, Mme de Murat, Mlle de La Force, Mlle Lhéritier de Villandon, Mme Pauline de Beaumont ; avec une introduction et des notes par Edmond Pilon, 1909. - . - [Recueil. Dossiers biographiques Boutillier du Retail. Documentation sur Pauline de Beaumont], 1882-1939. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/148068731> , <http://viaf.org/viaf/28469852> , <http://isni.org/isni/0000000121256177> ;
+        skos:note             "Dame d'honneur de la comtesse de Provence. - Elle divorce en 1800 du comte Christophe de Beaumont. - Tenait un salon à Paris dans son hôtel de la rue Neuve-du-Luxembourg. - A été l'amie de Chateaubriand entre 1801 et 1803"@fr ;
+        skos:prefLabel        "Pauline de Beaumont (1767-1803)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10613750m#foaf:Person> .

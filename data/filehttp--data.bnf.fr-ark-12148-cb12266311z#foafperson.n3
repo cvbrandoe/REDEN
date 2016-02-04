@@ -1,0 +1,39 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/12266311/simon_roux/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12266311z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12266311z#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1727 ;
+        bnf-onto:lastYear              1801 ;
+        rdagroup2elements:biographicalInformation
+                "Soldat français établi au Canada" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1727/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1801/> ;
+        bio:birth                      "1727-01-16" ;
+        bio:death                      "1801-12-01" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb12266311z#about> ;
+        foaf:birthday                  "01-16" ;
+        foaf:familyName                "Roux" ;
+        foaf:givenName                 "Simon" ;
+        foaf:name                      "Simon Roux" ;
+        foaf:page                      <http://data.bnf.fr/12266311/simon_roux/> .
+
+<http://data.bnf.fr/ark:/12148/cb12266311z>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb12266311z> ;
+        bnf-onto:FRBNF    12266311 ;
+        dcterms:created   "1992-10-09" ;
+        dcterms:modified  "1992-10-13" ;
+        skos:note         "Soldat français établi au Canada"@fr ;
+        skos:prefLabel    "Simon Roux (1727-1801)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb12266311z#foaf:Person> .

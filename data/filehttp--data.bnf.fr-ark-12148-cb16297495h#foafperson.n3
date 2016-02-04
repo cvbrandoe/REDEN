@@ -1,0 +1,45 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb16297495h>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb16297495h> ;
+        bnf-onto:FRBNF    16297495 ;
+        dcterms:created   "2012-05-09" ;
+        dcterms:modified  "2012-10-15" ;
+        skos:note         "Servante, femme pieuse"@fr ;
+        skos:prefLabel    "Armelle Nicolas (1606-1671)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb16297495h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16297495h#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1606 ;
+        bnf-onto:lastYear              1671 ;
+        rdagroup2elements:biographicalInformation
+                "Servante, femme pieuse" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1606/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1671/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1606-09-19" ;
+        bio:death                      "1671" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb16297495h#about> ;
+        foaf:birthday                  "09-19" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b103358598.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b10335858t.thumbnail> ;
+        foaf:familyName                "Nicolas" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Armelle" ;
+        foaf:name                      "Armelle Nicolas" ;
+        foaf:page                      <http://data.bnf.fr/16297495/armelle_nicolas/> .
+
+<http://data.bnf.fr/16297495/armelle_nicolas/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb16297495h#foaf:Person> .

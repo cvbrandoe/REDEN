@@ -1,0 +1,67 @@
+@prefix schema: <http://schema.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb309060549#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12550238k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12550238k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12550238k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12550238k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12550238k> ;
+        bnf-onto:FRBNF        12550238 ;
+        isni:identifierValid  "000000008103494X" ;
+        dcterms:created       "1997-01-28" ;
+        dcterms:modified      "2013-07-30" ;
+        skos:altLabel         "Émile Léonard Mathieu (1835-1890)"@fr ;
+        skos:closeMatch       <http://imslp.org/wiki/Category:Mathieu,_Émile> ;
+        skos:editorialNote    "LCNA (CD), 1996-06. - . - BN Cat. gén. : Mathieu (Émile), professeur à la Faculté des sciences de Nancy. - . -"@fr , "Dynamique analytique / par Émile Mathieu, 1995 [document électronique : reprod. de l'éd. de 1878]. - . - ABF : Mathieu, Émile Léonard. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/24715825> , <http://www.idref.fr/085843075> ;
+        skos:note             "Mathématicien. - Professeur à la Faculté des sciences de Nancy"@fr ;
+        skos:prefLabel        "Émile Mathieu (1835-1890)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12550238k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30906055n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12550238k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12550238k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12550238k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12550238k#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1835 ;
+        bnf-onto:lastYear              1890 ;
+        rdagroup2elements:biographicalInformation
+                "Mathématicien. - Professeur à la Faculté des sciences de Nancy" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1835/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1890/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        schema:sameAs                  <http://imslp.org/wiki/Category:Mathieu,_Émile> ;
+        bio:birth                      "1835-05-15" ;
+        bio:death                      "1890-10-19" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb12550238k#about> , <http://viaf.org/viaf/24715825> , <http://www.idref.fr/085843075> ;
+        foaf:birthday                  "05-15" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k778020.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k77803b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k99741h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k77801n.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k99614b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k778009.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k99736x.thumbnail> ;
+        foaf:familyName                "Mathieu" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Émile" ;
+        foaf:name                      "Émile Mathieu" ;
+        foaf:page                      <http://data.bnf.fr/12550238/emile_mathieu/> .
+
+<http://data.bnf.fr/ark:/12148/cb30906053z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12550238k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12550238k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12550238k#foaf:Person> .

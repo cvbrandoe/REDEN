@@ -1,0 +1,60 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/14975872/mathieu_francois_mole/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb149758720#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149758720>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb149758720> ;
+        bnf-onto:FRBNF        14975872 ;
+        isni:identifierValid  "0000000002369128" ;
+        dcterms:created       "2003-01-13" ;
+        dcterms:modified      "2015-03-13" ;
+        skos:altLabel         "Mathieu François Molé de Champlâtreux (1705-1794)"@fr , "Matthieu François Molé de Champlâtreux (1705-1794)"@fr ;
+        skos:editorialNote    "Illustrissimo supremi senatûs principi D. D. Molé. Gratulatio, 1757. - . - Histoire et dictionnaire du temps des Lumières / Jean de Viguerie, 2003. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/61822740> ;
+        skos:note             "Magistrat au Parlement de Paris : conseiller aux enquêtes en 1724 ; président à mortier le 17 mai 1731 ; premier président le 12 novembre 1757 ; démissionne en 1763 tout en restant président à mortier. - Titré en 1781 comte de Champlâtreux. - Guillotiné en 1794"@fr ;
+        skos:prefLabel        "Mathieu François Molé (1705-1794)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb149758720#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30719101k#Expression>
+        bnfroles:r290        <http://data.bnf.fr/ark:/12148/cb149758720#foaf:Person> ;
+        marcrel:dte          <http://data.bnf.fr/ark:/12148/cb149758720#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149758720#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307191007#Expression>
+        bnfroles:r290        <http://data.bnf.fr/ark:/12148/cb149758720#foaf:Person> ;
+        marcrel:dte          <http://data.bnf.fr/ark:/12148/cb149758720#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149758720#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149758720#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1705 ;
+        bnf-onto:lastYear              1794 ;
+        rdagroup2elements:biographicalInformation
+                "Magistrat au Parlement de Paris : conseiller aux enquêtes en 1724 ; président à mortier le 17 mai 1731 ; premier président le 12 novembre 1757 ; démissionne en 1763 tout en restant président à mortier. - Titré en 1781 comte de Champlâtreux. - Guillotiné en 1794" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1705/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1794/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1705" ;
+        bio:death                      "1794" ;
+        owl:sameAs                     <http://viaf.org/viaf/61822740> , <http://data.bnf.fr/ark:/12148/cb149758720#about> ;
+        foaf:familyName                "Molé" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Mathieu François" ;
+        foaf:name                      "Mathieu François Molé" ;
+        foaf:page                      <http://data.bnf.fr/14975872/mathieu_francois_mole/> .

@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12273781q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Anatole_Deibler> , <http://catalogue.bnf.fr/ark:/12148/cb12273781q> ;
+        bnf-onto:FRBNF        12273781 ;
+        isni:identifierValid  "0000000036195170" ;
+        dcterms:created       "1992-12-03" ;
+        dcterms:modified      "2010-06-11" ;
+        owl:sameAs            <http://isni.org/isni/0000000036195170> ;
+        skos:altLabel         "Monsieur de Paris (1863-1939)"@fr ;
+        skos:editorialNote    "Carnets d'exécutions : 1885-1939 / Anatole Deibler, 2004. - . - DBF. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000036195170> , <http://www.idref.fr/059256087> , <http://fr.dbpedia.org/resource/Anatole_Deibler> , <http://fr.wikipedia.org/wiki/Anatole_Deibler> , <http://dbpedia.org/resource/Anatole_Deibler> , <http://viaf.org/viaf/54207066> ;
+        skos:note             "Prénoms complets : Anatole, Joseph, François"@fr , "D'une famille allemande d'origine, établie en France depuis le début du XIXe siècle. - Nommé exécuteur en chef des hautes oeuvres de la République le 27 décembre 1898 en remplacement de son père Louis Deibler. - Surnommé \"Monsieur de Paris\""@fr ;
+        skos:prefLabel        "Anatole Deibler (1863-1939)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12273781q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39137100c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12273781q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12273781q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12273781q#foaf:Person> .
+
+<http://data.bnf.fr/12273781/anatole_deibler/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12273781q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12273781q#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1863 ;
+        bnf-onto:lastYear               1939 ;
+        rdagroup2elements:biographicalInformation
+                "Prénoms complets : Anatole, Joseph, François" , "D'une famille allemande d'origine, établie en France depuis le début du XIXe siècle. - Nommé exécuteur en chef des hautes oeuvres de la République le 27 décembre 1898 en remplacement de son père Louis Deibler. - Surnommé \"Monsieur de Paris\"" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1863/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1939/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de la France" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Rennes" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1863-11-29" ;
+        bio:death                       "1939-02-02" ;
+        owl:sameAs                      <http://dbpedia.org/resource/Anatole_Deibler> , <http://viaf.org/viaf/54207066> , <http://fr.dbpedia.org/resource/Anatole_Deibler> , <http://data.bnf.fr/ark:/12148/cb12273781q#about> , <http://www.idref.fr/059256087> ;
+        foaf:birthday                   "11-29" ;
+        foaf:familyName                 "Deibler" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Anatole" ;
+        foaf:name                       "Anatole Deibler" ;
+        foaf:page                       <http://data.bnf.fr/12273781/anatole_deibler/> .

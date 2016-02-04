@@ -1,0 +1,91 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb402827586#Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb403156691#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> .
+
+<http://data.bnf.fr/12514059/michel-ange_corneille/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb403872911#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb307820461#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125140594>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb125140594> , <http://fr.wikipedia.org/wiki/Michel_Corneille_le_Jeune> ;
+        bnf-onto:FRBNF        12514059 ;
+        isni:identifierValid  "0000000116014616" ;
+        dcterms:created       "1996-05-20" ;
+        dcterms:modified      "2013-07-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000116014616> ;
+        skos:altLabel         "M. Corneille"@fr , "Corneille des Gobelins"@fr , "Corneille l'Aîné"@fr , "Michel Corneille"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Michel_Corneille_le_Jeune> , <http://isni.org/isni/0000000116014616> , <http://fr.dbpedia.org/resource/Michel_Corneille_le_Jeune> , <http://viaf.org/viaf/17658739> ;
+        skos:note             "Peintre et graveur. - Elève de son père Claude Corneille de Lyon, puis de Charles Lebrun. - Académicien et adjoint au professeur le 27 octobre 1673, professeur le 1er juillet 1690. Graveur du Fonds Jabach avec son frère Jean-Baptiste"@fr ;
+        skos:prefLabel        "Michel-Ange Corneille (1642-1705)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1642 ;
+        bnf-onto:lastYear              1705 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre et graveur. - Elève de son père Claude Corneille de Lyon, puis de Charles Lebrun. - Académicien et adjoint au professeur le 27 octobre 1673, professeur le 1er juillet 1690. Graveur du Fonds Jabach avec son frère Jean-Baptiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1642/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1705/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1642" ;
+        bio:death                      "1705-08-06" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb125140594#about> , <http://fr.dbpedia.org/resource/Michel_Corneille_le_Jeune> , <http://viaf.org/viaf/17658739> ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Salon_des_Nobles-MERCURE_REPANDANT_SON_INFLUENCE_SUR_LES_ARTS_ET_LES_SCIENCES.jpg?width=300> , <http://gallica.bnf.fr/ark:/12148/btv1b85969260.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Salon_des_Nobles-MERCURE_REPANDANT_SON_INFLUENCE_SUR_LES_ARTS_ET_LES_SCIENCES.jpg> ;
+        foaf:familyName                "Corneille" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Michel-Ange" ;
+        foaf:name                      "Michel-Ange Corneille" ;
+        foaf:page                      <http://data.bnf.fr/12514059/michel-ange_corneille/> .
+
+<http://data.bnf.fr/ark:/12148/cb40488312k#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43867557j#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb403408888#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423351549#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125140594#foaf:Person> .

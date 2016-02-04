@@ -1,0 +1,59 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14402083d#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1757 ;
+        bnf-onto:lastYear              1826 ;
+        rdagroup2elements:biographicalInformation
+                "Imprimeur-libraire ; imprimeur ordinaire du Roi. - Fils de l'imprimeur de Valenciennes Jean-Baptiste-Gabriel Henry. Après des études au collège d'Arras, suit un apprentissage à Bouillon. Succède à sa mère, Marie-Ignace-Josèphe Bourlon, veuve de J.-B.-G. Henry. Reçu imprimeur par arrêt du Conseil du 27 janv. 1783. Franc-maçon. Rachète en 1794 l'imprimerie de \"L'Argus\", périodique rédigé et imprimé par Melletier. Émigre entre le 1er sept. 1794 et 1801. Juge au tribunal de commerce pendant l'occupation de Valenciennes par les Autrichiens. Breveté imprimeur le 15 juillet 1811 (brevet renouvelé le 20 nov. 1818). Son entreprise passe à sa mort à son fils aîné, Benoît Henry, breveté en sa succession le 21 nov. 1826" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1757/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1826/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1783-1826" ;
+        bio:birth                      "1757-02-04" ;
+        bio:death                      "1826-09-30" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb14402083d#about> , <http://viaf.org/viaf/10061649> , <http://www.idref.fr/152246614> ;
+        foaf:birthday                  "02-04" ;
+        foaf:familyName                "Henry" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean-Baptiste-Adrien-Joseph" ;
+        foaf:name                      "Jean-Baptiste-Adrien-Joseph Henry" ;
+        foaf:page                      <http://data.bnf.fr/14402083/jean-baptiste-adrien-joseph_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb38808432h#Expression>
+        bnfroles:r3250       <http://data.bnf.fr/ark:/12148/cb14402083d#foaf:Person> ;
+        marcrel:pbl          <http://data.bnf.fr/ark:/12148/cb14402083d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14402083d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41449527q#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb14402083d#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb14402083d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14402083d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14402083d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14402083d> ;
+        bnf-onto:FRBNF        14402083 ;
+        isni:identifierValid  "0000000000720180" ;
+        dcterms:created       "2002-03-26" ;
+        dcterms:modified      "2015-03-12" ;
+        owl:sameAs            <http://isni.org/isni/0000000000720180> ;
+        skos:altLabel         "Jean-Baptiste Henry (1757-1826)"@fr ;
+        skos:editorialNote    "Lepreux, Nord. - . - Barbier, Lumières. - . - Laharie, P. Liste. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000000720180> , <http://viaf.org/viaf/10061649> , <http://www.idref.fr/152246614> ;
+        skos:note             "Imprimeur-libraire ; imprimeur ordinaire du Roi. - Fils de l'imprimeur de Valenciennes Jean-Baptiste-Gabriel Henry. Après des études au collège d'Arras, suit un apprentissage à Bouillon. Succède à sa mère, Marie-Ignace-Josèphe Bourlon, veuve de J.-B.-G. Henry. Reçu imprimeur par arrêt du Conseil du 27 janv. 1783. Franc-maçon. Rachète en 1794 l'imprimerie de \"L'Argus\", périodique rédigé et imprimé par Melletier. Émigre entre le 1er sept. 1794 et 1801. Juge au tribunal de commerce pendant l'occupation de Valenciennes par les Autrichiens. Breveté imprimeur le 15 juillet 1811 (brevet renouvelé le 20 nov. 1818). Son entreprise passe à sa mort à son fils aîné, Benoît Henry, breveté en sa succession le 21 nov. 1826"@fr ;
+        skos:prefLabel        "Jean-Baptiste-Adrien-Joseph Henry (1757-1826)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14402083d#foaf:Person> .

@@ -1,0 +1,107 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb36564755g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36021715t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1868 ;
+        bnf-onto:lastYear              1925 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre et dessinateur. - Petit-fils de Victor Hugo et père de Jean Hugo" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1868/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1925/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1868-08-16" ;
+        bio:death                      "1925-02-05" ;
+        owl:sameAs                     <http://viaf.org/viaf/100996462> , <http://data.bnf.fr/ark:/12148/cb149406013#about> , <http://www.idref.fr/111722802> ;
+        foaf:birthday                  "08-16" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k6519890n.thumbnail> ;
+        foaf:familyName                "Hugo" ;
+        foaf:givenName                 "Georges-Victor" ;
+        foaf:name                      "Georges-Victor Hugo" ;
+        foaf:page                      <http://data.bnf.fr/14940601/georges-victor_hugo/> .
+
+<http://data.bnf.fr/ark:/12148/cb149406013>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb149406013> ;
+        bnf-onto:FRBNF        14940601 ;
+        isni:identifierValid  "000000007329563X" ;
+        dcterms:created       "2006-10-19" ;
+        dcterms:modified      "2013-08-03" ;
+        owl:sameAs            <http://isni.org/isni/000000007329563X> ;
+        skos:altLabel         "Georges Victor-Hugo (1868-1925)"@fr ;
+        skos:editorialNote    "Bénézit, 1999. - . - Sur le front de Champagne, 1917. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/000000007329563X> , <http://www.idref.fr/111722802> , <http://viaf.org/viaf/100996462> ;
+        skos:note             "Peintre et dessinateur. - Petit-fils de Victor Hugo et père de Jean Hugo"@fr ;
+        skos:prefLabel        "Georges-Victor Hugo (1868-1925)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30625011p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb365647575#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42385963h#Expression>
+        bnfroles:r72         <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        marcrel:ant          <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36564756t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> .
+
+<http://data.bnf.fr/14940601/georges-victor_hugo/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40359812d#Expression>
+        bnfroles:r312        <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34165276b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40390805s#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30625013c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30625294r#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149406013#foaf:Person> .

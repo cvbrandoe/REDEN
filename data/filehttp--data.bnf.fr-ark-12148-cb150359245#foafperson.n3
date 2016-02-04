@@ -1,0 +1,52 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/15035924/francois-marie_de_broglie/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb150359245#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb150359245>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb150359245> ;
+        bnf-onto:FRBNF      15035924 ;
+        dcterms:created     "2006-01-23" ;
+        dcterms:modified    "2006-01-23" ;
+        skos:altLabel       "Duc de Broglie (1671-1745)"@fr , "Maréchal de Broglie (1671-1745)"@fr , "Comte de Buhy (1671-1745)"@fr ;
+        skos:editorialNote  "Le deuxième maréchal de Broglie (1671-1745) / [intendant-général Courtot], 1906. - . - Mourre. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/081591683> ;
+        skos:note           "Maréchal de France (1734). - Premier duc de Broglie (1742)"@fr ;
+        skos:prefLabel      "François-Marie de Broglie (1671-1745)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb150359245#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb150359245#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1671 ;
+        bnf-onto:lastYear               1745 ;
+        rdagroup2elements:biographicalInformation
+                "Maréchal de France (1734). - Premier duc de Broglie (1742)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1671/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1745/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Art et science militaires" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/355/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Château de Broglie (Eure)" ;
+        bio:birth                       "1671-01-11" ;
+        bio:death                       "1745-05-22" ;
+        owl:sameAs                      <http://www.idref.fr/081591683> , <http://data.bnf.fr/ark:/12148/cb150359245#about> ;
+        foaf:birthday                   "01-11" ;
+        foaf:familyName                 "Broglie" ;
+        foaf:givenName                  "François-Marie de" ;
+        foaf:name                       "François-Marie de Broglie" ;
+        foaf:page                       <http://data.bnf.fr/15035924/francois-marie_de_broglie/> .

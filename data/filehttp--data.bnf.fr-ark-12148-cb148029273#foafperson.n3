@@ -1,0 +1,49 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb396256645#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb148029273#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb148029273#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb148029273#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1658 ;
+        bnf-onto:lastYear              1730 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1658/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1730/> ;
+        bio:birth                      "1658" ;
+        bio:death                      "1730" ;
+        owl:sameAs                     <http://viaf.org/viaf/47026363> , <http://www.idref.fr/118886959> , <http://data.bnf.fr/ark:/12148/cb148029273#about> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b84246109.thumbnail> ;
+        foaf:familyName                "Parmentier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "James" ;
+        foaf:name                      "James Parmentier" ;
+        foaf:page                      <http://data.bnf.fr/14802927/james_parmentier/> .
+
+<http://data.bnf.fr/ark:/12148/cb148029273>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb148029273> ;
+        bnf-onto:FRBNF        14802927 ;
+        isni:identifierValid  "0000000066580256" ;
+        dcterms:created       "1998-06-17" ;
+        dcterms:modified      "2013-08-03" ;
+        owl:sameAs            <http://isni.org/isni/0000000066580256> ;
+        skos:altLabel         "Jacques Parmentier (1658-1730)"@fr ;
+        skos:exactMatch       <http://www.idref.fr/118886959> , <http://isni.org/isni/0000000066580256> , <http://viaf.org/viaf/47026363> ;
+        skos:note             "Peintre"@fr ;
+        skos:prefLabel        "James Parmentier (1658-1730)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb148029273#foaf:Person> .

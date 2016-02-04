@@ -1,0 +1,54 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14673143g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1893 ;
+        bnf-onto:lastYear              1961 ;
+        rdagroup2elements:biographicalInformation
+                "Actrice" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1893/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1961/> ;
+        bio:birth                      "1893-12-24" ;
+        bio:death                      "1961-11-24" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb14673143g#about> , <http://dbpedia.org/resource/Ruth_Chatterton> , <http://viaf.org/viaf/76578029> , <http://fr.dbpedia.org/resource/Ruth_Chatterton> ;
+        foaf:birthday                  "12-24" ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Ruth_Chatterton_in_Female_trailer.jpg?width=300> , <http://commons.wikimedia.org/wiki/Special:FilePath/Ruth_Chatterton_in_Female_trailer.jpg> ;
+        foaf:familyName                "Chatterton" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Ruth" ;
+        foaf:name                      "Ruth Chatterton" ;
+        foaf:page                      <http://data.bnf.fr/14673143/ruth_chatterton/> .
+
+<http://data.bnf.fr/14673143/ruth_chatterton/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14673143g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14673143g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Ruth_Chatterton> , <http://catalogue.bnf.fr/ark:/12148/cb14673143g> ;
+        bnf-onto:FRBNF        14673143 ;
+        isni:identifierValid  "0000000081571411" ;
+        dcterms:created       "2005-08-26" ;
+        dcterms:modified      "2013-08-03" ;
+        owl:sameAs            <http://isni.org/isni/0000000081571411> ;
+        skos:exactMatch       <http://isni.org/isni/0000000081571411> , <http://fr.dbpedia.org/resource/Ruth_Chatterton> , <http://dbpedia.org/resource/Ruth_Chatterton> , <http://fr.wikipedia.org/wiki/Ruth_Chatterton> , <http://viaf.org/viaf/76578029> ;
+        skos:note             "Actrice"@fr ;
+        skos:prefLabel        "Ruth Chatterton (1893-1961)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14673143g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb436844239#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14673143g#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14673143g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14673143g#foaf:Person> .

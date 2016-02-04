@@ -1,0 +1,87 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13184105c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13184105c> ;
+        bnf-onto:FRBNF        13184105 ;
+        isni:identifierValid  "0000000118723483" ;
+        dcterms:created       "1998-02-18" ;
+        dcterms:modified      "2013-07-31" ;
+        owl:sameAs            <http://isni.org/isni/0000000118723483> ;
+        skos:altLabel         "Jacques-Louis-Jules David-Chassaignolle (1829-1886)"@fr , "L.-J. David (1829-1886)"@fr , "Jacques David- Chassaignolle (1829-1886)"@fr ;
+        skos:editorialNote    "Le peintre Louis David, 1748-1825 : souvenirs & documents inédits / par J. L. Jules David, 1880. - . - DBF. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000118723483> , <http://viaf.org/viaf/2612462> ;
+        skos:note             "Peintre et graveur. - Petit-fils du peintre Jacques-Louis David (1748-1825)"@fr ;
+        skos:prefLabel        "Jacques-Louis-Jules David (1829-1886)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37529652p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40387461n#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb312840908#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40467089p#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40343975x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30304775p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1829 ;
+        bnf-onto:lastYear               1886 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre et graveur. - Petit-fils du peintre Jacques-Louis David (1748-1825)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1829/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1886/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris (France)" ;
+        rdagroup2elements:placeOfDeath  "Bruxelles (Belgique)" ;
+        bio:birth                       "1829-05-16" ;
+        bio:death                       "1886-09-02" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb13184105c#about> , <http://viaf.org/viaf/2612462> ;
+        foaf:birthday                   "05-16" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k65724752.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k6216857c.thumbnail> ;
+        foaf:familyName                 "David" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jacques-Louis-Jules" ;
+        foaf:name                       "Jacques-Louis-Jules David" ;
+        foaf:page                       <http://data.bnf.fr/13184105/jacques-louis-jules_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb30304774b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13184105c#foaf:Person> .

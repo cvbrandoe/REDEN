@@ -1,0 +1,58 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40149114m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15060608h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15060608h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15060608h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15060608h#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1894 ;
+        bnf-onto:lastYear              1989 ;
+        rdagroup2elements:biographicalInformation
+                "Officier, membre de la mission militaire de l'ambassade des États-Unis à Pékin, 1923-1936" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1894/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1989/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1894" ;
+        bio:death                      "1989" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb15060608h#about> , <http://viaf.org/viaf/76603417> ;
+        foaf:familyName                "Constant" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Samuel Victor" ;
+        foaf:name                      "Samuel Victor Constant" ;
+        foaf:page                      <http://data.bnf.fr/15060608/samuel_victor_constant/> .
+
+<http://data.bnf.fr/ark:/12148/cb438587485#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15060608h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15060608h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15060608h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15060608h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15060608h> ;
+        bnf-onto:FRBNF        15060608 ;
+        isni:identifierValid  "0000000082697745" ;
+        dcterms:created       "2006-04-26" ;
+        dcterms:modified      "2014-09-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000082697745> ;
+        skos:altLabel         "Sa mo er ‧ wei ke duo Kang si tan (1894-....)"@zh ;
+        skos:editorialNote    "Calls, sounds and merchandise of the Peking stree peddlars / by Samuel Victor Constant = Jing du jiao mai tu / Sa mo er ‧ wei ke duo ‧ kang si tan zhu ; Tao li yi ; Tao shang yi hui tu, 1994. - . - Colporteurs des rues de Pékin [Texte imprimé] : cris, bruits et produits, 1936 / Samuel Victor Constant ; avec cinq lavis de Charles Chauderlos ; [traduit, présenté et commenté par Alexis Brossollet].-Paris : Éd. du Non agir, cop. 2014. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/76603417> , <http://isni.org/isni/0000000082697745> ;
+        skos:note             "Officier, membre de la mission militaire de l'ambassade des États-Unis à Pékin, 1923-1936"@fr ;
+        skos:prefLabel        "Samuel Victor Constant (1894-1989)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15060608h#foaf:Person> .

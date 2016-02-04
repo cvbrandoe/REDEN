@@ -1,0 +1,52 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb32109341d#Expression>
+        bnfroles:r40         <http://data.bnf.fr/ark:/12148/cb113387129#foaf:Person> ;
+        marcrel:ann          <http://data.bnf.fr/ark:/12148/cb113387129#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb113387129#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb113387129#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1874 ;
+        bnf-onto:lastYear               1949 ;
+        rdagroup2elements:biographicalInformation
+                "Officier de marine" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1874/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1949/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Plounéventer (Finistère)" ;
+        rdagroup2elements:placeOfDeath  "La Roche-Maurice (Finistère)" ;
+        bio:birth                       "1874-05-04" ;
+        bio:death                       "1949-08-06" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb113387129#about> , <http://viaf.org/viaf/306352790> ;
+        foaf:birthday                   "05-04" ;
+        foaf:familyName                 "Berthelot" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Charles-Alain-Marie" ;
+        foaf:name                       "Charles-Alain-Marie Berthelot" ;
+        foaf:page                       <http://data.bnf.fr/11338712/charles-alain-marie_berthelot/> .
+
+<http://data.bnf.fr/ark:/12148/cb113387129>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb113387129> ;
+        bnf-onto:FRBNF      11338712 ;
+        dcterms:created     "1997-07-01" ;
+        dcterms:modified    "2014-02-13" ;
+        skos:editorialNote  "En route vers les idoles / Révérend Père A. Flachères ;  [Lettre-préface du supérieur général L. Robert. Note du vice-amiral C. Berthelot.]..., 1938. - . - Dictionnaire des marins français / É. Taillemite, 2002. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/306352790> ;
+        skos:note           "Officier de marine"@fr ;
+        skos:prefLabel      "Charles-Alain-Marie Berthelot (1874-1949)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb113387129#foaf:Person> .

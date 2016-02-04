@@ -1,0 +1,59 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb32670557g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12331060p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12331060p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12331060p#foaf:Person> .
+
+<http://data.bnf.fr/12331060/zacharias_wagner/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12331060p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12331060p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12331060p> ;
+        bnf-onto:FRBNF        12331060 ;
+        isni:identifierValid  "0000000066464124" ;
+        dcterms:created       "1993-09-08" ;
+        dcterms:modified      "2013-07-27" ;
+        owl:sameAs            <http://isni.org/isni/0000000066464124> ;
+        skos:altLabel         "Zacharias Wagenaar (1614-1668)"@fr ;
+        skos:editorialNote    "Anhang zwoer Reisen : die erste eines Moscowitischen Gesandten nach China. Die andere Herrn Zachariae Wagners aus der Churfürstl. Sächsischen Residentz-Stadt Dresden durch ein groß Theil der Welt und unter andern auch nach China, 1689. - . - ADB. - . -"@fr , "LCNA, 1977-1986. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000066464124> , <http://viaf.org/viaf/12379363> , <http://www.idref.fr/032241348> ;
+        skos:note             "Gouverneur du Cap. - Auteur de missions pour la Compagnie des Indes au Brésil, en Chine et au Japon"@fr ;
+        skos:prefLabel        "Zacharias Wagner (1614-1668)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12331060p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12331060p#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1614 ;
+        bnf-onto:lastYear               1668 ;
+        rdagroup2elements:biographicalInformation
+                "Gouverneur du Cap. - Auteur de missions pour la Compagnie des Indes au Brésil, en Chine et au Japon" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1614/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1668/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Dresde, Allemagne" ;
+        rdagroup2elements:placeOfDeath  "Amsterdam, Pays-Bas" ;
+        bio:birth                       "1614-05-09" ;
+        bio:death                       "1668-10-01" ;
+        owl:sameAs                      <http://viaf.org/viaf/12379363> , <http://data.bnf.fr/ark:/12148/cb12331060p#about> , <http://www.idref.fr/032241348> ;
+        foaf:birthday                   "05-09" ;
+        foaf:familyName                 "Wagner" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Zacharias" ;
+        foaf:name                       "Zacharias Wagner" ;
+        foaf:page                       <http://data.bnf.fr/12331060/zacharias_wagner/> .

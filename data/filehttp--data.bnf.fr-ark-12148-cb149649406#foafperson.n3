@@ -1,0 +1,42 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/14964940/claude_baudard_saint-james/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb149649406#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149649406#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1738 ;
+        bnf-onto:lastYear              1787 ;
+        rdagroup2elements:biographicalInformation
+                "Propriétaire de la \"Folie Saint-James\" à Neuilly-sur-Seine, conçue par l'architecte F. J. Bélanger entre 1777 et 1785.  Ruiné en 1787, la Folie est rachetée par le duc de Choiseul-Praslin. - Trésorier général de la Marine" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1738/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1787/> ;
+        bio:birth                      "1738" ;
+        bio:death                      "1787" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb149649406#about> ;
+        foaf:familyName                "Saint-James" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Claude Baudard" ;
+        foaf:name                      "Claude Baudard Saint-James" ;
+        foaf:page                      <http://data.bnf.fr/14964940/claude_baudard_saint-james/> .
+
+<http://data.bnf.fr/ark:/12148/cb149649406>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb149649406> ;
+        bnf-onto:FRBNF    14964940 ;
+        dcterms:created   "1998-07-31" ;
+        dcterms:modified  "2006-03-14" ;
+        skos:altLabel     "Claude Baudard de Vaudésir (baron de Saint-James, 1738-1787)"@fr , "Claude Baudard de Saint-James (1738-1787)"@fr ;
+        skos:note         "Propriétaire de la \"Folie Saint-James\" à Neuilly-sur-Seine, conçue par l'architecte F. J. Bélanger entre 1777 et 1785.  Ruiné en 1787, la Folie est rachetée par le duc de Choiseul-Praslin. - Trésorier général de la Marine"@fr ;
+        skos:prefLabel    "Claude Baudard Saint-James (baron de, 1738-1787)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb149649406#foaf:Person> .

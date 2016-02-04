@@ -1,0 +1,56 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12528757j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12528757j> ;
+        bnf-onto:FRBNF        12528757 ;
+        isni:identifierValid  "0000000016385145" ;
+        dcterms:created       "1996-09-17" ;
+        dcterms:modified      "2015-03-13" ;
+        skos:editorialNote    "Lettre de M. Lancelot, curé, député du département de l'Ille-et-Vilaine, à un de ses confrères, au sujet du serment civique, 1995 [document électronique : reprod. de l'éd. de 1792]. - . - Martin et Walter. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/39487320> ;
+        skos:note             "Ecclésiastique. - Homme politique, député du département d'Ille-et-Vilaine. - Curé de Réthiers, Ille-et-Vilaine. - Nom complet : Joseph Lancelot-Dubourg"@fr ;
+        skos:prefLabel        "Joseph Lancelot (1749-1806)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12528757j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37239912z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12528757j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12528757j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12528757j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12528757j#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1749 ;
+        bnf-onto:lastYear              1806 ;
+        rdagroup2elements:biographicalInformation
+                "Ecclésiastique. - Homme politique, député du département d'Ille-et-Vilaine. - Curé de Réthiers, Ille-et-Vilaine. - Nom complet : Joseph Lancelot-Dubourg" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1749/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1806/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1749" ;
+        bio:death                      "1806" ;
+        owl:sameAs                     <http://viaf.org/viaf/39487320> , <http://data.bnf.fr/ark:/12148/cb12528757j#about> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k44910j.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k453046.thumbnail> ;
+        foaf:familyName                "Lancelot" ;
+        foaf:givenName                 "Joseph" ;
+        foaf:name                      "Joseph Lancelot" ;
+        foaf:page                      <http://data.bnf.fr/12528757/joseph_lancelot/> .
+
+<http://data.bnf.fr/ark:/12148/cb37235049v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12528757j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12528757j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12528757j#foaf:Person> .

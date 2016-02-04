@@ -1,0 +1,71 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1873 ;
+        rdagroup2elements:biographicalInformation
+                "Traduit de l'allemand en français" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1873/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1873" ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb12138605j#about> , <http://viaf.org/viaf/12343297> , <http://www.idref.fr/059056657> ;
+        foaf:familyName                "Henry" ;
+        foaf:givenName                 "Marc" ;
+        foaf:name                      "Marc Henry" ;
+        foaf:page                      <http://data.bnf.fr/12138605/marc_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb35715366f#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12138605j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12138605j> ;
+        bnf-onto:FRBNF        12138605 ;
+        isni:identifierValid  "000000006642822X" ;
+        dcterms:created       "1990-02-13" ;
+        dcterms:modified      "2013-12-17" ;
+        skos:exactMatch       <http://www.idref.fr/059056657> , <http://viaf.org/viaf/12343297> ;
+        skos:note             "Traduit de l'allemand en français"@fr ;
+        skos:prefLabel        "Marc Henry (1873-19..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35145071s#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35211687d#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb352116909#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35698609n#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353733655#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12138605j#foaf:Person> .

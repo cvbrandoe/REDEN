@@ -1,0 +1,110 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/12367520/karl_ludwig_michelet/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1801 ;
+        bnf-onto:lastYear              1893 ;
+        rdagroup2elements:biographicalInformation
+                "Philosophe et penseur politique. - A été professeur de philosophie à Berlin" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1801/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1893/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Philosophie" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/100/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        bio:birth                      "1801-12-04" ;
+        bio:death                      "1893-12-16" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb12367520w#about> , <http://viaf.org/viaf/39456419> , <http://www.idref.fr/03269461X> ;
+        foaf:birthday                  "12-04" ;
+        foaf:familyName                "Michelet" ;
+        foaf:givenName                 "Karl Ludwig" ;
+        foaf:name                      "Karl Ludwig Michelet" ;
+        foaf:page                      <http://data.bnf.fr/12367520/karl_ludwig_michelet/> .
+
+<http://data.bnf.fr/ark:/12148/cb37100818s#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37425042k#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12367520w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12367520w> ;
+        bnf-onto:FRBNF        12367520 ;
+        isni:identifierValid  "0000000108898423" ;
+        dcterms:created       "1994-02-10" ;
+        dcterms:modified      "2013-07-27" ;
+        owl:sameAs            <http://isni.org/isni/0000000108898423> ;
+        skos:altLabel         "Charles Louis Michelet (1801-1893)"@fr , "Charles Michelet (1801-1893)"@fr , "Carl Ludwig Michelet (1801-1893)"@fr ;
+        skos:editorialNote    "Einleitung in Hegel's philosophische Abhandlungen / von D. Karl Ludwig Michelet, 1832. - . - Hegel, der unwiderlegte Weltphilosoph : eine Jubelschrift / Carl Ludwig Michelet, 1983 [reprod. de l'éd. de 1870]. - . - Examen critique de l'ouvrage d'Aristote intitulé Métaphysique / par Ch. L. Michelet, 1836. - . -"@fr , "Esquisse de logique / par Ch. Michelet, 1856. - . - Brockhaus 19. Aufl.. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/03269461X> , <http://viaf.org/viaf/39456419> , <http://isni.org/isni/0000000108898423> ;
+        skos:note             "Philosophe et penseur politique. - A été professeur de philosophie à Berlin"@fr ;
+        skos:prefLabel        "Karl Ludwig Michelet (1801-1893)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37101621c#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374123414#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb426024591#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42602106m#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37388006h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374250479#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42602551j#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb426024878#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34726197g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12367520w#foaf:Person> .

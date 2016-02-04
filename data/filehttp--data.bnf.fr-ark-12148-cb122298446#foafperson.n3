@@ -1,0 +1,70 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30793880v#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb122298446#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb122298446#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122298446#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb312395826#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb122298446#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb122298446#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122298446#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb359393932#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb122298446#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb122298446#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122298446#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122298446>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb122298446> ;
+        bnf-onto:FRBNF        12229844 ;
+        isni:identifierValid  "0000000000173500" ;
+        dcterms:created       "1991-12-18" ;
+        dcterms:modified      "2015-07-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000000173500> ;
+        skos:altLabel         "A. Morin (1696-1758)"@fr , "André Morin (1696-1758)"@fr ;
+        skos:editorialNote    "Liste des libraires, 1723. - . - Tableau des libraires, 1732. - . - Lottin. - . -"@fr , "Delalain, Libraires du Palais. - . - Dict. des éd. d'estampes. - . - Arbour, Femmes, 1470-1870. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/030993512> , <http://isni.org/isni/0000000000173500> , <http://viaf.org/viaf/9901282> ;
+        skos:note             "Variante(s) de prénom : André-Jean-Baptiste. - Libraire et marchand \"imagier\". - Fils d'un bourgeois de Poissy, intendant de Jacques-Bénigne Bossuet. Entré en apprentissage en oct. 1711 chez l'imprimeur-libraire parisien Guillaume III Cavelier. Reçu libraire le 16 déc. 1721. Gendre (juin 1723) de l'imprimeur-libraire Pierre-Augustin Le Mercier. Reprend vers 1748 le fonds de son oncle maternel Pierre Gallays, graveur et marchand imagier. En faillite en fév. 1751. Très appauvri, il décède à Paris le 31 janv. 1758 ; inventaire après décès le 21 mars 1758. Sa veuve lui succède. Père des libraires André-Pierre Morin (Charleville) et Benoît Morin (Paris)."@fr ;
+        skos:prefLabel        "Jean-André Morin (1696-1758)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122298446#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122298446#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1696 ;
+        bnf-onto:lastYear              1758 ;
+        rdagroup2elements:biographicalInformation
+                "Variante(s) de prénom : André-Jean-Baptiste. - Libraire et marchand \"imagier\". - Fils d'un bourgeois de Poissy, intendant de Jacques-Bénigne Bossuet. Entré en apprentissage en oct. 1711 chez l'imprimeur-libraire parisien Guillaume III Cavelier. Reçu libraire le 16 déc. 1721. Gendre (juin 1723) de l'imprimeur-libraire Pierre-Augustin Le Mercier. Reprend vers 1748 le fonds de son oncle maternel Pierre Gallays, graveur et marchand imagier. En faillite en fév. 1751. Très appauvri, il décède à Paris le 31 janv. 1758 ; inventaire après décès le 21 mars 1758. Sa veuve lui succède. Père des libraires André-Pierre Morin (Charleville) et Benoît Morin (Paris)." ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1696/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1758/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1721-1758" ;
+        bio:birth                      "1696-01-20" ;
+        bio:death                      "1758-01-31" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb122298446#about> , <http://www.idref.fr/030993512> , <http://viaf.org/viaf/9901282> ;
+        foaf:birthday                  "01-20" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k5722140q.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k117920t.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k117918h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k117919w.thumbnail> ;
+        foaf:familyName                "Morin" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean-André" ;
+        foaf:name                      "Jean-André Morin" ;
+        foaf:page                      <http://data.bnf.fr/12229844/jean-andre_morin/> .
+
+<http://data.bnf.fr/ark:/12148/cb426212318#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb122298446#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb122298446#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122298446#foaf:Person> .

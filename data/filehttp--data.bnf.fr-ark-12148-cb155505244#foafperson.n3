@@ -1,0 +1,42 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb155505244#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             539 ;
+        bnf-onto:lastYear              584 ;
+        rdagroup2elements:biographicalInformation
+                "Roi de Neustrie de 561 à 584. - Fils de Clothaire Ier" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/0539/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/0584/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/900/> ;
+        bio:birth                      "539" ;
+        bio:death                      "584" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb155505244#about> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b10511139b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b84000499.thumbnail> ;
+        foaf:familyName                "Chilpéric" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/15550524/chilperic_1/> .
+
+<http://data.bnf.fr/15550524/chilperic_1/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb155505244#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb155505244>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb155505244> ;
+        bnf-onto:FRBNF    15550524 ;
+        dcterms:created   "2007-07-23" ;
+        dcterms:modified  "2010-07-12" ;
+        skos:note         "Roi de Neustrie de 561 à 584. - Fils de Clothaire Ier"@fr ;
+        skos:prefLabel    "Chilpéric Ier (roi des Francs, 0539?-0584)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb155505244#foaf:Person> .

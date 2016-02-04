@@ -1,0 +1,57 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42557050w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135299177#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135299177#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135299177#foaf:Person> .
+
+<http://data.bnf.fr/13529917/robert_david/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb135299177#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb135299177#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1873 ;
+        bnf-onto:lastYear              1958 ;
+        rdagroup2elements:biographicalInformation
+                "Député de la Dordogne (1910-1914 puis 1919-1924). - Sous-secrétaire d'État à l'Intérieur dans les années 1920 puis journaliste au \"Figaro\" et au \"Matin\". - Neveu du président Sadi-Carnot" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1873/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1958/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Science politique" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/320/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1873" ;
+        bio:death                      "1958" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb135299177#about> , <http://viaf.org/viaf/12467121> , <http://www.idref.fr/050439634> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b9037539w.thumbnail> ;
+        foaf:familyName                "David" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Robert" ;
+        foaf:name                      "Robert David" ;
+        foaf:page                      <http://data.bnf.fr/13529917/robert_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb135299177>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb135299177> ;
+        bnf-onto:FRBNF      13529917 ;
+        dcterms:created     "1999-08-27" ;
+        dcterms:modified    "2010-05-31" ;
+        skos:editorialNote  "Les causes du désastre, les conditions de relèvement / Robert David, 1942. - . - Dictionnaire de la politique française / publié sous la direction d'Henry Coston, 1972. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/050439634> , <http://viaf.org/viaf/12467121> ;
+        skos:note           "Député de la Dordogne (1910-1914 puis 1919-1924). - Sous-secrétaire d'État à l'Intérieur dans les années 1920 puis journaliste au \"Figaro\" et au \"Matin\". - Neveu du président Sadi-Carnot"@fr ;
+        skos:prefLabel      "Robert David (1873-1958)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb135299177#foaf:Person> .

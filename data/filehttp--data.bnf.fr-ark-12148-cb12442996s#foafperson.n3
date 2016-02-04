@@ -1,0 +1,66 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30009799c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12442996s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12442996s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12442996s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb413548308#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12442996s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12442996s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12442996s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12442996s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12442996s> ;
+        bnf-onto:FRBNF        12442996 ;
+        isni:identifierValid  "0000000371573511" ;
+        dcterms:created       "1995-01-26" ;
+        dcterms:modified      "2013-07-27" ;
+        owl:sameAs            <http://isni.org/isni/0000000371573511> ;
+        skos:editorialNote    "Les mots qui restent : répertoire de citations françaises, expressions et formules proverbiales avec une indication précise des sources / par Roger Alexandre, 1995 [document électronique : reprod. de l'éd. de 1901]. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/033575363> , <http://viaf.org/viaf/203796105> , <http://isni.org/isni/0000000371573511> ;
+        skos:note             "Linguiste"@fr ;
+        skos:prefLabel        "Roger Alexandre (1845-19..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12442996s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30009800r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12442996s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12442996s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12442996s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12442996s#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1845 ;
+        rdagroup2elements:biographicalInformation
+                "Linguiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1845/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1845" ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://www.idref.fr/033575363> , <http://data.bnf.fr/ark:/12148/cb12442996s#about> , <http://viaf.org/viaf/203796105> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k963781.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k96377p.thumbnail> ;
+        foaf:familyName                "Alexandre" ;
+        foaf:givenName                 "Roger" ;
+        foaf:name                      "Roger Alexandre" ;
+        foaf:page                      <http://data.bnf.fr/12442996/roger_alexandre/> .
+
+<http://data.bnf.fr/ark:/12148/cb31709852b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12442996s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12442996s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12442996s#foaf:Person> .

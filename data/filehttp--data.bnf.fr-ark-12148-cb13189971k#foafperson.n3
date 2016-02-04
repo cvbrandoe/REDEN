@@ -1,0 +1,63 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cc100392k/cd0e9871#Expression>
+        bnfroles:r320        <http://data.bnf.fr/ark:/12148/cb13189971k#foaf:Person> ;
+        marcrel:rcp          <http://data.bnf.fr/ark:/12148/cb13189971k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13189971k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13189971k#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1891 ;
+        rdagroup2elements:biographicalInformation
+                "Chanteuse lyrique (tessiture : soprano). - Professeur de chant" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1891/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Arcis-sur-Aube (Aube)" ;
+        bio:birth                       "1891-06-15" ;
+        bio:death                       "19.." ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb13189971k#about> , <http://viaf.org/viaf/37058330> ;
+        foaf:birthday                   "06-15" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b84224367.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8422437n.thumbnail> ;
+        foaf:familyName                 "Mathieu" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Madeleine" ;
+        foaf:name                       "Madeleine Mathieu" ;
+        foaf:page                       <http://data.bnf.fr/13189971/madeleine_mathieu/> .
+
+<http://data.bnf.fr/ark:/12148/cb13189971k>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb13189971k> ;
+        bnf-onto:FRBNF    13189971 ;
+        dcterms:created   "1998-04-14" ;
+        dcterms:modified  "2015-04-20" ;
+        skos:exactMatch   <http://viaf.org/viaf/37058330> ;
+        skos:note         "Chanteuse lyrique (tessiture : soprano). - Professeur de chant"@fr ;
+        skos:prefLabel    "Madeleine Mathieu (1891-19..)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb13189971k#foaf:Person> .
+
+<http://data.bnf.fr/13189971/madeleine_mathieu/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13189971k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb379642281#Expression>
+        bnfroles:r1120       <http://data.bnf.fr/ark:/12148/cb13189971k#foaf:Person> ;
+        marcrel:voc          <http://data.bnf.fr/ark:/12148/cb13189971k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13189971k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39684202h#Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13189971k#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13189971k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13189971k#foaf:Person> .

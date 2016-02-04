@@ -1,0 +1,37 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb119539363#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1645 ;
+        bnf-onto:lastYear              1729 ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1645/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1729/> ;
+        bio:birth                      "1645" ;
+        bio:death                      "1729" ;
+        owl:sameAs                     <http://www.idref.fr/027515850> , <http://data.bnf.fr/ark:/12148/cb119539363#about> ;
+        foaf:familyName                "Tolstoï" ;
+        foaf:givenName                 "Petr Andreevitch" ;
+        foaf:name                      "Petr Andreevitch Tolstoï" ;
+        foaf:page                      <http://data.bnf.fr/11953936/petr_andreevitch_tolstoi/> .
+
+<http://data.bnf.fr/11953936/petr_andreevitch_tolstoi/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb119539363#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119539363>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb119539363> ;
+        bnf-onto:FRBNF    11953936 ;
+        dcterms:created   "1985-07-06" ;
+        dcterms:modified  "1988-09-26" ;
+        skos:altLabel     "Pëtr Andreevič Tolstoj"@fr ;
+        skos:exactMatch   <http://www.idref.fr/027515850> ;
+        skos:prefLabel    "Petr Andreevitch Tolstoï (1645-1729)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb119539363#foaf:Person> .

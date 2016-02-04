@@ -1,0 +1,61 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39266008d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15072652p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15072652p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15072652p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb436234574#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb15072652p#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb15072652p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15072652p#foaf:Person> .
+
+<http://data.bnf.fr/15072652/muna_lee/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb15072652p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15072652p#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1895 ;
+        bnf-onto:lastYear              1965 ;
+        rdagroup2elements:biographicalInformation
+                "Poétesse, romancière et traductrice" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1895/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1965/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1895-01-29" ;
+        bio:death                      "1965-04-03" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb15072652p#about> , <http://viaf.org/viaf/59374731> ;
+        foaf:birthday                  "01-29" ;
+        foaf:familyName                "Lee" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Muna" ;
+        foaf:name                      "Muna Lee" ;
+        foaf:page                      <http://data.bnf.fr/15072652/muna_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb15072652p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb15072652p> ;
+        bnf-onto:FRBNF        15072652 ;
+        isni:identifierValid  "0000000031682033" ;
+        dcterms:created       "2006-06-13" ;
+        dcterms:modified      "2013-08-05" ;
+        owl:sameAs            <http://isni.org/isni/0000000031682033> ;
+        skos:editorialNote    "A pan-American life : selected poetry and prose of Muna Lee / edited and with biography by Jonathan Cohen ; foreword by Aurora Levins Morales, 2004. - . - LCNA. - http://authorities.loc.gov. - 2006-06-13"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000031682033> , <http://viaf.org/viaf/59374731> ;
+        skos:note             "Poétesse, romancière et traductrice"@fr ;
+        skos:prefLabel        "Muna Lee (1895-1965)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb15072652p#foaf:Person> .

@@ -1,0 +1,88 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38618574k#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb390858658#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1848 ;
+        bnf-onto:lastYear               1892 ;
+        rdagroup2elements:biographicalInformation
+                "Diariste américaine. - Soeur de Henry et William James" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1848/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1892/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "New York" ;
+        rdagroup2elements:placeOfDeath  "Londres" ;
+        bio:birth                       "1848-08-07" ;
+        bio:death                       "1892-03-06" ;
+        owl:sameAs                      <http://www.idref.fr/027513424> , <http://data.bnf.fr/ark:/12148/cb11953712j#about> , <http://viaf.org/viaf/41848597> ;
+        foaf:birthday                   "08-07" ;
+        foaf:familyName                 "James" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Alice" ;
+        foaf:name                       "Alice James" ;
+        foaf:page                       <http://data.bnf.fr/11953712/alice_james/> .
+
+<http://data.bnf.fr/11953712/alice_james/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36620026b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38115759n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38605054n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36605194w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36609741x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11953712j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11953712j> ;
+        bnf-onto:FRBNF        11953712 ;
+        isni:identifierValid  "0000000081201744" ;
+        dcterms:created       "1985-07-06" ;
+        dcterms:modified      "2013-07-25" ;
+        owl:sameAs            <http://isni.org/isni/0000000081201744> ;
+        skos:editorialNote    "Alice James / Jean Strouse, 1985. - . - LC authorities. - http://authorities.loc.gov. - 2004-06-17"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000081201744> , <http://www.idref.fr/027513424> , <http://viaf.org/viaf/41848597> ;
+        skos:note             "Diariste américaine. - Soeur de Henry et William James"@fr ;
+        skos:prefLabel        "Alice James (1848-1892)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11953712j#foaf:Person> .

@@ -1,0 +1,126 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31976467b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302818522#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> .
+
+<http://data.bnf.fr/10696453/camille_cousin/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30281850c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31976463z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302818495#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30281848t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31976465n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1852 ;
+        bnf-onto:lastYear               1917 ;
+        bnf-onto:mortPourLaFrance       true ;
+        rdagroup2elements:biographicalInformation
+                "Militaire. - Général (à partir de 1910)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1852/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1917/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de la France" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Saint-Germain-en-Laye (Yvelines)" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1852-05-22" ;
+        bio:death                       "1917-04-16" ;
+        owl:sameAs                      <http://viaf.org/viaf/2448> , <http://data.bnf.fr/ark:/12148/cb106964536#about> ;
+        foaf:birthday                   "05-22" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b6952151h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b90438767.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6946774j.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6934063f.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6934068h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6909057f.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6909058v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9043994h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908333r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908723r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908606w.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69087260.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6952041s.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69083360.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69083345.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908727d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69087245.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6945696g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69340673.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908608q.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6934064v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69091942.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69523835.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6934069x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6934070k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908973b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908332b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69340710.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69086094.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69088693.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908870r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6945694n.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53000740h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6909195g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908721x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53000521c.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69520426.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908330h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69520389.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908331x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530007377.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69521503.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69088715.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53000396r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69086079.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53000448z.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908722b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908605g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908725k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6945697w.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69089770.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908335k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6952039q.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69455949.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69456989.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908976k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6945633z.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6952040c.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6945739s.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6945595q.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6908872k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6946779m.thumbnail> ;
+        foaf:familyName                 "Cousin" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Camille" ;
+        foaf:name                       "Camille Cousin" ;
+        foaf:page                       <http://data.bnf.fr/10696453/camille_cousin/> .
+
+<http://data.bnf.fr/ark:/12148/cb30682731r#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319764649#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319764660#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30281847g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31976462m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30281851q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319764618#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb106964536>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb106964536> ;
+        bnf-onto:FRBNF      10696453 ;
+        dcterms:created     "1997-07-01" ;
+        dcterms:modified    "2008-07-02" ;
+        skos:editorialNote  "Aide-mémoire de l'officier d'infanterie en campagne / Général Cousin, 1916. - . - Mémoire des hommes. - http://www.memoiredeshommes.sga.defense.gouv.fr. - 2006-01-13"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/2448> ;
+        skos:note           "Militaire. - Général (à partir de 1910)"@fr ;
+        skos:prefLabel      "Camille Cousin (1852-1917)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb106964536#foaf:Person> .

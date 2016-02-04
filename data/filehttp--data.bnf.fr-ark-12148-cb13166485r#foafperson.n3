@@ -1,0 +1,112 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb444282389#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1797 ;
+        bnf-onto:lastYear               1861 ;
+        rdagroup2elements:biographicalInformation
+                "A aussi écrit en latin" , "Zoologue. - Fut professeur de zoologie et de paléontologie à l'Université de Munich" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1797/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1861/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Nuremberg, Allemagne" ;
+        rdagroup2elements:placeOfDeath  "Munich, Allemagne" ;
+        bio:birth                       "1797-03-21" ;
+        bio:death                       "1861-12-17" ;
+        owl:sameAs                      <http://fr.dbpedia.org/resource/Johann_Andreas_Wagner> , <http://data.bnf.fr/ark:/12148/cb13166485r#about> , <http://www.idref.fr/067041124> , <http://viaf.org/viaf/100304276> ;
+        foaf:birthday                   "03-21" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k99119p.thumbnail> ;
+        foaf:familyName                 "Wagner" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Johann Andreas" ;
+        foaf:name                       "Johann Andreas Wagner" ;
+        foaf:page                       <http://data.bnf.fr/13166485/johann_andreas_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb444282714#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316137441#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb44428266j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372771034#Expression>
+        bnfroles:r120        <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        marcrel:cwt          <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb44428194h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13166485r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13166485r> , <http://fr.wikipedia.org/wiki/Johann_Andreas_Wagner> ;
+        bnf-onto:FRBNF        13166485 ;
+        isni:identifierValid  "0000000121453445" ;
+        dcterms:created       "1997-08-26" ;
+        dcterms:modified      "2013-10-14" ;
+        owl:sameAs            <http://isni.org/isni/0000000121453445> ;
+        skos:altLabel         "Andreas Wagner (1797-1861)"@fr , "Johannes Andreas Wagner (1797-1861)"@fr , "Andreas Johann Wagner (1797-1861)"@fr ;
+        skos:editorialNote    "DBA. - . - BN Cat. gén.. - . -"@fr , "Testacea fluviatilia : quae in itinere per Brasiliam, annis 1817-1820 / collegit et pingendos cur. Dr. J. B. de Spix ; digessit Dr. J. A. Wagner ; ed. Dr. F. a Paula de Schrank et Dr. C. F. P. de Martius, 1995 [document électronique : reprod. de l'éd. de 1827]. - . - Geschichte der Urwelt mit besonderer Berücksichtigung der Menschenrassen und des mosaischen Schöpfungsberichtes / von Andreas Wagner, 1845. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/100304276> , <http://isni.org/isni/0000000121453445> , <http://www.idref.fr/067041124> , <http://fr.dbpedia.org/resource/Johann_Andreas_Wagner> , <http://fr.wikipedia.org/wiki/Johann_Andreas_Wagner> ;
+        skos:note             "Zoologue. - Fut professeur de zoologie et de paléontologie à l'Université de Munich"@fr , "A aussi écrit en latin"@fr ;
+        skos:prefLabel        "Johann Andreas Wagner (1797-1861)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31613745c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb320803395#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb444282567#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb44428248m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316137472#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41349098p#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166485r#foaf:Person> .

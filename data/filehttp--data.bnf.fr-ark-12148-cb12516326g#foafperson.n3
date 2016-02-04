@@ -1,0 +1,60 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb41514354d#Expression>
+        bnfroles:r480        <http://data.bnf.fr/ark:/12148/cb12516326g#foaf:Person> ;
+        marcrel:ltg          <http://data.bnf.fr/ark:/12148/cb12516326g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12516326g#foaf:Person> .
+
+<http://data.bnf.fr/12516326/charlotte_bonaparte/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12516326g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40341503g#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12516326g#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12516326g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12516326g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12516326g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1802 ;
+        bnf-onto:lastYear              1839 ;
+        rdagroup2elements:biographicalInformation
+                "Fille de Joseph Bonaparte (aîné des frères de Napoléon). - Épouse en 1826 son cousin Napoléon-Louis Bonaparte (frère du futur Napoléon III), qui mourra en 1831" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1802/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1839/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1802-10-31" ;
+        bio:death                      "1839-03-03" ;
+        owl:sameAs                     <http://fr.dbpedia.org/resource/Charlotte_Bonaparte> , <http://dbpedia.org/resource/Charlotte_Bonaparte> , <http://data.bnf.fr/ark:/12148/cb12516326g#about> , <http://viaf.org/viaf/18033808> , <http://www.idref.fr/034404295> ;
+        foaf:birthday                  "10-31" ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Zenaide_and_Charlotte_Bonaparte_p1000603.jpg> , <http://gallica.bnf.fr/ark:/12148/btv1b6941044f.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Zenaide_and_Charlotte_Bonaparte_p1000603.jpg?width=300> ;
+        foaf:familyName                "Bonaparte" ;
+        foaf:givenName                 "Charlotte" ;
+        foaf:name                      "Charlotte Bonaparte" ;
+        foaf:page                      <http://data.bnf.fr/12516326/charlotte_bonaparte/> .
+
+<http://data.bnf.fr/ark:/12148/cb12516326g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Charlotte_Bonaparte> , <http://catalogue.bnf.fr/ark:/12148/cb12516326g> ;
+        bnf-onto:FRBNF        12516326 ;
+        isni:identifierValid  "0000000122770901" ;
+        dcterms:created       "1996-06-07" ;
+        dcterms:modified      "2013-07-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000122770901> ;
+        skos:exactMatch       <http://www.idref.fr/034404295> , <http://dbpedia.org/resource/Charlotte_Bonaparte> , <http://fr.wikipedia.org/wiki/Charlotte_Bonaparte> , <http://isni.org/isni/0000000122770901> , <http://fr.dbpedia.org/resource/Charlotte_Bonaparte> , <http://viaf.org/viaf/18033808> ;
+        skos:note             "Fille de Joseph Bonaparte (aîné des frères de Napoléon). - Épouse en 1826 son cousin Napoléon-Louis Bonaparte (frère du futur Napoléon III), qui mourra en 1831"@fr ;
+        skos:prefLabel        "Charlotte Bonaparte (1802-1839)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12516326g#foaf:Person> .

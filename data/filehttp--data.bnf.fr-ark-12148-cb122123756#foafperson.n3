@@ -1,0 +1,54 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb122123756>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb122123756> ;
+        bnf-onto:FRBNF        12212375 ;
+        isni:identifierValid  "0000000026173859" ;
+        dcterms:created       "1991-07-26" ;
+        dcterms:modified      "2013-07-26" ;
+        owl:sameAs            <http://isni.org/isni/0000000026173859> ;
+        skos:altLabel         "Emma Nea Rooke (1836-1885)"@fr ;
+        skos:editorialNote    "News from Molokai : letters between Peter Kaeo and Queen Emma, 1873-1876 / edited with introduction and notes by Alfons L. Korn, 1976. - . - LCNA (CD), 1996-03 : Emma, Queen, consort of Kamehameha IV, King of the Hawaiian Islands, 1836-1885. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000026173859> , <http://viaf.org/viaf/12357615> ;
+        skos:note             "Épouse du roi Kamehameha IV, reine d'Hawai de 1856 à sa mort. - Fille du chef Georges Naca et de Fanny Young, adoptée par le médecin anglias Thomas Charles Rooke"@fr ;
+        skos:prefLabel        "Emma (reine d'Hawai, 1836-1885)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122123756#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35363252b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb122123756#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122123756#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122123756#foaf:Person> .
+
+<http://data.bnf.fr/12212375/emma/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb122123756#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122123756#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1836 ;
+        bnf-onto:lastYear              1885 ;
+        rdagroup2elements:biographicalInformation
+                "Épouse du roi Kamehameha IV, reine d'Hawai de 1856 à sa mort. - Fille du chef Georges Naca et de Fanny Young, adoptée par le médecin anglias Thomas Charles Rooke" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1836/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1885/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1836-01-02" ;
+        bio:death                      "1885-04-25" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb122123756#about> , <http://viaf.org/viaf/12357615> ;
+        foaf:birthday                  "01-02" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b84583674.thumbnail> ;
+        foaf:familyName                "Emma" ;
+        foaf:gender                    "female" ;
+        foaf:page                      <http://data.bnf.fr/12212375/emma/> .

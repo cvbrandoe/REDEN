@@ -1,0 +1,66 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb36575183h#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12128248h#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12128248h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12128248h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12128248h#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1791 ;
+        bnf-onto:lastYear              1865 ;
+        rdagroup2elements:biographicalInformation
+                "Sous-commissaire de marine, administrateur à Pondichéry et Chandernagor" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1791/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1865/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1791-12-25" ;
+        bio:death                      "1865-01-04" ;
+        owl:sameAs                     <http://www.idref.fr/029718422> , <http://data.bnf.fr/ark:/12148/cb12128248h#about> , <http://viaf.org/viaf/59117505> ;
+        foaf:birthday                  "12-25" ;
+        foaf:familyName                "Bédier" ;
+        foaf:givenName                 "Achille" ;
+        foaf:name                      "Achille Bédier" ;
+        foaf:page                      <http://data.bnf.fr/12128248/achille_bedier/> .
+
+<http://data.bnf.fr/ark:/12148/cb366364232#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12128248h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12128248h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12128248h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12128248h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12128248h> ;
+        bnf-onto:FRBNF        12128248 ;
+        isni:identifierValid  "0000000081378339" ;
+        dcterms:created       "1989-10-23" ;
+        dcterms:modified      "2015-05-07" ;
+        owl:sameAs            <http://isni.org/isni/0000000081378339> ;
+        skos:altLabel         "Philippe-Achille Bédier (1791-1865)"@fr ;
+        skos:editorialNote    "Statistiques de Pondichéry : 1822-1824 / par A. Bédier et J. Cordier, 1988. - . - De la Réunion à l'Inde française : Philippe-Achille Bédier (1791-1865), une carrière coloniale / par Mireille Lobligeois, 1993. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/59117505> , <http://isni.org/isni/0000000081378339> , <http://www.idref.fr/029718422> ;
+        skos:note             "Sous-commissaire de marine, administrateur à Pondichéry et Chandernagor"@fr ;
+        skos:prefLabel        "Achille Bédier (1791-1865)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12128248h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36649927r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12128248h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12128248h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12128248h#foaf:Person> .
+
+<http://data.bnf.fr/12128248/achille_bedier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12128248h#foaf:Person> .

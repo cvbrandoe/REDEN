@@ -1,0 +1,62 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb165115627>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb165115627> ;
+        bnf-onto:FRBNF    16511562 ;
+        dcterms:created   "2011-05-23" ;
+        dcterms:modified  "2011-06-04" ;
+        skos:altLabel     "Alexandre-Grégoire Alexandre (1851-1918)"@fr , "M. l'abbé Alexandre (1851-1918)"@fr ;
+        skos:exactMatch   <http://viaf.org/viaf/171002772> ;
+        skos:note         "Prêtre catholique du diocèse de Reims ordonné en 1875. - Curé de Falaise, Ardennes (à partir de 1907)"@fr ;
+        skos:prefLabel    "Alexandre Alexandre (1851-1918)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb165115627#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42434898s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb165115627#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb165115627#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165115627#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30781055r#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb165115627#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb165115627#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165115627#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb300095258#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb165115627#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb165115627#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165115627#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb165115627#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1851 ;
+        bnf-onto:lastYear               1918 ;
+        rdagroup2elements:biographicalInformation
+                "Prêtre catholique du diocèse de Reims ordonné en 1875. - Curé de Falaise, Ardennes (à partir de 1907)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1851/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1918/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Gespunsart, Ardennes" ;
+        rdagroup2elements:placeOfDeath  "Châlons-en-Champagne" ;
+        bio:birth                       "1851" ;
+        bio:death                       "1918-10-23" ;
+        owl:sameAs                      <http://viaf.org/viaf/171002772> , <http://data.bnf.fr/ark:/12148/cb165115627#about> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k164289h.thumbnail> ;
+        foaf:familyName                 "Alexandre" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Alexandre" ;
+        foaf:name                       "Alexandre Alexandre" ;
+        foaf:page                       <http://data.bnf.fr/16511562/alexandre_alexandre/> .

@@ -1,0 +1,68 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31908484z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10888948m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10888948m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10888948m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10888948m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10888948m> ;
+        bnf-onto:FRBNF        10888948 ;
+        isni:identifierValid  "0000000108557821" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-07-16" ;
+        owl:sameAs            <http://isni.org/isni/0000000108557821> ;
+        skos:editorialNote    "BL Integrated catalogue : Carlyle, A. J. (Alexander James), 1861-1943. - http://catalogue.bl.uk. - 2009-09-11 BN Cat. gén. suppl.. - . -"@fr , "A history of mediaeval political theory in the West / by R. W. Carlyle and A. J. Carlyle, 1922. - . - DNB. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/077779835> , <http://viaf.org/viaf/20432382> , <http://isni.org/isni/0000000108557821> ;
+        skos:note             "Historien, réformateur social"@fr ;
+        skos:prefLabel        "Alexander  James Carlyle (1861-1943)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10888948m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31908477p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10888948m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10888948m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10888948m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31908476b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10888948m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10888948m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10888948m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319084750#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10888948m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10888948m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10888948m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10888948m#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1861 ;
+        bnf-onto:lastYear              1943 ;
+        rdagroup2elements:biographicalInformation
+                "Historien, réformateur social" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1861/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1943/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1861-07-24" ;
+        bio:death                      "1943-05-27" ;
+        owl:sameAs                     <http://viaf.org/viaf/20432382> , <http://data.bnf.fr/ark:/12148/cb10888948m#about> , <http://www.idref.fr/077779835> ;
+        foaf:birthday                  "07-24" ;
+        foaf:familyName                "Carlyle" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Alexander  James" ;
+        foaf:name                      "Alexander  James Carlyle" ;
+        foaf:page                      <http://data.bnf.fr/10888948/alexander__james_carlyle/> .

@@ -1,0 +1,44 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/12495290/jean-baptiste_corneille/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12495290j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12495290j>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12495290j> ;
+        bnf-onto:FRBNF      12495290 ;
+        dcterms:created     "1996-01-04" ;
+        dcterms:modified    "1996-01-16" ;
+        skos:editorialNote  "Bénézit, 1976. - . - La vie et l'oeuvre de Jean-Baptiste Corneille (1649-1695) / Yves Picart, 1987. - . -"@fr ;
+        skos:note           "Peintre et graveur. - Prix de Rome en 1663"@fr ;
+        skos:prefLabel      "Jean-Baptiste Corneille (1649-1695)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12495290j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12495290j#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1649 ;
+        bnf-onto:lastYear              1695 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre et graveur. - Prix de Rome en 1663" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1649/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1695/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1649-12-02" ;
+        bio:death                      "1695-04-12" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb12495290j#about> ;
+        foaf:birthday                  "12-02" ;
+        foaf:familyName                "Corneille" ;
+        foaf:givenName                 "Jean-Baptiste" ;
+        foaf:name                      "Jean-Baptiste Corneille" ;
+        foaf:page                      <http://data.bnf.fr/12495290/jean-baptiste_corneille/> .

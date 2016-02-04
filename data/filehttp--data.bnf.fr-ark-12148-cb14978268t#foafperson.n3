@@ -1,0 +1,79 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14978268t#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1865 ;
+        bnf-onto:lastYear               1948 ;
+        rdagroup2elements:biographicalInformation
+                "Homme politique, élu député de West Houghton, Lancashire (1892-). - Ministre de la guerre (1916-1918, 1922-1924). - A été aide de camp du Gouverneur général du Canada (1889-1891). - 17e comte de Derby. - Epouse en 1889 Lady Alice Montagu, fille du 7ème duc de Manchester" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1865/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1948/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Science politique" , "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/320/> , <http://dewey.info/class/940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Londres" ;
+        rdagroup2elements:placeOfDeath  "Knowley, Lancashire (GB)" ;
+        bio:birth                       "1865-04-04" ;
+        bio:death                       "1948-02-04" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb14978268t#about> , <http://www.idref.fr/073319236> , <http://viaf.org/viaf/24831959> ;
+        foaf:birthday                   "04-04" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b9033818h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9033511k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53051889g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b90377867.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6931202h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530628197.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9033710v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9037794s.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53037117g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9037836p.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530524128.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530162580.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9037787n.thumbnail> ;
+        foaf:familyName                 "Derby" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Edward George Villiers Stanley" ;
+        foaf:name                       "Edward George Villiers Stanley Derby" ;
+        foaf:page                       <http://data.bnf.fr/14978268/edward_george_villiers_stanley_derby/> .
+
+<http://data.bnf.fr/ark:/12148/cb388838202#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14978268t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14978268t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14978268t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc42240/ca59867971812402#Expression>
+        bnfroles:r320        <http://data.bnf.fr/ark:/12148/cb14978268t#foaf:Person> ;
+        marcrel:rcp          <http://data.bnf.fr/ark:/12148/cb14978268t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14978268t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14978268t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14978268t> ;
+        bnf-onto:FRBNF        14978268 ;
+        isni:identifierValid  "0000000081038772" ;
+        dcterms:created       "2005-01-14" ;
+        dcterms:modified      "2013-08-03" ;
+        owl:sameAs            <http://isni.org/isni/0000000081038772> ;
+        skos:altLabel         "Edward George Villiers Stanley of Bickerstaffe (baron, 1865-1948)"@fr , "Edward George Villiers Stanley of Preston (baron, 1865-1948)"@fr , "Edward George Villiers Stanley (1865-1948)"@fr , "Earl of Derby (1865-1948)"@fr , "Lord Stanley (1865-1948)"@fr , "Lord Derby (1865-1948)"@fr ;
+        skos:editorialNote    "Paris 1918 : the war diary of the British ambassador, the 17th Earl of Derby / ed. by David Dutton, 2001. - . - BnF - Département de la recherche bibliographique [Recueil. Dossiers biographiques Boutillier du Retail. Documentation sur Edward George Villiers Stanley, comte de Derby], 1916-1921. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/24831959> , <http://www.idref.fr/073319236> , <http://isni.org/isni/0000000081038772> ;
+        skos:note             "Homme politique, élu député de West Houghton, Lancashire (1892-). - Ministre de la guerre (1916-1918, 1922-1924). - A été aide de camp du Gouverneur général du Canada (1889-1891). - 17e comte de Derby. - Epouse en 1889 Lady Alice Montagu, fille du 7ème duc de Manchester"@fr ;
+        skos:prefLabel        "Edward George Villiers Stanley Derby (comte de, 1865-1948)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14978268t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc42240/ca59867993299289#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb14978268t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14978268t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14978268t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32017826f#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb14978268t#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb14978268t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14978268t#foaf:Person> .
+
+<http://data.bnf.fr/14978268/edward_george_villiers_stanley_derby/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14978268t#foaf:Person> .

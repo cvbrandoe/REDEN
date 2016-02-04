@@ -1,0 +1,69 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb10594327q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10594327q> ;
+        bnf-onto:FRBNF        10594327 ;
+        isni:identifierValid  "0000000079773276" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-07-16" ;
+        owl:sameAs            <http://isni.org/isni/0000000079773276> ;
+        skos:editorialNote    "Leonora / translated from the German of Gottfried Augustus Bürgher by W. R. Spencer,... ; with designs by... lady Diana Beauclerc, 1796. - . - Oxford DNB. - http://www.oxforddnb.com. - 2010-06-04"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000079773276> , <http://viaf.org/viaf/69284847> ;
+        skos:note             "Poète et humoriste"@fr ;
+        skos:prefLabel        "William Robert Spencer (1770-1834)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10594327q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb386974512#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10594327q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10594327q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10594327q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb313928984#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb10594327q#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb10594327q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10594327q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36031754x#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb10594327q#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb10594327q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10594327q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30177692t#Expression>
+        bnfroles:r71         <http://data.bnf.fr/ark:/12148/cb10594327q#foaf:Person> ;
+        marcrel:att          <http://data.bnf.fr/ark:/12148/cb10594327q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10594327q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10594327q#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1770 ;
+        bnf-onto:lastYear              1834 ;
+        rdagroup2elements:biographicalInformation
+                "Poète et humoriste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1770/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1834/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1770-01-09" ;
+        bio:death                      "1834-10-22" ;
+        owl:sameAs                     <http://viaf.org/viaf/69284847> , <http://data.bnf.fr/ark:/12148/cb10594327q#about> ;
+        foaf:birthday                  "01-09" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b550025796/f3.item.thumbnail> ;
+        foaf:familyName                "Spencer" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "William Robert" ;
+        foaf:name                      "William Robert Spencer" ;
+        foaf:page                      <http://data.bnf.fr/10594327/william_robert_spencer/> .

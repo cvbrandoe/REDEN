@@ -1,0 +1,103 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31072557s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb353340036#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> .
+
+<http://data.bnf.fr/12186345/pierre_5/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31139027h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33141390n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1837 ;
+        bnf-onto:lastYear               1861 ;
+        rdagroup2elements:biographicalInformation
+                "Roi de Portugal (1853-1861)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/po> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1837/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1861/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/por> ;
+        rdagroup2elements:placeOfBirth  "Lisbonne" ;
+        rdagroup2elements:placeOfDeath  "Lisbonne" ;
+        bio:birth                       "1837-09-16" ;
+        bio:death                       "1861-12-11" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb12186345h#about> , <http://www.idref.fr/070283516> , <http://viaf.org/viaf/36962016> ;
+        foaf:birthday                   "09-16" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b10525708m.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k6207541h.thumbnail> ;
+        foaf:familyName                 "Pierre" ;
+        foaf:gender                     "male" ;
+        foaf:page                       <http://data.bnf.fr/12186345/pierre_5/> .
+
+<http://data.bnf.fr/ark:/12148/cb31108529q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16208302s>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb366808859#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11969052h>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12186345h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12186345h> ;
+        bnf-onto:FRBNF        12186345 ;
+        isni:identifierValid  "0000000121281604" ;
+        dcterms:created       "1991-02-15" ;
+        dcterms:modified      "2013-07-26" ;
+        owl:sameAs            <http://isni.org/isni/0000000121281604> ;
+        skos:altLabel         "Pedro V (roi de Portugal, 1837-1861)"@pt ;
+        skos:editorialNote    "Instrucçoes que... Pedro V... compoz, escreveu e deu ao general Fortunato José Barreiros, 1899. - . - D. Pedro V e os negócios militares : [cartas] / [de D. Pedro V] ; [publicadas por] Francisco Fortunato Queirós, 1973. - . -"@fr , "GDEL. - . - Encycl. Portugal-Brésil. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/36962016> , <http://www.idref.fr/070283516> , <http://isni.org/isni/0000000121281604> ;
+        skos:note             "Roi de Portugal (1853-1861)"@fr ;
+        skos:prefLabel        "Pierre V (roi de Portugal, 1837-1861)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35260009r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32514135m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12186345h#foaf:Person> .

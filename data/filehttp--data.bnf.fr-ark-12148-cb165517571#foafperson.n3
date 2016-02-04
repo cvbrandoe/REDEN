@@ -1,0 +1,74 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42560899z#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1674 ;
+        bnf-onto:lastYear              1754 ;
+        rdagroup2elements:biographicalInformation
+                "Nom patronymique : Élisabeth Guilleminot (ou : Guillemot). - Imprimeur-libraire. - Épouse l'imprimeur-libraire de Troyes Pierre I Garnier en avril 1687. Lui succède après son décès en déc. 1738. Un arrêt du Conseil du 13 juin 1740 la confirme en sa place. En nov. 1748, se démet formellement en faveur de son fils Jean II Garnier, mais continue à exercer jusqu'à sa mort en avril 1754" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1674/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1754/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1739-1754" ;
+        bio:birth                      "1674" ;
+        bio:death                      "1754-04-11" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb165517571#about> , <http://www.idref.fr/176378480> , <http://viaf.org/viaf/215958391> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k5515989w.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k1025175b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k64476772.thumbnail> ;
+        foaf:familyName                "Garnier" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Veuve de Pierre" ;
+        foaf:name                      "Veuve de Pierre Garnier" ;
+        foaf:page                      <http://data.bnf.fr/16551757/veuve_de_pierre_garnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb334885980#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb165517571>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb165517571> ;
+        bnf-onto:FRBNF        16551757 ;
+        isni:identifierValid  "0000000359091990" ;
+        dcterms:created       "2011-11-21" ;
+        dcterms:modified      "2015-03-14" ;
+        owl:sameAs            <http://isni.org/isni/0000000359091990> ;
+        skos:altLabel         "Veuve de Pierre I Garnier (1674-1754)"@fr , "Veuve de Pierre Garnier I (1674-1754)"@fr ;
+        skos:editorialNote    "Corrard de Breban : la nomme \"Élisabeth-Guillaume\". - . - Morin, Garnier. - . - Lepreux, Champagne-Barrois. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000359091990> , <http://viaf.org/viaf/215958391> , <http://www.idref.fr/176378480> ;
+        skos:note             "Nom patronymique : Élisabeth Guilleminot (ou : Guillemot). - Imprimeur-libraire. - Épouse l'imprimeur-libraire de Troyes Pierre I Garnier en avril 1687. Lui succède après son décès en déc. 1738. Un arrêt du Conseil du 13 juin 1740 la confirme en sa place. En nov. 1748, se démet formellement en faveur de son fils Jean II Garnier, mais continue à exercer jusqu'à sa mort en avril 1754"@fr ;
+        skos:prefLabel        "Veuve de Pierre Garnier (1674-1754)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb334888786#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32688283b#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33555958p#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165517571#foaf:Person> .

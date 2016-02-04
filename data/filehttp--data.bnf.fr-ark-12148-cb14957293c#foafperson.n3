@@ -1,0 +1,52 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb403894258#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb14957293c#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb14957293c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14957293c#foaf:Person> .
+
+<http://data.bnf.fr/14957293/jean_mathieu/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14957293c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14957293c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14957293c> ;
+        bnf-onto:FRBNF        14957293 ;
+        isni:identifierValid  "0000000066636125" ;
+        dcterms:created       "1990-07-12" ;
+        dcterms:modified      "2013-08-03" ;
+        owl:sameAs            <http://isni.org/isni/0000000066636125> ;
+        skos:editorialNote    "ThB. - . - Port. et Bér.. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000066636125> , <http://www.idref.fr/138502099> , <http://viaf.org/viaf/66735390> ;
+        skos:prefLabel        "Jean Mathieu (1749-1815)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14957293c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14957293c#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1749 ;
+        bnf-onto:lastYear               1815 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1749/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1815/> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Fontainebleau" ;
+        bio:birth                       "1749" ;
+        bio:death                       "1815" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb14957293c#about> , <http://www.idref.fr/138502099> , <http://viaf.org/viaf/66735390> ;
+        foaf:familyName                 "Mathieu" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jean" ;
+        foaf:name                       "Jean Mathieu" ;
+        foaf:page                       <http://data.bnf.fr/14957293/jean_mathieu/> .

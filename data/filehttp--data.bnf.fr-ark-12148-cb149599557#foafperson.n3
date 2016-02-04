@@ -1,0 +1,118 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40282733v#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402828067#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402852425#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40285241t#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149599557>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb149599557> ;
+        bnf-onto:FRBNF        14959955 ;
+        isni:identifierValid  "0000000066598579" ;
+        dcterms:created       "1994-05-25" ;
+        dcterms:modified      "2013-08-03" ;
+        owl:sameAs            <http://isni.org/isni/0000000066598579> ;
+        skos:exactMatch       <http://viaf.org/viaf/2740525> , <http://isni.org/isni/0000000066598579> ;
+        skos:prefLabel        "Johann Georg Wagner (1744-1767)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40282703x#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1744 ;
+        bnf-onto:lastYear               1767 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1744/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1767/> ;
+        rdagroup2elements:placeOfBirth  "Mayence" ;
+        rdagroup2elements:placeOfDeath  "Mayence" ;
+        bio:birth                       "1744" ;
+        bio:death                       "1767" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb149599557#about> , <http://viaf.org/viaf/2740525> ;
+        foaf:familyName                 "Wagner" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Johann Georg" ;
+        foaf:name                       "Johann Georg Wagner" ;
+        foaf:page                       <http://data.bnf.fr/14959955/johann_georg_wagner/> .
+
+<http://data.bnf.fr/ark:/12148/cb402827346#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402879192#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40282799s#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40285240g#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402828187#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402828098#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40282798f#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40437268n#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40285214x#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40282819k#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599557#foaf:Person> .

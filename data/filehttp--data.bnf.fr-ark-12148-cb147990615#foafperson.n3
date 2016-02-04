@@ -1,0 +1,48 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb147990615>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb147990615> , <http://fr.wikipedia.org/wiki/Giovanni_David_(ténor)> ;
+        bnf-onto:FRBNF        14799061 ;
+        isni:identifierValid  "000000006473942X" ;
+        dcterms:created       "1997-10-13" ;
+        dcterms:modified      "2013-12-18" ;
+        skos:altLabel         "Giovanni Davide (1790-1864)"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Giovanni_David_(ténor)> , <http://viaf.org/viaf/90736960> , <http://fr.dbpedia.org/resource/Giovanni_David_(ténor)> ;
+        skos:note             "Chanteur (ténor). - Fils du ténor Giacomo David. - Actif en Italie, participe à de nombreuses créations d'opéras rossiniens. - Chante au Théâtre-Italien de Paris en 1830-1831. - Dirige le Théâtre-Italien de St-Pétersbourg"@fr ;
+        skos:prefLabel        "Giovanni David (1790-1864)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb147990615#foaf:Person> .
+
+<http://data.bnf.fr/14799061/giovanni_david/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb147990615#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb147990615#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1790 ;
+        bnf-onto:lastYear              1864 ;
+        rdagroup2elements:biographicalInformation
+                "Chanteur (ténor). - Fils du ténor Giacomo David. - Actif en Italie, participe à de nombreuses créations d'opéras rossiniens. - Chante au Théâtre-Italien de Paris en 1830-1831. - Dirige le Théâtre-Italien de St-Pétersbourg" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1790/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1864/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        bio:birth                      "1790" ;
+        bio:death                      "1864" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb147990615#about> , <http://viaf.org/viaf/90736960> , <http://fr.dbpedia.org/resource/Giovanni_David_(ténor)> ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni_David_Portrait_by_Francesco_Hayez.jpg> , <http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni_David_Portrait_by_Francesco_Hayez.jpg?width=300> , <http://gallica.bnf.fr/ark:/12148/btv1b8417024x.thumbnail> ;
+        foaf:familyName                "David" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Giovanni" ;
+        foaf:name                      "Giovanni David" ;
+        foaf:page                      <http://data.bnf.fr/14799061/giovanni_david/> .

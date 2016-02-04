@@ -1,0 +1,134 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31998666f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31998664r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319986653#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31998669g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31998667s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1860 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en droit (Paris, 1895). - Magistrat à Gex, Ain. - Fondateur de: Fédération universelle des étudiants" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1860/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Droit" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/340/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Nantua (Ain)" ;
+        bio:birth                       "1860-01-08" ;
+        bio:death                       "19.." ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb110012185#about> , <http://www.idref.fr/162400241> , <http://viaf.org/viaf/122061777> ;
+        foaf:birthday                   "01-08" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k5545718z.thumbnail> ;
+        foaf:familyName                 "David" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "François" ;
+        foaf:name                       "François David" ;
+        foaf:page                       <http://data.bnf.fr/11001218/francois_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb110012185>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb110012185> ;
+        bnf-onto:FRBNF        11001218 ;
+        isni:identifierValid  "0000000080551523" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2015-03-13" ;
+        skos:editorialNote    "Lorenz. - . - ABF. - . -"@fr , "Le droit augural et la divination officielle des Romains / thèse pour le doctorat... par François David, 1895. - . - L'enfantement d'un nouveau monde: David à Goliath / François David, 1920. - . - Avant-Projet de Convention internationale de la propriété inventive / par François David, 1932. - . -"@fr , "Annu. de la magistrature, 1898. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/122061777> , <http://www.idref.fr/162400241> ;
+        skos:note             "Docteur en droit (Paris, 1895). - Magistrat à Gex, Ain. - Fondateur de: Fédération universelle des étudiants"@fr ;
+        skos:prefLabel        "François David (1860-19..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31946849w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303046622#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30304658t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319986773#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303046595#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb320003087#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31810614f#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/11001218/francois_david/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31998670p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31998672c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31998675d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30304661q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb110012185#foaf:Person> .

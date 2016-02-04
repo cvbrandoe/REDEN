@@ -1,0 +1,59 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb311920946#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10630625t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10630625t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10630625t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39139797q#Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb10630625t#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb10630625t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10630625t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10630625t#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1520 ;
+        bnf-onto:lastYear               1596 ;
+        rdagroup2elements:biographicalInformation
+                "Sculpteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1520/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1596/> ;
+        rdagroup2elements:placeOfBirth  "Reims" ;
+        rdagroup2elements:placeOfDeath  "Reims" ;
+        bio:birth                       "1520" ;
+        bio:death                       "1596" ;
+        owl:sameAs                      <http://viaf.org/viaf/7381331> , <http://www.idref.fr/165443111> , <http://data.bnf.fr/ark:/12148/cb10630625t#about> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b6500265x.thumbnail> ;
+        foaf:familyName                 "Jacques" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Pierre" ;
+        foaf:name                       "Pierre Jacques" ;
+        foaf:page                       <http://data.bnf.fr/10630625/pierre_jacques/> .
+
+<http://data.bnf.fr/ark:/12148/cb10630625t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10630625t> ;
+        bnf-onto:FRBNF        10630625 ;
+        isni:identifierValid  "0000000083538869" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2015-03-13" ;
+        owl:sameAs            <http://isni.org/isni/0000000083538869> ;
+        skos:altLabel         "Jacques d'Angoulême (1520?-1596)"@fr ;
+        skos:editorialNote    "L'album de Pierre Jacques, sculpteur de Reims, dessiné à Rome de 1572 à 1577, reproduit intégralement et commenté / Salomon Reinach ; avec une introduction et une traduction des ″Statue″ d'Aldroandi, 1902. - . - Bénézit, 1976. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/7381331> , <http://isni.org/isni/0000000083538869> , <http://www.idref.fr/165443111> ;
+        skos:note             "Sculpteur"@fr ;
+        skos:prefLabel        "Pierre Jacques (1520?-1596)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10630625t#foaf:Person> .

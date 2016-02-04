@@ -1,0 +1,114 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31015449c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb443010730#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb310154481#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> .
+
+<http://data.bnf.fr/12963697/nicolas_1/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11950396k#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30253560q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31187468r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              800 ;
+        bnf-onto:lastYear               867 ;
+        rdagroup2elements:biographicalInformation
+                "Pape, élu à Rome en avril 858" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/0800/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/0867/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Religion" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/200/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        rdagroup2elements:placeOfBirth  "Rome" ;
+        rdagroup2elements:placeOfDeath  "Rome" ;
+        bio:birth                       "800" ;
+        bio:death                       "0867-11-13" ;
+        owl:sameAs                      <http://viaf.org/viaf/142608> , <http://data.bnf.fr/ark:/12148/cb12963697t#about> , <http://www.idref.fr/079959695> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k29455x.thumbnail> ;
+        foaf:familyName                 "Nicolas" ;
+        foaf:gender                     "male" ;
+        foaf:page                       <http://data.bnf.fr/12963697/nicolas_1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31015451x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34021304s#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12963697t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12963697t> ;
+        bnf-onto:FRBNF        12963697 ;
+        isni:identifierValid  "0000000079693268" ;
+        dcterms:created       "1994-01-24" ;
+        dcterms:modified      "2013-10-24" ;
+        owl:sameAs            <http://isni.org/isni/0000000079693268> ;
+        skos:altLabel         "Nicholaus I (pape, 0800?-0867)"@la , "Nikolaus I (pape, 0800?-0867)"@de , "Nicolas (saint, 0800?-0867)"@fr , "Nicolaus I (pape, 0800?-0867)"@la , "Niccolò I (pape, 0800?-0867)"@it ;
+        skos:editorialNote    "Lettre de Nicolas I [à Charles le Chauve] pour le Concile de Soissons / par dom Quentin, 1904. - . - Nicolai primi pont. maximi Epistolae, 1542. - . - Die Responsa ad consulta Bulgarorum des Papstes Nikolaus I, 858-867 : ein Zeugnis päpstlicher Hirtensorge und ein Dokument unterschiedlicher Entwicklungen in den Kirchen von Rom und Konstantinopel / Lothar Heiser, 1979. - . -"@fr , "PMA : Nicolaus (Papa, I). - . - BN Cat. gén. : Nicolas Ier, Saint (pape). - . -"@fr , "GDEL. - . - Chevalier. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000079693268> , <http://viaf.org/viaf/142608> , <http://www.idref.fr/079959695> ;
+        skos:note             "Pape, élu à Rome en avril 858"@fr ;
+        skos:prefLabel        "Nicolas Ier (pape, 0800?-0867)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30976101f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb356408829#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31015447p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb375409324#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12963697t#foaf:Person> .

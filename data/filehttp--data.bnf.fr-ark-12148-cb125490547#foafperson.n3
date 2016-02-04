@@ -1,0 +1,173 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb310348903#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb320275364#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31034889w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb339998864#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31034897h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32848968w#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301744095#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1756 ;
+        bnf-onto:lastYear               1814 ;
+        rdagroup2elements:biographicalInformation
+                "Naturaliste. - Voyageur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1756/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1814/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Les Arcs (Var)" ;
+        rdagroup2elements:placeOfDeath  "Lyon (Rhône)" ;
+        bio:birth                       "1756-01-19" ;
+        bio:death                       "1814" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb125490547#about> , <http://viaf.org/viaf/69044142> , <http://fr.dbpedia.org/resource/Guillaume-Antoine_Olivier> , <http://www.idref.fr/034771190> ;
+        foaf:birthday                   "01-19" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Olivier_Guillaume_Antoine_1756-1814.png?width=300> , <http://gallica.bnf.fr/ark:/12148/btv1b84539400.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Olivier_Guillaume_Antoine_1756-1814.png> ;
+        foaf:familyName                 "Olivier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Guillaume-Antoine" ;
+        foaf:name                       "Guillaume-Antoine Olivier" ;
+        foaf:page                       <http://data.bnf.fr/12549054/guillaume-antoine_olivier/> .
+
+<http://data.bnf.fr/ark:/12148/cb125490547>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb125490547> , <http://fr.wikipedia.org/wiki/Guillaume-Antoine_Olivier> ;
+        bnf-onto:FRBNF        12549054 ;
+        isni:identifierValid  "0000000081487666" ;
+        dcterms:created       "1997-01-21" ;
+        dcterms:modified      "2013-07-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000081487666> ;
+        skos:editorialNote    "Entomologie, ou Histoire naturelle des insectes, avec leurs caractères génériques et spécifiques, leur description, leur synonymie, et leur figure enluminée / par M. Olivier, 1995 [document électronique : reprod. de l'éd. de 1794-1808]. - . - ABF. - . -"@fr ;
+        skos:exactMatch       <http://fr.dbpedia.org/resource/Guillaume-Antoine_Olivier> , <http://isni.org/isni/0000000081487666> , <http://viaf.org/viaf/69044142> , <http://fr.wikipedia.org/wiki/Guillaume-Antoine_Olivier> , <http://www.idref.fr/034771190> ;
+        skos:note             "Naturaliste. - Voyageur"@fr ;
+        skos:prefLabel        "Guillaume-Antoine Olivier (1756-1814)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33518901m#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30174411q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32797012d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31034891f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36582615w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb422301558#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30174410c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/12549054/guillaume-antoine_olivier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31034892s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb301744122#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31034901x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37275158x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb424759117#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39009381f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36582614j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31034898v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31034900k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32027537g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125490547#foaf:Person> .

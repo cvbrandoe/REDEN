@@ -1,0 +1,92 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38337176t#Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38454014v#Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39269917k#Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39247094n#Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb423762043#Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb140403591>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb140403591> , <http://fr.wikipedia.org/wiki/Rowland_V._Lee> ;
+        bnf-onto:FRBNF        14040359 ;
+        isni:identifierValid  "0000000121283853" ;
+        dcterms:created       "2001-05-11" ;
+        dcterms:modified      "2013-08-02" ;
+        owl:sameAs            <http://isni.org/isni/0000000121283853> ;
+        skos:altLabel         "Rowland V. Lee (1891-1975)"@fr , "Roland Lee (1891-1975)"@fr , "Rowland Lee (1891-1975)"@fr ;
+        skos:editorialNote    "Captain kidd [Images animées] / Rowland V. Lee, réal. Welcome, 1995. - . - LCNA (CD), 1996-06. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/084616423> , <http://viaf.org/viaf/37117228> , <http://dbpedia.org/resource/Rowland_V._Lee> , <http://isni.org/isni/0000000121283853> , <http://fr.wikipedia.org/wiki/Rowland_V._Lee> , <http://fr.dbpedia.org/resource/Rowland_V._Lee> ;
+        skos:note             "Réalisateur, scénariste, producteur et acteur"@fr ;
+        skos:prefLabel        "Rowland Vance Lee (1891-1975)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40033808s#Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1891 ;
+        bnf-onto:lastYear               1975 ;
+        rdagroup2elements:biographicalInformation
+                "Réalisateur, scénariste, producteur et acteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1891/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1975/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Findlay (Ohio)" ;
+        rdagroup2elements:placeOfDeath  "Palm Desert (Calif.)" ;
+        bio:birth                       "1891-09-06" ;
+        bio:death                       "1975-12-21" ;
+        owl:sameAs                      <http://fr.dbpedia.org/resource/Rowland_V._Lee> , <http://dbpedia.org/resource/Rowland_V._Lee> , <http://data.bnf.fr/ark:/12148/cb140403591#about> , <http://viaf.org/viaf/37117228> , <http://www.idref.fr/084616423> ;
+        foaf:birthday                   "09-06" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/The_First_Kiss_(1928)_1.jpg> , <http://commons.wikimedia.org/wiki/Special:FilePath/The_First_Kiss_(1928)_1.jpg?width=300> ;
+        foaf:familyName                 "Lee" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Rowland Vance" ;
+        foaf:name                       "Rowland Vance Lee" ;
+        foaf:page                       <http://data.bnf.fr/14040359/rowland_vance_lee/> .
+
+<http://data.bnf.fr/ark:/12148/cb382694935#Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42662024h#Expression>
+        bnfroles:r610        <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> ;
+        marcrel:rsg          <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb140403591#foaf:Person> .

@@ -1,0 +1,102 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30594200m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30860822h#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10356086q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10356086q> ;
+        bnf-onto:FRBNF        10356086 ;
+        isni:identifierValid  "0000000417165266" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2015-03-14" ;
+        owl:sameAs            <http://isni.org/isni/0000000417165266> ;
+        skos:editorialNote    "Questions d'Autriche-Hongrie et question d'Orient / René Henry ; avec préface de M. Anatole Leroy-Beaulieu,... , 1903. - . - Catalogue général de la librairie française / sous la dir. de Henri Stein, t. 32, 1934. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/264385877> , <http://www.idref.fr/098971786> , <http://isni.org/isni/0000000417165266> ;
+        skos:note             "Docteur en droit. - Professeur à l'École libre des sciences politiques"@fr ;
+        skos:prefLabel        "René Henry (politologue, 1871-19..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1871 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en droit. - Professeur à l'École libre des sciences politiques" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1871/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Limoges" ;
+        bio:birth                       "1871" ;
+        bio:death                       "19.." ;
+        owl:sameAs                      <http://www.idref.fr/098971786> , <http://viaf.org/viaf/264385877> , <http://data.bnf.fr/ark:/12148/cb10356086q#about> ;
+        foaf:familyName                 "Henry" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "René" ;
+        foaf:name                       "René Henry" ;
+        foaf:page                       <http://data.bnf.fr/10356086/rene_henry/> .
+
+<http://data.bnf.fr/ark:/12148/cb43375570m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30594205b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30594206p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30594201z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305240149#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30594203n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305942029#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305942040#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb340995726#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10356086q#foaf:Person> .

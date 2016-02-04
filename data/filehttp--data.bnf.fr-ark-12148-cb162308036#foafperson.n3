@@ -1,0 +1,44 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb162308098#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb162308036#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb162308036#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1680 ;
+        bnf-onto:lastYear              1760 ;
+        rdagroup2elements:biographicalInformation
+                "Compositeur français, auteur de musique profane et religieuse" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1680/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1760/> ;
+        bio:birth                      "1680" ;
+        bio:death                      "1760" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb162308036#about> , <http://viaf.org/viaf/143644140> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b530193859/f9.item.thumbnail> ;
+        foaf:familyName                "David" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jacques" ;
+        foaf:name                      "Jacques David" ;
+        foaf:page                      <http://data.bnf.fr/16230803/jacques_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb162308036>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb162308036> ;
+        bnf-onto:FRBNF      16230803 ;
+        dcterms:created     "2010-09-21" ;
+        dcterms:modified    "2010-09-21" ;
+        skos:editorialNote  "Benoit, Dict.. - . - Messes en plain-chant musical avec extrait du propre de la messe et de l'office divin [Musique manuscrite], 1725-1740 [BnF-Musique, Vm1 395]. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/143644140> ;
+        skos:note           "Compositeur français, auteur de musique profane et religieuse"@fr ;
+        skos:prefLabel      "Jacques David (1680?-1760?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb162308036#foaf:Person> .

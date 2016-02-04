@@ -1,0 +1,123 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb41147535b#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42326670z#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43857150t#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1673 ;
+        rdagroup2elements:biographicalInformation
+                "Graveur de l'Académie des sciences, puis de l'Académie du Portugal. - Marchand et éditeur d'estampes. - S'installe au Portugal en 1728" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1673/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Lisbonne" ;
+        bio:birth                       "1673" ;
+        bio:death                       "17.." ;
+        owl:sameAs                      <http://viaf.org/viaf/10118567> , <http://data.bnf.fr/ark:/12148/cb149599030#about> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b530433749.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8407935j.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8442515z.thumbnail> ;
+        foaf:familyName                 "Rochefort" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Pierre de" ;
+        foaf:name                       "Pierre de Rochefort" ;
+        foaf:page                       <http://data.bnf.fr/14959903/pierre_de_rochefort/> .
+
+<http://data.bnf.fr/ark:/12148/cb149599030>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb149599030> ;
+        bnf-onto:FRBNF        14959903 ;
+        isni:identifierValid  "0000000122086990" ;
+        dcterms:created       "1994-03-09" ;
+        dcterms:modified      "2013-12-18" ;
+        owl:sameAs            <http://isni.org/isni/0000000122086990> ;
+        skos:altLabel         "Pedro de Rochefort (1673?-17..)"@fr ;
+        skos:editorialNote    "Plan de l'abbaye de la Trappe, levé par l'ordre du roi, De Rochefort del. et sculp. en janvier 1708 [Document cartographique]. - . - Dictionnaire des éditeurs d'estampes à Paris sous l'Ancien Régime / Maxime Préaud [et al.], 1987. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000122086990> , <http://viaf.org/viaf/10118567> ;
+        skos:note             "Graveur de l'Académie des sciences, puis de l'Académie du Portugal. - Marchand et éditeur d'estampes. - S'installe au Portugal en 1728"@fr ;
+        skos:prefLabel        "Pierre de Rochefort (1673?-17..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41115434m#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40390236d#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb44225144w#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb44217268f#Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41506041h#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb402618893#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40726847d#Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb442283205#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33381790x#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40431450p#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb442266764#Expression>
+        bnfroles:r150        <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        marcrel:ctg          <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40612732r#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb149599030#foaf:Person> .

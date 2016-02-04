@@ -1,0 +1,83 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb135015540>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Andrew_Fletcher_de_Saltoun> , <http://catalogue.bnf.fr/ark:/12148/cb135015540> ;
+        bnf-onto:FRBNF        13501554 ;
+        isni:identifierValid  "0000000081541765" ;
+        dcterms:created       "1999-05-11" ;
+        dcterms:modified      "2013-07-31" ;
+        owl:sameAs            <http://isni.org/isni/0000000081541765> ;
+        skos:editorialNote    "Bibliogr., GB (CD), 1999-02 :. - . - BN Cat. gén. : Fletcher (Andrew), de Saltoun. - . -"@fr , "DNB. - . - GLU. - . - British Museum catalogue to 1955. - . -"@fr , "Political works / Andrew Fletcher ; ed. by John Roberston, 1997 [donne comme année de naissance : 1653]. - . - BLNA, 1997-12. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/74007847> , <http://www.idref.fr/033256829> , <http://isni.org/isni/0000000081541765> , <http://fr.wikipedia.org/wiki/Andrew_Fletcher_de_Saltoun> , <http://fr.dbpedia.org/resource/Andrew_Fletcher_de_Saltoun> ;
+        skos:note             "Homme politique écossais. - Nationaliste, hostile au traité de l'Union de 1707 avec l'Angleterre. - Auteur de nombreux pamphlets"@fr ;
+        skos:prefLabel        "Andrew Fletcher (1653?-1716)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1653 ;
+        bnf-onto:lastYear               1716 ;
+        rdagroup2elements:biographicalInformation
+                "Homme politique écossais. - Nationaliste, hostile au traité de l'Union de 1707 avec l'Angleterre. - Auteur de nombreux pamphlets" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1653/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1716/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Saltoun, GB" ;
+        rdagroup2elements:placeOfDeath  "Londres" ;
+        bio:birth                       "1653" ;
+        bio:death                       "1716-09-15" ;
+        owl:sameAs                      <http://www.idref.fr/033256829> , <http://fr.dbpedia.org/resource/Andrew_Fletcher_de_Saltoun> , <http://viaf.org/viaf/74007847> , <http://data.bnf.fr/ark:/12148/cb135015540#about> ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/AndrewFletcher.jpg> , <http://commons.wikimedia.org/wiki/Special:FilePath/AndrewFletcher.jpg?width=300> ;
+        foaf:familyName                 "Fletcher" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Andrew" ;
+        foaf:name                       "Andrew Fletcher" ;
+        foaf:page                       <http://data.bnf.fr/13501554/andrew_fletcher/> .
+
+<http://data.bnf.fr/ark:/12148/cb30441383g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304413886#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> .
+
+<http://data.bnf.fr/13501554/andrew_fletcher/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30441387v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304413855#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37548666j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30441386h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135015540#foaf:Person> .

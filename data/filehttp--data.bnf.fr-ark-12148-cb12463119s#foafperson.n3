@@ -1,0 +1,59 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12463119s#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1762 ;
+        bnf-onto:lastYear               1844 ;
+        rdagroup2elements:biographicalInformation
+                "Prêtre du Diocèse de Bayonne (1802-1820), puis de celui d'Aire et de Dax. - Précédemment, capucin de la Province de Toulouse, et prêtre réfractaire à partir de 1791. - Restaurateur du sanctuaire de Bétharram (à Lestelle-Bétharram, Pyrénées-Atlantiques, 1802-1808) ; curé de Bosdarros (Pyrénées-Atlantiques ; 1810-1820), puis curé-doyen de Pouillon (Landes)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1762/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1844/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Lahitte-Toupière (Hautes-Pyrénées)" ;
+        rdagroup2elements:placeOfDeath  "Pouillon (Landes) ?" ;
+        bio:birth                       "1762-09-03" ;
+        bio:death                       "1844-02-07" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb12463119s#about> , <http://viaf.org/viaf/66564188> ;
+        foaf:birthday                   "09-03" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6564049j.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k464606.thumbnail> ;
+        foaf:familyName                 "Sempé" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jean" ;
+        foaf:name                       "Jean Sempé" ;
+        foaf:page                       <http://data.bnf.fr/12463119/jean_sempe/> .
+
+<http://data.bnf.fr/ark:/12148/cb12463119s>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12463119s> ;
+        bnf-onto:FRBNF      12463119 ;
+        dcterms:created     "1995-05-12" ;
+        dcterms:modified    "2010-10-16" ;
+        skos:altLabel       "Joseph Sempé (1762-1844)"@fr , "Joseph de Lahitte-Toupière (capucin, 1762-1844)"@fr , "Joseph de Lahitte (capucin, 1762-1844)"@fr , "Joseph de Lahitte-Toupière (1762-1844)"@fr , "Joseph (capucin, 1762-1844)"@fr , "Joseph de Lahitte (1762-1844)"@fr , "Paul (1762-1844)"@fr , "Joseph de Lahitte- Toupière (1762-1844)"@fr ;
+        skos:editorialNote  "Lexicon Capuccinum. - . - Bibliographie des Frères mineurs capucins de la Province de Toulouse : 1582-1928 / par le P. Irénée d'Aulon, 1928, p. 14-15 : Joseph de Lahitte-Toupière. - . - Histoire des Frères mineurs capucins de la Province de Toulouse / P. Irénée d'Aulon, 1937-1938. T. I, p. 56-77, 96 et 133-141 : le P. Joseph de Lahitte. - . -"@fr , "Avertissemens du missionnaire Paul aux soi-disans catholiques des diocèses de Lescar, Tarbes et Oléron, 1799  [Par Jean Sempé]. - . - Relation de l'empoisonnement du père Joseph de Lahitte-Toupière, ex-capucin, desservant de Bosdarros... sous le nom de Jean Sempé, prêtre : adressé par lui-même au plus endurci des ses persécuteurs, 1818. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/66564188> ;
+        skos:note           "Prêtre du Diocèse de Bayonne (1802-1820), puis de celui d'Aire et de Dax. - Précédemment, capucin de la Province de Toulouse, et prêtre réfractaire à partir de 1791. - Restaurateur du sanctuaire de Bétharram (à Lestelle-Bétharram, Pyrénées-Atlantiques, 1802-1808) ; curé de Bosdarros (Pyrénées-Atlantiques ; 1810-1820), puis curé-doyen de Pouillon (Landes)"@fr ;
+        skos:prefLabel      "Jean Sempé (1762-1844)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12463119s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37239752n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12463119s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12463119s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12463119s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31350666n#Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12463119s#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12463119s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12463119s#foaf:Person> .

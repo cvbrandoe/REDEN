@@ -1,0 +1,99 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30398043z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42130355n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303980449#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303980460#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1129 ;
+        bnf-onto:lastYear              1164 ;
+        rdagroup2elements:biographicalInformation
+                "Bénédictine. - Mystique célèbre par ses visions qu'elle relata et qui furent aussi rapportées par Ekbert, abbé de Schönau" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1129/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1164/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Religion" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/200/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/lat> ;
+        bio:birth                      "1129" ;
+        bio:death                      "1164" ;
+        owl:sameAs                     <http://viaf.org/viaf/61685758> , <http://dbpedia.org/resource/Élisabeth_de_Schönau> , <http://data.bnf.fr/ark:/12148/cb131738542#about> , <http://www.idref.fr/035202068> ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Schoenau_total_002.jpg?width=300> ;
+        foaf:familyName                "Élisabeth" ;
+        foaf:gender                    "female" ;
+        foaf:page                      <http://data.bnf.fr/13173854/elisabeth/> .
+
+<http://data.bnf.fr/ark:/12148/cb30398045n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30161498p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31250881x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb131738542>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb131738542> , <http://fr.wikipedia.org/wiki/Élisabeth_de_Schönau> ;
+        bnf-onto:FRBNF        13173854 ;
+        isni:identifierValid  "0000000119504581" ;
+        dcterms:created       "1997-11-03" ;
+        dcterms:modified      "2013-10-24" ;
+        owl:sameAs            <http://isni.org/isni/0000000119504581> ;
+        skos:altLabel         "Elisabeth of Schönau (sainte, 1129-1164)"@en , "Élisabeth de Schönau (sainte, 1129-1164)"@fr , "Elisabeth von Schönau (sainte, 1129-1164)"@de , "Elisabeth di Schönau (sainte, 1129-1164)"@it ;
+        skos:editorialNote    "Larousse 19e s.. - . - LCNA (CD), 1996-06. - . -"@fr , "Révélations choisies / de sainte Élisabeth de Schönau ; trad. pour la première fois en français par le traducteur des Oeuvres de Catherine Emmerich [J.-A. Duley], 1864. - . - GLE. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000119504581> , <http://www.idref.fr/035202068> , <http://dbpedia.org/resource/Élisabeth_de_Schönau> , <http://viaf.org/viaf/61685758> , <http://fr.wikipedia.org/wiki/Élisabeth_de_Schönau> ;
+        skos:note             "Bénédictine. - Mystique célèbre par ses visions qu'elle relata et qui furent aussi rapportées par Ekbert, abbé de Schönau"@fr ;
+        skos:prefLabel        "Élisabeth (sainte, 1129-1164)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb416430188#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16176320h#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38885486c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131738542#foaf:Person> .

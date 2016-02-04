@@ -1,0 +1,44 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12220026w#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1154 ;
+        bnf-onto:lastYear              1189 ;
+        rdagroup2elements:biographicalInformation
+                "Roi de Sicile de 1166 à 1189" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1154/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1189/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/900/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        bio:birth                      "1154" ;
+        bio:death                      "1189-11-18" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb12220026w#about> ;
+        foaf:familyName                "Guillaume" ;
+        foaf:page                      <http://data.bnf.fr/12220026/guillaume_2/> .
+
+<http://data.bnf.fr/ark:/12148/cb12220026w>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb12220026w> ;
+        bnf-onto:FRBNF      12220026 ;
+        dcterms:created     "1991-10-01" ;
+        dcterms:modified    "2009-01-28" ;
+        skos:altLabel       "Guglielmo (roi de Sicile, 1154-1189)"@fr , "Wilhelm II. von Sizilien (1154-1189)"@de , "William II (roi de Sicile, 1154-1189)"@en , "Guglielmo II (roi de Sicile, 1154-1189)"@it , "Guillaume (roi de Sicile, 1154-1189)"@fr , "Guillaume II le Bon (roi de Sicile, 1154-1189)"@fr ;
+        skos:editorialNote  "Mourre. - . - Encicl. italiana. - . -"@fr , "Der \"gute\" König / von Annkristin Schlichten, 2005. - . - GDEL. - . -"@fr ;
+        skos:note           "Roi de Sicile de 1166 à 1189"@fr ;
+        skos:prefLabel      "Guillaume II (roi de Sicile, 1154-1189)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb12220026w#foaf:Person> .
+
+<http://data.bnf.fr/12220026/guillaume_2/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12220026w#foaf:Person> .

@@ -1,0 +1,87 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1780 ;
+        bnf-onto:lastYear               1835 ;
+        rdagroup2elements:biographicalInformation
+                "Poète. - Traducteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1780/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1835/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        rdagroup2elements:placeOfBirth  "Farra di Soligo, Italie" ;
+        rdagroup2elements:placeOfDeath  "Padoue, Italie" ;
+        bio:birth                       "1780-04-30" ;
+        bio:death                       "1835-11-02" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb16526400t#about> , <http://viaf.org/viaf/3950556> ;
+        foaf:birthday                   "04-30" ;
+        foaf:familyName                 "Viviani" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Quirico" ;
+        foaf:name                       "Quirico Viviani" ;
+        foaf:page                       <http://data.bnf.fr/16526400/quirico_viviani/> .
+
+<http://data.bnf.fr/ark:/12148/cb42375320c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> .
+
+<http://data.bnf.fr/16526400/quirico_viviani/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb315960282#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16526400t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb16526400t> ;
+        bnf-onto:FRBNF        16526400 ;
+        isni:identifierValid  "000000012098704X" ;
+        dcterms:created       "2011-07-25" ;
+        dcterms:modified      "2013-09-17" ;
+        owl:sameAs            <http://isni.org/isni/000000012098704X> ;
+        skos:editorialNote    "Versi e prose di Quirico Viviani, 1821. - . - Quirico Viviani, Soligo 1780-Padova 1835 / a cura di Giampaolo Zagonel, 2009. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/000000012098704X> , <http://viaf.org/viaf/3950556> ;
+        skos:note             "Poète. - Traducteur"@fr ;
+        skos:prefLabel        "Quirico Viviani (1780-1835)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30055578x#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31596029d#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31596026c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302993190#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16526400t#foaf:Person> .

@@ -1,0 +1,44 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb155533903#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1360 ;
+        bnf-onto:lastYear               1415 ;
+        rdagroup2elements:biographicalInformation
+                "Femme de Charles III de Navarre, fille du roi Henri II de Castille" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/sp> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1360/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1415/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/spa> ;
+        rdagroup2elements:placeOfDeath  "Olite (Espagne)" ;
+        bio:birth                       "1360" ;
+        bio:death                       "1415" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb155533903#about> ;
+        foaf:familyName                 "Éléonore" ;
+        foaf:gender                     "female" ;
+        foaf:page                       <http://data.bnf.fr/15553390/eleonore/> .
+
+<http://data.bnf.fr/15553390/eleonore/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb155533903#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb155533903>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb155533903> ;
+        bnf-onto:FRBNF      15553390 ;
+        dcterms:created     "2007-08-02" ;
+        dcterms:modified    "2007-08-02" ;
+        skos:altLabel       "Aliénor (reine de Navarre, 1360?-1415)"@fr , "Leonor de Trastámara (reine de Navarre, 1360?-1415)"@fr , "Leonor (reine de Navarre, 1360?-1415)"@es , "Éléonore de Castille (reine de Navarre, 1360?-1415)"@fr ;
+        skos:editorialNote  "La corte de Carlos III el Noble, rey de Navarra / María Narbona Cárceles, 2006. - . - La corte de Carlos III el Noble, rey de Navarra / María Narbona Cárceles, 2006. - . -"@fr , "Mourre, 1976 : Éléonore de Castille, donne comme date de naissance ca 1350. - . - Diccionario de historia de España / dir. por German Bleiberg, 1981 : Leonor [de Trastámara], reina de Navarra. - . -"@fr ;
+        skos:note           "Femme de Charles III de Navarre, fille du roi Henri II de Castille"@fr ;
+        skos:prefLabel      "Éléonore (reine de Navarre, 1360?-1415)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb155533903#foaf:Person> .

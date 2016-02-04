@@ -1,0 +1,78 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb300363515#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30036350t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30036352h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31739966x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10425823b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10425823b> ;
+        bnf-onto:FRBNF        10425823 ;
+        isni:identifierValid  "0000000062222400" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2015-03-13" ;
+        skos:altLabel         "Abbé Aude (1764-1824)"@fr ;
+        skos:editorialNote    "Le Suffrage de la religion, sur la glorieuse issue de la guerre d'Espagne et les voeux qu'elle forme / [par l'abbé Aude], 1823. - . - DBF. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/88670159> ;
+        skos:note             "Abbé. - Vicaire général de Mende, Lorère"@fr ;
+        skos:prefLabel        "André Aude (1764-1824)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb340472616#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb340505548#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10425823b#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1764 ;
+        bnf-onto:lastYear               1824 ;
+        rdagroup2elements:biographicalInformation
+                "Abbé. - Vicaire général de Mende, Lorère" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1764/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1824/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Apt (Vaucluse)" ;
+        bio:birth                       "1764" ;
+        bio:death                       "1824-09-05" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb10425823b#about> , <http://viaf.org/viaf/88670159> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6119588k.thumbnail> ;
+        foaf:familyName                 "Aude" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "André" ;
+        foaf:name                       "André Aude" ;
+        foaf:page                       <http://data.bnf.fr/10425823/andre_aude/> .

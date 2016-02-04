@@ -1,0 +1,58 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12230445g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12230445g> ;
+        bnf-onto:FRBNF        12230445 ;
+        isni:identifierValid  "0000000000692626" ;
+        dcterms:created       "1991-12-18" ;
+        dcterms:modified      "2015-03-12" ;
+        owl:sameAs            <http://isni.org/isni/0000000000692626> ;
+        skos:altLabel         "Joseph David (1730-1784)"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000000692626> , <http://www.idref.fr/031001599> , <http://viaf.org/viaf/7443146> ;
+        skos:note             "Imprimeur-libraire. - Reçu imprimeur en mars 1769"@fr , "Pour la librairie, associé à ses frères aînés Esprit et Antoine II David dans la succession de leur père Joseph David"@fr ;
+        skos:prefLabel        "Joseph-Antoine David (1730-1784)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12230445g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb401864256#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12230445g#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12230445g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12230445g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12230445g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1730 ;
+        bnf-onto:lastYear              1784 ;
+        rdagroup2elements:biographicalInformation
+                "Pour la librairie, associé à ses frères aînés Esprit et Antoine II David dans la succession de leur père Joseph David" , "Imprimeur-libraire. - Reçu imprimeur en mars 1769" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1730/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1784/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1745-1784" ;
+        bio:birth                      "1730-09-11" ;
+        bio:death                      "1784-11-13" ;
+        owl:sameAs                     <http://www.idref.fr/031001599> , <http://data.bnf.fr/ark:/12148/cb12230445g#about> , <http://viaf.org/viaf/7443146> ;
+        foaf:birthday                  "09-11" ;
+        foaf:familyName                "David" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Joseph-Antoine" ;
+        foaf:name                      "Joseph-Antoine David" ;
+        foaf:page                      <http://data.bnf.fr/12230445/joseph-antoine_david/> .
+
+<http://data.bnf.fr/ark:/12148/cb393277125#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12230445g#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12230445g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12230445g#foaf:Person> .

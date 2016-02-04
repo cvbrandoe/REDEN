@@ -1,0 +1,65 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb32111196d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32111197r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12329993v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12329993v> ;
+        bnf-onto:FRBNF        12329993 ;
+        isni:identifierValid  "0000000081646663" ;
+        dcterms:created       "1993-08-31" ;
+        dcterms:modified      "2013-07-27" ;
+        owl:sameAs            <http://isni.org/isni/0000000081646663> ;
+        skos:editorialNote    "Montesquieu and English politics : 1750-1800 / by F. T. H. Fletcher, 1980 [Reprod. de l'éd. de 1939]. - . - LCNA, 1993-03. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/92058817> , <http://isni.org/isni/0000000081646663> , <http://www.idref.fr/095677372> ;
+        skos:note             "Professeur de français à l'University of Liverpool, GB (en 1939)"@fr ;
+        skos:prefLabel        "Frank Thomas Herbert Fletcher"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32111194q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb321111952#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37389468d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12329993v#foaf:Person>
+        a                   foaf:Person ;
+        bnf-onto:firstYear  1898 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de français à l'University of Liverpool, GB (en 1939)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        owl:sameAs          <http://viaf.org/viaf/92058817> , <http://www.idref.fr/095677372> , <http://data.bnf.fr/ark:/12148/cb12329993v#about> ;
+        foaf:familyName     "Fletcher" ;
+        foaf:givenName      "Frank Thomas Herbert" ;
+        foaf:name           "Frank Thomas Herbert Fletcher" ;
+        foaf:page           <http://data.bnf.fr/12329993/frank_thomas_herbert_fletcher/> .

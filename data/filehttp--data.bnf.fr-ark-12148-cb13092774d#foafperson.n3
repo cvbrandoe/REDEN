@@ -1,0 +1,48 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13092774d#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1763 ;
+        bnf-onto:lastYear              1825 ;
+        rdagroup2elements:biographicalInformation
+                "Veuve d'Édouard-Mathieu Molé, comte de Champlâtreux, et mère de Louis-Mathieu Molé. - Fondatrice des Sœurs de la charité de Saint-Louis (en 1803 ; sous le nom de mère Saint-Louis)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1763/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1825/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1763-10-03" ;
+        bio:death                      "1825-03-04" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb13092774d#about> , <http://viaf.org/viaf/56746991> ;
+        foaf:birthday                  "10-03" ;
+        foaf:familyName                "Molé" ;
+        foaf:givenName                 "Marie-Louise-Élisabeth" ;
+        foaf:name                      "Marie-Louise-Élisabeth Molé" ;
+        foaf:page                      <http://data.bnf.fr/13092774/marie-louise-elisabeth_mole/> .
+
+<http://data.bnf.fr/ark:/12148/cb13092774d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13092774d> ;
+        bnf-onto:FRBNF        13092774 ;
+        isni:identifierValid  "0000000000397600" ;
+        dcterms:created       "1995-04-21" ;
+        dcterms:modified      "2015-03-12" ;
+        owl:sameAs            <http://isni.org/isni/0000000000397600> ;
+        skos:altLabel         "Saint-Louis (sœur de la charité de Saint-Louis)"@fr , "Marie-Louise-Élisabeth de Lamoignon"@fr , "Marie-Louise-Élisabeth Molé Champlâtreux (comtesse de, 1763-1825)"@fr , "Marie Louise Élisabeth de Molé de Champlâtreux"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000000397600> , <http://viaf.org/viaf/56746991> ;
+        skos:note             "Veuve d'Édouard-Mathieu Molé, comte de Champlâtreux, et mère de Louis-Mathieu Molé. - Fondatrice des Sœurs de la charité de Saint-Louis (en 1803 ; sous le nom de mère Saint-Louis)"@fr ;
+        skos:prefLabel        "Marie-Louise-Élisabeth Molé (1763-1825)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13092774d#foaf:Person> .
+
+<http://data.bnf.fr/13092774/marie-louise-elisabeth_mole/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13092774d#foaf:Person> .

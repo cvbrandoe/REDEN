@@ -1,0 +1,53 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb141775968#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1896 ;
+        bnf-onto:lastYear              1976 ;
+        rdagroup2elements:biographicalInformation
+                "Acteur" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1896/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1976/> ;
+        bio:birth                      "1896-05-18" ;
+        bio:death                      "1976-12-20" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb141775968#about> , <http://viaf.org/viaf/17432563> ;
+        foaf:birthday                  "05-18" ;
+        foaf:familyName                "Fitzgerald" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Walter" ;
+        foaf:name                      "Walter Fitzgerald" ;
+        foaf:page                      <http://data.bnf.fr/14177596/walter_fitzgerald/> .
+
+<http://data.bnf.fr/ark:/12148/cb141775968>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb141775968> ;
+        bnf-onto:FRBNF        14177596 ;
+        isni:identifierValid  "0000000079850956" ;
+        dcterms:created       "2003-03-10" ;
+        dcterms:modified      "2013-08-02" ;
+        owl:sameAs            <http://isni.org/isni/0000000079850956> ;
+        skos:exactMatch       <http://isni.org/isni/0000000079850956> , <http://viaf.org/viaf/17432563> ;
+        skos:note             "Acteur"@fr ;
+        skos:prefLabel        "Walter Fitzgerald (1896-1976)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb141775968#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38157881d#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb141775968#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb141775968#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb141775968#foaf:Person> .
+
+<http://data.bnf.fr/14177596/walter_fitzgerald/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb141775968#foaf:Person> .

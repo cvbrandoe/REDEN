@@ -1,0 +1,73 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb137416831>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb137416831> ;
+        bnf-onto:FRBNF        13741683 ;
+        isni:identifierValid  "0000000080869654" ;
+        dcterms:created       "2001-08-24" ;
+        dcterms:modified      "2013-08-01" ;
+        owl:sameAs            <http://isni.org/isni/0000000080869654> ;
+        skos:altLabel         "Jacques Vallée des Barreaux (1599?-1673)"@fr , "Jacques Des Barreaux (1599?-1673)"@fr ;
+        skos:editorialNote    "Une petite découverte bibliographique. Les poésies de Des Barreaux (vers à Marion de L'Orme, sonnets philosophiques, etc.) / publiés par F. Lachèvre, 1904. - . - Grente, 17e s.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/7566787> , <http://isni.org/isni/0000000080869654> ;
+        skos:note             "Poète épicurien. - Baptisé le 6 décembre 1599"@fr ;
+        skos:prefLabel        "Jacques Vallée Des Barreaux (seigneur, 1599?-1673)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb137416831#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30327900g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137416831#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137416831#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137416831#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30708075d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137416831#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137416831#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137416831#foaf:Person> .
+
+<http://data.bnf.fr/13741683/jacques_vallee_des_barreaux/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb137416831#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32019666m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb137416831#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb137416831#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb137416831#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb137416831#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1599 ;
+        bnf-onto:lastYear               1673 ;
+        rdagroup2elements:biographicalInformation
+                "Poète épicurien. - Baptisé le 6 décembre 1599" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1599/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1673/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Châteauneuf-sur-Loire (Loiret)" ;
+        rdagroup2elements:placeOfDeath  "Chalon-sur-Saône (Saône-et-Loire)" ;
+        bio:birth                       "1599" ;
+        bio:death                       "1673-05-09" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb137416831#about> , <http://viaf.org/viaf/7566787> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6325562v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k111827h/f3.item.thumbnail> ;
+        foaf:familyName                 "Des Barreaux" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jacques Vallée" ;
+        foaf:name                       "Jacques Vallée Des Barreaux" ;
+        foaf:page                       <http://data.bnf.fr/13741683/jacques_vallee_des_barreaux/> .

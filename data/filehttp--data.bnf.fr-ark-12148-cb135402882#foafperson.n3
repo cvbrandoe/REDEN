@@ -1,0 +1,73 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31072559g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135402882#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135402882#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135402882#foaf:Person> .
+
+<http://data.bnf.fr/13540288/pierre/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb135402882#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319472244#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb135402882#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb135402882#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135402882#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40167199r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb135402882#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb135402882#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb135402882#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb135402882#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1393 ;
+        bnf-onto:lastYear              1449 ;
+        rdagroup2elements:biographicalInformation
+                "Infant de Portugal. - Quatrième fils du roi Jean Ier, régent du royaume pendant la minorité de son neveu Alphonse V, il mourut en combattant ce dernier sur le champ de bataille d'Alfarrobeira. - Grand voyageur, il encouragea les expéditions privées le long des côtes d'Afrique" , "Auteur de \"O livro da virtuosa beimfeitoria\" ; de traductions et commentaires de Sénèque, Cicéron, Végèce et d'une abondante correspondance. - Deux oeuvres sont perdues : une traduction du \"De regimine principum\" de Gilles de Rome et \"Obras de Confissom\"" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/po> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1393/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1449/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/por> ;
+        bio:birth                      "1393-12-09" ;
+        bio:death                      "1449-05-20" ;
+        owl:sameAs                     <http://viaf.org/viaf/69737711> , <http://data.bnf.fr/ark:/12148/cb135402882#about> , <http://www.idref.fr/069131252> ;
+        foaf:birthday                  "12-09" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k852648n.thumbnail> ;
+        foaf:familyName                "Pierre" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/13540288/pierre/> .
+
+<http://data.bnf.fr/ark:/12148/cb135402882>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb135402882> ;
+        bnf-onto:FRBNF        13540288 ;
+        isni:identifierValid  "0000000080162579" ;
+        dcterms:created       "2000-01-19" ;
+        dcterms:modified      "2013-08-01" ;
+        owl:sameAs            <http://isni.org/isni/0000000080162579> ;
+        skos:altLabel         "Pedro (infant de Portugal, 1393-1449)"@pt , "Pierre (duc de Coimbra, 1393-1449)"@fr , "Pedro de Portugal (1393-1449)"@pt , "Pedro (duc de Coimbra, 1393-1449)"@pt ;
+        skos:editorialNote    "Encicl. luso-brasileira. - . - BN Cat. gén. : Pedro (Infant dom) [réunit sous cette vedette les oeuvres du père et du fils]. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/69737711> , <http://www.idref.fr/069131252> , <http://isni.org/isni/0000000080162579> ;
+        skos:note             "Infant de Portugal. - Quatrième fils du roi Jean Ier, régent du royaume pendant la minorité de son neveu Alphonse V, il mourut en combattant ce dernier sur le champ de bataille d'Alfarrobeira. - Grand voyageur, il encouragea les expéditions privées le long des côtes d'Afrique"@fr , "Auteur de \"O livro da virtuosa beimfeitoria\" ; de traductions et commentaires de Sénèque, Cicéron, Végèce et d'une abondante correspondance. - Deux oeuvres sont perdues : une traduction du \"De regimine principum\" de Gilles de Rome et \"Obras de Confissom\""@fr ;
+        skos:prefLabel        "Pierre (infant de Portugal, 1393-1449)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb135402882#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13540293n#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb135402882#foaf:Person> .

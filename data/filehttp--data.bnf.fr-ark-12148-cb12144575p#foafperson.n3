@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12144575p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12144575p> ;
+        bnf-onto:FRBNF        12144575 ;
+        isni:identifierValid  "0000000116056912" ;
+        dcterms:created       "1990-04-17" ;
+        dcterms:modified      "2010-10-08" ;
+        owl:sameAs            <http://isni.org/isni/0000000116056912> ;
+        skos:altLabel         "Mario Deni (1879-1946)"@fr , "Ariel (1879-1946)"@fr ;
+        skos:editorialNote    "Dizionario degli scrittori italiani : pseudonimi (1900-1975) / Renzo Frattarolo, 1975. - . -"@fr , "Le silence ardent : roman / Flavia Steno ; adapté [de l'italien] par Marie Croci, 1926. - . - Il germanesimo senza maschera / Ariel, [s.d.]. - . - Per non dimenticare / Mario Deni, 1919. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/029923328> , <http://isni.org/isni/0000000116056912> , <http://viaf.org/viaf/22178012> ;
+        skos:note             "Romancière. - Pseudonyme littéraire d'Amelia Osta Cottini, a aussi utilisé les pseudonymes \"Ariel\" et \"Mario Deni\""@fr ;
+        skos:prefLabel        "Flavia Steno (1879-1946)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12144575p#foaf:Person> .
+
+<http://data.bnf.fr/12144575/flavia_steno/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12144575p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12144575p#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1879 ;
+        bnf-onto:lastYear               1946 ;
+        rdagroup2elements:biographicalInformation
+                "Romancière. - Pseudonyme littéraire d'Amelia Osta Cottini, a aussi utilisé les pseudonymes \"Ariel\" et \"Mario Deni\"" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1879/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1946/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        rdagroup2elements:placeOfBirth  "Lugano, Suisse" ;
+        rdagroup2elements:placeOfDeath  "Gênes, Italie" ;
+        bio:birth                       "1879-06-26" ;
+        bio:death                       "1946-12-22" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb12144575p#about> , <http://viaf.org/viaf/22178012> , <http://www.idref.fr/029923328> ;
+        foaf:birthday                   "06-26" ;
+        foaf:familyName                 "Steno" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Flavia" ;
+        foaf:name                       "Flavia Steno" ;
+        foaf:page                       <http://data.bnf.fr/12144575/flavia_steno/> .
+
+<http://data.bnf.fr/ark:/12148/cb314044515#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12144575p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12144575p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12144575p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31404452h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12144575p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12144575p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12144575p#foaf:Person> .

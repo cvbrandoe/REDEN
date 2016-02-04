@@ -1,0 +1,61 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13406101b#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1879 ;
+        bnf-onto:lastYear               1941 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en médecine (Montpellier, 1906). - Médecin à La Salvetat-sur-Agout, Hérault,  à partir de 1906. - Conseiller municipal (1912-) puis maire (1919-), conseiller général (1919) de La Salvetat-sur-Agout, Hérault," ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1879/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1941/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Science politique" , "Médecine" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/320/> , <http://dewey.info/class/610/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "La Salvetat-sur-Agout (Hérault)" ;
+        rdagroup2elements:placeOfDeath  "La Salvetat-sur-Agout (Hérault)" ;
+        bio:birth                       "1879" ;
+        bio:death                       "1941" ;
+        owl:sameAs                      <http://viaf.org/viaf/107597278> , <http://data.bnf.fr/ark:/12148/cb13406101b#about> ;
+        foaf:familyName                 "Cros" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jean-Louis" ;
+        foaf:name                       "Jean-Louis Cros" ;
+        foaf:page                       <http://data.bnf.fr/13406101/jean-louis_cros/> .
+
+<http://data.bnf.fr/ark:/12148/cb13406101b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13406101b> ;
+        bnf-onto:FRBNF        13406101 ;
+        isni:identifierValid  "0000000077420725" ;
+        dcterms:created       "1999-11-01" ;
+        dcterms:modified      "2015-03-13" ;
+        owl:sameAs            <http://isni.org/isni/0000000077420725> ;
+        skos:editorialNote    "Le syndrome utérin fonctionnel de nature neuro-arthritique. (Contribution à l'étude des pseudométrites chroniques): [thèse], 1906. - . - BnF - Département de la recherche bibliographique [Recueil. Dossiers biographiques Boutillier du Retail. Documentation sur Jean-Louis Cros], 1942. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000077420725> , <http://viaf.org/viaf/107597278> ;
+        skos:note             "Docteur en médecine (Montpellier, 1906). - Médecin à La Salvetat-sur-Agout, Hérault,  à partir de 1906. - Conseiller municipal (1912-) puis maire (1919-), conseiller général (1919) de La Salvetat-sur-Agout, Hérault,"@fr ;
+        skos:prefLabel        "Jean-Louis Cros (1879-1941)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13406101b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36869894c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13406101b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13406101b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13406101b#foaf:Person> .
+
+<http://data.bnf.fr/13406101/jean-louis_cros/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13406101b#foaf:Person> .

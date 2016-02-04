@@ -1,0 +1,89 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34087827h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> .
+
+<http://data.bnf.fr/12072807/fernande_olivier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36274233g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32496309k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35556693w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb324963087#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb387360869#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120728070>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Fernande_Olivier> , <http://catalogue.bnf.fr/ark:/12148/cb120728070> ;
+        bnf-onto:FRBNF        12072807 ;
+        isni:identifierValid  "0000000368572403" ;
+        dcterms:created       "1988-04-18" ;
+        dcterms:modified      "2015-01-19" ;
+        owl:sameAs            <http://isni.org/isni/0000000368572403> ;
+        skos:altLabel         "Amélie Lang (1881-1966)"@fr , "Amélie Percheron (1881-1966)"@fr , "Fernande Bellevallée (1881-1966)"@fr ;
+        skos:editorialNote    "Souvenirs intimes écrits pour Picasso / F. Olivier, 1988. - . - BN Cat. gén. suppl.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/44322048> , <http://fr.wikipedia.org/wiki/Fernande_Olivier> , <http://www.idref.fr/029041120> , <http://fr.dbpedia.org/resource/Fernande_Olivier> , <http://dbpedia.org/resource/Fernande_Olivier> , <http://isni.org/isni/0000000368572403> ;
+        skos:prefLabel        "Fernande Olivier (1881-1966)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372237222#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1881 ;
+        bnf-onto:lastYear              1966 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1881/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1966/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1881-06-06" ;
+        bio:death                      "1966-01-29" ;
+        owl:sameAs                     <http://www.idref.fr/029041120> , <http://dbpedia.org/resource/Fernande_Olivier> , <http://fr.dbpedia.org/resource/Fernande_Olivier> , <http://viaf.org/viaf/44322048> , <http://data.bnf.fr/ark:/12148/cb120728070#about> ;
+        foaf:birthday                  "06-06" ;
+        foaf:familyName                "Olivier" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Fernande" ;
+        foaf:name                      "Fernande Olivier" ;
+        foaf:page                      <http://data.bnf.fr/12072807/fernande_olivier/> .
+
+<http://data.bnf.fr/ark:/12148/cb349343226#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb120728070#foaf:Person> .

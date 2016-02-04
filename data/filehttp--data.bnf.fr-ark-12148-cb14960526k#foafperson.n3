@@ -1,0 +1,120 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb40361430h#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40361408b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb415231586#Expression>
+        bnfroles:r480        <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        marcrel:ltg          <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb403616364#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb403614535#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41524835q#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40341818b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb403476423#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1824 ;
+        bnf-onto:lastYear               1882 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1824/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1882/> ;
+        rdagroup2elements:placeOfBirth  "Le Havre" ;
+        rdagroup2elements:placeOfDeath  "Sceaux" ;
+        bio:birth                       "1824" ;
+        bio:death                       "1882" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb14960526k#about> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/btv1b53026678n.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53024612s.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530246154.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b53020700g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b530205858.thumbnail> ;
+        foaf:familyName                 "Morin" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Edmond" ;
+        foaf:name                       "Edmond Morin" ;
+        foaf:page                       <http://data.bnf.fr/14960526/edmond_morin/> .
+
+<http://data.bnf.fr/ark:/12148/cb41524844p#Expression>
+        bnfroles:r312        <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40284575q#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41214140n#Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb415254366#Expression>
+        bnfroles:r312        <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43805668r#Expression>
+        bnfroles:r310        <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        marcrel:drm          <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14960526k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14960526k> ;
+        bnf-onto:FRBNF        14960526 ;
+        isni:identifierValid  "0000000121340598" ;
+        dcterms:created       "1995-03-20" ;
+        dcterms:modified      "2013-08-03" ;
+        skos:prefLabel        "Edmond Morin (1824-1882)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40361619j#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41523300f#Expression>
+        bnfroles:r480        <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        marcrel:ltg          <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .
+
+<http://data.bnf.fr/14960526/edmond_morin/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14960526k#foaf:Person> .

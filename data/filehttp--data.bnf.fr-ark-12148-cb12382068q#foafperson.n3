@@ -1,0 +1,73 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb374083223#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37446319j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1860 ;
+        bnf-onto:lastYear              1929 ;
+        rdagroup2elements:biographicalInformation
+                "Anthropologue. - Spécialistes des Aborigènes australiens" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1860/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1929/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1860" ;
+        bio:death                      "1929" ;
+        owl:sameAs                     <http://www.idref.fr/032875940> , <http://fr.dbpedia.org/resource/Walter_Baldwin_Spencer> , <http://data.bnf.fr/ark:/12148/cb12382068q#about> , <http://dbpedia.org/resource/Walter_Baldwin_Spencer> , <http://viaf.org/viaf/27147464> ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Walter_Baldwin_Spencer.jpg> , <http://commons.wikimedia.org/wiki/Special:FilePath/Walter_Baldwin_Spencer.jpg?width=300> ;
+        foaf:familyName                "Spencer" ;
+        foaf:givenName                 "Baldwin" ;
+        foaf:name                      "Baldwin Spencer" ;
+        foaf:page                      <http://data.bnf.fr/12382068/baldwin_spencer/> .
+
+<http://data.bnf.fr/ark:/12148/cb37671104q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37408321r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37417727w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12382068q>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12382068q> , <http://fr.wikipedia.org/wiki/Walter_Baldwin_Spencer> ;
+        bnf-onto:FRBNF        12382068 ;
+        isni:identifierValid  "000000008366614X" ;
+        dcterms:created       "1994-03-30" ;
+        dcterms:modified      "2013-07-27" ;
+        owl:sameAs            <http://isni.org/isni/000000008366614X> ;
+        skos:altLabel         "Walter Baldwin Spencer"@fr ;
+        skos:editorialNote    "The Arunta : a study of a Stone Age people / by Sir Baldwin Spencer and the Late F. J. Gillen, 1927. - . - LCNA (CD OCLC), 1993-12. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/000000008366614X> , <http://fr.wikipedia.org/wiki/Walter_Baldwin_Spencer> , <http://viaf.org/viaf/27147464> , <http://www.idref.fr/032875940> , <http://fr.dbpedia.org/resource/Walter_Baldwin_Spencer> , <http://dbpedia.org/resource/Walter_Baldwin_Spencer> ;
+        skos:note             "Anthropologue. - Spécialistes des Aborigènes australiens"@fr ;
+        skos:prefLabel        "Baldwin Spencer (1860-1929)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12382068q#foaf:Person> .

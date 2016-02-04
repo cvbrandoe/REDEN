@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb36039585k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124620585#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124620585#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124620585#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb365791526#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124620585#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124620585#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124620585#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41651881z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124620585#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124620585#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124620585#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124620585>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb124620585> ;
+        bnf-onto:FRBNF        12462058 ;
+        isni:identifierValid  "0000000000418539" ;
+        dcterms:created       "1995-05-10" ;
+        dcterms:modified      "2013-07-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000000418539> ;
+        skos:altLabel         "Sylvain Grenier (1848-19..)"@fr ;
+        skos:editorialNote    "Répertoire des faits politiques, sociaux, économiques et généraux / A.-S. Grenier, 1896-1897. - . - Nos évêques : biographies et portraits des membres de l'épiscopat français / S. Grenier, 1896. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/097961736> , <http://viaf.org/viaf/59182315> , <http://isni.org/isni/0000000000418539> ;
+        skos:prefLabel        "Albert-Sylvain Grenier (1848-19..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb124620585#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb124620585#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1848 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1848/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1848" ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb124620585#about> , <http://www.idref.fr/097961736> , <http://viaf.org/viaf/59182315> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k5600923j.thumbnail> ;
+        foaf:familyName                "Grenier" ;
+        foaf:givenName                 "Albert-Sylvain" ;
+        foaf:name                      "Albert-Sylvain Grenier" ;
+        foaf:page                      <http://data.bnf.fr/12462058/albert-sylvain_grenier/> .
+
+<http://data.bnf.fr/ark:/12148/cb416518829#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb124620585#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb124620585#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb124620585#foaf:Person> .

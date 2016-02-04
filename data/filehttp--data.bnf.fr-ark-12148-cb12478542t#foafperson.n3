@@ -1,0 +1,91 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb41676229t#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31169447v#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> .
+
+<http://data.bnf.fr/12478542/jean-baptiste_racine/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32552488c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1678 ;
+        bnf-onto:lastYear              1747 ;
+        rdagroup2elements:biographicalInformation
+                "Fils aîné de Jean Racine" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1678/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1747/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1678-11-11" ;
+        bio:death                      "1747-01-31" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb12478542t#about> , <http://viaf.org/viaf/22242682> , <http://www.idref.fr/033984131> ;
+        foaf:birthday                  "11-11" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k220746p.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k220749t.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k2207472.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k2207459.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k220748f.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k220750r.thumbnail> ;
+        foaf:familyName                "Racine" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Jean-Baptiste" ;
+        foaf:name                      "Jean-Baptiste Racine" ;
+        foaf:page                      <http://data.bnf.fr/12478542/jean-baptiste_racine/> .
+
+<http://data.bnf.fr/ark:/12148/cb12478542t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12478542t> ;
+        bnf-onto:FRBNF        12478542 ;
+        isni:identifierValid  "000000002641996X" ;
+        dcterms:created       "1995-08-29" ;
+        dcterms:modified      "2013-07-30" ;
+        skos:editorialNote    "Lettres à son fils / Racine, suivies de lettres de Jean-Baptiste Racine à Louis Racine, 1922. - . - BN Cat. gén. et BN Cat. gén. suppl. : Racine (Jean-Baptiste), le fils. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/22242682> , <http://www.idref.fr/033984131> ;
+        skos:note             "Fils aîné de Jean Racine"@fr ;
+        skos:prefLabel        "Jean-Baptiste Racine (1678-1747)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311695501#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372113181#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31169560b#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb414844570#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb315054011#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12478542t#foaf:Person> .

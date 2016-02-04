@@ -1,0 +1,75 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1843 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de musique à Melun (en 1899). - Née Eugénie Caroline Gennequin" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1843/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Melun, Seine-et-Marne" ;
+        bio:birth                       "1843-05-31" ;
+        bio:death                       "19.." ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb14985955w#about> , <http://viaf.org/viaf/300322572> ;
+        foaf:birthday                   "05-31" ;
+        foaf:familyName                 "Berthet" ;
+        foaf:gender                     "female" ;
+        foaf:givenName                  "Eugénie" ;
+        foaf:name                       "Eugénie Berthet" ;
+        foaf:page                       <http://data.bnf.fr/14985955/eugenie_berthet/> .
+
+<http://data.bnf.fr/ark:/12148/cb39797858w#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39797855v#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb397978597#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39796542f#Expression>
+        bnfroles:r320        <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> ;
+        marcrel:rcp          <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39797857j#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb397978566#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14985955w>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb14985955w> ;
+        bnf-onto:FRBNF      14985955 ;
+        dcterms:created     "2007-05-22" ;
+        dcterms:modified    "2013-04-10" ;
+        skos:editorialNote  "BnF, Paris, Département de la Musique, W-40 (219). - . - Archives départementales de Seine-et-Marne, Dammarie-les-Lys, 6E306/55, acte no 245 (acte de naissance) et 6E306/105, acte no 172 (acte de décès d'Albert Nicolas Berthet). - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/300322572> ;
+        skos:note           "Professeur de musique à Melun (en 1899). - Née Eugénie Caroline Gennequin"@fr ;
+        skos:prefLabel      "Eugénie Berthet (1843-19..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb14985955w#foaf:Person> .

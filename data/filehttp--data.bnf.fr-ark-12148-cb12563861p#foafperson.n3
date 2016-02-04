@@ -1,0 +1,52 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12563861p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12563861p> ;
+        bnf-onto:FRBNF        12563861 ;
+        isni:identifierValid  "000000008015523X" ;
+        dcterms:created       "1997-04-29" ;
+        dcterms:modified      "2015-03-13" ;
+        skos:editorialNote    "Guide pratique en pays arabe / par R. J. Frisch, H. David, 1892. - . - Lorenz. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/075905701> , <http://viaf.org/viaf/29649327> ;
+        skos:note             "Médecin-major de 2e classe au 106e régiment d'infanterie"@fr ;
+        skos:prefLabel        "Henri David (1860-1944)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12563861p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30467071h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12563861p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12563861p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12563861p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12563861p#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1860 ;
+        bnf-onto:lastYear              1944 ;
+        rdagroup2elements:biographicalInformation
+                "Médecin-major de 2e classe au 106e régiment d'infanterie" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1860/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1944/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1860-01-05" ;
+        bio:death                      "1944-05-03" ;
+        owl:sameAs                     <http://viaf.org/viaf/29649327> , <http://www.idref.fr/075905701> , <http://data.bnf.fr/ark:/12148/cb12563861p#about> ;
+        foaf:birthday                  "01-05" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k58045887.thumbnail> ;
+        foaf:familyName                "David" ;
+        foaf:givenName                 "Henri" ;
+        foaf:name                      "Henri David" ;
+        foaf:page                      <http://data.bnf.fr/12563861/henri_david/> .

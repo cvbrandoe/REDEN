@@ -1,0 +1,98 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb304820099#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30482010h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30482007m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372397561#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304820126#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30482011v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb134873144>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb134873144> ;
+        bnf-onto:FRBNF        13487314 ;
+        isni:identifierValid  "0000000021360196" ;
+        dcterms:created       "1998-10-14" ;
+        dcterms:modified      "2015-03-13" ;
+        skos:altLabel         "Antoine-Charles-Marie Garnier, de l'Aube (1742-1805)"@fr ;
+        skos:editorialNote    "Faussetés avancées par Isoard dans son rapport sur les élections de Cayenne, pièces justificatives qui démontrent ces faussetés / par Fréron et Garnier, de l'Aube, [s. d.]. - . - Walter et Martin. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/46912839> ;
+        skos:note             "Avocat, procureur de la commune de Troyes pendant la Révolution, représentant en mission (an VI)"@fr ;
+        skos:prefLabel        "Antoine-Charles-Marie Garnier (1742-1805)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30482013j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb341416553#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1742 ;
+        bnf-onto:lastYear              1805 ;
+        rdagroup2elements:biographicalInformation
+                "Avocat, procureur de la commune de Troyes pendant la Révolution, représentant en mission (an VI)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1742/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1805/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1742" ;
+        bio:death                      "1805" ;
+        owl:sameAs                     <http://viaf.org/viaf/46912839> , <http://data.bnf.fr/ark:/12148/cb134873144#about> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k448646.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k6269831f.thumbnail> ;
+        foaf:familyName                "Garnier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Antoine-Charles-Marie" ;
+        foaf:name                      "Antoine-Charles-Marie Garnier" ;
+        foaf:page                      <http://data.bnf.fr/13487314/antoine-charles-marie_garnier/> .
+
+<http://data.bnf.fr/ark:/12148/cb364659584#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34028458p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134873144#foaf:Person> .

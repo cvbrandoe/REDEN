@@ -1,0 +1,82 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb372311793#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30086072b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125361599>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb125361599> ;
+        bnf-onto:FRBNF        12536159 ;
+        isni:identifierValid  "0000000109013244" ;
+        dcterms:created       "1996-10-22" ;
+        dcterms:modified      "2011-06-08" ;
+        owl:sameAs            <http://isni.org/isni/0000000109013244> ;
+        skos:altLabel         "Joseph-Balthazard Sunderson Bérard (1763-1844?)"@fr , "Citoyen S. B. (1763-1844?)"@fr , "Sunderson Bérard (1763-1844?)"@fr ;
+        skos:editorialNote    "Entretien du citoyen S. B., curé jacobin, avec un maître d'école, dans la commune de ***, département des Hautes-Alpes, 1995 [document électronique : reprod. de l'éd. de 1794]. - . - Statistique des voûtes, contenant l'essai d'une nouvelle théorie de la poussée et un appendice sur les anses de panier / par J.-B. Bérard, 1810. - . -"@fr , "Quérard : Joseph-Balthazard SUNDERSON BERARD. - . - BN Cat. gén.. - . -"@fr , "DBF. - . - Larousse 19e s. : Bérard (Joseph-Balthasar). - . - Barbier : Joseph-Balthazard Bérard. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/170888118> , <http://isni.org/isni/0000000109013244> , <http://viaf.org/viaf/52029320> ;
+        skos:note             "Commissaire puis juge d'instruction près le tribunal correctionnel de Briançon et professeur de mathématiques au collège de Briançon"@fr ;
+        skos:prefLabel        "Joseph-Balthazard Bérard (1763-1844?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1763 ;
+        bnf-onto:lastYear               1844 ;
+        rdagroup2elements:biographicalInformation
+                "Commissaire puis juge d'instruction près le tribunal correctionnel de Briançon et professeur de mathématiques au collège de Briançon" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1763/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1844/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Briançon (Hautes-Alpes)" ;
+        rdagroup2elements:placeOfDeath  "Lyon" ;
+        bio:birth                       "1763-09-23" ;
+        bio:death                       "1844" ;
+        owl:sameAs                      <http://viaf.org/viaf/52029320> , <http://data.bnf.fr/ark:/12148/cb125361599#about> , <http://www.idref.fr/170888118> ;
+        foaf:birthday                   "09-23" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k465687.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k109522n.thumbnail> ;
+        foaf:familyName                 "Bérard" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Joseph-Balthazard" ;
+        foaf:name                       "Joseph-Balthazard Bérard" ;
+        foaf:page                       <http://data.bnf.fr/12536159/joseph-balthazard_berard/> .
+
+<http://data.bnf.fr/ark:/12148/cb300860683#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30086069f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30086070n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb300860710#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb125361599#foaf:Person> .

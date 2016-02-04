@@ -1,0 +1,153 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39607649b#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37514296s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39781190s#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1730 ;
+        bnf-onto:lastYear               1793 ;
+        rdagroup2elements:biographicalInformation
+                "A aussi traduit de l'anglais en allemand" , "Traducteur, imprimeur et éditeur, franc-maçon. - Instrumentiste et compositeur. - Ami de Gotthold Ephraim Lessing (1729-1781)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1730/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1793/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Sciences de l'information et de la documentation" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/020/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Barum, Allemagne" ;
+        rdagroup2elements:placeOfDeath  "Weimar, Allemagne" ;
+        bio:birth                       "1730-01-12" ;
+        bio:death                       "1793-12-13" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb133206396#about> , <http://fr.dbpedia.org/resource/Johann_Joachim_Christoph_Bode> , <http://viaf.org/viaf/71536008> , <http://www.idref.fr/035169915> ;
+        foaf:birthday                   "01-12" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Johann_Bode_2.jpg> , <http://commons.wikimedia.org/wiki/Special:FilePath/Johann_Bode_2.jpg?width=300> , <http://gallica.bnf.fr/ark:/12148/btv1b84158791.thumbnail> ;
+        foaf:familyName                 "Bode" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Johann Joachim Christoph" ;
+        foaf:name                       "Johann Joachim Christoph Bode" ;
+        foaf:page                       <http://data.bnf.fr/13320639/johann_joachim_christoph_bode/> .
+
+<http://data.bnf.fr/ark:/12148/cb30117743n#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31379076w#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb329369671#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30117761k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39781189k#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb133206396>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Johann_Joachim_Christoph_Bode> , <http://catalogue.bnf.fr/ark:/12148/cb133206396> ;
+        bnf-onto:FRBNF        13320639 ;
+        isni:identifierValid  "0000000109143030" ;
+        dcterms:created       "1997-10-15" ;
+        dcterms:modified      "2014-09-17" ;
+        owl:sameAs            <http://isni.org/isni/0000000109143030> ;
+        skos:editorialNote    "Brockhaus, 18. Aufl.. - . - Dict. biogr. des musiciens / Theodore Baker, Nicolas Slonimsky ; trad. de l'américain par Marie-Stella Pâris, 1995. - . -"@fr , "Journal von einer Reise von Weimar nach Frankreich im Jahr 1787 / Johann Joachim Christoph Bode ; hrsg. sowie mit einer Einleitung, Anmerkungen, einem Register und einem dokumentarischen Anhang versehen von Hermann Schüttler, 1994. - . - Lit. Lex. / W. Killy. - . -"@fr ;
+        skos:exactMatch       <http://fr.wikipedia.org/wiki/Johann_Joachim_Christoph_Bode> , <http://isni.org/isni/0000000109143030> , <http://fr.dbpedia.org/resource/Johann_Joachim_Christoph_Bode> , <http://viaf.org/viaf/71536008> , <http://www.idref.fr/035169915> ;
+        skos:note             "Traducteur, imprimeur et éditeur, franc-maçon. - Instrumentiste et compositeur. - Ami de Gotthold Ephraim Lessing (1729-1781)"@fr , "A aussi traduit de l'anglais en allemand"@fr ;
+        skos:prefLabel        "Johann Joachim Christoph Bode (1730-1793)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30117762x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/13320639/johann_joachim_christoph_bode/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32647662d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb397811887#Expression>
+        bnfroles:r220        <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:cmp          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31830601h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32647650d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32647663r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30117764m#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31830602v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32178206t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30967321n#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32637065k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb133206396#foaf:Person> .

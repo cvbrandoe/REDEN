@@ -1,0 +1,76 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb310367564#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb310367533#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1814 ;
+        bnf-onto:lastYear              1875 ;
+        rdagroup2elements:biographicalInformation
+                "Premier drogman de l'ambassade de France en Perse (à partir de 1840)" , "Traduisit de l'allemand, de l'italien, de l'anglais et du persan" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1814/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1875/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1814" ;
+        bio:death                      "1875" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb11917670k#about> , <http://viaf.org/viaf/56614277> , <http://www.idref.fr/027047636> ;
+        foaf:familyName                "Nicolas" ;
+        foaf:givenName                 "Jean-Baptiste" ;
+        foaf:name                      "Jean-Baptiste Nicolas" ;
+        foaf:page                      <http://data.bnf.fr/11917670/jean-baptiste_nicolas/> .
+
+<http://data.bnf.fr/ark:/12148/cb11917670k>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11917670k> ;
+        bnf-onto:FRBNF        11917670 ;
+        isni:identifierValid  "0000000119850986" ;
+        dcterms:created       "1985-06-22" ;
+        dcterms:modified      "2013-07-24" ;
+        owl:sameAs            <http://isni.org/isni/0000000119850986> ;
+        skos:altLabel         "Louis Jean-Baptiste Nicolas"@fr ;
+        skos:editorialNote    "Dictionnaire universel des traducteurs / Henri Van Hoof, 1993 : NICOLAS, J.B.. - . - BN Cat. gén. : NICOLAS (J.-B.). - . -"@fr , "Dictionnaire persan-français / par J.-B. Nicolas, 1885-1887. - . - Lorenz 1840-1890 et 1906/1909 : NICOLAS (J.B.). - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000119850986> , <http://www.idref.fr/027047636> , <http://viaf.org/viaf/56614277> ;
+        skos:note             "Traduisit de l'allemand, de l'italien, de l'anglais et du persan"@fr , "Premier drogman de l'ambassade de France en Perse (à partir de 1840)"@fr ;
+        skos:prefLabel        "Jean-Baptiste Nicolas (1814-1875)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31015772q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34768846t#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb394057202#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346742556#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11917670k#foaf:Person> .

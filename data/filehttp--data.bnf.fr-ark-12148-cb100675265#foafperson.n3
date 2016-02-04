@@ -1,0 +1,48 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb100675265>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb100675265> ;
+        bnf-onto:FRBNF      10067526 ;
+        dcterms:created     "1997-07-01" ;
+        dcterms:modified    "2011-05-25" ;
+        skos:editorialNote  "Bérenger, ou l'Anneau de mariage, vaudeville en 1 acte / par MM. Lafortelle et Victor [Victorin Fabre], [Paris, Vaudeville, 4 février 1809], 1809. - . - BN Cat. gén.: Fabre (Victorin), pseud. Victor. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/171008700> ;
+        skos:note           "Auteur dramatique"@fr ;
+        skos:prefLabel      "Victor (1785-1831)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb100675265#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb100675265#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1785 ;
+        bnf-onto:lastYear              1831 ;
+        rdagroup2elements:biographicalInformation
+                "Auteur dramatique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1785/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1831/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1785-07-19" ;
+        bio:death                      "1831-05-29" ;
+        owl:sameAs                     <http://viaf.org/viaf/171008700> , <http://data.bnf.fr/ark:/12148/cb100675265#about> ;
+        foaf:birthday                  "07-19" ;
+        foaf:familyName                "Victor" ;
+        foaf:gender                    "male" ;
+        foaf:page                      <http://data.bnf.fr/10067526/victor/> .
+
+<http://data.bnf.fr/ark:/12148/cb30716883z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb100675265#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb100675265#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb100675265#foaf:Person> .

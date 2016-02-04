@@ -1,0 +1,106 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1876 ;
+        rdagroup2elements:biographicalInformation
+                "Ténor. - Débute à l'Opéra de Paris en 1896" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1876/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1901-2000/> ;
+        bio:birth                      "1876" ;
+        bio:death                      "19.." ;
+        owl:sameAs                     <http://viaf.org/viaf/24797954> , <http://data.bnf.fr/ark:/12148/cb13999764b#about> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k1310999d.thumbnail> ;
+        foaf:familyName                "Gautier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Franz" ;
+        foaf:name                      "Franz Gautier" ;
+        foaf:page                      <http://data.bnf.fr/13999764/franz_gautier/> .
+
+<http://data.bnf.fr/ark:/12148/cb38307105p#Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383565852#Expression>
+        bnfroles:r1150       <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38354796s#Expression>
+        bnfroles:r1150       <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13999764b>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb13999764b> ;
+        bnf-onto:FRBNF    13999764 ;
+        dcterms:created   "1997-03-13" ;
+        dcterms:modified  "2012-04-13" ;
+        skos:exactMatch   <http://viaf.org/viaf/24797954> ;
+        skos:note         "Ténor. - Débute à l'Opéra de Paris en 1896"@fr ;
+        skos:prefLabel    "Franz Gautier (1876-19..)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39145777b#Expression>
+        bnfroles:r1150       <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38302762z#Expression>
+        bnfroles:r1150       <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb382981764#Expression>
+        bnfroles:r1150       <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38357673k#Expression>
+        bnfroles:r1150       <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38354795f#Expression>
+        bnfroles:r1150       <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37906741v#Expression>
+        bnfroles:r1150       <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb383567294#Expression>
+        bnfroles:r1150       <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38302897w#Expression>
+        bnfroles:r1150       <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb379067515#Expression>
+        bnfroles:r1150       <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38304595v#Expression>
+        bnfroles:r1030       <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        marcrel:sng          <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13999764b#foaf:Person> .

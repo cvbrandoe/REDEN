@@ -1,0 +1,78 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30265321z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35444701t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30265319d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302653240#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37303894z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1560 ;
+        rdagroup2elements:biographicalInformation
+                "Auteur de vers politiques et polémiques. - Avocat à Dijon. - Mort après 1603" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1560/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Langres (Haute-Marne)" ;
+        bio:birth                       "1560" ;
+        bio:death                       "16.." ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb12197985v#about> , <http://viaf.org/viaf/9895222> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k79111h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k56125447.thumbnail> ;
+        foaf:familyName                 "Constant" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Pierre" ;
+        foaf:name                       "Pierre Constant" ;
+        foaf:page                       <http://data.bnf.fr/12197985/pierre_constant/> .
+
+<http://data.bnf.fr/ark:/12148/cb12197985v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12197985v> ;
+        bnf-onto:FRBNF        12197985 ;
+        isni:identifierValid  "0000000000171417" ;
+        dcterms:created       "1991-04-11" ;
+        dcterms:modified      "2015-05-22" ;
+        owl:sameAs            <http://isni.org/isni/0000000000171417> ;
+        skos:editorialNote    "DBF. - . - BN Cat. gén.. - . -"@fr , "Opuscules : (vers et prose) / de Pierre Constant, jurisconsulte et poète lengrois, XVIe siècle ; avec introduction et notes par le Dr E. Bougard, 1971. - . - Dictionnaire des littératures française et étrangères / sous la dir. de J. Demougin, 1992. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000000171417> , <http://viaf.org/viaf/9895222> ;
+        skos:note             "Auteur de vers politiques et polémiques. - Avocat à Dijon. - Mort après 1603"@fr ;
+        skos:prefLabel        "Pierre Constant (1560-16..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30265325b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12197985v#foaf:Person> .

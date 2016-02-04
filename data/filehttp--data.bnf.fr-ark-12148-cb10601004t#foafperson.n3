@@ -1,0 +1,94 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31932342x#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1864 ;
+        bnf-onto:lastYear               1936 ;
+        rdagroup2elements:biographicalInformation
+                "Magistrat. - A été premier président de la Cour d'appel de Paris. - Docteur en droit (Paris, 1887). - Lauréat de la Faculté de droit de Paris" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1864/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1936/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Droit" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/340/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Mulhouse (Haut-Rhin)" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1864-03-16" ;
+        bio:death                       "1936" ;
+        owl:sameAs                      <http://www.idref.fr/057503060> , <http://viaf.org/viaf/160110156> , <http://data.bnf.fr/ark:/12148/cb10601004t#about> ;
+        foaf:birthday                   "03-16" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k55103275.thumbnail> ;
+        foaf:familyName                 "Dreyfus" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Eugène" ;
+        foaf:name                       "Eugène Dreyfus" ;
+        foaf:page                       <http://data.bnf.fr/10601004/eugene_dreyfus/> .
+
+<http://data.bnf.fr/ark:/12148/cb320444921#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34068080k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> .
+
+<http://data.bnf.fr/10601004/eugene_dreyfus/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30354421z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30805053j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30354423n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10601004t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10601004t> ;
+        bnf-onto:FRBNF        10601004 ;
+        isni:identifierValid  "0000000107508980" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-07-16" ;
+        owl:sameAs            <http://isni.org/isni/0000000107508980> ;
+        skos:altLabel         "Eugène Emmanuel Dreyfus (1864-1936)"@fr ;
+        skos:editorialNote    "BnF - Département de la recherche bibliographique [Recueil. Dossiers biographiques Boutillier du Retail. Documentation sur Eugène Dreyfus], 1929-1936. - . - BN Cat. gén. : Dreyfus (Eugène Emmanuel). - . -"@fr , "ABF. - . - JBA. - . - Qui êtes-vous? : annuaire des contemporains; notices biographiques, 1924. - . -"@fr , "Droit romain : de la Condition des pubères mineurs de vingt-cinq ans. Droit français : des Sociétés civiles à formes commerciales / thèse pour le doctorat... par Eugène-Emmanuel Dreyfus, 1887. - . - Leonore. - http://www.culture.gouv.fr/public/mistral/leonore_fr. - 2010-11-03"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000107508980> , <http://viaf.org/viaf/160110156> , <http://www.idref.fr/057503060> ;
+        skos:note             "Magistrat. - A été premier président de la Cour d'appel de Paris. - Docteur en droit (Paris, 1887). - Lauréat de la Faculté de droit de Paris"@fr ;
+        skos:prefLabel        "Eugène Dreyfus (1864-1936)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303544229#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10601004t#foaf:Person> .

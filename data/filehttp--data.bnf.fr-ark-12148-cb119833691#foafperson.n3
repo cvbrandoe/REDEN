@@ -1,0 +1,57 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cc4235c/ca2996#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb119833691#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb119833691#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb119833691#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb119833691#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1874 ;
+        bnf-onto:lastYear              1943 ;
+        rdagroup2elements:biographicalInformation
+                "Henriette Rainouard épousa en premières noces Léo Claretie, puis en 1911 Joseph Caillaux. - Le 16 mars 1914, elle assassina Gaston Calmette, directeur du Figaro, qui menait une violente campagne contre son mari. - Mme Caillaux fut jugée et acquittée par la cour d'assises" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1874/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1943/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1874-12-05" ;
+        bio:death                      "1943" ;
+        owl:sameAs                     <http://dbpedia.org/resource/Henriette_Caillaux> , <http://data.bnf.fr/ark:/12148/cb119833691#about> , <http://fr.dbpedia.org/resource/Henriette_Caillaux> , <http://www.idref.fr/027888657> , <http://viaf.org/viaf/72194440> ;
+        foaf:birthday                  "12-05" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b6930805h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69304447.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69309105.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930443t.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b90824223.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930907p.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69304410.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Caillix_5332813205_482fc13b62_o.jpg> , <http://gallica.bnf.fr/ark:/12148/btv1b69310371.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930900s.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930807b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6931038f.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930899k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9082424x.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Caillix_5332813205_482fc13b62_o.jpg?width=300> , <http://gallica.bnf.fr/ark:/12148/btv1b6930460b.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69309068.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930452s.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930806x.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9082423h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6931020r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69304536.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930450z.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69308918.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930440k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69308985.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930459p.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6931036m.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b9082421p.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69309083.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930451c.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930905v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69309016.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930847v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930461r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930909h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930442d.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6930904f.thumbnail> ;
+        foaf:familyName                "Caillaux" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Henriette" ;
+        foaf:name                      "Henriette Caillaux" ;
+        foaf:page                      <http://data.bnf.fr/11983369/henriette_caillaux/> .
+
+<http://data.bnf.fr/ark:/12148/cb119833691>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Henriette_Caillaux> , <http://catalogue.bnf.fr/ark:/12148/cb119833691> ;
+        bnf-onto:FRBNF        11983369 ;
+        isni:identifierValid  "0000000121391133" ;
+        dcterms:created       "1985-07-08" ;
+        dcterms:modified      "2013-10-24" ;
+        owl:sameAs            <http://isni.org/isni/0000000121391133> ;
+        skos:altLabel         "Henriette Rainouard (1874-1943)"@fr , "Geneviève Joséphine Henriette Caillaux (1874-1943)"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/Henriette_Caillaux> , <http://fr.dbpedia.org/resource/Henriette_Caillaux> , <http://isni.org/isni/0000000121391133> , <http://fr.wikipedia.org/wiki/Henriette_Caillaux> , <http://viaf.org/viaf/72194440> , <http://www.idref.fr/027888657> ;
+        skos:note             "Henriette Rainouard épousa en premières noces Léo Claretie, puis en 1911 Joseph Caillaux. - Le 16 mars 1914, elle assassina Gaston Calmette, directeur du Figaro, qui menait une violente campagne contre son mari. - Mme Caillaux fut jugée et acquittée par la cour d'assises"@fr ;
+        skos:prefLabel        "Henriette Caillaux (1874-1943)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb119833691#foaf:Person> .
+
+<http://data.bnf.fr/11983369/henriette_caillaux/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb119833691#foaf:Person> .

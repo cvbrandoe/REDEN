@@ -1,0 +1,74 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb305400064#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12720978g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12720978g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12720978g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12720978g#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1817 ;
+        bnf-onto:lastYear               1883 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre. - Frère d'Alphonse Grenier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1817/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1883/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Peinture" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/750/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Baumes-les-Dames (Doubs)" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1817-07-14" ;
+        bio:death                       "1883-03-05" ;
+        owl:sameAs                      <http://www.idref.fr/151167494> , <http://viaf.org/viaf/78459123> , <http://data.bnf.fr/ark:/12148/cb12720978g#about> ;
+        foaf:birthday                   "07-14" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6537396b.thumbnail> ;
+        foaf:familyName                 "Grenier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jules" ;
+        foaf:name                       "Jules Grenier" ;
+        foaf:page                       <http://data.bnf.fr/12720978/jules_grenier/> .
+
+<http://data.bnf.fr/ark:/12148/cb12720978g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12720978g> ;
+        bnf-onto:FRBNF        12720978 ;
+        isni:identifierValid  "0000000045029596" ;
+        dcterms:created       "1988-12-19" ;
+        dcterms:modified      "2013-12-17" ;
+        owl:sameAs            <http://isni.org/isni/0000000045029596> ;
+        skos:altLabel         "Claude-Jules Grenier (1817-1883)"@fr ;
+        skos:editorialNote    "Le journal d'un mobile de Seine-et-Marne à la défense de Paris, 1870-1871 : compagnie du canton de Crécy / par Alphonse Grenier,... mis en ordre par son frère Jules Grenier, 1874. - . - ABF: Grenier (Claude Jules). - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/78459123> , <http://isni.org/isni/0000000045029596> , <http://www.idref.fr/151167494> ;
+        skos:note             "Peintre. - Frère d'Alphonse Grenier"@fr ;
+        skos:prefLabel        "Jules Grenier (1817-1883)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12720978g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30539885f#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12720978g#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12720978g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12720978g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34974787q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12720978g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12720978g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12720978g#foaf:Person> .
+
+<http://data.bnf.fr/12720978/jules_grenier/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12720978g#foaf:Person> .

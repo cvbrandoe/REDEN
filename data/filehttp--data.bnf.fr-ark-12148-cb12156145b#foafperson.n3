@@ -1,0 +1,65 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb119482601>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12156145b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12156145b#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1754 ;
+        bnf-onto:lastYear               1801 ;
+        rdagroup2elements:biographicalInformation
+                "Empereur de Russie (1796-1801)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/ru> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1754/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1801/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/rus> ;
+        rdagroup2elements:placeOfBirth  "Saint-Petersbourg (Russie)" ;
+        rdagroup2elements:placeOfDeath  "Saint-Petersbourg (Russie)" ;
+        bio:birth                       "1754-10-01" ;
+        bio:death                       "1801-03-12" ;
+        owl:sameAs                      <http://fr.dbpedia.org/resource/Paul_Ier_de_Russie> , <http://viaf.org/viaf/39415809> , <http://data.bnf.fr/ark:/12148/cb12156145b#about> , <http://www.idref.fr/030071860> ;
+        foaf:birthday                   "10-01" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Borovikovsky_Pavel_I.jpg?width=300> , <http://commons.wikimedia.org/wiki/Special:FilePath/Borovikovsky_Pavel_I.jpg> , <http://gallica.bnf.fr/ark:/12148/btv1b8412853v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b84130483.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6940339v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6944548r.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8413047p.thumbnail> ;
+        foaf:familyName                 "Paul" ;
+        foaf:gender                     "male" ;
+        foaf:page                       <http://data.bnf.fr/12156145/paul_1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31067559g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12156145b#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12156145b#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12156145b#foaf:Person> .
+
+<http://data.bnf.fr/12156145/paul_1/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12156145b#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12156145b>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12156145b> , <http://fr.wikipedia.org/wiki/Paul_Ier_de_Russie> ;
+        bnf-onto:FRBNF        12156145 ;
+        isni:identifierValid  "0000000120959647" ;
+        dcterms:created       "1990-07-27" ;
+        dcterms:modified      "2015-04-25" ;
+        owl:sameAs            <http://isni.org/isni/0000000120959647> ;
+        skos:altLabel         "Pavel (empereur de Russie, 1754-1801)"@ru , "Paul (empereur de Russie, 1754-1801)"@fr , "Pavel I (empereur de Russie, 1754-1801)"@ru , "Paul Ier (empereur de Russie, 1754-1801)"@fr , "Павел I (empereur de Russie, 1754-1801)"@ru ;
+        skos:editorialNote    "Verordnungen S. K. M. Paul des Ersten, Kaisers und Selbstherrschers aller Reussen ; uebersetzt... [von Russe], [s. d.]. - . - Kratkaâ Rossijskaâ ènciklopediâ, T.2, 2003. - . -"@fr , "GDEL. - . - LC-Authorities. - http://authorities.loc.gov. - 2005-11-28"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/39415809> , <http://isni.org/isni/0000000120959647> , <http://fr.wikipedia.org/wiki/Paul_Ier_de_Russie> , <http://www.idref.fr/030071860> , <http://fr.dbpedia.org/resource/Paul_Ier_de_Russie> ;
+        skos:note             "Empereur de Russie (1796-1801)"@fr ;
+        skos:prefLabel        "Paul I (empereur de Russie, 1754-1801)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12156145b#foaf:Person> .

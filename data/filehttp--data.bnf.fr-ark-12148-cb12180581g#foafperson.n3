@@ -1,0 +1,79 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1836 ;
+        bnf-onto:lastYear              1914 ;
+        rdagroup2elements:biographicalInformation
+                "Prêtre (1860) du Diocèse de Nîmes. - Membre de l'Académie de Nîmes. - Curé de Saint-Gilles (1892-1908). - Chanoine titulaire de la Cathédrale de Nîmes (à partir de 1908)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1836/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1914/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1836-09-27" ;
+        bio:death                      "1914" ;
+        owl:sameAs                     <http://viaf.org/viaf/73897070> , <http://www.idref.fr/079822185> , <http://data.bnf.fr/ark:/12148/cb12180581g#about> ;
+        foaf:birthday                  "09-27" ;
+        foaf:familyName                "Nicolas" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "César" ;
+        foaf:name                      "César Nicolas" ;
+        foaf:page                      <http://data.bnf.fr/12180581/cesar_nicolas/> .
+
+<http://data.bnf.fr/ark:/12148/cb352111720#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34122125m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb357279585#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36019292m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12180581g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12180581g> ;
+        bnf-onto:FRBNF        12180581 ;
+        isni:identifierValid  "0000000080163248" ;
+        dcterms:created       "1991-01-04" ;
+        dcterms:modified      "2013-07-26" ;
+        owl:sameAs            <http://isni.org/isni/0000000080163248> ;
+        skos:altLabel         "César-Augustin Nicolas (1836-1914 ?)"@fr ;
+        skos:editorialNote    "Lorenz 1886-1912. - . - Ordo de Nîmes, 1905. - . -"@fr , "Une nouvelle histoire de Saint-Gilles / chanoine Nicolas, 1993  (réimpr. de l'éd. de 1912). - . - Dictionnaire des noms prpores de l'Académie de Nîmes / Christian Lacour, 1990. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/73897070> , <http://www.idref.fr/079822185> , <http://isni.org/isni/0000000080163248> ;
+        skos:note             "Prêtre (1860) du Diocèse de Nîmes. - Membre de l'Académie de Nîmes. - Curé de Saint-Gilles (1892-1908). - Chanoine titulaire de la Cathédrale de Nîmes (à partir de 1908)"@fr ;
+        skos:prefLabel        "César Nicolas (1836-1914 ?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41362791x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35668678v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12180581g#foaf:Person> .

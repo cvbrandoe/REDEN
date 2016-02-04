@@ -1,0 +1,45 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb139776556#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1832 ;
+        bnf-onto:lastYear              1902 ;
+        rdagroup2elements:biographicalInformation
+                "Auteur de l'hymne national gallois" , "Compositeur. - Classique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1832/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1902/> ;
+        bio:birth                      "1832" ;
+        bio:death                      "1902" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb139776556#about> , <http://viaf.org/viaf/63226940> , <http://fr.dbpedia.org/resource/James_James> ;
+        foaf:familyName                "James" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "James" ;
+        foaf:name                      "James James" ;
+        foaf:page                      <http://data.bnf.fr/13977655/james_james/> .
+
+<http://data.bnf.fr/ark:/12148/cb13977656j#frbr:Work>
+        dcterms:creator  <http://data.bnf.fr/ark:/12148/cb139776556#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb139776556>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/James_James> , <http://catalogue.bnf.fr/ark:/12148/cb139776556> ;
+        bnf-onto:FRBNF        13977655 ;
+        isni:identifierValid  "0000000116576758" ;
+        dcterms:created       "1995-06-21" ;
+        dcterms:modified      "2013-08-01" ;
+        owl:sameAs            <http://isni.org/isni/0000000116576758> ;
+        skos:exactMatch       <http://isni.org/isni/0000000116576758> , <http://viaf.org/viaf/63226940> , <http://fr.wikipedia.org/wiki/James_James> , <http://fr.dbpedia.org/resource/James_James> ;
+        skos:note             "Auteur de l'hymne national gallois"@fr , "Compositeur. - Classique"@fr ;
+        skos:prefLabel        "James James (1832-1902)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb139776556#foaf:Person> .

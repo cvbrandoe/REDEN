@@ -1,0 +1,54 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12066669r#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1875 ;
+        bnf-onto:lastYear              1969 ;
+        rdagroup2elements:biographicalInformation
+                "Banquier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1875/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1969/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1875-01-17" ;
+        bio:death                      "1969" ;
+        owl:sameAs                     <http://www.idref.fr/028933834> , <http://viaf.org/viaf/22164082> , <http://data.bnf.fr/ark:/12148/cb12066669r#about> ;
+        foaf:birthday                  "01-17" ;
+        foaf:familyName                "Morin" ;
+        foaf:givenName                 "Jean" ;
+        foaf:name                      "Jean Morin" ;
+        foaf:page                      <http://data.bnf.fr/12066669/jean_morin/> .
+
+<http://data.bnf.fr/ark:/12148/cb12066669r>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12066669r> ;
+        bnf-onto:FRBNF        12066669 ;
+        isni:identifierValid  "000000010855820X" ;
+        dcterms:created       "1988-02-16" ;
+        dcterms:modified      "2013-07-25" ;
+        skos:altLabel         "Jean-Baptiste Morin (1875-1969)"@fr ;
+        skos:exactMatch       <http://www.idref.fr/028933834> , <http://viaf.org/viaf/22164082> ;
+        skos:note             "Banquier"@fr ;
+        skos:prefLabel        "Jean Morin (1875-1969)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12066669r#foaf:Person> .
+
+<http://data.bnf.fr/12066669/jean_morin/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12066669r#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34773163g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12066669r#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12066669r#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12066669r#foaf:Person> .

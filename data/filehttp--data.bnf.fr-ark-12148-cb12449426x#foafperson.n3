@@ -1,0 +1,83 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30038699g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb300387047#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12449426x>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12449426x> ;
+        bnf-onto:FRBNF        12449426 ;
+        isni:identifierValid  "0000000081034157" ;
+        dcterms:created       "1995-02-28" ;
+        dcterms:modified      "2013-07-27" ;
+        owl:sameAs            <http://isni.org/isni/0000000081034157> ;
+        skos:editorialNote    "Observations de Henri Auguste, sur le mémoire de la Commission générale des monnoies, concernant la refonte des espèces, présenté à la Convention nationale le 30 octobre 1792, 1995 [document électronique : reprod. de l'éd. de 1792]. - . - DBF. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/086034553> , <http://isni.org/isni/0000000081034157> , <http://viaf.org/viaf/24696309> ;
+        skos:note             "Orfèvre. - Fut fermier des affinages des monnaies de Paris et de Lyon"@fr ;
+        skos:prefLabel        "Henri Auguste (1759-1816)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30038703w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb300387016#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30038700v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1759 ;
+        bnf-onto:lastYear              1816 ;
+        rdagroup2elements:biographicalInformation
+                "Orfèvre. - Fut fermier des affinages des monnaies de Paris et de Lyon" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1759/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1816/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1759-03-19" ;
+        bio:death                      "1816-09-14" ;
+        owl:sameAs                     <http://viaf.org/viaf/24696309> , <http://data.bnf.fr/ark:/12148/cb12449426x#about> , <http://www.idref.fr/086034553> ;
+        foaf:birthday                  "03-19" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k568537.thumbnail> ;
+        foaf:familyName                "Auguste" ;
+        foaf:givenName                 "Henri" ;
+        foaf:name                      "Henri Auguste" ;
+        foaf:page                      <http://data.bnf.fr/12449426/henri_auguste/> .
+
+<http://data.bnf.fr/ark:/12148/cb30038702j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37241048r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12449426x#foaf:Person> .

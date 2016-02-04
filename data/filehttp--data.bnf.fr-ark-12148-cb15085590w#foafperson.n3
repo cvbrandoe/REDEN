@@ -1,0 +1,85 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1720 ;
+        rdagroup2elements:biographicalInformation
+                "Jésuite (novice le 14 octobre 1739). - Professa les humanités, la grammaire et la rhétorique. - Prêchait à Nevers en 1762" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1720/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1701-1800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Le Faou (diocèse de Quimper, Finistère)" ;
+        bio:birth                       "1720-02-21" ;
+        bio:death                       "17.." ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb15085590w#about> , <http://www.idref.fr/078765544> , <http://viaf.org/viaf/230362525> ;
+        foaf:birthday                   "02-21" ;
+        foaf:familyName                 "Olivier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Jean-Hervé" ;
+        foaf:name                       "Jean-Hervé Olivier" ;
+        foaf:page                       <http://data.bnf.fr/15085590/jean-herve_olivier/> .
+
+<http://data.bnf.fr/ark:/12148/cb31035019r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31035024b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31035020z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb310350172#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31035022n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31035018d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb310350219#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb15085590w>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb15085590w> ;
+        bnf-onto:FRBNF      15085590 ;
+        dcterms:created     "2006-08-01" ;
+        dcterms:modified    "2006-11-08" ;
+        skos:editorialNote  "L'aurore / [signé : J.-H. Olivier], 1751. - . - Sommervogel. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/230362525> , <http://www.idref.fr/078765544> ;
+        skos:note           "Jésuite (novice le 14 octobre 1739). - Professa les humanités, la grammaire et la rhétorique. - Prêchait à Nevers en 1762"@fr ;
+        skos:prefLabel      "Jean-Hervé Olivier (1720-17..)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb310350230#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb15085590w#foaf:Person> .

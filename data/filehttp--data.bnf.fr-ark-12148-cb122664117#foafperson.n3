@@ -1,0 +1,92 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb39633111x#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41739440z#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb417394419#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39834034w#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> .
+
+<http://data.bnf.fr/12266411/pierre_grimaldi/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41739442n#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122664117>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Pierre_de_Polignac> , <http://catalogue.bnf.fr/ark:/12148/cb122664117> ;
+        bnf-onto:FRBNF        12266411 ;
+        isni:identifierValid  "0000000080014381" ;
+        dcterms:created       "1992-10-09" ;
+        dcterms:modified      "2015-03-13" ;
+        skos:altLabel         "Pierre (prince de Monaco, 1895-1964)"@fr , "Pierre de Polignac (1895-1964)"@fr , "Pierre de Monaco (1895-1964)"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/69195158> , <http://fr.wikipedia.org/wiki/Pierre_de_Polignac> , <http://www.idref.fr/031450970> , <http://fr.dbpedia.org/resource/Pierre_de_Polignac> ;
+        skos:note             "Né Pierre de Polignac. - Époux de Charlotte, fille légitimée de Louis II de Monaco. - Prit le nom de Grimaldi. - Comte de Polignac, duc de Valentinois"@fr ;
+        skos:prefLabel        "Pierre Grimaldi (1895-1964)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1895 ;
+        bnf-onto:lastYear               1964 ;
+        rdagroup2elements:biographicalInformation
+                "Né Pierre de Polignac. - Époux de Charlotte, fille légitimée de Louis II de Monaco. - Prit le nom de Grimaldi. - Comte de Polignac, duc de Valentinois" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/mc> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1895/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1964/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Château de Kerscamp, Hennebont (Morbihan)" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1895-10-24" ;
+        bio:death                       "1964-11-10" ;
+        owl:sameAs                      <http://fr.dbpedia.org/resource/Pierre_de_Polignac> , <http://viaf.org/viaf/69195158> , <http://www.idref.fr/031450970> , <http://data.bnf.fr/ark:/12148/cb122664117#about> ;
+        foaf:birthday                   "10-24" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Pierre_Marie_de_Polignac.jpg> , <http://gallica.bnf.fr/ark:/12148/btv1b530968918.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Pierre_Marie_de_Polignac.jpg?width=300> ;
+        foaf:familyName                 "Grimaldi" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Pierre" ;
+        foaf:name                       "Pierre Grimaldi" ;
+        foaf:page                       <http://data.bnf.fr/12266411/pierre_grimaldi/> .
+
+<http://data.bnf.fr/ark:/12148/cb41739444b#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb417394430#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb122664117#foaf:Person> .

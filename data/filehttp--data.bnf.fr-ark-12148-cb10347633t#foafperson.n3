@@ -1,0 +1,107 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb302818553#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302818611#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30281860p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30281856f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30281857s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30066471p#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1822 ;
+        bnf-onto:lastYear              1894 ;
+        rdagroup2elements:biographicalInformation
+                "Inspecteur des chemins de fer du Nord. - Fondateur de la Société des amis du livre. - Bibliophile" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1822/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1894/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1822-04-15" ;
+        bio:death                      "1894-09" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb10347633t#about> , <http://viaf.org/viaf/51678424> , <http://www.idref.fr/166663255> ;
+        foaf:birthday                  "04-15" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k3713553.thumbnail> ;
+        foaf:familyName                "Cousin" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Charles" ;
+        foaf:name                      "Charles Cousin" ;
+        foaf:page                      <http://data.bnf.fr/10347633/charles_cousin/> .
+
+<http://data.bnf.fr/ark:/12148/cb30281862c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc574393/ca59896230241563#Expression>
+        bnfroles:r110        <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> .
+
+<http://data.bnf.fr/10347633/charles_cousin/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302818584#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36577047v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10347633t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10347633t> ;
+        bnf-onto:FRBNF        10347633 ;
+        isni:identifierValid  "0000000000030534" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-10-09" ;
+        owl:sameAs            <http://isni.org/isni/0000000000030534> ;
+        skos:editorialNote    "Racontars illustrés d'un vieux collectionneur / par l'auteur du \"Voyage dans un grenier\", Charles Cousin, 1887. - . - Dictionnaire des francs-maçons français / Michel Gaudart de Soulages, Hubert Lamant, 1980. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/51678424> , <http://isni.org/isni/0000000000030534> , <http://www.idref.fr/166663255> ;
+        skos:note             "Inspecteur des chemins de fer du Nord. - Fondateur de la Société des amis du livre. - Bibliophile"@fr ;
+        skos:prefLabel        "Charles Cousin (1822-1894)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30281859g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10347633t#foaf:Person> .

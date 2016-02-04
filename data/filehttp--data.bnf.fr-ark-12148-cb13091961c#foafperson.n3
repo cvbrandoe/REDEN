@@ -1,0 +1,134 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb32396938n#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35304061r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374129842#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33126603h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1894 ;
+        bnf-onto:lastYear               1971 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur d'histoire moderne à l'Université d'Oxford" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1894/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1971/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Leeds, GB" ;
+        rdagroup2elements:placeOfDeath  "Oxford, GB" ;
+        bio:birth                       "1894-09-22" ;
+        bio:death                       "1971-10-07" ;
+        owl:sameAs                      <http://viaf.org/viaf/73988820> , <http://data.bnf.fr/ark:/12148/cb13091961c#about> , <http://www.idref.fr/029781728> ;
+        foaf:birthday                   "09-22" ;
+        foaf:familyName                 "Jacob" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Ernest Fraser" ;
+        foaf:name                       "Ernest Fraser Jacob" ;
+        foaf:page                       <http://data.bnf.fr/13091961/ernest_fraser_jacob/> .
+
+<http://data.bnf.fr/ark:/12148/cb33096086n#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb355717832#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32274463d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32274464r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13091961c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13091961c> ;
+        bnf-onto:FRBNF        13091961 ;
+        isni:identifierValid  "000000012102371X" ;
+        dcterms:created       "1989-12-14" ;
+        dcterms:modified      "2013-07-31" ;
+        skos:editorialNote    "The Fifteenth century : 1399-1485 / Ernest Fraser Jacob, 1992. - . - LCNA (CD), 1996-06. - . -"@fr , "BN Cat. gén. suppl.. - . - BN Cat. gén. 1960-1969. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/029781728> , <http://viaf.org/viaf/73988820> ;
+        skos:note             "Professeur d'histoire moderne à l'Université d'Oxford"@fr ;
+        skos:prefLabel        "Ernest Fraser Jacob (1894-1971)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35439647v#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32274467s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb322744622#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374013859#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32274466f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb322744653#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32274469g#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374132595#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31791188b#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13091961c#foaf:Person> .

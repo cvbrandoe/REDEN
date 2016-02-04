@@ -1,0 +1,107 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1648 ;
+        bnf-onto:lastYear               1722 ;
+        rdagroup2elements:biographicalInformation
+                "Moine célestin" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1648/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1722/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Orléans (Loiret)" ;
+        bio:birth                       "1648" ;
+        bio:death                       "1722-12-20" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb10670256t#about> , <http://viaf.org/viaf/7381673> ;
+        foaf:familyName                 "Proust" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Claude" ;
+        foaf:name                       "Claude Proust" ;
+        foaf:page                       <http://data.bnf.fr/10670256/claude_proust/> .
+
+<http://data.bnf.fr/ark:/12148/cb31155098g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33577306p#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36421313q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31155095f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10670256t>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb10670256t> ;
+        bnf-onto:FRBNF      10670256 ;
+        dcterms:created     "1997-07-01" ;
+        dcterms:modified    "2014-02-24" ;
+        skos:altLabel       "C. P. (1648-1722)"@fr , "C. P. C. (1648-1722)"@fr ;
+        skos:editorialNote  "Instructions morales touchant l'obligation où sont tous les chrétiens de sanctifier les jours de dimanches et les fêtes / par le R.P. Claude Proust, 1703. - . - Cioranescu 17e s.. - . -"@fr , "Verdelais à travers les siècles / Jean-François Duclot ; Association du Musée d'art religieux de Verdelais, 2006, p. 34-45. - . - BN Cat. gén. : Proust (le P. Claude), célestin. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/7381673> ;
+        skos:note           "Moine célestin"@fr ;
+        skos:prefLabel      "Claude Proust (1648-1722)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31155092d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311550974#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31155096s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33577303n#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33577305b#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31155093r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb335773040#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311550943#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311550912#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10670256t#foaf:Person> .

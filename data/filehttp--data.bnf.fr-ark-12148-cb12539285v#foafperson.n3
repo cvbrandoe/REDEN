@@ -1,0 +1,58 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb37243359q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12539285v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12539285v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12539285v#foaf:Person> .
+
+<http://data.bnf.fr/12539285/pierre-guillaume-henri_giraud/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12539285v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12539285v#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1754 ;
+        bnf-onto:lastYear              1820 ;
+        rdagroup2elements:biographicalInformation
+                "Avocat, magistrat et homme politique. - Fut maire de Nantes et député au Conseil des Anciens. - Chevalier de l'Empire" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1754/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1820/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1754-12-30" ;
+        bio:death                      "1820-09-25" ;
+        owl:sameAs                     <http://viaf.org/viaf/37029037> , <http://data.bnf.fr/ark:/12148/cb12539285v#about> , <http://www.idref.fr/082326355> ;
+        foaf:birthday                  "12-30" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b6943461z.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6943462c.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b8559307d.thumbnail> ;
+        foaf:familyName                "Giraud" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Pierre-Guillaume-Henri" ;
+        foaf:name                      "Pierre-Guillaume-Henri Giraud" ;
+        foaf:page                      <http://data.bnf.fr/12539285/pierre-guillaume-henri_giraud/> .
+
+<http://data.bnf.fr/ark:/12148/cb12539285v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12539285v> ;
+        bnf-onto:FRBNF        12539285 ;
+        isni:identifierValid  "0000000081158459" ;
+        dcterms:created       "1996-11-13" ;
+        dcterms:modified      "2006-11-07" ;
+        owl:sameAs            <http://isni.org/isni/0000000081158459> ;
+        skos:altLabel         "Giraud de Nantes"@fr , "Giraud (1754-1820)"@fr , "Pierre-Guillaume-Henri Giraud-Duplessis"@fr , "Pierre-Guillaume-Henri Giraud- Duplessis"@fr ;
+        skos:editorialNote    "Opinion de Giraud (de Nantes), sur la résolution relative à un impôt sur le sel : séance du 26 pluviôse an VII / Conseil des Anciens, 1995 [document électronique : reprod. de l'éd. de 1799]. - . - DBF : Giraud-Duplessis (Pierre-Guillaume-Henri). - . -"@fr , "BN Cat. gén. : Giraud-Duplessis (Pierre-Guillaume-Henri). - . - BN Cat. gén. suppl. : Giraud-Duplessis (Pierre-Guillaume-Henri), de Nantes. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000081158459> , <http://viaf.org/viaf/37029037> , <http://www.idref.fr/082326355> ;
+        skos:note             "Avocat, magistrat et homme politique. - Fut maire de Nantes et député au Conseil des Anciens. - Chevalier de l'Empire"@fr ;
+        skos:prefLabel        "Pierre-Guillaume-Henri Giraud (1754-1820)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12539285v#foaf:Person> .

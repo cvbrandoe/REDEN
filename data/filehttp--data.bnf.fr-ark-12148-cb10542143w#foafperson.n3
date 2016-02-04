@@ -1,0 +1,80 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31690945v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31690947j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10542143w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10542143w> ;
+        bnf-onto:FRBNF        10542143 ;
+        isni:identifierValid  "0000000066326549" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-07-16" ;
+        owl:sameAs            <http://isni.org/isni/0000000066326549> ;
+        skos:altLabel         "Joseph Zola (1739-1806)"@fr ;
+        skos:editorialNote    "Lezioni di storia delle leggi e de'costumi de'popoli sino alla repubblica di Roma /  recitate nella regia università di Pavia dall'abate Giuseppe Zola,... Opera postuma con un saggio storico degli studii e delle opere dello stesso autore, 1809. - . - Encicl. italiana. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/149800681> , <http://isni.org/isni/0000000066326549> , <http://viaf.org/viaf/31986561> ;
+        skos:note             "A aussi écrit en latin"@fr , "Chanoine. - Théologien et philosophe janséniste"@fr ;
+        skos:prefLabel        "Giuseppe Zola (1739-1806)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1739 ;
+        bnf-onto:lastYear               1806 ;
+        rdagroup2elements:biographicalInformation
+                "A aussi écrit en latin" , "Chanoine. - Théologien et philosophe janséniste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1739/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1806/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        rdagroup2elements:placeOfBirth  "Concesio, Italie" ;
+        rdagroup2elements:placeOfDeath  "Pavie, Italie" ;
+        bio:birth                       "1739" ;
+        bio:death                       "1806-11-05" ;
+        owl:sameAs                      <http://www.idref.fr/149800681> , <http://data.bnf.fr/ark:/12148/cb10542143w#about> , <http://viaf.org/viaf/31986561> ;
+        foaf:familyName                 "Zola" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Giuseppe" ;
+        foaf:name                       "Giuseppe Zola" ;
+        foaf:page                       <http://data.bnf.fr/10542143/giuseppe_zola/> .
+
+<http://data.bnf.fr/ark:/12148/cb31690944h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316909497#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31690948w#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316909466#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10542143w#foaf:Person> .

@@ -1,0 +1,80 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30511382p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1842 ;
+        rdagroup2elements:biographicalInformation
+                "Romancier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1842/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "L'Isle-sur-Sorgue (Vaucluse)" ;
+        bio:birth                       "1842" ;
+        bio:death                       "19.." ;
+        owl:sameAs                      <http://viaf.org/viaf/19811790> , <http://data.bnf.fr/ark:/12148/cb129936576#about> ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k65446796.thumbnail> ;
+        foaf:familyName                 "Giraud" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Eugène" ;
+        foaf:name                       "Eugène Giraud" ;
+        foaf:page                       <http://data.bnf.fr/12993657/eugene_giraud/> .
+
+<http://data.bnf.fr/ark:/12148/cb30511384c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> .
+
+<http://data.bnf.fr/12993657/eugene_giraud/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb129936576>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb129936576> ;
+        bnf-onto:FRBNF        12993657 ;
+        isni:identifierValid  "0000000122590417" ;
+        dcterms:created       "1995-01-26" ;
+        dcterms:modified      "2015-03-14" ;
+        owl:sameAs            <http://isni.org/isni/0000000122590417> ;
+        skos:editorialNote    "Mademoiselle Besson / par Eugène Giraud, 1879. - . - Lorene. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/19811790> , <http://isni.org/isni/0000000122590417> ;
+        skos:note             "Romancier"@fr ;
+        skos:prefLabel        "Eugène Giraud (1842-19..?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305113862#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30511385q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb305113831#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb129936576#foaf:Person> .

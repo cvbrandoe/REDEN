@@ -1,0 +1,111 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb127699445>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb127699445> ;
+        bnf-onto:FRBNF        12769944 ;
+        isni:identifierValid  "0000000066526145" ;
+        dcterms:created       "1990-11-28" ;
+        dcterms:modified      "2013-07-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000066526145> ;
+        skos:editorialNote    "Carnets d'atelier / Gaëtan Dumas, 1956. - . - Les lauriers rouges / Gaëtan Dumas : poèmes de guerre 1914-1918, [19..]. - . -"@fr , "Bénézit, 1999. - . - BN Cat. gén. suppl.. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/73978948> , <http://www.idref.fr/027285014> , <http://isni.org/isni/0000000066526145> ;
+        skos:note             "Peintre et poète"@fr ;
+        skos:prefLabel        "Gaëtan Dumas (1879-1950)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> .
+
+<http://data.bnf.fr/12769944/gaetan_dumas/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb403449368#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb405049374#Expression>
+        bnfroles:r410        <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        marcrel:egr          <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40394860w#Expression>
+        bnfroles:r520        <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        marcrel:art          <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb403449546#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40411581t#Expression>
+        bnfroles:r440        <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        marcrel:ill          <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb403654712#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351738567#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32988261j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1879 ;
+        bnf-onto:lastYear               1950 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre et poète" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1879/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1950/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Peinture" , "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/800/> , <http://dewey.info/class/750/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Marseille" ;
+        rdagroup2elements:placeOfDeath  "Bordeaux" ;
+        bio:birth                       "1879" ;
+        bio:death                       "1950" ;
+        owl:sameAs                      <http://viaf.org/viaf/73978948> , <http://www.idref.fr/027285014> , <http://data.bnf.fr/ark:/12148/cb127699445#about> ;
+        foaf:familyName                 "Dumas" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Gaëtan" ;
+        foaf:name                       "Gaëtan Dumas" ;
+        foaf:page                       <http://data.bnf.fr/12769944/gaetan_dumas/> .
+
+<http://data.bnf.fr/ark:/12148/cb32056188n#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32056183x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31768904r#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb127699445#foaf:Person> .

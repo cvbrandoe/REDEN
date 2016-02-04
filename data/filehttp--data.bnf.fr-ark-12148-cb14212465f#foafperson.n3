@@ -1,0 +1,65 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb42048415n#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14212465f#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14212465f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14212465f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38388277q#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14212465f#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14212465f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14212465f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38254547v#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14212465f#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14212465f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14212465f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14212465f>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14212465f> ;
+        bnf-onto:FRBNF        14212465 ;
+        isni:identifierValid  "0000000071548816" ;
+        dcterms:created       "2003-03-10" ;
+        dcterms:modified      "2014-08-18" ;
+        owl:sameAs            <http://isni.org/isni/0000000071548816> ;
+        skos:exactMatch       <http://isni.org/isni/0000000071548816> , <http://www.idref.fr/146933079> , <http://viaf.org/viaf/100989821> ;
+        skos:note             "Actrice"@fr ;
+        skos:prefLabel        "Claire Olivier (1892-1974)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14212465f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39907778q#Expression>
+        bnfroles:r1010       <http://data.bnf.fr/ark:/12148/cb14212465f#foaf:Person> ;
+        marcrel:act          <http://data.bnf.fr/ark:/12148/cb14212465f#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14212465f#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14212465f#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1892 ;
+        bnf-onto:lastYear              1974 ;
+        rdagroup2elements:biographicalInformation
+                "Actrice" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1892/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1974/> ;
+        bio:birth                      "1892-03-13" ;
+        bio:death                      "1974-03-28" ;
+        owl:sameAs                     <http://www.idref.fr/146933079> , <http://data.bnf.fr/ark:/12148/cb14212465f#about> , <http://viaf.org/viaf/100989821> ;
+        foaf:birthday                  "03-13" ;
+        foaf:familyName                "Olivier" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Claire" ;
+        foaf:name                      "Claire Olivier" ;
+        foaf:page                      <http://data.bnf.fr/14212465/claire_olivier/> .

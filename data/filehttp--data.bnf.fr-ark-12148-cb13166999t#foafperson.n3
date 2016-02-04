@@ -1,0 +1,93 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb351092030#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1875 ;
+        bnf-onto:lastYear              1959 ;
+        rdagroup2elements:biographicalInformation
+                "Poète, essayiste, nouvelliste et auteur dramatique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1875/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1959/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        bio:birth                      "1875-03-22" ;
+        bio:death                      "1959-09-27" ;
+        owl:sameAs                     <http://fr.dbpedia.org/resource/Hans_Grimm_(écrivain)> , <http://data.bnf.fr/ark:/12148/cb13166999t#about> , <http://viaf.org/viaf/44436824> , <http://www.idref.fr/035099755> , <http://dbpedia.org/resource/Hans_Grimm_(écrivain)> ;
+        foaf:birthday                  "03-22" ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv_Bild_183-S61180,_Hans_Grimm.jpg?width=300> , <http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv_Bild_183-S61180,_Hans_Grimm.jpg> ;
+        foaf:familyName                "Grimm" ;
+        foaf:givenName                 "Hans" ;
+        foaf:name                      "Hans Grimm" ;
+        foaf:page                      <http://data.bnf.fr/13166999/hans_grimm/> .
+
+<http://data.bnf.fr/ark:/12148/cb44319748v#Expression>
+        bnfroles:r100        <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        marcrel:ccp          <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35130227f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35119674t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351281941#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36156589t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34315787p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13166999t>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13166999t> , <http://fr.wikipedia.org/wiki/Hans_Grimm_(écrivain)> ;
+        bnf-onto:FRBNF        13166999 ;
+        isni:identifierValid  "0000000108934084" ;
+        dcterms:created       "1997-09-02" ;
+        dcterms:modified      "2013-07-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000108934084> ;
+        skos:editorialNote    "La saga des Olewagen / Hans Grimm, 1942. - . - Wilpert. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/035099755> , <http://viaf.org/viaf/44436824> , <http://dbpedia.org/resource/Hans_Grimm_(écrivain)> , <http://fr.wikipedia.org/wiki/Hans_Grimm_(écrivain)> , <http://fr.dbpedia.org/resource/Hans_Grimm_(écrivain)> , <http://isni.org/isni/0000000108934084> ;
+        skos:note             "Poète, essayiste, nouvelliste et auteur dramatique"@fr ;
+        skos:prefLabel        "Hans Grimm (1875-1959)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35125428b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb351295873#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13166999t#foaf:Person> .

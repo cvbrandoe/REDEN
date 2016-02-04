@@ -1,0 +1,39 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/13177241/isabelle_d_aragon/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb131772411#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb131772411>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb131772411> ;
+        bnf-onto:FRBNF      13177241 ;
+        dcterms:created     "1997-12-10" ;
+        dcterms:modified    "1997-12-30" ;
+        skos:altLabel       "Isabel (reine de Portugal, 1271-1336)"@pt , "Élisabeth (sainte, 1271-1336)"@fr , "Isabelle d'Aragon (sainte, 1271-1336)"@fr , "Élisabeth d'Aragon (reine de Portugal, 1271-1336)"@fr , "Isabelle de Portugal (sainte, 1271-1336)"@fr , "Isabel de Aragón (reine de Portugal, 1271-1336)"@es , "Élisabeth de Portugal (sainte, 1271-1336)"@fr , "Isabelle (sainte, 1271-1336)"@fr , "Élisabeth d'Aragon (sainte, 1271-1336)"@fr ;
+        skos:editorialNote  "GLE (Isabelle). - . - GLU (Elisabeth). - . - Mourre, 1996 (Elisabeth de Portugal). - . -"@fr , "Grande enciclopédia portuguesa e brasileira : Isabel (Raina Santa). - . - Isabel, Queen, consort of Dinis, King of Portugal, 1271-1336 ; LCNA (CD), 1996-06. - . -"@fr ;
+        skos:note           "Fille de Pierre III d'Aragon, épousa en 1282 le roi de Portugal Denis le Libéral, auprès de qui elle mena une vie de mortification. - Veuve en 1325, elle se retira dans le tiers ordre franciscain et fonda à Coimbra le monastère de Sainte-Claire. - Canonisée en 1625"@fr ;
+        skos:prefLabel      "Isabelle d'Aragon (reine de Portugal, 1271-1336)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb131772411#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb131772411#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1271 ;
+        bnf-onto:lastYear              1336 ;
+        rdagroup2elements:biographicalInformation
+                "Fille de Pierre III d'Aragon, épousa en 1282 le roi de Portugal Denis le Libéral, auprès de qui elle mena une vie de mortification. - Veuve en 1325, elle se retira dans le tiers ordre franciscain et fonda à Coimbra le monastère de Sainte-Claire. - Canonisée en 1625" ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1271/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1336/> ;
+        bio:birth                      "1271" ;
+        bio:death                      "1336-07-04" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb131772411#about> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b84963184.thumbnail> ;
+        foaf:familyName                "Isabelle d'Aragon" ;
+        foaf:page                      <http://data.bnf.fr/13177241/isabelle_d_aragon/> .

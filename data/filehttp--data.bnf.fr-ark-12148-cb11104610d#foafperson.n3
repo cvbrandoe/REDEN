@@ -1,0 +1,72 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb326242714#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb320563019#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11104610d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11104610d> ;
+        bnf-onto:FRBNF        11104610 ;
+        isni:identifierValid  "0000000078287778" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-07-25" ;
+        owl:sameAs            <http://isni.org/isni/0000000078287778> ;
+        skos:editorialNote    "Les animaux de laboratoire : anatomie, particularités physiologiques, hématologie, maladies naturelles, expérimentation / J. Dumas, 1953. - . - Institut Pasteur. - http://www.pasteur.fr. - 2004-12-01"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000078287778> , <http://www.idref.fr/078696933> , <http://viaf.org/viaf/44292036> ;
+        skos:note             "Docteur en médecine (Paris, 1911). - Chef de service à l'Institut Pasteur, Paris (en 1938)"@fr ;
+        skos:prefLabel        "Julien Dumas (1884-1965)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1884 ;
+        bnf-onto:lastYear              1965 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en médecine (Paris, 1911). - Chef de service à l'Institut Pasteur, Paris (en 1938)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1884/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1965/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1884" ;
+        bio:death                      "1965" ;
+        owl:sameAs                     <http://www.idref.fr/078696933> , <http://data.bnf.fr/ark:/12148/cb11104610d#about> , <http://viaf.org/viaf/44292036> ;
+        foaf:familyName                "Dumas" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Julien" ;
+        foaf:name                      "Julien Dumas" ;
+        foaf:page                      <http://data.bnf.fr/11104610/julien_dumas/> .
+
+<http://data.bnf.fr/ark:/12148/cb320562340#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb368766275#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32056300z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11104610d#foaf:Person> .

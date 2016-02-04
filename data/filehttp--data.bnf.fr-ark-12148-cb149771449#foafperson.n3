@@ -1,0 +1,42 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb149771449>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb149771449> ;
+        bnf-onto:FRBNF    14977144 ;
+        dcterms:created   "2004-05-14" ;
+        dcterms:modified  "2004-07-31" ;
+        skos:note         "Homme politique. - 6ème comte Spencer"@fr ;
+        skos:prefLabel    "Charles Robert Spencer (1857-1922)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb149771449#foaf:Person> .
+
+<http://data.bnf.fr/14977144/charles_robert_spencer/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb149771449#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149771449#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1857 ;
+        bnf-onto:lastYear              1922 ;
+        rdagroup2elements:biographicalInformation
+                "Homme politique. - 6ème comte Spencer" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1857/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1922/> ;
+        bio:birth                      "1857" ;
+        bio:death                      "1922" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb149771449#about> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b69261560.thumbnail> ;
+        foaf:familyName                "Spencer" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Charles Robert" ;
+        foaf:name                      "Charles Robert Spencer" ;
+        foaf:page                      <http://data.bnf.fr/14977144/charles_robert_spencer/> .

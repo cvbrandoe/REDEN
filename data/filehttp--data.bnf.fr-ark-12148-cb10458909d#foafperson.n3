@@ -1,0 +1,81 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1772 ;
+        bnf-onto:lastYear               1840 ;
+        rdagroup2elements:biographicalInformation
+                "Naturaliste" , "A aussi écrit en latin" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/it> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1772/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1840/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ita> ;
+        rdagroup2elements:placeOfBirth  "Lograno Levante, Italie" ;
+        rdagroup2elements:placeOfDeath  "Gênes, Italie" ;
+        bio:birth                       "1772-08-29" ;
+        bio:death                       "1840-02-15" ;
+        owl:sameAs                      <http://www.idref.fr/113792344> , <http://data.bnf.fr/ark:/12148/cb10458909d#about> , <http://viaf.org/viaf/32347476> , <http://fr.dbpedia.org/resource/Domenico_Viviani> ;
+        foaf:birthday                   "08-29" ;
+        foaf:familyName                 "Viviani" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Domenico" ;
+        foaf:name                       "Domenico Viviani" ;
+        foaf:page                       <http://data.bnf.fr/10458909/domenico_viviani/> .
+
+<http://data.bnf.fr/ark:/12148/cb10458909d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10458909d> , <http://fr.wikipedia.org/wiki/Domenico_Viviani> ;
+        bnf-onto:FRBNF        10458909 ;
+        isni:identifierValid  "0000000061415614" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-07-16" ;
+        owl:sameAs            <http://isni.org/isni/0000000061415614> ;
+        skos:altLabel         "Dominicus Viviani (1772-1840)"@fr ;
+        skos:editorialNote    "Arch. biogr. italiano. - . - BN Cat. gén.. - . -"@fr , "I funghi d'Italia, e principalmente le loro specie mangereccie, velenose o sospette / descritte ed illustrate, con tavole disegnate e colorite dal vero, dal dottore Domenico Viviani, 1834. - . - Phosphorescentia maris, quatuordecim lucescentium animalculorum novis speciebus / illustrata a Dominico Viviani, 1805. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000061415614> , <http://www.idref.fr/113792344> , <http://fr.dbpedia.org/resource/Domenico_Viviani> , <http://viaf.org/viaf/32347476> , <http://fr.wikipedia.org/wiki/Domenico_Viviani> ;
+        skos:note             "A aussi écrit en latin"@fr , "Naturaliste"@fr ;
+        skos:prefLabel        "Domenico Viviani (1772-1840)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb315960073#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31596006r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31596008f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30208990x#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb315960100#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31596009s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10458909d#foaf:Person> .

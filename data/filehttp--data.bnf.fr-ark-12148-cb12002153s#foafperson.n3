@@ -1,0 +1,79 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12002153s>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12002153s> ;
+        bnf-onto:FRBNF        12002153 ;
+        isni:identifierValid  "0000000122785214" ;
+        dcterms:created       "1986-10-16" ;
+        dcterms:modified      "2013-07-25" ;
+        owl:sameAs            <http://isni.org/isni/0000000122785214> ;
+        skos:editorialNote    "Inventaire sommaire des archives antérieures à 1790, série G, 1909-.2. Evêché de Langres (fin); Chapitre de Langres... / [réd.] par P. Gautier et L. Delessard, 1978. - . - CTHS : mort à Ban-de-Sapt (Vosges). - http://cths.fr/an/prosopo.php?id=1492. - 2010-02-25"@fr , "Mémoire des hommes [prénoms : Jean Théophile]. - http://www.memoiredeshommes.sga.defense.gouv.fr. - 2008-06-27 Livret de l'École des chartes 1922-1936 [décédé à Ban-de-Sapt (Vosges)]. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000122785214> , <http://www.idref.fr/028124545> , <http://viaf.org/viaf/39387247> ;
+        skos:note             "Archiviste-paléographe (1907). - Archiviste du département de la Haute-Marne"@fr ;
+        skos:prefLabel        "Pierre Gautier (1884-1917)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35010125w#Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb340963738#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34017119h#Expression>
+        bnfroles:r9990       <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb346177672#Expression>
+        bnfroles:r620        <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> ;
+        marcrel:red          <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb341298644#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb340213383#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12002153s#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1884 ;
+        bnf-onto:lastYear               1917 ;
+        bnf-onto:mortPourLaFrance       true ;
+        rdagroup2elements:biographicalInformation
+                "Archiviste-paléographe (1907). - Archiviste du département de la Haute-Marne" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1884/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1917/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Dijon (Côte-d'Or)" ;
+        rdagroup2elements:placeOfDeath  "Saint-Dié (Vosges)" ;
+        bio:birth                       "1884-01-13" ;
+        bio:death                       "1917-06-12" ;
+        owl:sameAs                      <http://www.idref.fr/028124545> , <http://data.bnf.fr/ark:/12148/cb12002153s#about> , <http://viaf.org/viaf/39387247> ;
+        foaf:birthday                   "01-13" ;
+        foaf:familyName                 "Gautier" ;
+        foaf:givenName                  "Pierre" ;
+        foaf:name                       "Pierre Gautier" ;
+        foaf:page                       <http://data.bnf.fr/12002153/pierre_gautier/> .

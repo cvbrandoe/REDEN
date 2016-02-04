@@ -1,0 +1,48 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb145321615>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb145321615> ;
+        bnf-onto:FRBNF      14532161 ;
+        dcterms:created     "2004-03-18" ;
+        dcterms:modified    "2004-03-18" ;
+        skos:altLabel       "Jesse Woodson James (1847-1882)"@fr ;
+        skos:editorialNote  "Jesse James : last rebel of the Civil War / T. J. Stiles, 2002. - . - LC Authorities. - http://authorities.loc.gov. - 2004-03-17"@fr ;
+        skos:note           "Bandit américain. - Membre de l'armée sudiste, célèbre pour ses attaques de banques et de trains postaux, après la guerre de Sécession"@fr ;
+        skos:prefLabel      "Jesse James (1847-1882)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb145321615#foaf:Person> .
+
+<http://data.bnf.fr/14532161/jesse_james/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb145321615#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb145321615#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1847 ;
+        bnf-onto:lastYear              1882 ;
+        rdagroup2elements:biographicalInformation
+                "Bandit américain. - Membre de l'armée sudiste, célèbre pour ses attaques de banques et de trains postaux, après la guerre de Sécession" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1847/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1882/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire du reste du monde" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/950/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1847" ;
+        bio:death                      "1882" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb145321615#about> ;
+        foaf:familyName                "James" ;
+        foaf:givenName                 "Jesse" ;
+        foaf:name                      "Jesse James" ;
+        foaf:page                      <http://data.bnf.fr/14532161/jesse_james/> .
