@@ -1,0 +1,132 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30551577g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1868 ;
+        bnf-onto:lastYear              1947 ;
+        rdagroup2elements:biographicalInformation
+                "Professeur de botanique à l'Institut agronomique (1920-1927), puis à la Faculté de pharmacie (1927-1938). - Pharmacien (1895), docteur ès sciences (1899), agrégé (1904). - A été doyen de la Faculté de pharmacie de Paris" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1868/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1947/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Pharmacie" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/615/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1868-09-19" ;
+        bio:death                      "1947-05-10" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb123828369#about> , <http://viaf.org/viaf/7471427> ;
+        foaf:birthday                  "09-19" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k58236593.thumbnail> ;
+        foaf:familyName                "Guérin" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Paul" ;
+        foaf:name                      "Paul Guérin" ;
+        foaf:page                      <http://data.bnf.fr/12382836/paul_guerin/> .
+
+<http://data.bnf.fr/ark:/12148/cb32413723v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32203667n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32203677z#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb322036758#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .
+
+<http://data.bnf.fr/12382836/paul_guerin/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb438000902#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32203676m#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32203669b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31410493b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123828369>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb123828369> ;
+        bnf-onto:FRBNF        12382836 ;
+        isni:identifierValid  "0000000078329966" ;
+        dcterms:created       "1994-04-05" ;
+        dcterms:modified      "2013-07-27" ;
+        owl:sameAs            <http://isni.org/isni/0000000078329966> ;
+        skos:altLabel         "Paul-Émile-Alexis Guérin (1868-1947)"@fr ;
+        skos:editorialNote    "DBF : GUÉRIN (Paul-Émile-Alexis). - . - BN Cat. gén. : GUÉRIN (Paul), professeur à l'École supérieure de pharmacie. - . -"@fr , "Les connaissances actuelles sur la fécondation chez les phanérogames: [thèse], 1904 1904. - . - Leçon inaugurale de M. le professeur Paul Guérin : 6 mars 1928..., [1928]. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000078329966> , <http://viaf.org/viaf/7471427> ;
+        skos:note             "Professeur de botanique à l'Institut agronomique (1920-1927), puis à la Faculté de pharmacie (1927-1938). - Pharmacien (1895), docteur ès sciences (1899), agrégé (1904). - A été doyen de la Faculté de pharmacie de Paris"@fr ;
+        skos:prefLabel        "Paul Guérin (1868-1947)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31387560m#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32218912m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30551575s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32203662x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36884615w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32203661k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123828369#foaf:Person> .

@@ -1,0 +1,84 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/10725603/francois-augustin_delamare/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33774013r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb337843771#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10725603p>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10725603p> ;
+        bnf-onto:FRBNF        10725603 ;
+        isni:identifierValid  "000000006128591X" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-07-16" ;
+        skos:altLabel         "François-Auguste Delamare (1800-1871)"@fr ;
+        skos:editorialNote    "Essai sur la véritable origine et sur les vicissitudes de la cathédrale de Coutances / par l'abbé Delamare, 1841. - . - DBF : DELAMARE (François-Augustin). - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/49216706> , <http://www.idref.fr/104226331> ;
+        skos:note             "Évêque de Luçon (1856-1861), puis archevêque d'Auch. - Précédemment, prêtre du Diocèse de Coutances (ordonné en 1823 ; vicaire général de 1834 à 1856)"@fr ;
+        skos:prefLabel        "François-Augustin Delamare (1800-1871)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33287165b#Expression>
+        bnfroles:r330        <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> ;
+        marcrel:pbd          <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1800 ;
+        bnf-onto:lastYear               1871 ;
+        rdagroup2elements:biographicalInformation
+                "Évêque de Luçon (1856-1861), puis archevêque d'Auch. - Précédemment, prêtre du Diocèse de Coutances (ordonné en 1823 ; vicaire général de 1834 à 1856)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1800/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1871/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Valognes" ;
+        rdagroup2elements:placeOfDeath  "Auch" ;
+        bio:birth                       "1800-09-09" ;
+        bio:death                       "1871-07-26" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb10725603p#about> , <http://viaf.org/viaf/49216706> , <http://www.idref.fr/104226331> ;
+        foaf:birthday                   "09-09" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k63708367.thumbnail> ;
+        foaf:familyName                 "Delamare" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "François-Augustin" ;
+        foaf:name                       "François-Augustin Delamare" ;
+        foaf:page                       <http://data.bnf.fr/10725603/francois-augustin_delamare/> .
+
+<http://data.bnf.fr/ark:/12148/cb341774579#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40001856j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303133955#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10725603p#foaf:Person> .

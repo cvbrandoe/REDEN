@@ -1,0 +1,134 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1866 ;
+        bnf-onto:lastYear              1925 ;
+        rdagroup2elements:biographicalInformation
+                "Physiologiste et biologiste. - Fondateur et président de la Ligue nationale aérienne" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1866/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1925/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Médecine" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/610/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1866" ;
+        bio:death                      "1925" ;
+        owl:sameAs                     <http://www.idref.fr/029629764> , <http://data.bnf.fr/ark:/12148/cb121214560#about> , <http://viaf.org/viaf/59116213> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b6910960h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6911021m.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k8567558.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b69110681.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6910959v.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6911067m.thumbnail> ;
+        foaf:familyName                "Quinton" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "René" ;
+        foaf:name                      "René Quinton" ;
+        foaf:page                      <http://data.bnf.fr/12121456/rene_quinton/> .
+
+<http://data.bnf.fr/ark:/12148/cb42091770z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb325511889#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30668055v#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36635485c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/12121456/rene_quinton/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31166000c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31166001q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31166003d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35853704h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31165999h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb365662129#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36566213n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311660022#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121214560>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb121214560> ;
+        bnf-onto:FRBNF        12121456 ;
+        isni:identifierValid  "0000000076897302" ;
+        dcterms:created       "1989-08-11" ;
+        dcterms:modified      "2015-03-09" ;
+        owl:sameAs            <http://isni.org/isni/0000000076897302> ;
+        skos:exactMatch       <http://viaf.org/viaf/59116213> , <http://isni.org/isni/0000000076897302> , <http://www.idref.fr/029629764> ;
+        skos:note             "Physiologiste et biologiste. - Fondateur et président de la Ligue nationale aérienne"@fr ;
+        skos:prefLabel        "René Quinton (1866-1925)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb365689899#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb311659985#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31226370q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32551187z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121214560#foaf:Person> .

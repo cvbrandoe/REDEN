@@ -1,0 +1,48 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb162204910>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb162204910> ;
+        bnf-onto:FRBNF    16220491 ;
+        dcterms:created   "2010-07-29" ;
+        dcterms:modified  "2010-07-29" ;
+        skos:note         "Général artilleur et baron"@fr ;
+        skos:prefLabel    "François Fabre (1754-1827)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb162204910#foaf:Person> .
+
+<http://data.bnf.fr/16220491/francois_fabre/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb162204910#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb162204910#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1754 ;
+        bnf-onto:lastYear              1827 ;
+        rdagroup2elements:biographicalInformation
+                "Général artilleur et baron" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1754/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1827/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Histoire de l'Europe" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/940/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1754-12-27" ;
+        bio:death                      "1827-12-31" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb162204910#about> ;
+        foaf:birthday                  "12-27" ;
+        foaf:familyName                "Fabre" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "François" ;
+        foaf:name                      "François Fabre" ;
+        foaf:page                      <http://data.bnf.fr/16220491/francois_fabre/> .

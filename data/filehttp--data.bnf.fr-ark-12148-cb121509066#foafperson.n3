@@ -1,0 +1,74 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb304140456#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30414049k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121509066>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb121509066> ;
+        bnf-onto:FRBNF        12150906 ;
+        isni:identifierValid  "0000000045727677" ;
+        dcterms:created       "1990-06-18" ;
+        dcterms:modified      "2005-03-02" ;
+        owl:sameAs            <http://isni.org/isni/0000000045727677> ;
+        skos:altLabel         "Sanson-Paul Fabre"@fr , "Albertus (1845-1919)"@fr , "Paul-Pierre-Sanson Fabre"@fr ;
+        skos:editorialNote    "Études d'histoire médicale et pharmaceutique... / par le Dr Paul Fabre, 1901. - . - DBF : FABRE (Paul-Pierre-Sanson). - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000045727677> , <http://viaf.org/viaf/19715554> , <http://www.idref.fr/030002753> ;
+        skos:note             "Membre correspondant de l'Académie de médecine (élu en 1889). - Docteur en médecine (Paris, 1872)"@fr ;
+        skos:prefLabel        "Paul Fabre (1845-1919)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35684232w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1845 ;
+        bnf-onto:lastYear              1919 ;
+        rdagroup2elements:biographicalInformation
+                "Membre correspondant de l'Académie de médecine (élu en 1889). - Docteur en médecine (Paris, 1872)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1845/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1919/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1845-08-08" ;
+        bio:death                      "1919-01-11" ;
+        owl:sameAs                     <http://www.idref.fr/030002753> , <http://viaf.org/viaf/19715554> , <http://data.bnf.fr/ark:/12148/cb121509066#about> ;
+        foaf:birthday                  "08-08" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k5473370h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k5407901n.thumbnail> ;
+        foaf:familyName                "Fabre" ;
+        foaf:givenName                 "Paul" ;
+        foaf:name                      "Paul Fabre" ;
+        foaf:page                      <http://data.bnf.fr/12150906/paul_fabre/> .
+
+<http://data.bnf.fr/ark:/12148/cb36020508r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304140367#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb121509066#foaf:Person> .

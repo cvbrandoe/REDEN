@@ -1,0 +1,43 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb149785690#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1847 ;
+        bnf-onto:lastYear              1934 ;
+        rdagroup2elements:biographicalInformation
+                "Homme politique. - Gouverneur général du Canada de 1893 à 1898" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1847/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1934/> ;
+        bio:birth                      "1847" ;
+        bio:death                      "1934" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb149785690#about> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/btv1b85097950.thumbnail> , <http://gallica.bnf.fr/ark:/12148/btv1b6932980f.thumbnail> ;
+        foaf:familyName                "Gordon" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "John Campbell" ;
+        foaf:name                      "John Campbell Gordon" ;
+        foaf:page                      <http://data.bnf.fr/14978569/john_campbell_gordon/> .
+
+<http://data.bnf.fr/14978569/john_campbell_gordon/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb149785690#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb149785690>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb149785690> ;
+        bnf-onto:FRBNF    14978569 ;
+        dcterms:created   "2005-07-08" ;
+        dcterms:modified  "2005-09-23" ;
+        skos:altLabel     "John Campbell Gordon Aberdeen and Temair (marquis of, 1847-1934)"@fr , "John Campbell Gordon Aberdeen (comte d', 1847-1934)"@fr ;
+        skos:note         "Homme politique. - Gouverneur général du Canada de 1893 à 1898"@fr ;
+        skos:prefLabel    "John Campbell Gordon (1847-1934)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb149785690#foaf:Person> .

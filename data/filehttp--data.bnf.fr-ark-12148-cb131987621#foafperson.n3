@@ -1,0 +1,64 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb31760835t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb131987621#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb131987621#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131987621#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb300548624#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb131987621#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb131987621#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131987621#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30054863g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb131987621#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb131987621#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb131987621#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb131987621>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb131987621> ;
+        bnf-onto:FRBNF        13198762 ;
+        isni:identifierValid  "0000000123364454" ;
+        dcterms:created       "1997-08-27" ;
+        dcterms:modified      "2013-07-31" ;
+        owl:sameAs            <http://isni.org/isni/0000000123364454> ;
+        skos:editorialNote    "Code expliqué de la presse : traité général de la police de la presse et des délits de publication / par M. Georges Barbier, 1887-1895. - . - WBIS. - http://db.saur.de/WBIS. - 2009-03-05"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/29914305> , <http://www.idref.fr/057491844> , <http://isni.org/isni/0000000123364454> ;
+        skos:note             "Avocat du barreau de Paris et jurisconsulte"@fr ;
+        skos:prefLabel        "Georges Barbier (1854-19..?)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb131987621#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb131987621#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1854 ;
+        rdagroup2elements:biographicalInformation
+                "Avocat du barreau de Paris et jurisconsulte" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1854/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Arras" ;
+        bio:birth                       "1854-12-09" ;
+        bio:death                       "19.." ;
+        owl:sameAs                      <http://www.idref.fr/057491844> , <http://viaf.org/viaf/29914305> , <http://data.bnf.fr/ark:/12148/cb131987621#about> ;
+        foaf:birthday                   "12-09" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k1131521.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k113151n.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k1131508.thumbnail> ;
+        foaf:familyName                 "Barbier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Georges" ;
+        foaf:name                       "Georges Barbier" ;
+        foaf:page                       <http://data.bnf.fr/13198762/georges_barbier/> .

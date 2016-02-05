@@ -1,0 +1,71 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12312132j#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1836 ;
+        bnf-onto:lastYear              1917 ;
+        rdagroup2elements:biographicalInformation
+                "Juriste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1836/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1917/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1836" ;
+        bio:death                      "1917" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb12312132j#about> , <http://dbpedia.org/resource/John_W._Foster> , <http://fr.dbpedia.org/resource/John_W._Foster> , <http://viaf.org/viaf/56677321> , <http://www.idref.fr/032010419> ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Department_of_state.svg> , <http://commons.wikimedia.org/wiki/Special:FilePath/Department_of_state.svg?width=300> ;
+        foaf:familyName                "Foster" ;
+        foaf:givenName                 "John Watson" ;
+        foaf:name                      "John Watson Foster" ;
+        foaf:page                      <http://data.bnf.fr/12312132/john_watson_foster/> .
+
+<http://data.bnf.fr/ark:/12148/cb37380049v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12312132j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12312132j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12312132j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb387984237#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12312132j#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12312132j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12312132j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12312132j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12312132j> , <http://fr.wikipedia.org/wiki/John_W._Foster> ;
+        bnf-onto:FRBNF        12312132 ;
+        isni:identifierValid  "000000008343842X" ;
+        dcterms:created       "1993-05-25" ;
+        dcterms:modified      "2013-07-27" ;
+        owl:sameAs            <http://isni.org/isni/000000008343842X> ;
+        skos:altLabel         "John Watson Foster"@fr ;
+        skos:editorialNote    "Arbitration and the Hague court / by John W. Foster, 1980 [reprod. de l'éd. de 1904]. - . - LCNA, 1992 : Foster, John Watson, 1836-1917. - . -"@fr ;
+        skos:exactMatch       <http://dbpedia.org/resource/John_W._Foster> , <http://fr.dbpedia.org/resource/John_W._Foster> , <http://www.idref.fr/032010419> , <http://isni.org/isni/000000008343842X> , <http://fr.wikipedia.org/wiki/John_W._Foster> , <http://viaf.org/viaf/56677321> ;
+        skos:note             "Juriste"@fr ;
+        skos:prefLabel        "John Watson Foster (1836-1917)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12312132j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38798422w#Expression>
+        bnfroles:r680        <http://data.bnf.fr/ark:/12148/cb12312132j#foaf:Person> ;
+        marcrel:trl          <http://data.bnf.fr/ark:/12148/cb12312132j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12312132j#foaf:Person> .
+
+<http://data.bnf.fr/12312132/john_watson_foster/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12312132j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38798421j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12312132j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12312132j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12312132j#foaf:Person> .

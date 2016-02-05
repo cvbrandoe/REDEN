@@ -1,0 +1,56 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/14619021/clement_quinton/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb146190213#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb146190213>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb146190213> ;
+        bnf-onto:FRBNF        14619021 ;
+        isni:identifierValid  "0000000066579087" ;
+        dcterms:created       "2005-04-08" ;
+        dcterms:modified      "2013-08-03" ;
+        owl:sameAs            <http://isni.org/isni/0000000066579087> ;
+        skos:altLabel         "Henri-Clément Quinton (1851-1921)"@fr , "Charles-Henri-Clément Quinton (1851-1921)"@fr ;
+        skos:editorialNote    "Clément et Edmond Quinton : artistes de Saint-Maur : [exposition, Saint-Maur... 2004], 2004. - . - Bénézit, 1999. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/44554898> , <http://isni.org/isni/0000000066579087> ;
+        skos:note             "Peintre, graveur, dessinateur. - Père de \"Quinton, Edmond (1892-1969)\""@fr ;
+        skos:prefLabel        "Clément Quinton (1851-1921)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb146190213#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb146190213#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1851 ;
+        bnf-onto:lastYear               1921 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre, graveur, dessinateur. - Père de \"Quinton, Edmond (1892-1969)\"" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1851/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1921/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Arts graphiques" , "Peinture" , "Dessin. Arts décoratifs" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/760/> , <http://dewey.info/class/740/> , <http://dewey.info/class/750/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Saint-Maur-des-Fossés (Val-de-Marne)" ;
+        bio:birth                       "1851-04-21" ;
+        bio:death                       "1921-04-17" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb146190213#about> , <http://viaf.org/viaf/44554898> ;
+        foaf:birthday                   "04-21" ;
+        foaf:familyName                 "Quinton" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Clément" ;
+        foaf:name                       "Clément Quinton" ;
+        foaf:page                       <http://data.bnf.fr/14619021/clement_quinton/> .

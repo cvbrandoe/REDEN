@@ -1,0 +1,57 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30163033g#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb167726970#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb167726970#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb167726970#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb167726970#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1793 ;
+        bnf-onto:lastYear              1850 ;
+        rdagroup2elements:biographicalInformation
+                "A travaillé en association avec Honoré de Balzac de juin 1826 à fév. 1828 ; puis avec Étienne Godefroy d'oct. 1828 à juillet 1830" , "Imprimeur et éditeur. - Né à Paris, fils d'un Jean-Baptiste Barbier qui aurait été libraire. A travaillé longtemps comme ouvrier imprimeur chez les frères Alexandre et Charles Baudouin. Entre en contact par leur intermédiaire avec Honoré de Balzac, avec lequel il s'associe en 1826 : ils rachètent ensemble le fonds d'imprimerie de Jean-Joseph Laurens et fondent le 1er juin 1826 une société pour l'exploitation de l'imprimerie. La société d'imprimerie est dissoute pour raisons financières le 14 fév. 1828 et Balzac se démet en faveur de Barbier de son brevet d'imprimeur le 14 août 1828. Breveté imprimeur à Paris le 26 sept. 1828, ce dernier s'associe le 16 oct.1828 avec Étienne Godefroy : ils demandent ensemble un brevet d'imprimeur lithographe qui leur est refusé en 1828 et 1829 puis se séparent en juillet 1830. André Barbier devient à la fin de 1830 imprimeur-éditeur du \"Mercure de France au XIXe siècle\", qu'il a racheté à Pierre-François Ladvocat. Imprime en 1831 \"Le Rouge et le Noir\" de Stenhal. Endetté, cède \"Le Mercure de France au XIXe siècle\" le 25 nov. 1831. Impliqué dans un procès pour avoir imprimé des brochures publiées par la Société des amis du peuple, il est acquitté en janv. 1832. Condamné le 19 juillet 1832 à six mois de prison et 500 francs d'amende pour avoir imprimé le journal ultra \"Le Brid'Oison\". Ruiné à sa sortie de prison ; le matériel de son imprimerie est vendu en juillet 1833. En sept. 1833, échange son brevet d'imprimeur à Paris avec le brevet d'imprimeur à Sèvres de Jacques-Louis Joly. Se démet en fév. 1836 de son brevet d'imprimeur à Sèvres en faveur de Jean-Pierre Peltier. Sans brevet, s'installe en mars 1836 à Paris de façon semi-clandestine chez Pierre-Philibert Baudouin dont il utilise les presses. Déclaration de faillite le 18 fév. 1839. Décédé à Paris le 15 sept. 1850" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1793/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1850/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1826-1839" ;
+        bio:birth                      "1793-10-19" ;
+        bio:death                      "1850-09-15" ;
+        owl:sameAs                     <http://viaf.org/viaf/309578611> , <http://data.bnf.fr/ark:/12148/cb167726970#about> ;
+        foaf:birthday                  "10-19" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k64716771.thumbnail> ;
+        foaf:familyName                "Barbier" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "André" ;
+        foaf:name                      "André Barbier" ;
+        foaf:page                      <http://data.bnf.fr/16772697/andre_barbier/> .
+
+<http://data.bnf.fr/ark:/12148/cb167726970>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb167726970> ;
+        bnf-onto:FRBNF      16772697 ;
+        dcterms:created     "2014-06-27" ;
+        dcterms:modified    "2014-07-01" ;
+        skos:altLabel       "A. Barbier (1793-1850)"@fr ;
+        skos:editorialNote  "Annuaire des imprimeurs, 1835. - . - Felkay. - . - Laharie, P. Liste. - . -"@fr ;
+        skos:exactMatch     <http://viaf.org/viaf/309578611> ;
+        skos:note           "Imprimeur et éditeur. - Né à Paris, fils d'un Jean-Baptiste Barbier qui aurait été libraire. A travaillé longtemps comme ouvrier imprimeur chez les frères Alexandre et Charles Baudouin. Entre en contact par leur intermédiaire avec Honoré de Balzac, avec lequel il s'associe en 1826 : ils rachètent ensemble le fonds d'imprimerie de Jean-Joseph Laurens et fondent le 1er juin 1826 une société pour l'exploitation de l'imprimerie. La société d'imprimerie est dissoute pour raisons financières le 14 fév. 1828 et Balzac se démet en faveur de Barbier de son brevet d'imprimeur le 14 août 1828. Breveté imprimeur à Paris le 26 sept. 1828, ce dernier s'associe le 16 oct.1828 avec Étienne Godefroy : ils demandent ensemble un brevet d'imprimeur lithographe qui leur est refusé en 1828 et 1829 puis se séparent en juillet 1830. André Barbier devient à la fin de 1830 imprimeur-éditeur du \"Mercure de France au XIXe siècle\", qu'il a racheté à Pierre-François Ladvocat. Imprime en 1831 \"Le Rouge et le Noir\" de Stenhal. Endetté, cède \"Le Mercure de France au XIXe siècle\" le 25 nov. 1831. Impliqué dans un procès pour avoir imprimé des brochures publiées par la Société des amis du peuple, il est acquitté en janv. 1832. Condamné le 19 juillet 1832 à six mois de prison et 500 francs d'amende pour avoir imprimé le journal ultra \"Le Brid'Oison\". Ruiné à sa sortie de prison ; le matériel de son imprimerie est vendu en juillet 1833. En sept. 1833, échange son brevet d'imprimeur à Paris avec le brevet d'imprimeur à Sèvres de Jacques-Louis Joly. Se démet en fév. 1836 de son brevet d'imprimeur à Sèvres en faveur de Jean-Pierre Peltier. Sans brevet, s'installe en mars 1836 à Paris de façon semi-clandestine chez Pierre-Philibert Baudouin dont il utilise les presses. Déclaration de faillite le 18 fév. 1839. Décédé à Paris le 15 sept. 1850"@fr , "A travaillé en association avec Honoré de Balzac de juin 1826 à fév. 1828 ; puis avec Étienne Godefroy d'oct. 1828 à juillet 1830"@fr ;
+        skos:prefLabel      "André Barbier (1793-1850)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb167726970#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb309263269#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb167726970#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb167726970#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb167726970#foaf:Person> .

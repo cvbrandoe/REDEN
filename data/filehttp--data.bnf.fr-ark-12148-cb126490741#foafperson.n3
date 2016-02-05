@@ -1,0 +1,89 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb126490741>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb126490741> ;
+        bnf-onto:FRBNF        12649074 ;
+        isni:identifierValid  "000000008138347X" ;
+        dcterms:created       "1985-07-06" ;
+        dcterms:modified      "2013-07-30" ;
+        skos:editorialNote    "Macmillan dict. of Canadian biogr. / by William Stewart Wallace, 1963. - . - BN Cat. gén.. - . -"@fr , "Selected stories / of Duncan Campbell Scott ; ed. with an introduction by Glenn Clever, 1972. - . - Canadiana, 1999-12. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/064811328> , <http://viaf.org/viaf/59206002> ;
+        skos:note             "Poète et nouvelliste. - Ami d'Archibald Lampman (1861-1899), fait partie comme lui des \"poètes de la Confédération\" ou \"groupe des années soixante\". - Membre (1899), secrétaire (1911-1921) puis président (1921-1922) de la Société royale du Canada. - Administrateur au Département des affaires indiennes à Ottawa (1879-1932) puis surintendant général adjoint"@fr ;
+        skos:prefLabel        "Duncan Campbell Scott (1862-1947)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31338935q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1862 ;
+        bnf-onto:lastYear              1947 ;
+        rdagroup2elements:biographicalInformation
+                "Poète et nouvelliste. - Ami d'Archibald Lampman (1861-1899), fait partie comme lui des \"poètes de la Confédération\" ou \"groupe des années soixante\". - Membre (1899), secrétaire (1911-1921) puis président (1921-1922) de la Société royale du Canada. - Administrateur au Département des affaires indiennes à Ottawa (1879-1932) puis surintendant général adjoint" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxc> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1862/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1947/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Administration publique" , "Littératures" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/350/> , <http://dewey.info/class/800/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1862-08-02" ;
+        bio:death                      "1947-12-19" ;
+        owl:sameAs                     <http://viaf.org/viaf/59206002> , <http://data.bnf.fr/ark:/12148/cb126490741#about> , <http://www.idref.fr/064811328> ;
+        foaf:birthday                  "08-02" ;
+        foaf:familyName                "Scott" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Duncan Campbell" ;
+        foaf:name                      "Duncan Campbell Scott" ;
+        foaf:page                      <http://data.bnf.fr/12649074/duncan_campbell_scott/> .
+
+<http://data.bnf.fr/ark:/12148/cb35626326g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> .
+
+<http://data.bnf.fr/12649074/duncan_campbell_scott/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb331703874#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33170386s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36614496c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35439854p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb33170388g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb126490741#foaf:Person> .

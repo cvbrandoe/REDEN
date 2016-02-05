@@ -1,0 +1,76 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30980386z#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30980388n#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30980383x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30980385m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb309803848#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10572733v>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10572733v> ;
+        bnf-onto:FRBNF        10572733 ;
+        isni:identifierValid  "0000000080981996" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-07-16" ;
+        owl:sameAs            <http://isni.org/isni/0000000080981996> ;
+        skos:altLabel         "James Appleton Morgan (1845-1928)"@fr ;
+        skos:editorialNote    "Shakespeare in fact and criticism / by Appleton Morgan, 1888. - . - LCNA (CD), 1996-06. - . -"@fr , "WWW États-Unis 1897-1942. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000080981996> , <http://viaf.org/viaf/19668150> ;
+        skos:prefLabel        "Appleton Morgan (1845-1928)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1845 ;
+        bnf-onto:lastYear              1928 ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1845/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1928/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1845-10-02" ;
+        bio:death                      "1928-08-15" ;
+        owl:sameAs                     <http://viaf.org/viaf/19668150> , <http://data.bnf.fr/ark:/12148/cb10572733v#about> ;
+        foaf:birthday                  "10-02" ;
+        foaf:familyName                "Morgan" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Appleton" ;
+        foaf:name                      "Appleton Morgan" ;
+        foaf:page                      <http://data.bnf.fr/10572733/appleton_morgan/> .
+
+<http://data.bnf.fr/ark:/12148/cb309803879#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10572733v#foaf:Person> .

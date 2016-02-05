@@ -1,0 +1,43 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/13564963/winfield_scott/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb135649631#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb135649631>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb135649631> ;
+        bnf-onto:FRBNF    13564963 ;
+        dcterms:created   "2000-07-31" ;
+        dcterms:modified  "2000-08-01" ;
+        skos:note         "Genéral américain"@fr ;
+        skos:prefLabel    "Winfield Scott (1786-1866)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb135649631#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb135649631#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1786 ;
+        bnf-onto:lastYear              1866 ;
+        rdagroup2elements:biographicalInformation
+                "Genéral américain" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1786/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1866/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1786-06-13" ;
+        bio:death                      "1866-05-29" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb135649631#about> ;
+        foaf:birthday                  "06-13" ;
+        foaf:familyName                "Scott" ;
+        foaf:givenName                 "Winfield" ;
+        foaf:name                      "Winfield Scott" ;
+        foaf:page                      <http://data.bnf.fr/13564963/winfield_scott/> .

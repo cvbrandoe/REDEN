@@ -1,0 +1,49 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb393455116#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb165713998#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb165713998#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb165713998#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb165713998>
+        a                 skos:Concept ;
+        rdfs:seeAlso      <http://catalogue.bnf.fr/ark:/12148/cb165713998> ;
+        bnf-onto:FRBNF    16571399 ;
+        dcterms:created   "2012-02-07" ;
+        dcterms:modified  "2012-02-08" ;
+        skos:altLabel     "Pierre De La Mare (1642?-1667)"@fr , "Pierre de La Mare (1642?-1667)"@fr ;
+        skos:exactMatch   <http://viaf.org/viaf/232001581> ;
+        skos:note         "Libraire. - Vraisemblablement apparenté au libraire de Rouen Jean Delamare (m. 1646). Reçu maître le 4 oct. 1663 avec la mention \"fils de maître\", il est attesté à la confrérie des imprimeurs, libraires et relieurs de Rouen dès 1654. Épouse en sept. 1664 Catherine Courant, apparentée aux imprimeurs-libraires rouennais Courant et nièce du libraire Jacques II Besongne. Sépult. Rouen, 22 avril 1667, dit alors âgé de 25 ans env."@fr ;
+        skos:prefLabel    "Pierre Delamare (1642?-1667)"@fr ;
+        foaf:focus        <http://data.bnf.fr/ark:/12148/cb165713998#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb165713998#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1642 ;
+        bnf-onto:lastYear              1667 ;
+        rdagroup2elements:biographicalInformation
+                "Libraire. - Vraisemblablement apparenté au libraire de Rouen Jean Delamare (m. 1646). Reçu maître le 4 oct. 1663 avec la mention \"fils de maître\", il est attesté à la confrérie des imprimeurs, libraires et relieurs de Rouen dès 1654. Épouse en sept. 1664 Catherine Courant, apparentée aux imprimeurs-libraires rouennais Courant et nièce du libraire Jacques II Besongne. Sépult. Rouen, 22 avril 1667, dit alors âgé de 25 ans env." ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1642/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1667/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1663-1667" ;
+        bio:birth                      "1642" ;
+        bio:death                      "1667-04" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb165713998#about> , <http://viaf.org/viaf/232001581> ;
+        foaf:familyName                "Delamare" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Pierre" ;
+        foaf:name                      "Pierre Delamare" ;
+        foaf:page                      <http://data.bnf.fr/16571399/pierre_delamare/> .

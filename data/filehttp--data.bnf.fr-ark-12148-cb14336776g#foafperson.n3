@@ -1,0 +1,96 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb43201882v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43045111v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb429894812#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb393452539#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43091735k#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43083651t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43162017h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb43091736x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb430349499#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1868 ;
+        bnf-onto:lastYear               1913 ;
+        rdagroup2elements:biographicalInformation
+                "Poète, chansonnier. - Photographe" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1868/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1913/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Saint-Étienne" ;
+        rdagroup2elements:placeOfDeath  "Saint-Étienne" ;
+        bio:birth                       "1868-08-06" ;
+        bio:death                       "1913-05-05" ;
+        owl:sameAs                      <http://viaf.org/viaf/221112590> , <http://data.bnf.fr/ark:/12148/cb14336776g#about> ;
+        foaf:birthday                   "08-06" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k9236759.thumbnail> ;
+        foaf:familyName                 "Roule" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Antoine" ;
+        foaf:name                       "Antoine Roule" ;
+        foaf:page                       <http://data.bnf.fr/14336776/antoine_roule/> .
+
+<http://data.bnf.fr/ark:/12148/cb14336776g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14336776g> ;
+        bnf-onto:FRBNF        14336776 ;
+        isni:identifierValid  "0000000360225431" ;
+        dcterms:created       "2005-01-07" ;
+        dcterms:modified      "2013-08-01" ;
+        owl:sameAs            <http://isni.org/isni/0000000360225431> ;
+        skos:editorialNote    "Coligny à Saint-Étienne / par Antoine Roule, 1891. - . - Noms célèbres des rues de Saint-Étienne. - http://noms.rues.st.etienne.free.fr/rues/r.html. - 2013-03-21"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000360225431> , <http://viaf.org/viaf/221112590> ;
+        skos:note             "Poète, chansonnier. - Photographe"@fr ;
+        skos:prefLabel        "Antoine Roule"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14336776g#foaf:Person> .

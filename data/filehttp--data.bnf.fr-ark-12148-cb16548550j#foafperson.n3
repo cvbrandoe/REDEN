@@ -1,0 +1,92 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb300551497#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb300546679#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb300546690#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cc13112h#Expression>
+        bnfroles:r4010       <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> ;
+        marcrel:fmo          <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30054668n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16548550j>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb16548550j> ;
+        bnf-onto:FRBNF        16548550 ;
+        isni:identifierValid  "0000000364535322" ;
+        dcterms:created       "2011-11-08" ;
+        dcterms:modified      "2014-02-04" ;
+        owl:sameAs            <http://isni.org/isni/0000000364535322> ;
+        skos:altLabel         "Nicolas-Alexandre Barbier (1789-1864)"@fr ;
+        skos:editorialNote    "Le maître d'aquarelle, traité pratique de lavis et de peinture à l'aquarelle... par A. Barbier,... et Mlle Victoire Barbier, 1861. - . - Salon de 1839 / par Alex. Barbier, 1839. - . -"@fr , "DBF. - . - Bénézit. - . - Dictionnaire biographique et bibliographique...des hommes les plus remarquables dans les lettres, les sciences et les arts..../ par Alfred Dantès, 1875. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/228717926> , <http://isni.org/isni/0000000364535322> , <http://www.idref.fr/168509741> ;
+        skos:note             "Peintre et homme de lettres. - Critique d'art. - Cousin germain d'Auguste Barbier (1805-1882) et père de Jules Barbier (1825-1901)"@fr ;
+        skos:prefLabel        "Alexandre-Nicolas Barbier (1789-1864)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31760685t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30055150f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1789 ;
+        bnf-onto:lastYear               1864 ;
+        rdagroup2elements:biographicalInformation
+                "Peintre et homme de lettres. - Critique d'art. - Cousin germain d'Auguste Barbier (1805-1882) et père de Jules Barbier (1825-1901)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1789/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1864/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Paris" ;
+        rdagroup2elements:placeOfDeath  "Sceaux" ;
+        bio:birth                       "1789-10-18" ;
+        bio:death                       "1864-02-04" ;
+        owl:sameAs                      <http://viaf.org/viaf/228717926> , <http://www.idref.fr/168509741> , <http://data.bnf.fr/ark:/12148/cb16548550j#about> ;
+        foaf:birthday                   "10-18" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6215556m.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k62156989.thumbnail> ;
+        foaf:familyName                 "Barbier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Alexandre-Nicolas" ;
+        foaf:name                       "Alexandre-Nicolas Barbier" ;
+        foaf:page                       <http://data.bnf.fr/16548550/alexandre-nicolas_barbier/> .
+
+<http://data.bnf.fr/ark:/12148/cb31760684g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb16548550j#foaf:Person> .

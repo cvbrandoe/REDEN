@@ -1,0 +1,55 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb14497570h>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb14497570h> ;
+        bnf-onto:FRBNF      14497570 ;
+        dcterms:created     "2003-10-02" ;
+        dcterms:modified    "2012-04-12" ;
+        skos:altLabel       "I. Barbier (1572?-162.?)"@fr ;
+        skos:editorialNote  "Les miraculeux effects de la sacree main des roys de France tres-chrestiens pour la guarison des malades...par I. Barbier, 1618. - . - BN Cat. gén.. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/154818240> , <http://viaf.org/viaf/227399430> ;
+        skos:note           "Ministre protestant. Avocat au parlement de Grenoble. Ecrivain. Né  vers 1572. Converti au catholicisme en 1615 et devenu avocat"@fr ;
+        skos:prefLabel      "Josué Barbier (1572?-162.?)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb14497570h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31760655w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14497570h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14497570h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14497570h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14497570h#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1572 ;
+        rdagroup2elements:biographicalInformation
+                "Ministre protestant. Avocat au parlement de Grenoble. Ecrivain. Né  vers 1572. Converti au catholicisme en 1615 et devenu avocat" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1572/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1601-1700/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Die, Drôme" ;
+        bio:birth                       "1572" ;
+        bio:death                       "162." ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb14497570h#about> , <http://viaf.org/viaf/227399430> , <http://www.idref.fr/154818240> ;
+        foaf:familyName                 "Barbier" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Josué" ;
+        foaf:name                       "Josué Barbier" ;
+        foaf:page                       <http://data.bnf.fr/14497570/josue_barbier/> .
+
+<http://data.bnf.fr/ark:/12148/cb30054963r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14497570h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14497570h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14497570h#foaf:Person> .
