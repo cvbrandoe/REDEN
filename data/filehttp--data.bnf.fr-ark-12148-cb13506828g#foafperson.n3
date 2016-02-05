@@ -1,0 +1,47 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb13506828g>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb13506828g> ;
+        bnf-onto:FRBNF      13506828 ;
+        dcterms:created     "1999-03-04" ;
+        dcterms:modified    "2001-05-09" ;
+        skos:editorialNote  "Beethovens Neffenkonflikt : eine psychologisch-biographische Studie / von Stefan Wolf, 1995. - . - Dict. biogr. des musiciens / Baker, Slonimsky, 1995. - . -"@fr ;
+        skos:note           "Neveu de Ludwig van Beethoven"@fr ;
+        skos:prefLabel      "Karl van Beethoven (1806-1858)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb13506828g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13506828g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1806 ;
+        bnf-onto:lastYear              1858 ;
+        rdagroup2elements:biographicalInformation
+                "Neveu de Ludwig van Beethoven" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1806/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1858/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Musique" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/780/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        bio:birth                      "1806" ;
+        bio:death                      "1858" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb13506828g#about> ;
+        foaf:familyName                "Beethoven" ;
+        foaf:givenName                 "Karl van" ;
+        foaf:name                      "Karl van Beethoven" ;
+        foaf:page                      <http://data.bnf.fr/13506828/karl_van_beethoven/> .
+
+<http://data.bnf.fr/13506828/karl_van_beethoven/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb13506828g#foaf:Person> .

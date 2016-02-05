@@ -1,0 +1,179 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb324715023#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb381775276#Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb319355050#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1899 ;
+        bnf-onto:lastYear               1954 ;
+        rdagroup2elements:biographicalInformation
+                "Journaliste et responsable politique" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1899/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1954/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Asnières (Hauts-de-Seine)" ;
+        rdagroup2elements:placeOfDeath  "Paris" ;
+        bio:birth                       "1899-06-27" ;
+        bio:death                       "1954-03-02" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb12749461z#about> , <http://fr.dbpedia.org/resource/Paul_Marion> , <http://www.idref.fr/123404754> , <http://viaf.org/viaf/78997346> ;
+        foaf:birthday                   "06-27" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Paul_Marion_1936.jpg> , <http://commons.wikimedia.org/wiki/Special:FilePath/Paul_Marion_1936.jpg?width=300> ;
+        foaf:familyName                 "Marion" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Paul" ;
+        foaf:name                       "Paul Marion" ;
+        foaf:page                       <http://data.bnf.fr/12749461/paul_marion/> .
+
+<http://data.bnf.fr/ark:/12148/cb12749461z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Paul_Marion> , <http://catalogue.bnf.fr/ark:/12148/cb12749461z> ;
+        bnf-onto:FRBNF        12749461 ;
+        isni:identifierValid  "0000000063082278" ;
+        dcterms:created       "1990-08-22" ;
+        dcterms:modified      "2013-07-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000063082278> ;
+        skos:editorialNote    "Deux Russies / Paul Marion, 1930. - . - Programme du parti populaire français / Paul Marion, 1938. - . -"@fr , "WBIS. - http://db.saur.de/WBIS. - 2010-05-07 Dictionnaire historique de la France sous l'Occupation / sous la dir. de Michèle et Jean-Paul Cointet, 2000. - . -"@fr ;
+        skos:exactMatch       <http://fr.dbpedia.org/resource/Paul_Marion> , <http://isni.org/isni/0000000063082278> , <http://www.idref.fr/123404754> , <http://viaf.org/viaf/78997346> , <http://fr.wikipedia.org/wiki/Paul_Marion> ;
+        skos:note             "Journaliste et responsable politique"@fr ;
+        skos:prefLabel        "Paul Marion (1899-1954)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb412671454#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35670980h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34190195r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34042690p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb341901932#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34190194d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32420110b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/12749461/paul_marion/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42130469m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32420111p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb308859917#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34042689g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32420114q#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb321395151#Expression>
+        bnfroles:r550        <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aui          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb340426911#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb425404712#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb442655753#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38151881z#Expression>
+        bnfroles:r1110       <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:nrt          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30885988b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb324201121#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32420108s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30885989p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb324201094#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12749461z#foaf:Person> .

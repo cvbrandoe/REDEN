@@ -1,0 +1,101 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30248129g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37470661b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb372780691#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302481253#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30248126f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12221741z>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12221741z> , <http://fr.wikipedia.org/wiki/Rudolf_Clausius> ;
+        bnf-onto:FRBNF        12221741 ;
+        isni:identifierValid  "0000000108880610" ;
+        dcterms:created       "1991-10-15" ;
+        dcterms:modified      "2013-07-26" ;
+        owl:sameAs            <http://isni.org/isni/0000000108880610> ;
+        skos:editorialNote    "Théorie mécanique de la chaleur / Rudolf Clausius ; trad. de l'allemand par F. Folie, 1868. - . - NDB. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/36968732> , <http://www.idref.fr/030892872> , <http://fr.wikipedia.org/wiki/Rudolf_Clausius> , <http://fr.dbpedia.org/resource/Rudolf_Clausius> , <http://isni.org/isni/0000000108880610> ;
+        skos:note             "Physicien"@fr ;
+        skos:prefLabel        "Rudolf Clausius (1822-1888)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31950687n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1822 ;
+        bnf-onto:lastYear               1888 ;
+        rdagroup2elements:biographicalInformation
+                "Physicien" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1822/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1888/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Köslin, Allemagne" ;
+        rdagroup2elements:placeOfDeath  "Bonn, Allemagne" ;
+        bio:birth                       "1822-01-02" ;
+        bio:death                       "1888-08-24" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb12221741z#about> , <http://www.idref.fr/030892872> , <http://viaf.org/viaf/36968732> , <http://fr.dbpedia.org/resource/Rudolf_Clausius> ;
+        foaf:birthday                   "01-02" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Rudolf_clausius.jpg> , <http://gallica.bnf.fr/ark:/12148/bpt6k95149n.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k951489.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Rudolf_clausius.jpg?width=300> ;
+        foaf:familyName                 "Clausius" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Rudolf" ;
+        foaf:name                       "Rudolf Clausius" ;
+        foaf:page                       <http://data.bnf.fr/12221741/rudolf_clausius/> .
+
+<http://data.bnf.fr/ark:/12148/cb30248127s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30248124r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302481284#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35460691s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12221741z#foaf:Person> .

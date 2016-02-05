@@ -1,0 +1,93 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30954995x#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37436224n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373556749#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1790 ;
+        bnf-onto:lastYear              1868 ;
+        rdagroup2elements:biographicalInformation
+                "Mathématicien et astronome" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1790/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1868/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        bio:birth                      "1790" ;
+        bio:death                      "1868" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb123401153#about> , <http://viaf.org/viaf/27139308> , <http://www.idref.fr/032355610> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k99428g.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k99419h.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k994274.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k994243.thumbnail> ;
+        foaf:familyName                "Möbius" ;
+        foaf:givenName                 "August Ferdinand" ;
+        foaf:name                      "August Ferdinand Möbius" ;
+        foaf:page                      <http://data.bnf.fr/12340115/august_ferdinand_mobius/> .
+
+<http://data.bnf.fr/ark:/12148/cb373317866#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> .
+
+<http://data.bnf.fr/12340115/august_ferdinand_mobius/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37409892w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30954997m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37436221m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb309549968#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374362208#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123401153>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb123401153> ;
+        bnf-onto:FRBNF        12340115 ;
+        isni:identifierValid  "000000010881877X" ;
+        dcterms:created       "1993-10-12" ;
+        dcterms:modified      "2014-01-20" ;
+        skos:exactMatch       <http://viaf.org/viaf/27139308> , <http://www.idref.fr/032355610> ;
+        skos:note             "Mathématicien et astronome"@fr ;
+        skos:prefLabel        "August Ferdinand Möbius (1790-1868)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb123401153#foaf:Person> .

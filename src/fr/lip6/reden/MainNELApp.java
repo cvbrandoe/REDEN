@@ -49,7 +49,7 @@ public class MainNELApp {
 		} else {
 			System.out.println("Two modes possible for providing arguments: "
 							+ "1) <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
-							+ "2) -createDico bnf|dbpediafr|all");
+							+ "2) -createDico bnf|dbpediafr|getty-per|getty-pla|all");
 		}
 	}
 
@@ -76,7 +76,7 @@ public class MainNELApp {
 			if (!args[0].endsWith(".xml")) {
 				System.out.println("Two modes possible for providing arguments: "
 						+ "1) <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
-						+ "2) -createDico bnf|dbpediafr|all");
+						+ "2) -createDico bnf|dbpediafr|getty-per|getty-pla|all");
 				return;
 			}
 

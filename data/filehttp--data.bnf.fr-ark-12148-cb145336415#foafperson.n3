@@ -1,0 +1,49 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/14533641/fritz_wolff/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb145336415#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb145336415#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1807 ;
+        bnf-onto:lastYear               1850 ;
+        rdagroup2elements:biographicalInformation
+                "Lithographe allemand. - Frère de Louis Wolff" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/gw> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1807/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1850/> ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                "Art" ;
+        rdagroup2elements:fieldOfActivityOfThePerson
+                <http://dewey.info/class/700/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        rdagroup2elements:placeOfBirth  "Heilbronn, Allemagne" ;
+        bio:birth                       "1807" ;
+        bio:death                       "1850" ;
+        owl:sameAs                      <http://data.bnf.fr/ark:/12148/cb145336415#about> ;
+        foaf:familyName                 "Wolff" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Fritz" ;
+        foaf:name                       "Fritz Wolff" ;
+        foaf:page                       <http://data.bnf.fr/14533641/fritz_wolff/> .
+
+<http://data.bnf.fr/ark:/12148/cb145336415>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb145336415> ;
+        bnf-onto:FRBNF      14533641 ;
+        dcterms:created     "2004-03-25" ;
+        dcterms:modified    "2004-03-25" ;
+        skos:editorialNote  "\"Schau, dort spaziert Herr Biedermeier...\" : die Lithographien der Gebrüder Wolff aus Heilbronn / Hubert Weckbach, 2002. - . - Bibliothèque nationale, Allemagne. - http://www.ddb.de. - 2004-03-25"@fr ;
+        skos:note           "Lithographe allemand. - Frère de Louis Wolff"@fr ;
+        skos:prefLabel      "Fritz Wolff (1807-1850)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb145336415#foaf:Person> .

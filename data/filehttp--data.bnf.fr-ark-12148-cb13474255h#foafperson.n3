@@ -1,0 +1,68 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb30170889s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13474255h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13474255h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13474255h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30735382d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13474255h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13474255h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13474255h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304520117#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13474255h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13474255h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13474255h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb13474255h#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1836 ;
+        bnf-onto:lastYear              1907 ;
+        rdagroup2elements:biographicalInformation
+                "Médecin et physiologiste. - Fut professeur de physiologie pratique et d'histologie à l'University College  et à la Royal Intitution (1869) puis de physiologie à Cambridge (1870-1903)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1836/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1907/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1836-03-08" ;
+        bio:death                      "1907-01-28" ;
+        owl:sameAs                     <http://www.idref.fr/074751301> , <http://viaf.org/viaf/2619889> , <http://fr.dbpedia.org/resource/Michael_Foster> , <http://data.bnf.fr/ark:/12148/cb13474255h#about> ;
+        foaf:birthday                  "03-08" ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k76514x.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/MichaelFoster.jpeg?width=300> , <http://commons.wikimedia.org/wiki/Special:FilePath/MichaelFoster.jpeg> , <http://gallica.bnf.fr/ark:/12148/bpt6k57314481.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k6211744v.thumbnail> ;
+        foaf:familyName                "Foster" ;
+        foaf:givenName                 "Michael" ;
+        foaf:name                      "Michael Foster" ;
+        foaf:page                      <http://data.bnf.fr/13474255/michael_foster/> .
+
+<http://data.bnf.fr/ark:/12148/cb13474255h>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb13474255h> , <http://fr.wikipedia.org/wiki/Michael_Foster> ;
+        bnf-onto:FRBNF        13474255 ;
+        isni:identifierValid  "0000000109487028" ;
+        dcterms:created       "1997-08-13" ;
+        dcterms:modified      "2013-07-30" ;
+        owl:sameAs            <http://isni.org/isni/0000000109487028> ;
+        skos:editorialNote    "Eléments d'embryologie / par M. Foster et Francis M. Balfour ; trad. de l'anglais par le Dr E. Rochefort, 1995 [document électronique : reprod. de l'éd. de 1877. - . - Dict. of scientific biogr. / C. Coulston Gillispie ed., 1981. - . -"@fr , "Morton's medical bibliography / ed by J.M. Norman, 1983. - . - British.biogr.arch., 1984. - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/2619889> , <http://isni.org/isni/0000000109487028> , <http://fr.wikipedia.org/wiki/Michael_Foster> , <http://fr.dbpedia.org/resource/Michael_Foster> , <http://www.idref.fr/074751301> ;
+        skos:note             "Médecin et physiologiste. - Fut professeur de physiologie pratique et d'histologie à l'University College  et à la Royal Intitution (1869) puis de physiologie à Cambridge (1870-1903)"@fr ;
+        skos:prefLabel        "Michael Foster (1836-1907)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb13474255h#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36578472d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb13474255h#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb13474255h#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb13474255h#foaf:Person> .

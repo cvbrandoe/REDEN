@@ -1,0 +1,122 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb34981290q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb316094344#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31609435g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34744893z#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12228507x>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12228507x> , <http://fr.wikipedia.org/wiki/Jan_de_Vries_(linguiste)> ;
+        bnf-onto:FRBNF        12228507 ;
+        isni:identifierValid  "0000000122762784" ;
+        dcterms:created       "1991-12-12" ;
+        dcterms:modified      "2013-07-26" ;
+        owl:sameAs            <http://isni.org/isni/0000000122762784> ;
+        skos:altLabel         "Jan Pieter Marie Laurens de Vries (1890-1964)"@fr , "Jan De Vries (1890-1964)"@fr ;
+        skos:editorialNote    "Nederlands etymologisch woordenboek / Jan De Vries, 1971. - . - La Religion des Celtes / Jan De Vries ; trad. de l'allemand par L. Jospin, 1984. - . -"@fr ;
+        skos:exactMatch       <http://fr.dbpedia.org/resource/Jan_de_Vries_(linguiste)> , <http://www.idref.fr/030976642> , <http://fr.wikipedia.org/wiki/Jan_de_Vries_(linguiste)> , <http://isni.org/isni/0000000122762784> , <http://viaf.org/viaf/9900795> ;
+        skos:note             "Écrivait aussi en plusieurs langues européennes, notamment en allemand et en anglais"@fr , "Linguiste. - Historien des religions de l'Europe païenne et des mythologies scandinave, germanique et celte. - Spécialiste des littératures nordiques anciennes"@fr ;
+        skos:prefLabel        "Jan de Vries (1890-1964)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1890 ;
+        bnf-onto:lastYear              1964 ;
+        rdagroup2elements:biographicalInformation
+                "Linguiste. - Historien des religions de l'Europe païenne et des mythologies scandinave, germanique et celte. - Spécialiste des littératures nordiques anciennes" , "Écrivait aussi en plusieurs langues européennes, notamment en allemand et en anglais" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/ne> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1890/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1964/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/dut> ;
+        bio:birth                      "1890" ;
+        bio:death                      "1964" ;
+        owl:sameAs                     <http://fr.dbpedia.org/resource/Jan_de_Vries_(linguiste)> , <http://viaf.org/viaf/9900795> , <http://www.idref.fr/030976642> , <http://data.bnf.fr/ark:/12148/cb12228507x#about> ;
+        foaf:familyName                "Vries" ;
+        foaf:givenName                 "Jan de" ;
+        foaf:name                      "Jan de Vries" ;
+        foaf:page                      <http://data.bnf.fr/12228507/jan_de_vries/> .
+
+<http://data.bnf.fr/ark:/12148/cb37422685s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb349734629#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35026057w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31609427v#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37571580r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37441892s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb374632178#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb42342133t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35408958g#Expression>
+        bnfroles:r360        <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        marcrel:edt          <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35924907w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb37673507b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12228507x#foaf:Person> .

@@ -1,0 +1,89 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38827885c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38827876d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35367716t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38827861c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35841491r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb35367820b#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb38827835t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12192903g>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://fr.wikipedia.org/wiki/Henry_Charlton_Bastian> , <http://catalogue.bnf.fr/ark:/12148/cb12192903g> ;
+        bnf-onto:FRBNF        12192903 ;
+        isni:identifierValid  "0000000119710895" ;
+        dcterms:created       "1991-03-23" ;
+        dcterms:modified      "2013-07-26" ;
+        owl:sameAs            <http://isni.org/isni/0000000119710895> ;
+        skos:altLabel         "Charlton Bastian (1837-1915)"@fr ;
+        skos:editorialNote    "BBA. - . -"@fr , "Le cerveau, organe de la pensée chez l'homme et les animaux / par Charlton Bastian, 1995 [document électronique : reprod. de l'éd. de 1888]. - . - Dictionnaire historique des médecins, 1999. - . -"@fr ;
+        skos:exactMatch       <http://fr.dbpedia.org/resource/Henry_Charlton_Bastian> , <http://fr.wikipedia.org/wiki/Henry_Charlton_Bastian> , <http://viaf.org/viaf/68975427> , <http://isni.org/isni/0000000119710895> , <http://www.idref.fr/085872253> ;
+        skos:note             "Neurologue"@fr ;
+        skos:prefLabel        "Henry Charlton Bastian (1837-1915)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1837 ;
+        bnf-onto:lastYear              1915 ;
+        rdagroup2elements:biographicalInformation
+                "Neurologue" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxk> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1837/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1915/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1837" ;
+        bio:death                      "1915" ;
+        owl:sameAs                     <http://fr.dbpedia.org/resource/Henry_Charlton_Bastian> , <http://data.bnf.fr/ark:/12148/cb12192903g#about> , <http://viaf.org/viaf/68975427> , <http://www.idref.fr/085872253> ;
+        foaf:depiction                 <http://commons.wikimedia.org/wiki/Special:FilePath/Henry_Charlton_Bastian.JPG?width=300> , <http://gallica.bnf.fr/ark:/12148/bpt6k771591.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k77162x.thumbnail> , <http://commons.wikimedia.org/wiki/Special:FilePath/Henry_Charlton_Bastian.JPG> ;
+        foaf:familyName                "Bastian" ;
+        foaf:gender                    "male" ;
+        foaf:givenName                 "Henry Charlton" ;
+        foaf:name                      "Henry Charlton Bastian" ;
+        foaf:page                      <http://data.bnf.fr/12192903/henry_charlton_bastian/> .
+
+<http://data.bnf.fr/ark:/12148/cb388278930#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12192903g#foaf:Person> .

@@ -1,0 +1,73 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb12254666c>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb12254666c> ;
+        bnf-onto:FRBNF        12254666 ;
+        isni:identifierValid  "0000000108553513" ;
+        dcterms:created       "1992-07-02" ;
+        dcterms:modified      "2013-07-26" ;
+        owl:sameAs            <http://isni.org/isni/0000000108553513> ;
+        skos:altLabel         "Antoine-François Barbier (1648-1715)"@fr ;
+        skos:editorialNote    "Tricou. - . - Roubert. - . - Goldsmith, STC French books. - . -"@fr , "Nouv. Spon. - . - Vingtrinier. - . - Audin, M. Lyon impr. du Roi. - . -"@fr ;
+        skos:exactMatch       <http://isni.org/isni/0000000108553513> , <http://www.idref.fr/060101032> , <http://viaf.org/viaf/14828030> ;
+        skos:note             "Imprimeur-libraire ; imprimeur et libraire ordinaire du Roi (1672) ; seul imprimeur ordinaire du Roi (1708). - Fils de Guillaume II Barbier. Établi dès 1668. Dit âgé de 50 ans lors de l'enquête de 1700-1701. En mai 1708, succède à la veuve d'Antoine Julliéron comme imprimeur du Roi à Lyon. Sépult. 16 oct. 1715, dit alors âgé de 67 ans. - De 1668 à 1673, travaille en association avec la veuve de Guillaume I Barbier"@fr ;
+        skos:prefLabel        "François Barbier (1648-1715)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb39348805t#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb41417880w#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1648 ;
+        bnf-onto:lastYear              1715 ;
+        rdagroup2elements:biographicalInformation
+                "Imprimeur-libraire ; imprimeur et libraire ordinaire du Roi (1672) ; seul imprimeur ordinaire du Roi (1708). - Fils de Guillaume II Barbier. Établi dès 1668. Dit âgé de 50 ans lors de l'enquête de 1700-1701. En mai 1708, succède à la veuve d'Antoine Julliéron comme imprimeur du Roi à Lyon. Sépult. 16 oct. 1715, dit alors âgé de 67 ans. - De 1668 à 1673, travaille en association avec la veuve de Guillaume I Barbier" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1648/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1715/> ;
+        rdagroup2elements:periodOfActivityOfThePerson
+                "1668-1715" ;
+        bio:birth                      "1648-10-26" ;
+        bio:death                      "1715-10-15" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb12254666c#about> , <http://www.idref.fr/060101032> , <http://viaf.org/viaf/14828030> ;
+        foaf:birthday                  "10-26" ;
+        foaf:familyName                "Barbier" ;
+        foaf:givenName                 "François" ;
+        foaf:name                      "François Barbier" ;
+        foaf:page                      <http://data.bnf.fr/12254666/francois_barbier/> .
+
+<http://data.bnf.fr/ark:/12148/cb359478517#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30760324n#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb40952040s#Expression>
+        bnfroles:r3260       <http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person> ;
+        marcrel:bsl          <http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb12254666c#foaf:Person> .

@@ -1,0 +1,73 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb11902124m>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb11902124m> ;
+        bnf-onto:FRBNF        11902124 ;
+        isni:identifierValid  "0000000110299876" ;
+        dcterms:created       "1985-06-22" ;
+        dcterms:modified      "2013-07-24" ;
+        owl:sameAs            <http://isni.org/isni/0000000110299876> ;
+        skos:altLabel         "Petrus Joannes Faber"@la ;
+        skos:editorialNote    "L'Abrégé des secrets chymiques, où l'on void la nature des animaux végétaux et minéraux entièrement découverte / par M. Pierre Jean Fabre, 1980 [reprod. de l'éd. de 1636]. - . - DBF : Fabre (Pierre-Jean), dit Faber, né au XVIe s., mort après 1656. - . -"@fr , "Les Audois / sous la dir. de Rémy Cazals et Daniel Fabre, 1990, p. 154-155. - . - BN Cat. gén. : Fabre (Pierre-Jean). - . -"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/79024887> , <http://isni.org/isni/0000000110299876> , <http://www.idref.fr/026856433> ;
+        skos:note             "Docteur en médecine, théologien, alchimiste"@fr ;
+        skos:prefLabel        "Pierre Jean Fabre (1588-1658)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb376558929#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30414089t#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb304140812#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb34638339c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30414086s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb11902124m#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1588 ;
+        bnf-onto:lastYear              1658 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en médecine, théologien, alchimiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1588/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1658/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        bio:birth                      "1588" ;
+        bio:death                      "1658-01-09" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb11902124m#about> , <http://www.idref.fr/026856433> , <http://viaf.org/viaf/79024887> ;
+        foaf:depiction                 <http://gallica.bnf.fr/ark:/12148/bpt6k75682f.thumbnail> ;
+        foaf:familyName                "Fabre" ;
+        foaf:givenName                 "Pierre Jean" ;
+        foaf:name                      "Pierre Jean Fabre" ;
+        foaf:page                      <http://data.bnf.fr/11902124/pierre_jean_fabre/> .

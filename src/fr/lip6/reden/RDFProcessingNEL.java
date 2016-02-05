@@ -19,6 +19,13 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
 
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.query.QueryExecution;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.query.ResultSetFactory;
+import com.hp.hpl.jena.query.ResultSetFormatter;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
@@ -75,7 +82,7 @@ public class RDFProcessingNEL {
 			if (!f.exists() || FileUtils.readFileToString(f).trim().isEmpty()) {
 				model = ModelFactory.createDefaultModel();
 				if (uri.contains("dbpedia")) {
-					InputStream in = FileManager.get().open(uri.replace("/resource/", "/data/")+".ntriples");
+					InputStream in = FileManager.get().open(uri+".ntriples");
 					if (in != null) {
 						// check rdf repos are available
 						URL u = new URL(uri);
@@ -89,6 +96,19 @@ public class RDFProcessingNEL {
 						} else {
 							System.out.println("RDF repo is not available "
 									+ uri);
+							System.out.println("try sparql query"); //TODO temporary solution
+							String queryString = "SELECT ?uri ?pred ?id WHERE { ?uri ?pred ?id . "
+									+ "FILTER (?uri = <"+uri+">) }";
+							Query query = QueryFactory.create(queryString);
+							try (QueryExecution qexec = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query)) {
+							      ResultSet results = qexec.execSelect() ;
+							      results = ResultSetFactory.copyResults(results) ;
+							      qexec.close();
+							      if (results != null) {
+							    	  model.add(ResultSetFormatter.toModel(results));
+							    	  System.out.println("results OK");
+							      }								      
+							}					
 							//return null;
 						}
 

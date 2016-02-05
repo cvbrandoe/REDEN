@@ -1,0 +1,131 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb10522565w>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb10522565w> , <http://fr.wikipedia.org/wiki/Edward_Drinker_Cope> ;
+        bnf-onto:FRBNF        10522565 ;
+        isni:identifierValid  "0000000080863949" ;
+        dcterms:created       "1997-07-01" ;
+        dcterms:modified      "2013-07-16" ;
+        owl:sameAs            <http://isni.org/isni/0000000080863949> ;
+        skos:editorialNote    "Catalogue of batrachians and reptiles of Central America and Mexico / by E. D. Cope, 1887. - . - LC Authorities. - http://authorities.loc.gov. - 2010-03-03"@fr ;
+        skos:exactMatch       <http://viaf.org/viaf/7451022> , <http://isni.org/isni/0000000080863949> , <http://dbpedia.org/resource/Edward_Drinker_Cope> , <http://fr.wikipedia.org/wiki/Edward_Drinker_Cope> , <http://www.idref.fr/069352410> , <http://fr.dbpedia.org/resource/Edward_Drinker_Cope> ;
+        skos:note             "Paléontologue. - Naturaliste"@fr ;
+        skos:prefLabel        "Edward Drinker Cope (1840-1897)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302675152#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30267519f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302675210#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302675183#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb326257367#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1840 ;
+        bnf-onto:lastYear               1897 ;
+        rdagroup2elements:biographicalInformation
+                "Paléontologue. - Naturaliste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1840/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1897/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        rdagroup2elements:placeOfBirth  "Philadelphie, Penn." ;
+        rdagroup2elements:placeOfDeath  "Philadelphie, Penn." ;
+        bio:birth                       "1840-07-29" ;
+        bio:death                       "1897-04-12" ;
+        owl:sameAs                      <http://fr.dbpedia.org/resource/Edward_Drinker_Cope> , <http://dbpedia.org/resource/Edward_Drinker_Cope> , <http://data.bnf.fr/ark:/12148/cb10522565w#about> , <http://viaf.org/viaf/7451022> , <http://www.idref.fr/069352410> ;
+        foaf:birthday                   "07-29" ;
+        foaf:depiction                  <http://commons.wikimedia.org/wiki/Special:FilePath/Cope_Edward_Drinker_1840-1897.png?width=300> , <http://commons.wikimedia.org/wiki/Special:FilePath/Cope_Edward_Drinker_1840-1897.png> ;
+        foaf:familyName                 "Cope" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Edward Drinker" ;
+        foaf:name                       "Edward Drinker Cope" ;
+        foaf:page                       <http://data.bnf.fr/10522565/edward_drinker_cope/> .
+
+<http://data.bnf.fr/ark:/12148/cb31041992j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30267520n#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30267511p#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30267513c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31966402j#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30267514q#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30267516d#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb36579405h#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb30267517r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb373729279#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb302675121#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb10522565w#foaf:Person> .

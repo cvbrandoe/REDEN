@@ -1,0 +1,46 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb123075063>
+        a                   skos:Concept ;
+        rdfs:seeAlso        <http://catalogue.bnf.fr/ark:/12148/cb123075063> ;
+        bnf-onto:FRBNF      12307506 ;
+        dcterms:created     "1993-04-26" ;
+        dcterms:modified    "1993-06-15" ;
+        skos:altLabel       "Abby Kelley (1811-1887)"@fr ;
+        skos:editorialNote  "American Biographical Index, 1993. - . - Kelley, Abby ; LCNA, 1991. - . -"@fr ;
+        skos:exactMatch     <http://www.idref.fr/031954278> ;
+        skos:note           "Militante féministe et antiesclavagiste"@fr ;
+        skos:prefLabel      "Abigail Kelley Foster (1811-1887)"@fr ;
+        foaf:focus          <http://data.bnf.fr/ark:/12148/cb123075063#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb123075063#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1811 ;
+        bnf-onto:lastYear              1887 ;
+        rdagroup2elements:biographicalInformation
+                "Militante féministe et antiesclavagiste" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/xxu> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1811/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1887/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+        bio:birth                      "1811-01-15" ;
+        bio:death                      "1887-01-14" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb123075063#about> , <http://www.idref.fr/031954278> ;
+        foaf:birthday                  "01-15" ;
+        foaf:familyName                "Foster" ;
+        foaf:givenName                 "Abigail Kelley" ;
+        foaf:name                      "Abigail Kelley Foster" ;
+        foaf:page                      <http://data.bnf.fr/12307506/abigail_kelley_foster/> .
+
+<http://data.bnf.fr/12307506/abigail_kelley_foster/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb123075063#foaf:Person> .

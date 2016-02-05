@@ -51,7 +51,7 @@ public class AppAdhoc
 			//Adhoc way so far
 			String[] let =  {"a","b","c","d","e","f","g","h","i","j","k","l","m","n",
 					"o","p","q","r","s","t","u","v","w","x", "y","z", "other"};
-			//String[] let =  {"b"}; //testing
+			//String[] let =  {"bre"}; //testing
 			int counter = 0;
 			Boolean out = false;
 			
@@ -80,6 +80,29 @@ public class AppAdhoc
 				out = false;
 				while (counter < let.length && !out) {
 					QueryPlaceDBpedia dbp = new QueryPlaceDBpedia();
+					Boolean lr = dbp.LARGE_REPO;
+					
+					String letter = null;
+					if (!lr) {
+						out = true; //enters once
+					} else {
+						letter = let[counter];
+						System.out.println("processing letter:" +letter);
+					}
+					
+					//dbpedia 
+					Query qdb = dbp.formulateSPARQLQuery(domainParams, letter, "");
+					ResultSet rsdbp = dbp.executeQuery(qdb, dbp.TIMEOUT.toString(), dbp.SPARQL_END_POINT, "", "");
+					dbp.processResults(rsdbp, outDictionnaireDir, letter);
+					
+					counter++;
+				}
+			} else if (dicLabel.equalsIgnoreCase("getty-per") || dicLabel.equalsIgnoreCase("all")) {
+				// QUERY PERSONALITIES IN GETTY
+				counter = 0;
+				out = false;
+				while (counter < let.length && !out) {
+					QueryPersonalityGetty dbp = new QueryPersonalityGetty();
 					Boolean lr = dbp.LARGE_REPO;
 					
 					String letter = null;

@@ -1,0 +1,120 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb32007852s#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32285192m#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb31698277g#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person>
+        a                               foaf:Person ;
+        bnf-onto:firstYear              1875 ;
+        rdagroup2elements:biographicalInformation
+                "Docteur en médecine (Paris, 1903). - Professeur de pathologie exotique, à Istanbul, Turquie puis de parasitologie à Asunción, Paragay. - Correspondant national de l'Académie de médecine (élu en 1923). - Membre de la Société de pathologie exotique (de 1925 à 1939)" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://id.loc.gov/vocabulary/countries/fr> ;
+        rdagroup2elements:dateOfBirth   <http://data.bnf.fr/date/1875/> ;
+        rdagroup2elements:dateOfDeath   <http://data.bnf.fr/date/1901-2000/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        rdagroup2elements:placeOfBirth  "Versailles" ;
+        rdagroup2elements:placeOfDeath  "Buenos-Aires" ;
+        bio:birth                       "1875-01-08" ;
+        bio:death                       "19.." ;
+        owl:sameAs                      <http://www.idref.fr/145481646> , <http://viaf.org/viaf/84795268> , <http://data.bnf.fr/ark:/12148/cb134859745#about> ;
+        foaf:birthday                   "01-08" ;
+        foaf:depiction                  <http://gallica.bnf.fr/ark:/12148/bpt6k6212459k.thumbnail> , <http://gallica.bnf.fr/ark:/12148/bpt6k31322z/f1.item.thumbnail> ;
+        foaf:familyName                 "Delamare" ;
+        foaf:gender                     "male" ;
+        foaf:givenName                  "Gabriel" ;
+        foaf:name                       "Gabriel Delamare" ;
+        foaf:page                       <http://data.bnf.fr/13485974/gabriel_delamare/> .
+
+<http://data.bnf.fr/ark:/12148/cb134859745>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb134859745> ;
+        bnf-onto:FRBNF        13485974 ;
+        isni:identifierValid  "0000000056551806" ;
+        dcterms:created       "1998-08-24" ;
+        dcterms:modified      "2013-07-31" ;
+        owl:sameAs            <http://isni.org/isni/0000000056551806> ;
+        skos:editorialNote    "Index biographique des membres, des associés et des correspondants de l'Académie de médecine 1820-1990, 1991. - . - Liste des membres de la Soiciété de pathologie exotique. - http://www.pasteur.fr. - 2006-06-13"@fr , "Glandes surrénales / par G. Delamare, 1995 [document électronique : reprod. de l'éd. de 1904]. - . - Leprosphilis probable. Dactylite à bacilles acido résistants / par MM. G. Delamare et Achitouv, 1926. - . -"@fr ;
+        skos:exactMatch       <http://www.idref.fr/145481646> , <http://isni.org/isni/0000000056551806> , <http://viaf.org/viaf/84795268> ;
+        skos:note             "Docteur en médecine (Paris, 1903). - Professeur de pathologie exotique, à Istanbul, Turquie puis de parasitologie à Asunción, Paragay. - Correspondant national de l'Académie de médecine (élu en 1923). - Membre de la Société de pathologie exotique (de 1925 à 1939)"@fr ;
+        skos:prefLabel        "Gabriel Delamare (1875-19..)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb321489691#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb427218015#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32007849w#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb321489707#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb368720297#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32007885r#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb303133986#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb320078503#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb322851918#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32180460f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb32007851f#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb134859745#foaf:Person> .

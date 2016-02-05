@@ -1,0 +1,54 @@
+@prefix bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> .
+@prefix isni:  <http://isni.org/ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bio:   <http://vocab.org/bio/0.1/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bnfroles: <http://data.bnf.fr/vocabulary/roles/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdagroup2elements: <http://rdvocab.info/ElementsGr2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://data.bnf.fr/ark:/12148/cb38850242c#Expression>
+        bnfroles:r70         <http://data.bnf.fr/ark:/12148/cb14456810d#foaf:Person> ;
+        marcrel:aut          <http://data.bnf.fr/ark:/12148/cb14456810d#foaf:Person> ;
+        dcterms:contributor  <http://data.bnf.fr/ark:/12148/cb14456810d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14456810d>
+        a                     skos:Concept ;
+        rdfs:seeAlso          <http://catalogue.bnf.fr/ark:/12148/cb14456810d> ;
+        bnf-onto:FRBNF        14456810 ;
+        isni:identifierValid  "0000000100282923" ;
+        dcterms:created       "2003-02-21" ;
+        dcterms:modified      "2013-08-02" ;
+        owl:sameAs            <http://isni.org/isni/0000000100282923> ;
+        skos:exactMatch       <http://isni.org/isni/0000000100282923> , <http://viaf.org/viaf/50019314> ;
+        skos:note             "Tueuse d'enfant"@fr ;
+        skos:prefLabel        "Susanna Margaretha Brandt (1747-1772)"@fr ;
+        foaf:focus            <http://data.bnf.fr/ark:/12148/cb14456810d#foaf:Person> .
+
+<http://data.bnf.fr/ark:/12148/cb14456810d#foaf:Person>
+        a                              foaf:Person ;
+        bnf-onto:firstYear             1747 ;
+        bnf-onto:lastYear              1772 ;
+        rdagroup2elements:biographicalInformation
+                "Tueuse d'enfant" ;
+        rdagroup2elements:countryAssociatedWithThePerson
+                <http://data.bnf.fr/ark:/12148/vocabulary/countrycodes/xd> ;
+        rdagroup2elements:dateOfBirth  <http://data.bnf.fr/date/1747/> ;
+        rdagroup2elements:dateOfDeath  <http://data.bnf.fr/date/1772/> ;
+        rdagroup2elements:languageOfThePerson
+                <http://id.loc.gov/vocabulary/iso639-2/ger> ;
+        bio:birth                      "1747" ;
+        bio:death                      "1772" ;
+        owl:sameAs                     <http://data.bnf.fr/ark:/12148/cb14456810d#about> , <http://viaf.org/viaf/50019314> ;
+        foaf:familyName                "Brandt" ;
+        foaf:gender                    "female" ;
+        foaf:givenName                 "Susanna Margaretha" ;
+        foaf:name                      "Susanna Margaretha Brandt" ;
+        foaf:page                      <http://data.bnf.fr/14456810/susanna_margaretha_brandt/> .
+
+<http://data.bnf.fr/14456810/susanna_margaretha_brandt/studies>
+        dcterms:subject  <http://data.bnf.fr/ark:/12148/cb14456810d#foaf:Person> .
