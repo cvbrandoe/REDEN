@@ -33,6 +33,7 @@ import dk.aaue.sna.alg.centrality.BrandesBetweennessCentrality;
 import dk.aaue.sna.alg.centrality.CentralityMeasure;
 import dk.aaue.sna.alg.centrality.CentralityResult;
 import dk.aaue.sna.alg.centrality.DegreeCentrality;
+import dk.aaue.sna.alg.centrality.EigenvectorCentrality;
 import dk.aaue.sna.alg.centrality.FreemanClosenessCentrality;
 
 /**
@@ -287,6 +288,8 @@ public class GraphProcessingNEL {
 			} else if (measure.equals("FreemanClosenessCentrality")) {
 				cm = new FreemanClosenessCentrality<String, LabeledEdge>(
 						graph);
+			} else if (measure.equals("EigenvectorCentrality")) {				
+				cm = new EigenvectorCentrality<String, LabeledEdge>(graph);
 			} else {
 				System.out.println("please provide valid centrality measure");
 				return null;
