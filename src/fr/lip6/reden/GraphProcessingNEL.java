@@ -66,7 +66,7 @@ public class GraphProcessingNEL {
 	@SuppressWarnings("rawtypes")
 	public static SimpleDirectedWeightedGraph<String, LabeledEdge> fuseRDFGraphsIntoJGTGraph(
 			Model model, String[] provBaseURI,
-			Map<String, List<List<String>>> mentionsWithURIs, File relsFile) {
+			Map<String, List<List<String>>> mentionsWithURIs, File relsFile, String crawlSameAs) {
 
 		SimpleDirectedWeightedGraph<String, LabeledEdge> graph = new SimpleDirectedWeightedGraph<String, LabeledEdge>(
 				LabeledEdge.class);
@@ -112,9 +112,10 @@ public class GraphProcessingNEL {
 		for (String uri : mentionUrisF) {
 			Resource individual = model.getResource(uri);
 			List<String> sameAsURIsIndividual = RDFProcessingNEL.obtainPotentiallyIdenticalIndividuals(
-					individual.getURI(), model);
+					individual.getURI(), model, crawlSameAs);
 
-			if (uri.contains("data.bnf.fr")) {
+			//TODO particular for BnF data, add dates associated to authors as nodes in the graph. Avoid this.
+			if (uri.contains("data.bnf.fr")) { 
 				String vertex1 = RDFProcessingNEL.decompose(uri);
 				graph.addVertex(vertex1);
 				for (String uriAlias : sameAsURIsIndividual) {
@@ -142,7 +143,7 @@ public class GraphProcessingNEL {
 						if (!predicate.equals(prop)) {
 							String vertex2 = RDFProcessingNEL.decompose(object.toString());
 							List<String> targetAliases = RDFProcessingNEL.obtainPotentiallyIdenticalIndividuals(
-									vertex2, model);
+									vertex2, model, crawlSameAs);
 							if (targetAliases.size() == 1) {
 								graph.addVertex(vertex2);
 								LabeledEdge edge = new LabeledEdge<String>(
@@ -212,12 +213,13 @@ public class GraphProcessingNEL {
 			Map<String, String> invertedIndex, String measure,
 			String preferedURI, String namefile,
 			Integer countParagraph, FileWriterWithEncoding writerGraph, 
-			Map<String, Double>edgeFrequenceByLabel) {
+			Map<String, Double>edgeFrequenceByLabel, 
+			Map<String, Double> choosenScoresperMention) {
 
 		Map<String, String> choosenUris = new HashMap<String, String>();
 
 		try {
-
+			
 			Date start = new Date();
 			List<String> urisColoredNodes = new ArrayList<String>();
 			for (String mention : mentionsPerParagraph) {
@@ -358,6 +360,7 @@ public class GraphProcessingNEL {
 							}
 						}
 						choosenUris.put(key, selectedURI.trim());
+						choosenScoresperMention.put(key, orderedMap.get(o[o.length - 1]));
 					}
 				}
 				// printing graph

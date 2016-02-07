@@ -49,7 +49,7 @@ public class MainNELApp {
 		} else {
 			System.out.println("Two modes possible for providing arguments: "
 							+ "1) <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
-							+ "2) -createDico bnf|dbpediafr|getty-per|getty-pla|all");
+							+ "2) -createDico bnf|dbpediafr|getty-per|all");
 		}
 	}
 
@@ -76,7 +76,7 @@ public class MainNELApp {
 			if (!args[0].endsWith(".xml")) {
 				System.out.println("Two modes possible for providing arguments: "
 						+ "1) <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
-						+ "2) -createDico bnf|dbpediafr|getty-per|getty-pla|all");
+						+ "2) -createDico bnf|dbpediafr|getty-per|all");
 				return;
 			}
 
@@ -121,6 +121,8 @@ public class MainNELApp {
 			String rdfData = prop.getProperty("rdfData");
 			String xpathExpresion= prop.getProperty("xpathExpresion");
 			String propertyTagRef = prop.getProperty("propertyTagRef");
+			String addScores = prop.getProperty("addScores");
+			String crawlSameAs = prop.getProperty("crawlSameAs");
 			
 			// checking if we need to create an index
 			if ((args.length >= 2 && args[1].equals("-createIndex"))
@@ -186,7 +188,7 @@ public class MainNELApp {
 					// look for URIs in dictionary
 					Map<String, List<List<String>>> mentionsWithURIs = null;
 					if (useindex.equalsIgnoreCase("true")) { // version with
-																// index
+																// index TODO deprecated without index?
 						mentionsWithURIs = DicoProcessingNEL.retrieveMentionsURIsFromDicoWithIndex(
 								cl, annotationsParagraph, indexDir); //TODO, indicate which index, per or loc?
 					} else {
@@ -221,21 +223,23 @@ public class MainNELApp {
 						
 						Model model = RDFProcessingNEL.aggregateRDFSubGraphsFromURIs(rdfData,
 								mentionsWithURIs, annotationsParagraph,
-								baseUris);
+								baseUris, crawlSameAs);
 						if (model != null) {
 							
 							// Fuse RDF graphs into a single graph (JGraphT format)
 							SimpleDirectedWeightedGraph<String, LabeledEdge> graph = GraphProcessingNEL.fuseRDFGraphsIntoJGTGraph(
-									model, provBaseURI, mentionsWithURIs, relsFile);
+									model, provBaseURI, mentionsWithURIs, relsFile, crawlSameAs);
 							// Simplify graph, compute centrality, choose the higher score
+							Map<String, Double> choosenScoresperMention = new HashMap<String, Double>();
 							Map<String, String> choosenUris = GraphProcessingNEL.simplifyGraphsAndCalculateCentrality(
 									graph, mentionsWithURIs, annotationsParagraph,
 									baseUris, invertedIndex, measure, preferedURI, files
-									.get(j).getName(), countParagraph, writerGraph, edgeFrequenceByLabel);
+									.get(j).getName(), countParagraph, writerGraph, edgeFrequenceByLabel, choosenScoresperMention);
 							// write results in TEI
 							if (choosenUris != null) {
 								ResultsAndEvaluationNEL.produceResults(files.get(j), annotationTag,
-										choosenUris, mentionsWithURIs, e, doc, outDir, propertyTagRef);		//TODO, for both annotationTag							
+										choosenUris, mentionsWithURIs, e, doc, outDir, propertyTagRef, 
+										choosenScoresperMention, addScores);		//TODO, for both annotationTag							
 							}
 							System.out.println("finish");
 						}

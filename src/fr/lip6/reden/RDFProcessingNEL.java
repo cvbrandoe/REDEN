@@ -2,7 +2,6 @@ package fr.lip6.reden;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
@@ -19,13 +18,6 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
 
-import com.hp.hpl.jena.query.Query;
-import com.hp.hpl.jena.query.QueryExecution;
-import com.hp.hpl.jena.query.QueryExecutionFactory;
-import com.hp.hpl.jena.query.QueryFactory;
-import com.hp.hpl.jena.query.ResultSet;
-import com.hp.hpl.jena.query.ResultSetFactory;
-import com.hp.hpl.jena.query.ResultSetFormatter;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
@@ -95,23 +87,8 @@ public class RDFProcessingNEL {
 							model.read(in, null, "N3");							
 						} else {
 							System.out.println("RDF repo is not available "
-									+ uri);
-							System.out.println("try sparql query"); //TODO temporary solution
-							String queryString = "SELECT ?uri ?pred ?id WHERE { ?uri ?pred ?id . "
-									+ "FILTER (?uri = <"+uri+">) }";
-							Query query = QueryFactory.create(queryString);
-							try (QueryExecution qexec = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query)) {
-							      ResultSet results = qexec.execSelect() ;
-							      results = ResultSetFactory.copyResults(results) ;
-							      qexec.close();
-							      if (results != null) {
-							    	  model.add(ResultSetFormatter.toModel(results));
-							    	  System.out.println("results OK");
-							      }								      
-							}					
-							//return null;
+									+ uri);							
 						}
-
 					} else {
 						System.out.println("skip URI: " + uri);
 					}
@@ -125,7 +102,6 @@ public class RDFProcessingNEL {
 					int code = huc.getResponseCode();
 					if (code != 503 && code != 404) {
 						model.read(uri);
-						//RDFDataMgr.read(model, uri) ;
 					} else {
 						System.out.println("RDF repo is not available "
 								+ uri);
@@ -144,8 +120,8 @@ public class RDFProcessingNEL {
 
 			} else {
 			}
-		} catch (IOException ignore) {
-			System.out.println("problem storing RDF subgraph of URI: " + uri);
+		} catch (Exception ignore) {
+			System.out.println("problem with RDF subgraph of URI: " + uri);
 		}
 		return model;
 	}
@@ -160,11 +136,12 @@ public class RDFProcessingNEL {
 	 */
 	public static Model injectSameAsInformation(
 			Map<String, List<List<String>>> mentionsWithURIs,
-			String[] baseURIS, Model model, String dir) {
+			String[] baseURIS, Model model, String dir, String crawlSameAs) {
 
 		Model modelout = ModelFactory.createDefaultModel();
 		Property prop = model
 				.getProperty("http://www.w3.org/2002/07/owl#sameAs");
+		//TODO skos:exactMatch as well for Getty
 
 		for (List<List<String>> uriLists : mentionsWithURIs.values()) {
 			for (List<String> uriList : uriLists) {
@@ -179,8 +156,13 @@ public class RDFProcessingNEL {
 							while (iter.hasNext()) {
 								Statement stmt = iter.next();
 								RDFNode object = stmt.getObject();
-								if (object.toString().startsWith(
-										"http://dbpedia.org")) {
+								if (!crawlSameAs.equalsIgnoreCase("ALL")) {
+									if (object.toString().startsWith(crawlSameAs)) {
+										modelout = retrieveRDF(
+											decompose(object.toString()),
+											baseURL, modelout, dir);
+									}
+								} else {
 									modelout = retrieveRDF(
 											decompose(object.toString()),
 											baseURL, modelout, dir);
@@ -209,7 +191,8 @@ public class RDFProcessingNEL {
 	 */
 	public static Model aggregateRDFSubGraphsFromURIs(String dir,
 			Map<String, List<List<String>>> mentionsWithURIs,
-			List<String> mentionsofParagraph, String[] baseURIS) {
+			List<String> mentionsofParagraph, String[] baseURIS, 
+			String crawlSameAs) {
 		Date start = new Date();
 		File dirF = new File(dir);
 		if (!dirF.exists())
@@ -221,7 +204,8 @@ public class RDFProcessingNEL {
 				for (String uri : uriList) {
 					for (String baseURL2 : baseURIS) {
 						String baseURL = baseURL2.trim();
-						if (uri.contains(baseURL)) {
+						//only allow uris from the KBs configured in the config.properties (baseURIs)
+						if (uri.contains(baseURL)) { 
 							if (!alreadyProcessedURI.contains(uri)) {
 								Model model = ModelFactory.createDefaultModel();
 								model = retrieveRDF(uri, baseURL, model, dir);
@@ -245,8 +229,8 @@ public class RDFProcessingNEL {
 					for (String uri : uriList) {
 						for (String baseURL2 : baseURIS) {
 							String baseURL = baseURL2.trim();
-							if (uri.contains(baseURL)) { // avoiding reading
-															// idref uri
+							//only allow uris from the KBs configured in the config.properties (baseURIs)
+							if (uri.contains(baseURL)) { 
 								if (!alreadyProcessedURI.contains(uri)) {
 									if (new File(dir + "/file" + replaceNonAlphabeticCharacters(uri)+ ".n3").exists()) {
 										model.read(dir + "/file"
@@ -263,7 +247,7 @@ public class RDFProcessingNEL {
 		}
 		// add sameAs information into the model
 		Model modelout = injectSameAsInformation(mentionsWithURIs, baseURIS,
-				model, dir);
+				model, dir, crawlSameAs);
 		model.add(modelout);
 		Date end = new Date();
 		System.out.println("Finished createRDFSubGraphsFromURIs in "
@@ -275,7 +259,7 @@ public class RDFProcessingNEL {
 	// obtain potentially identical individuals thanks to the sameAs relation,
 		// including itself
 		public static List<String> obtainPotentiallyIdenticalIndividuals(
-				String uri, Model model) {
+				String uri, Model model, String crawlSameAs) {
 			List<String> out = new ArrayList<String>();
 			// out.add(uri);
 			Property prop = model
@@ -294,7 +278,7 @@ public class RDFProcessingNEL {
 			}
 			List<String> out2 = new ArrayList<String>();
 			for (String uriA : out) {
-				if (uriA.startsWith("http://dbpedia.org")) {
+				if (!crawlSameAs.equalsIgnoreCase("ALL") && uriA.startsWith(crawlSameAs)) {
 					Resource personA = model.getResource(uriA);
 					SimpleSelector ssA = new SimpleSelector(personA, prop,
 							(RDFNode) null);
