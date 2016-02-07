@@ -65,7 +65,8 @@ public class ResultsAndEvaluationNEL {
 	public static void produceResults(File fileName, String annotationTag,
 			Map<String, String> choosenUris,
 			Map<String, List<List<String>>> mentionsWithURIs, Element e,
-			org.w3c.dom.Document doc, String outDir, String propertyTagRef) {
+			org.w3c.dom.Document doc, String outDir, String propertyTagRef, 
+			Map<String, Double> choosenScoresperMention, String addScores) {
 
 		Date start = new Date();
 		//Integer correctlyIdentified = 0;
@@ -80,8 +81,12 @@ public class ResultsAndEvaluationNEL {
 			for (int k = 0; k < nodesChild.getLength(); ++k) {
 				Element child = (Element) nodesChild.item(k);
 				annotationsParagraph.add(child.getTextContent());
-				child.setAttribute(propertyTagRef,
-						choosenUris.get(child.getTextContent()));				
+				if (addScores.equals("true"))
+					child.setAttribute(propertyTagRef,
+						choosenUris.get(child.getTextContent())+"("+ choosenScoresperMention.get(child.getTextContent())+")");
+				else 
+					child.setAttribute(propertyTagRef,
+							choosenUris.get(child.getTextContent()));
 			}
 			if (annotationsParagraph.size() > 0) {
 				out.add(annotationsParagraph);
