@@ -23,6 +23,7 @@ import javax.xml.xpath.XPathFactory;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.output.FileWriterWithEncoding;
+import org.apache.log4j.Logger;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -41,6 +42,8 @@ import fr.lip6.ldcrawler.AppAdhoc;
  */
 public class MainNELApp {
 
+	private static Logger logger = Logger.getLogger(MainNELApp.class);
+	
 	static Map<String, Double> edgeFrequenceByLabel = new HashMap<String, Double>();
 	
 	public static void main(String[] args) {
@@ -69,7 +72,7 @@ public class MainNELApp {
 			//only builds the dico, skips NEL
 			if (args[0].equals("-createDico")) {
 				AppAdhoc.crawlsLinkedData("config/config.properties", args[1]);
-				System.out.println("Building dictionary for NEL");
+				logger.info("Building dictionary for NEL");
 				return;
 			}
 						
@@ -127,7 +130,7 @@ public class MainNELApp {
 			// checking if we need to create an index
 			if ((args.length >= 2 && args[1].equals("-createIndex"))
 					|| (args.length >= 3 && args[2].equals("-createIndex"))) {
-				System.out.println("(Re-)create index");
+				logger.info("(Re-)create index");
 				FileUtils.deleteDirectory(new File(indexDir)); //TODO
 				DicoProcessingNEL.createIndex(indexDir, nameMainFolderDico); //TODO
 			}
@@ -183,7 +186,7 @@ public class MainNELApp {
 						annotationsParagraph.add(child.getTextContent());
 						countMention++;
 					}
-					System.out.println("processing paragraph #"
+					logger.info("processing text portion according to chosen context #"
 							+ countParagraph);
 					// look for URIs in dictionary
 					Map<String, List<List<String>>> mentionsWithURIs = null;
@@ -195,7 +198,7 @@ public class MainNELApp {
 						mentionsWithURIs = DicoProcessingNEL.retrieveMentionsURIsFromDico(
 								nameMainFolderDico, cl, annotationsParagraph); //TODO, indicate which index, per or loc?
 					}
-					System.out.println("Total number of mentions: "+mentionsWithURIs.size());
+					logger.info("Total number of mentions: "+mentionsWithURIs.size());
 					
 					String caseR = checkConditionsToNEL(mentionsWithURIs,
 							annotationsParagraph);
@@ -210,11 +213,11 @@ public class MainNELApp {
 							Integer sizeReferents = mentionsWithURIs.get(mention).size();
 							countNumberURIsToProcess += sizeReferents;
 							if (sizeReferents > 1) {
-								System.out.println("Number of ambiguous referents (URIs) for "+mention+ " is "+sizeReferents);
+								logger.info("Number of ambiguous referents (URIs) for "+mention+ " is "+sizeReferents);
 								ambigF.write("Number of ambiguous referents (URIs) for "+mention+ " is "+sizeReferents+"\n");
 							}
 						}
-						System.out.println("Total number of URIs to process (very approximative) : "+ countNumberURIsToProcess);
+						logger.info("Total number of URIs to process (very approximative) : "+ countNumberURIsToProcess);
 						
 						// create inverted index
 						Map<String, String> invertedIndex = DicoProcessingNEL.buildInvertedIndex(mentionsWithURIs);
@@ -241,13 +244,12 @@ public class MainNELApp {
 										choosenUris, mentionsWithURIs, e, doc, outDir, propertyTagRef, 
 										choosenScoresperMention, addScores);		//TODO, for both annotationTag							
 							}
-							System.out.println("finish");
+							logger.info("finish");
 						}
 					} else if (caseR.equalsIgnoreCase("NoMentionsAnnotated")) {
-						System.out
-								.println("Current paragraph does not need to be processed: there is no mentions in document");
+						logger.info("Current paragraph does not need to be processed: there is no mentions in document");
 					} else {
-						System.out.println("There are no ambiguous mentions");
+						logger.info("There are no ambiguous mentions");
 						ResultsAndEvaluationNEL.produceResultsSimple(files.get(j), annotationTag,
 									mentionsWithURIs, e, doc, outDir, propertyTagRef);
 						// case: "NoAmbiguity", when there are no
@@ -256,8 +258,7 @@ public class MainNELApp {
 					}
 					countParagraph++;
 				}
-				System.out
-						.println("number of all mentions (including duplicates): "
+				logger.info("number of all mentions (including duplicates): "
 								+ countMention + " in file " + files.get(j));
 				//print relation frequency per label
 				ResultsAndEvaluationNEL.printRelationFrequency(edgeFrequenceByLabel, files.get(j).getName(), outDir);
@@ -265,7 +266,7 @@ public class MainNELApp {
 				ambigF.close();
 			}
 			Date endMain = new Date();
-			System.out.println("Global Time: "
+			logger.info("Global Time: "
 					+ (endMain.getTime() - startMain.getTime()) / 60 + "secs");
 
 			// evaluation
@@ -274,7 +275,7 @@ public class MainNELApp {
 				String output = args[0].replace(".xml", "-outV3.xml");
 				String[] output2 = output.split("/");
 				if (new File(outDir+output2[output2.length-1]).exists()) {
-					System.out.println("Printing evaluation");
+					logger.info("Printing evaluation");
 					ResultsAndEvaluationNEL.evaluation(args[0], annotationTag, xpathExpresion, outDir, propertyTagRef); //TODO for both annotationTag
 				} else {
 					System.out.println("Output file doesn't exist: " + outDir+output2[output2.length-1]);

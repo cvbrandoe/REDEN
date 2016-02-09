@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
@@ -19,6 +21,8 @@ import com.opencsv.CSVWriter;
  */
 public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterface {
 
+	private static Logger logger = Logger.getLogger(QueryPlaceDBpedia.class);
+	
 	/**
 	 * Mandatory fields
 	 */
@@ -50,7 +54,7 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 			System.out.println("entering DBpedia: formulateSPARQLQuery, skip, file exists");
 			return null; //file exists, skip processing
 		} else {
-			System.out.println("entering DBpedia: formulateSPARQLQuery");
+			logger.info("entering DBpedia: formulateSPARQLQuery");
 			//temporal information can be incorporated into the query in many ways
 			for (TopicExtent d : domainParams) {
 				if (d instanceof SpatialExtent) {
@@ -99,8 +103,8 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 					+ " FILTER regex(str(?otherLinks), '^http://dbpedia.org/', 'i')} }"
 					/*+ " LIMIT 10000 OFFSET 20000" -- sometimes it's necessary */;
 			Query query = QueryFactory.create(queryString);
-			System.out.println("query: " + query.toString());
-			System.out.println("exiting DBpedia: formulateSPARQLQuery");
+			logger.info("query: " + query.toString());
+			logger.info("exiting DBpedia: formulateSPARQLQuery");
 			return query;
 		}
 	}
@@ -113,8 +117,8 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 			System.out.println("entering DBpedia: executeQuery, skip, file exists");
 			return null; //file exists, skip processing
 		} else {
-			System.out.println("entering DBpedia: executeQuery");
-			System.out.println("exiting DBpedia: executeQuery");
+			logger.info("entering DBpedia: executeQuery");
+			logger.info("exiting DBpedia: executeQuery");
 			return super.executeQuery(query, SPARQL_END_POINT, timeout, 
 					outDictionnaireDir, letter);
 		}
@@ -130,7 +134,7 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 			System.out.println("entering DBpedia: processResults, skip, file exists");
 			return; //file exists, skip processing
 		} else {
-			System.out.println("entering DBpedia: processResults");
+			logger.info("entering DBpedia: processResults");
 			List<Place> results = new ArrayList<Place>();
 			if (letter != null) {
 				prefixDictionnaireFile += letter;
@@ -183,7 +187,7 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 			if (results != null) {
 				writeToFile(results, prefixDictionnaireFile, outDictionnaireDir);
 			}
-			System.out.println("exiting DBpedia: processResults");
+			logger.info("exiting DBpedia: processResults");
 		}
 	}
 	

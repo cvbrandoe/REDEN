@@ -17,6 +17,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -36,6 +37,8 @@ import com.hp.hpl.jena.util.iterator.ExtendedIterator;
  */
 public class RDFProcessingNEL {
 
+	private static Logger logger = Logger.getLogger(RDFProcessingNEL.class);
+	
 	/**
 	 * Decodes URI.
 	 * 
@@ -86,11 +89,11 @@ public class RDFProcessingNEL {
 						if (code != 503 && code != 404) {
 							model.read(in, null, "N3");							
 						} else {
-							System.out.println("RDF repo is not available "
+							logger.info("RDF repo is not available "
 									+ uri);							
 						}
 					} else {
-						System.out.println("skip URI: " + uri);
+						logger.info("skip URI: " + uri);
 					}
 				} else {
 					// check rdf repos are available
@@ -103,7 +106,7 @@ public class RDFProcessingNEL {
 					if (code != 503 && code != 404) {
 						model.read(uri);
 					} else {
-						System.out.println("RDF repo is not available "
+						logger.info("RDF repo is not available "
 								+ uri);
 						//return null;
 					}
@@ -113,7 +116,7 @@ public class RDFProcessingNEL {
 				OutputStreamWriter out = new OutputStreamWriter(
 						fileOutputStream, "UTF-8");
 				model.write(out, "N3");
-				System.out.println("downloaded from uri: " + uri + " and file " + dir + "/file"
+				logger.info("downloaded from uri: " + uri + " and file " + dir + "/file"
 						+ replaceNonAlphabeticCharacters(uri) + ".n3");				
 				out.close();
 				fileOutputStream.close();				
@@ -121,7 +124,7 @@ public class RDFProcessingNEL {
 			} else {
 			}
 		} catch (Exception ignore) {
-			System.out.println("problem with RDF subgraph of URI: " + uri);
+			logger.info("problem with RDF subgraph of URI: " + uri);
 		}
 		return model;
 	}
@@ -250,7 +253,7 @@ public class RDFProcessingNEL {
 				model, dir, crawlSameAs);
 		model.add(modelout);
 		Date end = new Date();
-		System.out.println("Finished createRDFSubGraphsFromURIs in "
+		logger.info("Finished createRDFSubGraphsFromURIs in "
 				+ (end.getTime() - start.getTime()) / 60 + "secs");
 		return model;
 

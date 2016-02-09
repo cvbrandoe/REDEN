@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
+
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.ResultSet;
 
@@ -19,6 +21,8 @@ import com.hp.hpl.jena.query.ResultSet;
  */
 public class AppAdhoc 
 {
+	private static Logger logger = Logger.getLogger(AppAdhoc.class);
+	
 	/**
 	 * Main method.
 	 * @param args
@@ -35,7 +39,7 @@ public class AppAdhoc
 		
 		// reading parameters
 		try {
-			System.out.println("entering: crawlsLinkedData");
+			logger.info("entering: crawlsLinkedData");
 			Properties prop = new Properties();
 			InputStream input = new FileInputStream(propertiesFile);
 			prop.load(input);
@@ -65,7 +69,7 @@ public class AppAdhoc
 						out = true; //enters once
 					} else {
 						letter = let[counter];
-						System.out.println("processing letter:" +letter);
+						logger.info("processing letter:" +letter);
 					}
 					
 					//bnf				
@@ -87,7 +91,7 @@ public class AppAdhoc
 						out = true; //enters once
 					} else {
 						letter = let[counter];
-						System.out.println("processing letter:" +letter);
+						logger.info("processing letter:" +letter);
 					}
 					
 					//dbpedia 
@@ -110,7 +114,7 @@ public class AppAdhoc
 						out = true; //enters once
 					} else {
 						letter = let[counter];
-						System.out.println("processing letter:" +letter);
+						logger.info("processing letter:" +letter);
 					}
 					
 					//dbpedia 
@@ -121,7 +125,7 @@ public class AppAdhoc
 					counter++;
 				}
 			}
-			System.out.println("exiting: crawlsLinkedData");
+			logger.info("exiting: crawlsLinkedData");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -140,7 +144,7 @@ public class AppAdhoc
 	 * @return
 	 */
 	public static List<TopicExtent> loadDomainParams(String timePeriodBegin, String timePeriodEnd, String spatialExtent) {
-		System.out.println("Entering: loadDomainParams");
+		logger.info("Entering: loadDomainParams");
 		List<TopicExtent> domainParams = new ArrayList<TopicExtent>();
 		try {
 			//temporal information
@@ -160,7 +164,7 @@ public class AppAdhoc
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		System.out.println("exiting: loadDomainParams");
+		logger.info("exiting: loadDomainParams");
 		return domainParams;
 	}
 }

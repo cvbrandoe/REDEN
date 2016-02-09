@@ -19,6 +19,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.io.output.FileWriterWithEncoding;
+import org.apache.log4j.Logger;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
 import com.hp.hpl.jena.rdf.model.Model;
@@ -44,9 +45,9 @@ import dk.aaue.sna.alg.centrality.FreemanClosenessCentrality;
  */
 public class GraphProcessingNEL {
 
+	private static Logger logger = Logger.getLogger(GraphProcessingNEL.class);
+	
 	/**
-	 * 
-	 * 
 	 * @param models
 	 *            , the RDF graphs for mentions per paragraph
 	 * @param provBaseURI
@@ -166,10 +167,10 @@ public class GraphProcessingNEL {
 				}
 			}
 		}
-		System.out.println("vertex size: " + graph.vertexSet().size());
-		System.out.println("edge size: " + graph.edgeSet().size());
+		logger.info("vertex size: " + graph.vertexSet().size());
+		logger.info("edge size: " + graph.edgeSet().size());
 		Date end = new Date();
-		System.out.println("Finished convertJenaGraphToJGraphT in "
+		logger.info("Finished convertJenaGraphToJGraphT in "
 				+ (end.getTime() - start.getTime()) / 60 + "secs");
 		return graph;
 
@@ -281,7 +282,7 @@ public class GraphProcessingNEL {
 			
 			// calculate centrality
 			CentralityMeasure<String> cm = null;
-			System.out.println("Centrality measure used is " + measure);
+			logger.info("Centrality measure used is " + measure);
 			if (measure.equals("DegreeCentrality")) {
 				cm = new DegreeCentrality<String, LabeledEdge>(graph);
 			} else if (measure.equals("BrandesBetweennessCentrality")) {
@@ -320,10 +321,10 @@ public class GraphProcessingNEL {
 						}
 					}
 					Map<String, Double> orderedMap = sortByValue(results);
-					System.out.println("For mention: " + key);
+					logger.info("For mention: " + key);
 					for (String ur : orderedMap.keySet()) {
 						if (orderedMap.get(ur) != 0) {
-							System.out.println("Centrality of " + ur + " is: "
+							logger.info("Centrality of " + ur + " is: "
 									+ orderedMap.get(ur));
 						}
 					}
@@ -368,8 +369,7 @@ public class GraphProcessingNEL {
 				printGraph(graph, writerGraph);
 			}
 			Date end = new Date();
-			System.out
-					.println("Finished simplifyGraphsAndCalculateCentrality in "
+			logger.info("Finished simplifyGraphsAndCalculateCentrality in "
 							+ (end.getTime() - start.getTime()) / 60 + "secs");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
