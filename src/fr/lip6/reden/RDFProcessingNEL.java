@@ -281,7 +281,7 @@ public class RDFProcessingNEL {
 			}
 			List<String> out2 = new ArrayList<String>();
 			for (String uriA : out) {
-				if (!crawlSameAs.equalsIgnoreCase("ALL") && uriA.startsWith(crawlSameAs)) {
+				if (crawlSameAs.equalsIgnoreCase("ALL") || (!crawlSameAs.equalsIgnoreCase("ALL") && uriA.startsWith(crawlSameAs))) {
 					Resource personA = model.getResource(uriA);
 					SimpleSelector ssA = new SimpleSelector(personA, prop,
 							(RDFNode) null);

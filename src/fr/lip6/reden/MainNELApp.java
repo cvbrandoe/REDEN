@@ -47,12 +47,12 @@ public class MainNELApp {
 	static Map<String, Double> edgeFrequenceByLabel = new HashMap<String, Double>();
 	
 	public static void main(String[] args) {
-		if (args.length > 0 && args.length <= 5) {
-			namedEntityLinking("config/config.properties", args);
+		if (args.length > 0 && args.length <= 6) {
+			namedEntityLinking(args);
 		} else {
 			System.out.println("Two modes possible for providing arguments: "
-							+ "1) <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
-							+ "2) -createDico bnf|dbpediafr|getty-per|all");
+							+ "1) <config_file> <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
+							+ "2) <config_file> -createDico bnf|dbpediafr|getty-per|all");
 		}
 	}
 
@@ -63,30 +63,32 @@ public class MainNELApp {
 	 *            , the parameter file
 	 */
 	@SuppressWarnings("rawtypes")
-	public static void namedEntityLinking(String propertiesFile, String[] args) {
+	public static void namedEntityLinking(String[] args) {
 
 		try {
 
+			String propertiesFile = args[0];
 			Date startMain = new Date();
 			
 			//only builds the dico, skips NEL
-			if (args[0].equals("-createDico")) {
-				AppAdhoc.crawlsLinkedData("config/config.properties", args[1]);
+			if (args[1].equals("-createDico")) {
+				AppAdhoc.crawlsLinkedData(args[0], args[2]);
 				logger.info("Building dictionary for NEL");
 				return;
 			}
 						
-			if (!args[0].endsWith(".xml")) {
+			if (!args[1].endsWith(".xml")) {
 				System.out.println("Two modes possible for providing arguments: "
-						+ "1) <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
-						+ "2) -createDico bnf|dbpediafr|getty-per|all");
+						+ "1) <config_file> <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
+						+ "2) <config_file> -createDico bnf|dbpediafr|getty-per|all");
 				return;
 			}
 
-			if ( ( (args.length == 2 && args[1].equals("-printEval")) || (args.length == 3 && ( args[1].equals("-printEval") || args[2].equals("-printEval") )) )
-					&& !new File(args[0].replace(".xml", "-gold.xml")).exists()) {
+			if ( ( (args.length == 3 && args[2].equals("-printEval")) 
+					|| (args.length == 4 && ( args[2].equals("-printEval") || args[3].equals("-printEval") )) )
+					&& !new File(args[1].replace(".xml", "-gold.xml")).exists()) {
 				System.out.println("Gold file doesn't exist: "
-						+ args[0].replace(".xml", "-gold.xml"));
+						+ args[1].replace(".xml", "-gold.xml"));
 				return;
 			}
 
@@ -112,15 +114,15 @@ public class MainNELApp {
 			Properties prop = new Properties();
 			InputStream input = new FileInputStream(propertiesFile);
 			prop.load(input);
-			String annotationTag = prop.getProperty("namedEntityTag"); //TODO
-			String cl = prop.getProperty("NERclassName"); //TODO
+			String annotationTag = prop.getProperty("namedEntityTag");
+			String cl = prop.getProperty("NERclassName");
 			String[] baseUris = prop.getProperty("baseURIs").split(",");
 			String[] provBaseURI = prop.getProperty("avoidPredicatesBaseURI").split(",");
 			String measure = prop.getProperty("centralityMeasure");
 			String useindex = prop.getProperty("useDicoIndex");
-			String indexDir = prop.getProperty("indexDir"); //TODO
+			String indexDir = prop.getProperty("indexDir");
 			String preferedURI = prop.getProperty("preferedURIOrder");
-			String nameMainFolderDico = prop.getProperty("nameMainFolderDico"); //TODO
+			String nameMainFolderDico = prop.getProperty("nameMainFolderDico");
 			String rdfData = prop.getProperty("rdfData");
 			String xpathExpresion= prop.getProperty("xpathExpresion");
 			String propertyTagRef = prop.getProperty("propertyTagRef");
@@ -128,11 +130,14 @@ public class MainNELApp {
 			String crawlSameAs = prop.getProperty("crawlSameAs");
 			
 			// checking if we need to create an index
-			if ((args.length >= 2 && args[1].equals("-createIndex"))
-					|| (args.length >= 3 && args[2].equals("-createIndex"))) {
+			if ((args.length >= 3 && args[2].equals("-createIndex"))
+					|| (args.length >= 4 && args[3].equals("-createIndex"))) {
 				logger.info("(Re-)create index");
-				FileUtils.deleteDirectory(new File(indexDir)); //TODO
-				DicoProcessingNEL.createIndex(indexDir, nameMainFolderDico); //TODO
+				int ind = 0;
+				for (String indexDirName : indexDir.split(",")) { 
+					FileUtils.deleteDirectory(new File(indexDirName.trim()));
+					DicoProcessingNEL.createIndex(indexDir, nameMainFolderDico.split(",")[ind].trim());
+				}
 			}
 			int countMention = 0;
 			int countParagraph = 0;
@@ -140,7 +145,7 @@ public class MainNELApp {
 			//check input TEI files
 			DocumentBuilder b = DocumentBuilderFactory.newInstance()
 					.newDocumentBuilder();
-			File inputFiles = new File(args[0]);
+			File inputFiles = new File(args[1]);
 
 			// check file or folder
 			List<File> files = new ArrayList<File>();
@@ -176,73 +181,86 @@ public class MainNELApp {
 				NodeList nodes = (NodeList) xPath.evaluate(
 						xpathExpresion,
 						doc.getDocumentElement(), XPathConstants.NODESET);
+				
 				for (int i = 0; i < nodes.getLength(); ++i) {
-					List<String> annotationsParagraph = new ArrayList<String>();
-					Element e = (Element) nodes.item(i);
-					NodeList nodesChild = (NodeList) xPath.evaluate(".//"
-							+ annotationTag, e, XPathConstants.NODESET); //TODO pour chaque NE tag, on melange tout le monde
-					for (int k = 0; k < nodesChild.getLength(); ++k) {
-						Element child = (Element) nodesChild.item(k);
-						annotationsParagraph.add(child.getTextContent());
-						countMention++;
-					}
-					logger.info("processing text portion according to chosen context #"
-							+ countParagraph);
-					// look for URIs in dictionary
-					Map<String, List<List<String>>> mentionsWithURIs = null;
-					if (useindex.equalsIgnoreCase("true")) { // version with
-																// index TODO deprecated without index?
-						mentionsWithURIs = DicoProcessingNEL.retrieveMentionsURIsFromDicoWithIndex(
-								cl, annotationsParagraph, indexDir); //TODO, indicate which index, per or loc?
-					} else {
-						mentionsWithURIs = DicoProcessingNEL.retrieveMentionsURIsFromDico(
-								nameMainFolderDico, cl, annotationsParagraph); //TODO, indicate which index, per or loc?
-					}
-					logger.info("Total number of mentions: "+mentionsWithURIs.size());
+					Map<String, List<List<String>>> allMentionsWithURIs = new HashMap<String, List<List<String>>>();
+					List<String> allAnnotationsParagraph = new ArrayList<String>();
 					
-					String caseR = checkConditionsToNEL(mentionsWithURIs,
-							annotationsParagraph);
+					Element e = (Element) nodes.item(i);
+					int ind = 0;
+					for (String annoTag : annotationTag.split(",")) {
+						List<String> annotationsParagraph = new ArrayList<String>();
+						Map<String, List<List<String>>> mentionsWithURIs = new HashMap<String, List<List<String>>>();
+						NodeList nodesChild = (NodeList) xPath.evaluate(".//"
+								+ annoTag, e, XPathConstants.NODESET);
+						for (int k = 0; k < nodesChild.getLength(); ++k) {
+							Element child = (Element) nodesChild.item(k);
+							annotationsParagraph.add(child.getTextContent());
+							countMention++;
+						}
+						allAnnotationsParagraph.addAll(annotationsParagraph);
+						logger.info("processing text portion according to chosen context #"
+							+ countParagraph);
+						// look for URIs in dictionary
+						if (useindex.equalsIgnoreCase("true")) { // version with
+																// index
+							mentionsWithURIs = DicoProcessingNEL.retrieveMentionsURIsFromDicoWithIndex(
+								cl, annotationsParagraph, indexDir.split(",")[ind].trim());
+						} else {
+						//DEPRECATED: mentionsWithURIs = DicoProcessingNEL.retrieveMentionsURIsFromDico(
+						//		nameMainFolderDico, cl, annotationsParagraph);
+						}
+						allMentionsWithURIs.putAll(mentionsWithURIs); 
+						//TODO we overwrite for instance persons named "France" by the place called also "France"
+						ind++;
+					}
+					logger.info("Total number of mentions (all NE types included): "+allMentionsWithURIs.size());
+					
+					String caseR = checkConditionsToNEL(allMentionsWithURIs,
+							allAnnotationsParagraph);
 					// Regular case
 					if (caseR.equalsIgnoreCase("OK")) {
 						
 						//printing number of ambiguous URIs per mention
 						int countNumberURIsToProcess = 0;
-						Iterator<String> mentions = mentionsWithURIs.keySet().iterator();
+						Iterator<String> mentions = allMentionsWithURIs.keySet().iterator();
 						while (mentions.hasNext()) {
 							String mention = mentions.next();
-							Integer sizeReferents = mentionsWithURIs.get(mention).size();
+							Integer sizeReferents = allMentionsWithURIs.get(mention).size();
 							countNumberURIsToProcess += sizeReferents;
-							if (sizeReferents > 1) {
-								logger.info("Number of ambiguous referents (URIs) for "+mention+ " is "+sizeReferents);
-								ambigF.write("Number of ambiguous referents (URIs) for "+mention+ " is "+sizeReferents+"\n");
-							}
+							logger.info("Number of referents (URIs) for "+mention+ " is "+sizeReferents);
+							ambigF.write("Number of referents (URIs) for "+mention+ " is "+sizeReferents+"\n");							
 						}
 						logger.info("Total number of URIs to process (very approximative) : "+ countNumberURIsToProcess);
 						
 						// create inverted index
-						Map<String, String> invertedIndex = DicoProcessingNEL.buildInvertedIndex(mentionsWithURIs);
+						Map<String, String> invertedIndex = DicoProcessingNEL.buildInvertedIndex(allMentionsWithURIs);
 						// create RDF sub-graph from URIs of mentions in the
 						// current paragraph
 						
 						Model model = RDFProcessingNEL.aggregateRDFSubGraphsFromURIs(rdfData,
-								mentionsWithURIs, annotationsParagraph,
+								allMentionsWithURIs, allAnnotationsParagraph,
 								baseUris, crawlSameAs);
 						if (model != null) {
 							
 							// Fuse RDF graphs into a single graph (JGraphT format)
 							SimpleDirectedWeightedGraph<String, LabeledEdge> graph = GraphProcessingNEL.fuseRDFGraphsIntoJGTGraph(
-									model, provBaseURI, mentionsWithURIs, relsFile, crawlSameAs);
+									model, provBaseURI, allMentionsWithURIs, relsFile, crawlSameAs);
 							// Simplify graph, compute centrality, choose the higher score
 							Map<String, Double> choosenScoresperMention = new HashMap<String, Double>();
 							Map<String, String> choosenUris = GraphProcessingNEL.simplifyGraphsAndCalculateCentrality(
-									graph, mentionsWithURIs, annotationsParagraph,
+									graph, allMentionsWithURIs, allAnnotationsParagraph,
 									baseUris, invertedIndex, measure, preferedURI, files
 									.get(j).getName(), countParagraph, writerGraph, edgeFrequenceByLabel, choosenScoresperMention);
 							// write results in TEI
 							if (choosenUris != null) {
-								ResultsAndEvaluationNEL.produceResults(files.get(j), annotationTag,
-										choosenUris, mentionsWithURIs, e, doc, outDir, propertyTagRef, 
-										choosenScoresperMention, addScores);		//TODO, for both annotationTag							
+								for (String annoTag : annotationTag.split(",")) {
+									//TODO does not deal with for instance persons named "France" by the place called also "France", 
+									//it chooses the latest type of the list provided in the config
+									ResultsAndEvaluationNEL.produceResults(files.get(j), annoTag.trim(),  
+										choosenUris, allMentionsWithURIs, e, doc, outDir, propertyTagRef, 
+										choosenScoresperMention, addScores);	
+								}
 							}
 							logger.info("finish");
 						}
@@ -250,11 +268,13 @@ public class MainNELApp {
 						logger.info("Current paragraph does not need to be processed: there is no mentions in document");
 					} else {
 						logger.info("There are no ambiguous mentions");
-						ResultsAndEvaluationNEL.produceResultsSimple(files.get(j), annotationTag,
-									mentionsWithURIs, e, doc, outDir, propertyTagRef);
-						// case: "NoAmbiguity", when there are no
-						// ambiguities, assign them directly to the TEI output
-						// file
+						for (String annoTag : annotationTag.split(",")) {
+							ResultsAndEvaluationNEL.produceResultsSimple(files.get(j), annoTag.trim(),
+									allMentionsWithURIs, e, doc, outDir, propertyTagRef);
+							// case: "NoAmbiguity", when there are no
+							// ambiguities, assign them directly to the TEI output
+							// file
+						}
 					}
 					countParagraph++;
 				}
@@ -270,13 +290,13 @@ public class MainNELApp {
 					+ (endMain.getTime() - startMain.getTime()) / 60 + "secs");
 
 			// evaluation
-			if ((args.length >= 2 && args[1].equals("-printEval"))
-					|| (args.length >= 3 && args[2].equals("-printEval"))) {
-				String output = args[0].replace(".xml", "-outV3.xml");
+			if ((args.length >= 3 && args[2].equals("-printEval"))
+					|| (args.length >= 4 && args[3].equals("-printEval"))) {
+				String output = args[1].replace(".xml", "-outV3.xml");
 				String[] output2 = output.split("/");
 				if (new File(outDir+output2[output2.length-1]).exists()) {
 					logger.info("Printing evaluation");
-					ResultsAndEvaluationNEL.evaluation(args[0], annotationTag, xpathExpresion, outDir, propertyTagRef); //TODO for both annotationTag
+					ResultsAndEvaluationNEL.evaluation(args[1], annotationTag, xpathExpresion, outDir, propertyTagRef);											
 				} else {
 					System.out.println("Output file doesn't exist: " + outDir+output2[output2.length-1]);
 				}
