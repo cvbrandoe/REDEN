@@ -24,6 +24,7 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.log4j.Logger;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.core.KeywordAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -55,6 +56,8 @@ import au.com.bytecode.opencsv.CSVWriter;
  */
 public class DicoProcessingNEL {
 
+	private static Logger logger = Logger.getLogger(DicoProcessingNEL.class);
+	
 	/**
 	 * It retrieves URIs from the dictionary for each mention.
 	 * @param dirDico, folder of the dictionary
@@ -123,7 +126,7 @@ public class DicoProcessingNEL {
 			e.printStackTrace();
 		}
 		Date end = new Date();
-		System.out.println("Finished retrieveMentionsURIsFromDico in "
+		logger.info("Finished retrieveMentionsURIsFromDico in "
 				+ (end.getTime() - start.getTime()) / 60 + "secs");
 
 		return out;
@@ -173,7 +176,7 @@ public class DicoProcessingNEL {
 
 		}
 		Date end = new Date();
-		System.out.println("Finished retrieveMentionsURIsFromDicoWithIndex in "
+		logger.info("Finished retrieveMentionsURIsFromDicoWithIndex in "
 				+ (end.getTime() - start.getTime()) / 60 + "secs");
 		return out;
 	}
@@ -195,11 +198,10 @@ public class DicoProcessingNEL {
 							+ "' does not exist or is not readable, please check the path");
 			System.exit(1);
 		}
-		System.out.println("Data dir: " + docDir);
+		logger.info("Data dir: " + docDir);
 		Date start = new Date();
 		try {
-			System.out
-					.println("Indexing to directory '" + indexDirStr + "'...");
+			logger.info("Indexing to directory '" + indexDirStr + "'...");
 			Directory dir = FSDirectory.open(Paths.get(indexDirStr));
 			Analyzer analyzer = new StandardAnalyzer();
 			IndexWriterConfig iwc = new IndexWriterConfig(analyzer);
@@ -216,7 +218,7 @@ public class DicoProcessingNEL {
 
 			writer.close();
 			Date end = new Date();
-			System.out.println(end.getTime() - start.getTime()
+			logger.info(end.getTime() - start.getTime()
 					+ " total milliseconds");
 		} catch (IOException e) {
 			System.out.println(" caught a " + e.getClass()
@@ -285,7 +287,7 @@ public class DicoProcessingNEL {
 				doc.add(new StringField("uris", uris.trim(), Field.Store.YES));
 				writer.addDocument(doc);
 			}
-			System.out.println("file processed " + file);
+			logger.info("file processed " + file);
 			reader.close();
 		}
 	}
@@ -352,7 +354,7 @@ public class DicoProcessingNEL {
 				}
 			}
 		}
-		System.out.println("Finished buildInvertedIndex");
+		logger.info("Finished buildInvertedIndex");
 		return index;
 	}
 	

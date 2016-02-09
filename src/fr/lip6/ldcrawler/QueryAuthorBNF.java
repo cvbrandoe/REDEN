@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.log4j.Logger;
+
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
@@ -24,6 +26,8 @@ import com.opencsv.CSVWriter;
  */
 public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface {
 
+	private static Logger logger = Logger.getLogger(QueryAuthorBNF.class);
+	
 	/**
 	 * Mandatory fields
 	 */
@@ -57,7 +61,7 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 					outDictionnaireDir+"/"+prefixDictionnaireFile+firstLetter+".tsv");
 			return null; //skip processing
 		} else {
-			System.out.println("entering BNF: formulateSPARQLQuery");
+			logger.info("entering BNF: formulateSPARQLQuery");
 			//temporal information can be incorporated into the query in many ways
 			String filterDate = "";
 			for (TopicExtent d : domainParams) {
@@ -105,8 +109,8 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 						+ "OPTIONAL { ?auteur owl:sameAs ?ref . "
 						+ "FILTER regex(STR(?ref), '^http://www.idref.fr|^http://dbpedia.org/resource', 'i') }}";
 			Query query = QueryFactory.create(queryString);
-			System.out.println("query: " + query.toString());
-			System.out.println("exiting BNF: formulateSPARQLQuery");
+			logger.info("query: " + query.toString());
+			logger.info("exiting BNF: formulateSPARQLQuery");
 			return query;
 		}		
 	}
@@ -119,8 +123,8 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 			System.out.println("entering BNF: skip, file exists - "+outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
 			return null; //file exists, skip processing
 		} else {
-			System.out.println("entering BNF: executeQuery");
-			System.out.println("exiting BNF: executeQuery");
+			logger.info("entering BNF: executeQuery");
+			logger.info("exiting BNF: executeQuery");
 			return super.executeQuery(query, SPARQL_END_POINT, timeout, 
 					outDictionnaireDir, letter);
 		}
@@ -138,7 +142,7 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 			System.out.println("entering BNF: skip, file exists - "+outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
 			return; //file exists, skip processing
 		} else {
-			System.out.println("entering BNF: processResults");
+			logger.info("entering BNF: processResults");
 			try {
 				if (letter != null) {
 					prefixDictionnaireFile += letter;
@@ -238,7 +242,7 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 					writeAuthorToFile(writer, authors.get(uri));
 				}
 				writer.close();
-				System.out.println("exiting BNF: processResults");
+				logger.info("exiting BNF: processResults");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

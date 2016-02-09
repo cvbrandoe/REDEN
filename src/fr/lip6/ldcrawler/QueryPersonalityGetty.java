@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.log4j.Logger;
+
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
@@ -24,6 +26,8 @@ import com.opencsv.CSVWriter;
  */
 public class QueryPersonalityGetty extends QuerySource implements QuerySourceInterface {
 
+	private static Logger logger = Logger.getLogger(QueryPersonalityGetty.class);
+	
 	/**
 	 * Mandatory fields
 	 */
@@ -57,7 +61,7 @@ public class QueryPersonalityGetty extends QuerySource implements QuerySourceInt
 					outDictionnaireDir+"/"+prefixDictionnaireFile+firstLetter+".tsv");
 			return null; //skip processing
 		} else {
-			System.out.println("entering Getty: formulateSPARQLQuery");
+			logger.info("entering Getty: formulateSPARQLQuery");
 			//temporal information can be incorporated into the query in many ways
 			String filterDate = "";
 			for (TopicExtent d : domainParams) {
@@ -101,8 +105,8 @@ public class QueryPersonalityGetty extends QuerySource implements QuerySourceInt
 					//+ TODO (filter by date but there are several dates?) "?biopers gvp:estStart ?birthdate . " for obtaining the birthdate but there are two, which one to choose systematically?
 					+ "?biopers schema:gender ?gender } }"; //gender uses codes from an ontology but these are inconsistent
 			Query query = QueryFactory.create(queryString);
-			System.out.println("query: " + query.toString());
-			System.out.println("exiting Getty: formulateSPARQLQuery");
+			logger.info("query: " + query.toString());
+			logger.info("exiting Getty: formulateSPARQLQuery");
 			return query;
 		}		
 	}
@@ -115,8 +119,8 @@ public class QueryPersonalityGetty extends QuerySource implements QuerySourceInt
 			System.out.println("entering Getty: skip, file exists - "+outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
 			return null; //file exists, skip processing
 		} else {
-			System.out.println("entering Getty: executeQuery");
-			System.out.println("exiting Getty: executeQuery");
+			logger.info("entering Getty: executeQuery");
+			logger.info("exiting Getty: executeQuery");
 			return super.executeQuery(query, SPARQL_END_POINT, timeout, 
 					outDictionnaireDir, letter);
 		}
@@ -134,7 +138,7 @@ public class QueryPersonalityGetty extends QuerySource implements QuerySourceInt
 			System.out.println("entering Getty: skip, file exists - "+outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
 			return; //file exists, skip processing
 		} else {
-			System.out.println("entering Getty: processResults");
+			logger.info("entering Getty: processResults");
 			try {
 				if (letter != null) {
 					prefixDictionnaireFile += letter;
@@ -211,7 +215,7 @@ public class QueryPersonalityGetty extends QuerySource implements QuerySourceInt
 					writePersonalityToFile(writer, authors.get(uri));
 				}
 				writer.close();
-				System.out.println("exiting Getty: processResults");
+				logger.info("exiting Getty: processResults");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

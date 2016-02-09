@@ -30,6 +30,7 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.apache.log4j.Logger;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -43,6 +44,8 @@ import org.xml.sax.SAXException;
  */
 public class ResultsAndEvaluationNEL {
 
+	private static Logger logger = Logger.getLogger(ResultsAndEvaluationNEL.class);
+	
 	/**
 	 * Writes selected URIs into the a new TEI file equivalent to the input
 	 * file.
@@ -91,7 +94,7 @@ public class ResultsAndEvaluationNEL {
 			if (annotationsParagraph.size() > 0) {
 				out.add(annotationsParagraph);
 			}
-			System.out.println("NB: " + nb);
+			logger.info("NB: " + nb);
 			//System.out.println("Identified: " + correctlyIdentified);
 			Transformer transformer;
 			transformer = TransformerFactory.newInstance().newTransformer();
@@ -108,7 +111,7 @@ public class ResultsAndEvaluationNEL {
 			writer.println(xmlString);
 			writer.close();
 			Date end = new Date();
-			System.out.println("Finished produceResults in "
+			logger.info("Finished produceResults in "
 					+ (end.getTime() - start.getTime()) / 60 + "secs");
 		} catch (XPathExpressionException e1) {
 			e1.printStackTrace();
@@ -302,7 +305,7 @@ public class ResultsAndEvaluationNEL {
 			writer.println("Evaluation: " + correctkey / manualkeys);
 			writer.close();
 			writerCE.close();
-			System.out.println("Check evaluation results in "
+			logger.info("Check evaluation results in "
 					+ outDir+namefileA[namefileA.length-1].replace(".xml", "-resEvalV3.txt"));			
 		} catch (ParserConfigurationException e1) {
 			e1.printStackTrace();
