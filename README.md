@@ -5,15 +5,17 @@ The main Java class to launch REDEN is fr.lip6.reden.MainNELApp.java, REDEN conf
 
 The first mode allows the downloading and the constitution of a dictionary of potential NE candidates from Linked Data, so you must be connected to the Internet (when passing through a proxy use the following JVM parameters: -DproxySet=true -DproxyHost=IP_address -DproxyPort=port). So far, the place and the person (author) dictionaries are created from French DBpedia and the French National Library (BnF) Linked Data sets. Please contact us for helping you add a new LD source.
 
-The only parameter is:  
+The only parameters are:  
 
--createDico bnf|dbpediafr|all
+config-file.properties -createDico bnf|dbpediafr|all
 
 Once the dictionary has been built, the second mode allows the annotation of an input TEI-XML file, only the first time you launch REDEN you must be connected to the Internet. The parameters are:
 
-TEI-fileName.xml -printEval -createIndex -relsFile\=file -outDir\=dir
+config-file.properties TEI-fileName.xml -printEval -createIndex -relsFile\=file -outDir\=dir
 
 where:
+
+config-file.properties (mandatory): the name of the properties file containing the parameters for configuring REDEN and the LD extractor, see config/config.properties
 
 TEI-fileName.xml (mandatory): the name of the TEI file, include the file path if necessary
 

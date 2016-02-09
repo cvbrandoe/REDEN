@@ -235,56 +235,60 @@ public class ResultsAndEvaluationNEL {
 			Integer countParagraph = 0;
 			for (int i = 0; i < nodes.getLength(); ++i) {
 				Element e = (Element) nodes.item(i);
-				NodeList nodesChild = (NodeList) xPath.evaluate(".//"
-						+ annotationTag, e, XPathConstants.NODESET);
-				
-				// gold file
-				Element eGold = (Element) nodesGold.item(i);
-				NodeList nodesChildGold = (NodeList) xPathGold.evaluate(".//"
-						+ annotationTag, eGold, XPathConstants.NODESET);
 				String otherMentions = "";
 				writer.println("Paragraph# "+countParagraph);
-				for (int k = 0; k < nodesChild.getLength(); ++k) {
-					Element child = (Element) nodesChild.item(k);
-					Element childGold = (Element) nodesChildGold.item(k);
-					otherMentions += child.getTextContent() + ",";
+				for (String annoTag : annotationTag.split(",")) {
+
+					NodeList nodesChild = (NodeList) xPath.evaluate(".//"
+							+ annoTag.trim(), e, XPathConstants.NODESET);
 					
-					String ref = childGold.getAttribute("ref");
-					String ref_autoList = child.getAttribute(propertyTagRef);
-					String mention = child.getTextContent();
-					if (ref != null && !ref.equals("")) { // gold has manual ref
-						manualkeys++;
-						if (ref_autoList != null && !ref_autoList.equals("")) { // nel chose something
-							if (ref_autoList.contains(ref)) {
-								// writer.println("Mention: "+child.getTextContent());
-								// writer.println("Ok");
-								correctkey++;
-								if (countOccurenceCorrectMentions.get(mention) == null) {
-									countOccurenceCorrectMentions.put(mention, 1);
+					// gold file
+					Element eGold = (Element) nodesGold.item(i);
+					NodeList nodesChildGold = (NodeList) xPathGold.evaluate(".//"
+							+ annoTag.trim(), eGold, XPathConstants.NODESET);
+					
+					for (int k = 0; k < nodesChild.getLength(); ++k) {
+						Element child = (Element) nodesChild.item(k);
+						Element childGold = (Element) nodesChildGold.item(k);
+						otherMentions += child.getTextContent() + ",";
+						
+						String ref = childGold.getAttribute("ref");
+						String ref_autoList = child.getAttribute(propertyTagRef);
+						String mention = child.getTextContent();
+						if (ref != null && !ref.equals("")) { // gold has manual ref
+							manualkeys++;
+							if (ref_autoList != null && !ref_autoList.equals("")) { // nel chose something
+								if (ref_autoList.contains(ref)) {
+									// writer.println("Mention: "+child.getTextContent());
+									// writer.println("Ok");
+									correctkey++;
+									if (countOccurenceCorrectMentions.get(mention) == null) {
+										countOccurenceCorrectMentions.put(mention, 1);
+									} else {
+										Integer count = countOccurenceCorrectMentions.get(mention);
+										count++;
+										countOccurenceCorrectMentions.put(mention, count);
+									}
 								} else {
-									Integer count = countOccurenceCorrectMentions.get(mention);
-									count++;
-									countOccurenceCorrectMentions.put(mention, count);
+									writer.println("Mention: "
+											+ child.getTextContent());
+									writer.println("Manual was: ");
+									writer.println(ref);
+									writer.println("Algorithm choice was: ");
+									writer.println(ref_autoList);																
 								}
 							} else {
-								writer.println("Mention: "
-										+ child.getTextContent());
+								writer.println("Mention: " + child.getTextContent());
 								writer.println("Manual was: ");
 								writer.println(ref);
-								writer.println("Algorithm choice was: ");
-								writer.println(ref_autoList);																
-							}
+								writer.println("Algorithm choice was EMPTY");
+								emptyChoice++;
+							}						
 						} else {
-							writer.println("Mention: " + child.getTextContent());
-							writer.println("Manual was: ");
-							writer.println(ref);
-							writer.println("Algorithm choice was EMPTY");
-							emptyChoice++;
-						}						
-					} else {
-						emptyManualAnnot++;
-						// writer.println("Mention "+child.getTextContent()+" has no manual annotation");
-					}					
+							emptyManualAnnot++;
+							// writer.println("Mention "+child.getTextContent()+" has no manual annotation");
+						}					
+					}
 				}
 				countParagraph++;
 				writer.println("");
