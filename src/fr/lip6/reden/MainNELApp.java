@@ -128,6 +128,7 @@ public class MainNELApp {
 			String propertyTagRef = prop.getProperty("propertyTagRef");
 			String addScores = prop.getProperty("addScores");
 			String crawlSameAs = prop.getProperty("crawlSameAs");
+			String sameAsproperty = prop.getProperty("sameAsproperty");
 			
 			// checking if we need to create an index
 			if ((args.length >= 3 && args[2].equals("-createIndex"))
@@ -240,12 +241,12 @@ public class MainNELApp {
 						
 						Model model = RDFProcessingNEL.aggregateRDFSubGraphsFromURIs(rdfData,
 								allMentionsWithURIs, allAnnotationsParagraph,
-								baseUris, crawlSameAs);
+								baseUris, crawlSameAs, sameAsproperty);
 						if (model != null) {
 							
 							// Fuse RDF graphs into a single graph (JGraphT format)
 							SimpleDirectedWeightedGraph<String, LabeledEdge> graph = GraphProcessingNEL.fuseRDFGraphsIntoJGTGraph(
-									model, provBaseURI, allMentionsWithURIs, relsFile, crawlSameAs);
+									model, provBaseURI, allMentionsWithURIs, relsFile, crawlSameAs, sameAsproperty);
 							// Simplify graph, compute centrality, choose the higher score
 							Map<String, Double> choosenScoresperMention = new HashMap<String, Double>();
 							Map<String, String> choosenUris = GraphProcessingNEL.simplifyGraphsAndCalculateCentrality(

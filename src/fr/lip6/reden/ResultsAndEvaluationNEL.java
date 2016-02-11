@@ -236,7 +236,7 @@ public class ResultsAndEvaluationNEL {
 			for (int i = 0; i < nodes.getLength(); ++i) {
 				Element e = (Element) nodes.item(i);
 				String otherMentions = "";
-				writer.println("Paragraph# "+countParagraph);
+				writer.println("Text portion# "+countParagraph);
 				for (String annoTag : annotationTag.split(",")) {
 
 					NodeList nodesChild = (NodeList) xPath.evaluate(".//"
@@ -325,6 +325,25 @@ public class ResultsAndEvaluationNEL {
 
 	}
 
+	//TODO
+	//public static void printRelationFrequency(Map<String, Double> edgeFrequenceByLabel, String fileName, String outDir) {
+	
+	//candidate count: mean cardinality of the candidate sets. 
+	//Fewer candidates mean reduced disambiguation workload (la cardinalité des candidate sets (composé d’URIs) 
+	//divisé par le nombre de mentions dans le texte d’entrée)
+
+	//(choisit 1 phase) candidate precision: percentage of non-empty candidate sets containing the correct entity (le nombre de candidate sets non-vides contenant l’URI correct par rapport au gold divisé par le nombre de candidate sets non-vides)
+
+	//(choisit 1 phase) candidate recall: percentage of non-NIL queries where the candidate set includes the correct candidate (le nombre de candidate sets contenant l’URI pour les mentions qui ont été annotées (!= NIL) divisé par le nombre de candidate sets des mentions qui ont été annotées -- celle là est difficile à comprendre..)
+
+	//(choisit 1 phase) NIL precision: percentage of empty candidate sets that are correct (i.e. correspond to NIL queries) (le nombre de candidate sets qui sont vides et la mention correspondante a été annoté comme NIL divisé par le nombre de candidate sets vides. Interpretation: si dans le gold quelqu’un dit que “M. Barre” n’a pas d’URI (il n’existe pas dans la KB) alors on devrait aussi avoir des candidate sets vides ?)
+	
+	//(choisit 1 phase) NIL recall: percentage of NIL queries for which the candidate set is empty. A high rate is valuable because it is difficult to disambiguators to determine whether queries are NIL-linked when candidates are returned (le nombre de candidate sets qui sont vides et la mention correspondante a été annoté comme NIL divisé par le nombre de mentions dans le gold qui ont une annotation NIL)
+	
+	//(phase 2, non empty candidate sets and at least 2 candidates) disambiguation accuracy : percentage of correctly linked queries (and different entities) (pour eux, un query est plus ou moins une mention. Ici c’est accuracy comme nous ou plus haut appelé micro-accuracy)
+	
+	//}
+	
 	/**
 	 * Print the number of times a predicate (edge) appears in the graph.
 	 * @param edgeFrequenceByLabel, container of the information
