@@ -47,6 +47,47 @@ public class GraphProcessingNEL {
 
 	private static Logger logger = Logger.getLogger(GraphProcessingNEL.class);
 	
+	// obtain potentially identical individuals thanks to the sameAs relation,
+	// including itself
+	public static List<String> obtainPotentiallyIdenticalIndividuals(
+		String uri, Model model, String crawlSameAs, String sameAsproperty) {
+		List<String> out = new ArrayList<String>();
+		// out.add(uri);
+		Property prop = model.getProperty(sameAsproperty);
+		Resource person = model.getResource(uri);
+		SimpleSelector ss = new SimpleSelector(person, prop, (RDFNode) null);
+		ExtendedIterator<Statement> iter = model.listStatements(ss);
+		while (iter.hasNext()) {
+			Statement stmt = iter.next();
+			if (out.size() == 0) {
+				out.add(stmt.getObject().toString());
+			}
+			if (!out.contains(stmt.getObject().toString())) {
+				out.add(stmt.getObject().toString());
+			}
+		}
+		List<String> out2 = new ArrayList<String>();
+		for (String uriA : out) {
+			if (crawlSameAs.equalsIgnoreCase("ALL") || (!crawlSameAs.equalsIgnoreCase("ALL") && uriA.startsWith(crawlSameAs))) {
+				Resource personA = model.getResource(uriA);
+				SimpleSelector ssA = new SimpleSelector(personA, prop, (RDFNode) null);
+				ExtendedIterator<Statement> iterA = model.listStatements(ssA);
+				while (iterA.hasNext()) {
+					Statement stmt = iterA.next();
+					if (out2.size() == 0) {
+						out2.add(stmt.getObject().toString());
+					}
+					if (!out2.contains(stmt.getObject().toString())) {
+						out2.add(stmt.getObject().toString());
+					}
+				}
+			}
+		}
+		out.addAll(out2);
+		out.add(uri);
+		return out;
+	}
+			
 	/**
 	 * @param models
 	 *            , the RDF graphs for mentions per paragraph
@@ -67,14 +108,13 @@ public class GraphProcessingNEL {
 	@SuppressWarnings("rawtypes")
 	public static SimpleDirectedWeightedGraph<String, LabeledEdge> fuseRDFGraphsIntoJGTGraph(
 			Model model, String[] provBaseURI,
-			Map<String, List<List<String>>> mentionsWithURIs, File relsFile, String crawlSameAs) {
+			Map<String, List<List<String>>> mentionsWithURIs, File relsFile, String crawlSameAs, String sameAsProperty) {
 
 		SimpleDirectedWeightedGraph<String, LabeledEdge> graph = new SimpleDirectedWeightedGraph<String, LabeledEdge>(
 				LabeledEdge.class);
-		Property prop = model
-				.getProperty("http://www.w3.org/2002/07/owl#sameAs");
-		Property propBDay = model.getProperty("http://vocab.org/bio/0.1/birth");
-		Property propDDay = model.getProperty("http://vocab.org/bio/0.1/death");
+		Property prop = model.getProperty(crawlSameAs);
+		//Property propBDay = model.getProperty("http://vocab.org/bio/0.1/birth"); TODO to remove: test date injection
+		//Property propDDay = model.getProperty("http://vocab.org/bio/0.1/death");
 		Date start = new Date();
 		// the set of URIs of mentions
 		Set<String> mentions = mentionsWithURIs.keySet();
@@ -106,17 +146,16 @@ public class GraphProcessingNEL {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		// for all involved BNF URIs
-		HashMap<String, Integer> referenceURIsBirthDayInfo = new HashMap<String, Integer>();
-		HashMap<String, Integer> referenceURIsDeathDayInfo = new HashMap<String, Integer>();
+		
+		//HashMap<String, Integer> referenceURIsBirthDayInfo = new HashMap<String, Integer>();
+		//HashMap<String, Integer> referenceURIsDeathDayInfo = new HashMap<String, Integer>();
 
 		for (String uri : mentionUrisF) {
 			Resource individual = model.getResource(uri);
-			List<String> sameAsURIsIndividual = RDFProcessingNEL.obtainPotentiallyIdenticalIndividuals(
-					individual.getURI(), model, crawlSameAs);
+			List<String> sameAsURIsIndividual = obtainPotentiallyIdenticalIndividuals(
+					individual.getURI(), model, crawlSameAs, sameAsProperty);
 
-			//TODO particular for BnF data, add dates associated to authors as nodes in the graph. Avoid this.
-			if (uri.contains("data.bnf.fr")) { 
+			//if (uri.contains("data.bnf.fr")) { 
 				String vertex1 = RDFProcessingNEL.decompose(uri);
 				graph.addVertex(vertex1);
 				for (String uriAlias : sameAsURIsIndividual) {
@@ -131,7 +170,7 @@ public class GraphProcessingNEL {
 						Statement stmt = iter.next();
 						Property predicate = stmt.getPredicate();
 						RDFNode object = stmt.getObject();
-						if (predicate.equals(propBDay)) {
+						/*if (predicate.equals(propBDay)) {
 							referenceURIsBirthDayInfo.put(uri,
 									DateSpecificProcessingNEL.processDate((String) object.asLiteral()
 											.getValue()));
@@ -140,11 +179,11 @@ public class GraphProcessingNEL {
 							referenceURIsDeathDayInfo.put(uri,
 									DateSpecificProcessingNEL.processDate((String) object.asLiteral()
 											.getValue()));
-						}
-						if (!predicate.equals(prop)) {
+						}*/
+						if (!predicate.equals(prop)) { // other predicates != than sameAs or author dates
 							String vertex2 = RDFProcessingNEL.decompose(object.toString());
-							List<String> targetAliases = RDFProcessingNEL.obtainPotentiallyIdenticalIndividuals(
-									vertex2, model, crawlSameAs);
+							List<String> targetAliases = obtainPotentiallyIdenticalIndividuals(
+									vertex2, model, crawlSameAs, sameAsProperty);
 							if (targetAliases.size() == 1) {
 								graph.addVertex(vertex2);
 								LabeledEdge edge = new LabeledEdge<String>(
@@ -165,7 +204,7 @@ public class GraphProcessingNEL {
 						}
 					}
 				}
-			}
+			//}
 		}
 		logger.info("vertex size: " + graph.vertexSet().size());
 		logger.info("edge size: " + graph.edgeSet().size());
@@ -231,11 +270,12 @@ public class GraphProcessingNEL {
 						for (String uri : listUris) {
 							for (String baseURL2 : baseURIS) {
 								String baseURL = baseURL2.trim();
-								if (uri.contains(baseURL)) { // avoid idref URI
+								if (uri.contains(baseURL)) { // avoid some URI
 									urisColoredNodes.add(uri);
 									if (!urisColoredNodes
 											.contains(RDFProcessingNEL.decompose(uri)))
-										urisColoredNodes.add(RDFProcessingNEL.decompose(uri));
+										urisColoredNodes.add(RDFProcessingNEL.decompose(uri)); 
+									//the candidates
 
 								}
 							}

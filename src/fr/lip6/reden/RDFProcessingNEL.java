@@ -6,8 +6,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.Date;
@@ -59,7 +57,7 @@ public class RDFProcessingNEL {
 	}
 
 	/**
-	 * Downloads RDF data by URI from the Web of Data.
+	 * If necessary it downloads RDF data by URI from the Web of Data.
 	 * @param uri, concerned URI
 	 * @param baseURL
 	 * @param model, RDF model where to store the data
@@ -67,7 +65,7 @@ public class RDFProcessingNEL {
 	 * (to avoid downloading files every time)
 	 * @return the raw RDF graph
 	 */
-	public static Model retrieveRDF(String uri, String baseURL, Model model,
+	public static void retrieveRDF(String uri, String baseURL,
 			String dir) {
 
 		try {
@@ -75,41 +73,17 @@ public class RDFProcessingNEL {
 			// to go faster (remove f.exists if we want
 			// to update local triples)
 			if (!f.exists() || FileUtils.readFileToString(f).trim().isEmpty()) {
-				model = ModelFactory.createDefaultModel();
+				Model model = ModelFactory.createDefaultModel();
 				if (uri.contains("dbpedia")) {
 					InputStream in = FileManager.get().open(uri+".ntriples");
 					if (in != null) {
-						// check rdf repos are available
-						URL u = new URL(uri);
-						HttpURLConnection huc = (HttpURLConnection) u
-								.openConnection();
-						huc.setRequestMethod("GET");
-						huc.connect();
-						int code = huc.getResponseCode();
-						if (code != 503 && code != 404) {
-							model.read(in, null, "N3");							
-						} else {
-							logger.info("RDF repo is not available "
-									+ uri);							
-						}
+						model.read(in, null, "N3");	
 					} else {
 						logger.info("skip URI: " + uri);
+						return;
 					}
 				} else {
-					// check rdf repos are available
-					URL u = new URL(uri);
-					HttpURLConnection huc = (HttpURLConnection) u
-							.openConnection();
-					huc.setRequestMethod("GET");
-					huc.connect();
-					int code = huc.getResponseCode();
-					if (code != 503 && code != 404) {
-						model.read(uri);
-					} else {
-						logger.info("RDF repo is not available "
-								+ uri);
-						//return null;
-					}
+					model.read(uri);
 				}
 
 				OutputStream fileOutputStream = new FileOutputStream(f);
@@ -121,12 +95,11 @@ public class RDFProcessingNEL {
 				out.close();
 				fileOutputStream.close();				
 
-			} else {
+			} else {				
 			}
 		} catch (Exception ignore) {
-			logger.info("problem with RDF subgraph of URI: " + uri);
+			logger.info("problem with URI: " + uri); //not found or bad syntax, etc. so ignore
 		}
-		return model;
 	}
 
 	/**
@@ -139,13 +112,12 @@ public class RDFProcessingNEL {
 	 */
 	public static Model injectSameAsInformation(
 			Map<String, List<List<String>>> mentionsWithURIs,
-			String[] baseURIS, Model model, String dir, String crawlSameAs) {
+			String[] baseURIS, Model model, String dir, String crawlSameAs, 
+			String sameAsproperty) {
 
 		Model modelout = ModelFactory.createDefaultModel();
 		Property prop = model
-				.getProperty("http://www.w3.org/2002/07/owl#sameAs");
-		//TODO skos:exactMatch as well for Getty
-
+				.getProperty(sameAsproperty);
 		for (List<List<String>> uriLists : mentionsWithURIs.values()) {
 			for (List<String> uriList : uriLists) {
 				for (String uri : uriList) {
@@ -161,14 +133,18 @@ public class RDFProcessingNEL {
 								RDFNode object = stmt.getObject();
 								if (!crawlSameAs.equalsIgnoreCase("ALL")) {
 									if (object.toString().startsWith(crawlSameAs)) {
-										modelout = retrieveRDF(
-											decompose(object.toString()),
-											baseURL, modelout, dir);
+										retrieveRDF(decompose(object.toString()), baseURL, dir);
+										if (new File(dir + "/file" + replaceNonAlphabeticCharacters(decompose(object.toString()))+ ".n3").exists()) {
+												modelout.read(dir + "/file"
+														+ replaceNonAlphabeticCharacters(decompose(object.toString())) + ".n3");
+										}
 									}
 								} else {
-									modelout = retrieveRDF(
-											decompose(object.toString()),
-											baseURL, modelout, dir);
+									retrieveRDF(decompose(object.toString()), baseURL, dir);
+									if (new File(dir + "/file" + replaceNonAlphabeticCharacters(decompose(object.toString()))+ ".n3").exists()) {
+											modelout.read(dir + "/file"
+													+ replaceNonAlphabeticCharacters(decompose(object.toString())) + ".n3");
+									}
 								}
 							}
 						}
@@ -195,7 +171,7 @@ public class RDFProcessingNEL {
 	public static Model aggregateRDFSubGraphsFromURIs(String dir,
 			Map<String, List<List<String>>> mentionsWithURIs,
 			List<String> mentionsofParagraph, String[] baseURIS, 
-			String crawlSameAs) {
+			String crawlSameAs, String sameAsproperty) {
 		Date start = new Date();
 		File dirF = new File(dir);
 		if (!dirF.exists())
@@ -210,8 +186,7 @@ public class RDFProcessingNEL {
 						//only allow uris from the KBs configured in the config.properties (baseURIs)
 						if (uri.contains(baseURL)) { 
 							if (!alreadyProcessedURI.contains(uri)) {
-								Model model = ModelFactory.createDefaultModel();
-								model = retrieveRDF(uri, baseURL, model, dir);
+								retrieveRDF(uri, baseURL, dir);
 								alreadyProcessedURI.add(uri);
 							}
 						}
@@ -250,7 +225,7 @@ public class RDFProcessingNEL {
 		}
 		// add sameAs information into the model
 		Model modelout = injectSameAsInformation(mentionsWithURIs, baseURIS,
-				model, dir, crawlSameAs);
+				model, dir, crawlSameAs, sameAsproperty);
 		model.add(modelout);
 		Date end = new Date();
 		logger.info("Finished createRDFSubGraphsFromURIs in "
@@ -259,55 +234,11 @@ public class RDFProcessingNEL {
 
 	}
 	
-	// obtain potentially identical individuals thanks to the sameAs relation,
-		// including itself
-		public static List<String> obtainPotentiallyIdenticalIndividuals(
-				String uri, Model model, String crawlSameAs) {
-			List<String> out = new ArrayList<String>();
-			// out.add(uri);
-			Property prop = model
-					.getProperty("http://www.w3.org/2002/07/owl#sameAs");
-			Resource person = model.getResource(uri);
-			SimpleSelector ss = new SimpleSelector(person, prop, (RDFNode) null);
-			ExtendedIterator<Statement> iter = model.listStatements(ss);
-			while (iter.hasNext()) {
-				Statement stmt = iter.next();
-				if (out.size() == 0) {
-					out.add(stmt.getObject().toString());
-				}
-				if (!out.contains(stmt.getObject().toString())) {
-					out.add(stmt.getObject().toString());
-				}
-			}
-			List<String> out2 = new ArrayList<String>();
-			for (String uriA : out) {
-				if (crawlSameAs.equalsIgnoreCase("ALL") || (!crawlSameAs.equalsIgnoreCase("ALL") && uriA.startsWith(crawlSameAs))) {
-					Resource personA = model.getResource(uriA);
-					SimpleSelector ssA = new SimpleSelector(personA, prop,
-							(RDFNode) null);
-					ExtendedIterator<Statement> iterA = model.listStatements(ssA);
-					while (iterA.hasNext()) {
-						Statement stmt = iterA.next();
-						if (out2.size() == 0) {
-							out2.add(stmt.getObject().toString());
-						}
-						if (!out2.contains(stmt.getObject().toString())) {
-							out2.add(stmt.getObject().toString());
-						}
-					}
-				}
-			}
-			out.addAll(out2);
-			out.add(uri);
-			return out;
-
-		}
-		
-		public static String replaceNonAlphabeticCharacters(String in) {
+	public static String replaceNonAlphabeticCharacters(String in) {
 			Pattern p = Pattern.compile("\\s|'|-");
 			Matcher m = p.matcher(in);
 			String texteRemplace = m.replaceAll("").replaceAll("/", "-").replaceAll(":", "");
 			return texteRemplace.toLowerCase();
-		}
+	}
 
 }
