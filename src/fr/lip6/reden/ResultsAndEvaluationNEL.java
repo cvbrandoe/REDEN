@@ -199,7 +199,11 @@ public class ResultsAndEvaluationNEL {
 	 * @param annotationTag
 	 *            , name of the annotation tag (e.g. : <persName>)
 	 */
-	public static void evaluation(String namefile, String annotationTag, String xpathExpresion, String outDir, String propertyTagRef) {
+	public static List<EvalInfo> compareResultsWithGold(String namefile, String annotationTag, String xpathExpresion, String outDir, String propertyTagRef, 
+			List<Map<String, List<List<String>>>> allMentionsWithUrisPerContextinText) {
+		
+		List<EvalInfo> collectedResults = new ArrayList<EvalInfo>();
+		
 		HashMap<String, Integer> countOccurenceCorrectMentions = new HashMap<String, Integer>();
 		float manualkeys = 0, correctkey = 0, emptyChoice = 0, emptyManualAnnot = 0;
 		try {
@@ -232,8 +236,10 @@ public class ResultsAndEvaluationNEL {
 			NodeList nodesGold = (NodeList) xPathGold.evaluate(
 					xpathExpresion,
 					docgold.getDocumentElement(), XPathConstants.NODESET);
+			
 			Integer countParagraph = 0;
 			for (int i = 0; i < nodes.getLength(); ++i) {
+				
 				Element e = (Element) nodes.item(i);
 				String otherMentions = "";
 				writer.println("Text portion# "+countParagraph);
@@ -252,16 +258,24 @@ public class ResultsAndEvaluationNEL {
 						Element childGold = (Element) nodesChildGold.item(k);
 						otherMentions += child.getTextContent() + ",";
 						
-						String ref = childGold.getAttribute("ref");
-						String ref_autoList = child.getAttribute(propertyTagRef);
+						String ref = childGold.getAttribute("ref"); //single manual URI
+						String ref_autoList = child.getAttribute(propertyTagRef); //chosen candidate URIs
 						String mention = child.getTextContent();
+						
+						EvalInfo evalInfo = new EvalInfo();	
+						evalInfo.setMention(mention);
+						evalInfo.setCandUris(allMentionsWithUrisPerContextinText.get(i).get(mention));
+						
 						if (ref != null && !ref.equals("")) { // gold has manual ref
+							evalInfo.setManualURI(ref);
 							manualkeys++;
 							if (ref_autoList != null && !ref_autoList.equals("")) { // nel chose something
+								evalInfo.setChosenUri(ref_autoList);
 								if (ref_autoList.contains(ref)) {
 									// writer.println("Mention: "+child.getTextContent());
 									// writer.println("Ok");
 									correctkey++;
+									evalInfo.setChoiceIsCorrect(true);
 									if (countOccurenceCorrectMentions.get(mention) == null) {
 										countOccurenceCorrectMentions.put(mention, 1);
 									} else {
@@ -275,7 +289,7 @@ public class ResultsAndEvaluationNEL {
 									writer.println("Manual was: ");
 									writer.println(ref);
 									writer.println("Algorithm choice was: ");
-									writer.println(ref_autoList);																
+									writer.println(ref_autoList);
 								}
 							} else {
 								writer.println("Mention: " + child.getTextContent());
@@ -283,14 +297,17 @@ public class ResultsAndEvaluationNEL {
 								writer.println(ref);
 								writer.println("Algorithm choice was EMPTY");
 								emptyChoice++;
+								evalInfo.setChosenUri(null);
 							}						
 						} else {
 							emptyManualAnnot++;
+							evalInfo.setManualURI(null);
 							// writer.println("Mention "+child.getTextContent()+" has no manual annotation");
-						}					
+						}	
+						collectedResults.add(evalInfo);
 					}
 				}
-				countParagraph++;
+				countParagraph++;				
 				writer.println("");
 				writer.println("Context was: "+otherMentions);
 				writer.println("______________");
@@ -322,27 +339,10 @@ public class ResultsAndEvaluationNEL {
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
+		
+		return collectedResults;
 
 	}
-
-	//TODO
-	//public static void printRelationFrequency(Map<String, Double> edgeFrequenceByLabel, String fileName, String outDir) {
-	
-	//candidate count: mean cardinality of the candidate sets. 
-	//Fewer candidates mean reduced disambiguation workload (la cardinalité des candidate sets (composé d’URIs) 
-	//divisé par le nombre de mentions dans le texte d’entrée)
-
-	//(choisit 1 phase) candidate precision: percentage of non-empty candidate sets containing the correct entity (le nombre de candidate sets non-vides contenant l’URI correct par rapport au gold divisé par le nombre de candidate sets non-vides)
-
-	//(choisit 1 phase) candidate recall: percentage of non-NIL queries where the candidate set includes the correct candidate (le nombre de candidate sets contenant l’URI pour les mentions qui ont été annotées (!= NIL) divisé par le nombre de candidate sets des mentions qui ont été annotées -- celle là est difficile à comprendre..)
-
-	//(choisit 1 phase) NIL precision: percentage of empty candidate sets that are correct (i.e. correspond to NIL queries) (le nombre de candidate sets qui sont vides et la mention correspondante a été annoté comme NIL divisé par le nombre de candidate sets vides. Interpretation: si dans le gold quelqu’un dit que “M. Barre” n’a pas d’URI (il n’existe pas dans la KB) alors on devrait aussi avoir des candidate sets vides ?)
-	
-	//(choisit 1 phase) NIL recall: percentage of NIL queries for which the candidate set is empty. A high rate is valuable because it is difficult to disambiguators to determine whether queries are NIL-linked when candidates are returned (le nombre de candidate sets qui sont vides et la mention correspondante a été annoté comme NIL divisé par le nombre de mentions dans le gold qui ont une annotation NIL)
-	
-	//(phase 2, non empty candidate sets and at least 2 candidates) disambiguation accuracy : percentage of correctly linked queries (and different entities) (pour eux, un query est plus ou moins une mention. Ici c’est accuracy comme nous ou plus haut appelé micro-accuracy)
-	
-	//}
 	
 	/**
 	 * Print the number of times a predicate (edge) appears in the graph.
@@ -366,5 +366,117 @@ public class ResultsAndEvaluationNEL {
 		}
 		
 		
+	}
+
+	/**
+	 * Implementation of NEL evaluation metrics according to Hachey et al (2011).
+	 * @param collectedResults
+	 */
+	public static void computeFinalResults(List<EvalInfo> collectedResults) {
+		
+		//For lisibility purposes, we separate the computation of each measure 
+		/**
+		 * candidate cardinality mean: mean cardinality of the candidate sets. Fewer candidates mean reduced disambiguation workload
+		 * (FR) la cardinalité des candidate sets divisé par le nombre de mentions dans le texte d’entrée 		 
+		 */
+		Double candSizes = 0.0;
+		for (EvalInfo eval : collectedResults) {
+			if (eval.getCandUris() != null)
+				candSizes = candSizes + (double) eval.getCandUris().size();
+		}
+		System.out.println("candidate cardinality mean: "+ candSizes/collectedResults.size());
+		
+		/**
+		 * candidate precision: percentage of non-empty candidate sets containing the correct entity,
+		 * (FR) nombre de candidate sets non-vides contenant l’URI correct par rapport au gold
+		 * divisé par le nombre de candidate sets non-vides
+		 */
+		Double candidatePrecision = 0.0, nonEmptyCandSetsCorrectURI = 0.0, nonEmptyCandSets = 0.0;
+		for (EvalInfo eval : collectedResults) {
+			if (eval.getCandUris() != null && !eval.getCandUris().isEmpty()) {
+				nonEmptyCandSets++;
+				if (eval.getChoiceIsCorrect()) {
+					nonEmptyCandSetsCorrectURI++;
+				}
+			}
+		}
+		candidatePrecision = nonEmptyCandSetsCorrectURI/nonEmptyCandSets;
+		System.out.println("candidatePrecision: "+candidatePrecision);
+		
+		/**
+		 * candidate recall: percentage of non-NIL queries where the candidate set includes the correct candidate
+		 * (FR) le nombre de candidate sets contenant l’URI pour les mentions qui ont été annotées (!= NIL) divisé 
+		 * par le nombre de candidate sets des mentions qui ont été annotées
+		 */
+		Double candidateRecall = 0.0, candSetsWitManualAnnot = 0.0, candSetWithRightURIAndManualAnnot = 0.0;
+		for (EvalInfo eval : collectedResults) {
+			if (eval.getManualURI() != null) {
+				candSetsWitManualAnnot++;
+				if (eval.getChoiceIsCorrect()) {
+					candSetWithRightURIAndManualAnnot++;
+				}
+			}			
+		}
+		candidateRecall = candSetWithRightURIAndManualAnnot/candSetsWitManualAnnot;
+		System.out.println("candidateRecall: "+candidateRecall);
+		
+		/**
+		 * NIL precision: percentage of empty candidate sets that are correct (i.e. correspond to NIL queries)
+		 * (FR) le nombre de candidate sets qui sont vides et la mention correspondante a été annoté comme NIL
+		 * divisé par le nombre de candidate sets vides. Interpretation: si dans le gold quelqu’un dit que 
+		 * “M. Barre” n’a pas d’URI (il n’existe pas dans la KB) alors on devrait aussi avoir des candidate sets vides		
+		 */	
+		Double nilPrecision = 0.0, emptyCandSets = 0.0, emptyCandSetsWithNilMention = 0.0;
+		for (EvalInfo eval : collectedResults) {
+			if (eval.getCandUris() == null || eval.getCandUris().isEmpty()) {
+				emptyCandSets++;
+				if (eval.getManualURI() == null) {
+					emptyCandSetsWithNilMention++;
+				}				
+			}
+		}
+		nilPrecision = emptyCandSetsWithNilMention/emptyCandSets;
+		System.out.println("nilPrecision: "+nilPrecision);
+		
+		/**
+		 * NIL recall: percentage of NIL queries for which the candidate set is empty. 
+		 * A high rate is valuable because it is difficult to disambiguators to determine whether 
+		 * queries are NIL-linked when candidates are returned.
+		 * (FR) le nombre de candidate sets qui sont vides et la mention correspondante a été annoté comme NIL divisé 
+		 * par le nombre de mentions dans le gold qui ont une annotation NIL
+		 */
+		Double nilRecall = 0.0, mentionsWithNILManualAnnot = 0.0, emptyCandSetWithNILManualRef = 0.0; 
+		for (EvalInfo eval : collectedResults) {
+			if (eval.getManualURI() == null) {
+				mentionsWithNILManualAnnot++;
+				if (eval.getCandUris() == null || eval.getCandUris().isEmpty()) {
+					emptyCandSetWithNILManualRef++;
+				}
+			}
+		}
+		nilRecall = emptyCandSetWithNILManualRef/mentionsWithNILManualAnnot;
+		System.out.println("nilRecall: "+nilRecall);
+		
+		/**
+		 * Disambiguation accuracy (mention level): percentage of correctly linked mentions 
+		 * for non empty candidate sets with at least 2 candidates 
+		 */
+		Double disambiguationAccuracy = 0.0, correctMentionsNonEmptyAtleast2CandSet = 0.0, nonEmptyAtleast2CandSet = 0.0;
+		for (EvalInfo eval : collectedResults) {
+			if (eval.getCandUris() != null && !eval.getCandUris().isEmpty() && eval.getCandUris().size() > 1) {
+				nonEmptyAtleast2CandSet++;
+				if (eval.getChoiceIsCorrect()) {
+					correctMentionsNonEmptyAtleast2CandSet++;
+				}
+			}
+		}
+		disambiguationAccuracy = correctMentionsNonEmptyAtleast2CandSet/nonEmptyAtleast2CandSet;
+		System.out.println("disambiguationAccuracy: "+disambiguationAccuracy);
+		
+		/**
+		 * Disambiguation accuracy (entity) : percentage of correctly linked entities (!= mentions)
+		 * for non empty candidate sets with at least 2 candidates  TODO
+		 */
+				
 	}
 }

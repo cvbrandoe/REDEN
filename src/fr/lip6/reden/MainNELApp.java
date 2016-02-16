@@ -161,6 +161,9 @@ public class MainNELApp {
 				System.out.println("Input neither file nor folder");
 			}
 
+			//NEL evaluation information
+			List<Map<String, List<List<String>>>> allMentionsWithUrisPerContextinText = new ArrayList<Map<String, List<List<String>>>>();
+			
 			for (int j = 0; j < files.size(); j++) {
 				
 				//cleaning output files
@@ -257,7 +260,7 @@ public class MainNELApp {
 							if (choosenUris != null) {
 								for (String annoTag : annotationTag.split(",")) {
 									//TODO does not deal with for instance persons named "France" by the place called also "France", 
-									//it chooses the latest type of the list provided in the config
+									//it chooses the latest NE type of the list provided in the config
 									ResultsAndEvaluationNEL.produceResults(files.get(j), annoTag.trim(),  
 										choosenUris, allMentionsWithURIs, e, doc, outDir, propertyTagRef, 
 										choosenScoresperMention, addScores);	
@@ -278,6 +281,7 @@ public class MainNELApp {
 						}
 					}
 					countParagraph++;
+					allMentionsWithUrisPerContextinText.add(allMentionsWithURIs);
 				}
 				logger.info("number of all mentions (including duplicates): "
 								+ countMention + " in file " + files.get(j));
@@ -290,14 +294,18 @@ public class MainNELApp {
 			logger.info("Global Time: "
 					+ (endMain.getTime() - startMain.getTime()) / 60 + "secs");
 
-			// evaluation
+			// evaluation (reading the gold)
 			if ((args.length >= 3 && args[2].equals("-printEval"))
 					|| (args.length >= 4 && args[3].equals("-printEval"))) {
 				String output = args[1].replace(".xml", "-outV3.xml");
 				String[] output2 = output.split("/");
 				if (new File(outDir+output2[output2.length-1]).exists()) {
 					logger.info("Printing evaluation");
-					ResultsAndEvaluationNEL.evaluation(args[1], annotationTag, xpathExpresion, outDir, propertyTagRef);											
+					//compare with gold and collect information necessary to compute the results
+					List<EvalInfo> collectedResults = ResultsAndEvaluationNEL.compareResultsWithGold(args[1], annotationTag, xpathExpresion, outDir, propertyTagRef, allMentionsWithUrisPerContextinText);
+					//compute final results
+					ResultsAndEvaluationNEL.computeFinalResults(collectedResults);
+					
 				} else {
 					System.out.println("Output file doesn't exist: " + outDir+output2[output2.length-1]);
 				}
