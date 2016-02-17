@@ -266,16 +266,33 @@ public class ResultsAndEvaluationNEL {
 						evalInfo.setMention(mention);
 						evalInfo.setCandUris(allMentionsWithUrisPerContextinText.get(i).get(mention));
 						
-						if (ref != null && !ref.equals("")) { // gold has manual ref
+						writer.println("");
+						writer.println("Mention: "
+								+ child.getTextContent());
+						
+						writer.println("Manual was: "+ref);
+						writer.println("REDEN chose: "+ref_autoList);
+						
+						if (ref != null && !ref.equals("")) { // gold has manual ref						
 							evalInfo.setManualURI(ref);
 							manualkeys++;
+							//the good URI is in the candidate set (not necessarily the chosen one)
+							if (evalInfo.getCandUris() != null) {
+								for (List<String> cand : evalInfo.getCandUris()) {
+									for (String uri : cand) {
+										if (uri.toLowerCase().contains(ref.toLowerCase())) {
+											evalInfo.setCorrectURIisInCandSet(true);
+										}
+									}								
+								}
+							}
+								
 							if (ref_autoList != null && !ref_autoList.equals("")) { // nel chose something
-								evalInfo.setChosenUri(ref_autoList);
+								evalInfo.setChosenUri(ref_autoList);								
 								if (ref_autoList.contains(ref)) {
-									// writer.println("Mention: "+child.getTextContent());
-									// writer.println("Ok");
+									writer.println("Good choice");
 									correctkey++;
-									evalInfo.setChoiceIsCorrect(true);
+									evalInfo.setChoiceIsCorrect(true); //the good URI was chosen
 									if (countOccurenceCorrectMentions.get(mention) == null) {
 										countOccurenceCorrectMentions.put(mention, 1);
 									} else {
@@ -284,31 +301,32 @@ public class ResultsAndEvaluationNEL {
 										countOccurenceCorrectMentions.put(mention, count);
 									}
 								} else {
-									writer.println("Mention: "
-											+ child.getTextContent());
-									writer.println("Manual was: ");
-									writer.println(ref);
-									writer.println("Algorithm choice was: ");
-									writer.println(ref_autoList);
+									writer.println("Wrong choice");
 								}
 							} else {
-								writer.println("Mention: " + child.getTextContent());
-								writer.println("Manual was: ");
-								writer.println(ref);
-								writer.println("Algorithm choice was EMPTY");
+								//writer.println("REDEN chose nothing");
 								emptyChoice++;
 								evalInfo.setChosenUri(null);
 							}						
 						} else {
 							emptyManualAnnot++;
 							evalInfo.setManualURI(null);
-							// writer.println("Mention "+child.getTextContent()+" has no manual annotation");
+							//writer.println("No manual annotation");
 						}	
 						collectedResults.add(evalInfo);
+						if (evalInfo.getCorrectURIisInCandSet() && !evalInfo.getChoiceIsCorrect()) {
+							writer.println("Right referent in candidate set but REDEN choose the wrong one");
+						}
+						//print candidate set
+						writer.println("The candidate set is: ");						
+						if (evalInfo.getCandUris() != null) {
+							for (List<String> cand : evalInfo.getCandUris()) {
+								writer.println(cand.toString());
+							}
+						}
 					}
 				}
 				countParagraph++;				
-				writer.println("");
 				writer.println("Context was: "+otherMentions);
 				writer.println("______________");
 			}
@@ -385,40 +403,48 @@ public class ResultsAndEvaluationNEL {
 				candSizes = candSizes + (double) eval.getCandUris().size();
 		}
 		System.out.println("candidate cardinality mean: "+ candSizes/collectedResults.size());
+		System.out.println("");
 		
 		/**
 		 * candidate precision: percentage of non-empty candidate sets containing the correct entity,
 		 * (FR) nombre de candidate sets non-vides contenant l’URI correct par rapport au gold
 		 * divisé par le nombre de candidate sets non-vides
 		 */
-		Double candidatePrecision = 0.0, nonEmptyCandSetsCorrectURI = 0.0, nonEmptyCandSets = 0.0;
+		Double candidatePrecision = 0.0, nonEmptyCandSetsCorrectURIisThere = 0.0, nonEmptyCandSets = 0.0;
 		for (EvalInfo eval : collectedResults) {
 			if (eval.getCandUris() != null && !eval.getCandUris().isEmpty()) {
 				nonEmptyCandSets++;
-				if (eval.getChoiceIsCorrect()) {
-					nonEmptyCandSetsCorrectURI++;
+				if (eval.getCorrectURIisInCandSet()) { 
+					nonEmptyCandSetsCorrectURIisThere++;
 				}
 			}
 		}
-		candidatePrecision = nonEmptyCandSetsCorrectURI/nonEmptyCandSets;
-		System.out.println("candidatePrecision: "+candidatePrecision);
+		candidatePrecision = nonEmptyCandSetsCorrectURIisThere/nonEmptyCandSets;
+		System.out.println("nonEmptyCandSetsCorrectURIisThere: "+nonEmptyCandSetsCorrectURIisThere);
+		System.out.println("nonEmptyCandSets: "+nonEmptyCandSets);
+		System.out.println("candidatePrecision = nonEmptyCandSetsCorrectURI/nonEmptyCandSets: "+candidatePrecision);
+		System.out.println("");
 		
 		/**
 		 * candidate recall: percentage of non-NIL queries where the candidate set includes the correct candidate
 		 * (FR) le nombre de candidate sets contenant l’URI pour les mentions qui ont été annotées (!= NIL) divisé 
 		 * par le nombre de candidate sets des mentions qui ont été annotées
 		 */
-		Double candidateRecall = 0.0, candSetsWitManualAnnot = 0.0, candSetWithRightURIAndManualAnnot = 0.0;
+		
+		Double candidateRecall = 0.0, candSetsWitManualAnnot = 0.0, candSetWithManualAnnotAndURIisThere = 0.0;
 		for (EvalInfo eval : collectedResults) {
 			if (eval.getManualURI() != null) {
 				candSetsWitManualAnnot++;
-				if (eval.getChoiceIsCorrect()) {
-					candSetWithRightURIAndManualAnnot++;
+				if (eval.getCorrectURIisInCandSet()) {
+					candSetWithManualAnnotAndURIisThere++;
 				}
 			}			
 		}
-		candidateRecall = candSetWithRightURIAndManualAnnot/candSetsWitManualAnnot;
-		System.out.println("candidateRecall: "+candidateRecall);
+		candidateRecall = candSetWithManualAnnotAndURIisThere/candSetsWitManualAnnot;
+		System.out.println("candSetWithManualAnnotAndURIisThere: "+candSetWithManualAnnotAndURIisThere);
+		System.out.println("candSetsWitManualAnnot: "+candSetsWitManualAnnot);
+		System.out.println("candidateRecall = candSetWithManualAnnotAndURIisThere/candSetsWitManualAnnot: "+candidateRecall);
+		System.out.println("");
 		
 		/**
 		 * NIL precision: percentage of empty candidate sets that are correct (i.e. correspond to NIL queries)
@@ -426,17 +452,20 @@ public class ResultsAndEvaluationNEL {
 		 * divisé par le nombre de candidate sets vides. Interpretation: si dans le gold quelqu’un dit que 
 		 * “M. Barre” n’a pas d’URI (il n’existe pas dans la KB) alors on devrait aussi avoir des candidate sets vides		
 		 */	
-		Double nilPrecision = 0.0, emptyCandSets = 0.0, emptyCandSetsWithNilMention = 0.0;
+		Double nilPrecision = 0.0, emptyCandSets = 0.0, emptyCandSetsWithNILManualAnnot = 0.0;
 		for (EvalInfo eval : collectedResults) {
 			if (eval.getCandUris() == null || eval.getCandUris().isEmpty()) {
 				emptyCandSets++;
 				if (eval.getManualURI() == null) {
-					emptyCandSetsWithNilMention++;
+					emptyCandSetsWithNILManualAnnot++;
 				}				
 			}
 		}
-		nilPrecision = emptyCandSetsWithNilMention/emptyCandSets;
-		System.out.println("nilPrecision: "+nilPrecision);
+		nilPrecision = emptyCandSetsWithNILManualAnnot/emptyCandSets;
+		System.out.println("emptyCandSetsWithNILManualAnnot: "+emptyCandSetsWithNILManualAnnot);
+		System.out.println("emptyCandSets: "+emptyCandSets);
+		System.out.println("nilPrecision = emptyCandSetsWithNILManualAnnot/emptyCandSets: "+nilPrecision);
+		System.out.println("");
 		
 		/**
 		 * NIL recall: percentage of NIL queries for which the candidate set is empty. 
@@ -455,7 +484,10 @@ public class ResultsAndEvaluationNEL {
 			}
 		}
 		nilRecall = emptyCandSetWithNILManualRef/mentionsWithNILManualAnnot;
-		System.out.println("nilRecall: "+nilRecall);
+		System.out.println("emptyCandSetWithNILManualRef: "+emptyCandSetWithNILManualRef);
+		System.out.println("mentionsWithNILManualAnnot: "+mentionsWithNILManualAnnot);
+		System.out.println("nilRecall = emptyCandSetWithNILManualRef/mentionsWithNILManualAnnot: "+nilRecall);
+		System.out.println("");
 		
 		/**
 		 * Disambiguation accuracy (mention level): percentage of correctly linked mentions 
@@ -471,12 +503,38 @@ public class ResultsAndEvaluationNEL {
 			}
 		}
 		disambiguationAccuracy = correctMentionsNonEmptyAtleast2CandSet/nonEmptyAtleast2CandSet;
-		System.out.println("disambiguationAccuracy: "+disambiguationAccuracy);
+		System.out.println("correctMentionsNonEmptyAtleast2CandSet: "+correctMentionsNonEmptyAtleast2CandSet);
+		System.out.println("nonEmptyAtleast2CandSet: "+nonEmptyAtleast2CandSet);
+		System.out.println("disambiguationAccuracy = correctMentionsNonEmptyAtleast2CandSet/nonEmptyAtleast2CandSet: "+disambiguationAccuracy);
+		System.out.println("");
 		
 		/**
-		 * Disambiguation accuracy (entity) : percentage of correctly linked entities (!= mentions)
-		 * for non empty candidate sets with at least 2 candidates  TODO
-		 */
+		 * Overall linking accuracy
+		 */		
+		Double overallLinkingAccuracy = 0.0, correctlyLinkedMentions = 0.0;
+		for (EvalInfo eval : collectedResults) {
+			if (eval.getManualURI() != null && eval.getChoiceIsCorrect()) {
+				correctlyLinkedMentions++;				
+			}
+			if (eval.getManualURI() == null && eval.getChosenUri() == null) {
+				correctlyLinkedMentions++;
+			}
+		}
+		overallLinkingAccuracy = correctlyLinkedMentions/collectedResults.size();
+		System.out.println("correctlyLinkedMentions: "+correctlyLinkedMentions);
+		System.out.println("nbMentions: "+collectedResults.size());
+		System.out.println("overallLinkingAccuracy = correctlyLinkedMentions/nbMentions: "+overallLinkingAccuracy);
+		
+		/*for (EvalInfo eval : collectedResults) {
+			if (eval.getManualURI() != null) {
+				mentionWithManualURI++;
+				if (eval.getChoiceIsCorrect()) {
+					mentionWithManualURIAndWellchosenURI++;
+				}
+			}			
+		}*/
+		
+		
 				
 	}
 }
