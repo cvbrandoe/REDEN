@@ -16,7 +16,14 @@ public class EvalInfo {
 	private List<List<String>> candUris = new ArrayList<List<String>>(0);	
 	private String chosenUri;
 	private Boolean choiceIsCorrect = false; 
+	private Boolean correctURIisInCandSet = false;
 	
+	public Boolean getCorrectURIisInCandSet() {
+		return correctURIisInCandSet;
+	}
+	public void setCorrectURIisInCandSet(Boolean correctURIisInCandSet) {
+		this.correctURIisInCandSet = correctURIisInCandSet;
+	}
 	public Boolean getChoiceIsCorrect() {
 		return choiceIsCorrect;
 	}
