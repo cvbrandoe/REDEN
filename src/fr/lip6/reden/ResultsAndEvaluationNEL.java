@@ -493,23 +493,24 @@ public class ResultsAndEvaluationNEL {
 		 * Disambiguation accuracy (mention level): percentage of correctly linked mentions 
 		 * for non empty candidate sets with at least 2 candidates 
 		 */
-		Double disambiguationAccuracy = 0.0, correctMentionsNonEmptyAtleast2CandSet = 0.0, nonEmptyAtleast2CandSet = 0.0;
+		Double disambiguationAccuracy = 0.0, correctMentionsNonEmptyAtleast2CandSet = 0.0, nonEmptyAtleast2CandSetwithCorrectUri = 0.0;
 		for (EvalInfo eval : collectedResults) {
-			if (eval.getCandUris() != null && !eval.getCandUris().isEmpty() && eval.getCandUris().size() > 1) {
-				nonEmptyAtleast2CandSet++;
+			if (eval.getCandUris() != null && !eval.getCandUris().isEmpty() 
+					&& eval.getCandUris().size() > 1 && eval.getCorrectURIisInCandSet()) {
+				nonEmptyAtleast2CandSetwithCorrectUri++;
 				if (eval.getChoiceIsCorrect()) {
 					correctMentionsNonEmptyAtleast2CandSet++;
 				}
 			}
 		}
-		disambiguationAccuracy = correctMentionsNonEmptyAtleast2CandSet/nonEmptyAtleast2CandSet;
+		disambiguationAccuracy = correctMentionsNonEmptyAtleast2CandSet/nonEmptyAtleast2CandSetwithCorrectUri;
 		System.out.println("correctMentionsNonEmptyAtleast2CandSet: "+correctMentionsNonEmptyAtleast2CandSet);
-		System.out.println("nonEmptyAtleast2CandSet: "+nonEmptyAtleast2CandSet);
-		System.out.println("disambiguationAccuracy = correctMentionsNonEmptyAtleast2CandSet/nonEmptyAtleast2CandSet: "+disambiguationAccuracy);
+		System.out.println("nonEmptyAtleast2CandSetwithCorrectUri: "+nonEmptyAtleast2CandSetwithCorrectUri);
+		System.out.println("disambiguationAccuracy = correctMentionsNonEmptyAtleast2CandSet/nonEmptyAtleast2CandSetwithCorrectUri: "+disambiguationAccuracy);
 		System.out.println("");
 		
 		/**
-		 * Overall linking accuracy
+		 * Overall linking accuracy //TODO corriger, voir mail francesca, faire aussi experience sans personnages ficts, corriger gold "Claudel"
 		 */		
 		Double overallLinkingAccuracy = 0.0, correctlyLinkedMentions = 0.0;
 		for (EvalInfo eval : collectedResults) {
