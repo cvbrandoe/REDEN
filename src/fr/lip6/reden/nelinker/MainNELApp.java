@@ -1,4 +1,4 @@
-package fr.lip6.reden;
+package fr.lip6.reden.nelinker;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -32,7 +32,7 @@ import org.xml.sax.SAXException;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
-import fr.lip6.ldextractor.AppAdhoc;
+import fr.lip6.reden.ldextractor.AppAdhoc;
 
 /**
  * This class implements the main method to launch the proposed 

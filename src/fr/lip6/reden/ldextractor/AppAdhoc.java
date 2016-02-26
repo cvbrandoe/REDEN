@@ -1,4 +1,4 @@
-package fr.lip6.ldextractor;
+package fr.lip6.reden.ldextractor;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-package fr.lip6.ldextractor;
+package fr.lip6.reden.ldextractor;
 
 /**
  * Class for defining domain-specific parameters. To implement.
