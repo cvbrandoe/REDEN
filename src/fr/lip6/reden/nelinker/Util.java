@@ -1,4 +1,4 @@
-package fr.lip6.reden;
+package fr.lip6.reden.nelinker;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
