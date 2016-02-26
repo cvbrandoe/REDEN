@@ -1,4 +1,4 @@
-package fr.lip6.ldcrawler;
+package fr.lip6.ldextractor;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -20,34 +20,34 @@ import com.hp.hpl.jena.query.ResultSet;
 import com.opencsv.CSVWriter;
 
 /**
- * This class queries the authors catalog in the BnF SPARQL end point.
+ * This class queries the person catalog in the Getty SPARQL end point.
  * 
- * @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC LIP6
+ * @author Brando & Frontini
  */
-public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface {
+public class QueryPersonalityGetty extends QuerySource implements QuerySourceInterface {
 
-	private static Logger logger = Logger.getLogger(QueryAuthorBNF.class);
+	private static Logger logger = Logger.getLogger(QueryPersonalityGetty.class);
 	
 	/**
 	 * Mandatory fields
 	 */
-	public String SPARQL_END_POINT = "http://data.bnf.fr/sparql";
+	public String SPARQL_END_POINT = "http://vocab.getty.edu/sparql";
 	
 	public Integer TIMEOUT = 200000;
 	
 	public Boolean LARGE_REPO = true;
 	
-	public String prefixDictionnaireFile = "authorBNF";
-	
+	public String prefixDictionnaireFile = "personGetty";
+		
 	/**
 	 * Default constructor.
 	 */
-	public QueryAuthorBNF () {
+	public QueryPersonalityGetty () {
 		super();
 	}
 	
 	/**
-	 * Formulate a query which is decomposed in several sub-queries because of size of the BnF repo. 
+	 * Formulate a query which is decomposed in several sub-queries because of size of the data. 
 	 *  
 	 */
 	@Override
@@ -57,11 +57,11 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 		File fexists = new File(outDictionnaireDir+"/"+prefixDictionnaireFile+firstLetter+".tsv");
 		
 		if (fexists.exists() && fexists.length() > 0) {
-			System.out.println("entering BNF: skip, file exists - "+
+			System.out.println("entering Getty: skip, file exists - "+
 					outDictionnaireDir+"/"+prefixDictionnaireFile+firstLetter+".tsv");
 			return null; //skip processing
 		} else {
-			logger.info("entering BNF: formulateSPARQLQuery");
+			logger.info("entering Getty: formulateSPARQLQuery");
 			//temporal information can be incorporated into the query in many ways
 			String filterDate = "";
 			for (TopicExtent d : domainParams) {
@@ -89,28 +89,24 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 				filterRegex = "FILTER (regex(STR(?nom), '^"+firstLetter+"', 'i')) . ";			
 			}
 			
-			String queryString = "PREFIX dcterms: <http://purl.org/dc/terms/> "
-						+ "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
-						+ "PREFIX foaf: <http://xmlns.com/foaf/0.1/> "
-						+ "PREFIX owl: <http://www.w3.org/2002/07/owl#> "
-						+ "PREFIX bio: <http://vocab.org/bio/0.1/> "
-						+ "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "
-						+ "PREFIX bnf-onto: <http://data.bnf.fr/ontology/bnf-onto/> "
-						+ "PREFIX skos: <http://www.w3.org/2004/02/skos/core#> "
-						+ "SELECT ?auteur ?nom ?prenom ?gender ?birthdate ?deathdate ?rejectedForm ?ref WHERE { "
-						+ "?auteur rdf:type foaf:Person . "
-						+ "OPTIONAL {?auteur foaf:givenName ?prenom } . " //enables empty first names (eg. Voltaire)
-						+ "?auteur foaf:familyName ?nom . "
-						+ "OPTIONAL { ?auteur bnf-onto:firstYear ?birthdate } . "+ filterDate + " . " //attention: filter cannot be inside an optional, obvious!
-						+ "OPTIONAL { ?auteur bnf-onto:lastYear ?deathdate } . "
-						+ "OPTIONAL { ?idArk foaf:focus ?auteur . ?idArk skos:altLabel ?rejectedForm . filter(langMatches(lang(?rejectedForm),'FR')) } . "
-						+ filterRegex					
-						+ "OPTIONAL { ?auteur foaf:gender ?gender } . "
-						+ "OPTIONAL { ?auteur owl:sameAs ?ref . "
-						+ "FILTER regex(STR(?ref), '^http://www.idref.fr|^http://dbpedia.org/resource', 'i') }}";
+			String queryString = "PREFIX gvp: <http://vocab.getty.edu/ontology#> "
+					+ "PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
+					+ "PREFIX skos:<http://www.w3.org/2004/02/skos/core#> "
+					+ "PREFIX schema:<http://schema.org/> "
+					+ "PREFIX foaf: <http://xmlns.com/foaf/0.1/> "
+					+ "select ?person ?nom ?altname ?ref ?gender WHERE { "
+					+ "?person rdf:type gvp:PersonConcept . "
+					+ "?person skos:prefLabel ?nom . "
+					+ filterRegex
+					+ "OPTIONAL { ?person skos:altLabel ?altname } . "				
+					+ "OPTIONAL { ?person skos:exactMatch ?ref . FILTER (!regex(STR(?ref), '^http://vocab.getty.edu', 'i')) } . "
+					+ "OPTIONAL { ?person foaf:focus ?agent . "
+					+ "?agent gvp:biography ?biopers . "
+					//+ TODO (filter by date but there are several dates?) "?biopers gvp:estStart ?birthdate . " for obtaining the birthdate but there are two, which one to choose systematically?
+					+ "?biopers schema:gender ?gender } }"; //gender uses codes from an ontology but these are inconsistent
 			Query query = QueryFactory.create(queryString);
 			logger.info("query: " + query.toString());
-			logger.info("exiting BNF: formulateSPARQLQuery");
+			logger.info("exiting Getty: formulateSPARQLQuery");
 			return query;
 		}		
 	}
@@ -120,11 +116,11 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 			String outDictionnaireDir, String letter) {
 		File fexists = new File(outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
 		if (fexists.exists() && fexists.length() > 0) {
-			System.out.println("entering BNF: skip, file exists - "+outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
+			System.out.println("entering Getty: skip, file exists - "+outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
 			return null; //file exists, skip processing
 		} else {
-			logger.info("entering BNF: executeQuery");
-			logger.info("exiting BNF: executeQuery");
+			logger.info("entering Getty: executeQuery");
+			logger.info("exiting Getty: executeQuery");
 			return super.executeQuery(query, SPARQL_END_POINT, timeout, 
 					outDictionnaireDir, letter);
 		}
@@ -139,10 +135,10 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 		File fexists = new File(outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
 	
 		if (fexists.exists() && fexists.length() > 0) {
-			System.out.println("entering BNF: skip, file exists - "+outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
+			System.out.println("entering Getty: skip, file exists - "+outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
 			return; //file exists, skip processing
 		} else {
-			logger.info("entering BNF: processResults");
+			logger.info("entering Getty: processResults");
 			try {
 				if (letter != null) {
 					prefixDictionnaireFile += letter;
@@ -156,67 +152,45 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 				CSVWriter writer = new CSVWriter(new FileWriter(outDictionnaireDir+"/"+prefixDictionnaireFile+".tsv"), 
 						'\t', CSVWriter.NO_QUOTE_CHARACTER);
 				
-				Map<String, Author> authors = new HashMap<String, Author>();
+				Map<String, Personality> authors = new HashMap<String, Personality>();
 				
 				while (res.hasNext()) {
 					QuerySolution sol = res.next();
 					
 					//update sameAs links and alternative names for this author
-					if (authors.get(sol.get("auteur").toString()) != null) { 
-						Author a = authors.get(sol.get("auteur").toString());
+					if (authors.get(sol.get("person").toString()) != null) { 
+						
+						Personality a = authors.get(sol.get("person").toString());
 						if (sol.get("ref") != null) {
 							if (!a.getRef().contains(sol.get("ref").toString())) {
 								a.getRef().add(sol.get("ref").toString());
 							}
 						}
 						
-						if (sol.get("rejectedForm") != null) {
-							String val = sol.getLiteral("rejectedForm").getLexicalForm();
-							if (val.contains("("))
-								val = val.substring(0, val.indexOf("(")).trim();
-							if (!a.getRejectedForms().contains(val))
-								a.getRejectedForms().add(val);
-						}
-						
 					} else {
-						Author a = new Author();
-						a.setUri(sol.get("auteur").toString());
-						if (sol.get("nom") != null)
-							a.setLastname(sol.get("nom").toString());
-						else
-							a.setLastname("-");					
-						
-						if (sol.get("prenom") != null)
-							a.setFirstname(sol.get("prenom").toString());
-						else 
-							a.setFirstname("-");					
+						Personality a = new Personality();
+						a.setUri(sol.get("person").toString());
+						if (sol.get("nom") != null) {
+							if (sol.get("nom").toString().contains(",")) {
+								String[] val = sol.get("nom").toString().split(",");
+								a.setLastname(val[0]);
+								if (val.length > 1)
+									a.setFirstname(sol.get("nom").toString().split(",")[1]);
+								else 
+									a.setFirstname("-");
+							} else {
+								a.setLastname(sol.get("nom").toString());
+								a.setFirstname("-");
+							}
+						} else {
+							a.setLastname("-");
+							a.setFirstname("-");
+						}
 						
 						if (sol.get("gender") != null)
 							a.setGender(sol.get("gender").toString());
 						else 
-							a.setGender("-");					
-						
-						if (sol.get("birthdate") != null) {
-							String bdate = sol.get("birthdate").toString().replace("^^http://www.w3.org/2001/XMLSchema#integer", "");
-							if (bdate.matches("\\d{4}") 
-									|| bdate.matches("\\d{2}"+"\\.\\.") 
-									|| bdate.matches("\\d{1}"+"\\.\\."))
-								a.setBirthdate(bdate);
-							else if (bdate.matches("\\d{4}"+"-"+"\\d{2}"+"-"+"\\d{2}"))
-								a.setBirthdate(bdate.substring(0, 4));							
-						} else 
-							a.setBirthdate("-");
-						
-						if (sol.get("deathdate") != null) {
-							String ddate = sol.get("deathdate").toString().replace("^^http://www.w3.org/2001/XMLSchema#integer", "");
-							if (ddate.matches("\\d{4}") 
-									|| ddate.matches("\\d{2}"+"\\.\\.")
-									|| ddate.matches("\\d{1}"+"\\.\\."))
-								a.setDeathdate(ddate);
-							else if (ddate.matches("\\d{4}"+"-"+"\\d{2}"+"-"+"\\d{2}"))
-								a.setDeathdate(ddate.substring(0, 4));
-						} else 
-							a.setDeathdate("-");					
+							a.setGender("-");
 						
 						if (sol.get("ref") != null) {
 							if (!a.getRef().contains(sol.get("ref").toString())) {
@@ -224,32 +198,31 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 							}
 						}
 						
-						if (sol.get("rejectedForm") != null) {
-							String val = sol.getLiteral("rejectedForm").getLexicalForm();
-							if (val.contains("("))
-								val = val.substring(0, val.indexOf("(")).trim();
-							if (!a.getRejectedForms().contains(val))
-								a.getRejectedForms().add(val);							
+						if (sol.get("altname") != null) {
+							String val = sol.getLiteral("altname").getLexicalForm();
+							if (!a.getRejectedForms().contains(val)) {
+								a.getRejectedForms().add(val);			
+							}
 						}
 						//more rejected forms
 						a.getRejectedForms().addAll(a.makeAliases());						
 						authors.put(a.getUri(), a);
 					}							
 				}
-				System.out.println("count of authors: "+authors.size());
+				System.out.println("count of persons: "+authors.size());
 				
 				for (String uri : authors.keySet()) {
-					writeAuthorToFile(writer, authors.get(uri));
+					writePersonalityToFile(writer, authors.get(uri));
 				}
 				writer.close();
-				logger.info("exiting BNF: processResults");
+				logger.info("exiting Getty: processResults");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
 	}
 
-	private void writeAuthorToFile(CSVWriter writer, Author author) {
+	private void writePersonalityToFile(CSVWriter writer, Personality author) {
 		
 		//build URIs
 		StringBuilder commaSepValueBuilder = new StringBuilder();
@@ -265,21 +238,22 @@ public class QueryAuthorBNF extends QuerySource implements QuerySourceInterface 
 }
 
 /**
- * Utility class for handling authors.
+ * Utility class for handling personalities in Getty.
  *
  */
-class Author {
+class Personality {
 	private String firstname;
 	private String lastname;
-	private String gender;
 	private String uri;
-	private String birthdate;
-	private String deathdate;
 	private List<String> ref;
 	private List<String> rejectedForms;
-	private static String[] hons = {"de","d'","von","da"}; 
+	private String gender;
+	private static String[] hons = {"de","d'","von","da"};
+	private static String codeGettyFemale = "http://vocab.getty.edu/aat/300189557";	
+	private static String codeGettyMale = "http://vocab.getty.edu/aat/300189559";
+	
 
-	public Author() {
+	public Personality() {
 		this.rejectedForms = new ArrayList<String>();
 		this.ref = new ArrayList<String>();
 	}
@@ -299,13 +273,13 @@ class Author {
 	public void setLastname(String lastname) {
 		this.lastname = lastname.replaceAll("-", " ").trim();
 	}
-
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
+	
+	public String getTitle() {
+		if (this.getGender().equalsIgnoreCase(codeGettyFemale)) {
+			return "Mme";
+		} else {
+			return "M";
+		}	
 	}
 
 	public String getUri() {
@@ -316,28 +290,12 @@ class Author {
 		this.uri = uri;
 	}
 
-	public String getBirthdate() {
-		return birthdate;
-	}
-
-	public void setBirthdate(String birthdate) {
-		this.birthdate = birthdate;
-	}
-
 	public List<String> getRef() {
 		return ref;
 	}
 
 	public void setRef(List<String> ref) {
 		this.ref = ref;
-	}
-
-	public String getDeathdate() {
-		return deathdate;
-	}
-
-	public void setDeathdate(String deathdate) {
-		this.deathdate = deathdate;
 	}
 
 	public List<String> getRejectedForms() {
@@ -348,6 +306,14 @@ class Author {
 		this.rejectedForms = rejectedForms;
 	}
 	
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	
 	public String getNormalisedName() {
 		String normalisedName = "";
 		if (this.getFirstname().equals("-") || this.getFirstname().equals("")) {
@@ -356,9 +322,6 @@ class Author {
 			normalisedName = this.getLastname() + ", "+this.getFirstname();
 		}
 		normalisedName = normalisedName.replaceAll("'", "' ");
-		if (this.getBirthdate() != null && this.getDeathdate() != null) {
-			normalisedName = normalisedName+ " ("+this.getBirthdate()+"-"+this.getDeathdate()+")";					
-		}
 		return normalisedName.replaceAll("  ", " ");		
 	}
 	
@@ -370,14 +333,6 @@ class Author {
 			}
 		}
 		return initials.trim();
-	}
-	
-	public String getTitle() {
-		if (this.getGender().equalsIgnoreCase("female")) {
-			return "Mme";
-		} else {
-			return "M";
-		}	
 	}
 	
 	public String getHonorific() {
@@ -397,11 +352,18 @@ class Author {
 		Set<String> aliases = new HashSet<String>();
 		
 		//generate_full_name
-		if (!this.getFirstname().equals("-") && !this.getFirstname().equals(""))
-			aliases.add(this.getFirstname() + " " + this.getLastname());		
+		if (!this.getFirstname().equals("-") && !this.getFirstname().equals("")) {
+			String val = this.getFirstname() + " " + this.getLastname();
+			if (!this.getRejectedForms().contains(val)) {
+				aliases.add(val);
+			}
+		}
 				
 		//generate_family_name_only
-		aliases.add(this.getLastname());
+		String val = this.getLastname();
+		if (!this.getRejectedForms().contains(val)) {
+			aliases.add(val);
+		}
 		
 		//generate_titles
 		aliases.add(this.getTitle() + " " + this.getLastname());
@@ -411,10 +373,10 @@ class Author {
 		//generate_titles_with dots
 		aliases.add(this.getTitle() + ". " + this.getLastname());
 		if (!this.getFirstname().equals("-") && !this.getFirstname().equals(""))
-			aliases.add(this.getTitle() + ". " + this.getFirstname() + " " + this.getLastname());
-		
+			aliases.add(this.getTitle() + ". " + this.getFirstname() + " " + this.getLastname());		
+				
 		//if there is a honorific it generates the version with the honorific as well
-		if (this.getHonorific() != null) {
+		if (this.getHonorific() != null) {						
 			aliases.add(this.getHonorific() + " " + this.getLastname());
 			aliases.add(Character.toUpperCase(this.getHonorific().charAt(0)) + this.getHonorific().substring(1) + " " + this.getLastname());
 		}			
@@ -431,12 +393,12 @@ class Author {
 		}
 		
 		if (this.getHonorific() != null) {
-			honorific = this.getHonorific() + " ";
+			honorific = this.getHonorific() + " ";			
 			aliases.add(this.getTitle() + " " + honorific + this.getLastname());
 			aliases.add(this.getTitle() + ". " + honorific + this.getLastname());
 			aliases.add(this.getTitle() + " " + Character.toUpperCase(honorific.charAt(0)) + honorific.substring(1) + this.getLastname());
 			aliases.add(this.getTitle() + ". " + Character.toUpperCase(honorific.charAt(0)) + honorific.substring(1) + this.getLastname());
-			
+		
 			if (!initials.equals("") && !initials_dot.equals("")) {
 				aliases.add(initials + " " + honorific + this.getLastname());
 				aliases.add(initials + " " + Character.toUpperCase(honorific.charAt(0)) + honorific.substring(1) + this.getLastname());

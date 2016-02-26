@@ -6,8 +6,7 @@ import java.util.List;
 /**
  * Evaluation information per mention
  * 
- * @author @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC
- *         LIP6
+ * @author @author Brando & Frontini
  */
 public class EvalInfo {
 	

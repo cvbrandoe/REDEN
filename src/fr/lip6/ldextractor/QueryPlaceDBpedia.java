@@ -1,4 +1,4 @@
-package fr.lip6.ldcrawler;
+package fr.lip6.ldextractor;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -17,7 +17,7 @@ import com.opencsv.CSVWriter;
 /**
  * This class queries places in the DBoedia SPARQL end point.
  * 
- * @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC LIP6
+ * @author Brando & Frontini
  */
 public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterface {
 

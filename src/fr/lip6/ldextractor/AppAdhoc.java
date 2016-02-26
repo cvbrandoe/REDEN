@@ -1,4 +1,4 @@
-package fr.lip6.ldcrawler;
+package fr.lip6.ldextractor;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -17,7 +17,7 @@ import com.hp.hpl.jena.query.ResultSet;
 
 /**
  * Main class to launch the Linked Data crawler for handling domain-adaptation during named-entity linking.
- * @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC LIP6
+ * @author Brando & Frontini
  */
 public class AppAdhoc 
 {

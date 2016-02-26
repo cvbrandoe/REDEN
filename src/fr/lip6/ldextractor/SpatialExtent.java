@@ -1,8 +1,9 @@
-package fr.lip6.ldcrawler;
+package fr.lip6.ldextractor;
 
 /**
  * Class for defining spatial parameters by a bounding box (or rectangle).
- * @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC LIP6
+ * To implement
+ * @author Brando & Frontini
  */
 public class SpatialExtent extends TopicExtent {
 

@@ -1,4 +1,4 @@
-package fr.lip6.ldcrawler;
+package fr.lip6.ldextractor;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import com.hp.hpl.jena.query.ResultSetFactory;
 
 /**
  * Class for querying a particular source. New queries per source must extend this class.
- * @author @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC LIP6
+ * @author @author Brando & Frontini
  */
 public class QuerySource implements QuerySourceInterface {
 

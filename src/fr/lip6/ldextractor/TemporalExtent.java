@@ -1,10 +1,10 @@
-package fr.lip6.ldcrawler;
+package fr.lip6.ldextractor;
 
 import java.util.Date;
 
 /**
  * Class for defining temporal parameters.
- * @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC LIP6
+ * @author Brando & Frontini
  */
 public class TemporalExtent extends TopicExtent {
 	

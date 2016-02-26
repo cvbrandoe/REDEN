@@ -1,4 +1,4 @@
-package fr.lip6.ldcrawler;
+package fr.lip6.ldextractor;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import com.hp.hpl.jena.query.ResultSet;
 
 /**
  * Interface that must be implemented for querying a particular source.
- * @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC LIP6
+ * @author Brando & Frontini
  */
 public interface QuerySourceInterface {
 		
