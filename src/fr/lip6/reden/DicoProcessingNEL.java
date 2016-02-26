@@ -51,8 +51,7 @@ import au.com.bytecode.opencsv.CSVWriter;
 /**
  * This class implements methods to create Lucene indexes and to search for names.
  * 
- * @author @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC
- *         LIP6
+ * @author @author Brando & Frontini
  */
 public class DicoProcessingNEL {
 

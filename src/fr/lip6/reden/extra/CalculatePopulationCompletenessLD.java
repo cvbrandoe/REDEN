@@ -4,9 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -32,7 +30,7 @@ import com.hp.hpl.jena.rdf.model.Statement;
  * Class for calculating population completeness in a given Linked data set
  * with respect to a literary text annotated by humans (gold standard)
  * QLD'16@EGC workshop
- * @author CBrando
+ * @author Brando & Frontini
  *
  */
 public class CalculatePopulationCompletenessLD {

@@ -7,8 +7,7 @@ import java.util.Date;
 /**
  * This class implements methods specific to date processing.
  * 
- * @author @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC
- *         LIP6
+ * @author @author Brando & Frontini
  */
 public class DateSpecificProcessingNEL {
 

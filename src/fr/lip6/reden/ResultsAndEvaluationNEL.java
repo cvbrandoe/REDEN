@@ -39,8 +39,7 @@ import org.xml.sax.SAXException;
  * This class implements the methods for writing TEI output and 
  * to evaluate results in the presence of the corresponding gold file
  * 
- * @author @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC
- *         LIP6
+ * @author @author Brando & Frontini
  */
 public class ResultsAndEvaluationNEL {
 
@@ -311,7 +310,7 @@ public class ResultsAndEvaluationNEL {
 						} else {
 							emptyManualAnnot++;
 							evalInfo.setManualURI(null);
-							//writer.println("No manual annotation");
+							writer.println("No manual annotation");
 						}	
 						collectedResults.add(evalInfo);
 						if (evalInfo.getCorrectURIisInCandSet() && !evalInfo.getChoiceIsCorrect()) {
@@ -337,14 +336,15 @@ public class ResultsAndEvaluationNEL {
 				writerCE.println("mention: "+k + " count: "+countOccurenceCorrectMentions.get(k));
 			}
 			writer.println();
-			writer.println("Manually annotated keys:" + manualkeys);
+			/* Old evaluation procedure
+			 * writer.println("Manually annotated keys:" + manualkeys);
 			writer.println("Correctly annotated keys:" + correctkey);
 			writer.println("NEL didn't make choice:" + emptyChoice);
 			writer.println("Manual annotation was missing:" + emptyManualAnnot);
-			writer.println("Evaluation: " + correctkey / manualkeys);
+			writer.println("Evaluation: " + correctkey / manualkeys);*/
 			writer.close();
 			writerCE.close();
-			logger.info("Check evaluation results in "
+			logger.info("Check results in "
 					+ outDir+namefileA[namefileA.length-1].replace(".xml", "-resEvalV3.txt"));			
 		} catch (ParserConfigurationException e1) {
 			e1.printStackTrace();
@@ -371,7 +371,7 @@ public class ResultsAndEvaluationNEL {
 	public static void printRelationFrequency(Map<String, Double> edgeFrequenceByLabel, String fileName, String outDir) {
 		try {
 			PrintWriter writer = new PrintWriter(outDir+fileName.replace(".xml", "-relFrequency.txt"), "UTF-8");
-			Map<String, Double> orderedMap = GraphProcessingNEL.sortByValue(edgeFrequenceByLabel);
+			Map<String, Double> orderedMap = Util.sortByValue(edgeFrequenceByLabel);
 			Set<String> keys = orderedMap.keySet();
 			for (String key : keys) {
 				writer.println("Rel: "+key+ " frequency: "+edgeFrequenceByLabel.get(key));
@@ -510,32 +510,31 @@ public class ResultsAndEvaluationNEL {
 		System.out.println("");
 		
 		/**
-		 * Overall linking accuracy //TODO corriger, voir mail francesca, faire aussi experience sans personnages ficts, corriger gold "Claudel"
+		 * Overall linking accuracy
 		 */		
-		Double overallLinkingAccuracy = 0.0, correctlyLinkedMentions = 0.0;
+		Double overallLinkingAccuracy = 0.0, correctlyLinkedMentions1 = 0.0, correctlyLinkedMentions2 = 0.0, other = 0.0;
 		for (EvalInfo eval : collectedResults) {
 			if (eval.getManualURI() != null && eval.getChoiceIsCorrect()) {
-				correctlyLinkedMentions++;				
-			}
-			if (eval.getManualURI() == null && eval.getChosenUri() == null) {
-				correctlyLinkedMentions++;
+				correctlyLinkedMentions1++;				
+			} //even though the chosen URI and the manual URI are null, if there is a candidate, REDEN attributes an URI (the cand.) to the mention, and it should have been a NIL annotation
+			else if ( (eval.getCandUris() == null || eval.getCandUris().isEmpty()) && eval.getManualURI() == null && eval.getChosenUri() == null) {
+				correctlyLinkedMentions2++;
+			} else {
+				other++;
+				/* TODO for correcting gold TEI
+				 * if (eval.getCandUris() != null)
+					System.out.println("HERE: ment:"+ eval.getMention()+" man:"+eval.getManualURI()+ " auto:"+eval.getChosenUri()+ " cands:"+eval.getCandUris().size() + " goodIsThere:"+eval.getCorrectURIisInCandSet());
+				else 
+					System.out.println("HERE: ment:"+ eval.getMention()+" man:"+eval.getManualURI()+ " auto:"+eval.getChosenUri()+ " cands:"+0 + " goodIsThere:"+eval.getCorrectURIisInCandSet());
+				*/
+				
 			}
 		}
-		overallLinkingAccuracy = correctlyLinkedMentions/collectedResults.size();
-		System.out.println("correctlyLinkedMentions: "+correctlyLinkedMentions);
+		overallLinkingAccuracy = (correctlyLinkedMentions1 + correctlyLinkedMentions2)/collectedResults.size();
+		System.out.println("correctlyLinkedMentions: (good choice)-> "+correctlyLinkedMentions1 + " and (good NIL)-> "+correctlyLinkedMentions2);
 		System.out.println("nbMentions: "+collectedResults.size());
+		System.out.println("other: "+other);
 		System.out.println("overallLinkingAccuracy = correctlyLinkedMentions/nbMentions: "+overallLinkingAccuracy);
-		
-		/*for (EvalInfo eval : collectedResults) {
-			if (eval.getManualURI() != null) {
-				mentionWithManualURI++;
-				if (eval.getChoiceIsCorrect()) {
-					mentionWithManualURIAndWellchosenURI++;
-				}
-			}			
-		}*/
-		
-		
-				
+						
 	}
 }

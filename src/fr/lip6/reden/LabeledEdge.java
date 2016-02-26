@@ -5,8 +5,7 @@ import org.jgrapht.graph.DefaultWeightedEdge;
 /**
  * This is an utility class to handle labeled edges in our JGraphT graphs.
  * 
- * @author @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC
- *         LIP6
+ * @author @author Brando & Frontini
  */
 @SuppressWarnings("serial")
 public class LabeledEdge<V> extends DefaultWeightedEdge {

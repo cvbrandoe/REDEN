@@ -12,6 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import java.util.Set;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -31,14 +32,13 @@ import org.xml.sax.SAXException;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
-import fr.lip6.ldcrawler.AppAdhoc;
+import fr.lip6.ldextractor.AppAdhoc;
 
 /**
  * This class implements the main method to launch the proposed 
  * graph-based algorithm and domain-adapted named entity linker (NEL).
  * 
- * @author @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC
- *         LIP6
+ * @author @author Brando & Frontini
  */
 public class MainNELApp {
 
@@ -48,7 +48,10 @@ public class MainNELApp {
 	
 	public static void main(String[] args) {
 		if (args.length > 0 && args.length <= 6) {
+			Date start = new Date();	
 			namedEntityLinking(args);
+			Date end = new Date();
+			logger.info("REDEN finished in "+ (end.getTime() - start.getTime()) / 60 + " secs");
 		} else {
 			System.out.println("Two modes possible for providing arguments: "
 							+ "1) <config_file> <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
@@ -116,8 +119,8 @@ public class MainNELApp {
 			prop.load(input);
 			String annotationTag = prop.getProperty("namedEntityTag");
 			String cl = prop.getProperty("NERclassName");
-			String[] baseUris = prop.getProperty("baseURIs").split(",");
-			String[] provBaseURI = prop.getProperty("avoidPredicatesBaseURI").split(",");
+			//String[] baseUris = prop.getProperty("baseURIs").split(",");
+			String baseUris = prop.getProperty("baseURIs"); //NEW VERSION
 			String measure = prop.getProperty("centralityMeasure");
 			String useindex = prop.getProperty("useDicoIndex");
 			String indexDir = prop.getProperty("indexDir");
@@ -129,6 +132,7 @@ public class MainNELApp {
 			String addScores = prop.getProperty("addScores");
 			String crawlSameAs = prop.getProperty("crawlSameAs");
 			String sameAsproperty = prop.getProperty("sameAsproperty");
+			String kBsLocalNoNetwork = prop.getProperty("KBsLocalNoNetwork");
 			
 			// checking if we need to create an index
 			if ((args.length >= 3 && args[2].equals("-createIndex"))
@@ -237,25 +241,52 @@ public class MainNELApp {
 						}
 						logger.info("Total number of URIs to process (very approximative) : "+ countNumberURIsToProcess);
 						
-						// create inverted index
-						Map<String, String> invertedIndex = DicoProcessingNEL.buildInvertedIndex(allMentionsWithURIs);
-						// create RDF sub-graph from URIs of mentions in the
-						// current paragraph
+						// create RDF sub-graph from URIs of mentions in the current paragraph						
+						//Model model = RDFProcessingNEL.aggregateRDFSubGraphsFromURIs(rdfData,
+						//		allMentionsWithURIs, allAnnotationsParagraph,
+						//		baseUris, crawlSameAs, sameAsproperty);
 						
-						Model model = RDFProcessingNEL.aggregateRDFSubGraphsFromURIs(rdfData,
-								allMentionsWithURIs, allAnnotationsParagraph,
-								baseUris, crawlSameAs, sameAsproperty);
+						//download base RDF data NEW VERSION
+						if (kBsLocalNoNetwork.equalsIgnoreCase("false"))
+							GraphHandlerNEL.retrieveBaseRDFData(rdfData, allMentionsWithURIs, baseUris);						
+						
+						//load base model (for minimizing possible errors, we separate both steps) NEW VERSION
+						Model model = GraphHandlerNEL.loadBaseRDFModel(rdfData, allMentionsWithURIs, baseUris);
+						
 						if (model != null) {
+						
+							Map<String,Set<String>> baseURIsAndEquivalentURIs = new HashMap<String,Set<String>>(); //NEW VERSION
+							
+							//download RDF data via sameAs links and loads them into memory
+							model = GraphHandlerNEL.retrieveAndLoadSameAsRDFData(model, rdfData, allMentionsWithURIs, 
+									baseUris, crawlSameAs, sameAsproperty, baseURIsAndEquivalentURIs, kBsLocalNoNetwork); //NEW VERSION
+							
+							SimpleDirectedWeightedGraph<String, LabeledEdge> graph =
+									GraphHandlerNEL.fuseRDFGraphsIntoJGTGraph(
+									model, allMentionsWithURIs, relsFile, crawlSameAs, sameAsproperty, 
+									baseURIsAndEquivalentURIs, baseUris); //NEW VERSION
 							
 							// Fuse RDF graphs into a single graph (JGraphT format)
-							SimpleDirectedWeightedGraph<String, LabeledEdge> graph = GraphProcessingNEL.fuseRDFGraphsIntoJGTGraph(
-									model, provBaseURI, allMentionsWithURIs, relsFile, crawlSameAs, sameAsproperty);
+							/*SimpleDirectedWeightedGraph<String, LabeledEdge> graph = GraphProcessingNEL.fuseRDFGraphsIntoJGTGraph(
+									model, allMentionsWithURIs, relsFile, crawlSameAs, sameAsproperty);*/
+
 							// Simplify graph, compute centrality, choose the higher score
 							Map<String, Double> choosenScoresperMention = new HashMap<String, Double>();
-							Map<String, String> choosenUris = GraphProcessingNEL.simplifyGraphsAndCalculateCentrality(
+							
+							// create inverted index
+							Map<String, String> invertedIndex = DicoProcessingNEL.buildInvertedIndex(allMentionsWithURIs);
+							
+							Map<String, String> choosenUris = CentralityHandler.simplifyGraphsAndCalculateCentrality(
 									graph, allMentionsWithURIs, allAnnotationsParagraph,
 									baseUris, invertedIndex, measure, preferedURI, files
-									.get(j).getName(), countParagraph, writerGraph, edgeFrequenceByLabel, choosenScoresperMention);
+									.get(j).getName(), countParagraph, writerGraph, edgeFrequenceByLabel, choosenScoresperMention); //NEW VERSION
+							
+							
+							/*Map<String, String> choosenUris = GraphProcessingNEL.simplifyGraphsAndCalculateCentrality(
+									graph, allMentionsWithURIs, allAnnotationsParagraph,
+									baseUris, invertedIndex, measure, preferedURI, files
+									.get(j).getName(), countParagraph, writerGraph, edgeFrequenceByLabel, choosenScoresperMention);*/
+							
 							// write results in TEI
 							if (choosenUris != null) {
 								for (String annoTag : annotationTag.split(",")) {

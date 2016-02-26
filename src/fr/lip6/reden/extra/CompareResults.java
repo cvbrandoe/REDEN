@@ -11,8 +11,7 @@ import java.util.Set;
  * Auxiliary class to highlight differences and similarities 
  * among two NEL outputs according to the LD referents chosen.
  * 
- * @author @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC
- *         LIP6
+ * @author @author Brando & Frontini
  */
 public class CompareResults {
 

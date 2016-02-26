@@ -47,8 +47,7 @@ import com.hp.hpl.jena.util.FileManager;
  * Auxiliary class to retrieve author's pics provided by LD sources 
  * from URIs specified in the input TEI file.
  * 
- * @author @author Brando & Frontini - Labex OBVIL - Université Paris-Sorbonne - UPMC
- *         LIP6
+ * @author @author Brando & Frontini
  */
 public class AuthorsEnrichment {
 
