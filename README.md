@@ -27,6 +27,11 @@ TEI-fileName.xml (mandatory): the name of the TEI file, include the file path if
 
 -outDir\=dir (optional): name of the folder where REDEN will output files: the annotated XML-TEI and other files which provide execution information
 
+# How to cite this work
+Brando, C., Frontini, F., Ganascia, J.G. (2015): Disambiguation of named entities in cultural heritage texts using linked data sets. In: Proceedings of the First International Workshop on Semantic Web for Cultural Heritage in Conjunction with 19th East-European Conference on Advances in Databases and Information Systems, New Trends in Databases and Information Systems, Springer, 539, Poitiers, France, http://link.springer.com/chapter/10.1007%2F978-3-319-23201-0_51 
+
+Frontini F, Brando C, Ganascia J-G, (2015) Semantic Web based Named Entity Linking for digital humanities and heritage texts, in Proceedings of the First International Workshop Semantic Web for Scientific Heritage at the 12th ESWC 2015 Conference, Portorož, Slovenia, June 1st, 2015, pp. 77-88, URL: http://ceur-ws.org/Vol-1364/paper9.pdf 
+
 REDEN uses the following frameworks: 
 - indexes are implemented with Lucene (https://lucene.apache.org/core/)
 - RDF data is processed with the Apache Jena API (https://jena.apache.org/) 
