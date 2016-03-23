@@ -2,6 +2,6 @@ package fr.ign.georeden;
 
 public class test {
 	public void printHello(){
-		System.out.println("salut");
+		System.out.println("hello test");
 	}
 }
