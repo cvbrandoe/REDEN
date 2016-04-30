@@ -32,6 +32,7 @@ import org.xml.sax.SAXException;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
+import fr.lip6.reden.enrichne.GeodataGeneration;
 import fr.lip6.reden.ldextractor.AppAdhoc;
 
 /**
@@ -53,9 +54,10 @@ public class MainNELApp {
 			Date end = new Date();
 			logger.info("REDEN finished in "+ (end.getTime() - start.getTime()) / 60 + " secs");
 		} else {
-			System.out.println("Two modes possible for providing arguments: "
-							+ "1) <config_file> <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
-							+ "2) <config_file> -createDico bnf|dbpediafr|getty-per|all");
+			System.out.println("Three modes possible for providing arguments: "
+					+ "1) <config_file> <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
+					+ "2) <config_file> -createDico=bnf|dbpediafr|getty-per|all"
+					+ "3) <config_file> <tei-fileName-withURIs.xml> -produceData4Visu=<output.json> -propsFile=<config_ld_properties>");
 		}
 	}
 
@@ -73,44 +75,21 @@ public class MainNELApp {
 			String propertiesFile = args[0];
 			Date startMain = new Date();
 			
+			Map<String, String> argsMap = processArguments(args);
+			
 			//only builds the dico, skips NEL
-			if (args[1].equals("-createDico")) {
-				AppAdhoc.crawlsLinkedData(args[0], args[2]);
+			if (argsMap.containsKey("createDico")) {
+				AppAdhoc.crawlsLinkedData(argsMap.get("config"), argsMap.get("createDico"));
 				logger.info("Building dictionary for NEL");
 				return;
 			}
-						
-			if (!args[1].endsWith(".xml")) {
-				System.out.println("Two modes possible for providing arguments: "
-						+ "1) <config_file> <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
-						+ "2) <config_file> -createDico bnf|dbpediafr|getty-per|all");
-				return;
-			}
-
-			if ( ( (args.length == 3 && args[2].equals("-printEval")) 
-					|| (args.length == 4 && ( args[2].equals("-printEval") || args[3].equals("-printEval") )) )
-					&& !new File(args[1].replace(".xml", "-gold.xml")).exists()) {
-				System.out.println("Gold file doesn't exist: "
-						+ args[1].replace(".xml", "-gold.xml"));
-				return;
-			}
-
-			//reading relation weight parameter file
-			File relsFile = null;
-			for (String r : args) {
-				if (r.contains("-relsFile")) {
-					relsFile = new File(r.split("=")[1]);
-				}
-			}
 			
-			//if output directory is parameter
-			String outDir = "";
-			for (String r : args) {
-				if (r.contains("-outDir")) {
-					outDir =r.split("=")[1];
-					new File(outDir).mkdir();
-					outDir += "/";
-				}
+			if (!argsMap.containsKey("tei")) { //there is no TEI file
+				System.out.println("Three modes possible for providing arguments: "
+						+ "1) <config_file> <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
+						+ "2) <config_file> -createDico=bnf|dbpediafr|getty-per|all"
+						+ "3) <config_file> <tei-fileName-withURIs.xml> -produceData4Visu=<output.json> -propsFile=<config_ld_properties>");
+				return;
 			}
 			
 			// reading parameters
@@ -120,7 +99,7 @@ public class MainNELApp {
 			String annotationTag = prop.getProperty("namedEntityTag");
 			String cl = prop.getProperty("NERclassName");
 			//String[] baseUris = prop.getProperty("baseURIs").split(",");
-			String baseUris = prop.getProperty("baseURIs"); //NEW VERSION
+			String baseUris = prop.getProperty("baseURIs");
 			String measure = prop.getProperty("centralityMeasure");
 			String useindex = prop.getProperty("useDicoIndex");
 			String indexDir = prop.getProperty("indexDir");
@@ -134,9 +113,42 @@ public class MainNELApp {
 			String sameAsproperty = prop.getProperty("sameAsproperty");
 			String kBsLocalNoNetwork = prop.getProperty("KBsLocalNoNetwork");
 			
+			//produces visualization data, skips NEL
+			if (argsMap.containsKey("produceData4Visu")) {
+				//reads TEI, gets toponyms and retrieve RDF
+				Map<String, Map<String, String>> toponyms = GeodataGeneration.readTEI(argsMap.get("tei"),
+						propertyTagRef,	xpathExpresion, annotationTag, rdfData);
+				//attribute geo-coordinates
+				toponyms = GeodataGeneration.assignGeoCoordinates(toponyms, argsMap.get("propsFile"), rdfData);
+				//produces the GeoJson file
+				GeodataGeneration.toGeoJson(toponyms, argsMap.get("produceData4Visu"));					
+				return;
+			}
+			
+			//TODO here, same with authors
+						
+			if (argsMap.containsKey("printEval") && !new File(argsMap.get("tei").replace(".xml", "-gold.xml")).exists()) {
+				System.out.println("Gold file doesn't exist: "
+						+ argsMap.get("tei").replace(".xml", "-gold.xml"));
+				return;
+			}
+			
+			//reading relation weight parameter file
+			File relsFile = null;
+			if (argsMap.containsKey("relsFile")) {
+				relsFile = new File(argsMap.get("relsFile"));
+			}
+			
+			//if output directory is parameter
+			String outDir = "";
+			if (argsMap.containsKey("outDir")) {
+				outDir = argsMap.get("outDir");
+				new File(outDir).mkdir();				
+				outDir += "/";
+			}
+						
 			// checking if we need to create an index
-			if ((args.length >= 3 && args[2].equals("-createIndex"))
-					|| (args.length >= 4 && args[3].equals("-createIndex"))) {
+			if (argsMap.containsKey("createIndex")) {
 				logger.info("(Re-)create index");
 				int ind = 0;
 				for (String indexDirName : indexDir.split(",")) { 
@@ -150,7 +162,7 @@ public class MainNELApp {
 			//check input TEI files
 			DocumentBuilder b = DocumentBuilderFactory.newInstance()
 					.newDocumentBuilder();
-			File inputFiles = new File(args[1]);
+			File inputFiles = new File(argsMap.get("tei"));
 
 			// check file or folder
 			List<File> files = new ArrayList<File>();
@@ -166,7 +178,8 @@ public class MainNELApp {
 			}
 
 			//NEL evaluation information
-			List<Map<String, List<List<String>>>> allMentionsWithUrisPerContextinText = new ArrayList<Map<String, List<List<String>>>>();
+			List<Map<String, List<List<String>>>> allMentionsWithUrisPerContextinText =
+					new ArrayList<Map<String, List<List<String>>>>();
 			
 			for (int j = 0; j < files.size(); j++) {
 				
@@ -215,8 +228,8 @@ public class MainNELApp {
 							mentionsWithURIs = DicoProcessingNEL.retrieveMentionsURIsFromDicoWithIndex(
 								cl, annotationsParagraph, indexDir.split(",")[ind].trim());
 						} else {
-						//DEPRECATED: mentionsWithURIs = DicoProcessingNEL.retrieveMentionsURIsFromDico(
-						//		nameMainFolderDico, cl, annotationsParagraph);
+							//DEPRECATED: mentionsWithURIs = DicoProcessingNEL.retrieveMentionsURIsFromDico(
+							//		nameMainFolderDico, cl, annotationsParagraph);
 						}
 						allMentionsWithURIs.putAll(mentionsWithURIs); 
 						//TODO we overwrite for instance persons named "France" by the place called also "France"
@@ -241,11 +254,6 @@ public class MainNELApp {
 						}
 						logger.info("Total number of URIs to process (very approximative) : "+ countNumberURIsToProcess);
 						
-						// create RDF sub-graph from URIs of mentions in the current paragraph						
-						//Model model = RDFProcessingNEL.aggregateRDFSubGraphsFromURIs(rdfData,
-						//		allMentionsWithURIs, allAnnotationsParagraph,
-						//		baseUris, crawlSameAs, sameAsproperty);
-						
 						//download base RDF data NEW VERSION
 						if (kBsLocalNoNetwork.equalsIgnoreCase("false"))
 							GraphHandlerNEL.retrieveBaseRDFData(rdfData, allMentionsWithURIs, baseUris);						
@@ -255,21 +263,17 @@ public class MainNELApp {
 						
 						if (model != null) {
 						
-							Map<String,Set<String>> baseURIsAndEquivalentURIs = new HashMap<String,Set<String>>(); //NEW VERSION
+							Map<String,Set<String>> baseURIsAndEquivalentURIs = new HashMap<String,Set<String>>();
 							
 							//download RDF data via sameAs links and loads them into memory
 							model = GraphHandlerNEL.retrieveAndLoadSameAsRDFData(model, rdfData, allMentionsWithURIs, 
-									baseUris, crawlSameAs, sameAsproperty, baseURIsAndEquivalentURIs, kBsLocalNoNetwork); //NEW VERSION
+									baseUris, crawlSameAs, sameAsproperty, baseURIsAndEquivalentURIs, kBsLocalNoNetwork);
 							
 							SimpleDirectedWeightedGraph<String, LabeledEdge> graph =
 									GraphHandlerNEL.fuseRDFGraphsIntoJGTGraph(
 									model, allMentionsWithURIs, relsFile, crawlSameAs, sameAsproperty, 
-									baseURIsAndEquivalentURIs, baseUris); //NEW VERSION
+									baseURIsAndEquivalentURIs, baseUris);
 							
-							// Fuse RDF graphs into a single graph (JGraphT format)
-							/*SimpleDirectedWeightedGraph<String, LabeledEdge> graph = GraphProcessingNEL.fuseRDFGraphsIntoJGTGraph(
-									model, allMentionsWithURIs, relsFile, crawlSameAs, sameAsproperty);*/
-
 							// Simplify graph, compute centrality, choose the higher score
 							Map<String, Double> choosenScoresperMention = new HashMap<String, Double>();
 							
@@ -279,13 +283,7 @@ public class MainNELApp {
 							Map<String, String> choosenUris = CentralityHandler.simplifyGraphsAndCalculateCentrality(
 									graph, allMentionsWithURIs, allAnnotationsParagraph,
 									baseUris, invertedIndex, measure, preferedURI, files
-									.get(j).getName(), countParagraph, writerGraph, edgeFrequenceByLabel, choosenScoresperMention); //NEW VERSION
-							
-							
-							/*Map<String, String> choosenUris = GraphProcessingNEL.simplifyGraphsAndCalculateCentrality(
-									graph, allMentionsWithURIs, allAnnotationsParagraph,
-									baseUris, invertedIndex, measure, preferedURI, files
-									.get(j).getName(), countParagraph, writerGraph, edgeFrequenceByLabel, choosenScoresperMention);*/
+									.get(j).getName(), countParagraph, writerGraph, edgeFrequenceByLabel, choosenScoresperMention); 
 							
 							// write results in TEI
 							if (choosenUris != null) {
@@ -326,14 +324,13 @@ public class MainNELApp {
 					+ (endMain.getTime() - startMain.getTime()) / 60 + "secs");
 
 			// evaluation (reading the gold)
-			if ((args.length >= 3 && args[2].equals("-printEval"))
-					|| (args.length >= 4 && args[3].equals("-printEval"))) {
-				String output = args[1].replace(".xml", "-outV3.xml");
+			if (argsMap.containsKey("printEval")) {
+				String output = argsMap.get("tei").replace(".xml", "-outV3.xml");
 				String[] output2 = output.split("/");
 				if (new File(outDir+output2[output2.length-1]).exists()) {
 					logger.info("Printing evaluation");
 					//compare with gold and collect information necessary to compute the results
-					List<EvalInfo> collectedResults = ResultsAndEvaluationNEL.compareResultsWithGold(args[1], annotationTag, xpathExpresion, outDir, propertyTagRef, allMentionsWithUrisPerContextinText);
+					List<EvalInfo> collectedResults = ResultsAndEvaluationNEL.compareResultsWithGold(argsMap.get("tei"), annotationTag, xpathExpresion, outDir, propertyTagRef, allMentionsWithUrisPerContextinText);
 					//compute final results
 					ResultsAndEvaluationNEL.computeFinalResults(collectedResults);
 					
@@ -354,6 +351,38 @@ public class MainNELApp {
 		}
 	}
 	
+	/**
+	 * Organize command line input arguments into a map to facilitate manipulation in main.
+	 * @param args
+	 * @return
+	 */
+	private static Map<String, String> processArguments(String[] args) {
+		
+		Map<String, String> argMap = new HashMap<String,String>();
+		// first argument is always config file
+		argMap.put("config", args[0]);		
+		for (String argA : args) {
+			if (argA.endsWith(".xml")) {
+				argMap.put("tei", argA);				
+			} else if (argA.equals("-printEval")) {
+				argMap.put("printEval", "true");				
+			} else if (argA.equals("-createIndex")) {
+				argMap.put("createIndex", "true");
+			} else if (argA.startsWith("-relsFile")) {
+				argMap.put("relsFile", argA.split("=")[1].trim());
+			} else if (argA.startsWith("-outDir")) {
+				argMap.put("outDir", argA.split("=")[1].trim());
+			} else if (argA.startsWith("-produceData4Visu")) {
+				argMap.put("produceData4Visu", argA.split("=")[1].trim());				
+			} else if (argA.startsWith("-createDico")) {
+				argMap.put("createDico", argA.split("=")[1].trim());
+			} else if (argA.startsWith("-propsFile")) {
+				argMap.put("propsFile", argA.split("=")[1].trim());
+			} 
+		}		
+		return argMap;		
+	}
+
 	/**
 	 * It checks whether the conditions that need to be fulfilled to use the
 	 * proposed NEL method: there are at least two mentions and one of them is

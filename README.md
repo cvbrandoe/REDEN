@@ -3,7 +3,7 @@ Unsupervised graph-based tool for disambiguation and linking of named entities t
 
 The main Java class to launch REDEN is fr.lip6.reden.MainNELApp.java, REDEN configuration file is located in config/config.properties, it should be properly configured before execution. There are two modes to launch REDEN 
 
-The first mode allows the downloading and the constitution of a dictionary of potential NE candidates from Linked Data, so you must be connected to the Internet (when passing through a proxy use the following JVM parameters: -DproxySet=true -DproxyHost=IP_address -DproxyPort=port). So far, the place and the person (author) dictionaries are created from French DBpedia and the French National Library (BnF) Linked Data sets. Please contact us for helping you add a new LD source.
+The first mode allows the downloading and the constitution of a dictionary of potential NE candidates from Linked Data, so you must be connected to the Internet (when passing through a proxy use the following JVM parameters: -DproxySet=true -DproxyHost=IP_address -DproxyPort=port). So far, the place and the person (author) dictionaries are created from French DBpedia and the French National Library (BnF) Linked Data sets, respectively. Please contact us for helping you add a new LD source.
 
 The only parameters are:  
 
@@ -27,6 +27,14 @@ TEI-fileName.xml (mandatory): the name of the TEI file, include the file path if
 
 -outDir\=dir (optional): name of the folder where REDEN will output files: the annotated XML-TEI and other files which provide execution information
 
+Besides, REDEN can extract information from a Linked Data sets thanks to URIs encoded within the TEI then it outputs a JSON data which can loaded in an specific purpose Web-based application in order to visualize these data in several ways, so far Web maps and gallery of author pics. You can find below the program argument to do so, please note that the TEI should contain already URIs for every named-entity:
+
+config-file.properties tei-fileName-withURIs.xml -produceData4Visu=output.json -propsFile=<config_ld_properties>
+
+-produceData4Visu=output.json (optional): name of the output JSON file 
+
+-propsFile=<config_ld_properties> (optional): name of the properties file containing the name of the properties concerned by the extraction, for an example, see the files config/latlong.properties or config/authors.properties
+ 
 ###### How to cite this work
 
 Brando, C., Frontini, F., Ganascia, J.G. (2015): Disambiguation of named entities in cultural heritage texts using linked data sets. In: Proceedings of the First International Workshop on Semantic Web for Cultural Heritage in Conjunction with 19th East-European Conference on Advances in Databases and Information Systems, New Trends in Databases and Information Systems, Springer, 539, Poitiers, France, http://link.springer.com/chapter/10.1007%2F978-3-319-23201-0_51 

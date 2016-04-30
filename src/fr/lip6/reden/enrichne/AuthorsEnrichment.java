@@ -1,4 +1,4 @@
-package fr.lip6.reden.extra;
+package fr.lip6.reden.enrichne;
 
 import java.io.File;
 import java.io.FileInputStream;

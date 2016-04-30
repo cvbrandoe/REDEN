@@ -279,7 +279,7 @@ public class ResultsAndEvaluationNEL {
 							if (evalInfo.getCandUris() != null) {
 								for (List<String> cand : evalInfo.getCandUris()) {
 									for (String uri : cand) {
-										if (uri.toLowerCase().contains(ref.toLowerCase())) {
+										if (uri.toLowerCase().contains(ref.toLowerCase())) { //TODO add "or overlapping de deux variables"
 											evalInfo.setCorrectURIisInCandSet(true);
 										}
 									}								
@@ -392,7 +392,25 @@ public class ResultsAndEvaluationNEL {
 	 */
 	public static void computeFinalResults(List<EvalInfo> collectedResults) {
 		
-		//For lisibility purposes, we separate the computation of each measure 
+		//For lisibility purposes, we separate the computation of each measure
+		
+		/**
+		 * Other information
+		 */
+		System.out.println("NB of tagged mentions: "+collectedResults.size());		
+		Integer man = 0;
+		for (EvalInfo eval : collectedResults) {
+			if (eval.getManualURI() != null)
+				man++;				
+		}
+		System.out.println("NB of manually annotated mentions: "+man);
+		Integer manNil = 0;
+		for (EvalInfo eval : collectedResults) {
+			if (eval.getManualURI() == null)
+				manNil++;				
+		}
+		System.out.println("NB of NIL annotated mentions: "+manNil);	
+		
 		/**
 		 * candidate cardinality mean: mean cardinality of the candidate sets. Fewer candidates mean reduced disambiguation workload
 		 * (FR) la cardinalité des candidate sets divisé par le nombre de mentions dans le texte d’entrée 		 
@@ -416,7 +434,7 @@ public class ResultsAndEvaluationNEL {
 				nonEmptyCandSets++;
 				if (eval.getCorrectURIisInCandSet()) { 
 					nonEmptyCandSetsCorrectURIisThere++;
-				}
+				}				
 			}
 		}
 		candidatePrecision = nonEmptyCandSetsCorrectURIisThere/nonEmptyCandSets;
@@ -521,8 +539,8 @@ public class ResultsAndEvaluationNEL {
 				correctlyLinkedMentions2++;
 			} else {
 				other++;
-				/* TODO for correcting gold TEI
-				 * if (eval.getCandUris() != null)
+				// TODO for correcting gold TEI
+				/*  if (eval.getCandUris() != null)
 					System.out.println("HERE: ment:"+ eval.getMention()+" man:"+eval.getManualURI()+ " auto:"+eval.getChosenUri()+ " cands:"+eval.getCandUris().size() + " goodIsThere:"+eval.getCorrectURIisInCandSet());
 				else 
 					System.out.println("HERE: ment:"+ eval.getMention()+" man:"+eval.getManualURI()+ " auto:"+eval.getChosenUri()+ " cands:"+0 + " goodIsThere:"+eval.getCorrectURIisInCandSet());

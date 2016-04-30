@@ -1,16 +1,11 @@
-package fr.lip6.reden.extra;
+package fr.lip6.reden.enrichne;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -24,7 +19,6 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
-import org.apache.commons.io.FileUtils;
 import org.geojson.Feature;
 import org.geojson.FeatureCollection;
 import org.geojson.Point;
@@ -39,7 +33,9 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Statement;
-import com.hp.hpl.jena.util.FileManager;
+
+import fr.lip6.reden.nelinker.GraphHandlerNEL;
+import fr.lip6.reden.nelinker.Util;
 
 /**
  * Auxiliary class to retrieve geo-coordinates provided by LD sources 
@@ -50,36 +46,11 @@ import com.hp.hpl.jena.util.FileManager;
 public class GeodataGeneration {
 	
 	/**
-	 * Main program, e.g: output\dbpedia-results-gir2015\apollinaire_heresiarque-et-cie-outV3.xml output\localisationInformation.json dbpedia config\latlong.properties ref_auto
-	 * @param args
-	 * Param1: inputTeiFile
-	 * Param2: outputGeojsonFile
-	 * Param3: LD repo - "dbpedia" or "geonames (so far, the only ones supported)
-	 * Param4: property file listing properties lat and long using different vocabularies
-	 * Param5: name of XML-TEI attribute of identifier (e.g. "ref_auto", "ref") 
-	 */
-	public static void main(String [] args) {
-		
-		if (args.length != 5) {
-			System.out.println("The folder dataGeo must exist. Program parameters are inputTeiFile, outputGeojsonFile, "
-					+ "LD repo (dbpedia or geonames), lat/lon property file, "
-					+ "name of XML-TEI attribute of identifier (e.g. ref_auto");
-		} else {
-			//reads TEI, gets toponyms and retrieve RDF
-			Map<String, Map<String, String>> toponyms = readTEI(args[0], args[2], args[4]);
-			//attribute geo-coordinates
-			toponyms = assignGeoCoordinates(toponyms,  args[3]);
-			//produces the GeoJson file
-			toGeoJson(toponyms, args[1]);
-		}
-	}
-	
-	/**
 	 * Read toponyms URIs in TEI file and retrieve if necessary the associated RDF data.
 	 * @return
 	 */
 	public static Map<String, Map<String, String>> readTEI(String teiAnnotatedFile,
-			String ldRepo, String xmlTeiIDAttr) {
+			String xmlTeiIDAttr, String contextSize, String annotTag, String datadir) {
 		
 		Map<String, Map<String, String>> toponyms = new HashMap<String, Map<String, String>>();
 		
@@ -89,13 +60,13 @@ public class GeodataGeneration {
 			org.w3c.dom.Document doc = b.parse(new FileInputStream(teiAnnotatedFile));
 			XPath xPath = XPathFactory.newInstance().newXPath();
 			NodeList nodes = (NodeList) xPath.evaluate(
-					"//body//head|//body//item|//body//l|//body//p", //TODO this must be a parameter.
+					contextSize,
 					doc.getDocumentElement(), XPathConstants.NODESET);
 			
 			for (int i = 0; i < nodes.getLength(); ++i) {
 				Element e = (Element) nodes.item(i);
 				NodeList nodesChild = (NodeList) xPath.evaluate(".//"
-						+ "placeName", e, XPathConstants.NODESET);
+						+ annotTag, e, XPathConstants.NODESET);
 				
 				for (int k = 0; k < nodesChild.getLength(); ++k) {
 					Element child = (Element) nodesChild.item(k);
@@ -111,32 +82,9 @@ public class GeodataGeneration {
 							Map<String, String> m = new HashMap<String, String>();
 							m.put("name", placeName);							
 							m.put("occurrences", "1");							
-							InputStream in = null;
-							if(ldRepo.equalsIgnoreCase("dbpedia")) {
-								in = FileManager.get().open(uri.replace("/page/", "/data/")+".ntriples");
-								m.put("dbpediaUri", uri);
-							} else { //geonmaes
-								in = FileManager.get().open(uri);
-								m.put("geoNamesUri", uri);
-							}
-							toponyms.put(uri, m);
-							if (in != null) {
-								// to go faster (remove f.exists if we want to update local triples)
-								File f = new File("dataGeo" + "/file" + uri.hashCode() + ".n3");
-								
-								if (!f.exists() || FileUtils.readFileToString(f).trim().isEmpty()) {
-									Model model = ModelFactory.createDefaultModel();
-									System.out.println("RDF data will be stored in "+"dataGeo" + "/file" + uri.hashCode() + ".n3");
-									model.read(in, null, "N3");									
-									OutputStream fileOutputStream = new FileOutputStream(f);
-									OutputStreamWriter out = new OutputStreamWriter(fileOutputStream, "UTF-8");
-									model.write(out, "N3");
-								} else {
-									System.out.println("RDF file is present: "+"dataGeo" + "/file" + uri.hashCode() + ".n3");
-								}
-							} else {
-								System.out.println("skip URI: " + uri);
-							}
+							GraphHandlerNEL.retrieveRDF(uri, datadir);
+							m.put("theuri", uri);
+							toponyms.put(uri, m);							
 						} else { //already seen this uri, count it
 							Map<String, String> m = toponyms.get(uri);
 							Integer count = Integer.parseInt(m.get("occurrences"));
@@ -170,7 +118,8 @@ public class GeodataGeneration {
 	 * @param latLongPropertyFile
 	 * @return
 	 */
-	public static Map<String, Map<String, String>> assignGeoCoordinates(Map<String, Map<String, String>> toponyms, String latLongPropertyFile) {
+	public static Map<String, Map<String, String>> assignGeoCoordinates(Map<String, Map<String, String>> toponyms, 
+			String latLongPropertyFile, String datadir) {
 		try {
 			//then, we search for Lat/Lon property values from the RDF data for these toponyms
 			//read property file
@@ -182,10 +131,11 @@ public class GeodataGeneration {
 			
 			for (String placeOrigName : toponyms.keySet()) {
 				
-				if (new File("dataGeo" + "/file" + placeOrigName.hashCode() + ".n3").exists()) {
+				//rdf data have already been downloaded
+				if (new File(datadir + "/file" + Util.replaceNonAlphabeticCharacters(placeOrigName) + ".n3").exists()) {
 					
 					Model model = ModelFactory.createDefaultModel();
-					model.read("dataGeo" + "/file" + placeOrigName.hashCode() + ".n3");					
+					model.read(datadir + "/file" + Util.replaceNonAlphabeticCharacters(placeOrigName) + ".n3");					
 					Resource res = model.getResource(placeOrigName);
 					Double lat = getValFromProperty(model, res, propLatNameList);
 					Double lon = getValFromProperty(model, res, propLonNameList);
@@ -197,7 +147,7 @@ public class GeodataGeneration {
 						toponyms.put(placeOrigName, m); //update
 					}					
 				} else {
-					System.out.println("RDF file is missing: "+"dataGeo" + "/file" + placeOrigName.hashCode() + ".n3");
+					System.out.println("RDF file is missing: "+datadir + "/file" + placeOrigName.hashCode() + ".n3");
 				}							
 			}
 		} catch (FileNotFoundException e1) {
@@ -276,26 +226,4 @@ public class GeodataGeneration {
 		}
 	}
 	
-	/**
-	 * Check LD repo is on.
-	 * @param baseURL
-	 * @return
-	 */
-	public static Boolean checkConnectionToLDRepo(String baseURL) {
-		// check rdf repos are available
-		try {
-			URL u = new URL(baseURL);
-			HttpURLConnection huc = (HttpURLConnection) u
-					.openConnection();
-			huc.setRequestMethod("GET");
-			huc.connect();
-			int code = huc.getResponseCode();
-			if (code != 503 && code != 404) {
-				return true;
-			}
-		} catch (IOException e) {			
-			e.printStackTrace();
-		}
-		return false;
-	}
 }
