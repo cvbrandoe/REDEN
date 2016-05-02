@@ -32,7 +32,9 @@ import org.xml.sax.SAXException;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
+import fr.lip6.reden.enrichne.AuthorsEnrichment;
 import fr.lip6.reden.enrichne.GeodataGeneration;
+import fr.lip6.reden.enrichne.EnrichmentHandler;
 import fr.lip6.reden.ldextractor.AppAdhoc;
 
 /**
@@ -115,18 +117,31 @@ public class MainNELApp {
 			
 			//produces visualization data, skips NEL
 			if (argsMap.containsKey("produceData4Visu")) {
-				//reads TEI, gets toponyms and retrieve RDF
-				Map<String, Map<String, String>> toponyms = GeodataGeneration.readTEI(argsMap.get("tei"),
-						propertyTagRef,	xpathExpresion, annotationTag, rdfData);
-				//attribute geo-coordinates
-				toponyms = GeodataGeneration.assignGeoCoordinates(toponyms, argsMap.get("propsFile"), rdfData);
-				//produces the GeoJson file
-				GeodataGeneration.toGeoJson(toponyms, argsMap.get("produceData4Visu"));					
-				return;
+				
+				if (annotationTag.toLowerCase().startsWith("placename")) {
+					//reads TEI, gets toponyms and retrieve RDF
+					Map<String, Map<String, String>> toponyms = EnrichmentHandler.readTEI(argsMap.get("tei"),
+							propertyTagRef,	xpathExpresion, annotationTag, rdfData);
+					//attribute geo-coordinates
+					toponyms = GeodataGeneration.assignGeoCoordinates(toponyms, argsMap.get("propsFile"), rdfData);
+					//produces the GeoJson file
+					EnrichmentHandler.toJson(toponyms, argsMap.get("produceData4Visu"));					
+					return;
+				} else if (annotationTag.toLowerCase().startsWith("persname")) {
+					// e.g: output\thibaudet_reflexions-outV3-enrichment.xml output\authorInformation.json bnf config\authors.properties ref_auto
+					//reads TEI, gets authors and retrieve RDF
+					Map<String, Map<String, String>> authors = EnrichmentHandler.readTEI(argsMap.get("tei"), propertyTagRef, xpathExpresion, annotationTag, rdfData);
+					//attribute pics
+					authors = AuthorsEnrichment.assignAuthorsPropValue(authors,  argsMap.get("propsFile"), rdfData);
+					//produces the GeoJson file
+					EnrichmentHandler.toJson(authors, argsMap.get("produceData4Visu")); //TODO here, change to JSON instead GeoJson
+					return;
+				} else {
+					System.out.println("Set appropriate value to the namedEntityTag property in the Reden configuration file");
+					return;
+				}
 			}
 			
-			//TODO here, same with authors
-						
 			if (argsMap.containsKey("printEval") && !new File(argsMap.get("tei").replace(".xml", "-gold.xml")).exists()) {
 				System.out.println("Gold file doesn't exist: "
 						+ argsMap.get("tei").replace(".xml", "-gold.xml"));
