@@ -28,7 +28,7 @@ public class TEIUtil {
 
 	private static Logger logger = Logger.getLogger(TEIUtil.class);
 
-	public static final String CONFIG_PATH = "./config/geoconfig.json";
+	public static final String CONFIG_PATH = "./config/config.json";
 
 	/** The Constant NORTH. */
 	public static final String NORTH = "Nord";
@@ -74,9 +74,12 @@ public class TEIUtil {
 	 * @return the w values
 	 */
 	public static String getWValues(XdmItem item) {
+		XdmNode node = (XdmNode) item;
+		if("w".equals(node.getNodeName().getLocalName()))
+			return node.getStringValue().trim();
 		String xPathStatement = "string-join(.//w/text(), ' ')";
 		String result = XMLUtil.getStringFromXPath(item, xPathStatement, "", "");//TEIConst.TEI_NS)
-		return result;
+		return result.trim();
 	}
 
 	/**
@@ -325,7 +328,6 @@ public class TEIUtil {
 		List<XdmNode> currentPhrase = new ArrayList<>();
 		while (child != null) {
 			XdmNode element = (XdmNode) child;
-			
 			if (TEIConst.PC.equalsIgnoreCase(element.getNodeName().getLocalName()) && ".".equalsIgnoreCase(element.getStringValue())) {
 				// On est à la fin d'une phrase
 				// on verrifie que la phrase nous intéresse

@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.json.JSONException;
+import org.w3c.dom.Document;
 
 /**
  * The Interface ITEIHandler.
@@ -12,7 +13,6 @@ import org.json.JSONException;
  * @param <G>
  *            the type of the Graph
  */
-@FunctionalInterface
 public interface ITEIHandler<G> {
 
 	/**
@@ -24,5 +24,8 @@ public interface ITEIHandler<G> {
 	 * @throws XPathExpressionException
 	 */
 	public G createGraphFromTEI() throws XPathExpressionException, JSONException, IOException;
+	
+	
+	public Document getTeiAnnotadedFile();
 
 }

@@ -9,10 +9,12 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
@@ -23,6 +25,7 @@ import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
+import net.sf.saxon.TransformerFactoryImpl;
 import net.sf.saxon.s9api.Axis;
 import net.sf.saxon.s9api.Processor;
 import net.sf.saxon.s9api.QName;
@@ -58,15 +61,17 @@ public final class XMLUtil {
 	 * @throws SAXException
 	 * @throws IOException
 	 */
-	public static Document createDocumentFromFile(String fullFilePath) throws IOException {
+	public static Document createDocumentFromFile(String fullFilePath) {
 		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		Document document = null;
 		try {
 			final DocumentBuilder builder = factory.newDocumentBuilder();
-			document = builder.parse(new File(fullFilePath));
+			File file = new File(fullFilePath);
+			if (!file.exists())
+				throw new NullPointerException("file is null");
+			document = builder.parse(file);
 		} catch (SAXException | IOException | ParserConfigurationException e) {
 			logger.error(e);
-			throw new IOException(e);
 		}
 		return document;
 	}
@@ -89,7 +94,7 @@ public final class XMLUtil {
 		// prologue
 		transformer.setOutputProperty(OutputKeys.VERSION, "1.0");
 		transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
-		transformer.setOutputProperty(OutputKeys.STANDALONE, "no");
+//		transformer.setOutputProperty(OutputKeys.STANDALONE, "no");
 
 		// formatage
 		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
@@ -150,6 +155,25 @@ public final class XMLUtil {
 			logger.error(e);
 		}
 		return myList;
+	}
+	
+	public static Document applyXSLTTransformation(Document document, String xsltPath, String outputFilePath) throws TransformerException {
+		final TransformerFactory transformerFactory = new TransformerFactoryImpl();
+		final Transformer transformer = transformerFactory.newTransformer(new StreamSource(new File(xsltPath)));
+		final DOMSource source = new DOMSource(document);
+		Document result = null;
+
+		// prologue
+		transformer.setOutputProperty(OutputKeys.VERSION, "1.0");
+		transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+
+		// formatage
+		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+		transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+		transformer.transform(source, new StreamResult(outputFilePath));
+
+		result = createDocumentFromFile(outputFilePath);
+		return result;
 	}
 	
 	/**
@@ -227,7 +251,8 @@ public final class XMLUtil {
 		Document newXmlDocument = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
 		org.w3c.dom.Element root = newXmlDocument.createElementNS(namespaceURI, rootName);
 		newXmlDocument.appendChild(root);
-		for (int i = 0; i < nodes.getLength(); i++) {
+		int length = nodes.getLength();
+		for (int i = 0; i < length; i++) {			
 			org.w3c.dom.Node node =  nodes.item(i);
 			org.w3c.dom.Node copyNode = newXmlDocument.importNode(node, true);
 			root.appendChild(copyNode);

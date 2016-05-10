@@ -35,6 +35,11 @@ public class TEIHandler implements ITEIHandler<SimpleDirectedGraph<Toponym, Labe
 				TEIConst.TEI_NS);
 		allToponyms = new ArrayList<>();
 	}
+
+	@Override
+	public Document getTeiAnnotadedFile() {
+		return teiAnnotadedFile;
+	}
 	
 	@Override
 	public SimpleDirectedGraph<Toponym, LabeledEdge<Toponym, SpatialRelationship>> createGraphFromTEI()
@@ -138,6 +143,34 @@ public class TEIHandler implements ITEIHandler<SimpleDirectedGraph<Toponym, Labe
 						new LabeledEdge<Toponym, SpatialRelationship>(previousToponym.get(), nextToponym.get(), TEIUtil.getSpatialRelationship(orientation)));
 			}
 		}
+	}
+	
+	/**
+	 * Gets the sentences with orientation in it.
+	 *
+	 * @return the sentences with orientation
+	 */
+	public List<String> getSentencesWithOrientation() {
+		Processor processor = new Processor(false);
+		XdmNode root = processor.newDocumentBuilder().wrap(teiAnnotadedFile);
+		List<List<XdmNode>> phrases = TEIUtil.cutIntoSentences(root);
+		List<List<XdmNode>> sentencesWithOrientation = new ArrayList<>();
+		for (List<XdmNode> list : phrases) {
+			if (list.stream().anyMatch(node -> 
+			XMLUtil.isAttributeValueEqualTo(node, TEIConst.TYPE, TEIConst.ORIENTATION)
+			|| XMLUtil.isAttributeValueEqualTo(node, TEIConst.SUBTYPE, TEIConst.ORIENTATION))
+					&& list.stream().anyMatch(node -> XMLUtil.hasAttribute(node, TEIConst.XML_ID_QNAME)))
+				sentencesWithOrientation.add(list);
+		}
+		List<String> result = new ArrayList<>();
+		for (List<XdmNode> list : sentencesWithOrientation) {
+			String sentence = "";
+			for (XdmNode xdmNode : list) {
+				sentence += TEIUtil.getWValues(xdmNode).trim() + " ";
+			}
+			result.add(sentence.trim());
+		}		
+		return result;
 	}
 
 	private void createNonOrientedEdges(Document xmlDocument, SimpleDirectedGraph<Toponym, LabeledEdge<Toponym, SpatialRelationship>> graph)
