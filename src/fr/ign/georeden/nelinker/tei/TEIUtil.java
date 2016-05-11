@@ -28,7 +28,7 @@ public class TEIUtil {
 
 	private static Logger logger = Logger.getLogger(TEIUtil.class);
 
-	public static final String CONFIG_PATH = "./config/config.json";
+	public static final String CONFIG_PATH = "./config/geoconfig.json";
 
 	/** The Constant NORTH. */
 	public static final String NORTH = "Nord";
