@@ -44,6 +44,10 @@ public class TEIHandlerV2 implements ITEIHandler<SimpleDirectedGraph<Toponym, La
 		allToponyms = new ArrayList<>();
 	}
 	
+	public void createRDFGraph() throws TransformerException {
+		XMLUtil.applyXSLTTransformation(teiAnnotadedFileWithBags, "config/teiToRdf.xsl", "teiToRdf.xml");
+	}
+	
 	@Override
 	public SimpleDirectedGraph<Toponym, LabeledEdge<Toponym, SpatialRelationship>> createGraphFromTEI()
 			throws XPathExpressionException, JSONException, IOException {

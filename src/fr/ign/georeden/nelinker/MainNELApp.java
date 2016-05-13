@@ -68,7 +68,7 @@ public class MainNELApp {
 			return;
 		}
 		
-		ITEIHandler<SimpleDirectedGraph<Toponym, LabeledEdge<Toponym, SpatialRelationship>>> teiHandler;
+		TEIHandlerV2 teiHandler;
 		SimpleDirectedGraph<Toponym, LabeledEdge<Toponym, SpatialRelationship>> graph = null;
 		try {
 			teiHandler = new TEIHandlerV2(document);
