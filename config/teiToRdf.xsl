@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-    xmlns:ign="http://example.com/namespace" 
+    xmlns:ign="http://example.com/namespace/" 
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xpath-default-namespace="http://www.tei-c.org/ns/1.0" 
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
@@ -38,54 +38,94 @@
         <xsl:variable name="preceding_strong_pc_position" select="ign:getPosition($preceding_strong_pc)"/>
         <!-- borne sup -->
         <xsl:variable name="last_strong_pc_position" select="ign:getPosition($last_strong_pc)"/>
-        <xsl:element name="rdf:Seq">
-            <xsl:for-each select="$preceding_strong_pc/following-sibling::*[position() > 1 
-                and not(position() > $last_strong_pc_position)][@force='strong']">
-                <!-- On récupère tout les pc strong entre les deux bornes -->
-                <xsl:variable name="current_position" select="ign:getPosition(.)"/>
-                <xsl:choose>
-                    <xsl:when test="$current_position = $last_strong_pc_position">
-                        <!-- C'est la dernière phrase -->
-                        <!-- on appelle le template create_list en passant les éléments 
-                            compris entre la pc avant last_strong_pc_position et last_strong_pc_position-->
-                        <xsl:variable name="preceding_pc_position" select="ign:getPosition($last_strong_pc/preceding-sibling::*[ @force='strong'][1])"/>
-                        <xsl:variable name="number_of_bags" select="count(//*[position() > 
-                            $preceding_pc_position and not(position() > $last_strong_pc_position)][name() = 'bag'])" />
-                        <xsl:if test="$number_of_bags > 0">
-                            <xsl:call-template name="create_list">
-                                <xsl:with-param name="sentence" select="//*[position() > 
-                                    $preceding_pc_position and not(position() > $last_strong_pc_position)][name() = 'bag']" />                                
-                                <xsl:with-param name="total" select="$number_of_bags"/>
-                                <xsl:with-param name="index" select="1"/>
-                            </xsl:call-template>
-                        </xsl:if>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <!-- Ce n'est pas la dernière phrase -->
-                        <!-- on appelle le template create_list en passant les éléments 
-                            compris entre la pc avant l'élément courant et l'élément courant-->
-                        <xsl:variable name="preceding_pc_position" select="ign:getPosition(preceding-sibling::*[@force='strong'][1])"/>
-                        <xsl:variable name="number_of_bags" select="count(//*[position() > 
-                            $preceding_pc_position and not(position() > $current_position)][name() = 'bag'])" />
-                        <xsl:if test="$number_of_bags > 0">
-                            <xsl:call-template name="create_list">
-                                <xsl:with-param name="sentence" select="//*[position() > 
-                                    $preceding_pc_position and not(position() > $current_position)][name() = 'bag']" />
-                                <xsl:with-param name="total" select="$number_of_bags"/>
-                                <xsl:with-param name="index" select="1"/>
-                            </xsl:call-template>
-                        </xsl:if>
-                    </xsl:otherwise>
-                </xsl:choose>
+        <!--<xsl:element name="rdf:Seq">-->
+            <xsl:variable name="following_pcs" select="$preceding_strong_pc/following-sibling::*[position() > 1 
+                and not(position() > $last_strong_pc_position)][@force='strong']"/>
+            <xsl:variable name="lists" select="ign:get_list($following_pcs, $last_strong_pc_position, $last_strong_pc)"/>
+            <xsl:element name="rdf:Seq">
+                <xsl:for-each select="$lists[name()='rdf:li']">
+                    <xsl:copy-of select="."/>
+                </xsl:for-each>
+            </xsl:element>  
+            <xsl:for-each select="$lists[not(name()='rdf:li')]">
+                <xsl:copy-of select="."/>
             </xsl:for-each>
-        </xsl:element>
+            
+        <!--</xsl:element>-->
     </xsl:template>
     
-    <xsl:template name="create_list">
+    <!-- affiche la liste de manière conforme au format RDF -->
+    <xsl:function name="ign:get_list" as="element()*">
+        <xsl:param name="following_pcs" as="element()*" />
+        <xsl:param name="last_strong_pc_position" as="xs:integer" />
+        <xsl:param name="last_strong_pc" as="element()?" />
+        <xsl:for-each select="$following_pcs">
+            <!-- On récupère tout les pc strong entre les deux bornes -->
+            <xsl:variable name="current_position" select="ign:getPosition(.)"/>
+            <xsl:choose>
+                <xsl:when test="$current_position = $last_strong_pc_position">
+                    <!-- C'est la dernière phrase -->
+                    <!-- on appelle le template create_list en passant les éléments 
+                        compris entre la pc avant last_strong_pc_position et last_strong_pc_position-->
+                    <xsl:variable name="preceding_pc_position" select="ign:getPosition($last_strong_pc/preceding-sibling::*[ @force='strong'][1])"/>
+                    <xsl:variable name="number_of_bags" select="count(//*[position() > 
+                        $preceding_pc_position and not(position() > $last_strong_pc_position)][name() = 'bag'])" />
+                    <xsl:if test="$number_of_bags > 0">
+                        <xsl:variable name="sentence" select="//*[position() > 
+                                    $preceding_pc_position and not(position() > $last_strong_pc_position)][name() = 'bag']" />
+                        <xsl:copy-of select="ign:create_list($sentence, $number_of_bags, 1)"/>
+                    </xsl:if>
+                </xsl:when>
+                <xsl:otherwise>
+                    <!-- Ce n'est pas la dernière phrase -->
+                    <!-- on appelle le template create_list en passant les éléments 
+                        compris entre la pc avant l'élément courant et l'élément courant-->
+                    <xsl:variable name="preceding_pc_position" select="ign:getPosition(preceding-sibling::*[@force='strong'][1])"/>
+                    <xsl:variable name="number_of_bags" select="count(//*[position() > 
+                        $preceding_pc_position and not(position() > $current_position)][name() = 'bag'])" />
+                    <xsl:if test="$number_of_bags > 0">
+                        <xsl:variable name="sentence" select="//*[position() > 
+                                $preceding_pc_position and not(position() > $current_position)][name() = 'bag']" />
+                        <xsl:copy-of select="ign:create_list($sentence, $number_of_bags, 1)"/>
+                    </xsl:if>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:for-each>
+    </xsl:function>
+    
+    <!-- créer une liste à partir de la phrase passée en paramètre -->
+    <xsl:function name="ign:create_list" as="element()+">
         <xsl:param name="sentence" as="element()+" />
         <xsl:param name="total" as="xs:integer" />
         <xsl:param name="index" as="xs:integer"/>
         
+        <xsl:choose>
+            <xsl:when test="$index = 1">
+                <rdf:li>
+                    <xsl:call-template name="element_of_list">
+                        <xsl:with-param name="sentence" select="$sentence" />
+                        <xsl:with-param name="index" select="$index" />
+                        <xsl:with-param name="total" select="$total" />
+                    </xsl:call-template>
+                </rdf:li>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:call-template name="element_of_list">
+                    <xsl:with-param name="sentence" select="$sentence" />
+                    <xsl:with-param name="index" select="$index" />
+                    <xsl:with-param name="total" select="$total" />
+                </xsl:call-template>
+            </xsl:otherwise>
+        </xsl:choose>
+        <xsl:if test="$total > $index">
+            <xsl:copy-of select="ign:create_list($sentence, $total, $index + 1)"/>
+        </xsl:if>
+    </xsl:function>
+    
+    <xsl:template name="element_of_list">    
+        <xsl:param name="sentence" as="element()+" />
+        <xsl:param name="index" as="xs:integer" />
+        <xsl:param name="total" as="xs:integer" />
         <xsl:element name="rdf:Description">
             <xsl:attribute name="rdf:nodeID">                    
                 <xsl:text>bag</xsl:text><xsl:value-of select="$sentence[$index]/descendant::*[@xml:id][1]/@xml:id" />
@@ -110,13 +150,6 @@
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:element>
-        <xsl:if test="$total > $index">
-            <xsl:call-template name="create_list">
-                <xsl:with-param name="sentence" select="$sentence" />
-                <xsl:with-param name="total" select="$total"/>
-                <xsl:with-param name="index" select="$index + 1"/>
-            </xsl:call-template>
-        </xsl:if>
     </xsl:template>
     
     <xsl:function name="ign:create_bag" as="element()">
@@ -125,6 +158,7 @@
             <xsl:for-each select="$bag/child::*[@xml:id]">
                 <xsl:element name="rdf:li">
                     <xsl:attribute name="rdf:resource">
+                        <xsl:text>ign:</xsl:text>
                         <xsl:value-of select="./@xml:id" />
                     </xsl:attribute>
                 </xsl:element>
@@ -136,6 +170,7 @@
         <xsl:param name="toponym" as="element()" />
         <xsl:element name="rdf:Description">
             <xsl:attribute name="rdf:about">
+                <xsl:text>ign:</xsl:text>
                 <xsl:value-of select="./@xml:id" />
             </xsl:attribute>
             <xsl:element name="rdfs:label">
