@@ -9,34 +9,37 @@
             <xsl:if test="preceding-sibling::*[1]
               [not(((@lemma='et' or text()=',') and preceding-sibling::*[1][@xml:id])
               or ((@lemma='à' or @lemma='de') and preceding-sibling::*[1][(@lemma='et' or text()=',')] 
-              and preceding-sibling::*[2][@xml:id]))]">
-              <!-- Si c'est un toponyme non précédé de toponymes on ouvre le bag -->
-                <xsl:choose>
-                    <xsl:when test="@xml:id and preceding-sibling::w[1][(@lemma = 'la' or @lemma = 'le' or text() = 'du') 
-                    and (preceding-sibling::w[1][@lemma = 'sur' or @subtype = 'motion_median' or @subtype = 'motion_final' 
-                    or preceding-sibling::w[1][@lemma = 'vallée']])]">
-                        <xsl:text disable-output-escaping="yes"><![CDATA[<bag type='natural_place'>]]></xsl:text>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:text disable-output-escaping="yes"><![CDATA[<bag>]]></xsl:text>
-                    </xsl:otherwise>
-                </xsl:choose>
+              and preceding-sibling::*[2][@xml:id or ((@subtype='orientation' or @type='orientation') and 
+              preceding-sibling::*[1][@xml:id])]))]">
+				<xsl:text disable-output-escaping="yes"><![CDATA[<bag>]]></xsl:text>
             </xsl:if>
             <name>
               <xsl:attribute name="xml:id">
                 <xsl:value-of select="@xml:id" />
               </xsl:attribute>
+              <xsl:if test="@typage"><xsl:attribute name="typage"><xsl:value-of select="@typage"/></xsl:attribute></xsl:if>
               <xsl:value-of select="string-join(descendant::*, ' ')" />
             </name>
-            <xsl:if test="following-sibling::*[1][not((@lemma='et' or text()=',') and (following-sibling::*[1][@xml:id]
-                or (following-sibling::*[1][@lemma='à' or @lemma='de'] and following-sibling::*[2][@xml:id])))]">
+            <xsl:if test="following-sibling::*[1][not(((@lemma='et' or text()=',') and (following-sibling::*[1][@xml:id]
+                or (following-sibling::*[1][@lemma='à' or @lemma='de'] and following-sibling::*[2][@xml:id])))
+                or ((@subtype='orientation' or @type='orientation') and following-sibling::*[1][(@lemma='et' or text()=',') 
+                and (following-sibling::*[1][@xml:id]
+                or (following-sibling::*[1][@lemma='à' or @lemma='de'] and following-sibling::*[2][@xml:id]))]))]">
               <!-- Si c'est un toponyme non suivi de toponymes on ferme le bag --> 
               <xsl:text disable-output-escaping="yes"><![CDATA[</bag>]]></xsl:text>
             </xsl:if>
           </xsl:if>
           <xsl:if test="not(@xml:id)">
             <!-- Ce n'est pas un toponyme, on garde le noeud tel quel -->
-            <xsl:copy-of select="."/>
+            <xsl:choose>
+            	<xsl:when test="(@type='orientation' or @subtype='orientation') and child::*[1][@lemma='occidental' or 
+            	@lemma='oriental' or @lemma='méridional' or @lemma='septentrional']">
+            		<xsl:copy-of select="child::*"/>
+            	</xsl:when>
+            	<xsl:otherwise>
+	            	<xsl:copy-of select="."/>
+	            </xsl:otherwise>
+            </xsl:choose>
           </xsl:if>        
         </xsl:for-each>
       </TEI>
