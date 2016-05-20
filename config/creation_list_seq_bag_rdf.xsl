@@ -4,7 +4,9 @@
     xmlns:ign="http://example.com/namespace/" 
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xpath-default-namespace="http://www.tei-c.org/ns/1.0" 
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dbpedia-owl="http://dbpedia.org/ontology/"
+    xmlns:rlsp="http://data.ign.fr/def/relationsspatiales#">
     
     <xsl:output method="xml" encoding="UTF-8" indent="yes" />
     
@@ -158,7 +160,6 @@
             <xsl:for-each select="$bag/child::*[@xml:id]">
                 <xsl:element name="rdf:li">
                     <xsl:attribute name="rdf:resource">
-                        <!--<xsl:text>ign:</xsl:text>-->
                         <xsl:value-of select="./@xml:id" />
                     </xsl:attribute>
                 </xsl:element>
@@ -170,17 +171,235 @@
         <xsl:param name="toponym" as="element()" />
         <xsl:element name="rdf:Description">
             <xsl:attribute name="rdf:about">
-                <!--<xsl:text>ign:</xsl:text>-->
-                <xsl:value-of select="./@xml:id" />
+                <xsl:value-of select="$toponym/@xml:id" />
             </xsl:attribute>
+            <xsl:element name="rdf:type">
+                <xsl:choose>
+                    <xsl:when test="$toponym/@typage">
+                        <xsl:choose>
+                            <xsl:when test="contains(lower-case($toponym/@typage), 'mountainorvolcano')">
+                                <rdf:Alt>
+                                    <rdf:li>
+                                        <xsl:attribute name="rdf:resource">
+                                            <xsl:text>dbpedia-owl:</xsl:text>
+                                            <xsl:text>Mountain</xsl:text>
+                                        </xsl:attribute>
+                                    </rdf:li>
+                                    <rdf:li>
+                                        <xsl:attribute name="rdf:resource">
+                                            <xsl:text>dbpedia-owl:</xsl:text>
+                                            <xsl:text>Volcano</xsl:text>
+                                        </xsl:attribute>
+                                    </rdf:li>
+                                </rdf:Alt>
+                            </xsl:when>
+                            <xsl:when test="contains(lower-case($toponym/@typage), 'bodyofwater')">
+                                <xsl:attribute name="rdf:resource">
+                                    <xsl:text>dbpedia-owl:</xsl:text>
+                                    <xsl:text>BodyOfWater</xsl:text>
+                                </xsl:attribute>
+                            </xsl:when>
+                            <xsl:when test="contains(lower-case($toponym/@typage), 'settlement')">
+                                <xsl:attribute name="rdf:resource">
+                                    <xsl:text>dbpedia-owl:</xsl:text>
+                                    <xsl:text>Settlement</xsl:text>
+                                </xsl:attribute>                            
+                            </xsl:when>
+                            <xsl:when test="contains(lower-case($toponym/@typage), 'territoryornaturalplace')">
+                                <rdf:Alt>
+                                    <rdf:li>
+                                        <xsl:attribute name="rdf:resource">
+                                            <xsl:text>dbpedia-owl:</xsl:text>
+                                            <xsl:text>Territory</xsl:text>
+                                        </xsl:attribute>
+                                    </rdf:li>
+                                    <rdf:li>
+                                        <xsl:attribute name="rdf:resource">
+                                            <xsl:text>dbpedia-owl:</xsl:text>
+                                            <xsl:text>NaturalPlace</xsl:text>
+                                        </xsl:attribute>
+                                    </rdf:li>
+                                </rdf:Alt>                            
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:attribute name="rdf:resource">
+                                    <xsl:text>dbpedia-owl:</xsl:text>
+                                    <xsl:text>Place</xsl:text>
+                                </xsl:attribute> 
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:text>dbpedia-owl:</xsl:text>
+                            <xsl:text>Place</xsl:text>
+                        </xsl:attribute> 
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:element>
             <xsl:element name="rdfs:label">
                 <xsl:attribute name="xml:lang">
                     <xsl:text>fr</xsl:text>
                 </xsl:attribute>
-                <xsl:value-of select="./text()" />
+                <xsl:value-of select="$toponym/text()" />
             </xsl:element>
+            <xsl:if test="$toponym/parent::*/@second_node">
+                <xsl:variable name="orientation" select="$toponym/parent::*/@orientation"/>
+                <xsl:variable name="second_node" select="$toponym/parent::*/@second_node"/>
+                <xsl:variable name="position" select="$toponym/parent::*/@position"/>
+                <xsl:copy-of select="ign:getOrientationOntology($position, $orientation, $second_node)"/>
+            </xsl:if>
         </xsl:element>
     </xsl:template>
+    
+    <!-- Return the end of the triple with the orientation 
+    eg : <rlsp:northOf rdf:resource="3" />-->
+    <xsl:function name="ign:getOrientationOntology" as="element()">
+        <xsl:param name="position" as="attribute()" />
+        <xsl:param name="orientation" as="attribute()" />
+        <xsl:param name="second_node" as="attribute()" />
+                
+        <xsl:choose>
+            <xsl:when test="lower-case($position) = 'start'">
+                <xsl:choose>
+                    <xsl:when test="contains(lower-case($orientation), 'nord')"> 
+                        <xsl:choose>                       
+                            <xsl:when test="contains(lower-case($orientation), 'ouest')">                            
+                                <xsl:element name="rlsp:northWestOf">
+                                    <xsl:attribute name="rdf:resource">
+                                        <xsl:value-of select="$second_node"/>
+                                    </xsl:attribute>
+                                </xsl:element>
+                            </xsl:when>                       
+                            <xsl:when test="contains(lower-case($orientation), 'est')">
+                                <xsl:element name="rlsp:northEastOf">
+                                    <xsl:attribute name="rdf:resource">
+                                        <xsl:value-of select="$second_node"/>
+                                    </xsl:attribute>
+                                </xsl:element>                           
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:element name="rlsp:northOf">
+                                    <xsl:attribute name="rdf:resource">
+                                        <xsl:value-of select="$second_node"/>
+                                    </xsl:attribute>
+                                </xsl:element>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:when>
+                    <xsl:when test="contains(lower-case($orientation), 'sud')"> 
+                        <xsl:choose>                       
+                            <xsl:when test="contains(lower-case($orientation), 'ouest')">
+                                <xsl:element name="rlsp:southWestOf">
+                                    <xsl:attribute name="rdf:resource">
+                                        <xsl:value-of select="$second_node"/>
+                                    </xsl:attribute>
+                                </xsl:element>
+                            </xsl:when>                       
+                            <xsl:when test="contains(lower-case($orientation), 'est')">
+                                <xsl:element name="rlsp:southEastOf">
+                                    <xsl:attribute name="rdf:resource">
+                                        <xsl:value-of select="$second_node"/>
+                                    </xsl:attribute>
+                                </xsl:element>                           
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:element name="rlsp:southOf">
+                                    <xsl:attribute name="rdf:resource">
+                                        <xsl:value-of select="$second_node"/>
+                                    </xsl:attribute>
+                                </xsl:element>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:when>
+                    <xsl:when test="contains(lower-case($orientation), 'ouest')">
+                        <xsl:element name="rlsp:westOf">
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="$second_node"/>
+                            </xsl:attribute>
+                        </xsl:element>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:element name="rlsp:eastOf">
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="$second_node"/>
+                            </xsl:attribute>
+                        </xsl:element>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:choose>
+                    <xsl:when test="contains(lower-case($orientation), 'nord')">   
+                        <xsl:choose>                     
+                            <xsl:when test="contains(lower-case($orientation), 'ouest')">
+                                <xsl:element name="rlsp:southEastOf">
+                                    <xsl:attribute name="rdf:resource">
+                                        <xsl:value-of select="$second_node"/>
+                                    </xsl:attribute>
+                                </xsl:element>
+                            </xsl:when>                       
+                            <xsl:when test="contains(lower-case($orientation), 'est')">
+                                <xsl:element name="rlsp:southWestOf">
+                                    <xsl:attribute name="rdf:resource">
+                                        <xsl:value-of select="$second_node"/>
+                                    </xsl:attribute>
+                                </xsl:element>                           
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:element name="rlsp:southOf">
+                                    <xsl:attribute name="rdf:resource">
+                                        <xsl:value-of select="$second_node"/>
+                                    </xsl:attribute>
+                                </xsl:element>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:when>
+                    <xsl:when test="contains(lower-case($orientation), 'sud')">    
+                        <xsl:choose>                    
+                            <xsl:when test="contains(lower-case($orientation), 'ouest')">
+                                <xsl:element name="rlsp:northEastOf">
+                                    <xsl:attribute name="rdf:resource">
+                                        <xsl:value-of select="$second_node"/>
+                                    </xsl:attribute>
+                                </xsl:element>
+                            </xsl:when>                       
+                            <xsl:when test="contains(lower-case($orientation), 'est')">
+                                <xsl:element name="rlsp:northWestOf">
+                                    <xsl:attribute name="rdf:resource">
+                                        <xsl:value-of select="$second_node"/>
+                                    </xsl:attribute>
+                                </xsl:element>                           
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:element name="rlsp:northOf">
+                                    <xsl:attribute name="rdf:resource">
+                                        <xsl:value-of select="$second_node"/>
+                                    </xsl:attribute>
+                                </xsl:element>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:when>
+                    <xsl:when test="contains(lower-case($orientation), 'ouest')">
+                        <xsl:element name="rlsp:eastOf">
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="$second_node"/>
+                            </xsl:attribute>
+                        </xsl:element>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:element name="rlsp:westOf">
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="$second_node"/>
+                            </xsl:attribute>
+                        </xsl:element>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:otherwise>
+        </xsl:choose>
+        
+    </xsl:function>
+    
     
     <!-- Return the position of the node in the XML tree -->
     <xsl:function name="ign:getPosition" as="xs:integer">
