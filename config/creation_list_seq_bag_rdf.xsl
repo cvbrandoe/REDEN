@@ -40,10 +40,11 @@
         <xsl:variable name="preceding_strong_pc_position" select="ign:getPosition($preceding_strong_pc)"/>
         <!-- borne sup -->
         <xsl:variable name="last_strong_pc_position" select="ign:getPosition($last_strong_pc)"/>
-        <!--<xsl:element name="rdf:Seq">-->
+        <xsl:if test="$last_strong_pc_position > $preceding_strong_pc_position">
             <xsl:variable name="following_pcs" select="$preceding_strong_pc/following-sibling::*[position() > 1 
                 and not(position() > $last_strong_pc_position)][@force='strong']"/>
-            <xsl:variable name="lists" select="ign:get_list($following_pcs, $last_strong_pc_position, $last_strong_pc)"/>
+            <xsl:variable name="lists" select="ign:get_list($following_pcs, $last_strong_pc_position, 
+                $last_strong_pc, $preceding_strong_pc_position)"/>
             <xsl:element name="rdf:Seq">
                 <xsl:for-each select="$lists[name()='rdf:li']">
                     <xsl:copy-of select="."/>
@@ -53,45 +54,48 @@
                 <xsl:copy-of select="."/>
             </xsl:for-each>
             
-        <!--</xsl:element>-->
+        </xsl:if>
     </xsl:template>
     
     <!-- affiche la liste de manière conforme au format RDF -->
     <xsl:function name="ign:get_list" as="element()*">
         <xsl:param name="following_pcs" as="element()*" />
         <xsl:param name="last_strong_pc_position" as="xs:integer" />
-        <xsl:param name="last_strong_pc" as="element()?" />
+        <xsl:param name="last_strong_pc" as="element()" />
+        <xsl:param name="preceding_strong_pc_position" as="xs:integer" />
         <xsl:for-each select="$following_pcs">
             <!-- On récupère tout les pc strong entre les deux bornes -->
             <xsl:variable name="current_position" select="ign:getPosition(.)"/>
-            <xsl:choose>
-                <xsl:when test="$current_position = $last_strong_pc_position">
-                    <!-- C'est la dernière phrase -->
-                    <!-- on appelle le template create_list en passant les éléments 
-                        compris entre la pc avant last_strong_pc_position et last_strong_pc_position-->
-                    <xsl:variable name="preceding_pc_position" select="ign:getPosition($last_strong_pc/preceding-sibling::*[ @force='strong'][1])"/>
-                    <xsl:variable name="number_of_bags" select="count(//*[position() > 
-                        $preceding_pc_position and not(position() > $last_strong_pc_position)][name() = 'bag'])" />
-                    <xsl:if test="$number_of_bags > 0">
-                        <xsl:variable name="sentence" select="//*[position() > 
-                                    $preceding_pc_position and not(position() > $last_strong_pc_position)][name() = 'bag']" />
-                        <xsl:copy-of select="ign:create_list($sentence, $number_of_bags, 1)"/>
-                    </xsl:if>
-                </xsl:when>
-                <xsl:otherwise>
-                    <!-- Ce n'est pas la dernière phrase -->
-                    <!-- on appelle le template create_list en passant les éléments 
-                        compris entre la pc avant l'élément courant et l'élément courant-->
-                    <xsl:variable name="preceding_pc_position" select="ign:getPosition(preceding-sibling::*[@force='strong'][1])"/>
-                    <xsl:variable name="number_of_bags" select="count(//*[position() > 
-                        $preceding_pc_position and not(position() > $current_position)][name() = 'bag'])" />
-                    <xsl:if test="$number_of_bags > 0">
-                        <xsl:variable name="sentence" select="//*[position() > 
-                                $preceding_pc_position and not(position() > $current_position)][name() = 'bag']" />
-                        <xsl:copy-of select="ign:create_list($sentence, $number_of_bags, 1)"/>
-                    </xsl:if>
-                </xsl:otherwise>
-            </xsl:choose>
+            <xsl:if test="$current_position >= $preceding_strong_pc_position and $last_strong_pc_position >= $current_position">
+                <xsl:choose>
+                    <xsl:when test="$current_position = $last_strong_pc_position">
+                        <!-- C'est la dernière phrase -->
+                        <!-- on appelle le template create_list en passant les éléments 
+                            compris entre la pc avant last_strong_pc_position et last_strong_pc_position-->
+                        <xsl:variable name="preceding_pc_position" select="ign:getPosition($last_strong_pc/preceding-sibling::*[ @force='strong'][1])"/>
+                        <xsl:variable name="number_of_bags" select="count(//*[position() > 
+                            $preceding_pc_position and not(position() > $last_strong_pc_position)][name() = 'bag'])" />
+                        <xsl:if test="$number_of_bags > 0">
+                            <xsl:variable name="sentence" select="//*[position() > 
+                                        $preceding_pc_position and not(position() > $last_strong_pc_position)][name() = 'bag']" />
+                            <xsl:copy-of select="ign:create_list($sentence, $number_of_bags, 1)"/>
+                        </xsl:if>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <!-- Ce n'est pas la dernière phrase -->
+                        <!-- on appelle le template create_list en passant les éléments 
+                            compris entre la pc avant l'élément courant et l'élément courant-->
+                        <xsl:variable name="preceding_pc_position" select="ign:getPosition(preceding-sibling::*[@force='strong'][1])"/>
+                        <xsl:variable name="number_of_bags" select="count(//*[position() > 
+                            $preceding_pc_position and not(position() > $current_position)][name() = 'bag'])" />
+                        <xsl:if test="$number_of_bags > 0">
+                            <xsl:variable name="sentence" select="//*[position() > 
+                                    $preceding_pc_position and not(position() > $current_position)][name() = 'bag']" />
+                            <xsl:copy-of select="ign:create_list($sentence, $number_of_bags, 1)"/>
+                        </xsl:if>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:if>
         </xsl:for-each>
     </xsl:function>
     

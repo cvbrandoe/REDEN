@@ -2,5 +2,14 @@
 	"xpath_for_nodes_of_interest" : "//date|//pc|//name|//offset[@type='orientation']|//term[@subtype='orientation']|//w[parent::*[not(name() = 'name' or name() = 'date'or parent::*[name() = 'date'] or @type='orientation' or @subtype='orientation')]]",
 	"use_natural_places" : true,
 	"xpath_for_natural_places" : "//*[@xml:id and preceding-sibling::w[1][(@lemma = 'la' or @lemma = 'le' or text() = 'du') and (preceding-sibling::w[1][@lemma = 'sur' or @subtype = 'motion_median' or @subtype = 'motion_final' or preceding-sibling::w[1][@lemma = 'vallée']])]]",
-	"xpath_for_orientations" : "//*[@type='orientation' or @subtype='orientation']"
+	"xpath_for_orientations" : "//*[@type='orientation' or @subtype='orientation']",
+	"transformations_to_apply": 
+	[
+		"config\\typageGeogfeatures.xsl",
+		"config\\suppressionBalisesInutiles.xsl",
+		"config\\typageSuite.xsl",
+		"config\\bag.xsl",
+		"config\\orientations.xsl",
+		"config\\creation_list_seq_bag_rdf.xsl"
+	]
 }

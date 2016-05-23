@@ -21,6 +21,7 @@ import fr.ign.georeden.nelinker.tei.TEIHandlerV2;
 import fr.ign.georeden.nelinker.tei.TEIUtil;
 import fr.ign.georeden.talismane.TalismaneManager;
 import fr.ign.georeden.utils.GraphVisualisation;
+import fr.ign.georeden.utils.JSONUtil;
 import fr.ign.georeden.utils.OptionManager;
 import fr.ign.georeden.utils.XMLUtil;
 
@@ -67,25 +68,46 @@ public class MainNELApp {
 			optionManager.help();
 			return;
 		}
-		
-		TEIHandlerV2 teiHandler;
-		SimpleDirectedGraph<Toponym, LabeledEdge<Toponym, SpatialRelationship>> graph = null;
+		document = applyXSLTTransformations(document);
+		System.out.println(document);
+//		TEIHandlerV2 teiHandler;
+//		SimpleDirectedGraph<Toponym, LabeledEdge<Toponym, SpatialRelationship>> graph = null;
+//		try {
+//			teiHandler = new TEIHandlerV2(document);
+//
+////			List<String> sentencesWithOrientation = teiHandler.getSentencesWithOrientation();
+////			for (String string : sentencesWithOrientation) {
+////				System.out.println(string);
+////			}
+//			graph = teiHandler.createGraphFromTEI();
+//		} catch (XPathExpressionException | JSONException | ParserConfigurationException | IOException e) {
+//			logger.error(e);
+//		}
+//
+//		if (graph != null && !graph.vertexSet().isEmpty()) {
+//			GraphVisualisation<Toponym, LabeledEdge<Toponym, SpatialRelationship>> window = new GraphVisualisation<>(graph);
+//			window.init(1024, 768);
+//		}
+	}
+	
+	private static Document applyXSLTTransformations(Document source) {
+		String[] files = null;
+		Document result = source;
 		try {
-			teiHandler = new TEIHandlerV2(document);
-
-//			List<String> sentencesWithOrientation = teiHandler.getSentencesWithOrientation();
-//			for (String string : sentencesWithOrientation) {
-//				System.out.println(string);
-//			}
-			graph = teiHandler.createGraphFromTEI();
-		} catch (XPathExpressionException | JSONException | ParserConfigurationException | IOException e) {
+			files = JSONUtil.getStringArrayFromFile("transformations_to_apply", "config\\geoconfig.json");
+		} catch (JSONException e) {
+			logger.error(e);
+		} catch (IOException e) {
 			logger.error(e);
 		}
-
-		if (graph != null && !graph.vertexSet().isEmpty()) {
-			GraphVisualisation<Toponym, LabeledEdge<Toponym, SpatialRelationship>> window = new GraphVisualisation<>(graph);
-			window.init(1024, 768);
+		for (String file : files) {
+			try {
+				result = XMLUtil.applyXSLTTransformation(result, file, "temp.xml");
+			} catch (TransformerException e) {
+				logger.error(e);
+			}
 		}
+		return result;
 	}
 
 }
