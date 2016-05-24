@@ -69,7 +69,13 @@ public class MainNELApp {
 			return;
 		}
 		document = applyXSLTTransformations(document);
-		System.out.println(document);
+		
+		try {
+			XMLUtil.displayXml(document, null, true);
+		} catch (TransformerException e) {
+			logger.error(e);
+		}
+
 //		TEIHandlerV2 teiHandler;
 //		SimpleDirectedGraph<Toponym, LabeledEdge<Toponym, SpatialRelationship>> graph = null;
 //		try {
@@ -95,11 +101,10 @@ public class MainNELApp {
 		Document result = source;
 		try {
 			files = JSONUtil.getStringArrayFromFile("transformations_to_apply", "config\\geoconfig.json");
-		} catch (JSONException e) {
-			logger.error(e);
-		} catch (IOException e) {
+		} catch (JSONException|IOException e) {
 			logger.error(e);
 		}
+		
 		for (String file : files) {
 			try {
 				result = XMLUtil.applyXSLTTransformation(result, file, "temp.xml");

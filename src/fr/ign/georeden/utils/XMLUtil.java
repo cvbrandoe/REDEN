@@ -161,7 +161,7 @@ public final class XMLUtil {
 		final TransformerFactory transformerFactory = new TransformerFactoryImpl();
 		final Transformer transformer = transformerFactory.newTransformer(new StreamSource(new File(xsltPath)));
 		final DOMSource source = new DOMSource(document);
-		Document result = null;
+		Document result;
 
 		// prologue
 		transformer.setOutputProperty(OutputKeys.VERSION, "1.0");

@@ -137,7 +137,7 @@
             )
             ]">
                 <xsl:copy>
-                    <xsl:attribute name="position">start</xsl:attribute>
+                    <xsl:attribute name="position">end</xsl:attribute>
                     <xsl:attribute name="second_node"><xsl:value-of select="following-sibling::bag[1]/descendant::*[@xml:id][1]/@xml:id" /></xsl:attribute>
                     <xsl:attribute name="orientation"><xsl:value-of select="following-sibling::*[@type='orientation' or @subtype='orientation'][1]/descendant::*[
                     contains(lower-case(text()),'nord') or contains(lower-case(text()),'sud') or contains(lower-case(text()),'est') or contains(lower-case(text()),'ouest')]" /></xsl:attribute>                    
