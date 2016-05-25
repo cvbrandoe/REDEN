@@ -27,6 +27,33 @@
     
     <xsl:template match="bag">
         <xsl:choose>
+            <!-- T1 # d'où # (à l')|au O # vers T2 => T2 au O de T1 -->
+            <xsl:when test="following-sibling::*[position() >= 1 and not(position() > 3)][
+            @lemma='d''où' and following-sibling::*[position() >= 1 and not(position() > 5)][
+            ((@type='PREP' and following-sibling::*[1][@type='DET']) or @type='PREPDET') and 
+            following-sibling::*[position() >= 1 and not(position() > 2)][(@type='orientation' or @subtype='orientation') and 
+            following-sibling::*[1][@lemma='vers' and following-sibling::*[1][name()='bag']]]]]">
+                <xsl:copy>
+                    <xsl:attribute name="position">end</xsl:attribute>
+                    <xsl:attribute name="second_node"><xsl:value-of select="following-sibling::bag[1]/descendant::*[@xml:id][1]/@xml:id" /></xsl:attribute>
+                    <xsl:attribute name="orientation"><xsl:value-of select="following-sibling::*[@type='orientation' or @subtype='orientation'][1]/descendant::*[
+                    contains(lower-case(text()),'nord') or contains(lower-case(text()),'sud') or contains(lower-case(text()),'est') or contains(lower-case(text()),'ouest')]" /></xsl:attribute>                    
+                    <xsl:apply-templates select="@*|node()"/>
+                </xsl:copy>                
+            </xsl:when>
+            <!-- T1 # de là # vers O # T2 => T2 au O de T1 -->
+            <xsl:when test="following-sibling::*[position() >= 1 and not(position() > 4)][@lemma='de' and
+            following-sibling::*[1][@lemma='là' and following-sibling::*[position() >= 1 and not(position() > 6)][
+            @lemma='vers' and following-sibling::*[1][(@type='orientation' or @subtype='orientation') and 
+            following-sibling::*[position() >= 1 and not(position() > 12)][name()='bag']]]]]">
+                <xsl:copy>
+                    <xsl:attribute name="position">end</xsl:attribute>
+                    <xsl:attribute name="second_node"><xsl:value-of select="following-sibling::bag[1]/descendant::*[@xml:id][1]/@xml:id" /></xsl:attribute>
+                    <xsl:attribute name="orientation"><xsl:value-of select="following-sibling::*[@type='orientation' or @subtype='orientation'][1]/descendant::*[
+                    contains(lower-case(text()),'nord') or contains(lower-case(text()),'sud') or contains(lower-case(text()),'est') or contains(lower-case(text()),'ouest')]" /></xsl:attribute>                    
+                    <xsl:apply-templates select="@*|node()"/>
+                </xsl:copy>                
+            </xsl:when>
             <!-- T1 # PREPDET|(PREP DET) O de T2 => T1 au O de T2 -->
             <xsl:when test="following-sibling::*[position() >= 1 and not(position() > 4)][
             (@type='PREPDET' and following-sibling::*[1][@type='orientation' or @subtype='orientation'] and 
@@ -85,14 +112,14 @@
                     <xsl:apply-templates select="@*|node()"/>
                 </xsl:copy>
             </xsl:when>  
-            <!-- PREPDET|(PREP DET) O PREP T1 # PREP T2 => T2 au O de T1 -->
+            <!-- PREPDET|(PREP DET) O PREP T1 # PREP T2 => T2 au O de T1 --> <!-- PB Montsauche -->
             <xsl:when test="(preceding-sibling::*[1][@type='PREP' and preceding-sibling::*[1][(@type='orientation' or @subtype='orientation')]]
                 or preceding-sibling::*[1][@type='DET' and preceding-sibling::*[1][@type='PREP'] and 
                 preceding-sibling::*[2][(@type='orientation' or @subtype='orientation')]])
                 and following-sibling::*[position() >= 3 and not(position() > 12)][name()='bag']">
                 <xsl:copy>
                     <xsl:attribute name="position">end</xsl:attribute>
-                    <xsl:attribute name="second_node"><xsl:value-of select="following-sibling::bag[position() >= 3 and not(position() > 12)][1]/descendant::*[@xml:id][1]/@xml:id" /></xsl:attribute>
+                    <xsl:attribute name="second_node"><xsl:value-of select="following-sibling::bag[position() >= 1 and not(position() > 12)][1]/descendant::*[@xml:id][1]/@xml:id" /></xsl:attribute>
                     <xsl:attribute name="orientation"><xsl:value-of select="following-sibling::*[@type='orientation' or @subtype='orientation'][1]/descendant::*[
                     contains(lower-case(text()),'nord') or contains(lower-case(text()),'sud') or contains(lower-case(text()),'est') or contains(lower-case(text()),'ouest')]" /></xsl:attribute>                    
                     <xsl:apply-templates select="@*|node()"/>

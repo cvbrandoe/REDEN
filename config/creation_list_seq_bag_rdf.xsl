@@ -23,7 +23,7 @@
                 <xsl:call-template name="create_seq">
                     <xsl:with-param name="orientation" select="." />
                 </xsl:call-template>
-            </xsl:for-each>
+            </xsl:for-each> 
         </rdf:RDF>
     </xsl:template>
     
@@ -35,28 +35,76 @@
                         and preceding-sibling::*[1][not(@type='N')] and preceding-sibling::*[2][not(@type='N')]])][1]"/>
         <!-- pc forte avant l'orientation suivante -->
         <xsl:variable name="last_strong_pc" select="$following_orientation/preceding-sibling::*[@force='strong'][1]"/>
+        <xsl:variable name="isFirstOrientation" select="count($orientation/preceding-sibling::*[(@type='orientation' or @subtype='orientation')
+                    and (preceding-sibling::*[1][(@type='PREPDET' or (@type='DET' and preceding-sibling::*[1][@type='PREP']) or @lemma='vers') 
+                        and preceding-sibling::*[1][not(@type='N')] and preceding-sibling::*[2][not(@type='N')]])]) = 0"/>
+        <xsl:variable name="isLastOrientation" select="count($orientation/following-sibling::*[(@type='orientation' or @subtype='orientation')
+                    and (preceding-sibling::*[1][(@type='PREPDET' or (@type='DET' and preceding-sibling::*[1][@type='PREP']) or @lemma='vers') 
+                        and preceding-sibling::*[1][not(@type='N')] and preceding-sibling::*[2][not(@type='N')]])]) = 0"/>
         <xsl:variable name="preceding_strong_pc" select="$orientation/preceding-sibling::*[@force='strong'][1]"/>
         <!-- borne inf -->
-        <xsl:variable name="preceding_strong_pc_position" select="ign:getPosition($preceding_strong_pc)"/>
+        <xsl:variable name="preceding_strong_pc_position" select="ign:getPrecedingPCOrFirstPosition(
+        	ign:getPosition($preceding_strong_pc), $isFirstOrientation)"/>
         <!-- borne sup -->
         <xsl:variable name="last_strong_pc_position" select="ign:getPosition($last_strong_pc)"/>
-        <xsl:if test="$last_strong_pc_position > $preceding_strong_pc_position">
-            <xsl:variable name="following_pcs" select="$preceding_strong_pc/following-sibling::*[position() > 1 
-                and not(position() > $last_strong_pc_position)][@force='strong']"/>
-            <xsl:variable name="lists" select="ign:get_list($following_pcs, $last_strong_pc_position, 
-                $last_strong_pc, $preceding_strong_pc_position)"/>
-            <xsl:element name="rdf:Seq">
-                <xsl:for-each select="$lists[name()='rdf:li']">
-                    <xsl:copy-of select="."/>
-                </xsl:for-each>
-            </xsl:element>  
-            <xsl:for-each select="$lists[not(name()='rdf:li')]">
-                <xsl:copy-of select="."/>
-            </xsl:for-each>
-            
-        </xsl:if>
+        <xsl:choose>
+        	<xsl:when test="$isFirstOrientation and $last_strong_pc_position > $preceding_strong_pc_position">
+        		<!-- following_pcs doit contenir tous les PC jusqu'à $last_strong_pc_position inclus. -->
+        		<xsl:variable name="firstPCPrecedingSibling" select="$preceding_strong_pc/
+        		preceding-sibling::*[@force='strong'][last()]/preceding-sibling::*[1]"/>
+        		<xsl:variable name="following_pcs" select="$firstPCPrecedingSibling/following-sibling::*[not(position() > $last_strong_pc_position)][@force='strong']"/>
+	            <xsl:variable name="lists" select="ign:get_list($following_pcs, $last_strong_pc_position, 
+	                $last_strong_pc, $preceding_strong_pc_position)"/>
+	            <xsl:element name="rdf:Seq">
+	                <xsl:for-each select="$lists[name()='rdf:li']">
+	                    <xsl:copy-of select="."/>
+	                </xsl:for-each>
+	            </xsl:element>  
+	            <xsl:for-each select="$lists[not(name()='rdf:li')]">
+	                <xsl:copy-of select="."/>
+	            </xsl:for-each>
+        	</xsl:when>
+	        <xsl:when test="$last_strong_pc_position > $preceding_strong_pc_position">
+	            <xsl:variable name="following_pcs" select="$preceding_strong_pc/following-sibling::*[position() > 1 
+	                and not(position() > $last_strong_pc_position)][@force='strong']"/>
+	            <xsl:variable name="lists" select="ign:get_list($following_pcs, $last_strong_pc_position, 
+	                $last_strong_pc, $preceding_strong_pc_position)"/>
+	            <xsl:element name="rdf:Seq">
+	                <xsl:for-each select="$lists[name()='rdf:li']">
+	                    <xsl:copy-of select="."/>
+	                </xsl:for-each>
+	            </xsl:element>  
+	            <xsl:for-each select="$lists[not(name()='rdf:li')]">
+	                <xsl:copy-of select="."/>
+	            </xsl:for-each>
+	        </xsl:when>
+	        <xsl:otherwise>
+	        	<xsl:variable name="following_pcs" select="$preceding_strong_pc/following-sibling::*[@force='strong']"/>
+	            <xsl:variable name="lists" select="ign:get_list($following_pcs, ign:getPosition($following_pcs[last()]), 
+	                $following_pcs[last()], $preceding_strong_pc_position)"/>
+	            <xsl:element name="rdf:Seq">
+	                <xsl:for-each select="$lists[name()='rdf:li']">
+	                    <xsl:copy-of select="."/>
+	                </xsl:for-each>
+	            </xsl:element>  
+	            <xsl:for-each select="$lists[not(name()='rdf:li')]">
+	                <xsl:copy-of select="."/>
+	            </xsl:for-each>
+	        </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
+    <!-- Return the orientation's position if it's not the first one. Else return 0 -->
+    <xsl:function name="ign:getPrecedingPCOrFirstPosition" as="xs:integer">
+        <xsl:param name="preceding_strong_pc_position" as="xs:integer" />
+        <xsl:param name="isFirstOrientation" as="xs:boolean" />
+        
+        <xsl:choose>
+        	<xsl:when test="$isFirstOrientation"><xsl:sequence select="0"/></xsl:when>
+        	<xsl:otherwise><xsl:sequence select="$preceding_strong_pc_position"/></xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+        
     <!-- affiche la liste de manière conforme au format RDF -->
     <xsl:function name="ign:get_list" as="element()*">
         <xsl:param name="following_pcs" as="element()*" />

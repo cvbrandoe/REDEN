@@ -70,11 +70,11 @@ public class MainNELApp {
 		}
 		document = applyXSLTTransformations(document);
 		
-		try {
-			XMLUtil.displayXml(document, null, true);
-		} catch (TransformerException e) {
-			logger.error(e);
-		}
+//		try {
+//			XMLUtil.displayXml(document, null, true);
+//		} catch (TransformerException e) {
+//			logger.error(e);
+//		}
 
 //		TEIHandlerV2 teiHandler;
 //		SimpleDirectedGraph<Toponym, LabeledEdge<Toponym, SpatialRelationship>> graph = null;
@@ -105,9 +105,9 @@ public class MainNELApp {
 			logger.error(e);
 		}
 		
-		for (String file : files) {
+		for (int i = 0; i < files.length; i++) {
 			try {
-				result = XMLUtil.applyXSLTTransformation(result, file, "temp.xml");
+				result = XMLUtil.applyXSLTTransformation(result, files[i], "temp" + i + ".xml");
 			} catch (TransformerException e) {
 				logger.error(e);
 			}
