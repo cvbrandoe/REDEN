@@ -88,36 +88,36 @@ public class MainNELApp {
 			return;
 		}
 		document = applyXSLTTransformations(document);
-		String query = 
-				"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " + 
-				"PREFIX dbpedia-fr: <http://fr.dbpedia.org/resource/> " + 
-				"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " + 
-				"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/> " + 
-				"PREFIX foaf: <http://xmlns.com/foaf/0.1/> " + 
-				"PREFIX prop-fr: <http://fr.dbpedia.org/property/> " + 
-				"PREFIX georss: <http://www.georss.org/georss/> " + 
-				"PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> " + 
-				"SELECT ?bagMember WHERE " + 
-				"{" + 
-				"    ?seq a rdf:Seq . " + 
-				"    ?seq rdfs:member ?seqMember ." + 
-				"    ?seqMember rdf:rest*/rdf:first ?listMember ." + 
-				"    ?listMember rdfs:member ?bagMember ." + 
-				"    " + 
-				"}";
-		try {
-//			Model test = RDFUtil.getQuerySelectResults(document, query);
-			for (QuerySolution solution : RDFUtil.getQuerySelectResults(document, query)) {
-				String result = "";
-				for (String value : RDFUtil.getURIOrLexicalFormList(solution)) {
-					result += value + "\t";
-				}	
-				System.out.println(result);			
-			}
-		} catch (QueryParseException | HttpHostConnectException | RiotException | MalformedURLException
-				| HttpException e) {
-			logger.error(e);
-		}
+//		String query = 
+//				"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " + 
+//				"PREFIX dbpedia-fr: <http://fr.dbpedia.org/resource/> " + 
+//				"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " + 
+//				"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/> " + 
+//				"PREFIX foaf: <http://xmlns.com/foaf/0.1/> " + 
+//				"PREFIX prop-fr: <http://fr.dbpedia.org/property/> " + 
+//				"PREFIX georss: <http://www.georss.org/georss/> " + 
+//				"PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> " + 
+//				"SELECT ?bagMember WHERE " + 
+//				"{" + 
+//				"    ?seq a rdf:Seq . " + 
+//				"    ?seq rdfs:member ?seqMember ." + 
+//				"    ?seqMember rdf:rest*/rdf:first ?listMember ." + 
+//				"    ?listMember rdfs:member ?bagMember ." + 
+//				"    " + 
+//				"}";
+//		try {
+////			Model test = RDFUtil.getQuerySelectResults(document, query);
+//			for (QuerySolution solution : RDFUtil.getQuerySelectResults(document, query)) {
+//				String result = "";
+//				for (String value : RDFUtil.getURIOrLexicalFormList(solution)) {
+//					result += value + "\t";
+//				}	
+//				System.out.println(result);			
+//			}
+//		} catch (QueryParseException | HttpHostConnectException | RiotException | MalformedURLException
+//				| HttpException e) {
+//			logger.error(e);
+//		}
 		
 		// ANCIENNE VERSION
 //		try {
