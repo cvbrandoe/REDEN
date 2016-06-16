@@ -2,6 +2,7 @@ package fr.ign.georeden.utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
@@ -105,6 +106,26 @@ public final class XMLUtil {
 			transformer.transform(source, new StreamResult(System.out));
 		if (fullFileName != null)
 			transformer.transform(source, new StreamResult(fullFileName));
+	}
+	
+	/**
+	 * Return the content of a XML document
+	 * @param doc
+	 * @return
+	 */
+	public static String xmlDocumentContentToString(Document doc) {
+		DOMSource domSource = new DOMSource(doc);
+		StringWriter writer = new StringWriter();
+		StreamResult result = new StreamResult(writer);
+		TransformerFactory tf = TransformerFactory.newInstance();
+		Transformer transformer;
+		try {
+			transformer = tf.newTransformer();
+			transformer.transform(domSource, result);
+		} catch (TransformerException e) {
+			logger.error(e);
+		}
+		return writer.toString();
 	}
 	
 	/**

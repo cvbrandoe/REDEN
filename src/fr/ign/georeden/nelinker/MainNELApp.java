@@ -1,6 +1,8 @@
 package fr.ign.georeden.nelinker;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -8,10 +10,19 @@ import javax.xml.transform.TransformerException;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.apache.commons.cli.ParseException;
+import org.apache.http.conn.HttpHostConnectException;
+import org.apache.jena.atlas.web.HttpException;
+import org.apache.jena.riot.RiotException;
 import org.apache.log4j.Logger;
 import org.jgrapht.graph.SimpleDirectedGraph;
 import org.json.JSONException;
 import org.w3c.dom.Document;
+
+import com.hp.hpl.jena.query.QueryParseException;
+import com.hp.hpl.jena.query.QuerySolution;
+import com.hp.hpl.jena.rdf.model.Model;
+
+import fr.ign.georeden.algorithms.string.DamerauLevenshteinAlgorithm;
 import fr.ign.georeden.graph.LabeledEdge;
 import fr.ign.georeden.graph.Toponym;
 import fr.ign.georeden.kb.SpatialRelationship;
@@ -23,6 +34,7 @@ import fr.ign.georeden.talismane.TalismaneManager;
 import fr.ign.georeden.utils.GraphVisualisation;
 import fr.ign.georeden.utils.JSONUtil;
 import fr.ign.georeden.utils.OptionManager;
+import fr.ign.georeden.utils.RDFUtil;
 import fr.ign.georeden.utils.XMLUtil;
 
 public class MainNELApp {
@@ -62,14 +74,52 @@ public class MainNELApp {
 		
 		teiSource = optionManager.getOptionValue("teiSource");		
 		
+//		DamerauLevenshteinAlgorithm damLev = new DamerauLevenshteinAlgorithm(1, 1, 1, 1);
+//		String s1 = "test";
+//		String s2 = "test2";
+//		float lambda = 1 - ((float)damLev.execute(s1, s2) / Math.max(s1.length(), s2.length()));
+//		int[][] multi = new int[5][10];
+//		System.out.println(lambda);
 		
+		// TRANSFORMATION TEI VERS RDF
 		Document document = XMLUtil.createDocumentFromFile(teiSource);
 		if (document == null) {
 			optionManager.help();
 			return;
 		}
 		document = applyXSLTTransformations(document);
+		String query = 
+				"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " + 
+				"PREFIX dbpedia-fr: <http://fr.dbpedia.org/resource/> " + 
+				"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " + 
+				"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/> " + 
+				"PREFIX foaf: <http://xmlns.com/foaf/0.1/> " + 
+				"PREFIX prop-fr: <http://fr.dbpedia.org/property/> " + 
+				"PREFIX georss: <http://www.georss.org/georss/> " + 
+				"PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> " + 
+				"SELECT ?bagMember WHERE " + 
+				"{" + 
+				"    ?seq a rdf:Seq . " + 
+				"    ?seq rdfs:member ?seqMember ." + 
+				"    ?seqMember rdf:rest*/rdf:first ?listMember ." + 
+				"    ?listMember rdfs:member ?bagMember ." + 
+				"    " + 
+				"}";
+		try {
+//			Model test = RDFUtil.getQuerySelectResults(document, query);
+			for (QuerySolution solution : RDFUtil.getQuerySelectResults(document, query)) {
+				String result = "";
+				for (String value : RDFUtil.getURIOrLexicalFormList(solution)) {
+					result += value + "\t";
+				}	
+				System.out.println(result);			
+			}
+		} catch (QueryParseException | HttpHostConnectException | RiotException | MalformedURLException
+				| HttpException e) {
+			logger.error(e);
+		}
 		
+		// ANCIENNE VERSION
 //		try {
 //			XMLUtil.displayXml(document, null, true);
 //		} catch (TransformerException e) {

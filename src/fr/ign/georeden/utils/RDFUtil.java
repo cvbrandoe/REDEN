@@ -1,8 +1,10 @@
 package fr.ign.georeden.utils;
 
+import java.io.ByteArrayInputStream;
 import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.apache.http.conn.HttpHostConnectException;
@@ -17,10 +19,13 @@ import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Resource;
 import org.apache.jena.riot.RiotException;
 import org.apache.jena.riot.WebContent;
+import org.w3c.dom.Document;
+
 import com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP;
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
@@ -29,21 +34,25 @@ public class RDFUtil {
 	private RDFUtil() {
 	}
 
-
 	/**
 	 * Gets the query select results.
 	 *
-	 * @param serviceURL the service url
-	 * @param queryString the query string
+	 * @param serviceURL
+	 *            the service url
+	 * @param queryString
+	 *            the query string
 	 * @return the query select results
-	 * @throws QueryParseException the query parse exception
-	 * @throws MalformedURLException the malformed url exception
-	 * @throws HttpHostConnectException the http host connect exception
+	 * @throws QueryParseException
+	 *             the query parse exception
+	 * @throws MalformedURLException
+	 *             the malformed url exception
+	 * @throws HttpHostConnectException
+	 *             the http host connect exception
 	 */
 	public static List<QuerySolution> getQuerySelectResults(String serviceURL, String queryString)
 			throws QueryParseException, MalformedURLException, HttpHostConnectException, HttpException {
 		List<QuerySolution> resultList = new ArrayList<>();
-		if (serviceURL == null || queryString == null) 
+		if (serviceURL == null || queryString == null)
 			return resultList;
 		if (serviceURL.isEmpty() || queryString.isEmpty())
 			return resultList;
@@ -57,38 +66,102 @@ public class RDFUtil {
 		}
 		return resultList;
 	}
-	
+
 	/**
 	 * Gets the query construct (in N3 format).
 	 *
-	 * @param serviceURL the service url
-	 * @param queryString the query string
-	 * @param outputStream the output stream
+	 * @param serviceURL
+	 *            the service url
+	 * @param queryString
+	 *            the query string
+	 * @param outputStream
+	 *            the output stream
 	 * @return the query construct
-	 * @throws QueryParseException the query parse exception
-	 * @throws MalformedURLException the malformed url exception
-	 * @throws HttpHostConnectException the http host connect exception
+	 * @throws QueryParseException
+	 *             the query parse exception
+	 * @throws MalformedURLException
+	 *             the malformed url exception
+	 * @throws HttpHostConnectException
+	 *             the http host connect exception
 	 */
 	public static Model getQueryConstruct(String serviceURL, String queryString, OutputStream outputStream)
 			throws QueryParseException, MalformedURLException, HttpHostConnectException, HttpException, RiotException {
 		Model results = null;
-		if (serviceURL == null || queryString == null) 
+		if (serviceURL == null || queryString == null)
 			return results;
 		if (serviceURL.isEmpty() || queryString.isEmpty())
 			return results;
 		Query query = QueryFactory.create(queryString);
-		try (QueryEngineHTTP queryEngineHTTP = (QueryEngineHTTP) QueryExecutionFactory.sparqlService(serviceURL, query)) {
-			queryEngineHTTP.setModelContentType(WebContent.contentTypeRDFXML); // cast effectué à cause d'un pb de validité d'une ressource
-			// ERROR riot:84 - [line: 78437, col: 20] Failed to find a prefix name or keyword: ’(8217;0x2019)
+		try (QueryEngineHTTP queryEngineHTTP = (QueryEngineHTTP) QueryExecutionFactory.sparqlService(serviceURL,
+				query)) {
+			queryEngineHTTP.setModelContentType(WebContent.contentTypeRDFXML); // cast
+																				// effectué
+																				// à
+																				// cause
+																				// d'un
+																				// pb
+																				// de
+																				// validité
+																				// d'une
+																				// ressource
+			// ERROR riot:84 - [line: 78437, col: 20] Failed to find a prefix
+			// name or keyword: ’(8217;0x2019)
 			results = queryEngineHTTP.execConstruct();
-			return results.write(outputStream, WebContent.contentTypeN3); // TURTLE N3			
+			return results.write(outputStream, WebContent.contentTypeN3); // TURTLE
+																			// N3
 		} catch (QueryExceptionHTTP e) {
 			throw new HttpException(e.getMessage());
 		}
 	}
+
+	public static Model getQueryConstruct(Document rdfXml, String queryString, OutputStream outputStream)
+			throws QueryParseException, MalformedURLException, HttpHostConnectException, HttpException, RiotException {
+		Model results = null;
+		if (rdfXml == null || queryString == null)
+			return results;
+		if (queryString.isEmpty())
+			return results;
+		Model documentModel = ModelFactory.createDefaultModel();
+		String modelText = XMLUtil.xmlDocumentContentToString(rdfXml);
+		documentModel.read(new ByteArrayInputStream(modelText.getBytes()), "RDF/XML");
+		Query query = QueryFactory.create(queryString);
+		try (QueryExecution queryExecution = QueryExecutionFactory.create(query, documentModel)) {
+			results = queryExecution.execConstruct();
+			return results.write(outputStream, "TURTLE"); 
+		} catch (QueryExceptionHTTP e) {
+			throw new HttpException(e.getMessage());
+		}
+	}
+	public static List<QuerySolution> getQuerySelectResults(Document rdfXml, String queryString)
+			throws QueryParseException, MalformedURLException, HttpHostConnectException, HttpException, RiotException {
+		List<QuerySolution> resultList = new ArrayList<>();
+		if (rdfXml == null || queryString == null)
+			return resultList;
+		if (queryString.isEmpty())
+			return resultList;
+		Model documentModel = ModelFactory.createDefaultModel();
+		String modelText = XMLUtil.xmlDocumentContentToString(rdfXml);
+		documentModel.read(new ByteArrayInputStream(modelText.getBytes()), "RDF/XML");
+		Query query = QueryFactory.create(queryString);
+
+		try (QueryExecution queryExecution = QueryExecutionFactory.create(query, documentModel)) {
+			ResultSet results = queryExecution.execSelect();
+			while (results.hasNext()) {
+				QuerySolution querySolution = results.nextSolution();
+				resultList.add(querySolution);
+			} 
+		} catch (QueryExceptionHTTP e) {
+			throw new HttpException(e.getMessage());
+		}
+		return resultList;
+	}
 	
+	
+
 	/**
-	 * Gets the URI if the variable is a resource or the lexical form if it's a literal.
+	 * Gets the URI if the variable is a resource or the lexical form if it's a
+	 * literal.
+	 * 
 	 * @param querySolution
 	 * @param variableName
 	 * @return
@@ -107,5 +180,28 @@ public class RDFUtil {
 		}
 		return uriOrLexicalForm;
 	}
+	
+	public static List<String> getURIOrLexicalFormList(QuerySolution querySolution) {
+		Iterator<String> iterator = querySolution.varNames();
+		List<String> result = new ArrayList<>();
+		while (iterator.hasNext()) {
+			String varName = iterator.next();
+			RDFNode n = querySolution.get(varName);
+			String uriOrLexicalForm = null;
+			if (n.isLiteral())
+				uriOrLexicalForm = ((Literal) n).getLexicalForm();
+			if (n.isResource()) {
+				Resource r = (Resource) n;
+				if (!r.isAnon()) {
+					String uri = r.getURI();
+					uriOrLexicalForm = uri;
+				}
+			}
+			result.add(uriOrLexicalForm);
+		}
+		
+		return result;
+	}
+	
 
 }
