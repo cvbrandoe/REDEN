@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-    xmlns:ign="http://example.com/namespace/" 
+    xmlns:ign="http://data.ign.fr/id/itineraires/" 
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xpath-default-namespace="http://www.tei-c.org/ns/1.0" 
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
@@ -39,17 +39,17 @@
         <!-- borne sup -->
         <xsl:variable name="last_strong_pc_position" select="ign:getPosition($last_strong_pc)"/>
         <!--<xsl:element name="rdf:Seq">-->
-            <xsl:variable name="following_pcs" select="$preceding_strong_pc/following-sibling::*[position() > 1 
-                and not(position() > $last_strong_pc_position)][@force='strong']"/>
-            <xsl:variable name="lists" select="ign:get_list($following_pcs, $last_strong_pc_position, $last_strong_pc)"/>
-            <xsl:element name="rdf:Seq">
-                <xsl:for-each select="$lists[name()='rdf:li']">
-                    <xsl:copy-of select="."/>
-                </xsl:for-each>
-            </xsl:element>  
-            <xsl:for-each select="$lists[not(name()='rdf:li')]">
+        <xsl:variable name="following_pcs" select="$preceding_strong_pc/following-sibling::*[position() > 1 
+            and not(position() > $last_strong_pc_position)][@force='strong']"/>
+        <xsl:variable name="lists" select="ign:get_list($following_pcs, $last_strong_pc_position, $last_strong_pc)"/>
+        <xsl:element name="rdf:Seq">
+            <xsl:for-each select="$lists[name()='rdf:li']">
                 <xsl:copy-of select="."/>
             </xsl:for-each>
+        </xsl:element>  
+        <xsl:for-each select="$lists[not(name()='rdf:li')]">
+            <xsl:copy-of select="."/>
+        </xsl:for-each>
             
         <!--</xsl:element>-->
     </xsl:template>
