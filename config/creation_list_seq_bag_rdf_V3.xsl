@@ -249,10 +249,26 @@
                 <xsl:variable name="toponym" select="." />
                 <xsl:variable name="date" as="element()?">
 	                <xsl:if test="parent::*[@date]">
-	                		<xsl:element name="iti:departureDate">
-	                			<xsl:attribute name="rdf:datatype"><xsl:text>xsd:date</xsl:text></xsl:attribute>
-	                			<xsl:value-of select="parent::*/@date"/>
-	                		</xsl:element>
+                			<xsl:choose>
+                				<xsl:when test="parent::*[@date]/@date = 'motion_initial'">
+			                		<xsl:element name="iti:departureDate">
+			                			<xsl:attribute name="rdf:datatype"><xsl:text>xsd:date</xsl:text></xsl:attribute>
+			                			<xsl:choose>
+			                				<xsl:when test="parent::*[@when]"><xsl:value-of select="parent::*/@when"/></xsl:when>
+			                				<xsl:otherwise><xsl:value-of select="parent::*/@from"/></xsl:otherwise>
+			                			</xsl:choose>	                			
+			                		</xsl:element>
+		                		</xsl:when>
+                				<xsl:otherwise>
+			                		<xsl:element name="iti:arrivalDate">
+			                			<xsl:attribute name="rdf:datatype"><xsl:text>xsd:date</xsl:text></xsl:attribute>
+			                			<xsl:choose>
+			                				<xsl:when test="parent::*[@when]"><xsl:value-of select="parent::*/@when"/></xsl:when>
+			                				<xsl:otherwise><xsl:value-of select="parent::*/@from"/></xsl:otherwise>
+			                			</xsl:choose>	                			
+			                		</xsl:element>
+                				</xsl:otherwise>
+                			</xsl:choose>
 					</xsl:if> 
 				</xsl:variable>
             	<xsl:for-each select="ign:create_resource($toponym)">
