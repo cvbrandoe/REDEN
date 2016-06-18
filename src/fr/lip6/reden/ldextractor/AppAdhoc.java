@@ -78,7 +78,8 @@ public class AppAdhoc
 					bnf.processResults(rsbnf, outDictionnaireDir, letter);
 					counter++;
 				}
-			} else if (dicLabel.equalsIgnoreCase("dbpediafr") || dicLabel.equalsIgnoreCase("all")) {
+			} 
+			if (dicLabel.equalsIgnoreCase("dbpediafr") || dicLabel.equalsIgnoreCase("all")) {
 				// QUERY PLACES IN DBPEDIA
 				counter = 0;
 				out = false;
@@ -101,7 +102,8 @@ public class AppAdhoc
 					
 					counter++;
 				}
-			} else if (dicLabel.equalsIgnoreCase("getty-per") || dicLabel.equalsIgnoreCase("all")) {
+			} 
+			if (dicLabel.equalsIgnoreCase("getty-per") || dicLabel.equalsIgnoreCase("all")) {
 				// QUERY PERSONALITIES IN GETTY
 				counter = 0;
 				out = false;
