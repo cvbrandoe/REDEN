@@ -6,14 +6,6 @@ import java.util.StringTokenizer;
 
 public class StringComparisonMetaphone implements IStringComparison {
 
-	public String[] tokenizeString(String s) {
-		StringTokenizer st = new StringTokenizer(s);
-		List<String> tokens = new ArrayList<>();
-	     while (st.hasMoreTokens()) {
-	    	 tokens.add(st.nextToken());
-	     }
-	     return tokens.toArray(new String[tokens.size()]);
-	}
 	
 	@Override
 	public float computeSimilarity(String s1, String s2) {

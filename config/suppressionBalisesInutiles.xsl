@@ -35,5 +35,8 @@
     <xsl:template match="geogFeat">
         <xsl:apply-templates select="node()" />
     </xsl:template>
+    <xsl:template match="term[descendant::*[@xml:id]]">
+        <xsl:apply-templates select="node()" />
+    </xsl:template>
     
 </xsl:stylesheet>

@@ -6,25 +6,15 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import fr.ign.georeden.algorithms.utils.AlgoUtils;
+
 public class StringComparisonDamLev implements IStringComparison {
 	DamerauLevenshteinAlgorithm damLev;
 	public StringComparisonDamLev() {
 		damLev = new DamerauLevenshteinAlgorithm(1, 1, 1, 1);
 	}
 	
-	/**
-	 * 
-	 * @param s
-	 * @return
-	 */
-	public String[] tokenizeString(String s) {
-		StringTokenizer st = new StringTokenizer(s);
-		List<String> tokens = new ArrayList<>();
-	     while (st.hasMoreTokens()) {
-	    	 tokens.add(st.nextToken());
-	     }
-	     return tokens.toArray(new String[tokens.size()]);
-	}
+	
 	
 	/**
 	 * s1 and s2 must be tokenized. Return the value of lambdaIJ
@@ -51,8 +41,10 @@ public class StringComparisonDamLev implements IStringComparison {
 
 	@Override	
 	public float computeSimilarity(String s1, String s2) {
-		String[] tokenArray1 = tokenizeString(s1);
-		String[] tokenArray2 = tokenizeString(s2);
+		if (s1 == null || s2 == null)
+			return 0;
+		String[] tokenArray1 = AlgoUtils.tokenizeString(s1);
+		String[] tokenArray2 = AlgoUtils.tokenizeString(s2);
 		float[][] matrix = computeMatrix(tokenArray1, tokenArray2);
 		float mu = (tokenArray1.length +tokenArray2.length) / 2f;
 		HashMap<Integer, Integer> optimums = new HashMap<>();
@@ -76,7 +68,7 @@ public class StringComparisonDamLev implements IStringComparison {
 			sum += matrix[i][j];
 		}
 
-		displayMatrix(matrix);
+		//displayMatrix(matrix);
 		return sum / mu;
 	}
 	

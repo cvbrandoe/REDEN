@@ -26,6 +26,7 @@ import com.hp.hpl.jena.query.QueryParseException;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.rdf.model.Model;
 
+import fr.ign.georeden.algorithms.graph.matching.GraphMatching;
 import fr.ign.georeden.algorithms.string.DamerauLevenshteinAlgorithm;
 import fr.ign.georeden.algorithms.string.IStringComparison;
 import fr.ign.georeden.algorithms.string.StringComparisonDamLev;
@@ -84,25 +85,19 @@ public class MainNELApp {
 		}
 
 		teiSource = optionManager.getOptionValue("teiSource");
-
-		String s1 = "Portrait Smithsonian toto";
-		String s2 = "National Gallery Portrait toti";
-		IStringComparison sc = new StringComparisonDamLev();
-		float similarity = sc.computeSimilarity(s1, s2);
-		System.out.println("DamLev : " + similarity);
 		
+//		StringComparisonDamLev sc = new StringComparisonDamLev();
+//		System.out.println(sc.computeSimilarity("Save", "basse Save"));
+		
+		GraphMatching.nodeSelection();
 
-		IStringComparison sc2 = new StringComparisonMetaphone();
-		similarity = sc2.computeSimilarity(s1, s2);
-		System.out.println("Metaphone 3 : " + similarity);
-
-		// // TRANSFORMATION TEI VERS RDF
-		// Document document = XMLUtil.createDocumentFromFile(teiSource);
-		// if (document == null) {
-		// optionManager.help();
-		// return;
-		// }
-		// document = applyXSLTTransformations(document);
+//		 // TRANSFORMATION TEI VERS RDF
+//		 Document document = XMLUtil.createDocumentFromFile(teiSource);
+//		 if (document == null) {
+//		 optionManager.help();
+//		 return;
+//		 }
+//		 document = applyXSLTTransformations(document);
 
 		// String query =
 		// "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +

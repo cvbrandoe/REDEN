@@ -7,7 +7,7 @@
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" 
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:dbpedia-owl="http://dbpedia.org/ontology/"
+    xmlns:dbo="http://dbpedia.org/ontology/"
     xmlns:iti="http://data.ign.fr/def/itineraires#"
     xmlns:rlsp="http://data.ign.fr/def/relationsspatiales#">
     
@@ -15,6 +15,7 @@
     
     <xsl:template match="/">
         <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+        	<!-- <xsl:for-each select="/TEI/*[position() > 2 and not(position() > 4)]"><xsl:copy-of select="."/></xsl:for-each> -->
             <xsl:for-each select="//*[(@type='orientation' or @subtype='orientation') 
             and (preceding-sibling::*[1][(@type='PREPDET' or (@type='DET' and preceding-sibling::*[1][@type='PREP']) 
             or @lemma='vers') and preceding-sibling::*[1][not(@type='N')] and preceding-sibling::*[2][not(@type='N')]])]">
@@ -28,6 +29,7 @@
     <!-- Récupère les phrases attachées à cette orientation. Les bag formeront des list (une par phrase) et c'est listes formeront une séquence -->
     <xsl:template name="create_seq">
         <xsl:param name="orientation" as="element()" />
+        <!-- <xsl:element name="orientation"><xsl:copy-of select="ign:getPosition($orientation)" /></xsl:element> -->
         <xsl:variable name="following_orientation" select="$orientation/following-sibling::*[(@type='orientation' or @subtype='orientation')
                     and (preceding-sibling::*[1][(@type='PREPDET' or (@type='DET' and preceding-sibling::*[1][@type='PREP']) or @lemma='vers') 
                         and preceding-sibling::*[1][not(@type='N')] and preceding-sibling::*[2][not(@type='N')]])][1]"/>
@@ -50,7 +52,9 @@
         		<!-- following_pcs doit contenir tous les PC jusqu'à $last_strong_pc_position inclus. -->
         		<xsl:variable name="firstPCPrecedingSibling" select="$preceding_strong_pc/
         		preceding-sibling::*[@force='strong'][last()]/preceding-sibling::*[1]"/>
-        		<xsl:variable name="following_pcs" select="$firstPCPrecedingSibling/following-sibling::*[not(position() > $last_strong_pc_position)][@force='strong']"/>
+        		<xsl:variable name="following_pcs" select="$firstPCPrecedingSibling/
+        			following-sibling::*[not(position() > ($last_strong_pc_position - ign:getPosition($firstPCPrecedingSibling)))]
+        			[@force='strong']"/>
 	            <xsl:variable name="lists" select="ign:get_list($following_pcs, $last_strong_pc_position, 
 	                $last_strong_pc, $preceding_strong_pc_position)"/>
 	            <xsl:element name="rdf:Seq">
@@ -64,7 +68,7 @@
         	</xsl:when>
 	        <xsl:when test="$last_strong_pc_position > $preceding_strong_pc_position">
 	            <xsl:variable name="following_pcs" select="$preceding_strong_pc/following-sibling::*[position() > 1 
-	                and not(position() > $last_strong_pc_position)][@force='strong']"/>
+	                and not(position() > ($last_strong_pc_position - $preceding_strong_pc_position))][@force='strong']"/>
 	            <xsl:variable name="lists" select="ign:get_list($following_pcs, $last_strong_pc_position, 
 	                $last_strong_pc, $preceding_strong_pc_position)"/>
 	            <xsl:element name="rdf:Seq">
@@ -76,7 +80,7 @@
 	                <xsl:copy-of select="."/>
 	            </xsl:for-each>
 	        </xsl:when>
-	        <xsl:otherwise>
+	        <xsl:when test="$preceding_strong_pc_position > $last_strong_pc_position">
 	        	<xsl:variable name="following_pcs" select="$preceding_strong_pc/following-sibling::*[@force='strong']"/>
 	            <xsl:variable name="lists" select="ign:get_list($following_pcs, ign:getPosition($following_pcs[last()]), 
 	                $following_pcs[last()], $preceding_strong_pc_position)"/>
@@ -88,7 +92,7 @@
 	            <xsl:for-each select="$lists[not(name()='rdf:li')]">
 	                <xsl:copy-of select="."/>
 	            </xsl:for-each>
-	        </xsl:otherwise>
+	        </xsl:when>
         </xsl:choose>
     </xsl:template>
     
@@ -150,7 +154,8 @@
         <xsl:param name="sentence" as="element()+" />
         <xsl:param name="total" as="xs:integer" />
         <xsl:param name="index" as="xs:integer"/>
-        
+        <!-- <xsl:element name="index"><xsl:value-of select="$index"/></xsl:element>
+        <xsl:element name="total"><xsl:value-of select="$total"/></xsl:element> -->
         <xsl:choose>
             <xsl:when test="$index = 1">
                 <rdf:li>
@@ -296,13 +301,13 @@
 	                <xsl:when test="contains(lower-case($typage), 'mountainorvolcano')">
        					<xsl:element name="rdf:type">
 	                         <xsl:attribute name="rdf:resource">
-	                             <xsl:text>dbpedia-owl:</xsl:text>
+	                             <xsl:text>dbo:</xsl:text>
 	                             <xsl:text>Mountain</xsl:text>
 	                         </xsl:attribute>
                         </xsl:element>
             			<xsl:element name="rdf:type">
 	                            <xsl:attribute name="rdf:resource">
-	                                <xsl:text>dbpedia-owl:</xsl:text>
+	                                <xsl:text>dbo:</xsl:text>
 	                                <xsl:text>Volcano</xsl:text>
 	                            </xsl:attribute>
 						</xsl:element>
@@ -310,7 +315,7 @@
 	                <xsl:when test="contains(lower-case($typage), 'bodyofwater')">	                
             			<xsl:element name="rdf:type">
 		                    <xsl:attribute name="rdf:resource">
-		                        <xsl:text>dbpedia-owl:</xsl:text>
+		                        <xsl:text>dbo:</xsl:text>
 		                        <xsl:text>BodyOfWater</xsl:text>
 		                    </xsl:attribute>
 	                    </xsl:element>
@@ -318,7 +323,7 @@
 	                <xsl:when test="contains(lower-case($typage), 'settlement')">	                
             			<xsl:element name="rdf:type">
 		                    <xsl:attribute name="rdf:resource">
-		                        <xsl:text>dbpedia-owl:</xsl:text>
+		                        <xsl:text>dbo:</xsl:text>
 		                        <xsl:text>Settlement</xsl:text>
 		                    </xsl:attribute>     
 	                    </xsl:element>                       
@@ -326,13 +331,13 @@
 	                <xsl:when test="contains(lower-case($typage), 'territoryornaturalplace')">
             			<xsl:element name="rdf:type">
                             <xsl:attribute name="rdf:resource">
-                                <xsl:text>dbpedia-owl:</xsl:text>
+                                <xsl:text>dbo:</xsl:text>
                                 <xsl:text>Territory</xsl:text>
                             </xsl:attribute>
 						</xsl:element>
             			<xsl:element name="rdf:type">
                             <xsl:attribute name="rdf:resource">
-                                <xsl:text>dbpedia-owl:</xsl:text>
+                                <xsl:text>dbo:</xsl:text>
                                 <xsl:text>NaturalPlace</xsl:text>
                             </xsl:attribute>
                         </xsl:element>                           
@@ -340,7 +345,7 @@
 	                <xsl:otherwise>
             			<xsl:element name="rdf:type">
 		                    <xsl:attribute name="rdf:resource">
-		                        <xsl:text>dbpedia-owl:</xsl:text>
+		                        <xsl:text>dbo:</xsl:text>
 		                        <xsl:text>Place</xsl:text>
 		                    </xsl:attribute> 
 	                    </xsl:element>
@@ -350,7 +355,7 @@
 	        <xsl:otherwise>	        
             	<xsl:element name="rdf:type">
 		            <xsl:attribute name="rdf:resource">
-		                <xsl:text>dbpedia-owl:</xsl:text>
+		                <xsl:text>dbo:</xsl:text>
 		                <xsl:text>Place</xsl:text>
 		            </xsl:attribute> 
 	            </xsl:element>

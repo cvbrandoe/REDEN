@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
@@ -127,11 +128,14 @@ public class RDFUtil {
 		Query query = QueryFactory.create(queryString);
 		try (QueryExecution queryExecution = QueryExecutionFactory.create(query, documentModel)) {
 			results = queryExecution.execConstruct();
-			return results.write(outputStream, "TURTLE"); 
+			if (outputStream == null)
+				return results;
+			return results.write(outputStream, "TURTLE");
 		} catch (QueryExceptionHTTP e) {
 			throw new HttpException(e.getMessage());
 		}
 	}
+
 	public static List<QuerySolution> getQuerySelectResults(Document rdfXml, String queryString)
 			throws QueryParseException, MalformedURLException, HttpHostConnectException, HttpException, RiotException {
 		List<QuerySolution> resultList = new ArrayList<>();
@@ -149,14 +153,33 @@ public class RDFUtil {
 			while (results.hasNext()) {
 				QuerySolution querySolution = results.nextSolution();
 				resultList.add(querySolution);
-			} 
+			}
 		} catch (QueryExceptionHTTP e) {
 			throw new HttpException(e.getMessage());
 		}
 		return resultList;
 	}
 	
-	
+	public static List<QuerySolution> getQuerySelectResults(Model documentModel, String queryString)
+			throws QueryParseException, MalformedURLException, HttpHostConnectException, HttpException, RiotException {
+		List<QuerySolution> resultList = new ArrayList<>();
+		if (documentModel == null || queryString == null)
+			return resultList;
+		if (queryString.isEmpty())
+			return resultList;
+		Query query = QueryFactory.create(queryString);
+
+		try (QueryExecution queryExecution = QueryExecutionFactory.create(query, documentModel)) {
+			ResultSet results = queryExecution.execSelect();
+			while (results.hasNext()) {
+				QuerySolution querySolution = results.nextSolution();
+				resultList.add(querySolution);
+			}
+		} catch (QueryExceptionHTTP e) {
+			throw new HttpException(e.getMessage());
+		}
+		return resultList;
+	}
 
 	/**
 	 * Gets the URI if the variable is a resource or the lexical form if it's a
@@ -169,21 +192,29 @@ public class RDFUtil {
 	public static String getURIOrLexicalForm(QuerySolution querySolution, String variableName) {
 		String uriOrLexicalForm = null;
 		RDFNode n = querySolution.get(variableName);
-		if (n.isLiteral())
-			uriOrLexicalForm = ((Literal) n).getLexicalForm();
-		if (n.isResource()) {
-			Resource r = (Resource) n;
-			if (!r.isAnon()) {
-				String uri = r.getURI();
-				uriOrLexicalForm = uri;
+		if (n != null) {
+			if (n.isLiteral())
+				uriOrLexicalForm = ((Literal) n).getLexicalForm();
+			if (n.isResource()) {
+				Resource r = (Resource) n;
+				if (!r.isAnon()) {
+					String uri = r.getURI();
+					uriOrLexicalForm = uri;
+				}
 			}
 		}
 		return uriOrLexicalForm;
 	}
-	
-	public static List<String> getURIOrLexicalFormList(QuerySolution querySolution) {
+
+	/**
+	 * Return the HashMap of the current solution.
+	 * 
+	 * @param querySolution
+	 * @return
+	 */
+	public static HashMap<String, String> getURIOrLexicalFormList(QuerySolution querySolution) {
 		Iterator<String> iterator = querySolution.varNames();
-		List<String> result = new ArrayList<>();
+		HashMap<String, String> result = new HashMap<>();
 		while (iterator.hasNext()) {
 			String varName = iterator.next();
 			RDFNode n = querySolution.get(varName);
@@ -197,11 +228,10 @@ public class RDFUtil {
 					uriOrLexicalForm = uri;
 				}
 			}
-			result.add(uriOrLexicalForm);
+			result.put(varName, uriOrLexicalForm);
 		}
-		
+
 		return result;
 	}
-	
 
 }
