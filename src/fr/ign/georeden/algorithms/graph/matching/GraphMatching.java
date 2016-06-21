@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -28,8 +29,89 @@ public class GraphMatching {
 
 	private static Logger logger = Logger.getLogger(GraphMatching.class);
 
-	public static void nodeSelection() {
+/**
+ * Retourne un hashmap avec en clé la ressource du TEI et en valeur la liste des candidats de la KB
+ * @return
+ */
+	public static HashMap<String, Set<String>> nodeSelection() {
 		float threshold = 0.7f;
+
+		HashMap<String, String> toponymsTEI = getToponymsFromTei();
+		
+
+		final List<Candidate> candidatesFromKB = getCandidatesFromKB();
+
+
+		HashMap<String, Set<String>> result = getCandidatesSelection(toponymsTEI, candidatesFromKB, threshold);
+		
+		int i = 0;
+		while (result.entrySet().stream().anyMatch(entry -> entry.getValue().size() == 0)) {
+			i++;
+			logger.info(i + "eme itération");
+			threshold = threshold - 0.01f;
+			HashMap<String, String> toponymsTEITmp = new HashMap<>();
+			result.entrySet().stream().filter(entry -> entry.getValue().size() == 0).forEach(entry -> {
+				toponymsTEITmp.put(entry.getKey(), toponymsTEI.get(entry.getKey()));
+			});
+			HashMap<String, Set<String>> resultTmp = getCandidatesSelection(
+					toponymsTEITmp, 
+					candidatesFromKB, 
+					threshold);
+			for (Iterator<Entry<String, Set<String>>> iterator = resultTmp.entrySet().iterator(); iterator.hasNext();) {
+				Entry<String, Set<String>> candidate = iterator.next();
+				result.put(candidate.getKey(), candidate.getValue());
+			}
+		}
+
+//		logger.info("Affichage des résultats");
+//		for (Iterator<String> iterator = result.keySet().iterator(); iterator.hasNext();) {
+//			String key = iterator.next();
+//			Set<String> candidates = result.get(key);
+//			String s = key + " (" + candidates.size() + ") : ";
+//			for (String string : candidates) {
+//				s += string + ", ";
+//			}
+//			logger.info(s);
+//		}
+		if (result.entrySet().stream().anyMatch(entry -> entry.getValue().size() == 0)) {
+			for (Iterator<String> iterator = result.keySet().iterator(); iterator.hasNext();) {
+				String key = iterator.next();
+				Set<String> candidates = result.get(key);
+				if (candidates.size() == 0)
+					logger.info(key);
+			}
+		} else {
+			logger.info("pas de topo sans candidat");
+		}
+		logger.info(threshold);
+		return result;
+	}
+	
+	static HashMap<String, Set<String>> getCandidatesSelection(HashMap<String, String> toponymsTEI, List<Candidate> candidatesFromKB, float threshold) {
+		logger.info("Sélection des candidats");
+		HashMap<String, Set<String>> result = new HashMap<>();
+		final AtomicInteger count = new AtomicInteger();
+		final int total = toponymsTEI.size();
+		StringComparisonDamLev sc = new StringComparisonDamLev();
+		toponymsTEI.entrySet().parallelStream().forEach(set -> {
+			Set<String> candidateResources = new HashSet<>();
+			candidatesFromKB.parallelStream().forEach(querySolutionKB -> {
+				float score = sc.computeSimilarity(set.getValue(), querySolutionKB.getName());
+				if (score >= threshold) 
+					candidateResources.add(querySolutionKB.getResource());
+				else {
+					score = sc.computeSimilarity(set.getValue(), querySolutionKB.getLabel());
+					if (score >= threshold) 
+						candidateResources.add(querySolutionKB.getResource());
+				}
+			});
+			result.put(set.getKey(), candidateResources);
+			logger.info(count.getAndIncrement() + " / " + total);
+		});
+		return result;
+	}
+
+	static HashMap<String, String> getToponymsFromTei() {
 		logger.info("Chargement du TEI");
 		Document teiSource = XMLUtil.createDocumentFromFile("temp6.xml");
 		HashMap<String, String> toponymsTEI = new HashMap<>();
@@ -50,53 +132,9 @@ public class GraphMatching {
 			logger.error(e);
 		}
 		logger.info(toponymsTEI.size() + " résultats");
-		Model test = ModelFactory.createDefaultModel();
-		test = test.read("temp6.xml", "RDF/XML");
-		
-
-		final List<Candidate> qSolutionsKB = getCandidatesFromKB();
-
-		logger.info(qSolutionsKB.size() + " résultats");
-
-		logger.info("Sélection des candidats");
-		HashMap<String, Set<String>> result = new HashMap<>();
-		final AtomicInteger count = new AtomicInteger();
-		final int total = toponymsTEI.size();
-		StringComparisonDamLev sc = new StringComparisonDamLev();
-		toponymsTEI.entrySet().parallelStream().forEach(set -> {
-			Set<String> candidateResources = new HashSet<>();
-			qSolutionsKB.parallelStream().forEach(querySolutionKB -> {
-				float score = sc.computeSimilarity(set.getValue(), querySolutionKB.getName());
-				if (score >= threshold) 
-					candidateResources.add(querySolutionKB.getResource());
-				else {
-					score = sc.computeSimilarity(set.getValue(), querySolutionKB.getLabel());
-					if (score >= threshold) 
-						candidateResources.add(querySolutionKB.getResource());
-				}
-			});
-			result.put(set.getKey(), candidateResources);
-			logger.info(count.getAndIncrement() + " / " + total);
-		});
-
-		logger.info("Affichage des résultats");
-		for (Iterator<String> iterator = result.keySet().iterator(); iterator.hasNext();) {
-			String key = iterator.next();
-			Set<String> candidates = result.get(key);
-			String s = key + " (" + candidates.size() + ") : ";
-			for (String string : candidates) {
-				s += string + ", ";
-			}
-			logger.info(s);
-		}
-		for (Iterator<String> iterator = result.keySet().iterator(); iterator.hasNext();) {
-			String key = iterator.next();
-			Set<String> candidates = result.get(key);
-			if (candidates.size() == 0)
-				logger.info(key);
-		}
+		return toponymsTEI;
 	}
-
+	
 	static List<Candidate> getCandidatesFromKB() {
 		List<QuerySolution> qSolutionsKB = new ArrayList<>();
 		List<Candidate> result = new ArrayList<>();
@@ -127,6 +165,7 @@ public class GraphMatching {
 					RDFUtil.getURIOrLexicalForm(querySolution, "label"),
 					RDFUtil.getURIOrLexicalForm(querySolution, "name")));
 		}
+		logger.info(result.size() + " résultats");
 		return result;
 	}
 }

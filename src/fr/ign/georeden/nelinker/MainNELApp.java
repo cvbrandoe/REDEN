@@ -87,7 +87,7 @@ public class MainNELApp {
 		teiSource = optionManager.getOptionValue("teiSource");
 		
 //		StringComparisonDamLev sc = new StringComparisonDamLev();
-//		System.out.println(sc.computeSimilarity("Save", "basse Save"));
+//		System.out.println(sc.computeSimilarity("Limousin", "Haut-Limousin"));
 		
 		GraphMatching.nodeSelection();
 
