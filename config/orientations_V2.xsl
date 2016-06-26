@@ -39,6 +39,7 @@
 			<xsl:when test="$followingOrientationPosition = 0 or (($followingOrientationPosition > $followingBagPrecededByDePosition)
 			and not($followingBagPrecededByDePosition > $followingBagPosition))">
 				<root><xsl:copy-of select="$followingBagPrecededByDe"></xsl:copy-of></root>
+				<!-- test -->
 				<orientation><xsl:copy-of select="."></xsl:copy-of></orientation>
 				<target><xsl:copy-of select="$followingBagPrecededByDe/following-sibling::bag[1]"></xsl:copy-of></target>
 			</xsl:when>
