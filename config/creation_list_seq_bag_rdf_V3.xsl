@@ -15,12 +15,14 @@
     
     <xsl:template match="/">
         <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+        	<xsl:variable name="rlspList" as="element()+" select="//*[name()='rlsp']"/>
         	<!-- <xsl:for-each select="/TEI/*[position() > 2 and not(position() > 4)]"><xsl:copy-of select="."/></xsl:for-each> -->
             <xsl:for-each select="//*[(@type='orientation' or @subtype='orientation') 
             and (preceding-sibling::*[1][(@type='PREPDET' or (@type='DET' and preceding-sibling::*[1][@type='PREP']) 
             or @lemma='vers') and preceding-sibling::*[1][not(@type='N')] and preceding-sibling::*[2][not(@type='N')]])]">
                 <xsl:call-template name="create_seq">
                     <xsl:with-param name="orientation" select="." />
+                    <xsl:with-param name="rlspList" select="$rlspList" />
                 </xsl:call-template>
             </xsl:for-each> 
         </rdf:RDF>
@@ -29,6 +31,7 @@
     <!-- Récupère les phrases attachées à cette orientation. Les bag formeront des list (une par phrase) et c'est listes formeront une séquence -->
     <xsl:template name="create_seq">
         <xsl:param name="orientation" as="element()" />
+        <xsl:param name="rlspList" as="element()+" />
         <!-- <xsl:element name="orientation"><xsl:copy-of select="ign:getPosition($orientation)" /></xsl:element> -->
         <xsl:variable name="following_orientation" select="$orientation/following-sibling::*[(@type='orientation' or @subtype='orientation')
                     and (preceding-sibling::*[1][(@type='PREPDET' or (@type='DET' and preceding-sibling::*[1][@type='PREP']) or @lemma='vers') 
@@ -56,7 +59,7 @@
         			following-sibling::*[not(position() > ($last_strong_pc_position - ign:getPosition($firstPCPrecedingSibling)))]
         			[@force='strong']"/>
 	            <xsl:variable name="lists" select="ign:get_list($following_pcs, $last_strong_pc_position, 
-	                $last_strong_pc, $preceding_strong_pc_position)"/>
+	                $last_strong_pc, $preceding_strong_pc_position, $rlspList)"/>
 	            <xsl:element name="rdf:Seq">
 	                <xsl:for-each select="$lists[name()='rdf:li']">
 	                    <xsl:copy-of select="."/>
@@ -70,7 +73,7 @@
 	            <xsl:variable name="following_pcs" select="$preceding_strong_pc/following-sibling::*[position() > 1 
 	                and not(position() > ($last_strong_pc_position - $preceding_strong_pc_position))][@force='strong']"/>
 	            <xsl:variable name="lists" select="ign:get_list($following_pcs, $last_strong_pc_position, 
-	                $last_strong_pc, $preceding_strong_pc_position)"/>
+	                $last_strong_pc, $preceding_strong_pc_position, $rlspList)"/>
 	            <xsl:element name="rdf:Seq">
 	                <xsl:for-each select="$lists[name()='rdf:li']">
 	                    <xsl:copy-of select="."/>
@@ -83,7 +86,7 @@
 	        <xsl:when test="$preceding_strong_pc_position > $last_strong_pc_position">
 	        	<xsl:variable name="following_pcs" select="$preceding_strong_pc/following-sibling::*[@force='strong']"/>
 	            <xsl:variable name="lists" select="ign:get_list($following_pcs, ign:getPosition($following_pcs[last()]), 
-	                $following_pcs[last()], $preceding_strong_pc_position)"/>
+	                $following_pcs[last()], $preceding_strong_pc_position, $rlspList)"/>
 	            <xsl:element name="rdf:Seq">
 	                <xsl:for-each select="$lists[name()='rdf:li']">
 	                    <xsl:copy-of select="."/>
@@ -113,6 +116,7 @@
         <xsl:param name="last_strong_pc_position" as="xs:integer" />
         <xsl:param name="last_strong_pc" as="element()" />
         <xsl:param name="preceding_strong_pc_position" as="xs:integer" />
+        <xsl:param name="rlspList" as="element()+" />
         <xsl:for-each select="$following_pcs">
             <!-- On récupère tout les pc strong entre les deux bornes -->
             <xsl:variable name="current_position" select="ign:getPosition(.)"/>
@@ -128,7 +132,7 @@
                         <xsl:if test="$number_of_bags > 0">
                             <xsl:variable name="sentence" select="//*[position() > 
                                         $preceding_pc_position and not(position() > $last_strong_pc_position)][name() = 'bag']" />
-                            <xsl:copy-of select="ign:create_list($sentence, $number_of_bags, 1)"/>
+                            <xsl:copy-of select="ign:create_list($sentence, $number_of_bags, 1, $rlspList)"/>
                         </xsl:if>
                     </xsl:when>
                     <xsl:otherwise>
@@ -141,7 +145,7 @@
                         <xsl:if test="$number_of_bags > 0">
                             <xsl:variable name="sentence" select="//*[position() > 
                                     $preceding_pc_position and not(position() > $current_position)][name() = 'bag']" />
-                            <xsl:copy-of select="ign:create_list($sentence, $number_of_bags, 1)"/>
+                            <xsl:copy-of select="ign:create_list($sentence, $number_of_bags, 1, $rlspList)"/>
                         </xsl:if>
                     </xsl:otherwise>
                 </xsl:choose>
@@ -154,6 +158,7 @@
         <xsl:param name="sentence" as="element()+" />
         <xsl:param name="total" as="xs:integer" />
         <xsl:param name="index" as="xs:integer"/>
+        <xsl:param name="rlspList" as="element()+"/>
         <!-- <xsl:element name="index"><xsl:value-of select="$index"/></xsl:element>
         <xsl:element name="total"><xsl:value-of select="$total"/></xsl:element> -->
         <xsl:choose>
@@ -163,6 +168,7 @@
                         <xsl:with-param name="sentence" select="$sentence" />
                         <xsl:with-param name="index" select="$index" />
                         <xsl:with-param name="total" select="$total" />
+                        <xsl:with-param name="rlspList" select="$rlspList" />
                     </xsl:call-template>
                 </rdf:li>
             </xsl:when>
@@ -171,11 +177,12 @@
                     <xsl:with-param name="sentence" select="$sentence" />
                     <xsl:with-param name="index" select="$index" />
                     <xsl:with-param name="total" select="$total" />
+                    <xsl:with-param name="rlspList" select="$rlspList" />
                 </xsl:call-template>
             </xsl:otherwise>
         </xsl:choose>
         <xsl:if test="$total > $index">
-            <xsl:copy-of select="ign:create_list($sentence, $total, $index + 1)"/>
+            <xsl:copy-of select="ign:create_list($sentence, $total, $index + 1, $rlspList)"/>
         </xsl:if>
     </xsl:function>
     
@@ -183,6 +190,7 @@
         <xsl:param name="sentence" as="element()+" />
         <xsl:param name="index" as="xs:integer" />
         <xsl:param name="total" as="xs:integer" />
+        <xsl:param name="rlspList" as="element()+" />
         <xsl:choose>
         	<xsl:when test="$index = 1">
         		<xsl:element name="rdf:Description">  
@@ -195,7 +203,7 @@
 		            <xsl:element name="iti:waypoints">
 		            	<xsl:element name="rdf:Description">
 				            <xsl:element name="rdf:first">
-				                <xsl:copy-of select="ign:create_bag($sentence[$index])" />
+				                <xsl:copy-of select="ign:create_bag($sentence[$index], $rlspList)" />
 				            </xsl:element>
 				            <xsl:choose>
 				                <xsl:when test="$index = $total">
@@ -223,7 +231,7 @@
 		               <xsl:text>bag</xsl:text><xsl:value-of select="$sentence[$index]/descendant::*[@xml:id][1]/@xml:id" />
 		           </xsl:attribute>
 		            <xsl:element name="rdf:first">
-		                <xsl:copy-of select="ign:create_bag($sentence[$index])" />
+		                <xsl:copy-of select="ign:create_bag($sentence[$index], $rlspList)" />
 		            </xsl:element>
 		            <xsl:choose>
 		                <xsl:when test="$index = $total">
@@ -249,6 +257,7 @@
     
     <xsl:function name="ign:create_bag" as="element()">
         <xsl:param name="bag" as="element()" />
+        <xsl:param name="rlspList" as="element()+" />
         <xsl:element name="rdf:Bag">
             <xsl:for-each select="$bag/child::*[@xml:id]"> 
                 <xsl:variable name="toponym" select="." />
@@ -276,7 +285,7 @@
                 			</xsl:choose>
 					</xsl:if> 
 				</xsl:variable>
-            	<xsl:for-each select="ign:create_resource($toponym)">
+            	<xsl:for-each select="ign:create_resource($toponym, $rlspList)">
             		<xsl:element name="rdf:li">
 	            		<xsl:element name="iti:Waypoint">
 	                	
@@ -365,6 +374,7 @@
     
     <xsl:function name="ign:create_resource" as="element()*">
         <xsl:param name="toponym" as="element()" />
+        <xsl:param name="rlspList" as="element()+" />
         
         <xsl:variable name="labelTopo" as="element()">
         	<xsl:element name="rdfs:label">

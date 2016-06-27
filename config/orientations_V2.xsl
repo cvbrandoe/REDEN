@@ -30,18 +30,85 @@
     	<xsl:variable name="followingOrientation" select="./following-sibling::*[(@type='orientation' or @subtype='orientation') 
     	and preceding-sibling::*[position() > 0 and not(position() > 2) 
     		and descendant-or-self::*[@lemma='vers' or @lemma='à' or @lemma='par']]][1]" as="element()?"/>
-		<xsl:variable name="followingBagPrecededByDe" select="./following-sibling::bag[preceding-sibling::*[1][@lemma='de']][1]" as="element()?"/>
+		<xsl:variable name="followingBagPrecededByDe" select="ign:getFollowingBagPrecededByDe(current())" as="element()?"/>
 		<xsl:variable name="followingBag" select="./following-sibling::bag[1]" as="element()?"/>
 		<xsl:variable name="followingOrientationPosition" select="ign:getPosition($followingOrientation)" as="xs:integer"/>
 		<xsl:variable name="followingBagPrecededByDePosition" select="ign:getPosition($followingBagPrecededByDe)" as="xs:integer"/>
 		<xsl:variable name="followingBagPosition" select="ign:getPosition($followingBag)" as="xs:integer"/>
+		<xsl:variable name="currentOrientationPosition" select="ign:getPosition(current())" as="xs:integer"/>
+		<xsl:variable name="currentPosition" select="current()"/>
 		<xsl:choose>
-			<xsl:when test="$followingOrientationPosition = 0 or (($followingOrientationPosition > $followingBagPrecededByDePosition)
-			and not($followingBagPrecededByDePosition > $followingBagPosition))">
-				<root><xsl:copy-of select="$followingBagPrecededByDe"></xsl:copy-of></root>
-				<!-- test -->
+			<xsl:when test=".[following-sibling::*[1][@lemma='par']]">
+				<xsl:variable name="precedingBag" select="current()/preceding-sibling::bag[1]" as="element()"/>	
+				<xsl:variable name="followingFollowingBag" select="$followingBag/following-sibling::bag[1]" as="element()"/>
+				<!-- <num>3</num>	
+				<root><xsl:copy-of select="$followingFollowingBag"></xsl:copy-of></root>
 				<orientation><xsl:copy-of select="."></xsl:copy-of></orientation>
-				<target><xsl:copy-of select="$followingBagPrecededByDe/following-sibling::bag[1]"></xsl:copy-of></target>
+				<target><xsl:copy-of select="$followingBag"></xsl:copy-of></target>
+				<num>3</num>	
+				<root><xsl:copy-of select="$followingBag"></xsl:copy-of></root>
+				<orientation><xsl:copy-of select="."></xsl:copy-of></orientation>
+				<target><xsl:copy-of select="$precedingBag"></xsl:copy-of></target> -->				
+			    <xsl:copy>
+			        <xsl:apply-templates select="@*|node()"/>
+			    	<xsl:copy-of select="ign:createRLSP($followingFollowingBag, $currentPosition, $followingBag, 3)"/>
+			    	<xsl:copy-of select="ign:createRLSP($followingBag, $currentPosition, $precedingBag, 3)"/>
+			    </xsl:copy>	
+			</xsl:when>
+			<xsl:when test=".[preceding-sibling::*[position() > 0 and not(position() > 3)][text()='.']]">
+				<!-- <num>2</num>
+				<root><xsl:copy-of select="$followingBagPrecededByDe/following-sibling::bag[1]"></xsl:copy-of></root>
+				<orientation><xsl:copy-of select="."></xsl:copy-of></orientation>
+				<target><xsl:copy-of select="$followingBagPrecededByDe"></xsl:copy-of></target> -->
+				    <xsl:copy>
+				        <xsl:apply-templates select="@*|node()"/>
+				    	<xsl:copy-of select="ign:createRLSP($followingBagPrecededByDe/following-sibling::bag[1], 
+				    	$currentPosition, $followingBagPrecededByDe, 2)"/>
+				    </xsl:copy>	
+			</xsl:when>
+			<xsl:when test="
+			($followingOrientationPosition = 0 or ($followingOrientationPosition > $followingBagPrecededByDePosition and
+			$followingOrientationPosition > ign:getPosition($followingBagPrecededByDe/following-sibling::bag[1]))) and 
+			(.[descendant-or-self::*[@lemma='de']] or (.[following-sibling::*[1][@lemma='de']]) or 
+			(not($followingBagPrecededByDePosition - $currentOrientationPosition > 10) 
+			and $followingBagPrecededByDe[preceding-sibling::*[position() > 0 and not(position() > 2)]/text()='.']) or 
+			($followingBagPrecededByDe[preceding-sibling::*[position() > 0 and not(position() > 2)][@subtype='motion_initial']]))">
+				<xsl:variable name="followingDot" select="$followingBagPrecededByDe/following-sibling::*[text()='.'][1]"/>
+				<xsl:variable name="followingDotPosition" select="ign:getPosition($followingDot)" as="xs:integer"/>
+				<!-- <dot><xsl:value-of select="$followingDotPosition - $followingBagPrecededByDePosition"/></dot> -->
+				<xsl:for-each select="$followingBagPrecededByDe/following-sibling::*[position() > 0 and 
+				not(position() > ($followingDotPosition - $followingBagPrecededByDePosition))][name()='bag']">
+					<!-- <num>1</num>
+					<root><xsl:copy-of select="current()"></xsl:copy-of></root>
+					<orientation><xsl:copy-of select="$currentPosition"></xsl:copy-of></orientation>
+					<target><xsl:copy-of select="$followingBagPrecededByDe"></xsl:copy-of></target>	 -->
+				    <xsl:copy>
+				        <xsl:apply-templates select="@*|node()"/>
+				    	<xsl:copy-of select="ign:createRLSP(current(), $currentPosition, $followingBagPrecededByDe, 1)"/>
+				    </xsl:copy>								
+				</xsl:for-each>
+			</xsl:when> 
+			<xsl:when test="current()[following-sibling::*[position() > 0 and not(position() > 6)][@subtype='motion_final']]">
+				<xsl:variable name="precedingBag" select="current()/preceding-sibling::bag[1]" as="element()"/>
+				<!-- <num>4</num>				
+				<root><xsl:copy-of select="$followingBag"></xsl:copy-of></root>
+				<orientation><xsl:copy-of select="."></xsl:copy-of></orientation>
+				<target><xsl:copy-of select="$precedingBag"></xsl:copy-of></target> -->
+			    <xsl:copy>
+			        <xsl:apply-templates select="@*|node()"/>
+			    	<xsl:copy-of select="ign:createRLSP($followingBag, $currentPosition, $precedingBag, 4)"/>
+			    </xsl:copy>
+			</xsl:when>
+			<xsl:when test="current()[preceding-sibling::*[position() > 0 and not(position() > 6)][@subtype='motion_final']]">
+				<xsl:variable name="precedingBag" select="current()/preceding-sibling::bag[1]" as="element()"/>			
+				<xsl:variable name="precedingPrecedingBag" select="$precedingBag/preceding-sibling::bag[1]" as="element()"/>							
+				<!-- <root><xsl:copy-of select="$precedingBag"></xsl:copy-of></root>
+				<orientation><xsl:copy-of select="."></xsl:copy-of></orientation>
+				<target><xsl:copy-of select="$precedingPrecedingBag"></xsl:copy-of></target> -->
+			    <xsl:copy>
+			        <xsl:apply-templates select="@*|node()"/>
+			    	<xsl:copy-of select="ign:createRLSP($precedingBag, $currentPosition, $precedingPrecedingBag, 4)"/>
+			    </xsl:copy>
 			</xsl:when>
 			<xsl:otherwise>
 			    <xsl:copy>
@@ -50,6 +117,33 @@
 	    	</xsl:otherwise>
 		</xsl:choose>
     </xsl:template> 
+    
+    <xsl:function name="ign:createRLSP" as="element()">
+    	<xsl:param name="root" as="element()"/>
+    	<xsl:param name="orientation" as="element()"/>
+    	<xsl:param name="target" as="element()"/>
+    	<xsl:param name="paternNumber" as="xs:integer"/>
+    	
+    	<xsl:element name="rlsp">
+    		<xsl:attribute name="root"><xsl:value-of select="$root/descendant-or-self::*[@xml:id][1]/@xml:id" /></xsl:attribute>
+    		<xsl:attribute name="orientation"><xsl:value-of select="$orientation/descendant::*[
+                    contains(lower-case(text()),'nord') or contains(lower-case(text()),'sud') or contains(lower-case(text()),'est') or contains(lower-case(text()),'ouest')]" /></xsl:attribute>
+    		<xsl:attribute name="target"><xsl:value-of select="$target/descendant-or-self::*[@xml:id][1]/@xml:id" /></xsl:attribute>
+    		<xsl:attribute name="paternNumber"><xsl:value-of select="$paternNumber" /></xsl:attribute>
+    	</xsl:element>
+    </xsl:function>
+    
+    <xsl:function name="ign:getFollowingBagPrecededByDe" as="element()?">
+    	<xsl:param name="currentNode" as="element()"/>
+    	<xsl:choose>
+			<xsl:when test="$currentNode[descendant-or-self::*[@lemma='de']]">
+				<xsl:sequence select="$currentNode/following-sibling::bag[1]"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:sequence select="$currentNode/following-sibling::bag[preceding-sibling::*[1][@lemma='de']][1]"/>
+			</xsl:otherwise>
+		</xsl:choose>
+    </xsl:function>
     
     <!-- Return true if the element is followed or preceded by a negation. If there is a non negated verb between 
     the element and the negated verb, it return false (in order to take into account the context of 
