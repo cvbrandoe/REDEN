@@ -285,19 +285,46 @@
                 			</xsl:choose>
 					</xsl:if> 
 				</xsl:variable>
-            	<xsl:for-each select="ign:create_resource($toponym, $rlspList)">
-            		<xsl:element name="rdf:li">
-	            		<xsl:element name="iti:Waypoint">
-	                	
-		                	<xsl:element name="iti:spatialReference">
-								<xsl:copy-of select="."/>
-		                    </xsl:element>                		
-		                	<xsl:if test="$date">
-		                		<xsl:copy-of select="$date"/>
-							</xsl:if> 
-	                	</xsl:element>                	
-            		</xsl:element>
-            	</xsl:for-each>   
+           		<xsl:element name="rdf:li">
+           			<xsl:variable name="waypointsOrlandmarks" as="element()+">
+		            	<xsl:for-each select="ign:create_resource($toponym, $rlspList)">
+		            			<xsl:choose>
+		            				<xsl:when test="$bag[@landmark]">            					
+					            		<xsl:element name="iti:Landmark">
+					                	
+						                	<xsl:element name="iti:spatialReference">
+												<xsl:copy-of select="."/>
+						                    </xsl:element>                		
+						                	<xsl:if test="$date">
+						                		<xsl:copy-of select="$date"/>
+											</xsl:if> 
+					                	</xsl:element> 
+		            				</xsl:when>
+		            				<xsl:otherwise>
+					            		<xsl:element name="iti:Waypoint">
+					                	
+						                	<xsl:element name="iti:spatialReference">
+												<xsl:copy-of select="."/>
+						                    </xsl:element>                		
+						                	<xsl:if test="$date">
+						                		<xsl:copy-of select="$date"/>
+											</xsl:if> 
+					                	</xsl:element> 
+		            				</xsl:otherwise>
+		            			</xsl:choose>   
+		            	</xsl:for-each> 
+	            	</xsl:variable> 
+	            	<xsl:choose>
+	            		<xsl:when test="count($waypointsOrlandmarks) > 1">
+	            			<rdf:Alt>
+	            				<xsl:for-each select="$waypointsOrlandmarks">
+	            					<rdf:li><xsl:copy-of select="."/></rdf:li>
+	            				</xsl:for-each>
+	            			</rdf:Alt>
+	            		</xsl:when>
+	            		<xsl:otherwise><xsl:copy-of select="$waypointsOrlandmarks"/></xsl:otherwise>
+	            	</xsl:choose>           	
+           		</xsl:element>  
             </xsl:for-each>
         </xsl:element>
     </xsl:function>
@@ -376,6 +403,8 @@
         <xsl:param name="toponym" as="element()" />
         <xsl:param name="rlspList" as="element()+" />
         
+        <xsl:variable name="idTopo" select="$toponym/@xml:id" as="xs:integer"/>
+        
         <xsl:variable name="labelTopo" as="element()">
         	<xsl:element name="rdfs:label">
 	            <xsl:attribute name="xml:lang">
@@ -384,23 +413,20 @@
 	            <xsl:value-of select="$toponym/text()" />
 	        </xsl:element>
         </xsl:variable>   
-        
-        <xsl:variable name="orientationTopo" as="element()?">
-	        <xsl:if test="$toponym/parent::*/@second_node">
-	            <xsl:variable name="orientation" select="$toponym/parent::*/@orientation"/>
-	            <xsl:variable name="second_node" select="$toponym/parent::*/@second_node"/>
-	            <xsl:variable name="position" select="$toponym/parent::*/@position"/>
-	            <xsl:copy-of select="ign:getOrientationOntology($position, $orientation, $second_node)"/>
-	        </xsl:if>
-        </xsl:variable> 
+
+         <xsl:variable name="orientationTopo" as="element()*">
+         	<xsl:for-each select="$rlspList[@root=$idTopo]">
+	            <xsl:copy-of select="ign:getOrientationOntology('start', ./@orientation, ./@target)"/>
+         	</xsl:for-each>
+        </xsl:variable>
         
         <xsl:variable name="typeTopo" as="element()*" select="ign:get_type($toponym/@typage)"/>
         
-        <xsl:variable name="idTopo" select="$toponym/@xml:id" as="xs:integer"/>
         <xsl:for-each select="$typeTopo">
         	<xsl:element name="rdf:Description">  
        			<xsl:attribute name="rdf:about">
-       				<xsl:choose>
+       				<xsl:text>http://data.ign.fr/id/propagation/Place/</xsl:text>
+       				<xsl:choose>       					
        					<xsl:when test="count($typeTopo) > 1 and not(./@rdf:resource=$typeTopo[1]/@rdf:resource)"><xsl:value-of select="concat($idTopo, '_1')" /></xsl:when>
        					<xsl:otherwise><xsl:value-of select="$idTopo" /></xsl:otherwise>
        				</xsl:choose>
@@ -429,10 +455,12 @@
     <!-- Return the end of the triple with the orientation 
     eg : <rlsp:northOf rdf:resource="3" />-->
     <xsl:function name="ign:getOrientationOntology" as="element()">
-        <xsl:param name="position" as="attribute()" />
+        <xsl:param name="position" as="xs:string" />
         <xsl:param name="orientation" as="attribute()" />
         <xsl:param name="second_node" as="attribute()" />
-                
+        <xsl:variable name="resourceURI" as="xs:string">
+        	<xsl:text>http://data.ign.fr/id/propagation/Place/</xsl:text>
+		</xsl:variable>
         <xsl:choose>
             <xsl:when test="lower-case($position) = 'start'">
                 <xsl:choose>
@@ -441,6 +469,7 @@
                             <xsl:when test="contains(lower-case($orientation), 'ouest')">                            
                                 <xsl:element name="rlsp:northWestOf">
                                     <xsl:attribute name="rdf:resource">
+                                    	<xsl:copy-of select="$resourceURI"/>
                                         <xsl:value-of select="$second_node"/>
                                     </xsl:attribute>
                                 </xsl:element>
@@ -448,6 +477,7 @@
                             <xsl:when test="contains(lower-case($orientation), 'est')">
                                 <xsl:element name="rlsp:northEastOf">
                                     <xsl:attribute name="rdf:resource">
+                                    	<xsl:copy-of select="$resourceURI"/>
                                         <xsl:value-of select="$second_node"/>
                                     </xsl:attribute>
                                 </xsl:element>                           
@@ -455,6 +485,7 @@
                             <xsl:otherwise>
                                 <xsl:element name="rlsp:northOf">
                                     <xsl:attribute name="rdf:resource">
+                                    	<xsl:copy-of select="$resourceURI"/>
                                         <xsl:value-of select="$second_node"/>
                                     </xsl:attribute>
                                 </xsl:element>
@@ -466,6 +497,7 @@
                             <xsl:when test="contains(lower-case($orientation), 'ouest')">
                                 <xsl:element name="rlsp:southWestOf">
                                     <xsl:attribute name="rdf:resource">
+                                    	<xsl:copy-of select="$resourceURI"/>
                                         <xsl:value-of select="$second_node"/>
                                     </xsl:attribute>
                                 </xsl:element>
@@ -473,6 +505,7 @@
                             <xsl:when test="contains(lower-case($orientation), 'est')">
                                 <xsl:element name="rlsp:southEastOf">
                                     <xsl:attribute name="rdf:resource">
+                                    	<xsl:copy-of select="$resourceURI"/>
                                         <xsl:value-of select="$second_node"/>
                                     </xsl:attribute>
                                 </xsl:element>                           
@@ -480,6 +513,7 @@
                             <xsl:otherwise>
                                 <xsl:element name="rlsp:southOf">
                                     <xsl:attribute name="rdf:resource">
+                                    	<xsl:copy-of select="$resourceURI"/>
                                         <xsl:value-of select="$second_node"/>
                                     </xsl:attribute>
                                 </xsl:element>
@@ -489,6 +523,7 @@
                     <xsl:when test="contains(lower-case($orientation), 'ouest')">
                         <xsl:element name="rlsp:westOf">
                             <xsl:attribute name="rdf:resource">
+                                    	<xsl:copy-of select="$resourceURI"/>
                                 <xsl:value-of select="$second_node"/>
                             </xsl:attribute>
                         </xsl:element>
@@ -496,6 +531,7 @@
                     <xsl:otherwise>
                         <xsl:element name="rlsp:eastOf">
                             <xsl:attribute name="rdf:resource">
+                                    	<xsl:copy-of select="$resourceURI"/>
                                 <xsl:value-of select="$second_node"/>
                             </xsl:attribute>
                         </xsl:element>
@@ -509,6 +545,7 @@
                             <xsl:when test="contains(lower-case($orientation), 'ouest')">
                                 <xsl:element name="rlsp:southEastOf">
                                     <xsl:attribute name="rdf:resource">
+                                    	<xsl:copy-of select="$resourceURI"/>
                                         <xsl:value-of select="$second_node"/>
                                     </xsl:attribute>
                                 </xsl:element>
@@ -516,6 +553,7 @@
                             <xsl:when test="contains(lower-case($orientation), 'est')">
                                 <xsl:element name="rlsp:southWestOf">
                                     <xsl:attribute name="rdf:resource">
+                                    	<xsl:copy-of select="$resourceURI"/>
                                         <xsl:value-of select="$second_node"/>
                                     </xsl:attribute>
                                 </xsl:element>                           
@@ -523,6 +561,7 @@
                             <xsl:otherwise>
                                 <xsl:element name="rlsp:southOf">
                                     <xsl:attribute name="rdf:resource">
+                                    	<xsl:copy-of select="$resourceURI"/>
                                         <xsl:value-of select="$second_node"/>
                                     </xsl:attribute>
                                 </xsl:element>
@@ -534,6 +573,7 @@
                             <xsl:when test="contains(lower-case($orientation), 'ouest')">
                                 <xsl:element name="rlsp:northEastOf">
                                     <xsl:attribute name="rdf:resource">
+                                    	<xsl:copy-of select="$resourceURI"/>
                                         <xsl:value-of select="$second_node"/>
                                     </xsl:attribute>
                                 </xsl:element>
@@ -541,6 +581,7 @@
                             <xsl:when test="contains(lower-case($orientation), 'est')">
                                 <xsl:element name="rlsp:northWestOf">
                                     <xsl:attribute name="rdf:resource">
+                                    	<xsl:copy-of select="$resourceURI"/>
                                         <xsl:value-of select="$second_node"/>
                                     </xsl:attribute>
                                 </xsl:element>                           
@@ -548,6 +589,7 @@
                             <xsl:otherwise>
                                 <xsl:element name="rlsp:northOf">
                                     <xsl:attribute name="rdf:resource">
+                                    	<xsl:copy-of select="$resourceURI"/>
                                         <xsl:value-of select="$second_node"/>
                                     </xsl:attribute>
                                 </xsl:element>
@@ -557,6 +599,7 @@
                     <xsl:when test="contains(lower-case($orientation), 'ouest')">
                         <xsl:element name="rlsp:eastOf">
                             <xsl:attribute name="rdf:resource">
+                                    	<xsl:copy-of select="$resourceURI"/>
                                 <xsl:value-of select="$second_node"/>
                             </xsl:attribute>
                         </xsl:element>
@@ -564,6 +607,7 @@
                     <xsl:otherwise>
                         <xsl:element name="rlsp:westOf">
                             <xsl:attribute name="rdf:resource">
+                                    	<xsl:copy-of select="$resourceURI"/>
                                 <xsl:value-of select="$second_node"/>
                             </xsl:attribute>
                         </xsl:element>

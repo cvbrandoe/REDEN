@@ -15,20 +15,36 @@
     </xsl:template>
     
     <xsl:template match="name[preceding-sibling::*[position() >= 1 and not(position() > 2)][@lemma='le' or @lemma='la' 
-    or @lemma='les'] or preceding-sibling::*[1][(@subtype='orientation' or @type='orientation') 
+    or @lemma='les' or text()='du'] or preceding-sibling::*[1][(@subtype='orientation' or @type='orientation') 
     and descendant::*[@lemma='oriental' or 
     @lemma='occidental' or @lemma='méridional' or @lemma='septentrional']] or 
     following-sibling::*[1][(@subtype='orientation' or @type='orientation') and descendant::*[@lemma='oriental' or 
     @lemma='occidental' or @lemma='méridional' or @lemma='septentrional']]]">
+    	<xsl:variable name="type" as="xs:string">
+    		<xsl:choose>
+    			<xsl:when test="preceding-sibling::*[position() > 0 and not(position() > 20)][
+    			descendant-or-self::*[@lemma = 'vallée' or @lemma = 'source'
+                     or @lemma = 'rivière' or @lemma = 'fleuve' or @lemma = 'rive' or @lemma = 'bord' or @lemma = 'coude']]">
+                     <xsl:text>bodyOfWater</xsl:text>
+                </xsl:when>
+    			<xsl:when test="following-sibling::*[position() > 0 and not(position() > 20)][
+    			descendant-or-self::*[@lemma = 'vallée' or @lemma = 'source'
+                     or @lemma = 'rivière' or @lemma = 'fleuve' or @lemma = 'rive' or @lemma = 'bord' or @lemma = 'coude']]">
+                     <xsl:text>bodyOfWater</xsl:text>
+                </xsl:when>
+                <xsl:otherwise>
+                        <xsl:text>territoryOrNaturalPlace</xsl:text></xsl:otherwise>
+    		</xsl:choose>
+    	</xsl:variable>
         <xsl:element name="name">
             <xsl:attribute name="typage">
                 <xsl:choose>
                     <xsl:when test="@typage">
                         <xsl:value-of select="@typage"/>
-                        <xsl:text>territoryOrNaturalPlace</xsl:text>
+                        <xsl:copy-of select="$type"/>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:text>territoryOrNaturalPlace</xsl:text>
+                        <xsl:copy-of select="$type"/>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:attribute>

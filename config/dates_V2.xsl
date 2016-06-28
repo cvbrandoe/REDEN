@@ -76,32 +76,34 @@
     </xsl:template>
     
     <xsl:function name="ign:create_date" as="attribute()*">
-    	<xsl:param name="date" as="element()"/>
-    	<xsl:attribute name="date">
+    	<xsl:param name="date" as="element()?"/>
+    	<xsl:if test="$date">
+	    	<xsl:attribute name="date">
+				<xsl:choose>
+					<xsl:when test="ign:has_motion_initial($date)">
+						<xsl:text>motion_initial</xsl:text>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:text>motion_final</xsl:text>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:attribute>
 			<xsl:choose>
-				<xsl:when test="ign:has_motion_initial($date)">
-					<xsl:text>motion_initial</xsl:text>
+				<xsl:when test="$date[@when]">
+					<xsl:attribute name="when">
+						<xsl:value-of select="$date/@when"/>
+					</xsl:attribute>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:text>motion_final</xsl:text>
+					<xsl:attribute name="from">
+						<xsl:value-of select="$date/@from"/>
+					</xsl:attribute>
+					<xsl:attribute name="to">
+						<xsl:value-of select="$date/@to"/>
+					</xsl:attribute>
 				</xsl:otherwise>
 			</xsl:choose>
-		</xsl:attribute>
-		<xsl:choose>
-			<xsl:when test="$date[@when]">
-				<xsl:attribute name="when">
-					<xsl:value-of select="$date/@when"/>
-				</xsl:attribute>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:attribute name="from">
-					<xsl:value-of select="$date/@from"/>
-				</xsl:attribute>
-				<xsl:attribute name="to">
-					<xsl:value-of select="$date/@to"/>
-				</xsl:attribute>
-			</xsl:otherwise>
-		</xsl:choose>
+		</xsl:if>
     </xsl:function>    
     
     <!-- Return true if the word is in a sentence where there is a motion_initial verb -->

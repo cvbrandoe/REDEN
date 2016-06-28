@@ -24,7 +24,8 @@
                     or @lemma = 'mont' or @lemma = 'chaîne']]">
                         <xsl:text>mountainOrVolcano</xsl:text>
                     </xsl:when>
-                    <xsl:when test="ancestor::geogName[1][descendant::*[@lemma = 'vallée' or @lemma = 'source']]">
+                    <xsl:when test="ancestor::geogName[1][descendant::*[@lemma = 'vallée' or @lemma = 'source'
+                     or @lemma = 'rivière' or @lemma = 'fleuve' or @lemma = 'rive' or @lemma = 'bord' or @lemma = 'coude']]">
                         <xsl:text>bodyOfWater</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
