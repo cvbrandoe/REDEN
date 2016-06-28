@@ -65,7 +65,7 @@
 				<xsl:when test="
 				($followingOrientationPosition = 0 or ($followingOrientationPosition > $followingBagPrecededByDePosition and
 				$followingOrientationPosition > ign:getPosition($followingBagPrecededByDe/following-sibling::bag[1]))) and 
-				(.[descendant-or-self::*[@lemma='de']] or (.[following-sibling::*[1][@lemma='de']]) or 
+				(.[descendant-or-self::*[@lemma='de']] or (.[following-sibling::*[position() > 0 and not(position() > 2)][@lemma='de']]) or 
 				(not($followingBagPrecededByDePosition - $currentOrientationPosition > 10) 
 				and $followingBagPrecededByDe[preceding-sibling::*[position() > 0 and not(position() > 2)]/text()='.']) or 
 				($followingBagPrecededByDe[preceding-sibling::*[position() > 0 and not(position() > 2)][@subtype='motion_initial']]))">
@@ -80,7 +80,6 @@
 							</xsl:otherwise>
 						</xsl:choose>				
 					</xsl:variable>
-					<!-- <dot><xsl:value-of select="$followingDotPosition - $followingBagPrecededByDePosition"/></dot> -->
 					<xsl:for-each select="$followingBagPrecededByDe/following-sibling::*[position() > 0 and 
 					not(position() > ($followingDotOrOrientationPosition - $followingBagPrecededByDePosition))][name()='bag']">
 				    	<xsl:copy-of select="ign:createRLSP(current(), $currentPosition, $followingBagPrecededByDe, 1)"/>							
@@ -133,7 +132,7 @@
 				<xsl:sequence select="$currentNode/following-sibling::bag[1]"/>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:sequence select="$currentNode/following-sibling::bag[preceding-sibling::*[1][@lemma='de']][1]"/>
+				<xsl:sequence select="$currentNode/following-sibling::bag[preceding-sibling::*[position() > 0 and not(position() > 2)][@lemma='de']][1]"/>
 			</xsl:otherwise>
 		</xsl:choose>
     </xsl:function>
