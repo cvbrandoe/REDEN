@@ -69,6 +69,7 @@
 				(not($followingBagPrecededByDePosition - $currentOrientationPosition > 10) 
 				and $followingBagPrecededByDe[preceding-sibling::*[position() > 0 and not(position() > 2)]/text()='.']) or 
 				($followingBagPrecededByDe[preceding-sibling::*[position() > 0 and not(position() > 2)][@subtype='motion_initial']]))">
+					<!-- <num>1</num> -->
 					<xsl:variable name="followingDot" select="$followingBagPrecededByDe/following-sibling::*[text()='.'][1]"/>
 					<xsl:variable name="followingDotOrOrientationPosition" as="xs:integer">
 						<xsl:choose>
@@ -80,8 +81,10 @@
 							</xsl:otherwise>
 						</xsl:choose>				
 					</xsl:variable>
+					<!-- <test1/>
+					<xsl:copy-of select="$followingDotOrOrientationPosition - $followingBagPrecededByDePosition"/> -->
 					<xsl:for-each select="$followingBagPrecededByDe/following-sibling::*[position() > 0 and 
-					not(position() > ($followingDotOrOrientationPosition - $followingBagPrecededByDePosition))][name()='bag']">
+					not(position() > ($followingDotOrOrientationPosition - $followingBagPrecededByDePosition + 1))][name()='bag']">
 				    	<xsl:copy-of select="ign:createRLSP(current(), $currentPosition, $followingBagPrecededByDe, 1)"/>							
 					</xsl:for-each>
 				</xsl:when> 
@@ -100,6 +103,21 @@
 					<orientation><xsl:copy-of select="."></xsl:copy-of></orientation>
 					<target><xsl:copy-of select="$precedingPrecedingBag"></xsl:copy-of></target> -->
 			    	<xsl:copy-of select="ign:createRLSP($precedingBag, $currentPosition, $precedingPrecedingBag, 4)"/>
+				</xsl:when>
+				<xsl:when test="current()[preceding-sibling::*[position() > 0 and not(position() > 2)][@lemma='de']]">
+					<!-- 5 -->
+					<xsl:variable name="precedingBag" select="current()/preceding-sibling::bag[1]" as="element()"/>
+					<xsl:copy-of select="ign:createRLSP($precedingBag, $currentPosition, $followingBag, 5)"/>
+				</xsl:when>
+				<xsl:when test="current()[preceding-sibling::*[position() > 0 and not(position() > 2)][@lemma='à']]">
+					<!-- 6 -->
+					<xsl:variable name="precedingBag" select="current()/preceding-sibling::bag[1]" as="element()"/>
+					<xsl:copy-of select="ign:createRLSP($followingBag, $currentPosition, $precedingBag, 6)"/>
+				</xsl:when>
+				<xsl:when test="current()[preceding-sibling::*[position() > 0 and not(position() > 2)][@lemma='vers']]">
+					<!-- 7 -->
+					<xsl:variable name="precedingBag" select="current()/preceding-sibling::bag[1]" as="element()"/>
+					<xsl:copy-of select="ign:createRLSP($followingBag, $currentPosition, $precedingBag, 7)"/>					
 				</xsl:when>
 			</xsl:choose>		
 	    </xsl:copy>	
