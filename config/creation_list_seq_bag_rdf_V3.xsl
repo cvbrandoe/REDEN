@@ -440,12 +440,44 @@
         		<xsl:if test="$orientationTopo">
         			<xsl:copy-of select="$orientationTopo"></xsl:copy-of>
         		</xsl:if>
+        		<xsl:copy-of select="ign:createIncludes($toponym, current())" />
         	</xsl:element>
         </xsl:for-each>
         
     </xsl:function>
     
-    
+    <xsl:function name="ign:createIncludes" as="element()*">
+    	<xsl:param name="toponym" as="element()"/>
+    	<xsl:param name="typeTopo" as="element()"/>
+    	<xsl:if test="count($toponym[parent::*[child::*[name()='include']]]) > 0">
+	    	<!-- <test>
+	    		<xsl:copy-of select="$toponym[parent::*[child::*[name()='include']]]"/>
+	    	</test> -->
+    		<xsl:variable name="ids" select="$toponym/parent::*[1]/child::*[name()='include']/@targetId" />
+    		<xsl:for-each select="$ids">
+    			<xsl:variable name="id" select="current()" as="xs:integer"/>
+		    	<xsl:choose>
+		    		<xsl:when test="$typeTopo[@rdf:resource='dbo:NaturalPlace' or @rdf:resource='dbo:BodyOfWater'
+		    			or @rdf:resource='dbo:Mountain' or @rdf:resource='dbo:Volcano']">
+		    			<xsl:element name="rlsp:near">
+                            <xsl:attribute name="rdf:resource">
+                            	<xsl:text>http://data.ign.fr/id/propagation/Place/</xsl:text>
+                            	<xsl:copy-of select="$id"/>
+                            </xsl:attribute>
+                        </xsl:element>
+	    			</xsl:when>
+		    		<xsl:when test="$typeTopo[@rdf:resource='dbo:Territory']">
+		    			<xsl:element name="rlsp:contains">
+                            <xsl:attribute name="rdf:resource">
+                            	<xsl:text>http://data.ign.fr/id/propagation/Place/</xsl:text>
+                            	<xsl:copy-of select="$id"/>
+                            </xsl:attribute>
+                        </xsl:element>
+		    		</xsl:when>
+		    	</xsl:choose>
+    		</xsl:for-each>
+    	</xsl:if>
+    </xsl:function>
     
     <!-- <xsl:function name="increment" as="xs:integer">
     	<xsl:param name="count" as="xs:integer"/>

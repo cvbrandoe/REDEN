@@ -41,8 +41,8 @@
 			<xsl:apply-templates select="@*|node()"/>
 			<xsl:choose>
 				<xsl:when test=".[following-sibling::*[1][@lemma='par']]">
-					<xsl:variable name="precedingBag" select="current()/preceding-sibling::bag[1]" as="element()"/>	
-					<xsl:variable name="followingFollowingBag" select="$followingBag/following-sibling::bag[1]" as="element()"/>
+					<xsl:variable name="precedingBag" select="current()/preceding-sibling::bag[1]" as="element()?"/>	
+					<xsl:variable name="followingFollowingBag" select="$followingBag/following-sibling::bag[1]" as="element()?"/>
 					<!-- <num>3</num>	
 					<root><xsl:copy-of select="$followingFollowingBag"></xsl:copy-of></root>
 					<orientation><xsl:copy-of select="."></xsl:copy-of></orientation>
@@ -89,7 +89,7 @@
 					</xsl:for-each>
 				</xsl:when> 
 				<xsl:when test="current()[following-sibling::*[position() > 0 and not(position() > 6)][@subtype='motion_final']]">
-					<xsl:variable name="precedingBag" select="current()/preceding-sibling::bag[1]" as="element()"/>
+					<xsl:variable name="precedingBag" select="current()/preceding-sibling::bag[1]" as="element()?"/>
 					<!-- <num>4</num>				
 					<root><xsl:copy-of select="$followingBag"></xsl:copy-of></root>
 					<orientation><xsl:copy-of select="."></xsl:copy-of></orientation>
@@ -97,8 +97,8 @@
 			    	<xsl:copy-of select="ign:createRLSP($followingBag, $currentPosition, $precedingBag, 4)"/>
 				</xsl:when>
 				<xsl:when test="current()[preceding-sibling::*[position() > 0 and not(position() > 6)][@subtype='motion_final']]">
-					<xsl:variable name="precedingBag" select="current()/preceding-sibling::bag[1]" as="element()"/>			
-					<xsl:variable name="precedingPrecedingBag" select="$precedingBag/preceding-sibling::bag[1]" as="element()"/>							
+					<xsl:variable name="precedingBag" select="current()/preceding-sibling::bag[1]" as="element()?"/>			
+					<xsl:variable name="precedingPrecedingBag" select="$precedingBag/preceding-sibling::bag[1]" as="element()?"/>							
 					<!-- <root><xsl:copy-of select="$precedingBag"></xsl:copy-of></root>
 					<orientation><xsl:copy-of select="."></xsl:copy-of></orientation>
 					<target><xsl:copy-of select="$precedingPrecedingBag"></xsl:copy-of></target> -->
@@ -111,36 +111,38 @@
 				</xsl:when>
 				<xsl:when test="current()[preceding-sibling::*[position() > 0 and not(position() > 2)][@lemma='à']]">
 					<!-- 6 -->
-					<xsl:variable name="precedingBag" select="current()/preceding-sibling::bag[1]" as="element()"/>
+					<xsl:variable name="precedingBag" select="current()/preceding-sibling::bag[1]" as="element()?"/>
 					<xsl:copy-of select="ign:createRLSP($followingBag, $currentPosition, $precedingBag, 6)"/>
 				</xsl:when>
 				<xsl:when test="current()[preceding-sibling::*[position() > 0 and not(position() > 2)][@lemma='vers']]">
 					<!-- 7 -->
-					<xsl:variable name="precedingBag" select="current()/preceding-sibling::bag[1]" as="element()"/>
+					<xsl:variable name="precedingBag" select="current()/preceding-sibling::bag[1]" as="element()?"/>
 					<xsl:copy-of select="ign:createRLSP($followingBag, $currentPosition, $precedingBag, 7)"/>					
 				</xsl:when>
 			</xsl:choose>		
 	    </xsl:copy>	
     </xsl:template> 
     
-    <xsl:function name="ign:createRLSP" as="element()+">
-    	<xsl:param name="root" as="element()"/>
+    <xsl:function name="ign:createRLSP" as="element()*">
+    	<xsl:param name="root" as="element()?"/>
     	<xsl:param name="orientation" as="element()"/>
-    	<xsl:param name="target" as="element()"/>
+    	<xsl:param name="target" as="element()?"/>
     	<xsl:param name="paternNumber" as="xs:integer"/>
     	
-    	<xsl:for-each select="$root/descendant-or-self::*[@xml:id]/@xml:id">
-    		<xsl:variable name="rootId" select="current()" as="xs:integer"/>
-	    	<xsl:for-each select="$target/descendant-or-self::*[@xml:id]/@xml:id">	    		
-		    	<xsl:element name="rlsp">
-		    		<xsl:attribute name="root"><xsl:value-of select="$rootId" /></xsl:attribute>
-		    		<xsl:attribute name="orientation"><xsl:value-of select="$orientation/descendant::*[
-		                    contains(lower-case(text()),'nord') or contains(lower-case(text()),'sud') or contains(lower-case(text()),'est') or contains(lower-case(text()),'ouest')]" /></xsl:attribute>
-		    		<xsl:attribute name="target"><xsl:value-of select="current()" /></xsl:attribute>
-		    		<xsl:attribute name="paternNumber"><xsl:value-of select="$paternNumber" /></xsl:attribute>
-		    	</xsl:element>
+    	<xsl:if test="$root and $target">
+	    	<xsl:for-each select="$root/descendant-or-self::*[@xml:id]/@xml:id">
+	    		<xsl:variable name="rootId" select="current()" as="xs:integer"/>
+		    	<xsl:for-each select="$target/descendant-or-self::*[@xml:id]/@xml:id">	    		
+			    	<xsl:element name="rlsp">
+			    		<xsl:attribute name="root"><xsl:value-of select="$rootId" /></xsl:attribute>
+			    		<xsl:attribute name="orientation"><xsl:value-of select="$orientation/descendant::*[
+			                    contains(lower-case(text()),'nord') or contains(lower-case(text()),'sud') or contains(lower-case(text()),'est') or contains(lower-case(text()),'ouest')]" /></xsl:attribute>
+			    		<xsl:attribute name="target"><xsl:value-of select="current()" /></xsl:attribute>
+			    		<xsl:attribute name="paternNumber"><xsl:value-of select="$paternNumber" /></xsl:attribute>
+			    	</xsl:element>
+		    	</xsl:for-each>
 	    	</xsl:for-each>
-    	</xsl:for-each>
+    	</xsl:if>
     </xsl:function>
     
     <xsl:function name="ign:getFollowingBagPrecededByDe" as="element()?">

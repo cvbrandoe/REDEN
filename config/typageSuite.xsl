@@ -22,6 +22,15 @@
     @lemma='occidental' or @lemma='méridional' or @lemma='septentrional']]]">
     	<xsl:variable name="type" as="xs:string">
     		<xsl:choose>
+    			<xsl:when test="preceding-sibling::*[position() > 0 and not(position() > 2)]
+    			[@lemma='sur']">
+                     <xsl:text>bodyOfWater</xsl:text>
+    			</xsl:when>
+    			<xsl:when test="preceding-sibling::*[position() > 0 and not(position() > 3)]
+    			[@lemma='remonter' or @lemma='descendre'] and not(preceding-sibling::*[position() > 0 and not(position() > 3)]
+    			[@lemma='vers'])">
+                     <xsl:text>bodyOfWater</xsl:text>
+    			</xsl:when>
     			<xsl:when test="preceding-sibling::*[position() > 0 and not(position() > 20)][
     			descendant-or-self::*[@lemma = 'vallée' or @lemma = 'source'
                      or @lemma = 'rivière' or @lemma = 'fleuve' or @lemma = 'rive' or @lemma = 'bord' or @lemma = 'coude']]">

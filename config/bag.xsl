@@ -95,6 +95,7 @@
 							<xsl:copy-of select="." />
 						</xsl:otherwise>
 					</xsl:choose>
+							<!-- <xsl:copy-of select="." /> -->
 				</xsl:if>
 			</xsl:for-each>
 		</TEI>
