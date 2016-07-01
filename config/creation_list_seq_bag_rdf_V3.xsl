@@ -70,11 +70,22 @@
 	            </xsl:for-each>
         	</xsl:when>
 	        <xsl:when test="$last_strong_pc_position > $preceding_strong_pc_position">
-	            <xsl:variable name="following_pcs" select="$preceding_strong_pc/following-sibling::*[position() > 1 
+	            <xsl:variable name="following_pcs" as="element()*">
+	                <xsl:choose>
+	                	<xsl:when test="$preceding_strong_pc">
+	                		<xsl:sequence select="$preceding_strong_pc/following-sibling::*[position() > 1 
 	                and not(position() > ($last_strong_pc_position - $preceding_strong_pc_position))][@force='strong']"/>
+	                	</xsl:when>
+	                	<xsl:otherwise>
+		                	<xsl:sequence select="$orientation/following-sibling::*[position() > 1 
+		                and not(position() > ($last_strong_pc_position - $preceding_strong_pc_position))][@force='strong']"/>
+	                </xsl:otherwise>
+	                </xsl:choose>
+                </xsl:variable>
 	            <xsl:variable name="lists" select="ign:get_list($following_pcs, $last_strong_pc_position, 
 	                $last_strong_pc, $preceding_strong_pc_position, $rlspList)"/>
 	            <xsl:element name="rdf:Seq">
+        			<!-- <xsl:copy-of select="$preceding_strong_pc"/> -->
 	                <xsl:for-each select="$lists[name()='rdf:li']">
 	                    <xsl:copy-of select="."/>
 	                </xsl:for-each>
