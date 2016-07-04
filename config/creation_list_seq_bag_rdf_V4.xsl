@@ -12,11 +12,36 @@
     xmlns:rlsp="http://data.ign.fr/def/relationsspatiales#">
     
     <xsl:output method="xml" encoding="UTF-8" indent="yes" />
-    
-    <xsl:template match="/">
+    <xsl:template match="@*|node()">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
+    </xsl:template>
+    <xsl:template match="*[@xml:id]">
+    	<xsl:element name="iti:Waypoint">
+           <xsl:element name="iti:spatialReference">
+              <xsl:element name="rdf:Description">
+              	<xsl:attribute name="rdf:about">
+              		<xsl:text>http://data.ign.fr/id/propagation/Place/</xsl:text>
+              		<xsl:copy-of select="current()/@xml:id"/>
+              	</xsl:attribute>
+                 <rdf:type rdf:resource="dbo:Place"/>
+                 <xsl:element name="xml:id">
+                 	<xsl:attribute name="rdf:datatype"><xsl:text>xs:integer</xsl:text></xsl:attribute>
+                 	<xsl:copy-of select="current()/@xml:id"/>
+                 </xsl:element>
+                 <xsl:element name="rdfs:label">
+                 	<xsl:attribute name="xml:lang"><xsl:text>fr</xsl:text></xsl:attribute>                 	
+              		<xsl:copy-of select="current()/text()"/>
+                 </xsl:element>
+              </xsl:element>
+           </xsl:element>
+        </xsl:element>
+    </xsl:template>
+    <!-- <xsl:template match="/">
         <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
         	<xsl:variable name="rlspList" as="element()+" select="//*[name()='rlsp']"/>
-        	<!-- <xsl:for-each select="/TEI/*[position() > 2 and not(position() > 4)]"><xsl:copy-of select="."/></xsl:for-each> -->
+        	<xsl:for-each select="/TEI/*[position() > 2 and not(position() > 4)]"><xsl:copy-of select="."/></xsl:for-each>
             <xsl:for-each select="TEI/p">
 	            <xsl:for-each select="current()/child::*[(@type='orientation' or @subtype='orientation') 
 	            and (preceding-sibling::*[1][(@type='PREPDET' or (@type='DET' and preceding-sibling::*[1][@type='PREP']) 
@@ -28,7 +53,7 @@
 	            </xsl:for-each> 
             </xsl:for-each> 
         </rdf:RDF>
-    </xsl:template>
+    </xsl:template> -->
     
     <!-- Récupère les phrases attachées à cette orientation. Les bag formeront des list (une par phrase) et c'est listes formeront une séquence -->
     <xsl:template name="create_seq">

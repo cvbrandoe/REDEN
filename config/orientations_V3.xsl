@@ -130,7 +130,6 @@
 				<xsl:variable name="nextBags" as="element()*">
 					<xsl:choose>
 						<xsl:when test="ign:getPosition($startingPoint) > ign:getPosition($orientation)">
-							<!-- <xsl:sequence select="$startingPoint/following-sibling::*[text()='.'][1]"/> -->
 							<xsl:variable name="followingDot" as="element()">
 								<xsl:choose>
 									<xsl:when test="ign:getPosition($followingOrientation/preceding-sibling::*[text()='.'][1]) > 
@@ -142,12 +141,22 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:variable>
-							<xsl:sequence select="$startingPoint/following-sibling::*
+							<xsl:variable name="results" select="$startingPoint/following-sibling::*
 								[position() > 0 and not(position() > (ign:getPosition($followingDot) - ign:getPosition($startingPoint) + 1))]
 								[name()='bag']"/> 
+							<xsl:choose>
+								<xsl:when test="$results and count($results) > 0">
+									<xsl:sequence select="$results"/>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:sequence select="$orientation/preceding-sibling::*[position() > 0 and 
+										not(position() > (ign:getPosition($orientation) - max((
+										ign:getPosition($orientation/preceding-sibling::*[@force='inter'][1]), 
+										ign:getPosition($orientation/preceding-sibling::*[@force='strong'][1])))))][name()='bag']"/>
+								</xsl:otherwise>
+							</xsl:choose>
 						</xsl:when>
 						<xsl:otherwise>
-							<!-- <xsl:sequence select="$orientation/following-sibling::*[text()='.'][1]"/> -->
 							<xsl:variable name="followingDot" as="element()">
 								<xsl:choose>
 									<xsl:when test="ign:getPosition($followingOrientation/preceding-sibling::*[text()='.'][1]) > 
@@ -170,18 +179,6 @@
 						<xsl:copy-of select="ign:createRLSP(current(), $orientation, $startingPoint, 0)" />
 					</xsl:for-each>
 				</xsl:if>
-				<!-- <rlsp>
-					<start>
-						<xsl:copy-of select="$startingPoint/descendant::*[@xml:id][1]/text()"/>
-					</start>
-					<xsl:if test="$nextBags and count($nextBags) > 0">
-							<xsl:for-each select="$nextBags">							
-								<waypoint>
-									<xsl:copy-of select="current()/descendant::*[@xml:id][1]/text()"/>
-								</waypoint>
-							</xsl:for-each>
-					</xsl:if>
-				</rlsp>  -->
 			</xsl:if>
     	</xsl:copy>	    	
     	
@@ -211,34 +208,7 @@
 	    	</xsl:for-each>
     	</xsl:if>
     </xsl:function>
-    
-    <xsl:function name="ign:getFollowingBagPrecededByDe" as="element()?">
-    	<xsl:param name="currentNode" as="element()"/>
-    	<xsl:choose>
-			<xsl:when test="$currentNode[descendant-or-self::*[@lemma='de']]">
-				<xsl:sequence select="$currentNode/following-sibling::bag[1]"/>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:sequence select="$currentNode/following-sibling::bag[preceding-sibling::*[position() > 0 and not(position() > 2)][@lemma='de']][1]"/>
-			</xsl:otherwise>
-		</xsl:choose>
-    </xsl:function>
-    
-    <!-- Return true if the element is followed or preceded by a negation. If there is a non negated verb between 
-    the element and the negated verb, it return false (in order to take into account the context of 
-    the element and not to seek to far away in the long sentences). If there is no negation it return false. -->
-    <!-- A revoir -->
-   <!--  <xsl:function name="ign:isPrecededOrFollowedByNegation" as="xs:boolean">
-    	<xsl:param name="node" as="element()"/>
-    	<xsl:variable name="precedingDot" as="element()?" select="$node/preceding-sibling::*[descendant-or-self::*[.='.']][1]"/>
-    	<xsl:variable name="followingDot" as="element()" select="$node/following-sibling::*[descendant-or-self::*[.='.']][1]"/>
-    	<xsl:variable name="maxLeftPosition" as="xs:integer" select="ign:getPosition($node) - ign:getPosition($precedingDot)"/>
-    	<xsl:variable name="maxRightPosition" as="xs:integer" select="ign:getPosition($followingDot) - ign:getPosition($node)"/>
-    	<xsl:variable name="negation" select="$node/preceding-sibling::*[position() > 0 and not(position() > $maxLeftPosition)]/
-    		@lemma='ne' or $node/following-sibling::*[position() > 0 and not(position() > $maxRightPosition)]/
-    		@lemma='ne'"/>
-    </xsl:function> -->
-    
+            
     <!-- Return the absolute position of the node in the XML tree -->
     <xsl:function name="ign:getPosition" as="xs:integer">
         <xsl:param name="Object" as="element()?" />

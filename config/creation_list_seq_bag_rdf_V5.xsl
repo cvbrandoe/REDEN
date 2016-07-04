@@ -18,12 +18,14 @@
         	<xsl:variable name="rlspList" as="element()+" select="//*[name()='rlsp']"/>
         	<!-- <xsl:for-each select="/TEI/*[position() > 2 and not(position() > 4)]"><xsl:copy-of select="."/></xsl:for-each> -->
             <xsl:for-each select="TEI/p">
+            	<xsl:variable name="currentParagraph" select="current()"/>
 	            <xsl:for-each select="current()/child::*[(@type='orientation' or @subtype='orientation') 
 	            and (preceding-sibling::*[1][(@type='PREPDET' or (@type='DET' and preceding-sibling::*[1][@type='PREP']) 
 	            or @lemma='vers') and preceding-sibling::*[1][not(@type='N')] and preceding-sibling::*[2][not(@type='N')]])]">
 	                <xsl:call-template name="create_seq">
 	                    <xsl:with-param name="orientation" select="." />
 	                    <xsl:with-param name="rlspList" select="$rlspList" />
+	                    <xsl:with-param name="currentParagraph" select="$currentParagraph" />
 	                </xsl:call-template>
 	            </xsl:for-each> 
             </xsl:for-each> 
@@ -34,6 +36,7 @@
     <xsl:template name="create_seq">
         <xsl:param name="orientation" as="element()" />
         <xsl:param name="rlspList" as="element()+" />
+        <xsl:param name="currentParagraph" as="element()" />
         <!-- <xsl:element name="orientation"><xsl:copy-of select="ign:getPosition($orientation)" /></xsl:element> -->
         <xsl:variable name="following_orientation" select="$orientation/following-sibling::*[(@type='orientation' or @subtype='orientation')
                     and (preceding-sibling::*[1][(@type='PREPDET' or (@type='DET' and preceding-sibling::*[1][@type='PREP']) or @lemma='vers') 
@@ -61,7 +64,7 @@
         			following-sibling::*[not(position() > ($last_strong_pc_position - ign:getPosition($firstPCPrecedingSibling)))]
         			[@force='strong']"/>
 	            <xsl:variable name="lists" select="ign:get_list($following_pcs, $last_strong_pc_position, 
-	                $last_strong_pc, $preceding_strong_pc_position, $rlspList)"/>
+	                $last_strong_pc, $preceding_strong_pc_position, $rlspList, $currentParagraph)"/>
 	            <xsl:element name="rdf:Seq">
 	                <xsl:for-each select="$lists[name()='rdf:li']">
 	                    <xsl:copy-of select="."/>
@@ -85,7 +88,7 @@
 	                </xsl:choose>
                 </xsl:variable>
 	            <xsl:variable name="lists" select="ign:get_list($following_pcs, $last_strong_pc_position, 
-	                $last_strong_pc, $preceding_strong_pc_position, $rlspList)"/>
+	                $last_strong_pc, $preceding_strong_pc_position, $rlspList, $currentParagraph)"/>
 	            <xsl:element name="rdf:Seq">
         			<!-- <xsl:copy-of select="$preceding_strong_pc"/> -->
 	                <xsl:for-each select="$lists[name()='rdf:li']">
@@ -99,7 +102,7 @@
 	        <xsl:when test="$preceding_strong_pc_position > $last_strong_pc_position">
 	        	<xsl:variable name="following_pcs" select="$preceding_strong_pc/following-sibling::*[@force='strong']"/>
 	            <xsl:variable name="lists" select="ign:get_list($following_pcs, ign:getPosition($following_pcs[last()]), 
-	                $following_pcs[last()], $preceding_strong_pc_position, $rlspList)"/>
+	                $following_pcs[last()], $preceding_strong_pc_position, $rlspList, $currentParagraph)"/>
 	            <xsl:element name="rdf:Seq">
 	                <xsl:for-each select="$lists[name()='rdf:li']">
 	                    <xsl:copy-of select="."/>
@@ -130,6 +133,7 @@
         <xsl:param name="last_strong_pc" as="element()" />
         <xsl:param name="preceding_strong_pc_position" as="xs:integer" />
         <xsl:param name="rlspList" as="element()+" />
+        <xsl:param name="currentParagraph" as="element()" />
         <xsl:for-each select="$following_pcs">
             <!-- On récupère tout les pc strong entre les deux bornes -->
             <xsl:variable name="current_position" select="ign:getPosition(.)"/>
@@ -143,7 +147,7 @@
                         <xsl:variable name="number_of_bags" select="count(//*[position() > 
                             $preceding_pc_position and not(position() > $last_strong_pc_position)][name() = 'bag'])" />
                         <xsl:if test="$number_of_bags > 0">
-                            <xsl:variable name="sentence" select="//*[position() > 
+                            <xsl:variable name="sentence" select="$currentParagraph/child::*[position() > 
                                         $preceding_pc_position and not(position() > $last_strong_pc_position)][name() = 'bag']" />
                             <xsl:copy-of select="ign:create_list($sentence, $number_of_bags, 1, $rlspList)"/>
                         </xsl:if>
@@ -156,7 +160,7 @@
                         <xsl:variable name="number_of_bags" select="count(//*[position() > 
                             $preceding_pc_position and not(position() > $current_position)][name() = 'bag'])" />
                         <xsl:if test="$number_of_bags > 0">
-                            <xsl:variable name="sentence" select="//*[position() > 
+                            <xsl:variable name="sentence" select="$currentParagraph/child::*[position() > 
                                     $preceding_pc_position and not(position() > $current_position)][name() = 'bag']" />
                             <xsl:copy-of select="ign:create_list($sentence, $number_of_bags, 1, $rlspList)"/>
                         </xsl:if>
