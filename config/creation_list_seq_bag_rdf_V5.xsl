@@ -17,9 +17,62 @@
         <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
         	<xsl:variable name="rlspList" as="element()+" select="//*[name()='rlsp']"/>
         	<!-- <xsl:for-each select="/TEI/*[position() > 2 and not(position() > 4)]"><xsl:copy-of select="."/></xsl:for-each> -->
-            <xsl:for-each select="TEI/p">
+            <xsl:for-each select="TEI/p[child::*[(@type='orientation' or @subtype='orientation') 
+    		and preceding-sibling::*[position() > 0 and not(position() > 2) 
+    		and descendant-or-self::*[@lemma='vers' or @lemma='à' or @lemma='par']]] and 
+    		descendant-or-self::*[@xml:id]]">
             	<xsl:variable name="currentParagraph" select="current()"/>
-	            <xsl:for-each select="current()/child::*[(@type='orientation' or @subtype='orientation') 
+            	<xsl:variable name="orientations" select="$currentParagraph/child::*[(@type='orientation' or @subtype='orientation') 
+    	and preceding-sibling::*[position() > 0 and not(position() > 2) 
+    		and descendant-or-self::*[@lemma='vers' or @lemma='à' or @lemma='par']]]" as="element()+"/>
+    			<p>
+    			<xsl:for-each select="$orientations">
+    				<xsl:variable name="orientation" select="current()" as="element()"/>
+    					<!-- <xsl:copy-of select="current()"/>  -->
+    				<xsl:variable name="precedingOrientation" select="$orientation/preceding-sibling::*[(@type='orientation' or @subtype='orientation') 
+    	and preceding-sibling::*[position() > 0 and not(position() > 2) 
+    		and descendant-or-self::*[@lemma='vers' or @lemma='à' or @lemma='par']]][1]" as="element()?"/>    		
+    				<xsl:variable name="followingOrientation" select="$orientation/following-sibling::*[(@type='orientation' or @subtype='orientation') 
+    	and preceding-sibling::*[position() > 0 and not(position() > 2) 
+    		and descendant-or-self::*[@lemma='vers' or @lemma='à' or @lemma='par']]][1]" as="element()?"/>
+    				<xsl:variable name="leftPosition" as="xs:integer">
+    					<xsl:choose>
+    						<!-- Une orientation précède celle ci et est dans la même phrase -->
+    						<xsl:when test="$precedingOrientation and 
+    						ign:getPosition($precedingOrientation/preceding-sibling::*[text()='.'][1]) = 
+    						ign:getPosition($orientation/preceding-sibling::*[text()='.'][1])">
+    							<xsl:sequence select="ign:getPosition($orientation)"/>
+    						</xsl:when>
+    						<xsl:otherwise><xsl:sequence select="ign:getPosition($orientation/preceding-sibling::*[text()='.'][1])" /></xsl:otherwise>
+    					</xsl:choose>
+    				</xsl:variable>
+    				<xsl:variable name="rightPosition" as="xs:integer">
+    					<xsl:choose>
+    						<!-- Il reste au moins une orientation qui n'est pas dans la même phrase. On renvoie donc la position du point avant cette orientation suivante -->
+    						<xsl:when test="$followingOrientation and 
+    						ign:getPosition($followingOrientation/preceding-sibling::*[text()='.'][last()]) > 
+    						ign:getPosition($orientation/following-sibling::*[text()='.'][1])">
+    							<xsl:sequence select="ign:getPosition($followingOrientation/preceding-sibling::*[text()='.'][last()])"/>
+   							</xsl:when>
+   							<!-- Il est une orientation mais elle est dans la meme phrase. On renvoie donc la position juste avant -->
+   							<xsl:when test="$followingOrientation">
+    							<xsl:sequence select="ign:getPosition($followingOrientation/preceding-sibling::*[1])"/>
+   							</xsl:when>
+   							<!-- C'est la dernière orientation du paragraphe, on renvoie donc la position du dernier point du paragraphe -->
+    						<xsl:otherwise>
+    							<xsl:sequence select="ign:getPosition($orientation/following-sibling::*[text()='.'][last()])"/>
+   							</xsl:otherwise>
+    					</xsl:choose>
+    				</xsl:variable>
+    				<li>
+    				<orient>
+    					<xsl:copy-of select="current()/child::*[@type='N' or @type='NPr']/text()"/> </orient>
+    				<a><xsl:copy-of select="$leftPosition"/></a>
+    				<b><xsl:copy-of select="$rightPosition"/></b>
+    				</li>
+    			</xsl:for-each>
+    			</p>
+	            <!-- <xsl:for-each select="current()/child::*[(@type='orientation' or @subtype='orientation') 
 	            and (preceding-sibling::*[1][(@type='PREPDET' or (@type='DET' and preceding-sibling::*[1][@type='PREP']) 
 	            or @lemma='vers') and preceding-sibling::*[1][not(@type='N')] and preceding-sibling::*[2][not(@type='N')]])]">
 	                <xsl:call-template name="create_seq">
@@ -27,7 +80,7 @@
 	                    <xsl:with-param name="rlspList" select="$rlspList" />
 	                    <xsl:with-param name="currentParagraph" select="$currentParagraph" />
 	                </xsl:call-template>
-	            </xsl:for-each> 
+	            </xsl:for-each> --> 
             </xsl:for-each> 
         </rdf:RDF>
     </xsl:template>
