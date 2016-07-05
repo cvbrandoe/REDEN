@@ -59,10 +59,10 @@
 		<xsl:variable name="nbOfBags" as="xs:integer" select="count($p/child::*[position() > $left and not(position() > $right)][name()='bag'])"/>
     	<xsl:if test="$right > $left and $p[child::*[position() > $left and not(position() > $right)][name()='bag']]">
 	    	<xsl:element name="rdf:Seq">
-	    		<ori><xsl:copy-of select="$orientation/child::*[@type='N' or @type='NPr']/text()"/></ori>
+	    		<!-- <ori><xsl:copy-of select="$orientation/child::*[@type='N' or @type='NPr']/text()"/></ori>
 	    		<left><xsl:copy-of select="$left"/></left>
 	    		<right><xsl:copy-of select="$right"/></right>
-	    		<nbBag><xsl:copy-of select="$nbOfBags"/></nbBag>
+	    		<nbBag><xsl:copy-of select="$nbOfBags"/></nbBag> -->
 	    		<xsl:copy-of select="ign:listFromSentences($p/child::*[position() > $left and not(position() > $right)][name()='bag'], 1, $rlspList)"/>
 	    	</xsl:element>
     	</xsl:if>
@@ -184,11 +184,12 @@
 		    			</xsl:if>
 		    		</xsl:for-each>
 		    	</xsl:variable>
-		    	<xsl:if test="count($bagsInFirstPosition) >= (index-of($bagsInFirstPosition, $bag)[1] + 1)">		    	
+		    	<!-- <nbFirstPos><xsl:sequence select="count($bagsInFirstPosition)"/></nbFirstPos> -->
+		    	<xsl:if test="count($bagsInFirstPosition) >= (functx:index-of-node($bagsInFirstPosition, $bag)[1] + 1)">		    	
 					<!-- <xsl:copy-of select="ign:listFromSentences($bags, 
 					index-of($bags, $bagsInFirstPosition[index-of($bagsInFirstPosition, $bag)[1] + 1])[1], 
 					$rlspList)"/> -->
-					<xsl:variable name="nextIndex" select="index-of($bags, $bagsInFirstPosition[index-of($bagsInFirstPosition, $bag)[1] + 1])[1]" as="xs:integer"/>
+					<xsl:variable name="nextIndex" select="functx:index-of-node($bags, $bagsInFirstPosition[functx:index-of-node($bagsInFirstPosition, $bag)[1] + 1])[1]" as="xs:integer"/>
 					<!-- <xsl:copy-of select="$bags[$nextIndex]"/> -->
 					<xsl:if test="$nextIndex > $index"><!--  and count($bags) > $nextIndex -->
 						<xsl:sequence select="ign:listFromSentences($bags, $nextIndex, $rlspList)"/>
