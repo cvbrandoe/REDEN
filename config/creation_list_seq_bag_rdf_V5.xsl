@@ -9,6 +9,7 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:dbo="http://dbpedia.org/ontology/"
     xmlns:iti="http://data.ign.fr/def/itineraires#"
+    xmlns:functx="http://www.functx.com"
     xmlns:rlsp="http://data.ign.fr/def/relationsspatiales#">
     
     <xsl:output method="xml" encoding="UTF-8" indent="yes" />
@@ -26,7 +27,7 @@
         </rdf:RDF>
     </xsl:template>
     
-    <xsl:function name="ign:generateSequences" as="element()+">
+    <xsl:function name="ign:generateSequences" as="element()*">
     	<xsl:param name="orientations" as="element()*"/>
     	<xsl:param name="index" as="xs:integer" />
     	<xsl:param name="p" as="element()" />
@@ -56,13 +57,15 @@
     		</xsl:choose>
     	</xsl:variable>
 		<xsl:variable name="nbOfBags" as="xs:integer" select="count($p/child::*[position() > $left and not(position() > $right)][name()='bag'])"/>
-    	<xsl:element name="rdf:Seq">
-    		<ori><xsl:copy-of select="$orientation/child::*[@type='N' or @type='NPr']/text()"/></ori>
-    		<left><xsl:copy-of select="$left"/></left>
-    		<right><xsl:copy-of select="$right"/></right>
-    		<nbBag><xsl:copy-of select="$nbOfBags"/></nbBag>
-    		<xsl:copy-of select="ign:listFromSentences($p/child::*[position() > $left and not(position() > $right)][name()='bag'], 1, $rlspList)"/>
-    	</xsl:element>
+    	<xsl:if test="$right > $left and $p[child::*[position() > $left and not(position() > $right)][name()='bag']]">
+	    	<xsl:element name="rdf:Seq">
+	    		<ori><xsl:copy-of select="$orientation/child::*[@type='N' or @type='NPr']/text()"/></ori>
+	    		<left><xsl:copy-of select="$left"/></left>
+	    		<right><xsl:copy-of select="$right"/></right>
+	    		<nbBag><xsl:copy-of select="$nbOfBags"/></nbBag>
+	    		<xsl:copy-of select="ign:listFromSentences($p/child::*[position() > $left and not(position() > $right)][name()='bag'], 1, $rlspList)"/>
+	    	</xsl:element>
+    	</xsl:if>
     	<xsl:if test="count($orientations) > $index">
     		<xsl:sequence select="ign:generateSequences($orientations, $index + 1, $p, $rlspList)" />
     	</xsl:if>
@@ -72,9 +75,10 @@
     	<xsl:param name="bags" as="element()*"/>
     	<xsl:param name="index" as="xs:integer"/>
         <xsl:param name="rlspList" as="element()+" />
+        <!-- <xsl:param name="continueUntilNextFirstBag" as="xs:boolean"/> -->
     	<xsl:variable name="bag" as="element()?" select="$bags[$index]"/>
     	<xsl:if test="$bag">
-	    	<xsl:variable name="isFirst" as="xs:boolean" select="ign:isFirstOfTheSentence($bag)"/>
+	    	<xsl:variable name="isFirst" as="xs:boolean" select="ign:isFirstOfTheSentence($bag, $bags)"/>
 	    	<xsl:variable name="isLast" as="xs:boolean">
 	    		<xsl:sequence select="ign:getPosition($bag/following-sibling::bag[1]) >= 
 	    		ign:getPosition($bag/following-sibling::*[text()='.'][1])"/>
@@ -86,13 +90,19 @@
 				            <xsl:element name="rdf:type">            
 					            <xsl:attribute name="rdf:resource">                    
 					            	<xsl:text>http://data.ign.fr/id/itineraire/route/</xsl:text>
-					                <xsl:value-of select="ign:getPosition($bag)" />
+					            	<xsl:variable name="nbChilds" as="xs:integer+">
+					            		<xsl:sequence select="0"/>
+					            		<xsl:for-each select="$bag/parent::*/preceding-sibling::*">
+					            			<xsl:sequence select="count(current()/child::*)"/>
+					            		</xsl:for-each>
+					            	</xsl:variable>
+					                <xsl:value-of select="ign:getPosition($bag) + sum($nbChilds)" />
 					            </xsl:attribute>
 				            </xsl:element>				            
 			    			<xsl:element name="iti:waypoints">
 				            	<xsl:element name="rdf:Description">
 						            <xsl:element name="rdf:first">
-			    						<xsl:copy-of select="ign:create_bag($bag, $rlspList)"/>
+			    						<xsl:sequence select="ign:create_bag($bag, $rlspList)"/>
 						            </xsl:element>
 				                    <xsl:element name="rdf:rest">
 				                        <xsl:attribute name="rdf:resource">
@@ -110,17 +120,28 @@
 				            <xsl:element name="rdf:type">            
 					            <xsl:attribute name="rdf:resource">                    
 					            	<xsl:text>http://data.ign.fr/id/itineraire/route/</xsl:text>
-					                <xsl:value-of select="ign:getPosition($bag)" />
+					            	<xsl:variable name="nbChilds" as="xs:integer+">
+					            		<xsl:sequence select="0"/>
+					            		<xsl:for-each select="$bag/parent::*/preceding-sibling::*">
+					            			<xsl:sequence select="count(current()/child::*)"/>
+					            		</xsl:for-each>
+					            	</xsl:variable>
+					                <xsl:value-of select="ign:getPosition($bag) + sum($nbChilds)" />
 					            </xsl:attribute>
+					            <!-- <isFirst><xsl:sequence select="$isFirst"/></isFirst>
+					            <isFirst><xsl:sequence select="$isFirst"/>
+		    	<xsl:sequence select="ign:getPosition($bag/preceding-sibling::*[text()='.'][1])"/></isFirst>
+					            <isFirst><xsl:sequence select="$isFirst"/>
+		    	<xsl:sequence select="ign:getPosition($bags[functx:index-of-node($bags, $bag)[1] - 1])"/></isFirst> -->
 				            </xsl:element>				            
 			    			<xsl:element name="iti:waypoints">
 				            	<xsl:element name="rdf:Description">
 						            <xsl:element name="rdf:first">
-			    						<xsl:copy-of select="ign:create_bag($bag, $rlspList)"/>
+			    						<xsl:sequence select="ign:create_bag($bag, $rlspList)"/>
 						            </xsl:element>
 				                    <xsl:element name="rdf:rest">
 				                        <xsl:element name="rdf:resource">
-				                            <xsl:copy-of select="ign:listFromSentences($bags, $index + 1, $rlspList)"/>
+				                            <xsl:sequence select="ign:listFromSentences($bags, $index + 1, $rlspList)"/>
 				                        </xsl:element>
 				                    </xsl:element>
 				            	</xsl:element>
@@ -131,7 +152,7 @@
 	    		<xsl:when test="$isLast">
 	    			<xsl:element name="rdf:Description">
 			            <xsl:element name="rdf:first">
-	   						<xsl:copy-of select="ign:create_bag($bag, $rlspList)"/>
+	   						<xsl:sequence select="ign:create_bag($bag, $rlspList)"/>
 			            </xsl:element>
 	                    <xsl:element name="rdf:rest">
 	                        <xsl:attribute name="rdf:resource">
@@ -148,67 +169,52 @@
 			            </xsl:element>
 	                    <xsl:element name="rdf:rest">
 	                        <xsl:element name="rdf:resource">
-	   							<xsl:copy-of select="ign:listFromSentences($bags, $index + 1, $rlspList)"/>
+	   							<xsl:sequence select="ign:listFromSentences($bags, $index + 1, $rlspList)"/>
 	                        </xsl:element>
 	                    </xsl:element>
 	            	</xsl:element>
 				</xsl:otherwise>
 	    	</xsl:choose>
-	    	<!-- Il faut vérifier s'il n'y a pas d'autres toponymes dans les phrases d'après -->	
-	    	<xsl:variable name="indexFirstOtherFirstBag" as="xs:integer" select="ign:getIndexFollowingFirstBag($bags, $index)"/>
-	    	<xsl:if test="$isFirst and $indexFirstOtherFirstBag > 0">
-				<xsl:copy-of select="ign:listFromSentences($bags, $indexFirstOtherFirstBag, $rlspList)"/>
+	    	<!-- Il faut vérifier s'il n'y a pas d'autres toponymes dans les phrases d'après -->
+	    	<xsl:if test="$isFirst">
+		    	<xsl:variable name="bagsInFirstPosition" as="element()*">
+		    		<xsl:for-each select="$bags">
+		    			<xsl:if test="ign:isFirstOfTheSentence(current(), $bags)">
+		    				<xsl:sequence select="current()"/>
+		    			</xsl:if>
+		    		</xsl:for-each>
+		    	</xsl:variable>
+		    	<xsl:if test="count($bagsInFirstPosition) >= (index-of($bagsInFirstPosition, $bag)[1] + 1)">		    	
+					<!-- <xsl:copy-of select="ign:listFromSentences($bags, 
+					index-of($bags, $bagsInFirstPosition[index-of($bagsInFirstPosition, $bag)[1] + 1])[1], 
+					$rlspList)"/> -->
+					<xsl:variable name="nextIndex" select="index-of($bags, $bagsInFirstPosition[index-of($bagsInFirstPosition, $bag)[1] + 1])[1]" as="xs:integer"/>
+					<!-- <xsl:copy-of select="$bags[$nextIndex]"/> -->
+					<xsl:if test="$nextIndex > $index"><!--  and count($bags) > $nextIndex -->
+						<xsl:sequence select="ign:listFromSentences($bags, $nextIndex, $rlspList)"/>
+					</xsl:if>
+		    	</xsl:if>
 	    	</xsl:if>
     	</xsl:if>
     </xsl:function>
-    
-    <xsl:function name="ign:getIndexFollowingFirstBag" as="xs:integer">
-    	<xsl:param name="bags" as="element()*"/>
-    	<xsl:param name="index" as="xs:integer"/>
-    	<xsl:variable name="bagsInFirstPosition" as="element()*">
-    		<xsl:for-each select="$bags">
-    			<xsl:if test="ign:isFirstOfTheSentence(current())">
-    				<xsl:sequence select="current()"/>
-    			</xsl:if>
-    		</xsl:for-each>
-    	</xsl:variable>
-    	<xsl:variable name="indexesOfFirstsBags" as="xs:integer*">
-    		<xsl:for-each select="$bagsInFirstPosition">
-    			<xsl:sequence select="index-of($bags, current())"/>
-    		</xsl:for-each>
-    	</xsl:variable>
-    	<xsl:variable name="result" as="xs:integer?">
-	    	<xsl:for-each select="$indexesOfFirstsBags">
-	    		<xsl:if test="current() = $index and (index-of($indexesOfFirstsBags, current())[1] + 1) > count($indexesOfFirstsBags)">
-	    			<xsl:sequence select="$indexesOfFirstsBags[index-of($indexesOfFirstsBags, current())[1] + 1]"/>
-	    		</xsl:if>
-	    	</xsl:for-each>
-    	</xsl:variable>
-    	<xsl:choose>
-    		<xsl:when test="$result"><xsl:sequence select="$result"/></xsl:when>
-    		<xsl:otherwise><xsl:sequence select="-1"/></xsl:otherwise>
-    	</xsl:choose>
-    </xsl:function>
-    <!-- <xsl:function name="ign:getIndexFollowingFirstBag" as="xs:integer">
-    	<xsl:param name="bags" as="element()*"/>
-    	<xsl:param name="index" as="xs:integer"/>
-    	<xsl:choose>
-    		<xsl:when test="$index > count($bags)">
-    			<xsl:sequence select="-1"/>
-   			</xsl:when>
-    		<xsl:when test="ign:isFirstOfTheSentence($bags[$index])">
-    			<xsl:sequence select="$index"/>
-    		</xsl:when>
-    		<xsl:otherwise>
-    			<xsl:sequence select="ign:getIndexFollowingFirstBag($bags, $index + 1)"/>
-    		</xsl:otherwise>
-    	</xsl:choose>
-    </xsl:function> -->
-    
+        
     <xsl:function as="xs:boolean" name="ign:isFirstOfTheSentence">
     	<xsl:param name="bag" as="element()"/>
-    	<xsl:sequence select="ign:getPosition($bag/preceding-sibling::*[text()='.'][1]) >= 
-	    		ign:getPosition($bag/preceding-sibling::bag[1])"/>
+    	<xsl:param name="bags" as="element()*"/>
+    	<xsl:choose>
+    		<xsl:when test="not($bags[functx:index-of-node($bags, $bag)[1] - 1])">
+    			<xsl:sequence select="true()"/>
+    		</xsl:when>
+    		<xsl:when test="0 >= ign:getPosition($bags[functx:index-of-node($bags, $bag)[1] - 1])">
+    			<xsl:sequence select="true()"/>
+    		</xsl:when>
+    		<!-- <xsl:when test="count($bag/preceding-sibling::*[text()='.']) = 0">
+    		</xsl:when> -->
+    		<xsl:otherwise>
+		    	<xsl:sequence select="ign:getPosition($bag/preceding-sibling::*[text()='.'][1]) > 
+			    		ign:getPosition($bags[functx:index-of-node($bags, $bag)[1] - 1])"/>
+    		</xsl:otherwise>
+    	</xsl:choose>
     </xsl:function>
     
     <xsl:function name="ign:getLeftBoundary" as="xs:integer">
@@ -423,17 +429,13 @@
         		</xsl:if>
         		<xsl:copy-of select="ign:createIncludes($toponym, current())" />
         	</xsl:element>
-        </xsl:for-each>
-        
+        </xsl:for-each>        
     </xsl:function>
     
     <xsl:function name="ign:createIncludes" as="element()*">
     	<xsl:param name="toponym" as="element()"/>
     	<xsl:param name="typeTopo" as="element()"/>
     	<xsl:if test="count($toponym[parent::*[child::*[name()='include']]]) > 0">
-	    	<!-- <test>
-	    		<xsl:copy-of select="$toponym[parent::*[child::*[name()='include']]]"/>
-	    	</test> -->
     		<xsl:variable name="ids" select="$toponym/parent::*[1]/child::*[name()='include']/@targetId" />
     		<xsl:for-each select="$ids">
     			<xsl:variable name="id" select="current()" as="xs:integer"/>
@@ -459,12 +461,7 @@
     		</xsl:for-each>
     	</xsl:if>
     </xsl:function>
-    
-    <!-- <xsl:function name="increment" as="xs:integer">
-    	<xsl:param name="count" as="xs:integer"/>
-    	<xsl:value-of select="$count + 1"/>
-    </xsl:function> -->
-    
+        
     <!-- Return the end of the triple with the orientation 
     eg : <rlsp:northOf rdf:resource="3" />-->
     <xsl:function name="ign:getOrientationOntology" as="element()">
@@ -642,5 +639,17 @@
             <xsl:sequence select="0"/>
         </xsl:if>
     </xsl:function>
+    
+    <xsl:function name="functx:index-of-node" as="xs:integer*"
+              xmlns:functx="http://www.functx.com">
+	  <xsl:param name="nodes" as="node()*"/>
+	  <xsl:param name="nodeToFind" as="node()"/>
+	
+	  <xsl:sequence select="
+	  for $seq in (1 to count($nodes))
+	  return $seq[$nodes[$seq] is $nodeToFind]
+	 "/>
+	
+	</xsl:function>
     
 </xsl:stylesheet>
