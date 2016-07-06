@@ -160,7 +160,7 @@ public class GraphMatching {
 
 	static Set<NodeMatching> getToponymsFromTei() {
 		logger.info("Chargement du TEI");
-		Document teiSource = XMLUtil.createDocumentFromFile("temp6.xml");
+		Document teiSource = XMLUtil.createDocumentFromFile("temp7.xml");
 		Set<NodeMatching> results = new HashSet<>();
 		logger.info("Récupération des toponymes du TEI");
 		List<QuerySolution> qSolutionsTEI = new ArrayList<>();

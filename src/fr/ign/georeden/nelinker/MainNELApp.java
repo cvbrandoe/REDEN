@@ -89,15 +89,15 @@ public class MainNELApp {
 //		StringComparisonDamLev sc = new StringComparisonDamLev();
 //		System.out.println(sc.computeSimilarity("Limousin", "Haut-Limousin"));
 		
-		//GraphMatching.nodeSelection();
+		GraphMatching.nodeSelection();
 
-		 // TRANSFORMATION TEI VERS RDF
-		 Document document = XMLUtil.createDocumentFromFile(teiSource);
-		 if (document == null) {
-		 optionManager.help();
-		 return;
-		 }
-		 document = applyXSLTTransformations(document);
+//		 // TRANSFORMATION TEI VERS RDF
+//		 Document document = XMLUtil.createDocumentFromFile(teiSource);
+//		 if (document == null) {
+//		 optionManager.help();
+//		 return;
+//		 }
+//		 document = applyXSLTTransformations(document);
 
 		// String query =
 		// "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
