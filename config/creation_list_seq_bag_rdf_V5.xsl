@@ -140,9 +140,7 @@
 			    						<xsl:sequence select="ign:create_bag($bag, $rlspList)"/>
 						            </xsl:element>
 				                    <xsl:element name="rdf:rest">
-				                        <xsl:element name="rdf:resource">
-				                            <xsl:sequence select="ign:listFromSentences($bags, $index + 1, $rlspList)"/>
-				                        </xsl:element>
+			                            <xsl:sequence select="ign:listFromSentences($bags, $index + 1, $rlspList)"/>
 				                    </xsl:element>
 				            	</xsl:element>
 				            </xsl:element>
@@ -168,9 +166,7 @@
 	   				<xsl:copy-of select="ign:create_bag($bag, $rlspList)"/>
 			            </xsl:element>
 	                    <xsl:element name="rdf:rest">
-	                        <xsl:element name="rdf:resource">
-	   							<xsl:sequence select="ign:listFromSentences($bags, $index + 1, $rlspList)"/>
-	                        </xsl:element>
+   							<xsl:sequence select="ign:listFromSentences($bags, $index + 1, $rlspList)"/>
 	                    </xsl:element>
 	            	</xsl:element>
 				</xsl:otherwise>
