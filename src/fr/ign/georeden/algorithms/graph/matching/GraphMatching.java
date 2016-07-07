@@ -43,6 +43,7 @@ public class GraphMatching {
 		float threshold = 0.7f;
 
 		Set<NodeMatching> toponymsTEI = getToponymsFromTei();
+		logger.info(toponymsTEI.size() + " toponymes dans le TEI");
 		
 
 		final List<Candidate> candidatesFromKB = getCandidatesFromKB();
@@ -92,7 +93,6 @@ public class GraphMatching {
 		} else {
 			logger.info("pas de topo sans candidat");
 		}
-		logger.info(threshold);
 		return result;
 	}
 	
@@ -130,7 +130,7 @@ public class GraphMatching {
 	}
 	
 	static Set<NodeMatching> getCandidatesSelection(Set<NodeMatching> toponymsTEI, List<Candidate> candidatesFromKB, float threshold) {
-		logger.info("Sélection des candidats");
+		logger.info("Sélection des candidats (seuil : " + threshold + ")");
 		Set<NodeMatching> result = new HashSet<>();
 		Set<NodeMatching> noCandidateFounded = new HashSet<>();
 		final AtomicInteger count = new AtomicInteger();
@@ -138,13 +138,15 @@ public class GraphMatching {
 		StringComparisonDamLev sc = new StringComparisonDamLev();
 		toponymsTEI.parallelStream().forEach(set -> {
 			candidatesFromKB.parallelStream().forEach(querySolutionKB -> {
-				float score = sc.computeSimilarity(set.getLabel(), querySolutionKB.getName());
-				if (score >= threshold) 
-					set.addScore(new Score(querySolutionKB, score));
-				else {
-					score = sc.computeSimilarity(set.getLabel(), querySolutionKB.getLabel());
+				if (set != null && querySolutionKB != null) {
+					float score = sc.computeSimilarity(set.getLabel(), querySolutionKB.getName());
 					if (score >= threshold) 
 						set.addScore(new Score(querySolutionKB, score));
+					else {
+						score = sc.computeSimilarity(set.getLabel(), querySolutionKB.getLabel());
+						if (score >= threshold) 
+							set.addScore(new Score(querySolutionKB, score));
+					}
 				}
 			});
 			if (!set.getScores().isEmpty())
@@ -160,7 +162,7 @@ public class GraphMatching {
 
 	static Set<NodeMatching> getToponymsFromTei() {
 		logger.info("Chargement du TEI");
-		Document teiSource = XMLUtil.createDocumentFromFile("temp7.xml");
+		Document teiSource = XMLUtil.createDocumentFromFile("d://temp7.rdf");
 		Set<NodeMatching> results = new HashSet<>();
 		logger.info("Récupération des toponymes du TEI");
 		List<QuerySolution> qSolutionsTEI = new ArrayList<>();
@@ -170,10 +172,10 @@ public class GraphMatching {
 							+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
 							+ "PREFIX prop-fr: <http://fr.dbpedia.org/property/>"
 							+ "PREFIX foaf: <http://xmlns.com/foaf/0.1/>"
-							+ "PREFIX xml: <https://www.w3.org/XML/1998/namespace>"
+							+ "PREFIX ign: <http://example.com/namespace/>"
 							+ "PREFIX dbo: <http://dbpedia.org/ontology/>" + "" + "SELECT DISTINCT * WHERE {"
 							+ "  ?s rdfs:label ?label ." 
-							+ "  ?s xml:id ?id ." 
+							+ "  ?s ign:id ?id ." 
 							+ "  ?s rdf:type ?type ." 
 							+ "}"));
 		} catch (QueryParseException | HttpHostConnectException | RiotException | MalformedURLException
