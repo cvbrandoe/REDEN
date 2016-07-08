@@ -12,7 +12,8 @@ public class Toponym {
 	private String resource;
 	private String name;
 	private Integer xmlId;
-	private List<ToponymType> types;
+	private ToponymType type;
+//	private List<ToponymType> types;
 	private List<CriterionToponymCandidate> scoreCriterionToponymCandidate;
 	private List<CriterionToponymCandidate> typeCriterionToponymCandidate;
 	
@@ -24,30 +25,31 @@ public class Toponym {
 	 * @param name the name
 	 * @param types the types
 	 */
-	public Toponym(String resource, Integer xmlId, String name, List<ToponymType> types) {
+	public Toponym(String resource, Integer xmlId, String name, ToponymType type) {
+		this.resource = resource;
 		this.name = name;
 		this.xmlId = xmlId;
-		this.types = types;
+		this.type = type;
 		this.scoreCriterionToponymCandidate = new ArrayList<>();
 		this.typeCriterionToponymCandidate = new ArrayList<>();
 	}
 	
-	/**
-	 * Instantiates a new toponym.
-	 *
-	 * @param resource the resource
-	 * @param xmlId the xml id
-	 * @param name the name
-	 * @param type the type
-	 */
-	public Toponym(String resource, Integer xmlId, String name, ToponymType type) {
-		this.name = name;
-		this.xmlId = xmlId;
-		this.types = new ArrayList<>();
-		this.types.add(type);
-		this.scoreCriterionToponymCandidate = new ArrayList<>();
-		this.typeCriterionToponymCandidate = new ArrayList<>();
-	}
+//	/**
+//	 * Instantiates a new toponym.
+//	 *
+//	 * @param resource the resource
+//	 * @param xmlId the xml id
+//	 * @param name the name
+//	 * @param type the type
+//	 */
+//	public Toponym(String resource, Integer xmlId, String name, ToponymType type) {
+//		this.name = name;
+//		this.xmlId = xmlId;
+//		this.types = new ArrayList<>();
+//		this.types.add(type);
+//		this.scoreCriterionToponymCandidate = new ArrayList<>();
+//		this.typeCriterionToponymCandidate = new ArrayList<>();
+//	}
 	
 	public String getResource() {
 		return this.resource;
@@ -58,8 +60,8 @@ public class Toponym {
 	public Integer getXmlId() {
 		return this.xmlId;
 	}
-	public List<ToponymType> getType() {
-		return this.types;
+	public ToponymType getType() {
+		return this.type;
 	}
 	
 	/**
@@ -84,5 +86,28 @@ public class Toponym {
 	}
 	public List<CriterionToponymCandidate> getTypeCriterionToponymCandidate() {
 		return this.typeCriterionToponymCandidate;
+	}
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		return resource.hashCode();
+	}
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object other) {
+		if (other == null) 
+			return false;
+	    if (other == this) 
+	    	return true;
+	    if (!(other instanceof Toponym))
+	    	return false;
+	    Toponym otherToponym = (Toponym)other;
+	    return resource.equals(otherToponym.resource);
 	}
 }

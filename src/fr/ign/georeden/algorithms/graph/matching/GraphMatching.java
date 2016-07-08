@@ -23,34 +23,49 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 
 import fr.ign.georeden.algorithms.string.StringComparisonDamLev;
+import fr.ign.georeden.kb.ToponymType;
 import fr.ign.georeden.utils.RDFUtil;
 import fr.ign.georeden.utils.XMLUtil;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class GraphMatching.
  */
 public class GraphMatching {
-
+	
+	/** The logger. */
 	private static Logger logger = Logger.getLogger(GraphMatching.class);
 	
+	/**
+	 * Instantiates a new graph matching.
+	 */
 	private GraphMatching(){}
 
 /**
- * Retourne un hashmap avec en clé la ressource du TEI et en valeur la liste des candidats de la KB
- * @return
+ * Retourne un hashmap avec en clé la ressource du TEI et en valeur la liste des candidats de la KB.
+ *
+ * @return the sets the
  */
-	public static Set<NodeMatching> nodeSelection() {
+	public static Set<Toponym> nodeSelection() {
 		float threshold = 0.7f;
 
-		Set<NodeMatching> toponymsTEI = getToponymsFromTei();
+		Set<Toponym> toponymsTEI = getToponymsFromTei();
 		logger.info(toponymsTEI.size() + " toponymes dans le TEI");
 		
 
 		final List<Candidate> candidatesFromKB = getCandidatesFromKB();
 
 
-		Set<NodeMatching> result = getCandidatesSelection(toponymsTEI, candidatesFromKB, threshold);
+		Set<Toponym> result = getCandidatesSelection(toponymsTEI, candidatesFromKB, threshold);
 		logger.info(result.size() + " candidats");
+		
+
+		logger.info("Calcul des scores de type en cours...");
+		for (Toponym toponym : result) {
+			for (CriterionToponymCandidate criterionToponymCandidate : toponym.getScoreCriterionToponymCandidate()) {
+				computeTypeScore(toponym, criterionToponymCandidate.getCandidate());
+			}
+		}
 
 //		// ancienne récusion pour trouver des candidats en faisant baisser le seuil (à 
 //		// insérer dans la fonction getCandidatesSelection)
@@ -83,76 +98,107 @@ public class GraphMatching {
 //			}
 //			logger.info(s);
 //		}
-		if (result.stream().anyMatch(entry -> entry.getScores().isEmpty())) {
-			for (Iterator<NodeMatching> iterator = result.iterator(); iterator.hasNext();) {
-				NodeMatching key = iterator.next();
-				List<Score> candidates = key.getScores();
+		logger.info("Vérification des résultats");
+		if (result.stream().anyMatch(entry -> entry.getScoreCriterionToponymCandidate().isEmpty())) {
+			for (Iterator<Toponym> iterator = result.iterator(); iterator.hasNext();) {
+				Toponym key = iterator.next();
+				List<CriterionToponymCandidate> candidates = key.getScoreCriterionToponymCandidate();
 				if (candidates.isEmpty())
 					logger.info(key.getResource());
 			}
 		} else {
-			logger.info("pas de topo sans candidat");
+			logger.info("pas de topo sans candidat pour le score de label");
 		}
+		if (result.stream().anyMatch(entry -> entry.getTypeCriterionToponymCandidate().isEmpty())) {
+			for (Iterator<Toponym> iterator = result.iterator(); iterator.hasNext();) {
+				Toponym key = iterator.next();
+				List<CriterionToponymCandidate> candidates = key.getTypeCriterionToponymCandidate();
+				if (candidates.isEmpty())
+					logger.info(key.getResource());
+			}
+		} else {
+			logger.info("pas de topo sans candidat pour le score de type");
+		}
+		
+		int typeMatchedCount = 0;
+		int typeNotMatchedCount = 0;
+		float epsilon = 0.00000001f;
+		for (Iterator<Toponym> iterator = result.iterator(); iterator.hasNext();) {
+			Toponym key = iterator.next();
+			List<CriterionToponymCandidate> candidates = key.getTypeCriterionToponymCandidate();
+			typeNotMatchedCount += candidates.stream().filter(c -> Math.abs(c.getValue() - 0f) < epsilon).count();
+			typeMatchedCount += candidates.stream().filter(c -> Math.abs(c.getValue() - 1f) < epsilon).count();
+		}
+		logger.info("Type matched : " + typeMatchedCount);
+		logger.info("Type not matched : " + typeNotMatchedCount);
+		
 		return result;
 	}
 	
+	
+	/**
+	 * Compute the type score. If the type value of the toponym is in the type values of the candidate. 0 else.
+	 *
+	 * @param toponym the toponym
+	 * @param candidate the candidate
+	 * @return the criterion toponym candidate
+	 */
+	static CriterionToponymCandidate computeTypeScore(Toponym toponym, Candidate candidate) {
+		Criterion criterion = Criterion.scoreType;
+		CriterionToponymCandidate criterionToponymCandidate;
+		String suffixTopo = toponym.getType().toString().substring(toponym.getType().toString().lastIndexOf(':'));
+		Boolean ok = false;
+		for (String candidateType : candidate.getTypes()) {
+			String suffixCandidate = candidateType.substring(candidateType.lastIndexOf(':'));
+			if (suffixTopo.equalsIgnoreCase(suffixCandidate)) {
+				ok = true;
+				break;
+			}
+		}
+		if (ok) {
+			criterionToponymCandidate = new CriterionToponymCandidate(toponym, candidate, 1f, criterion);			
+		} else {
+			criterionToponymCandidate = new CriterionToponymCandidate(toponym, candidate, 0f, criterion);			
+		}
+		toponym.addTypeCriterionToponymCandidate(criterionToponymCandidate);
+		return criterionToponymCandidate;
+	}
+	
+	
 	/**
 	 * Gets the candidates selection.
-	 *	@deprecated
+	 *
 	 * @param toponymsTEI the toponyms tei
 	 * @param candidatesFromKB the candidates from kb
 	 * @param threshold the threshold
 	 * @return the candidates selection
 	 */
-	@Deprecated
-	static HashMap<String, Set<String>> getCandidatesSelection(HashMap<String, String> toponymsTEI, List<Candidate> candidatesFromKB, float threshold) {
-		logger.info("Sélection des candidats");
-		HashMap<String, Set<String>> result = new HashMap<>();
-		final AtomicInteger count = new AtomicInteger();
-		final int total = toponymsTEI.size();
-		StringComparisonDamLev sc = new StringComparisonDamLev();
-		toponymsTEI.entrySet().parallelStream().forEach(set -> {
-			Set<String> candidateResources = new HashSet<>();
-			candidatesFromKB.parallelStream().forEach(querySolutionKB -> {
-				float score = sc.computeSimilarity(set.getValue(), querySolutionKB.getName());
-				if (score >= threshold) 
-					candidateResources.add(querySolutionKB.getResource());
-				else {
-					score = sc.computeSimilarity(set.getValue(), querySolutionKB.getLabel());
-					if (score >= threshold) 
-						candidateResources.add(querySolutionKB.getResource());
-				}
-			});
-			result.put(set.getKey(), candidateResources);
-			logger.info(count.getAndIncrement() + " / " + total);
-		});
-		return result;
-	}
-	
-	static Set<NodeMatching> getCandidatesSelection(Set<NodeMatching> toponymsTEI, List<Candidate> candidatesFromKB, float threshold) {
+	static Set<Toponym> getCandidatesSelection(Set<Toponym> toponymsTEI, List<Candidate> candidatesFromKB, float threshold) {
 		logger.info("Sélection des candidats (seuil : " + threshold + ")");
-		Set<NodeMatching> result = new HashSet<>();
-		Set<NodeMatching> noCandidateFounded = new HashSet<>();
+		Criterion criterion = Criterion.scoreText;
+		Set<Toponym> result = new HashSet<>();
+		Set<Toponym> noCandidateFounded = new HashSet<>();
 		final AtomicInteger count = new AtomicInteger();
 		final int total = toponymsTEI.size();
 		StringComparisonDamLev sc = new StringComparisonDamLev();
-		toponymsTEI.parallelStream().forEach(set -> {
-			candidatesFromKB.parallelStream().forEach(querySolutionKB -> {
-				if (set != null && querySolutionKB != null) {
-					float score = sc.computeSimilarity(set.getLabel(), querySolutionKB.getName());
-					if (score >= threshold) 
-						set.addScore(new Score(querySolutionKB, score));
+		toponymsTEI.parallelStream().forEach(toponym -> {
+			candidatesFromKB.parallelStream().forEach(candidate -> {
+				if (toponym != null && candidate != null) {
+					float score = sc.computeSimilarity(toponym.getName(), candidate.getName());
+					if (score >= threshold) {
+						toponym.addScoreCriterionToponymCandidate(new CriterionToponymCandidate(toponym, candidate, score, criterion));
+					}
 					else {
-						score = sc.computeSimilarity(set.getLabel(), querySolutionKB.getLabel());
+						score = sc.computeSimilarity(toponym.getName(), candidate.getLabel());
 						if (score >= threshold) 
-							set.addScore(new Score(querySolutionKB, score));
+							toponym.addScoreCriterionToponymCandidate(new CriterionToponymCandidate(toponym, candidate, score, criterion));
 					}
 				}
 			});
-			if (!set.getScores().isEmpty())
-				result.add(set);
+			if (!toponym.getScoreCriterionToponymCandidate().isEmpty())
+				result.add(toponym);
 			else
-				noCandidateFounded.add(set);
+				noCandidateFounded.add(toponym);
 			logger.info(count.getAndIncrement() + " / " + total);
 		});
 		if (!noCandidateFounded.isEmpty())
@@ -160,10 +206,16 @@ public class GraphMatching {
 		return result;
 	}
 
-	static Set<NodeMatching> getToponymsFromTei() {
+	
+	/**
+	 * Gets the toponyms from tei.
+	 *
+	 * @return the toponyms from tei
+	 */
+	static Set<Toponym> getToponymsFromTei() {
 		logger.info("Chargement du TEI");
 		Document teiSource = XMLUtil.createDocumentFromFile("d://temp7.rdf");
-		Set<NodeMatching> results = new HashSet<>();
+		Set<Toponym> results = new HashSet<>();
 		logger.info("Récupération des toponymes du TEI");
 		List<QuerySolution> qSolutionsTEI = new ArrayList<>();
 		try {
@@ -187,11 +239,16 @@ public class GraphMatching {
 			String type = RDFUtil.getURIOrLexicalForm(querySolution, "type");
 			String resource = RDFUtil.getURIOrLexicalForm(querySolution, "s");
 			Integer id = Integer.parseInt(RDFUtil.getURIOrLexicalForm(querySolution, "id"));
-			results.add(new NodeMatching(label, type, id, resource));
+			results.add(new Toponym(resource, id, label, ToponymType.where(type)));
 		}
 		return results;
 	}
 	
+	/**
+	 * Gets the candidates from kb.
+	 *
+	 * @return the candidates from kb
+	 */
 	static List<Candidate> getCandidatesFromKB() {
 		List<QuerySolution> qSolutionsKB = new ArrayList<>();
 		List<Candidate> result = new ArrayList<>();
