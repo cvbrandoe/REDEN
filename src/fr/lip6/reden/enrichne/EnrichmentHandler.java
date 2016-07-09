@@ -70,6 +70,7 @@ public class EnrichmentHandler {
 				for (int k = 0; k < nodesChild.getLength(); ++k) {
 					Element child = (Element) nodesChild.item(k);
 					String entityName = child.getTextContent();
+					// TODO allow URIs with score information and more than one URI ? entityName = entityName.replaceAll("\\(\\d*\\.\\d+\\)", ""); //if there are scores in uris, remove them					
 					logger.info("");
 					logger.info("Entity name is " + entityName);
 					String uri = child.getAttribute(xmlTeiIDAttr);					

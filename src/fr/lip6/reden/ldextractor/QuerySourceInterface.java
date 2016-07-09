@@ -37,6 +37,6 @@ public interface QuerySourceInterface {
 	 * @param prefixDictionnaireFile, prefix of the dico files
 	 * @param optional parameter in the presence of large repos
 	 */
-	void processResults(ResultSet res, String outDictionnaireDir, String letter);
+	void processResults(ResultSet res, String outDictionnaireDir, String letter, List<TopicExtent> domainParams);
 	
 }

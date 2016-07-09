@@ -7,7 +7,7 @@ The first mode allows the downloading and the constitution of a dictionary of po
 
 The only parameters are:  
 
-config-file.properties -createDico bnf|dbpediafr|all
+config-file.properties -createDico bnf|dbpediafr|getty-per|all
 
 Once the dictionary has been built, the second mode allows the annotation of an input TEI-XML file, only the first time you launch REDEN you must be connected to the Internet. The parameters are:
 
@@ -27,13 +27,15 @@ TEI-fileName.xml (mandatory): the name of the TEI file, include the file path if
 
 -outDir\=dir (optional): name of the folder where REDEN will output files: the annotated XML-TEI and other files which provide execution information
 
-Besides, REDEN can extract information from a Linked Data sets thanks to URIs encoded within the TEI then it outputs a JSON data which can loaded in an specific purpose Web-based application in order to visualize these data in several ways, so far Web maps and gallery of author pics. You can find below the program argument to do so, please note that the TEI should contain already URIs for every named-entity:
+Besides, REDEN can extract information from a Linked Data sets thanks to URIs encoded within the TEI then it outputs a JSON data which can loaded in an specific purpose Web-based application in order to visualize these data in several ways, so far Web maps and gallery of author pics. You can find below the program argument to do so, please note that the TEI should contain already URIs for every named-entity in the ref attribute of the persName tag (or any other configurable in the properties file) :
 
 config-file.properties tei-fileName-withURIs.xml -produceData4Visu=output.json -propsFile=<config_ld_properties>
 
 -produceData4Visu=output.json (optional): name of the output JSON file 
 
 -propsFile=<config_ld_properties> (optional): name of the properties file containing the name of the properties concerned by the extraction, for an example, see the files config/latlong.properties or config/authors.properties
+
+In the config-file.properties, the parameter addScores must be set to false.
  
 ###### How to cite this work
 

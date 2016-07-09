@@ -15,6 +15,14 @@ import org.apache.log4j.Logger;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.ResultSet;
 
+import fr.lip6.reden.ldextractor.loc.QueryPlaceDBpedia;
+import fr.lip6.reden.ldextractor.per.QueryArtPersonalityGetty;
+import fr.lip6.reden.ldextractor.per.QueryAuthorBNE;
+import fr.lip6.reden.ldextractor.per.QueryAuthorBNEAll;
+import fr.lip6.reden.ldextractor.per.QueryAuthorBNF;
+import fr.lip6.reden.ldextractor.per.QueryAuthorBNFAll;
+import fr.lip6.reden.ldextractor.per.QueryPersonDBpediafr;
+
 /**
  * Main class to launch the Linked Data crawler for handling domain-adaptation during named-entity linking.
  * @author Brando & Frontini
@@ -60,7 +68,7 @@ public class AppAdhoc
 			Boolean out = false;
 			
 			if (dicLabel.equalsIgnoreCase("bnf") || dicLabel.equalsIgnoreCase("all")) {
-				// QUERY AUTHORS IN BNF
+				// QUERY AUTHORS IN BNF (filter by date)
 				while (counter < let.length && !out) {
 					QueryAuthorBNF bnf = new QueryAuthorBNF();
 					Boolean lr = bnf.LARGE_REPO;
@@ -75,10 +83,30 @@ public class AppAdhoc
 					//bnf				
 					Query qbnf = bnf.formulateSPARQLQuery(domainParams, letter, "");
 					ResultSet rsbnf = bnf.executeQuery(qbnf, bnf.TIMEOUT.toString(), bnf.SPARQL_END_POINT, "", "");
-					bnf.processResults(rsbnf, outDictionnaireDir, letter);
+					bnf.processResults(rsbnf, outDictionnaireDir, letter, domainParams);
 					counter++;
 				}
-			} 
+			}
+			if (dicLabel.equalsIgnoreCase("bnf-all") || dicLabel.equalsIgnoreCase("all")) {
+				// QUERY AUTHORS IN BNF
+				while (counter < let.length && !out) {
+					QueryAuthorBNFAll bnf = new QueryAuthorBNFAll();
+					Boolean lr = bnf.LARGE_REPO;
+					String letter = null;
+					if (!lr) {
+						out = true; //enters once
+					} else {
+						letter = let[counter];
+						logger.info("processing letter:" +letter);
+					}
+					
+					//bnf				
+					Query qbnf = bnf.formulateSPARQLQuery(domainParams, letter, "");
+					ResultSet rsbnf = bnf.executeQuery(qbnf, bnf.TIMEOUT.toString(), bnf.SPARQL_END_POINT, "", "");
+					bnf.processResults(rsbnf, outDictionnaireDir, letter, domainParams);
+					counter++;
+				}
+			}
 			if (dicLabel.equalsIgnoreCase("dbpediafr") || dicLabel.equalsIgnoreCase("all")) {
 				// QUERY PLACES IN DBPEDIA
 				counter = 0;
@@ -98,17 +126,17 @@ public class AppAdhoc
 					//dbpedia 
 					Query qdb = dbp.formulateSPARQLQuery(domainParams, letter, "");
 					ResultSet rsdbp = dbp.executeQuery(qdb, dbp.TIMEOUT.toString(), dbp.SPARQL_END_POINT, "", "");
-					dbp.processResults(rsdbp, outDictionnaireDir, letter);
+					dbp.processResults(rsdbp, outDictionnaireDir, letter, domainParams);
 					
 					counter++;
 				}
-			} 
-			if (dicLabel.equalsIgnoreCase("getty-per") || dicLabel.equalsIgnoreCase("all")) {
-				// QUERY PERSONALITIES IN GETTY
+			}
+			if (dicLabel.equalsIgnoreCase("dbpediafr-author") || dicLabel.equalsIgnoreCase("all")) {
+				// QUERY PLACES IN DBPEDIA
 				counter = 0;
 				out = false;
 				while (counter < let.length && !out) {
-					QueryPersonalityGetty dbp = new QueryPersonalityGetty();
+					QueryPersonDBpediafr dbp = new QueryPersonDBpediafr();
 					Boolean lr = dbp.LARGE_REPO;
 					
 					String letter = null;
@@ -122,7 +150,79 @@ public class AppAdhoc
 					//dbpedia 
 					Query qdb = dbp.formulateSPARQLQuery(domainParams, letter, "");
 					ResultSet rsdbp = dbp.executeQuery(qdb, dbp.TIMEOUT.toString(), dbp.SPARQL_END_POINT, "", "");
-					dbp.processResults(rsdbp, outDictionnaireDir, letter);
+					dbp.processResults(rsdbp, outDictionnaireDir, letter, domainParams);
+					
+					counter++;
+				}
+			}
+			if (dicLabel.equalsIgnoreCase("getty-per") || dicLabel.equalsIgnoreCase("all")) {
+				// QUERY PERSONALITIES IN GETTY
+				counter = 0;
+				out = false;
+				while (counter < let.length && !out) {
+					QueryArtPersonalityGetty dbp = new QueryArtPersonalityGetty();
+					Boolean lr = dbp.LARGE_REPO;
+					
+					String letter = null;
+					if (!lr) {
+						out = true; //enters once
+					} else {
+						letter = let[counter];
+						logger.info("processing letter:" +letter);
+					}
+					
+					//getty 
+					Query qdb = dbp.formulateSPARQLQuery(domainParams, letter, "");
+					ResultSet rsdbp = dbp.executeQuery(qdb, dbp.TIMEOUT.toString(), dbp.SPARQL_END_POINT, "", "");
+					dbp.processResults(rsdbp, outDictionnaireDir, letter, domainParams);
+					
+					counter++;
+				}
+			}
+			if (dicLabel.equalsIgnoreCase("bne-all") || dicLabel.equalsIgnoreCase("all")) {
+				// QUERY AUTHORS IN BNE
+				counter = 0;
+				out = false;
+				while (counter < let.length && !out) {
+					QueryAuthorBNEAll dbp = new QueryAuthorBNEAll();
+					Boolean lr = dbp.LARGE_REPO;
+					
+					String letter = null;
+					if (!lr) {
+						out = true; //enters once
+					} else {
+						letter = let[counter];
+						logger.info("processing letter:" +letter);
+					}
+					
+					//bne 
+					Query qdb = dbp.formulateSPARQLQuery(domainParams, letter, "");
+					ResultSet rsdbp = dbp.executeQuery(qdb, dbp.TIMEOUT.toString(), dbp.SPARQL_END_POINT, "", "");
+					dbp.processResults(rsdbp, outDictionnaireDir, letter, domainParams);
+					
+					counter++;
+				}
+			}
+			if (dicLabel.equalsIgnoreCase("bne") || dicLabel.equalsIgnoreCase("all")) {
+				// QUERY AUTHORS IN BNE (filter by date)
+				counter = 0;
+				out = false;
+				while (counter < let.length && !out) {
+					QueryAuthorBNE dbp = new QueryAuthorBNE();
+					Boolean lr = dbp.LARGE_REPO;
+					
+					String letter = null;
+					if (!lr) {
+						out = true; //enters once
+					} else {
+						letter = let[counter];
+						logger.info("processing letter:" +letter);
+					}
+					
+					//bne 
+					Query qdb = dbp.formulateSPARQLQuery(domainParams, letter, "");
+					ResultSet rsdbp = dbp.executeQuery(qdb, dbp.TIMEOUT.toString(), dbp.SPARQL_END_POINT, "", "");
+					dbp.processResults(rsdbp, outDictionnaireDir, letter, domainParams);
 					
 					counter++;
 				}

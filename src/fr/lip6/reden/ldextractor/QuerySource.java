@@ -61,7 +61,7 @@ public class QuerySource implements QuerySourceInterface {
 	 * @param letter, optional parameter for large repos
 	 */
 	
-	public void processResults(ResultSet res, String outDictionnaireDir, String letter) {
+	public void processResults(ResultSet res, String outDictionnaireDir, String letter, List<TopicExtent> domainParams) {
 	}
 
 }
