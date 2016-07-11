@@ -72,6 +72,13 @@ public class Toponym {
 	public void addScoreCriterionToponymCandidate(CriterionToponymCandidate score) {
 		this.scoreCriterionToponymCandidate.add(score);
 	}
+	public void clearAndAddAllScoreCriterionToponymCandidate(List<CriterionToponymCandidate> scores) {
+		this.scoreCriterionToponymCandidate.clear();
+		this.scoreCriterionToponymCandidate.addAll(scores);
+	}
+	public void clearAllScoreCriterionToponymCandidate() {
+		this.scoreCriterionToponymCandidate.clear();
+	}
 	
 	/**
 	 * Adds the type to the other TypeCriterionToponymCandidate.

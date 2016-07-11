@@ -86,4 +86,7 @@ public class Candidate {
 	public void addType(String type) {
 		types.add(type);
 	}
+	public void addTypes(Set<String> types) {
+		types.addAll(types);
+	}
 }

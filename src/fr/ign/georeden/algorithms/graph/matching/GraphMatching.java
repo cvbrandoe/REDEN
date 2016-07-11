@@ -2,6 +2,7 @@ package fr.ign.georeden.algorithms.graph.matching;
 
 import java.net.MalformedURLException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -10,6 +11,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 import org.apache.http.conn.HttpHostConnectException;
 import org.apache.jena.atlas.web.HttpException;
@@ -47,7 +49,8 @@ public class GraphMatching {
  * @return the sets the
  */
 	public static Set<Toponym> nodeSelection() {
-		float threshold = 0.7f;
+//		float threshold = 0.7f;
+		Integer numberOfCandidate = 10;
 
 		Set<Toponym> toponymsTEI = getToponymsFromTei();
 		logger.info(toponymsTEI.size() + " toponymes dans le TEI");
@@ -56,16 +59,16 @@ public class GraphMatching {
 		final List<Candidate> candidatesFromKB = getCandidatesFromKB();
 
 
-		Set<Toponym> result = getCandidatesSelection(toponymsTEI, candidatesFromKB, threshold);
+		Set<Toponym> result = getCandidatesSelection(toponymsTEI, candidatesFromKB, numberOfCandidate);
 		logger.info(result.size() + " candidats");
 		
 
-		logger.info("Calcul des scores de type en cours...");
-		for (Toponym toponym : result) {
-			for (CriterionToponymCandidate criterionToponymCandidate : toponym.getScoreCriterionToponymCandidate()) {
-				computeTypeScore(toponym, criterionToponymCandidate.getCandidate());
-			}
-		}
+//		logger.info("Calcul des scores de type en cours...");
+//		for (Toponym toponym : result) {
+//			for (CriterionToponymCandidate criterionToponymCandidate : toponym.getScoreCriterionToponymCandidate()) {
+//				computeTypeScore(toponym, criterionToponymCandidate.getCandidate());
+//			}
+//		}
 
 //		// ancienne récusion pour trouver des candidats en faisant baisser le seuil (à 
 //		// insérer dans la fonction getCandidatesSelection)
@@ -99,38 +102,43 @@ public class GraphMatching {
 //			logger.info(s);
 //		}
 		logger.info("Vérification des résultats");
-		if (result.stream().anyMatch(entry -> entry.getScoreCriterionToponymCandidate().isEmpty())) {
+		if (result.stream().anyMatch(entry -> entry.getScoreCriterionToponymCandidate().isEmpty() 
+				|| entry.getScoreCriterionToponymCandidate().size() < 10 
+				|| entry.getName().equalsIgnoreCase("Ruffec"))) {
 			for (Iterator<Toponym> iterator = result.iterator(); iterator.hasNext();) {
 				Toponym key = iterator.next();
 				List<CriterionToponymCandidate> candidates = key.getScoreCriterionToponymCandidate();
-				if (candidates.isEmpty())
-					logger.info(key.getResource());
+				if (candidates.isEmpty() || candidates.size() < 10) {
+					logger.info(key.getResource() + " : " + candidates.size());
+				} else if (key.getName().equalsIgnoreCase("Ruffec")) {
+					logger.info(key.getResource() + " (" + key.getName() +") : " + candidates.get(0).getCandidate().getResource());
+				}
 			}
 		} else {
 			logger.info("pas de topo sans candidat pour le score de label");
 		}
-		if (result.stream().anyMatch(entry -> entry.getTypeCriterionToponymCandidate().isEmpty())) {
-			for (Iterator<Toponym> iterator = result.iterator(); iterator.hasNext();) {
-				Toponym key = iterator.next();
-				List<CriterionToponymCandidate> candidates = key.getTypeCriterionToponymCandidate();
-				if (candidates.isEmpty())
-					logger.info(key.getResource());
-			}
-		} else {
-			logger.info("pas de topo sans candidat pour le score de type");
-		}
+//		if (result.stream().anyMatch(entry -> entry.getTypeCriterionToponymCandidate().isEmpty())) {
+//			for (Iterator<Toponym> iterator = result.iterator(); iterator.hasNext();) {
+//				Toponym key = iterator.next();
+//				List<CriterionToponymCandidate> candidates = key.getTypeCriterionToponymCandidate();
+//				if (candidates.isEmpty())
+//					logger.info(key.getResource());
+//			}
+//		} else {
+//			logger.info("pas de topo sans candidat pour le score de type");
+//		}
 		
-		int typeMatchedCount = 0;
-		int typeNotMatchedCount = 0;
-		float epsilon = 0.00000001f;
-		for (Iterator<Toponym> iterator = result.iterator(); iterator.hasNext();) {
-			Toponym key = iterator.next();
-			List<CriterionToponymCandidate> candidates = key.getTypeCriterionToponymCandidate();
-			typeNotMatchedCount += candidates.stream().filter(c -> Math.abs(c.getValue() - 0f) < epsilon).count();
-			typeMatchedCount += candidates.stream().filter(c -> Math.abs(c.getValue() - 1f) < epsilon).count();
-		}
-		logger.info("Type matched : " + typeMatchedCount);
-		logger.info("Type not matched : " + typeNotMatchedCount);
+//		int typeMatchedCount = 0;
+//		int typeNotMatchedCount = 0;
+//		float epsilon = 0.00000001f;
+//		for (Iterator<Toponym> iterator = result.iterator(); iterator.hasNext();) {
+//			Toponym key = iterator.next();
+//			List<CriterionToponymCandidate> candidates = key.getTypeCriterionToponymCandidate();
+//			typeNotMatchedCount += candidates.stream().filter(c -> Math.abs(c.getValue() - 0f) < epsilon).count();
+//			typeMatchedCount += candidates.stream().filter(c -> Math.abs(c.getValue() - 1f) < epsilon).count();
+//		}
+//		logger.info("Type matched : " + typeMatchedCount);
+//		logger.info("Type not matched : " + typeNotMatchedCount);
 		
 		return result;
 	}
@@ -143,6 +151,7 @@ public class GraphMatching {
 	 * @param candidate the candidate
 	 * @return the criterion toponym candidate
 	 */
+	@Deprecated
 	static CriterionToponymCandidate computeTypeScore(Toponym toponym, Candidate candidate) {
 		Criterion criterion = Criterion.scoreType;
 		CriterionToponymCandidate criterionToponymCandidate;
@@ -173,39 +182,41 @@ public class GraphMatching {
 	 * @param threshold the threshold
 	 * @return the candidates selection
 	 */
-	static Set<Toponym> getCandidatesSelection(Set<Toponym> toponymsTEI, List<Candidate> candidatesFromKB, float threshold) {
-		logger.info("Sélection des candidats (seuil : " + threshold + ")");
+	static Set<Toponym> getCandidatesSelection(Set<Toponym> toponymsTEI, List<Candidate> candidatesFromKB, Integer numberOfCandidate) {
+		logger.info("Sélection des candidats (nombre de candidats : " + numberOfCandidate + ")");
 		Criterion criterion = Criterion.scoreText;
 		Set<Toponym> result = new HashSet<>();
-		Set<Toponym> noCandidateFounded = new HashSet<>();
 		final AtomicInteger count = new AtomicInteger();
 		final int total = toponymsTEI.size();
 		StringComparisonDamLev sc = new StringComparisonDamLev();
-		toponymsTEI.parallelStream().forEach(toponym -> {
-			candidatesFromKB.parallelStream().forEach(candidate -> {
-				if (toponym != null && candidate != null) {
-					float score = sc.computeSimilarity(toponym.getName(), candidate.getName());
-					if (score >= threshold) {
-						toponym.addScoreCriterionToponymCandidate(new CriterionToponymCandidate(toponym, candidate, score, criterion));
-					}
-					else {
-						score = sc.computeSimilarity(toponym.getName(), candidate.getLabel());
-						if (score >= threshold) 
-							toponym.addScoreCriterionToponymCandidate(new CriterionToponymCandidate(toponym, candidate, score, criterion));
-					}
-				}
+		toponymsTEI.parallelStream().filter(t -> t != null).forEach(toponym -> {
+			candidatesFromKB.parallelStream().filter(c -> c != null && (toponym.getType() == ToponymType.PLACE || typeContained(toponym.getType().toString(), c.getTypes()))).forEach(candidate -> {
+				float score1 = sc.computeSimilarity(toponym.getName(), candidate.getName());
+				float score2 = sc.computeSimilarity(toponym.getName(), candidate.getName());
+				if (Math.max(score1, score2) > 0f)
+					toponym.addScoreCriterionToponymCandidate(new CriterionToponymCandidate(toponym, candidate, Math.max(score1, score2), criterion));
 			});
-			if (!toponym.getScoreCriterionToponymCandidate().isEmpty())
-				result.add(toponym);
-			else
-				noCandidateFounded.add(toponym);
-			logger.info(count.getAndIncrement() + " / " + total);
+			if (toponym.getScoreCriterionToponymCandidate() != null && !toponym.getScoreCriterionToponymCandidate().isEmpty()) {
+				toponym.clearAndAddAllScoreCriterionToponymCandidate(toponym.getScoreCriterionToponymCandidate().stream().filter(s -> s != null)
+						.sorted(Comparator.comparing(CriterionToponymCandidate::getValue).reversed())
+						.limit(Math.min(numberOfCandidate, toponym.getScoreCriterionToponymCandidate().size()))
+						.collect(Collectors.toList()));
+			}
+			result.add(toponym);
+			logger.info((count.getAndIncrement() + 1) + " / " + total);
 		});
-		if (!noCandidateFounded.isEmpty())
-			result.addAll(getCandidatesSelection(noCandidateFounded, candidatesFromKB, threshold - 0.01f ));
 		return result;
 	}
 
+	static boolean typeContained(String typeToCheck, Set<String> types) {
+		String typeToponym = typeToCheck.substring(typeToCheck.lastIndexOf(':') + 1);
+		for (String t : types) {
+			String typeCandidate = t.substring(t.lastIndexOf('/') + 1);
+			if (typeToponym.equalsIgnoreCase(typeCandidate))
+				return true;
+		}
+		return false;
+	}
 	
 	/**
 	 * Gets the toponyms from tei.
@@ -251,11 +262,11 @@ public class GraphMatching {
 	 */
 	static List<Candidate> getCandidatesFromKB() {
 		List<QuerySolution> qSolutionsKB = new ArrayList<>();
+		List<QuerySolution> qSolutionsTypes = new ArrayList<>();
 		List<Candidate> result = new ArrayList<>();
 
-		logger.info("Chargement du KB");
+		logger.info("Chargement de la KB");
 		final Model kbSource = ModelFactory.createDefaultModel().read("D:\\\\dbpedia\\\\dbpedia_all.n3");
-		//kbSource = kbSource.read("D:\\\\dbpedia\\\\dbpedia_all.n3");
 		logger.info("Récupérations des candidats de la KB");
 
 		try {
@@ -269,39 +280,47 @@ public class GraphMatching {
 					"SELECT DISTINCT * WHERE {" + 
 					"  OPTIONAL { ?s foaf:name ?name . }" + 
 					"  OPTIONAL { ?s rdfs:label ?label . }" + 
-//					"  ?s rdf:type ?type . " + 
-//					"  FILTER (STRSTARTS(STR(?type), 'http://dbpedia.org/ontology/')) . " + 
 					"}"));
 		} catch (QueryParseException | HttpHostConnectException | MalformedURLException | HttpException e) {
 			logger.error(e);
 		}
-		String[] query = new String[2];
-		query[0] = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" + 
-				"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" + 
-				"PREFIX prop-fr: <http://fr.dbpedia.org/property/>" + 
-				"PREFIX foaf: <http://xmlns.com/foaf/0.1/>" + 
-				"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>" + 
-				"" + 
-				"SELECT DISTINCT ?type WHERE {" + 
-				"  <";
-		query[1] = "> rdf:type ?type . " + 
-				"  FILTER (STRSTARTS(STR(?type), 'http://dbpedia.org/ontology/')) . " + 
-				"}";
+		logger.info("Récupérations des types des candidats de la KB");
+		try {
+			qSolutionsTypes.addAll(RDFUtil.getQuerySelectResults(kbSource, "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" + 
+					"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" + 
+					"PREFIX prop-fr: <http://fr.dbpedia.org/property/>" + 
+					"PREFIX foaf: <http://xmlns.com/foaf/0.1/>" + 
+					"PREFIX dbo: <http://dbpedia.org/ontology/>" + 
+					"SELECT * WHERE {" + 
+					"  ?s rdf:type ?type . " + 
+					"  FILTER (?type=dbo:Mountain || ?type=dbo:Volcano || ?type=dbo:BodyOfWater || "
+					+ "?type=dbo:Settlement || ?type=dbo:Territory || ?type=dbo:NaturalPlace) . " + 
+					"}"));
+		} catch (QueryParseException | HttpHostConnectException | MalformedURLException | HttpException e) {
+			logger.error(e);
+		}
+		logger.info("Traitement des types des candidats de la KB");
+		List<String[]> resourceTypeMap = new ArrayList<>();
+		qSolutionsTypes.stream().forEach(qs -> {
+			String candidateResource = RDFUtil.getURIOrLexicalForm(qs, "s");
+			String candidateType = RDFUtil.getURIOrLexicalForm(qs, "type");
+			resourceTypeMap.add(new String[]{candidateResource, candidateType});
+		});
+		Map<String, List<String[]>>  typesByResources = resourceTypeMap.stream()
+	            .collect(Collectors.groupingBy((String [] s) -> s[0]));
+		logger.info("Traitement des candidats de la KB");
 		qSolutionsKB.parallelStream().forEach(querySolution -> {
 			String candidateResource = RDFUtil.getURIOrLexicalForm(querySolution, "s");
 			String candidateLabel = RDFUtil.getURIOrLexicalForm(querySolution, "label");
 			String candidateName = RDFUtil.getURIOrLexicalForm(querySolution, "name");
 			Set<String> types = new HashSet<>();
-//			List<QuerySolution> qSolTypes = new ArrayList<>();
-//			try {
-//				qSolTypes.addAll(RDFUtil.getQuerySelectResults(kbSource, query[0] + candidateResource + query[1]));
-//			} catch (QueryParseException | HttpHostConnectException | RiotException | MalformedURLException
-//					| HttpException e) {
-//				logger.error(e);
-//			}
-//			for (QuerySolution qSolType : qSolTypes) {
-//				types.add(RDFUtil.getURIOrLexicalForm(qSolType, "type"));
-//			}
+			if (typesByResources.containsKey(candidateResource)) {
+				List<String[]> list = typesByResources.get(candidateResource);
+				for (String[] strings : list) {
+					types.add(strings[1]);
+				}
+			}
+			types.add("http://dbpedia.org/ontology/Place");
 			result.add(new Candidate(candidateResource, candidateLabel, candidateName, types));
 		});
 		logger.info(result.size() + " résultats");
