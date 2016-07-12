@@ -135,6 +135,12 @@ public class RDFUtil {
 			throw new HttpException(e.getMessage());
 		}
 	}
+	
+	public static Model getModel(Document rdfXml) {
+		Model documentModel = ModelFactory.createDefaultModel();
+		String modelText = XMLUtil.xmlDocumentContentToString(rdfXml);
+		return documentModel.read(new ByteArrayInputStream(modelText.getBytes()), "RDF/XML");
+	}
 
 	public static List<QuerySolution> getQuerySelectResults(Document rdfXml, String queryString)
 			throws QueryParseException, MalformedURLException, HttpHostConnectException, HttpException, RiotException {

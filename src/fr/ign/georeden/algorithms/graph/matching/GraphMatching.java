@@ -19,17 +19,22 @@ import org.apache.jena.riot.RiotException;
 import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 
+import com.hp.hpl.jena.graph.Graph;
 import com.hp.hpl.jena.query.QueryParseException;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.Property;
+import com.hp.hpl.jena.rdf.model.RDFNode;
+import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.rdf.model.Statement;
+import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 import fr.ign.georeden.algorithms.string.StringComparisonDamLev;
 import fr.ign.georeden.kb.ToponymType;
 import fr.ign.georeden.utils.RDFUtil;
 import fr.ign.georeden.utils.XMLUtil;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class GraphMatching.
  */
@@ -37,6 +42,8 @@ public class GraphMatching {
 	
 	/** The logger. */
 	private static Logger logger = Logger.getLogger(GraphMatching.class);
+	
+	public static String teiPath = "d://temp7.rdf";
 	
 	/**
 	 * Instantiates a new graph matching.
@@ -49,58 +56,23 @@ public class GraphMatching {
  * @return the sets the
  */
 	public static Set<Toponym> nodeSelection() {
-//		float threshold = 0.7f;
 		Integer numberOfCandidate = 10;
 
-		Set<Toponym> toponymsTEI = getToponymsFromTei();
+		logger.info("Chargement du TEI");
+		Document teiSource = XMLUtil.createDocumentFromFile(teiPath);
+		Model teiRdf = RDFUtil.getModel(teiSource);
+		Set<Toponym> toponymsTEI = getToponymsFromTei(teiRdf);
 		logger.info(toponymsTEI.size() + " toponymes dans le TEI");
 		
 
-		final List<Candidate> candidatesFromKB = getCandidatesFromKB();
+		final Model kbSource = ModelFactory.createDefaultModel().read("D:\\\\dbpedia\\\\dbpedia_all.n3");
+		final List<Candidate> candidatesFromKB = getCandidatesFromKB(kbSource);
 
 
 		Set<Toponym> result = getCandidatesSelection(toponymsTEI, candidatesFromKB, numberOfCandidate);
 		logger.info(result.size() + " candidats");
-		
 
-//		logger.info("Calcul des scores de type en cours...");
-//		for (Toponym toponym : result) {
-//			for (CriterionToponymCandidate criterionToponymCandidate : toponym.getScoreCriterionToponymCandidate()) {
-//				computeTypeScore(toponym, criterionToponymCandidate.getCandidate());
-//			}
-//		}
 
-//		// ancienne récusion pour trouver des candidats en faisant baisser le seuil (à 
-//		// insérer dans la fonction getCandidatesSelection)
-//		int i = 0;
-//		while (result.entrySet().stream().anyMatch(entry -> entry.getValue().isEmpty())) {
-//			i++;
-//			logger.info(i + "eme itération");
-//			threshold = threshold - 0.01f;
-//			HashMap<String, String> toponymsTEITmp = new HashMap<>();
-//			result.entrySet().stream().filter(entry -> entry.getValue().isEmpty()).forEach(entry -> 
-//				toponymsTEITmp.put(entry.getKey(), toponymsTEI.get(entry.getKey()))
-//			);
-//			HashMap<String, Set<String>> resultTmp = getCandidatesSelection(
-//					toponymsTEITmp, 
-//					candidatesFromKB, 
-//					threshold);
-//			for (Iterator<Entry<String, Set<String>>> iterator = resultTmp.entrySet().iterator(); iterator.hasNext();) {
-//				Entry<String, Set<String>> candidate = iterator.next();
-//				result.put(candidate.getKey(), candidate.getValue());
-//			}
-//		}
-
-//		logger.info("Affichage des résultats");
-//		for (Iterator<String> iterator = result.keySet().iterator(); iterator.hasNext();) {
-//			String key = iterator.next();
-//			Set<String> candidates = result.get(key);
-//			String s = key + " (" + candidates.size() + ") : ";
-//			for (String string : candidates) {
-//				s += string + ", ";
-//			}
-//			logger.info(s);
-//		}
 		logger.info("Vérification des résultats");
 		if (result.stream().anyMatch(entry -> entry.getScoreCriterionToponymCandidate().isEmpty() 
 				|| entry.getScoreCriterionToponymCandidate().size() < 10 
@@ -117,61 +89,36 @@ public class GraphMatching {
 		} else {
 			logger.info("pas de topo sans candidat pour le score de label");
 		}
-//		if (result.stream().anyMatch(entry -> entry.getTypeCriterionToponymCandidate().isEmpty())) {
-//			for (Iterator<Toponym> iterator = result.iterator(); iterator.hasNext();) {
-//				Toponym key = iterator.next();
-//				List<CriterionToponymCandidate> candidates = key.getTypeCriterionToponymCandidate();
-//				if (candidates.isEmpty())
-//					logger.info(key.getResource());
-//			}
-//		} else {
-//			logger.info("pas de topo sans candidat pour le score de type");
-//		}
 		
-//		int typeMatchedCount = 0;
-//		int typeNotMatchedCount = 0;
-//		float epsilon = 0.00000001f;
-//		for (Iterator<Toponym> iterator = result.iterator(); iterator.hasNext();) {
-//			Toponym key = iterator.next();
-//			List<CriterionToponymCandidate> candidates = key.getTypeCriterionToponymCandidate();
-//			typeNotMatchedCount += candidates.stream().filter(c -> Math.abs(c.getValue() - 0f) < epsilon).count();
-//			typeMatchedCount += candidates.stream().filter(c -> Math.abs(c.getValue() - 1f) < epsilon).count();
+		Resource ruffec = teiRdf.getResource("http://data.ign.fr/id/propagation/Place/0");
+		Resource chize = teiRdf.getResource("http://data.ign.fr/id/propagation/Place/1");
+		StmtIterator iter = chize.listProperties();
+		while (iter.hasNext()) {
+		    Statement stmt      = iter.nextStatement();  // get next statement
+		    Resource  subject   = stmt.getSubject();     // get the subject
+		    Property  predicate = stmt.getPredicate();   // get the predicate
+		    RDFNode   object    = stmt.getObject();      // get the object
+
+		    System.out.print(subject.toString());
+		    System.out.print(" " + predicate.toString() + " ");
+		    if (object instanceof Resource) {
+		       System.out.print(object.toString());
+		    } else {
+		        // object is a literal
+		        System.out.print(" \"" + object.toString() + "\"");
+		    }
+
+		    System.out.println(" .");
+		} 
+		Resource ruffecCharente = kbSource.getResource("http://fr.dbpedia.org/resource/Ruffec_(Charente)");
+//		Toponym ruffecToponym = result.stream().filter(t -> t.getResource().equalsIgnoreCase("http://data.ign.fr/id/propagation/Place/0")).findFirst().get();
+//		List<String> ruffecCandidates = ruffecToponym.getScoreCriterionToponymCandidate().stream().map(s -> s.getCandidate().getResource()).collect(Collectors.toList());
+//		for (String string : ruffecCandidates) {
+//			System.out.println(string);
 //		}
-//		logger.info("Type matched : " + typeMatchedCount);
-//		logger.info("Type not matched : " + typeNotMatchedCount);
-		
 		return result;
-	}
+	}	
 	
-	
-	/**
-	 * Compute the type score. If the type value of the toponym is in the type values of the candidate. 0 else.
-	 *
-	 * @param toponym the toponym
-	 * @param candidate the candidate
-	 * @return the criterion toponym candidate
-	 */
-	@Deprecated
-	static CriterionToponymCandidate computeTypeScore(Toponym toponym, Candidate candidate) {
-		Criterion criterion = Criterion.scoreType;
-		CriterionToponymCandidate criterionToponymCandidate;
-		String suffixTopo = toponym.getType().toString().substring(toponym.getType().toString().lastIndexOf(':'));
-		Boolean ok = false;
-		for (String candidateType : candidate.getTypes()) {
-			String suffixCandidate = candidateType.substring(candidateType.lastIndexOf(':'));
-			if (suffixTopo.equalsIgnoreCase(suffixCandidate)) {
-				ok = true;
-				break;
-			}
-		}
-		if (ok) {
-			criterionToponymCandidate = new CriterionToponymCandidate(toponym, candidate, 1f, criterion);			
-		} else {
-			criterionToponymCandidate = new CriterionToponymCandidate(toponym, candidate, 0f, criterion);			
-		}
-		toponym.addTypeCriterionToponymCandidate(criterionToponymCandidate);
-		return criterionToponymCandidate;
-	}
 	
 	
 	/**
@@ -208,6 +155,13 @@ public class GraphMatching {
 		return result;
 	}
 
+	/**
+	 * Return true if the type to check is contained in the set of types.
+	 *
+	 * @param typeToCheck the type to check
+	 * @param types the types
+	 * @return true, if successful
+	 */
 	static boolean typeContained(String typeToCheck, Set<String> types) {
 		String typeToponym = typeToCheck.substring(typeToCheck.lastIndexOf(':') + 1);
 		for (String t : types) {
@@ -223,14 +177,12 @@ public class GraphMatching {
 	 *
 	 * @return the toponyms from tei
 	 */
-	static Set<Toponym> getToponymsFromTei() {
-		logger.info("Chargement du TEI");
-		Document teiSource = XMLUtil.createDocumentFromFile("d://temp7.rdf");
+	static Set<Toponym> getToponymsFromTei(Model teiRdf) {
 		Set<Toponym> results = new HashSet<>();
 		logger.info("Récupération des toponymes du TEI");
 		List<QuerySolution> qSolutionsTEI = new ArrayList<>();
 		try {
-			qSolutionsTEI.addAll(RDFUtil.getQuerySelectResults(teiSource,
+			qSolutionsTEI.addAll(RDFUtil.getQuerySelectResults(teiRdf,
 					"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
 							+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
 							+ "PREFIX prop-fr: <http://fr.dbpedia.org/property/>"
@@ -260,17 +212,17 @@ public class GraphMatching {
 	 *
 	 * @return the candidates from kb
 	 */
-	static List<Candidate> getCandidatesFromKB() {
+	static List<Candidate> getCandidatesFromKB(Model kbSource) {
 		List<QuerySolution> qSolutionsKB = new ArrayList<>();
 		List<QuerySolution> qSolutionsTypes = new ArrayList<>();
 		List<Candidate> result = new ArrayList<>();
 
 		logger.info("Chargement de la KB");
-		final Model kbSource = ModelFactory.createDefaultModel().read("D:\\\\dbpedia\\\\dbpedia_all.n3");
+		final Model kbSourceFinal = kbSource;
 		logger.info("Récupérations des candidats de la KB");
 
 		try {
-			qSolutionsKB.addAll(RDFUtil.getQuerySelectResults(kbSource,
+			qSolutionsKB.addAll(RDFUtil.getQuerySelectResults(kbSourceFinal,
 					"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" + 
 					"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" + 
 					"PREFIX prop-fr: <http://fr.dbpedia.org/property/>" + 
@@ -286,7 +238,7 @@ public class GraphMatching {
 		}
 		logger.info("Récupérations des types des candidats de la KB");
 		try {
-			qSolutionsTypes.addAll(RDFUtil.getQuerySelectResults(kbSource, "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" + 
+			qSolutionsTypes.addAll(RDFUtil.getQuerySelectResults(kbSourceFinal, "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" + 
 					"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" + 
 					"PREFIX prop-fr: <http://fr.dbpedia.org/property/>" + 
 					"PREFIX foaf: <http://xmlns.com/foaf/0.1/>" + 
