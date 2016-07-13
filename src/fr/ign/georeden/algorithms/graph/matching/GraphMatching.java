@@ -65,7 +65,33 @@ public class GraphMatching {
 		logger.info(toponymsTEI.size() + " toponymes dans le TEI");
 		
 
+		logger.info("Chargement de la KB");
 		final Model kbSource = ModelFactory.createDefaultModel().read("D:\\\\dbpedia\\\\dbpedia_all.n3");
+		// // calcul du nombre de lien moyen par noeud (entre dbo:place)
+//		try {
+//			List<QuerySolution> sol = RDFUtil.getQuerySelectResults(kbSource, "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" + 
+//					"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" + 
+//					"PREFIX prop-fr: <http://fr.dbpedia.org/property/>" + 
+//					"PREFIX foaf: <http://xmlns.com/foaf/0.1/>" + 
+//					"PREFIX xml: <https://www.w3.org/XML/1998/namespace>" + 
+//					"PREFIX dbo: <http://dbpedia.org/ontology/>" + 
+//					"PREFIX ign: <http://example.com/namespace/>" + 
+//					"SELECT (AVG(?count) as ?avg) WHERE {" + 
+//					"SELECT ?s (count(*) as ?count) WHERE {" + 
+//					"    ?s ?p ?t ." + 
+//					"    ?t rdf:type dbo:Place ." + 
+//					"  {" + 
+//					"SELECT DISTINCT ?s WHERE {" + 
+//					"	?s rdf:type dbo:Place ." + 
+//					"    }}" + 
+//					"} GROUP BY ?s }");
+//			String avg = RDFUtil.getURIOrLexicalForm(sol.get(0), "avg");
+//			System.out.println(avg);
+//		} catch (QueryParseException | HttpHostConnectException | RiotException | MalformedURLException
+//				| HttpException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		final List<Candidate> candidatesFromKB = getCandidatesFromKB(kbSource);
 
 
