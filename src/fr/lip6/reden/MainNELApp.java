@@ -279,7 +279,7 @@ public class MainNELApp {
 						if (kBsLocalNoNetwork.equalsIgnoreCase("false"))
 							GraphHandlerNEL.retrieveBaseRDFData(rdfData, allMentionsWithURIs, baseUris);						
 						
-						//load base model (for minimizing possible errors, we separate both steps)
+						//load base model (for minimizing possible errors, we separate both steps) NEW VERSION
 						Model model = GraphHandlerNEL.loadBaseRDFModel(rdfData, allMentionsWithURIs, baseUris);
 						
 						if (model != null) {
