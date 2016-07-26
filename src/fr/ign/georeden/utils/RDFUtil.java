@@ -114,6 +114,22 @@ public class RDFUtil {
 			throw new HttpException(e.getMessage());
 		}
 	}
+	
+	public static Model getQueryConstruct(Model documentModel, String queryString, OutputStream outputStream)
+			throws QueryParseException, MalformedURLException, HttpHostConnectException, HttpException, RiotException {
+		if (queryString == null || queryString.isEmpty())
+			return null;
+		Model results = null;
+		Query query = QueryFactory.create(queryString);
+		try (QueryExecution queryExecution = QueryExecutionFactory.create(query, documentModel)) {
+			results = queryExecution.execConstruct();
+			if (outputStream == null)
+				return results;
+			return results.write(outputStream, "TURTLE");
+		} catch (QueryExceptionHTTP e) {
+			throw new HttpException(e.getMessage());
+		}
+	}
 
 	public static Model getQueryConstruct(Document rdfXml, String queryString, OutputStream outputStream)
 			throws QueryParseException, MalformedURLException, HttpHostConnectException, HttpException, RiotException {

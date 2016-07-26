@@ -1,7 +1,10 @@
 package fr.ign.georeden.algorithms.graph.matching;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -20,20 +23,31 @@ import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 
 import com.hp.hpl.jena.graph.Graph;
+import com.hp.hpl.jena.ontology.OntTools;
+import com.hp.hpl.jena.ontology.OntTools.PredicatesFilter;
 import com.hp.hpl.jena.query.QueryParseException;
 import com.hp.hpl.jena.query.QuerySolution;
+import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.NodeIterator;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.RDFNode;
+import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
+import com.hp.hpl.jena.util.iterator.Filter;
 
 import fr.ign.georeden.algorithms.string.StringComparisonDamLev;
+import fr.ign.georeden.graph.LabeledEdge;
+//import fr.ign.georeden.graph.Toponym;
+import fr.ign.georeden.kb.SpatialRelationship;
 import fr.ign.georeden.kb.ToponymType;
 import fr.ign.georeden.utils.RDFUtil;
 import fr.ign.georeden.utils.XMLUtil;
+
+import org.jgrapht.graph.SimpleDirectedGraph;
 
 /**
  * The Class GraphMatching.
@@ -67,85 +81,186 @@ public class GraphMatching {
 
 		logger.info("Chargement de la KB");
 		final Model kbSource = ModelFactory.createDefaultModel().read("D:\\\\dbpedia\\\\dbpedia_all.n3");
-		// // calcul du nombre de lien moyen par noeud (entre dbo:place)
-//		try {
-//			List<QuerySolution> sol = RDFUtil.getQuerySelectResults(kbSource, "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" + 
-//					"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" + 
-//					"PREFIX prop-fr: <http://fr.dbpedia.org/property/>" + 
-//					"PREFIX foaf: <http://xmlns.com/foaf/0.1/>" + 
-//					"PREFIX xml: <https://www.w3.org/XML/1998/namespace>" + 
-//					"PREFIX dbo: <http://dbpedia.org/ontology/>" + 
-//					"PREFIX ign: <http://example.com/namespace/>" + 
-//					"SELECT (AVG(?count) as ?avg) WHERE {" + 
-//					"SELECT ?s (count(*) as ?count) WHERE {" + 
-//					"    ?s ?p ?t ." + 
-//					"    ?t rdf:type dbo:Place ." + 
-//					"  {" + 
-//					"SELECT DISTINCT ?s WHERE {" + 
-//					"	?s rdf:type dbo:Place ." + 
-//					"    }}" + 
-//					"} GROUP BY ?s }");
-//			String avg = RDFUtil.getURIOrLexicalForm(sol.get(0), "avg");
-//			System.out.println(avg);
-//		} catch (QueryParseException | HttpHostConnectException | RiotException | MalformedURLException
-//				| HttpException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		
+		Model sourceGraph = getSubGraphWithResources(kbSource);
+
+		logger.info("Calcul du plus court chemin en cours... ");
+		Resource start = sourceGraph.getResource("http://fr.dbpedia.org/resource/Ruffec_(Charente)");//Saint-Jean-de-Luz
+		Resource end = sourceGraph.getResource("http://fr.dbpedia.org/resource/La_Rochelle");
+		//Ruffec_(Charente)
+		//Aulnay_(Charente-Maritime)
+		//Chizé
+		//Surgères
+		//Rochefort_(Charente-Maritime)
+		//La_Rochelle
+		//Saint-Jean-d'Angély
+		List<Property> properties = new ArrayList<>();
+		properties.add(sourceGraph.createProperty("http://fr.dbpedia.org/property/nord"));
+		properties.add(sourceGraph.createProperty("http://fr.dbpedia.org/property/nordEst"));
+		properties.add(sourceGraph.createProperty("http://fr.dbpedia.org/property/nordOuest"));
+		properties.add(sourceGraph.createProperty("http://fr.dbpedia.org/property/sud"));
+		properties.add(sourceGraph.createProperty("http://fr.dbpedia.org/property/sudEst"));
+		properties.add(sourceGraph.createProperty("http://fr.dbpedia.org/property/sudOuest"));
+		properties.add(sourceGraph.createProperty("http://fr.dbpedia.org/property/est"));
+		properties.add(sourceGraph.createProperty("http://fr.dbpedia.org/property/ouest"));
+		PredicatesFilter filter = new PredicatesFilter(properties);
+		OntTools.Path path = OntTools.findShortestPath(sourceGraph, start, end, filter);//Filter.any
+		if (path != null && !path.isEmpty()) {
+			logger.info("longeur du chemin le plus court : " + path.size());
+			logger.info("chemin le plus court : " + path.toString());
+		}
+		else logger.info("longeur du chemin le plus court : KO");
+		
+
 		final List<Candidate> candidatesFromKB = getCandidatesFromKB(kbSource);
 
 
 		Set<Toponym> result = getCandidatesSelection(toponymsTEI, candidatesFromKB, numberOfCandidate);
 		logger.info(result.size() + " candidats");
+		// il faut filter les toponyms de toponymsTEI en ne gardant que ceux qui sont dans teiRDF
+		// et donc il faut remplacer teiRDF par le graphe RDF d'une sequence
+		AStarBeamSearch(sourceGraph, teiRdf, 10, numberOfCandidate, toponymsTEI, candidatesFromKB);
 
-
-		logger.info("Vérification des résultats");
-		if (result.stream().anyMatch(entry -> entry.getScoreCriterionToponymCandidate().isEmpty() 
-				|| entry.getScoreCriterionToponymCandidate().size() < 10 
-				|| entry.getName().equalsIgnoreCase("Ruffec"))) {
-			for (Iterator<Toponym> iterator = result.iterator(); iterator.hasNext();) {
-				Toponym key = iterator.next();
-				List<CriterionToponymCandidate> candidates = key.getScoreCriterionToponymCandidate();
-				if (candidates.isEmpty() || candidates.size() < 10) {
-					logger.info(key.getResource() + " : " + candidates.size());
-				} else if (key.getName().equalsIgnoreCase("Ruffec")) {
-					logger.info(key.getResource() + " (" + key.getName() +") : " + candidates.get(0).getCandidate().getResource());
-				}
-			}
-		} else {
-			logger.info("pas de topo sans candidat pour le score de label");
-		}
-		
-		Resource ruffec = teiRdf.getResource("http://data.ign.fr/id/propagation/Place/0");
-		Resource chize = teiRdf.getResource("http://data.ign.fr/id/propagation/Place/1");
-		StmtIterator iter = chize.listProperties();
-		while (iter.hasNext()) {
-		    Statement stmt      = iter.nextStatement();  // get next statement
-		    Resource  subject   = stmt.getSubject();     // get the subject
-		    Property  predicate = stmt.getPredicate();   // get the predicate
-		    RDFNode   object    = stmt.getObject();      // get the object
-
-		    System.out.print(subject.toString());
-		    System.out.print(" " + predicate.toString() + " ");
-		    if (object instanceof Resource) {
-		       System.out.print(object.toString());
-		    } else {
-		        // object is a literal
-		        System.out.print(" \"" + object.toString() + "\"");
-		    }
-
-		    System.out.println(" .");
-		} 
-		Resource ruffecCharente = kbSource.getResource("http://fr.dbpedia.org/resource/Ruffec_(Charente)");
-//		Toponym ruffecToponym = result.stream().filter(t -> t.getResource().equalsIgnoreCase("http://data.ign.fr/id/propagation/Place/0")).findFirst().get();
-//		List<String> ruffecCandidates = ruffecToponym.getScoreCriterionToponymCandidate().stream().map(s -> s.getCandidate().getResource()).collect(Collectors.toList());
-//		for (String string : ruffecCandidates) {
-//			System.out.println(string);
+//		logger.info("Vérification des résultats");
+//		if (result.stream().anyMatch(entry -> entry.getScoreCriterionToponymCandidate().isEmpty() 
+//				|| entry.getScoreCriterionToponymCandidate().size() < 10 
+//				//|| entry.getName().equalsIgnoreCase("Ruffec")
+//				|| entry.getScoreCriterionToponymCandidate().stream().map(m -> m.getValue()).max(Float::compare).get() <= 0f)) {
+//			for (Iterator<Toponym> iterator = result.iterator(); iterator.hasNext();) {
+//				Toponym key = iterator.next();
+//				List<CriterionToponymCandidate> candidates = key.getScoreCriterionToponymCandidate();
+//				if (candidates.isEmpty() || candidates.size() < 10) {
+//					logger.info("taille : " + key.getResource() + " : " + candidates.size());
+//				} 
+////				else if (key.getName().equalsIgnoreCase("Ruffec")) {
+////					logger.info(key.getResource() + " (" + key.getName() +") : " + candidates.get(0).getCandidate().getResource());
+////				} 
+//				else if (key.getScoreCriterionToponymCandidate().stream().map(m -> m.getValue()).max(Float::compare).get() <= 0f) {
+//					logger.info("scores : " + key.getResource() + " (" + key.getName() +") : " + candidates.get(0).getCandidate().getResource());
+//				}
+//			}
+//		} else {
+//			logger.info("pas de topo sans candidat pour le score de label");
 //		}
+		
+		
+		
 		return result;
 	}	
 	
+	static void saveModelToFile(String fileName, Model model) {
+		File file = new File(fileName);
+		try {
+			model.write(new java.io.FileOutputStream(file));
+		} catch (FileNotFoundException e) {
+			logger.error(e);
+		}
+	}
+
+//	static void fuseRDFGraphsIntoJGTGraph(Model model) {
+//		SimpleDirectedGraph<Toponym, LabeledEdge<Toponym, String>> graph = new SimpleDirectedGraph<>((Class<? extends LabeledEdge<Toponym, String>>) LabeledEdge.class);
+//		
+//	}
 	
+	
+	/**
+ * A star beam search.
+ *
+ * @param source the source (KB subgraph with only resources linked by prop-fr properties)
+ * @param target the target (graph from a TEI's sequence)
+ * @param maxNumberOfNodesToProcess the max number of nodes to process
+ * @param numberOfCandidatByToponym the number of candidat by toponym
+ * @param toponymsTEI the toponyms TEI
+ * @param candidates the candidates from the KB
+ */
+static void AStarBeamSearch(Model source, Model target, int maxNumberOfNodesToProcess, int numberOfCandidatByToponym,
+			Set<Toponym> toponymsTEI) {
+		CriterionToponymCandidate firstC = toponymsTEI.stream().sorted((t1, t2) -> 
+			Float.compare(t2.getScoreCriterionToponymCandidate().stream().map(m -> m.getValue()).max(Float::compare).get(),
+			t1.getScoreCriterionToponymCandidate().stream().map(m -> m.getValue()).max(Float::compare).get())).limit(1)
+				.collect(Collectors.toList()).get(0).getScoreCriterionToponymCandidate().stream().sorted((c1,c2)->
+				Float.compare(c2.getValue(), c1.getValue())).limit(1).collect(Collectors.toList()).get(0);
+		Resource firstR = source.getResource(firstC.getCandidate().getResource());
+		logger.info("CriterionToponymCandidate : " + firstC.getValue() + " / " + firstC.getCandidate().getResource());
+		logger.info("CriterionToponymCandidate est dans liste des candidats : " + isResourceACandidate(firstR, toponymsTEI)); // doit être faux pr massif sri lanka
+	}
+	static boolean isResourceACandidate(Resource r, Set<Toponym> toponymsTEI) {
+		return toponymsTEI.stream().anyMatch(t -> t.getScoreCriterionToponymCandidate().stream().anyMatch(c ->
+		c.getCandidate().getResource().equals(r.getURI())));
+	}
+	static double meanNumberOfLinksByNode(Model kbSource) {
+		 // calcul du nombre de lien moyen par noeud (entre dbo:place)
+		double result = 0;
+		try {
+			List<QuerySolution> sol = RDFUtil.getQuerySelectResults(kbSource, "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" + 
+					"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" + 
+					"PREFIX prop-fr: <http://fr.dbpedia.org/property/>" + 
+					"PREFIX foaf: <http://xmlns.com/foaf/0.1/>" + 
+					"PREFIX xml: <https://www.w3.org/XML/1998/namespace>" + 
+					"PREFIX dbo: <http://dbpedia.org/ontology/>" + 
+					"PREFIX ign: <http://example.com/namespace/>" + 
+					"SELECT (AVG(?count) as ?avg) WHERE {" + 
+					"SELECT ?s (count(*) as ?count) WHERE {" + 
+					"    ?s ?p ?t ." + 
+					"    ?t rdf:type dbo:Place ." + 
+					"  {" + 
+					"SELECT DISTINCT ?s WHERE {" + 
+					"	?s rdf:type dbo:Place ." + 
+					"    }}" + 
+					"} GROUP BY ?s }");
+			String avg = RDFUtil.getURIOrLexicalForm(sol.get(0), "avg");
+			result = Double.parseDouble(avg);
+		} catch (QueryParseException | HttpHostConnectException | RiotException | MalformedURLException
+				| HttpException e) {
+			logger.error(e);
+		}
+		return result;
+	}
+	
+	/**
+	 * Gets the sub graph with only the resources (no literals) linked by prop-fr.nord, prop-fr:sud, etc.
+	 *
+	 * @param kbSource the kb source
+	 * @return the sub graph with resources
+	 */
+	static Model getSubGraphWithResources(Model kbSource) {
+		logger.info("Récupération du sous graphe de la base de connaissance.");
+		Model model = null;
+		try {
+			model = RDFUtil.getQueryConstruct(kbSource, "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" + 
+					"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" + 
+					"PREFIX prop-fr: <http://fr.dbpedia.org/property/>" + 
+					"PREFIX foaf: <http://xmlns.com/foaf/0.1/>" + 
+					"PREFIX xml: <https://www.w3.org/XML/1998/namespace>" + 
+					"PREFIX dbo: <http://dbpedia.org/ontology/>" + 
+					"PREFIX ign: <http://example.com/namespace/>" + 
+					"CONSTRUCT {?s ?p ?o} WHERE {" + 
+					"  ?s ?p ?o." + 
+					"  FILTER((?p=prop-fr:nord||?p=prop-fr:nordEst||?p=prop-fr:nordOuest||?p=prop-fr:sud" + 
+					"  ||?p=prop-fr:sudEst||?p=prop-fr:sudOuest||?p=prop-fr:est||?p=prop-fr:ouest) && !isLiteral(?o))." + 
+					"}", null);			
+			ResIterator iter = model.listSubjects();
+			Set<Resource> resources = new HashSet<>();
+			while (iter.hasNext()) {
+			    Resource r = iter.nextResource();
+			    resources.add(r);
+			}
+			NodeIterator nIter = model.listObjects();
+			while (nIter.hasNext()) {
+				RDFNode rdfNode = nIter.nextNode();
+				if (rdfNode.isResource()) {
+					Resource r = (Resource) rdfNode;
+					if (!r.isAnon()) {
+					    resources.add(r);
+					}
+				}
+			}
+		} catch (QueryParseException | HttpHostConnectException | RiotException | MalformedURLException
+				| HttpException e) {
+			logger.error(e);
+		}
+		return model;
+	}
 	
 	/**
 	 * Gets the candidates selection.
