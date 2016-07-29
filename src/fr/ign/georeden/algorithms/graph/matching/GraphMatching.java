@@ -90,8 +90,8 @@ public class GraphMatching {
 		Model sourceGraph = getSubGraphWithResources(kbSource);
 
 		logger.info("Calcul du plus court chemin en cours... ");
-		Resource start = sourceGraph.getResource("http://fr.dbpedia.org/resource/Massif_Central_(Sri_Lanka)");// Saint-Jean-de-Luz
-		Resource end = sourceGraph.getResource("http://fr.dbpedia.org/resource/Pars");
+		Resource start = sourceGraph.getResource("http://fr.dbpedia.org/resource/Chizé");// Saint-Jean-de-Luz
+		Resource end = sourceGraph.getResource("http://fr.dbpedia.org/resource/Saint-Jean-d'Angély");
 		// Ruffec_(Charente)
 		// Aulnay_(Charente-Maritime)
 		// Chizé
@@ -123,7 +123,9 @@ public class GraphMatching {
 		// il faut filter les toponyms de toponymsTEI en ne gardant que ceux qui
 		// sont dans teiRDF
 		// et donc il faut remplacer teiRDF par le graphe RDF d'une sequence
-		getRDFSequences(teiRdf);
+		
+		//getRDFSequences(teiRdf);
+		
 		// AStarBeamSearch(sourceGraph, teiRdf, 10, numberOfCandidate,
 		// toponymsTEI, candidatesFromKB);
 
@@ -205,29 +207,45 @@ public class GraphMatching {
 			Resource first = (Resource)waypointsResource.getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#first")).getObject();
 			RDFNode restNode = waypointsResource.getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#rest")).getObject();
 			// first est un Bag
-			logger.info("first : " + getType(first, teiModel));		
-			List<List<Resource>> possibleBags = generateFromBag(first, teiModel);
-			for (List<Resource> listResource : possibleBags) {
-				logger.info("Nouveau bag");
-				for (Resource resource : listResource) {
-					logger.info(resource);
-				}
-			}
-			// S'occuper du rest
-//			while(!restNode.isLiteral()) {
-//				
+			//logger.info("first : " + getType(first, teiModel));	
+			List<List<Resource>> possibleBags = new ArrayList<>();
+			possibleBags.add(new ArrayList<>());	
+			possibleBags = generateFromBag(first, teiModel, possibleBags);
+//			for (List<Resource> listResource : possibleBags) {
+//				//logger.info("Nouveau bag");
+//				for (Resource resource : listResource) {
+//					logger.info(resource);
+//				}
 //			}
-			if (restNode.isLiteral()) {
-				logger.info("rest=literal :" + restNode.asLiteral().getValue()); // pb sur le reste de 13_1 (plaine poitevine)
-			} else {
+			// S'occuper du rest
+			if (!restNode.isLiteral()) {
 				Resource rest = (Resource)restNode;
 				if (rest.isAnon() || !rest.getLocalName().equals("nil")) {
 					Resource firstOfRest = (Resource)rest.getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#first")).getObject();
-					logger.info("firstOfRest : " + getType(firstOfRest, teiModel)); // bag
-					rest.listProperties().toList().stream().forEach(logger::info);
-					// rest du rest à traiter
+					possibleBags = generateFromBag(firstOfRest, teiModel, possibleBags);
+					restNode = rest.getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#rest")).getObject();
+					while(!restNode.isLiteral() && (restNode.isAnon())) {					
+						firstOfRest = (Resource)((Resource)restNode).getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#first")).getObject();
+						possibleBags = generateFromBag(firstOfRest, teiModel, possibleBags);
+						if (!((Resource)restNode).hasProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#rest")))
+							break;
+						//rest.listProperties().toList().forEach(logger::info);
+						restNode = ((Resource)restNode).getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#rest")).getObject();
+					}
 				}
 			}
+			logger.info(possibleBags.size());
+//			if (restNode.isLiteral()) {
+//				logger.info("rest=literal :" + restNode.asLiteral().getValue()); // pb sur le reste de 13_1 (plaine poitevine)
+//			} else {
+//				Resource rest = (Resource)restNode;
+//				if (rest.isAnon() || !rest.getLocalName().equals("nil")) {
+//					Resource firstOfRest = (Resource)rest.getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#first")).getObject();
+//					logger.info("firstOfRest : " + getType(firstOfRest, teiModel)); // bag
+//					rest.listProperties().toList().stream().forEach(logger::info);
+//					// rest du rest à traiter
+//				}
+//			}
 		}
 		return result;
 	}
@@ -237,10 +255,8 @@ public class GraphMatching {
 //	}
 	
 	
-	static List<List<Resource>> generateFromBag(Resource bag, Model teiModel) {
+	static List<List<Resource>> generateFromBag(Resource bag, Model teiModel, List<List<Resource>> results) {
 		// On retourne une liste de liste, car pour chaque rdf:Alt, une nouvelle possibilité est créée
-		List<List<Resource>> results = new ArrayList<>();
-		results.add(new ArrayList<>());
 		List<Property> bagProperties = new ArrayList<>();
 		Property type = teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
 		Property spatialReference = teiModel.createProperty("http://data.ign.fr/def/itineraires#spatialReference");
@@ -254,13 +270,12 @@ public class GraphMatching {
 				Resource waypoint = (Resource)node;
 				Statement statement = waypoint.getProperty(spatialReference);
 				if (statement != null) {
-					Resource toponym = (Resource) statement.getObject();
+					Resource toponym = (Resource) statement.getObject();					
 					for (List<Resource> list : results) {
 						list.add(toponym);
 					}
 				} else {
 					// on est dans une rdf:Alt
-					List<List<Resource>> listsToRemove = new ArrayList<>();
 					List<List<Resource>> listsToAdd = new ArrayList<>();
 					for (List<Resource> list : results) {
 						for (Resource alt : getAlternatives(waypoint, teiModel)) {
