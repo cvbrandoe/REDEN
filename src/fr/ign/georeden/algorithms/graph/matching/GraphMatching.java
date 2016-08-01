@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 import javax.naming.spi.DirStateFactory.Result;
 
 import org.apache.http.conn.HttpHostConnectException;
+import org.apache.jena.atlas.lib.NotImplemented;
 import org.apache.jena.atlas.web.HttpException;
 import org.apache.jena.riot.RiotException;
 import org.apache.log4j.Logger;
@@ -39,6 +40,7 @@ import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
+import com.hp.hpl.jena.sparql.function.library.e;
 import com.hp.hpl.jena.util.iterator.Filter;
 
 import fr.ign.georeden.algorithms.string.StringComparisonDamLev;
@@ -59,7 +61,7 @@ public class GraphMatching {
 	/** The logger. */
 	private static Logger logger = Logger.getLogger(GraphMatching.class);
 
-	public static String teiPath = "d://temp7.rdf";
+	public static String teiPath = "D:\\temp7.rdf";
 
 	/**
 	 * Instantiates a new graph matching.
@@ -79,6 +81,7 @@ public class GraphMatching {
 		logger.info("Chargement du TEI");
 		Document teiSource = XMLUtil.createDocumentFromFile(teiPath);
 		Model teiRdf = RDFUtil.getModel(teiSource);
+		logger.info("Model TEI vide : " + teiRdf.isEmpty());
 		Set<Toponym> toponymsTEI = getToponymsFromTei(teiRdf);
 		logger.info(toponymsTEI.size() + " toponymes dans le TEI");
 		
@@ -161,46 +164,145 @@ public class GraphMatching {
 
 		return result;
 	}
-
+	
 	static List<Model> getRDFSequences(Model teiModel) {
-		List<Model> results = new ArrayList<>();
-		
-		Resource seq = teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq");
-		Property type = teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
-		ResIterator iter = teiModel.listSubjectsWithProperty(type, seq);
-		while (iter.hasNext()) {
-			Resource sequence = (Resource) iter.next();
-			results.add(generateFromSequence(sequence, teiModel));
+		String query = 
+				"PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>" + 
+				"PREFIX iti:<http://data.ign.fr/def/itineraires#>" + 
+				"SELECT ?sequence ?route ?bag ?waypoint ?spatialReference ?spatialReferenceAlt WHERE {" + 
+				"    ?sequence rdf:type rdf:Seq ." + 
+				"    ?sequence ?pSeq ?route ." + 
+				"    ?route iti:waypoints ?waypoints ." + 
+				"    ?waypoints rdf:rest*/rdf:first ?bag ." + 
+				"  	?bag ?pBag ?waypoint ." + 
+				"  	OPTIONAL { ?waypoint iti:spatialReference ?spatialReference . }" + 
+				"  	OPTIONAL {" + 
+				"    	?waypoint rdf:type rdf:Alt ." + 
+				"    	?waypoint ?pWaypoint ?waypointBis ." + 
+				"    	?waypointBis iti:spatialReference ?spatialReferenceAlt ." + 
+				"  	}" + 
+				"    FILTER (?pSeq != rdf:type && ?pBag != rdf:type && ?pBag != rdf:first) ." + 
+				"} ORDER BY ?sequence ?route ?bag ?waypoint";
+		List<QuerySolution> querySolutions = new ArrayList<>();
+		try {
+			querySolutions.addAll(RDFUtil.getQuerySelectResults(teiModel, query));
+		} catch (QueryParseException | HttpHostConnectException | RiotException | MalformedURLException
+				| HttpException e) {
+			logger.info(e);
 		}
+		List<Model> results = new ArrayList<>();
+		Set<Resource> usedSequences = new HashSet<>();
+		Set<Resource> usedRoutes = new HashSet<>();
+		Resource lastUsedBag = null;
+		Property linkSameRoute = teiModel.createProperty("ign:linkSameRoute");
+		Property linkSameSequence = teiModel.createProperty("ign:linkSameSequence");
+		Property linkSameBag = ModelFactory.createDefaultModel().createProperty("ign:linkSameBag");
+		List<QuerySolutionEntry> querySolutionEntries = new ArrayList<>();
+		for (QuerySolution querySolution : querySolutions) {
+			Resource sequence = (Resource) querySolution.get("sequence");
+			Resource route = (Resource) querySolution.get("route");
+			Resource bag = (Resource) querySolution.get("bag");
+			Resource waypoint = (Resource) querySolution.get("waypoint");
+			Resource spatialReference = (Resource) querySolution.get("spatialReference");
+			Resource spatialReferenceAlt = (Resource) querySolution.get("spatialReferenceAlt");
+			querySolutionEntries.add(new QuerySolutionEntry(sequence, route, bag, waypoint, spatialReference, spatialReferenceAlt));
+//			Model currentModel = ModelFactory.createDefaultModel();
+//			if (usedSequences.contains(sequence)) {
+//				currentModel = results.get(results.size() - 1);
+//			} else {
+//				// c'est une nouvelle séquence, on réinitialise le dernier bag pr ne pas utilisé celui de la dernière séquence
+//				lastUsedBag = null;
+//			}
+//			
+//			
+//			if (lastUsedBag == null) {
+//				lastUsedBag = bag; // !! si la séquence ne contient qu'un bag, celui ci ne sera jamais inséré dans le model
+//			} else {
+//				if (usedRoutes.contains(route)) {
+//					results = createStatements(lastUsedBag, linkSameRoute, bag, results);
+//				} else { // c'est une nouvelle route
+//					usedRoutes.add(route);
+//					results = createStatements(lastUsedBag, linkSameSequence, bag, results);
+//				}
+//			}
+//			
+//			if (!usedSequences.contains(sequence)) {
+//				usedSequences.add(sequence);
+//				results.add(currentModel);
+//			}
+		}
+		Model currentModel = ModelFactory.createDefaultModel();
+		Map<Resource, List<QuerySolutionEntry>> byBag = querySolutionEntries.stream()
+				.collect(Collectors.groupingBy(QuerySolutionEntry::getBag));
+		byBag.keySet().stream().filter(key -> byBag.get(key).stream().filter(e -> e.getSpatialReference() != null).count() >= 2)
+			.forEach(key -> {
+			List<QuerySolutionEntry> entries = byBag.get(key);
+			List<Resource> bagElements = new ArrayList<>();
+			entries.stream().filter(e -> e.getSpatialReference() != null).forEach(q -> bagElements.add(q.getSpatialReference()));
+			for (int i = 0; i < bagElements.size() - 1; i++) {
+				for (int j = 1; j < bagElements.size(); j++) {
+					Resource el1 = bagElements.get(i);
+					Resource el2 = bagElements.get(j);
+					Statement s = currentModel.createStatement(el1, linkSameBag, el2);
+					currentModel.add(s);
+				}
+//				if (i < bagElements.size() - 1) {
+//					Resource el1 = bagElements.get(i);
+//					Resource el2 = bagElements.get(i + 1);
+//					Statement s = currentModel.createStatement(el1, linkSameBag, el2);
+//					currentModel.add(s);
+//				}
+			}
+		});
+		results.add(currentModel);
+		logger.info(currentModel);
+		logger.info(currentModel.size());
+		return results;
+	}
+	static List<Model> createStatements(Resource lastUsedBag, Property p, Resource bag, List<Model> results) {
 		
 		return results;
 	}
+//	static List<Model> getRDFSequences(Model teiModel) {
+//		List<Model> results = new ArrayList<>();
+//		
+//		Resource seq = teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq");
+//		Property type = teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
+//		ResIterator iter = teiModel.listSubjectsWithProperty(type, seq);
+//		while (iter.hasNext()) {
+//			Resource sequence = (Resource) iter.next();
+//			results.add(generateFromSequence(sequence, teiModel));
+//		}
+//		
+//		return results;
+//	}
 	
 	static Model generateFromSequence(Resource sequence, Model teiModel) {
-
-		Property type = teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
-		// traitements ici 
-		StmtIterator iter2 = sequence.listProperties();
-		List<Property> sequenceProperties = new ArrayList<>();
-		while (iter2.hasNext()) {
-			Statement statement = (Statement) iter2.next();
-			if (!statement.getPredicate().getLocalName().equals(type.getLocalName()))
-				sequenceProperties.add(statement.getPredicate());
-		}
-		Collections.sort(sequenceProperties, new CustomPropertyComparator());
-		List<Resource> routes = new ArrayList<>();				
-		for (Property property : sequenceProperties) {
-			RDFNode node = sequence.getProperty(property).getObject();
-			if (node.isResource()) {
-				Resource route = (Resource)node;
-				routes.add(route);
-			}
-		}
-		return generateFromRoutes(routes, teiModel);
+		throw new NotImplemented();
+//		Property type = teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
+//		// traitements ici 
+//		StmtIterator iter2 = sequence.listProperties();
+//		List<Property> sequenceProperties = new ArrayList<>();
+//		while (iter2.hasNext()) {
+//			Statement statement = (Statement) iter2.next();
+//			if (!statement.getPredicate().getLocalName().equals(type.getLocalName()))
+//				sequenceProperties.add(statement.getPredicate());
+//		}
+//		Collections.sort(sequenceProperties, new CustomPropertyComparator());
+//		List<Resource> routes = new ArrayList<>();				
+//		for (Property property : sequenceProperties) {
+//			RDFNode node = sequence.getProperty(property).getObject();
+//			if (node.isResource()) {
+//				Resource route = (Resource)node;
+//				routes.add(route);
+//			}
+//		}
+//		return generateFromRoutes(routes, teiModel);
 	}
 	
-	static Model generateFromRoutes(List<Resource> routes, Model teiModel) {
-		Model result = ModelFactory.createDefaultModel();
+	static List<Model> generateFromRoutes(List<Resource> routes, Model teiModel) {
+		List<Model> results = new ArrayList<>();
+		results.add(ModelFactory.createDefaultModel());
 		Property waypoints = teiModel.getProperty("http://data.ign.fr/def/itineraires#waypoints");
 		for (Resource route : routes) {
 			Resource waypointsResource = (Resource) route.getProperty(waypoints).getObject();
@@ -208,9 +310,9 @@ public class GraphMatching {
 			RDFNode restNode = waypointsResource.getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#rest")).getObject();
 			// first est un Bag
 			//logger.info("first : " + getType(first, teiModel));	
-			List<List<Resource>> possibleBags = new ArrayList<>();
-			possibleBags.add(new ArrayList<>());	
-			possibleBags = generateFromBag(first, teiModel, possibleBags);
+			//List<List<Resource>> possibleBags = new ArrayList<>();
+			//possibleBags.add(new ArrayList<>());	
+			results = generateFromBag(first, teiModel, results);
 //			for (List<Resource> listResource : possibleBags) {
 //				//logger.info("Nouveau bag");
 //				for (Resource resource : listResource) {
@@ -222,11 +324,11 @@ public class GraphMatching {
 				Resource rest = (Resource)restNode;
 				if (rest.isAnon() || !rest.getLocalName().equals("nil")) {
 					Resource firstOfRest = (Resource)rest.getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#first")).getObject();
-					possibleBags = generateFromBag(firstOfRest, teiModel, possibleBags);
+					results = generateFromBag(firstOfRest, teiModel, results);
 					restNode = rest.getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#rest")).getObject();
 					while(!restNode.isLiteral() && (restNode.isAnon())) {					
 						firstOfRest = (Resource)((Resource)restNode).getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#first")).getObject();
-						possibleBags = generateFromBag(firstOfRest, teiModel, possibleBags);
+						results = generateFromBag(firstOfRest, teiModel, results);
 						if (!((Resource)restNode).hasProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#rest")))
 							break;
 						//rest.listProperties().toList().forEach(logger::info);
@@ -234,7 +336,7 @@ public class GraphMatching {
 					}
 				}
 			}
-			logger.info(possibleBags.size());
+			logger.info(results.size());
 //			if (restNode.isLiteral()) {
 //				logger.info("rest=literal :" + restNode.asLiteral().getValue()); // pb sur le reste de 13_1 (plaine poitevine)
 //			} else {
@@ -247,7 +349,7 @@ public class GraphMatching {
 //				}
 //			}
 		}
-		return result;
+		return results;
 	}
 	
 //	static Model generateFromBag(Resource bag, Model teiModel, Model result) {
@@ -255,7 +357,7 @@ public class GraphMatching {
 //	}
 	
 	
-	static List<List<Resource>> generateFromBag(Resource bag, Model teiModel, List<List<Resource>> results) {
+	static List<Model> generateFromBag(Resource bag, Model teiModel, List<Model> results) {
 		// On retourne une liste de liste, car pour chaque rdf:Alt, une nouvelle possibilité est créée
 		List<Property> bagProperties = new ArrayList<>();
 		Property type = teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
@@ -263,7 +365,9 @@ public class GraphMatching {
 		bag.listProperties().toList().stream()
 			.filter(s -> !s.getPredicate().getLocalName().equals(type.getLocalName()))
 			.forEach(s -> bagProperties.add(s.getPredicate()));
-		Collections.sort(bagProperties, new CustomPropertyComparator());		
+		Collections.sort(bagProperties, new CustomPropertyComparator());
+		List<List<Resource>> resourcesOfBag = new ArrayList<>();
+		resourcesOfBag.add(new ArrayList<>());
 		for (Property property : bagProperties) {
 			RDFNode node = bag.getProperty(property).getObject();
 			if (node.isResource()) {
@@ -271,21 +375,29 @@ public class GraphMatching {
 				Statement statement = waypoint.getProperty(spatialReference);
 				if (statement != null) {
 					Resource toponym = (Resource) statement.getObject();					
-					for (List<Resource> list : results) {
+					for (List<Resource> list : resourcesOfBag) {
 						list.add(toponym);
 					}
 				} else {
 					// on est dans une rdf:Alt
 					List<List<Resource>> listsToAdd = new ArrayList<>();
-					for (List<Resource> list : results) {
+					for (List<Resource> list : resourcesOfBag) {
 						for (Resource alt : getAlternatives(waypoint, teiModel)) {
 							List<Resource> listTmp = new ArrayList<>(list);
 							listTmp.add(alt);
 							listsToAdd.add(listTmp);
 						}
 					}
-					results.clear();
-					results.addAll(listsToAdd);
+					resourcesOfBag.clear();
+					resourcesOfBag.addAll(listsToAdd);
+				}
+			}
+		}
+		for (List<Resource> list : resourcesOfBag) {
+			if (list.size() == 1) {
+				for (Model model : results) {
+
+					throw new NotImplemented();
 				}
 			}
 		}
@@ -615,5 +727,41 @@ public class GraphMatching {
 	       return num1 - num2;
 
 	    }
+	}
+	
+	static class QuerySolutionEntry {
+		private Resource sequence;
+		private Resource route;
+		private Resource bag;
+		private Resource waypoint;
+		private Resource spatialReference;
+		private Resource spatialReferenceAlt;
+		public QuerySolutionEntry(Resource sequence, Resource route, Resource bag, Resource waypoint, Resource spatialReference, Resource spatialReferenceAlt) {
+			this.sequence = sequence;
+			this.route = route;
+			this.bag = bag;
+			this.waypoint = waypoint;
+			this.spatialReference = spatialReference;
+			this.spatialReferenceAlt = spatialReferenceAlt;
+		}
+		
+		public Resource getSequence() {
+			return this.sequence;
+		}
+		public Resource getRoute() {
+			return this.route;
+		}
+		public Resource getBag() {
+			return this.bag;
+		}
+		public Resource getWaypoint() {
+			return this.waypoint;
+		}
+		public Resource getSpatialReference() {
+			return this.spatialReference;
+		}
+		public Resource getSpatialReferenceAlt() {
+			return this.spatialReferenceAlt;
+		}
 	}
 }
