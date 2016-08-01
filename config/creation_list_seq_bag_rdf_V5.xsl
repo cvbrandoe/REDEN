@@ -86,17 +86,20 @@
 	    	<xsl:choose>
 	    		<xsl:when test="$isFirst and $isLast">
 	    			<xsl:element name="rdf:li">
-	    				<xsl:element name="rdf:Description">  
+	    				<xsl:element name="rdf:Description">       
+				            <xsl:attribute name="rdf:about">                    
+				            	<xsl:text>http://data.ign.fr/id/itineraire/route/</xsl:text>
+				            	<xsl:variable name="nbChilds" as="xs:integer+">
+				            		<xsl:sequence select="0"/>
+				            		<xsl:for-each select="$bag/parent::*/preceding-sibling::*">
+				            			<xsl:sequence select="count(current()/child::*)"/>
+				            		</xsl:for-each>
+				            	</xsl:variable>
+				                <xsl:value-of select="ign:getPosition($bag) + sum($nbChilds)" />
+				            </xsl:attribute> 
 				            <xsl:element name="rdf:type">            
 					            <xsl:attribute name="rdf:resource">                    
-					            	<xsl:text>http://data.ign.fr/id/itineraire/route/</xsl:text>
-					            	<xsl:variable name="nbChilds" as="xs:integer+">
-					            		<xsl:sequence select="0"/>
-					            		<xsl:for-each select="$bag/parent::*/preceding-sibling::*">
-					            			<xsl:sequence select="count(current()/child::*)"/>
-					            		</xsl:for-each>
-					            	</xsl:variable>
-					                <xsl:value-of select="ign:getPosition($bag) + sum($nbChilds)" />
+					            	<xsl:text>iti:Route</xsl:text>
 					            </xsl:attribute>
 				            </xsl:element>				            
 			    			<xsl:element name="iti:waypoints">
@@ -116,23 +119,21 @@
 	    		</xsl:when>
 	    		<xsl:when test="$isFirst">
 	    			<xsl:element name="rdf:li">
-	    				<xsl:element name="rdf:Description">  
+	    				<xsl:element name="rdf:Description">        
+				            <xsl:attribute name="rdf:about">                    
+				            	<xsl:text>http://data.ign.fr/id/itineraire/route/</xsl:text>
+				            	<xsl:variable name="nbChilds" as="xs:integer+">
+				            		<xsl:sequence select="0"/>
+				            		<xsl:for-each select="$bag/parent::*/preceding-sibling::*">
+				            			<xsl:sequence select="count(current()/child::*)"/>
+				            		</xsl:for-each>
+				            	</xsl:variable>
+				                <xsl:value-of select="ign:getPosition($bag) + sum($nbChilds)" />
+				            </xsl:attribute> 
 				            <xsl:element name="rdf:type">            
 					            <xsl:attribute name="rdf:resource">                    
-					            	<xsl:text>http://data.ign.fr/id/itineraire/route/</xsl:text>
-					            	<xsl:variable name="nbChilds" as="xs:integer+">
-					            		<xsl:sequence select="0"/>
-					            		<xsl:for-each select="$bag/parent::*/preceding-sibling::*">
-					            			<xsl:sequence select="count(current()/child::*)"/>
-					            		</xsl:for-each>
-					            	</xsl:variable>
-					                <xsl:value-of select="ign:getPosition($bag) + sum($nbChilds)" />
+					            	<xsl:text>iti:Route</xsl:text>
 					            </xsl:attribute>
-					            <!-- <isFirst><xsl:sequence select="$isFirst"/></isFirst>
-					            <isFirst><xsl:sequence select="$isFirst"/>
-		    	<xsl:sequence select="ign:getPosition($bag/preceding-sibling::*[text()='.'][1])"/></isFirst>
-					            <isFirst><xsl:sequence select="$isFirst"/>
-		    	<xsl:sequence select="ign:getPosition($bags[functx:index-of-node($bags, $bag)[1] - 1])"/></isFirst> -->
 				            </xsl:element>				            
 			    			<xsl:element name="iti:waypoints">
 				            	<xsl:element name="rdf:Description">
@@ -284,8 +285,12 @@
 					                	</xsl:element> 
 		            				</xsl:when>
 		            				<xsl:otherwise>
-					            		<xsl:element name="iti:Waypoint">
-					                	
+					            		<xsl:element name="rdf:Description">						                	
+						                	<xsl:element name="rdf:type">
+			                					<xsl:attribute name="rdf:resource">
+			                						<xsl:text>iti:Waypoint</xsl:text>
+		                						</xsl:attribute>
+						                    </xsl:element>   				                	
 						                	<xsl:element name="iti:spatialReference">
 												<xsl:copy-of select="."/>
 						                    </xsl:element>                		
@@ -416,7 +421,7 @@
        				</xsl:choose>
    				</xsl:attribute>     		
        			<xsl:copy-of select="."></xsl:copy-of> <!-- type -->
-        		<xsl:element name="xml:id">
+        		<xsl:element name="ign:id">
         			<xsl:attribute name="rdf:datatype"><xsl:text>xs:integer</xsl:text></xsl:attribute>
         			<xsl:value-of select="$idTopo" />
        			</xsl:element> 
