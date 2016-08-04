@@ -95,8 +95,10 @@ public class GraphMatching {
 		int v = 0;
 		for (Resource sequence : sequences) {
 			Model currentModel = getModelsFromSequenceV2(querySolutionEntries, sequence);
+			currentModel = oneSensePerDiscourseFusion(currentModel, teiRdf);// ajouter ici la fusion des noeuds identiques (one sence per discourse)
 			List<Model> alts = explodeAlts(currentModel);
 			if (alts.size() > 1) {
+				saveModelToFile("t" + v + "_original.xml", currentModel);
 				for (int j = 0; j < alts.size(); j++) {
 					saveModelToFile("t" + v + "_" + j + ".xml", alts.get(j));
 				}
@@ -181,81 +183,223 @@ public class GraphMatching {
 
 		return result;
 	}
-	static List<Model> explodeAlts(Model currentModel) {
-		List<Model> results = new ArrayList<>();
-		List<Resource> alts = currentModel.listStatements(null, null, currentModel.createResource("http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt")).toList().stream()
-			.map(s -> s.getSubject()).collect(Collectors.toList());
-		results.add(currentModel);
-		if (!alts.isEmpty()) {
-			logger.info("Nb alts : " + alts.size());
-			for (Resource resourceAlt : alts) {
-				Alt alt = currentModel.getAlt(resourceAlt);
-				List<Resource> places = new ArrayList<>();
-				alt.iterator().toList().stream().forEach(m -> places.add((Resource)m));
-				List<Statement> statements = results.get(0).listStatements().toList().stream()
-						.filter(p -> (p.getSubject().getURI() == alt.getURI() 
-							|| (p.getObject().isResource() && ((Resource)p.getObject()).getURI() == alt.getURI()))
-							&& p.getPredicate().getNameSpace().equals(ignNS)).collect(Collectors.toList());
-				for (Model model : results) {
-					// remove statements where resource is subject
-					model.removeAll(alt, null, (RDFNode) null);
-				    // remove statements where resource is object
-					model.removeAll(null, null, alt);					
-				}
-				List<Model> tmp = new ArrayList<>();
-				for (Resource place : places) {
-					List<Model> resultTmp = new ArrayList<>(results);
-					for (Statement oldStatement : statements) {
-						Statement newStatement;
-						if (oldStatement.getSubject().getURI() == alt.getURI()) { // alt au début
-							newStatement = currentModel.createStatement(place, oldStatement.getPredicate(), oldStatement.getObject());
-						} else { // alt à la fin
-							newStatement = currentModel.createStatement(oldStatement.getSubject(), oldStatement.getPredicate(), place);
+	
+	static Model oneSensePerDiscourseFusion(Model model, Model teiRdf) {
+		Model currentModel = cloneModel(model);
+		Map<RDFNode, List<Statement>> typesByResources = teiRdf.listStatements(null, rdfsLabel, (RDFNode)null).toList()
+			.stream().collect(Collectors.groupingBy((Statement s) -> s.getObject()));
+		
+		// on ne garde que les resources de la séquence actuelle
+		List<Resource> resourcesFromCurrentModel = currentModel.listSubjects().toList();
+		resourcesFromCurrentModel.addAll(currentModel.listObjects().toList().stream().map(n -> (Resource)n).collect(Collectors.toList()));
+		resourcesFromCurrentModel = resourcesFromCurrentModel.stream().distinct().collect(Collectors.toList());
+		final List<Resource> resourcesFromCurrentModel2 = new ArrayList<>(resourcesFromCurrentModel);
+		for (RDFNode keyNode : typesByResources.keySet()) {
+			List<Statement> oldStatements = typesByResources.get(keyNode);
+			oldStatements = oldStatements.stream()
+					.filter(s -> resourcesFromCurrentModel2.contains(s.getSubject())).collect(Collectors.toList());
+			typesByResources.put(keyNode, oldStatements);
+		}
+		
+		// on supprime toutes les clés avec seulement 1 élément (attention à la gestion des rdf:Alt)
+		List<RDFNode> keysToRemove = typesByResources.keySet().stream().filter(k -> {
+			List<Statement> statements = typesByResources.get(k);
+			// prendre en compte les Alt			
+			return statements.size() <= 1 || 
+					(statements.size() == 2 
+					&& statements.stream().anyMatch(s -> s.getSubject().toString().indexOf('_') > -1));
+		}).collect(Collectors.toList());
+		for (RDFNode keyToRemove : keysToRemove) {
+			typesByResources.remove(keyToRemove);
+		}
+		if (!typesByResources.isEmpty()) {
+			for (RDFNode keyNode : typesByResources.keySet()) {
+				List<Resource> resources = typesByResources.get(keyNode).stream().map(m -> m.getSubject()).sorted(comparatorResourcePlace).collect(Collectors.toList());
+				if (resources.stream().anyMatch(r -> r.toString().indexOf('_') > -1)) { // partie galère, car contient des Alts
+					logger.info("Gérer la fusion avec les alts");
+				} else {
+					Resource firstPlace = resources.get(0);
+					// Pour chaque place, on récupère les statements auxquels elle est liée (sujet ou objet)
+					List<Statement> oldAllStatements = new ArrayList<>();
+					resources.forEach(p -> oldAllStatements.addAll(getProperties(p, teiRdf)));
+					List<Statement> oldStatements = new ArrayList<>(oldAllStatements.stream().filter(s -> s.getPredicate().getNameSpace().equals(ignNS)).collect(Collectors.toList()));					
+					// Ensuite on adapte ces statements à la première place
+					List<Statement> newStatements = new ArrayList<>();
+					for (Statement statement : oldStatements) {
+						if (resources.contains(statement.getSubject())) { // on remplace le sujet
+							newStatements.add(teiRdf.createStatement(firstPlace, statement.getPredicate(), statement.getObject()));
+						} else {
+							newStatements.add(teiRdf.createStatement((Resource)statement.getObject(), statement.getPredicate(), firstPlace));
 						}
-						resultTmp.forEach(m -> {
-							Model newModel = cloneModel(m);
-							newModel.add(newStatement);
-							tmp.add(newModel);
-						});
+					}
+					// On suprime les autres places
+					currentModel.remove(oldAllStatements);
+					// on insert les statements (la 1ère place remplace les anciennes)
+					List<Resource> types = resources.stream().map(place -> (Resource)teiRdf.getProperty(place, rdfType).getObject()).distinct().collect(Collectors.toList());
+					types.forEach(logger::info);
+				}
+			}
+			typesByResources.keySet().stream().forEach(rdfNode -> logger.info(typesByResources.get(rdfNode)));
+		}
+		return currentModel;
+	}
+	static List<Statement> getProperties(Resource place, Model teiRdf) {
+		List<Statement> results = teiRdf.listStatements(place, null, (RDFNode)null).toList();
+		results.addAll(teiRdf.listStatements(null, null, (RDFNode)place).toList());
+		return results;
+	}
+	/**
+	 * For each rdf:Alt, return the two corresponding models
+	 *
+	 * @param currentModel the current model
+	 * @return the list
+	 */
+	static List<Model> explodeAlts(Model currentModel) {
+		Model currentModelClone = cloneModel(currentModel);
+		List<Model> results = new ArrayList<>();
+		List<Resource> alts = currentModelClone.listStatements(null, null, currentModelClone.createResource("http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt")).toList().stream()
+			.map(s -> s.getSubject()).collect(Collectors.toList());
+		results.add(currentModelClone);
+		if (!alts.isEmpty()) {
+			for (Resource resourceAlt : alts) {
+				Alt alt = currentModelClone.getAlt(resourceAlt);
+				// certaines rdf:Alt sont en fait identiques, il faut les fusionner. On vérifie si les places de cet Alt ont déjà été traités.
+				// on vérifie uniquement ac la 1ère place
+				Resource r_1 = (Resource)currentModelClone.getProperty(alt, currentModelClone.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1")).getObject();
+				if (results.stream().anyMatch(m -> m.contains(r_1, linkSameBag) || m.contains(r_1, linkSameRoute) || m.contains(r_1, linkSameSequence)
+						|| m.contains(null, linkSameBag, r_1) || m.contains(null, linkSameRoute, r_1) || m.contains(null, linkSameSequence, r_1))) {
+					// cet rdf:Alt est un doublon
+					List<Statement> statements = results.get(0).listStatements().toList().stream()
+							.filter(p -> (p.getSubject().toString().equals(alt.toString()) 
+								|| (p.getObject().isResource() && ((Resource)p.getObject()).toString().equals(alt.toString())))
+								&& p.getPredicate().getNameSpace().equals(ignNS)).collect(Collectors.toList());
+					List<Resource> places = new ArrayList<>();
+					alt.iterator().toList().stream().forEach(m -> places.add((Resource)m));
+					for (Resource place : places) {
+						List<Statement> currentStatements = new ArrayList<>();
+						for (Statement oldStatement : statements) {
+							Statement newStatement;
+							if (oldStatement.getSubject().getURI() == alt.getURI()) { // alt au début
+								newStatement = currentModelClone.createStatement(place, oldStatement.getPredicate(), oldStatement.getObject());
+							} else { // alt à la fin
+								newStatement = currentModelClone.createStatement(oldStatement.getSubject(), oldStatement.getPredicate(), place);
+							}
+							currentStatements.add(newStatement);
+						}
+						for (Model m : results) {
+							if (m.contains(place, linkSameBag) || m.contains(place, linkSameRoute) 
+									|| m.contains(place, linkSameSequence) || m.contains(null, linkSameBag, place) 
+									|| m.contains(null, linkSameRoute, place) || m.contains(null, linkSameSequence, place)) {
+								for (Statement statement : currentStatements) {
+									m.add(statement);
+								}
+							}
+						}
+					}
+				} else { // cet rdf:Alt n'est pas un doublon
+					List<Resource> places = new ArrayList<>();
+					alt.iterator().toList().stream().forEach(m -> places.add((Resource)m));
+					List<Statement> statements = results.get(0).listStatements().toList().stream()
+							.filter(p -> (p.getSubject().toString().equals(alt.toString()) 
+								|| (p.getObject().isResource() && ((Resource)p.getObject()).toString().equals(alt.toString())))
+								&& p.getPredicate().getNameSpace().equals(ignNS)).collect(Collectors.toList());
+					List<List<Statement>> statementLists = new ArrayList<>(); // on est censé avoir 2 list de statement (utant que de places)
+					for (Resource place : places) {
+						List<Statement> currentStatements = new ArrayList<>();
+						for (Statement oldStatement : statements) {
+							Statement newStatement;
+							if (oldStatement.getSubject().getURI() == alt.getURI()) { // alt au début
+								newStatement = currentModelClone.createStatement(place, oldStatement.getPredicate(), oldStatement.getObject());
+							} else { // alt à la fin
+								newStatement = currentModelClone.createStatement(oldStatement.getSubject(), oldStatement.getPredicate(), place);
+							}
+							currentStatements.add(newStatement);
+						}
+						statementLists.add(currentStatements);
+					}
+					
+					List<List<Model>> resultsList = new ArrayList<>(); // autant de list de model que de places ou de list de statement
+					for (int i = 0; i < places.size(); i++) {
+						resultsList.add(new ArrayList<>(results));
+					}
+					results.clear();
+					for (int i = 0; i < places.size(); i++) {
+						List<Model> list = resultsList.get(i);
+						List<Statement> currentStatements = statementLists.get(i);
+						for (Model model : list) {
+							Model newModel = cloneModel(model);
+							for (Statement statement : currentStatements) {
+								newModel.add(statement);
+							}
+							results.add(newModel);	
+						}
 					}
 				}
-				results.clear();
-				results.addAll(tmp);
-				logger.info("Nb places : " + places.size());
-			}
+				for (Model model : results) {
+					deleteResource(model, alt);					
+				}
+			}			
 		}
 		return results;
 	}
-static Comparator<QuerySolutionEntry> comparatorQuerySolutionEntry = (a, b) -> {
-	Resource r1 = null;
-	if (a.getSpatialReference() != null) {
-		r1 = a.getSpatialReference();
-	} else {
-		r1 = a.getSpatialReferenceAlt();
+
+	public static void deleteResource(Model model, Resource resource) {
+	    // remove statements where resource is subject
+	    model.removeAll(resource, null, (RDFNode) null);
+	    // remove statements where resource is object
+	    model.removeAll(null, null, resource);
 	}
-	Resource r2 = null;
-	if (b.getSpatialReference() != null) {
-		r2 = b.getSpatialReference();
-	} else {
-		r2 = b.getSpatialReferenceAlt();
-	}
-	String subR1 = r1.toString().substring(r1.toString().lastIndexOf('/') + 1);
-	String subR2 = r2.toString().substring(r2.toString().lastIndexOf('/') + 1);
-	float fR1;
-	if (subR1.indexOf('_') != -1) {
-		fR1 = Float.parseFloat(subR1.substring(0, subR1.indexOf('_'))) + 0.1f;
-	} else {
-		fR1 = Float.parseFloat(subR1);
-	}
-	float fR2;
-	if (subR2.indexOf('_') != -1) {
-		fR2 = Float.parseFloat(subR2.substring(0, subR2.indexOf('_'))) + 0.1f;
-	} else {
-		fR2 = Float.parseFloat(subR2);
-	}
-	return Float.compare(fR1, fR2);
-};
-static String ignNS = "http://example.com/namespace/";
+	static Comparator<QuerySolutionEntry> comparatorQuerySolutionEntry = (a, b) -> {
+		Resource r1 = null;
+		if (a.getSpatialReference() != null) {
+			r1 = a.getSpatialReference();
+		} else {
+			r1 = a.getSpatialReferenceAlt();
+		}
+		Resource r2 = null;
+		if (b.getSpatialReference() != null) {
+			r2 = b.getSpatialReference();
+		} else {
+			r2 = b.getSpatialReferenceAlt();
+		}
+		String subR1 = r1.toString().substring(r1.toString().lastIndexOf('/') + 1);
+		String subR2 = r2.toString().substring(r2.toString().lastIndexOf('/') + 1);
+		float fR1;
+		if (subR1.indexOf('_') != -1) {
+			fR1 = Float.parseFloat(subR1.substring(0, subR1.indexOf('_'))) + 0.1f;
+		} else {
+			fR1 = Float.parseFloat(subR1);
+		}
+		float fR2;
+		if (subR2.indexOf('_') != -1) {
+			fR2 = Float.parseFloat(subR2.substring(0, subR2.indexOf('_'))) + 0.1f;
+		} else {
+			fR2 = Float.parseFloat(subR2);
+		}
+		return Float.compare(fR1, fR2);
+	};
+	static Comparator<Resource> comparatorResourcePlace = (r1, r2) -> {
+		String subR1 = r1.toString().substring(r1.toString().lastIndexOf('/') + 1);
+		String subR2 = r2.toString().substring(r2.toString().lastIndexOf('/') + 1);
+		float fR1;
+		if (subR1.indexOf('_') != -1) {
+			fR1 = Float.parseFloat(subR1.substring(0, subR1.indexOf('_'))) + 0.1f;
+		} else {
+			fR1 = Float.parseFloat(subR1);
+		}
+		float fR2;
+		if (subR2.indexOf('_') != -1) {
+			fR2 = Float.parseFloat(subR2.substring(0, subR2.indexOf('_'))) + 0.1f;
+		} else {
+			fR2 = Float.parseFloat(subR2);
+		}
+		return Float.compare(fR1, fR2);
+	};
+	static String ignNS = "http://example.com/namespace/";
+	static String rdfsNS = "http://www.w3.org/2000/01/rdf-schema#";
+	static String rdfNS = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+	static Property rdfType = ModelFactory.createDefaultModel().createProperty(rdfNS + "type");
+	static Property rdfsLabel = ModelFactory.createDefaultModel().createProperty(rdfsNS + "label");
 	static Property linkSameRoute = ModelFactory.createDefaultModel().createProperty(ignNS + "linkSameRoute");
 	static Property linkSameSequence = ModelFactory.createDefaultModel().createProperty(ignNS + "linkSameSequence");
 	static Property linkSameBag = ModelFactory.createDefaultModel().createProperty(ignNS + "linkSameBag"); // SymmetricProperty et transitive
@@ -309,8 +453,6 @@ static String ignNS = "http://example.com/namespace/";
 		initialModel = managedBags(initialModel, querySolutionEntries);
 		initialModel = managedRoutes(initialModel, querySolutionEntries);
 		initialModel = managedSequences(initialModel, querySolutionEntries);
-		saveModelToFile("testStatements" + counter + ".xml", initialModel);
-		counter++;
 		return initialModel;
 	}
 	static Model managedBags(Model initialModel, List<QuerySolutionEntry> querySolutionEntries) {
@@ -474,516 +616,8 @@ static String ignNS = "http://example.com/namespace/";
 		}
 		return initialModel;
 	}
-	/**
-	 * Generate the models (mini graphs) from a sequence.
-	 *
-	 * @param teiModel the tei model
-	 * @param allQuerySolutionEntries the all query solution entries
-	 * @param currentSequence the current sequence
-	 * @return the models from sequence
-	 */
-	static List<Model> getModelsFromSequence(Model teiModel, List<QuerySolutionEntry> allQuerySolutionEntries, Resource currentSequence) {
-		List<QuerySolutionEntry> querySolutionEntries = allQuerySolutionEntries.stream()
-				.filter(q -> q.getSequence() == currentSequence)
-				.sorted(comparatorQuerySolutionEntry)
-				.collect(Collectors.toList());
-		List<Model> results = new ArrayList<>();
-		Model initialModel = ModelFactory.createDefaultModel();		
-		initialModel.setNsPrefix("ign", "http://example.com/namespace/");
-		results.add(initialModel);
-		// liens dans les bags
-		Map<Resource, List<QuerySolutionEntry>> byBag = querySolutionEntries.stream()
-				.collect(Collectors.groupingBy(QuerySolutionEntry::getBag));
-		byBag.keySet().stream().filter(key -> byBag.get(key).size() >= 2)
-			.forEach(key -> {
-				List<QuerySolutionEntry> currentBag = byBag.get(key).stream().sorted(comparatorQuerySolutionEntry).collect(Collectors.toList());
-				QuerySolutionEntry bagElement = currentBag.get(0);
-				if (bagElement.getSpatialReference() != null) { // 1er élément n'est pas une Alt
-					for (int i = 1; i < currentBag.size(); i++) {
-						QuerySolutionEntry nextBagElement = currentBag.get(i);
-						if (nextBagElement.getSpatialReference() != null) {// 2e élément n'est pas une Alt
-							Statement s = initialModel.createStatement(bagElement.getSpatialReference(), linkSameBag, nextBagElement.getSpatialReference());
-							for (Model currentModel : results) {
-								currentModel.add(s);
-							}
-						} else {// 2e élément est une Alt
-							Statement s1 = initialModel.createStatement(bagElement.getSpatialReference(), linkSameBag, nextBagElement.getSpatialReferenceAlt());
-							i++;
-							QuerySolutionEntry nextNextBagElement = currentBag.get(i);
-							Statement s2 = initialModel.createStatement(bagElement.getSpatialReference(), linkSameBag, nextNextBagElement.getSpatialReferenceAlt());
-							List<Model> results1 = new ArrayList<>(results);
-							List<Model> results2 = new ArrayList<>(results);
-							results.clear();
-							for (Model currentModel : results1) {
-								Model newModel = cloneModel(currentModel);
-								newModel.add(s1);
-								results.add(newModel);									
-							}
-							for (Model currentModel : results2) {
-								Model newModel = cloneModel(currentModel);
-								newModel.add(s2);
-								results.add(newModel);
-							}
-						}
-					}
-				} else if (currentBag.size() > 2) { // 1er élément est une Alt
-					logger.info("alt");
-					QuerySolutionEntry bagElementBis = currentBag.get(1);
-					for (int i = 2; i < currentBag.size(); i++) {
-						QuerySolutionEntry nextBagElement = currentBag.get(i);
-						if (nextBagElement.getSpatialReference() != null) {// 2e élément n'est pas une Alt
-							Statement s1 = initialModel.createStatement(bagElement.getSpatialReferenceAlt(), linkSameBag, nextBagElement.getSpatialReference());
-							Statement s2 = initialModel.createStatement(bagElementBis.getSpatialReferenceAlt(), linkSameBag, nextBagElement.getSpatialReference());
-							List<Model> results1 = new ArrayList<>(results);
-							List<Model> results2 = new ArrayList<>(results);
-							results.clear();
-							for (Model currentModel : results1) {
-								Model newModel = cloneModel(currentModel);
-								newModel.add(s1);
-								results.add(newModel);									
-							}
-							for (Model currentModel : results2) {
-								Model newModel = cloneModel(currentModel);
-								newModel.add(s2);
-								results.add(newModel);
-							}
-						} else {// 2e élément est une Alt
-							Statement s1 = initialModel.createStatement(bagElement.getSpatialReferenceAlt(), linkSameBag, nextBagElement.getSpatialReferenceAlt());
-							Statement s2 = initialModel.createStatement(bagElementBis.getSpatialReferenceAlt(), linkSameBag, nextBagElement.getSpatialReferenceAlt());
-							i++;
-							QuerySolutionEntry nextNextBagElement = currentBag.get(i);
-							Statement s3 = initialModel.createStatement(bagElement.getSpatialReferenceAlt(), linkSameBag, nextNextBagElement.getSpatialReferenceAlt());
-							Statement s4 = initialModel.createStatement(bagElementBis.getSpatialReferenceAlt(), linkSameBag, nextNextBagElement.getSpatialReferenceAlt());
-							List<Model> results1 = new ArrayList<>(results);
-							List<Model> results2 = new ArrayList<>(results);
-							List<Model> results3 = new ArrayList<>(results);
-							List<Model> results4 = new ArrayList<>(results);
-							logger.info("counter : " + counter);
-							results.clear();
-							for (Model currentModel : results1) {
-								Model newModel = cloneModel(currentModel);
-								newModel.add(s1);
-								results.add(newModel);									
-							}
-							for (Model currentModel : results2) {
-								Model newModel = cloneModel(currentModel);
-								newModel.add(s2);
-								results.add(newModel);
-							}
-							for (Model currentModel : results3) {
-								Model newModel = cloneModel(currentModel);
-								newModel.add(s3);
-								results.add(newModel);									
-							}
-							for (Model currentModel : results4) {
-								Model newModel = cloneModel(currentModel);
-								newModel.add(s4);
-								results.add(newModel);
-							}
-						}
-					}
-				}
-			});
-		
-		// liens dans les séquences
-		Map<Resource, List<QuerySolutionEntry>> byRoute = querySolutionEntries.stream()
-				.collect(Collectors.groupingBy(QuerySolutionEntry::getRoute));
-		List<Resource> routeKeys = querySolutionEntries.stream().map(q -> q.getRoute()).distinct().collect(Collectors.toList());
-		for (int i = 0; i < routeKeys.size() - 1; i++) {
-			List<QuerySolutionEntry> firstRoute = byRoute.get(routeKeys.get(i)).stream().sorted(comparatorQuerySolutionEntry.reversed()).collect(Collectors.toList());
-			List<QuerySolutionEntry> nextRoute = byRoute.get(routeKeys.get(i + 1)).stream().sorted(comparatorQuerySolutionEntry).collect(Collectors.toList());
-			Map<Resource, List<QuerySolutionEntry>> firstRouteBags = firstRoute.stream().collect(Collectors.groupingBy(QuerySolutionEntry::getBag));
-			Map<Resource, List<QuerySolutionEntry>> nextRouteBags = nextRoute.stream().collect(Collectors.groupingBy(QuerySolutionEntry::getBag));
-			List<QuerySolutionEntry> firstRouteLastBagContent = firstRouteBags.get(firstRoute.get(0).getBag()).stream().sorted(comparatorQuerySolutionEntry).collect(Collectors.toList());
-			List<QuerySolutionEntry> nextRouteBagsFirstBagContent = nextRouteBags.get(nextRoute.get(0).getBag()).stream().sorted(comparatorQuerySolutionEntry).collect(Collectors.toList());
-			for (int j = 0; j < firstRouteLastBagContent.size(); j++) {
-				QuerySolutionEntry b1 = firstRouteLastBagContent.get(j);
-				for (int k = 0; k < nextRouteBagsFirstBagContent.size(); k++) {
-					QuerySolutionEntry b2 = nextRouteBagsFirstBagContent.get(k);
-					if (b1.getSpatialReference() != null && b2.getSpatialReference() != null) { // pas d'Alt
-						Statement s = initialModel.createStatement(b1.getSpatialReference(), linkSameSequence, b2.getSpatialReference());
-						for (Model model : results) {
-							model.add(s);
-						}
-					} else if (b1.getSpatialReference() != null) { // b2 est une Alt
-						k++;
-						QuerySolutionEntry b22 = nextRouteBagsFirstBagContent.get(k);
-						Statement s1 = initialModel.createStatement(b1.getSpatialReference(), linkSameBag, b2.getSpatialReferenceAlt());
-						Statement s2 = initialModel.createStatement(b1.getSpatialReference(), linkSameBag, b22.getSpatialReferenceAlt());
-						if (results.stream().anyMatch(m -> m.containsResource(b2.getSpatialReferenceAlt()))) {
-							// b2 a déjà été ajouté, on ajoute donc la relation que là où il apparait (pas besoin de dupliquer)
-							for (Model currentModel : results) {
-								if (currentModel.containsResource(b2.getSpatialReferenceAlt()))
-									currentModel.add(s1);
-								else if (currentModel.containsResource(b22.getSpatialReferenceAlt()))
-									currentModel.add(s2);							
-							}
-						} else {
-							List<Model> results1 = new ArrayList<>(results);
-							List<Model> results2 = new ArrayList<>(results);
-							results.clear();
-							for (Model currentModel : results1) {
-								Model newModel = cloneModel(currentModel);
-								newModel.add(s1);
-								results.add(newModel);									
-							}
-							for (Model currentModel : results2) {
-								Model newModel = cloneModel(currentModel);
-								newModel.add(s2);
-								results.add(newModel);
-							}
-						}
-					} else  if (b2.getSpatialReference() != null && j < firstRouteLastBagContent.size() - 1) { // b1 est une Alt
-						j++;
-						QuerySolutionEntry b12 = firstRouteLastBagContent.get(j);
-						Statement s1 = initialModel.createStatement(b1.getSpatialReferenceAlt(), linkSameBag, b2.getSpatialReference());
-						Statement s2 = initialModel.createStatement(b12.getSpatialReferenceAlt(), linkSameBag, b2.getSpatialReference());
-						if (results.stream().anyMatch(m -> m.containsResource(b1.getSpatialReferenceAlt()))) {
-							// b1 a déjà été ajouté, on ajoute donc la relation que là où il apparait (pas besoin de dupliquer)
-							for (Model currentModel : results) {
-								if (currentModel.containsResource(b1.getSpatialReferenceAlt()))
-									currentModel.add(s1);
-								else if (currentModel.containsResource(b12.getSpatialReferenceAlt()))
-									currentModel.add(s2);								
-							}
-						} else {
-							List<Model> results1 = new ArrayList<>(results);
-							List<Model> results2 = new ArrayList<>(results);
-							results.clear();
-							for (Model currentModel : results1) {
-								Model newModel = cloneModel(currentModel);
-								newModel.add(s1);
-								results.add(newModel);									
-							}
-							for (Model currentModel : results2) {
-								Model newModel = cloneModel(currentModel);
-								newModel.add(s2);
-								results.add(newModel);
-							}
-						}
-					} else if (j < firstRouteLastBagContent.size() - 1) { // les 2 sont des alt
-						logger.info("double alt");
-						j++;
-						QuerySolutionEntry b12 = firstRouteLastBagContent.get(j);
-						k++;
-						QuerySolutionEntry b22 = nextRouteBagsFirstBagContent.get(k);
-						Statement s1 = initialModel.createStatement(b1.getSpatialReferenceAlt(), linkSameBag, b2.getSpatialReferenceAlt());
-						Statement s2 = initialModel.createStatement(b12.getSpatialReferenceAlt(), linkSameBag, b2.getSpatialReferenceAlt());
-						Statement s3 = initialModel.createStatement(b1.getSpatialReferenceAlt(), linkSameBag, b22.getSpatialReferenceAlt());
-						Statement s4 = initialModel.createStatement(b12.getSpatialReferenceAlt(), linkSameBag, b22.getSpatialReferenceAlt());
-						if (results.stream().anyMatch(m -> m.containsResource(b1.getSpatialReferenceAlt()))) {
-							// b1 a déjà été ajouté, on ajoute donc la relation que là où il apparait (pas besoin de dupliquer)
-							if (results.stream().anyMatch(m -> m.containsResource(b2.getSpatialReferenceAlt()))) {
-								// b2 a déjà été ajouté, on ajoute donc la relation que là où il apparait (pas besoin de dupliquer)
-								for (Model currentModel : results) {
-									if (currentModel.containsResource(b1.getSpatialReferenceAlt())) {
-										if (currentModel.containsResource(b2.getSpatialReferenceAlt())) {
-											currentModel.add(s1);
-										}
-										else {
-											currentModel.add(s3);
-										}
-									}
-									else if (currentModel.containsResource(b12.getSpatialReferenceAlt())) {
-										if (currentModel.containsResource(b2.getSpatialReferenceAlt())) {
-											currentModel.add(s2);
-										}
-										else {
-											currentModel.add(s4);
-										}								
-									}
-								}
-							} else {
-								// dupliquer uniquement b2
-								List<Model> results1 = new ArrayList<>(results);
-								List<Model> results2 = new ArrayList<>(results);
-								results.clear();
-								for (Model currentModel : results1) {
-									Model newModel = cloneModel(currentModel);
-									if (currentModel.containsResource(b1.getSpatialReferenceAlt()))
-										newModel.add(s1);
-									else {
-										newModel.add(s2);
-									}
-									results.add(newModel);									
-								}
-								for (Model currentModel : results2) {
-									Model newModel = cloneModel(currentModel);
-									if (currentModel.containsResource(b1.getSpatialReferenceAlt()))
-										newModel.add(s3);
-									else {
-										newModel.add(s4);
-									}
-									results.add(newModel);
-								}
-							}
-						} else {
-							// il faut dupliquer les 2
-							List<Model> results1 = new ArrayList<>(results);
-							List<Model> results2 = new ArrayList<>(results);
-							List<Model> results3 = new ArrayList<>(results);
-							List<Model> results4 = new ArrayList<>(results);
-							results.clear();
-							for (Model currentModel : results1) {
-								Model newModel = cloneModel(currentModel);
-								newModel.add(s1);
-								results.add(newModel);									
-							}
-							for (Model currentModel : results2) {
-								Model newModel = cloneModel(currentModel);
-								newModel.add(s2);
-								results.add(newModel);
-							}
-							for (Model currentModel : results3) {
-								Model newModel = cloneModel(currentModel);
-								newModel.add(s3);
-								results.add(newModel);									
-							}
-							for (Model currentModel : results4) {
-								Model newModel = cloneModel(currentModel);
-								newModel.add(s4);
-								results.add(newModel);
-							}
-						}
-					}
-				}
-			}
-		}
-		
-		// route
-		byRoute.keySet().stream().forEach(keyRoute -> {
-			List<QuerySolutionEntry> routeElements = byRoute.get(keyRoute).stream().sorted(comparatorQuerySolutionEntry).collect(Collectors.toList());
-			List<Resource> orderedBags = routeElements.stream().map(m -> m.getBag()).distinct().collect(Collectors.toList());
-			for (int i = 0; i < orderedBags.size() - 1; i++) {
-				final int index = i;
-				List<QuerySolutionEntry> firstBagContent = routeElements.stream().filter(p -> p.getBag() == orderedBags.get(index)).sorted(comparatorQuerySolutionEntry).collect(Collectors.toList());
-				List<QuerySolutionEntry> nextBagContent = routeElements.stream().filter(p -> p.getBag() == orderedBags.get(index + 1)).sorted(comparatorQuerySolutionEntry).collect(Collectors.toList());
-				for (int j = 0; j < firstBagContent.size(); j++) {
-					QuerySolutionEntry bag1El = firstBagContent.get(j);
-					for (int k = 0; k < nextBagContent.size(); k++) {
-						QuerySolutionEntry bag2El = nextBagContent.get(k);
-						if (bag1El.getSpatialReference() != null) { // bag1El n'est pas une Alt
-							if (bag2El.getSpatialReference() != null) { // bag2El n'est pas une Alt
-								Statement s = initialModel.createStatement(bag1El.getSpatialReference(), linkSameRoute,bag2El.getSpatialReference());
-								for (Model model : results) {
-									model.add(s);
-								}
-							} else { // bag2El est une Alt
-								k++;
-								QuerySolutionEntry bag2El2 = nextBagContent.get(k);
-								Statement s1 = initialModel.createStatement(bag1El.getSpatialReference(), linkSameRoute,bag2El.getSpatialReferenceAlt());
-								Statement s2 = initialModel.createStatement(bag1El.getSpatialReference(), linkSameRoute,bag2El2.getSpatialReferenceAlt());
-								List<Model> results1 = new ArrayList<>(results);
-								List<Model> results2 = new ArrayList<>(results);
-								results.clear();
-								for (Model currentModel : results1) {
-									Model newModel = cloneModel(currentModel);
-									newModel.add(s1);
-									results.add(newModel);									
-								}
-								for (Model currentModel : results2) {
-									Model newModel = cloneModel(currentModel);
-									newModel.add(s2);
-									results.add(newModel);
-								}
-							}
-						} else if (j < firstBagContent.size() - 1) { // bag1El est une Alt
-							j++;
-							QuerySolutionEntry bag1El2 = firstBagContent.get(j);
-							if (bag2El.getSpatialReference() != null) { // bag2El n'est pas une Alt
-								Statement s1 = initialModel.createStatement(bag1El.getSpatialReferenceAlt(), linkSameRoute,bag2El.getSpatialReference());
-								Statement s2 = initialModel.createStatement(bag1El2.getSpatialReferenceAlt(), linkSameRoute,bag2El.getSpatialReference());
-								List<Model> results1 = new ArrayList<>(results);
-								List<Model> results2 = new ArrayList<>(results);
-								results.clear();
-								for (Model currentModel : results1) {
-									Model newModel = cloneModel(currentModel);
-									newModel.add(s1);
-									results.add(newModel);									
-								}
-								for (Model currentModel : results2) {
-									Model newModel = cloneModel(currentModel);
-									newModel.add(s2);
-									results.add(newModel);
-								}
-							} else { // bag2El est une Alt
-								logger.info("double alt encore");
-//								k++;
-//								QuerySolutionEntry bag2El2 = nextBagContent.get(k);
-//								Statement s1 = initialModel.createStatement(bag1El.getSpatialReferenceAlt(), linkSameRoute,bag2El.getSpatialReferenceAlt());
-//								Statement s3 = initialModel.createStatement(bag1El.getSpatialReferenceAlt(), linkSameRoute,bag2El2.getSpatialReferenceAlt());
-//								Statement s2 = initialModel.createStatement(bag1El2.getSpatialReferenceAlt(), linkSameRoute,bag2El.getSpatialReferenceAlt());
-//								Statement s4 = initialModel.createStatement(bag1El2.getSpatialReferenceAlt(), linkSameRoute,bag2El2.getSpatialReferenceAlt());
-//								if (results.stream().anyMatch(m -> m.containsResource(bag1El.getSpatialReferenceAlt()))) {
-//									// b1 a déjà été ajouté, on ajoute donc la relation que là où il apparait (pas besoin de dupliquer)
-//									if (results.stream().anyMatch(m -> m.containsResource(bag2El.getSpatialReferenceAlt()))) {
-//										// b2 a déjà été ajouté, on ajoute donc la relation que là où il apparait (pas besoin de dupliquer)
-//										for (Model currentModel : results) {
-//											if (currentModel.containsResource(bag1El.getSpatialReferenceAlt())) {
-//												if (currentModel.containsResource(bag2El.getSpatialReferenceAlt())) {
-//													currentModel.add(s1);
-//												}
-//												else {
-//													currentModel.add(s3);
-//												}
-//											}
-//											else if (currentModel.containsResource(bag1El2.getSpatialReferenceAlt())) {
-//												if (currentModel.containsResource(bag2El.getSpatialReferenceAlt())) {
-//													currentModel.add(s2);
-//												}
-//												else {
-//													currentModel.add(s4);
-//												}								
-//											}
-//										}
-//									} else {
-//										// dupliquer uniquement b2
-//										List<Model> results1 = new ArrayList<>(results);
-//										List<Model> results2 = new ArrayList<>(results);
-//										results.clear();
-//										for (Model currentModel : results1) {
-//											Model newModel = cloneModel(currentModel);
-//											if (currentModel.containsResource(bag1El.getSpatialReferenceAlt()))
-//												newModel.add(s1);
-//											else {
-//												newModel.add(s2);
-//											}
-//											results.add(newModel);									
-//										}
-//										for (Model currentModel : results2) {
-//											Model newModel = cloneModel(currentModel);
-//											if (currentModel.containsResource(bag1El.getSpatialReferenceAlt()))
-//												newModel.add(s3);
-//											else {
-//												newModel.add(s4);
-//											}
-//											results.add(newModel);
-//										}
-//									}
-//								} else {
-//									// il faut dupliquer les 2
-//									List<Model> results1 = new ArrayList<>(results);
-//									List<Model> results2 = new ArrayList<>(results);
-//									List<Model> results3 = new ArrayList<>(results);
-//									List<Model> results4 = new ArrayList<>(results);
-//									results.clear();
-//									for (Model currentModel : results1) {
-//										Model newModel = cloneModel(currentModel);
-//										newModel.add(s1);
-//										results.add(newModel);									
-//									}
-//									for (Model currentModel : results2) {
-//										Model newModel = cloneModel(currentModel);
-//										newModel.add(s2);
-//										results.add(newModel);
-//									}
-//									for (Model currentModel : results3) {
-//										Model newModel = cloneModel(currentModel);
-//										newModel.add(s3);
-//										results.add(newModel);									
-//									}
-//									for (Model currentModel : results4) {
-//										Model newModel = cloneModel(currentModel);
-//										newModel.add(s4);
-//										results.add(newModel);
-//									}
-//								}
-////								List<Model> results1 = new ArrayList<>(results);
-////								List<Model> results2 = new ArrayList<>(results);
-////								List<Model> results3 = new ArrayList<>(results);
-////								List<Model> results4 = new ArrayList<>(results);
-////								results.clear();
-////								for (Model currentModel : results1) {
-////									Model newModel = cloneModel(currentModel);
-////									newModel.add(s1);
-////									results.add(newModel);									
-////								}
-////								for (Model currentModel : results2) {
-////									Model newModel = cloneModel(currentModel);
-////									newModel.add(s2);
-////									results.add(newModel);
-////								}
-////								for (Model currentModel : results3) {
-////									Model newModel = cloneModel(currentModel);
-////									newModel.add(s3);
-////									results.add(newModel);									
-////								}
-////								for (Model currentModel : results4) {
-////									Model newModel = cloneModel(currentModel);
-////									newModel.add(s4);
-////									results.add(newModel);
-////								}
-							}
-						}
-					}
-				}
-			}
-		});
-		
-		
-//		Map<Resource, List<QuerySolutionEntry>> byRoute = querySolutionEntries.stream()
-//				.collect(Collectors.groupingBy(QuerySolutionEntry::getRoute));
-//		byRoute.keySet().stream().filter(key -> byRoute.get(key).stream().map(e -> e.getBag()).distinct().count() >= 2)
-//		.forEach(key -> {
-//			List<QuerySolutionEntry> entries = byRoute.get(key); // tous les éléments de entries appartiennent à la même route
-//			Map<Resource, List<QuerySolutionEntry>> byRouteAndBag = entries.stream().collect(Collectors.groupingBy(QuerySolutionEntry::getBag));
-//			for (int i = 0; i < byRouteAndBag.size() - 1; i++) {
-//				List<QuerySolutionEntry> querySolutionEntry1 = byRouteAndBag.get(byRouteAndBag.keySet()
-//						.stream().sorted(new CustomResourceComparator()).toArray()[i]);
-//				List<QuerySolutionEntry> querySolutionEntry2 = byRouteAndBag.get(byRouteAndBag.keySet()
-//						.stream().sorted(new CustomResourceComparator()).toArray()[i + 1]);
-//				for (int k = 0; k < querySolutionEntry1.size(); k++) {
-//					for (int j = 0; j < querySolutionEntry2.size(); j++) {
-//						QuerySolutionEntry el1 = querySolutionEntry1.get(k);
-//						QuerySolutionEntry el2 = querySolutionEntry2.get(j);
-//						if (el1.getSpatialReference() != null && el2.getSpatialReference() != null) {
-//							Statement s = currentModel.createStatement(el1.getSpatialReference(), linkSameRoute, el2.getSpatialReference());
-//							currentModel.add(s);
-//						}
-//					}
-//				}
-//			}
-//		});
-//		// liens dans sequence
-//		for (int i = 0; i < byRoute.size() - 1; i++) {
-//			// on lie les éléments du dernier bag d'une route avec les éléments du 1er bag de la route suivante
-//			List<QuerySolutionEntry> route1 = byRoute.get(byRoute.keySet().stream()
-//					.sorted(new CustomResourceComparator()).toArray()[i]);
-//			List<QuerySolutionEntry> route2 = byRoute.get(byRoute.keySet().stream()
-//					.sorted(new CustomResourceComparator()).toArray()[i + 1]);
-//			Map<Resource, List<QuerySolutionEntry>> byRouteAndBag1 = route1.stream()
-//					.collect(Collectors.groupingBy(QuerySolutionEntry::getBag));
-//			Map<Resource, List<QuerySolutionEntry>> byRouteAndBag2 = route2.stream()
-//					.collect(Collectors.groupingBy(QuerySolutionEntry::getBag));
-//			List<QuerySolutionEntry> elementsOfLastBagOfRoute1 = byRouteAndBag1.get(byRouteAndBag1.keySet().stream().sorted(new CustomResourceComparator()).toArray()[byRouteAndBag1.keySet().size() - 1]);
-//			List<QuerySolutionEntry> elementsOfFirstBagOfRoute2 = byRouteAndBag2.get(byRouteAndBag2.keySet().stream().sorted(new CustomResourceComparator()).toArray()[0]);
-//			for (int j = 0; j < elementsOfLastBagOfRoute1.size(); j++) {
-//				for (int k = 0; k < elementsOfFirstBagOfRoute2.size(); k++) {
-//					QuerySolutionEntry el1 = elementsOfLastBagOfRoute1.get(j);
-//					QuerySolutionEntry el2 = elementsOfFirstBagOfRoute2.get(k);
-//					if (el1.getSpatialReference() != null && el2.getSpatialReference() != null) {
-//						Statement s = currentModel.createStatement(el1.getSpatialReference(), linkSameSequence, el2.getSpatialReference());
-//						currentModel.add(s);
-//					}
-//				}
-//			}
-//		}
-		int counterIntern = 0;
-		for (Model model : results) {
-			saveModelToFile("testStatements" + counter + "_" + counterIntern + ".xml", model);
-			counterIntern++;
-		}
-		if (results.size() > 1) {
-			logger.info("taille : " + counter);
-		}
-		counter++;
-		return results.stream().filter(m -> !m.isEmpty()).collect(Collectors.toList());
-	}
-	static int counter = 0;
-	static List<Model> createStatements(Resource lastUsedBag, Property p, Resource bag, List<Model> results) {
-		
-		return results;
-	}
+	
+	
 	
 	static Model cloneModel(Model original) {
 		Model newModel = ModelFactory.createDefaultModel();
@@ -992,151 +626,10 @@ static String ignNS = "http://example.com/namespace/";
 			Statement statement = (Statement) iterator.next();
 			newModel.add(statement);
 		}
+		original.getNsPrefixMap().keySet().forEach(prefix -> newModel.setNsPrefix(prefix, original.getNsPrefixMap().get(prefix)));
 		return newModel;
 	}
 	
-	static Model generateFromSequence(Resource sequence, Model teiModel) {
-		throw new NotImplemented();
-//		Property type = teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
-//		// traitements ici 
-//		StmtIterator iter2 = sequence.listProperties();
-//		List<Property> sequenceProperties = new ArrayList<>();
-//		while (iter2.hasNext()) {
-//			Statement statement = (Statement) iter2.next();
-//			if (!statement.getPredicate().getLocalName().equals(type.getLocalName()))
-//				sequenceProperties.add(statement.getPredicate());
-//		}
-//		Collections.sort(sequenceProperties, new CustomPropertyComparator());
-//		List<Resource> routes = new ArrayList<>();				
-//		for (Property property : sequenceProperties) {
-//			RDFNode node = sequence.getProperty(property).getObject();
-//			if (node.isResource()) {
-//				Resource route = (Resource)node;
-//				routes.add(route);
-//			}
-//		}
-//		return generateFromRoutes(routes, teiModel);
-	}
-	
-	static List<Model> generateFromRoutes(List<Resource> routes, Model teiModel) {
-		List<Model> results = new ArrayList<>();
-		results.add(ModelFactory.createDefaultModel());
-		Property waypoints = teiModel.getProperty("http://data.ign.fr/def/itineraires#waypoints");
-		for (Resource route : routes) {
-			Resource waypointsResource = (Resource) route.getProperty(waypoints).getObject();
-			Resource first = (Resource)waypointsResource.getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#first")).getObject();
-			RDFNode restNode = waypointsResource.getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#rest")).getObject();
-			// first est un Bag
-			//logger.info("first : " + getType(first, teiModel));	
-			//List<List<Resource>> possibleBags = new ArrayList<>();
-			//possibleBags.add(new ArrayList<>());	
-			results = generateFromBag(first, teiModel, results);
-//			for (List<Resource> listResource : possibleBags) {
-//				//logger.info("Nouveau bag");
-//				for (Resource resource : listResource) {
-//					logger.info(resource);
-//				}
-//			}
-			// S'occuper du rest
-			if (!restNode.isLiteral()) {
-				Resource rest = (Resource)restNode;
-				if (rest.isAnon() || !rest.getLocalName().equals("nil")) {
-					Resource firstOfRest = (Resource)rest.getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#first")).getObject();
-					results = generateFromBag(firstOfRest, teiModel, results);
-					restNode = rest.getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#rest")).getObject();
-					while(!restNode.isLiteral() && (restNode.isAnon())) {					
-						firstOfRest = (Resource)((Resource)restNode).getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#first")).getObject();
-						results = generateFromBag(firstOfRest, teiModel, results);
-						if (!((Resource)restNode).hasProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#rest")))
-							break;
-						//rest.listProperties().toList().forEach(logger::info);
-						restNode = ((Resource)restNode).getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#rest")).getObject();
-					}
-				}
-			}
-			logger.info(results.size());
-//			if (restNode.isLiteral()) {
-//				logger.info("rest=literal :" + restNode.asLiteral().getValue()); // pb sur le reste de 13_1 (plaine poitevine)
-//			} else {
-//				Resource rest = (Resource)restNode;
-//				if (rest.isAnon() || !rest.getLocalName().equals("nil")) {
-//					Resource firstOfRest = (Resource)rest.getProperty(teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#first")).getObject();
-//					logger.info("firstOfRest : " + getType(firstOfRest, teiModel)); // bag
-//					rest.listProperties().toList().stream().forEach(logger::info);
-//					// rest du rest à traiter
-//				}
-//			}
-		}
-		return results;
-	}
-	
-//	static Model generateFromBag(Resource bag, Model teiModel, Model result) {
-//		return ModelFactory.createDefaultModel();
-//	}
-	
-	
-	static List<Model> generateFromBag(Resource bag, Model teiModel, List<Model> results) {
-		// On retourne une liste de liste, car pour chaque rdf:Alt, une nouvelle possibilité est créée
-		List<Property> bagProperties = new ArrayList<>();
-		Property type = teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
-		Property spatialReference = teiModel.createProperty("http://data.ign.fr/def/itineraires#spatialReference");
-		bag.listProperties().toList().stream()
-			.filter(s -> !s.getPredicate().getLocalName().equals(type.getLocalName()))
-			.forEach(s -> bagProperties.add(s.getPredicate()));
-		Collections.sort(bagProperties, new CustomPropertyComparator());
-		List<List<Resource>> resourcesOfBag = new ArrayList<>();
-		resourcesOfBag.add(new ArrayList<>());
-		for (Property property : bagProperties) {
-			RDFNode node = bag.getProperty(property).getObject();
-			if (node.isResource()) {
-				Resource waypoint = (Resource)node;
-				Statement statement = waypoint.getProperty(spatialReference);
-				if (statement != null) {
-					Resource toponym = (Resource) statement.getObject();					
-					for (List<Resource> list : resourcesOfBag) {
-						list.add(toponym);
-					}
-				} else {
-					// on est dans une rdf:Alt
-					List<List<Resource>> listsToAdd = new ArrayList<>();
-					for (List<Resource> list : resourcesOfBag) {
-						for (Resource alt : getAlternatives(waypoint, teiModel)) {
-							List<Resource> listTmp = new ArrayList<>(list);
-							listTmp.add(alt);
-							listsToAdd.add(listTmp);
-						}
-					}
-					resourcesOfBag.clear();
-					resourcesOfBag.addAll(listsToAdd);
-				}
-			}
-		}
-		for (List<Resource> list : resourcesOfBag) {
-			if (list.size() == 1) {
-				for (Model model : results) {
-
-					throw new NotImplemented();
-				}
-			}
-		}
-		return results;
-	}
-
-	static List<Resource> getAlternatives(Resource waypoint, Model teiModel) {
-		Property type = teiModel.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
-		Property spatialReference = teiModel.createProperty("http://data.ign.fr/def/itineraires#spatialReference");
-		List<Property> waypointAlts = new ArrayList<>();
-		List<Resource> alternatives = new ArrayList<>();
-		waypoint.listProperties().toList().stream()
-			.filter(s -> !s.getPredicate().getLocalName().equals(type.getLocalName()))
-			.forEach(s -> waypointAlts.add(s.getPredicate()));
-		Collections.sort(waypointAlts, new CustomPropertyComparator());	
-		for (Property property2 : waypointAlts) {
-			Resource waypointInAlt = (Resource)waypoint.getProperty(property2).getObject();
-			alternatives.add((Resource)waypointInAlt.getProperty(spatialReference).getObject());
-		}
-		return alternatives;
-	}
 	
 	static String getType(Resource r, Model model) {
 		Property type = model.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
