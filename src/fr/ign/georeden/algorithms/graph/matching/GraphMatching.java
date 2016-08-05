@@ -26,24 +26,24 @@ import org.apache.jena.riot.RiotException;
 import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 
-import com.hp.hpl.jena.graph.Graph;
-import com.hp.hpl.jena.ontology.OntTools;
-import com.hp.hpl.jena.ontology.OntTools.PredicatesFilter;
-import com.hp.hpl.jena.query.QueryParseException;
-import com.hp.hpl.jena.query.QuerySolution;
-import com.hp.hpl.jena.rdf.model.Alt;
-import com.hp.hpl.jena.rdf.model.Literal;
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.NodeIterator;
-import com.hp.hpl.jena.rdf.model.Property;
-import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.rdf.model.ResIterator;
-import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.Statement;
-import com.hp.hpl.jena.rdf.model.StmtIterator;
-import com.hp.hpl.jena.sparql.function.library.e;
-import com.hp.hpl.jena.util.iterator.Filter;
+import org.apache.jena.graph.Graph;
+import org.apache.jena.ontology.OntTools;
+import org.apache.jena.ontology.OntTools.PredicatesFilter;
+import org.apache.jena.query.QueryParseException;
+import org.apache.jena.query.QuerySolution;
+import org.apache.jena.rdf.model.Alt;
+import org.apache.jena.rdf.model.Literal;
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.NodeIterator;
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.RDFNode;
+import org.apache.jena.rdf.model.ResIterator;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.Statement;
+import org.apache.jena.rdf.model.StmtIterator;
+import org.apache.jena.sparql.function.library.e;
+import org.apache.jena.util.iterator.Filter;
 
 import fr.ign.georeden.algorithms.string.StringComparisonDamLev;
 import fr.ign.georeden.graph.LabeledEdge;
@@ -63,8 +63,63 @@ public class GraphMatching {
 	/** The logger. */
 	private static Logger logger = Logger.getLogger(GraphMatching.class);
 
-	public static String teiPath = "D:\\temp7.rdf";
+	public static final String TEI_PATH = "D:\\temp7.rdf";
 
+	static Comparator<QuerySolutionEntry> comparatorQuerySolutionEntry = (a, b) -> {
+//		return Integer.compare(a.getId(), b.getId());
+		Resource r1 = null;
+		if (a.getSpatialReference() != null) {
+			r1 = a.getSpatialReference();
+		} else {
+			r1 = a.getSpatialReferenceAlt();
+		}
+		Resource r2 = null;
+		if (b.getSpatialReference() != null) {
+			r2 = b.getSpatialReference();
+		} else {
+			r2 = b.getSpatialReferenceAlt();
+		}
+		String subR1 = r1.toString().substring(r1.toString().lastIndexOf('/') + 1);
+		String subR2 = r2.toString().substring(r2.toString().lastIndexOf('/') + 1);
+		float fR1;
+		if (subR1.indexOf('_') != -1) {
+			fR1 = Float.parseFloat(subR1.substring(0, subR1.indexOf('_'))) + 0.1f;
+		} else {
+			fR1 = Float.parseFloat(subR1);
+		}
+		float fR2;
+		if (subR2.indexOf('_') != -1) {
+			fR2 = Float.parseFloat(subR2.substring(0, subR2.indexOf('_'))) + 0.1f;
+		} else {
+			fR2 = Float.parseFloat(subR2);
+		}
+		return Float.compare(fR1, fR2);
+	};
+	static Comparator<Resource> comparatorResourcePlace = (r1, r2) -> {
+		String subR1 = r1.toString().substring(r1.toString().lastIndexOf('/') + 1);
+		String subR2 = r2.toString().substring(r2.toString().lastIndexOf('/') + 1);
+		float fR1;
+		if (subR1.indexOf('_') != -1) {
+			fR1 = Float.parseFloat(subR1.substring(0, subR1.indexOf('_'))) + 0.1f;
+		} else {
+			fR1 = Float.parseFloat(subR1);
+		}
+		float fR2;
+		if (subR2.indexOf('_') != -1) {
+			fR2 = Float.parseFloat(subR2.substring(0, subR2.indexOf('_'))) + 0.1f;
+		} else {
+			fR2 = Float.parseFloat(subR2);
+		}
+		return Float.compare(fR1, fR2);
+	};
+	static String ignNS = "http://example.com/namespace/";
+	static String rdfsNS = "http://www.w3.org/2000/01/rdf-schema#";
+	static String rdfNS = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+	static Property rdfType = ModelFactory.createDefaultModel().createProperty(rdfNS + "type");
+	static Property rdfsLabel = ModelFactory.createDefaultModel().createProperty(rdfsNS + "label");
+	static Property linkSameRoute = ModelFactory.createDefaultModel().createProperty(ignNS + "linkSameRoute");
+	static Property linkSameSequence = ModelFactory.createDefaultModel().createProperty(ignNS + "linkSameSequence");
+	static Property linkSameBag = ModelFactory.createDefaultModel().createProperty(ignNS + "linkSameBag"); // SymmetricProperty et transitive
 	/**
 	 * Instantiates a new graph matching.
 	 */
@@ -81,7 +136,7 @@ public class GraphMatching {
 		Integer numberOfCandidate = 10;
 
 		logger.info("Chargement du TEI");
-		Document teiSource = XMLUtil.createDocumentFromFile(teiPath);
+		Document teiSource = XMLUtil.createDocumentFromFile(TEI_PATH);
 		Model teiRdf = RDFUtil.getModel(teiSource);
 		logger.info("Model TEI vide : " + teiRdf.isEmpty());
 		Set<Toponym> toponymsTEI = getToponymsFromTei(teiRdf);
@@ -98,22 +153,31 @@ public class GraphMatching {
 			currentModel = oneSensePerDiscourseFusion(currentModel, teiRdf);// ajouter ici la fusion des noeuds identiques (one sence per discourse)
 			List<Model> alts = explodeAlts(currentModel);
 			if (alts.size() > 1) {
-				saveModelToFile("t" + v + "_original.xml", currentModel);
+				saveModelToFile("output\\georeden\\t" + v + "_original.xml", currentModel);
 				for (int j = 0; j < alts.size(); j++) {
-					saveModelToFile("t" + v + "_" + j + ".xml", alts.get(j));
+					saveModelToFile("output\\georeden\\t" + v + "_" + j + ".xml", alts.get(j));
 				}
 			}
 			v++;
 		}
 		
 		logger.info("Chargement de la KB");
-		final Model kbSource = ModelFactory.createDefaultModel().read("D:\\\\dbpedia\\\\dbpedia_all.n3");
+		final Model kbSource = ModelFactory.createDefaultModel().read("D:\\dbpedia_all_with_rlsp.n3");
+//		// fusion des données calculées (Voronoy)
+//		logger.info("Chargement des RLSP calculées");
+//		final Model calculsRLSPSource = ModelFactory.createDefaultModel().read("D:\\relationsSpatiales_bkp2.ttl", "TURTLE");
+//		logger.info("Fusion des modèles");
+//		Model newModel = ModelFactory.createDefaultModel();
+//		newModel.add(kbSource);
+//		newModel.add(calculsRLSPSource);
+//		logger.info("Enregistrement...");
+//		saveModelToFile("dbpedia_all_with_rlsp.n3", newModel, "N3");
 
 		Model sourceGraph = getSubGraphWithResources(kbSource);
 
 		logger.info("Calcul du plus court chemin en cours... ");
 		Resource start = sourceGraph.getResource("http://fr.dbpedia.org/resource/Chizé");// Saint-Jean-de-Luz
-		Resource end = sourceGraph.getResource("http://fr.dbpedia.org/resource/Saint-Jean-d'Angély");
+		Resource end = sourceGraph.getResource("http://fr.dbpedia.org/resource/Paris");
 		// Ruffec_(Charente)
 		// Aulnay_(Charente-Maritime)
 		// Chizé
@@ -218,28 +282,23 @@ public class GraphMatching {
 				if (resources.stream().anyMatch(r -> r.toString().indexOf('_') > -1)) { // partie galère, car contient des Alts
 					logger.info("Gérer la fusion avec les alts");
 				} else {
+					// firstPlace est la resource qui remplacera les autres
 					Resource firstPlace = resources.get(0);
-					// Pour chaque place, on récupère les statements auxquels elle est liée (sujet ou objet)
-					List<Statement> oldAllStatements = new ArrayList<>();
-					resources.forEach(p -> oldAllStatements.addAll(getProperties(p, teiRdf)));
-					List<Statement> oldStatements = new ArrayList<>(oldAllStatements.stream().filter(s -> s.getPredicate().getNameSpace().equals(ignNS)).collect(Collectors.toList()));					
-					// Ensuite on adapte ces statements à la première place
-					List<Statement> newStatements = new ArrayList<>();
-					for (Statement statement : oldStatements) {
-						if (resources.contains(statement.getSubject())) { // on remplace le sujet
-							newStatements.add(teiRdf.createStatement(firstPlace, statement.getPredicate(), statement.getObject()));
-						} else {
-							newStatements.add(teiRdf.createStatement((Resource)statement.getObject(), statement.getPredicate(), firstPlace));
+					resources.stream().filter(r -> r != firstPlace).forEach(place -> {
+						List<Statement> statementsToReplace = getProperties(place, currentModel);
+						List<Statement> newStatements = new ArrayList<>();
+						for (Statement statement : statementsToReplace) {
+							if (place == statement.getSubject()) { // on remplace le sujet
+								newStatements.add(teiRdf.createStatement(firstPlace, statement.getPredicate(), statement.getObject()));
+							} else {
+								newStatements.add(teiRdf.createStatement((Resource)statement.getObject(), statement.getPredicate(), firstPlace));
+							}
 						}
-					}
-					// On suprime les autres places
-					currentModel.remove(oldAllStatements);
-					// on insert les statements (la 1ère place remplace les anciennes)
-					List<Resource> types = resources.stream().map(place -> (Resource)teiRdf.getProperty(place, rdfType).getObject()).distinct().collect(Collectors.toList());
-					types.forEach(logger::info);
+						currentModel.remove(statementsToReplace);
+						currentModel.add(newStatements);
+					});
 				}
 			}
-			typesByResources.keySet().stream().forEach(rdfNode -> logger.info(typesByResources.get(rdfNode)));
 		}
 		return currentModel;
 	}
@@ -349,78 +408,28 @@ public class GraphMatching {
 	    // remove statements where resource is object
 	    model.removeAll(null, null, resource);
 	}
-	static Comparator<QuerySolutionEntry> comparatorQuerySolutionEntry = (a, b) -> {
-		Resource r1 = null;
-		if (a.getSpatialReference() != null) {
-			r1 = a.getSpatialReference();
-		} else {
-			r1 = a.getSpatialReferenceAlt();
-		}
-		Resource r2 = null;
-		if (b.getSpatialReference() != null) {
-			r2 = b.getSpatialReference();
-		} else {
-			r2 = b.getSpatialReferenceAlt();
-		}
-		String subR1 = r1.toString().substring(r1.toString().lastIndexOf('/') + 1);
-		String subR2 = r2.toString().substring(r2.toString().lastIndexOf('/') + 1);
-		float fR1;
-		if (subR1.indexOf('_') != -1) {
-			fR1 = Float.parseFloat(subR1.substring(0, subR1.indexOf('_'))) + 0.1f;
-		} else {
-			fR1 = Float.parseFloat(subR1);
-		}
-		float fR2;
-		if (subR2.indexOf('_') != -1) {
-			fR2 = Float.parseFloat(subR2.substring(0, subR2.indexOf('_'))) + 0.1f;
-		} else {
-			fR2 = Float.parseFloat(subR2);
-		}
-		return Float.compare(fR1, fR2);
-	};
-	static Comparator<Resource> comparatorResourcePlace = (r1, r2) -> {
-		String subR1 = r1.toString().substring(r1.toString().lastIndexOf('/') + 1);
-		String subR2 = r2.toString().substring(r2.toString().lastIndexOf('/') + 1);
-		float fR1;
-		if (subR1.indexOf('_') != -1) {
-			fR1 = Float.parseFloat(subR1.substring(0, subR1.indexOf('_'))) + 0.1f;
-		} else {
-			fR1 = Float.parseFloat(subR1);
-		}
-		float fR2;
-		if (subR2.indexOf('_') != -1) {
-			fR2 = Float.parseFloat(subR2.substring(0, subR2.indexOf('_'))) + 0.1f;
-		} else {
-			fR2 = Float.parseFloat(subR2);
-		}
-		return Float.compare(fR1, fR2);
-	};
-	static String ignNS = "http://example.com/namespace/";
-	static String rdfsNS = "http://www.w3.org/2000/01/rdf-schema#";
-	static String rdfNS = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
-	static Property rdfType = ModelFactory.createDefaultModel().createProperty(rdfNS + "type");
-	static Property rdfsLabel = ModelFactory.createDefaultModel().createProperty(rdfsNS + "label");
-	static Property linkSameRoute = ModelFactory.createDefaultModel().createProperty(ignNS + "linkSameRoute");
-	static Property linkSameSequence = ModelFactory.createDefaultModel().createProperty(ignNS + "linkSameSequence");
-	static Property linkSameBag = ModelFactory.createDefaultModel().createProperty(ignNS + "linkSameBag"); // SymmetricProperty et transitive
 	static List<QuerySolution> getGraphTuples(Model teiModel) {
 		String query = 
-				"PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>" + 
-				"PREFIX iti:<http://data.ign.fr/def/itineraires#>" + 
-				"SELECT ?sequence ?route ?bag ?waypoint ?spatialReference ?spatialReferenceAlt WHERE {" + 
-				"    ?sequence rdf:type rdf:Seq ." + 
-				"    ?sequence ?pSeq ?route ." + 
-				"    ?route iti:waypoints ?waypoints ." + 
-				"    ?waypoints rdf:rest*/rdf:first ?bag ." + 
-				"  	?bag ?pBag ?waypoint ." + 
-				"  	OPTIONAL { ?waypoint iti:spatialReference ?spatialReference . }" + 
-				"  	OPTIONAL {" + 
-				"    	?waypoint rdf:type rdf:Alt ." + 
-				"    	?waypoint ?pWaypoint ?waypointBis ." + 
-				"    	?waypointBis iti:spatialReference ?spatialReferenceAlt ." + 
-				"  	}" + 
-				"    FILTER (?pSeq != rdf:type && ?pBag != rdf:type && ?pBag != rdf:first) ." + 
-				"} ORDER BY ?sequence ?route ?bag ?waypoint";
+				"PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> " + 
+				"PREFIX iti:<http://data.ign.fr/def/itineraires#> " + 
+				"SELECT ?sequence ?route ?bag ?waypoint ?spatialReference ?spatialReferenceAlt ?id WHERE { " + 
+				"     ?sequence rdf:type rdf:Seq . " + 
+				"     ?sequence ?pSeq ?route . " + 
+				"     ?route iti:waypoints ?waypoints . " + 
+				"     ?waypoints rdf:rest*/rdf:first ?bag . " + 
+				"    ?bag ?pBag ?waypoint . " + 
+				"    OPTIONAL { " + 
+				"        ?waypoint iti:spatialReference ?spatialReference . " + 
+				"        ?spatialReference <http://example.com/namespace/id> ?id . " + 
+				"    }    " + 
+				"    OPTIONAL { " + 
+				"        ?waypoint rdf:type rdf:Alt .    " + 
+				"        ?waypoint ?pWaypoint ?waypointBis .    " + 
+				"        ?waypointBis iti:spatialReference ?spatialReferenceAlt .  " + 
+				"        ?spatialReferenceAlt <http://example.com/namespace/id> ?id . " + 
+				"    }    " + 
+				"     FILTER (?pSeq != rdf:type && ?pBag != rdf:type && ?pBag != rdf:first) . " + 
+				"} ORDER BY ?sequence ?route ?bag ?waypoint ?id";
 		List<QuerySolution> querySolutions = new ArrayList<>();
 		try {
 			querySolutions.addAll(RDFUtil.getQuerySelectResults(teiModel, query));
@@ -439,7 +448,14 @@ public class GraphMatching {
 			Resource waypoint = (Resource) querySolution.get("waypoint");
 			Resource spatialReference = (Resource) querySolution.get("spatialReference");
 			Resource spatialReferenceAlt = (Resource) querySolution.get("spatialReferenceAlt");
-			querySolutionEntries.add(new QuerySolutionEntry(sequence, route, bag, waypoint, spatialReference, spatialReferenceAlt));
+			RDFNode nodeId = querySolution.get("id");
+			Integer id = -1;
+			if (nodeId.isLiteral()) {
+				Literal literalId = nodeId.asLiteral();
+				String stringId = literalId.getLexicalForm();
+				id = Integer.parseInt(stringId);
+			}
+			querySolutionEntries.add(new QuerySolutionEntry(sequence, route, bag, waypoint, spatialReference, spatialReferenceAlt, id));
 		}
 		return querySolutionEntries;
 	}
@@ -472,7 +488,7 @@ public class GraphMatching {
 				break;
 			QuerySolutionEntry next = querySolutionEntries.get(j);
 			QuerySolutionEntry nextAlt = null;
-			if (next.getSpatialReferenceAlt() != null) {
+			if (next.getSpatialReferenceAlt() != null && j < querySolutionEntries.size() - 1) {
 				j++;
 				nextAlt = querySolutionEntries.get(j);
 			}
@@ -542,7 +558,7 @@ public class GraphMatching {
 				for (int j = 0; j < bagElements.size(); j++) {
 					QuerySolutionEntry next = bagElements.get(j);
 					QuerySolutionEntry nextAlt = null;
-					if (next.getSpatialReferenceAlt() != null) {
+					if (next.getSpatialReferenceAlt() != null && j < bagElements.size() - 1) {
 						j++;
 						nextAlt = bagElements.get(j);
 					}
@@ -596,7 +612,7 @@ public class GraphMatching {
 					for (int k = 0; k < firstBagElements.size(); k++) {
 						next = firstBagElements.get(k);
 						QuerySolutionEntry nextAlt = null;
-						if (next.getSpatialReferenceAlt() != null && k < firstBagElements.size()) {
+						if (next.getSpatialReferenceAlt() != null && k < firstBagElements.size() - 1) {
 							k++;
 							nextAlt = firstBagElements.get(k);
 						}
@@ -647,6 +663,14 @@ public class GraphMatching {
 		File file = new File(fileName);
 		try {
 			model.write(new java.io.FileOutputStream(file));
+		} catch (FileNotFoundException e) {
+			logger.error(e);
+		}
+	}
+	static void saveModelToFile(String fileName, Model model, String lang) {
+		File file = new File(fileName);
+		try {
+			model.write(new java.io.FileOutputStream(file), lang);
 		} catch (FileNotFoundException e) {
 			logger.error(e);
 		}
@@ -958,13 +982,15 @@ public class GraphMatching {
 		private Resource waypoint;
 		private Resource spatialReference;
 		private Resource spatialReferenceAlt;
-		public QuerySolutionEntry(Resource sequence, Resource route, Resource bag, Resource waypoint, Resource spatialReference, Resource spatialReferenceAlt) {
+		private Integer id;
+		public QuerySolutionEntry(Resource sequence, Resource route, Resource bag, Resource waypoint, Resource spatialReference, Resource spatialReferenceAlt, Integer id) {
 			this.sequence = sequence;
 			this.route = route;
 			this.bag = bag;
 			this.waypoint = waypoint;
 			this.spatialReference = spatialReference;
 			this.spatialReferenceAlt = spatialReferenceAlt;
+			this.id = id;
 		}
 		
 		public Resource getSequence() {
@@ -984,6 +1010,9 @@ public class GraphMatching {
 		}
 		public Resource getSpatialReferenceAlt() {
 			return this.spatialReferenceAlt;
+		}
+		public Integer getId() {
+			return this.id;
 		}
 	}
 }

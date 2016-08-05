@@ -22,9 +22,9 @@ import org.jgrapht.graph.SimpleDirectedGraph;
 import org.json.JSONException;
 import org.w3c.dom.Document;
 
-import com.hp.hpl.jena.query.QueryParseException;
-import com.hp.hpl.jena.query.QuerySolution;
-import com.hp.hpl.jena.rdf.model.Model;
+import org.apache.jena.query.QueryParseException;
+import org.apache.jena.query.QuerySolution;
+import org.apache.jena.rdf.model.Model;
 
 import fr.ign.georeden.algorithms.graph.matching.GraphMatching;
 import fr.ign.georeden.algorithms.string.DamerauLevenshteinAlgorithm;

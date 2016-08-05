@@ -8,8 +8,8 @@ import java.util.TreeSet;
 
 import org.apache.jena.atlas.lib.NotImplemented;
 
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Resource;
 
 @Deprecated
 public class AStar {

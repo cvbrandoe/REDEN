@@ -12,8 +12,8 @@ import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
-import com.hp.hpl.jena.query.Query;
-import com.hp.hpl.jena.query.ResultSet;
+import org.apache.jena.query.Query;
+import org.apache.jena.query.ResultSet;
 
 /**
  * Main class to launch the Linked Data crawler for handling domain-adaptation during named-entity linking.

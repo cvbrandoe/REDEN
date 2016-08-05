@@ -2,8 +2,8 @@ package fr.lip6.reden.ldextractor;
 
 import java.util.List;
 
-import com.hp.hpl.jena.query.Query;
-import com.hp.hpl.jena.query.ResultSet;
+import org.apache.jena.query.Query;
+import org.apache.jena.query.ResultSet;
 
 /**
  * Interface that must be implemented for querying a particular source.
