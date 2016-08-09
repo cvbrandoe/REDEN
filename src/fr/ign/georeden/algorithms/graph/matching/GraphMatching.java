@@ -14,6 +14,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
@@ -117,6 +118,7 @@ public class GraphMatching {
 	static String rdfNS = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
 	static String propFrNS = "http://fr.dbpedia.org/property/";
 	static String rlspNS = "http://data.ign.fr/def/relationsspatiales#";
+	static String dboNS = "http://dbpedia.org/ontology/";
 	static Property rdfType = ModelFactory.createDefaultModel().createProperty(rdfNS + "type");
 	static Property rdfsLabel = ModelFactory.createDefaultModel().createProperty(rdfsNS + "label");
 	static Property linkSameRoute = ModelFactory.createDefaultModel().createProperty(ignNS + "linkSameRoute");
@@ -153,7 +155,7 @@ public class GraphMatching {
 	public static Set<Toponym> nodeSelection() {
 		Integer numberOfCandidate = 10;
 		float threshold = 0.6f;
-		String dbPediaRdfFilePath = "D:\\dbpedia_all_with_rlsp.n3";
+		String dbPediaRdfFilePath = "D:\\dbpedia_fr_with_rlsp.n3";		
 
 		logger.info("Chargement du TEI");
 		Document teiSource = XMLUtil.createDocumentFromFile(TEI_PATH);
@@ -171,6 +173,10 @@ public class GraphMatching {
 
 		Set<Toponym> result = getCandidatesSelection(toponymsTEI, candidatesFromKB, numberOfCandidate, threshold);
 		logger.info(result.size() + " candidats");
+		Map<Integer, List<Toponym>> t = result.stream().collect(Collectors.groupingBy(topo -> topo.getScoreCriterionToponymCandidate().size()));
+		for (Entry<Integer, List<Toponym>> e : t.entrySet()) {
+			logger.info("Nb de candidats : " + e.getKey() + "\t Nombre de topo : " + e.getValue().size());
+		}
 		
 		logger.info("Préparation de la création des mini graphes pour chaques séquences");
 		List<QuerySolution> querySolutions = getGraphTuples(teiRdf);
@@ -210,49 +216,46 @@ public class GraphMatching {
 //		saveModelToFile("dbpedia_all_with_rlsp.n3", newModel, "N3");
 
 
-		
-
-		
-		// il faut filter les toponyms de toponymsTEI en ne gardant que ceux qui
-		// sont dans teiRDF
-		// et donc il faut remplacer teiRDF par le graphe RDF d'une sequence
-		
-		//getRDFSequences(teiRdf);
-		
-		// AStarBeamSearch(sourceGraph, teiRdf, 10, numberOfCandidate,
-		// toponymsTEI, candidatesFromKB);
-
-		// logger.info("Vérification des résultats");
-		// if (result.stream().anyMatch(entry ->
-		// entry.getScoreCriterionToponymCandidate().isEmpty()
-		// || entry.getScoreCriterionToponymCandidate().size() < 10
-		// //|| entry.getName().equalsIgnoreCase("Ruffec")
-		// || entry.getScoreCriterionToponymCandidate().stream().map(m ->
-		// m.getValue()).max(Float::compare).get() <= 0f)) {
-		// for (Iterator<Toponym> iterator = result.iterator();
-		// iterator.hasNext();) {
-		// Toponym key = iterator.next();
-		// List<CriterionToponymCandidate> candidates =
-		// key.getScoreCriterionToponymCandidate();
-		// if (candidates.isEmpty() || candidates.size() < 10) {
-		// logger.info("taille : " + key.getResource() + " : " +
-		// candidates.size());
-		// }
-		//// else if (key.getName().equalsIgnoreCase("Ruffec")) {
-		//// logger.info(key.getResource() + " (" + key.getName() +") : " +
-		// candidates.get(0).getCandidate().getResource());
-		//// }
-		// else if (key.getScoreCriterionToponymCandidate().stream().map(m ->
-		// m.getValue()).max(Float::compare).get() <= 0f) {
-		// logger.info("scores : " + key.getResource() + " (" + key.getName()
-		// +") : " + candidates.get(0).getCandidate().getResource());
-		// }
-		// }
-		// } else {
-		// logger.info("pas de topo sans candidat pour le score de label");
-		// }
 
 		return result;
+	}
+	
+	/**
+	 * Dbpedia alltodbpedia fr. Transforme le model contenant toutes les places en ne gardant que celles en France
+	 */
+	static void dbpediaAlltodbpediaFr() {
+		String dbPediaRdfFilePath = "D:\\dbpedia_all_with_rlsp.n3";
+		String queryString = 
+				"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>   " + 
+				"PREFIX dbpedia-fr: <http://fr.dbpedia.org/resource/>   " + 
+				"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>   " + 
+				"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>   " + 
+				"PREFIX foaf: <http://xmlns.com/foaf/0.1/>   " + 
+				"PREFIX prop-fr: <http://fr.dbpedia.org/property/>   " + 
+				"PREFIX georss: <http://www.georss.org/georss/>   " + 
+				"PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> " + 
+				"CONSTRUCT {?s ?p ?o} WHERE {  " + 
+				"    ?s ?p ?o ." + 
+				"    {    " + 
+				"        ?s prop-fr:longitude ?long.     " + 
+				"        ?s prop-fr:latitude ?lat.    " + 
+				"    }     " + 
+				"    UNION     " + 
+				"    {    " + 
+				"        ?s geo:long ?long.     " + 
+				"        ?s geo:lat ?lat.    " + 
+				"    }     " + 
+				"    FILTER ((?long > -5.25 && ?long <8.25) &&(?lat > 42.3 && ?lat < 51.15)) .    " + 
+				"} ";
+		final Model kbSource = ModelFactory.createDefaultModel().read(dbPediaRdfFilePath);
+		Model newModel;
+		try {
+			newModel = RDFUtil.getQueryConstruct(kbSource, queryString, null);
+			saveModelToFile("D:\\dbpedia_fr_with_rlsp.n3", newModel, "N3");
+		} catch (QueryParseException | HttpHostConnectException | RiotException | MalformedURLException
+				| HttpException e) {
+			logger.error(e);
+		}
 	}
 	
 	static Model oneSensePerDiscourseFusion(Model model, Model teiRdf) {
@@ -683,74 +686,7 @@ public class GraphMatching {
 		}
 	}
 
-	// static void fuseRDFGraphsIntoJGTGraph(Model model) {
-	// SimpleDirectedGraph<Toponym, LabeledEdge<Toponym, String>> graph = new
-	// SimpleDirectedGraph<>((Class<? extends LabeledEdge<Toponym, String>>)
-	// LabeledEdge.class);
-	//
-	// }
 
-	/**
-	 * A star beam search.
-	 *
-	 * @param source
-	 *            the source (KB subgraph with only resources linked by prop-fr
-	 *            properties)
-	 * @param target
-	 *            the target (graph from a TEI's sequence)
-	 * @param maxNumberOfNodesToProcess
-	 *            the max number of nodes to process
-	 * @param numberOfCandidatByToponym
-	 *            the number of candidat by toponym
-	 * @param toponymsTEI
-	 *            the toponyms TEI
-	 * @param candidates
-	 *            the candidates from the KB
-	 */
-	static void AStarBeamSearch(Model source, Model target, int maxNumberOfNodesToProcess,
-			int numberOfCandidatByToponym, Set<Toponym> toponymsTEI) {
-		CriterionToponymCandidate firstC = toponymsTEI.stream().sorted((t1, t2) -> Float.compare(
-				t2.getScoreCriterionToponymCandidate().stream().map(m -> m.getValue()).max(Float::compare).get(),
-				t1.getScoreCriterionToponymCandidate().stream().map(m -> m.getValue()).max(Float::compare).get()))
-				.limit(1).collect(Collectors.toList()).get(0).getScoreCriterionToponymCandidate().stream()
-				.sorted((c1, c2) -> Float.compare(c2.getValue(), c1.getValue())).limit(1).collect(Collectors.toList())
-				.get(0);
-		Resource firstR = source.getResource(firstC.getCandidate().getResource());
-		logger.info("CriterionToponymCandidate : " + firstC.getValue() + " / " + firstC.getCandidate().getResource());
-		logger.info("CriterionToponymCandidate est dans liste des candidats : "
-				+ isResourceACandidate(firstR, toponymsTEI)); // doit être faux
-																// pr massif sri
-																// lanka
-	}
-
-	static boolean isResourceACandidate(Resource r, Set<Toponym> toponymsTEI) {
-		return toponymsTEI.stream().anyMatch(t -> t.getScoreCriterionToponymCandidate().stream()
-				.anyMatch(c -> c.getCandidate().getResource().equals(r.getURI())));
-	}
-
-	static double meanNumberOfLinksByNode(Model kbSource) {
-		// calcul du nombre de lien moyen par noeud (entre dbo:place)
-		double result = 0;
-		try {
-			List<QuerySolution> sol = RDFUtil.getQuerySelectResults(kbSource,
-					"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
-							+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
-							+ "PREFIX prop-fr: <http://fr.dbpedia.org/property/>"
-							+ "PREFIX foaf: <http://xmlns.com/foaf/0.1/>"
-							+ "PREFIX xml: <https://www.w3.org/XML/1998/namespace>"
-							+ "PREFIX dbo: <http://dbpedia.org/ontology/>"
-							+ "PREFIX ign: <http://example.com/namespace/>" + "SELECT (AVG(?count) as ?avg) WHERE {"
-							+ "SELECT ?s (count(*) as ?count) WHERE {" + "    ?s ?p ?t ."
-							+ "    ?t rdf:type dbo:Place ." + "  {" + "SELECT DISTINCT ?s WHERE {"
-							+ "	?s rdf:type dbo:Place ." + "    }}" + "} GROUP BY ?s }");
-			String avg = RDFUtil.getURIOrLexicalForm(sol.get(0), "avg");
-			result = Double.parseDouble(avg);
-		} catch (QueryParseException | HttpHostConnectException | RiotException | MalformedURLException
-				| HttpException e) {
-			logger.error(e);
-		}
-		return result;
-	}
 
 	/**
 	 * Gets the sub graph with only the resources (no literals) linked by
@@ -810,33 +746,88 @@ public class GraphMatching {
 	static Set<Toponym> getCandidatesSelection(Set<Toponym> toponymsTEI, List<Candidate> candidatesFromKB,
 			Integer numberOfCandidate, float threshold) {
 		logger.info("Sélection des candidats (nombre de candidats : " + numberOfCandidate + ")");
+		List<Candidate> candidatesFromKBCleared = candidatesFromKB.stream().filter(c -> c != null && c.getTypes() != null && (c.getName() != null || c.getLabel() != null)).collect(Collectors.toList());
+		Map<String, List<Candidate>> candidatesByType = new HashMap<>();
+		for (Candidate candidate2 : candidatesFromKBCleared) {
+			for (String type : candidate2.getTypes()) {
+				List<Candidate> candidates;
+				if (candidatesByType.containsKey(type)) {
+					candidates = candidatesByType.get(type);
+					
+				} else {
+					candidates = new ArrayList<>();
+				}
+				candidates.add(candidate2);
+				candidatesByType.put(type, candidates);
+			}
+		}
 		Criterion criterion = Criterion.scoreText;
-		Set<Toponym> result = new HashSet<>();
+		Set<Toponym> result = Collections.synchronizedSet(new HashSet<>());
 		final AtomicInteger count = new AtomicInteger();
-		final int total = toponymsTEI.size();
 		StringComparisonDamLev sc = new StringComparisonDamLev();
 		// calculs des scores pour chaque candidat de chaque toponyme
-		toponymsTEI.parallelStream().filter(t -> t != null).forEach(toponym -> {
-			candidatesFromKB.parallelStream().filter(c -> c != null && (toponym.getType() == ToponymType.PLACE
-					|| typeContained(toponym.getType().toString(), c.getTypes()))).forEach(candidate -> {
-						float score1 = sc.computeSimilarity(toponym.getName(), candidate.getName());
-						float score2 = sc.computeSimilarity(toponym.getName(), candidate.getName());
-						if (Math.max(score1, score2) > 0f)
-							toponym.addScoreCriterionToponymCandidate(new CriterionToponymCandidate(toponym, candidate,
-									Math.max(score1, score2), criterion));
-					});
-			if (toponym.getScoreCriterionToponymCandidate() != null
-					&& !toponym.getScoreCriterionToponymCandidate().isEmpty()) {
-				toponym.clearAndAddAllScoreCriterionToponymCandidate(
-						toponym.getScoreCriterionToponymCandidate().stream().filter(s -> s != null)
-								.sorted(Comparator.comparing(CriterionToponymCandidate::getValue).reversed())
-								.filter(t -> t.getValue() >= threshold)
-								.limit(Math.min(numberOfCandidate, toponym.getScoreCriterionToponymCandidate().size()))
-								.collect(Collectors.toList()));
+		// aggrégation des toponymes sur leur labal
+		Map<String, List<Toponym>> toponymsByLabel = toponymsTEI.stream().collect(Collectors.groupingBy((Toponym s) -> s.getName()));
+		final int total = toponymsByLabel.size();
+		//for (Entry<String, List<Toponym>> entry : toponymsByLabel.entrySet()) {
+		toponymsByLabel.entrySet().parallelStream().forEach(entry -> {
+			// toponymes de l'entry aggrégés par type
+			Map<ToponymType, List<Toponym>> toponymsByType = entry.getValue().stream().collect(Collectors.groupingBy((Toponym s) -> s.getType()));
+			Map<String, Float> scoreByLabel = new ConcurrentHashMap<>(); // utilisés pour stocker les scores déjà calculés
+			for (Entry<ToponymType, List<Toponym>> toponymsTyped : toponymsByType.entrySet()) {
+				String keyType = getTEITypeToKBType(toponymsTyped.getKey().toString());
+				List<Candidate> candidatesToCheck = candidatesByType.get(keyType);
+				if (candidatesToCheck != null && !candidatesToCheck.isEmpty()) {
+					candidatesToCheck.parallelStream().forEach(candidate -> {
+						float score = 0f;
+						if (candidate.getName() != null && scoreByLabel.containsKey(candidate.getName())) {
+							score = scoreByLabel.get(candidate.getName());
+						} else if (candidate.getLabel() != null && scoreByLabel.containsKey(candidate.getLabel())) {
+							score = scoreByLabel.get(candidate.getLabel());
+						} else {
+							float score1 = sc.computeSimilarity(entry.getKey(), candidate.getName());
+							float score2 = sc.computeSimilarity(entry.getKey(), candidate.getLabel());
+							if (score1 > score2 && candidate.getName() != null) {
+								score = score1;
+								scoreByLabel.put(candidate.getName(), score1);
+							} else if (candidate.getLabel() != null) {
+								score = score2;
+								scoreByLabel.put(candidate.getLabel(), score2);
+							}
+						}
+						for (Toponym toponym : toponymsTyped.getValue()) {
+							toponym.addScoreCriterionToponymCandidate(new CriterionToponymCandidate(toponym, candidate,	score, criterion));
+						}
+					});				
+				}
 			}
-			result.add(toponym);
+			entry.getValue().stream().forEach(toponym -> {
+				toponym.clearAndAddAllScoreCriterionToponymCandidate(toponym.getScoreCriterionToponymCandidate().stream()
+						.filter(s -> s != null).sorted(Comparator.comparing(CriterionToponymCandidate::getValue).reversed())
+						.filter(t -> t.getValue() >= threshold)
+						.limit(Math.min(numberOfCandidate, toponym.getScoreCriterionToponymCandidate().size())).collect(Collectors.toList()));
+				result.add(toponym);
+			});
 			logger.info((count.getAndIncrement() + 1) + " / " + total);
 		});
+		
+//		toponymsTEI.parallelStream().filter(t -> t != null).forEach(toponym -> {
+//			candidatesFromKB.parallelStream().filter(c -> c != null && (toponym.getType() == ToponymType.PLACE
+//					|| typeContained(toponym.getType().toString(), c.getTypes()))).forEach(candidate -> {
+//						float score1 = sc.computeSimilarity(toponym.getName(), candidate.getName());
+//						float score2 = sc.computeSimilarity(toponym.getName(), candidate.getName());
+//						if (Math.max(score1, score2) > 0f)
+//							toponym.addScoreCriterionToponymCandidate(new CriterionToponymCandidate(toponym, candidate,	Math.max(score1, score2), criterion));
+//					});
+//			if (toponym.getScoreCriterionToponymCandidate() != null	&& !toponym.getScoreCriterionToponymCandidate().isEmpty()) {
+//				toponym.clearAndAddAllScoreCriterionToponymCandidate(toponym.getScoreCriterionToponymCandidate().stream()
+//						.filter(s -> s != null).sorted(Comparator.comparing(CriterionToponymCandidate::getValue).reversed())
+//						.filter(t -> t.getValue() >= threshold)
+//						.limit(Math.min(numberOfCandidate, toponym.getScoreCriterionToponymCandidate().size())).collect(Collectors.toList()));
+//			}
+//			result.add(toponym);
+//			
+//		});
 		return result;
 	}
 
@@ -857,6 +848,10 @@ public class GraphMatching {
 				return true;
 		}
 		return false;
+	}
+	static String getTEITypeToKBType(String type) {
+		String typeToponym = type.substring(type.lastIndexOf(':') + 1);
+		return dboNS + typeToponym;
 	}
 
 	/**
@@ -1156,7 +1151,70 @@ public class GraphMatching {
 	 * Algo de matching
 	 * */
 	static List<IPathMatching> graphMatching(Model kbSubgraph, Model miniGraph, Set<Toponym> toponymsTEI, float labelWeight, float rlspWeight, float linkWeight) {
-		Resource r = miniGraph.createResource();
+		// on récupère les noeuds du mini graphe
+		Set<Resource> targetNodes = new HashSet<>(miniGraph.listSubjects().toList());
+		targetNodes.addAll(miniGraph.listObjects().toList().stream().filter(o -> o.isResource()).map(m -> (Resource)m).collect(Collectors.toList()));
+		// On commence par ne garder que les toponyms présents dans ce mini graphe
+		Set<Toponym> toponymsSeq = new HashSet<>(toponymsTEI.stream().filter(p -> targetNodes.stream().anyMatch(res -> p.getResource().equals(res.toString()))).collect(Collectors.toList()));
+		
+		// on récupère les noeuds de dbpedia à traiter
+		Set<Resource> sourceNodes = new HashSet<>(
+				toponymsSeq.stream()
+				.map(m -> m.getScoreCriterionToponymCandidate().stream()
+						.map(l -> kbSubgraph.createResource(l.getCandidate().getResource())).collect(Collectors.toList()))
+			        .flatMap(l -> l.stream()).distinct()
+			        .collect(Collectors.toList()));
+		List<List<IPathMatching>> open = new ArrayList<>();
+		Resource firstSourceNode = kbSubgraph.createResource(toponymsSeq.stream().sorted((a, b) -> Integer.compare(a.getScoreCriterionToponymCandidate().size(), b.getScoreCriterionToponymCandidate().size())).findFirst().get().getScoreCriterionToponymCandidate().get(0).getCandidate().getResource());// null; // Définir comment on choisit ce noeud
+		for (Resource targetNode : targetNodes) {
+			float cost = getSubstitutionCost(firstSourceNode, targetNode, labelWeight, rlspWeight, linkWeight, toponymsSeq, miniGraph, kbSubgraph);
+			List<IPathMatching> path = new ArrayList<>();
+			path.add(new Substitution(firstSourceNode, targetNode, cost));
+			open.add(path);
+		}
+		List<IPathMatching> pathDeletion = new ArrayList<>();
+		pathDeletion.add(new Deletion(firstSourceNode, 1));
+		open.add(pathDeletion);
+		List<IPathMatching> pMin = null;
+		while (true) {
+			pMin = open.stream().min((a,b) -> Float.compare(totalCostPath(a) + 
+					heuristicCostPath(a,  kbSubgraph, miniGraph, toponymsSeq, labelWeight, rlspWeight, linkWeight, getSourceUnusedResources(a, sourceNodes), getTargetUnusedResources(a, targetNodes)), 
+					totalCostPath(b) + 
+					heuristicCostPath(b,  kbSubgraph, miniGraph, toponymsSeq, labelWeight, rlspWeight, linkWeight, getSourceUnusedResources(b, sourceNodes), getTargetUnusedResources(b, targetNodes)))).get(); // définir pmin g + h
+			open.remove(pMin);
+			if (isCompletePath(pMin, sourceNodes, targetNodes)) {
+				break;
+			} else {
+				//Set<Resource> usedResourcesFromTarget = getTargetUsedResources(pMin); // resources du graphe cible utilisées dans ce chemin
+				Set<Resource> unusedResourcesFromTarget = getTargetUnusedResources(pMin, targetNodes);
+				if (pMin.size() < sourceNodes.size()) {
+					final List<IPathMatching> pMinFinal = new ArrayList<>(pMin);
+					Resource currentSourceNode = kbSubgraph.createResource(toponymsSeq.stream()
+							.filter(p -> getTargetUnusedResources(pMinFinal, targetNodes).stream().anyMatch(t -> t.toString().equals(p)))
+							.sorted((a, b) -> Integer.compare(a.getScoreCriterionToponymCandidate().size(), b.getScoreCriterionToponymCandidate().size())).findFirst().get().getScoreCriterionToponymCandidate().get(0).getCandidate().getResource());//null; // Définir comment on choisit ce noeud
+					for (Resource resource : unusedResourcesFromTarget) {
+						List<IPathMatching> newPath = new ArrayList<>(pMin);
+						float cost = getSubstitutionCost(currentSourceNode, resource, labelWeight, rlspWeight, linkWeight, toponymsSeq, miniGraph, kbSubgraph);
+						newPath.add(new Substitution(currentSourceNode, resource, cost));
+						open.add(newPath);
+					}
+					List<IPathMatching> newPathDeletion = new ArrayList<>(pMin);
+					newPathDeletion.add(new Deletion(currentSourceNode, 1));
+					open.add(newPathDeletion);
+				} else {
+					for (Resource resource : unusedResourcesFromTarget) {
+						List<IPathMatching> newPath = new ArrayList<>(pMin);
+						newPath.add(new Insertion(resource, getInsertionCost(resource)));
+						open.add(newPath);
+					}
+				}
+			}
+		}
+		
+		return pMin;
+	}
+	
+	static List<IPathMatching> graphMatchingV2(Model kbSubgraph, Model miniGraph, Set<Toponym> toponymsTEI, float labelWeight, float rlspWeight, float linkWeight) {
 		// on récupère les noeuds du mini graphe
 		Set<Resource> targetNodes = new HashSet<>(miniGraph.listSubjects().toList());
 		targetNodes.addAll(miniGraph.listObjects().toList().stream().filter(o -> o.isResource()).map(m -> (Resource)m).collect(Collectors.toList()));
