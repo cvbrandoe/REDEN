@@ -3,13 +3,15 @@ package fr.ign.georeden.algorithms.graph.matching;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.jena.rdf.model.Resource;
+
 import fr.ign.georeden.kb.ToponymType;
 
 /**
  * The Class Toponym.
  */
 public class Toponym {
-	private String resource;
+	private Resource resource;
 	private String name;
 	private Integer xmlId;
 	private ToponymType type;
@@ -25,7 +27,7 @@ public class Toponym {
 	 * @param name the name
 	 * @param types the types
 	 */
-	public Toponym(String resource, Integer xmlId, String name, ToponymType type) {
+	public Toponym(Resource resource, Integer xmlId, String name, ToponymType type) {
 		this.resource = resource;
 		this.name = name;
 		this.xmlId = xmlId;
@@ -51,7 +53,7 @@ public class Toponym {
 //		this.typeCriterionToponymCandidate = new ArrayList<>();
 //	}
 	
-	public String getResource() {
+	public Resource getResource() {
 		return this.resource;
 	}
 	public String getName() {

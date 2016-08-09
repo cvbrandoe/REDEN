@@ -9,13 +9,22 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.Set;
+import java.util.concurrent.Callable;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import javax.naming.spi.DirStateFactory.Result;
@@ -29,6 +38,7 @@ import org.w3c.dom.Document;
 
 import org.apache.jena.graph.Graph;
 import org.apache.jena.ontology.OntTools;
+import org.apache.jena.ontology.OntTools.Path;
 import org.apache.jena.ontology.OntTools.PredicatesFilter;
 import org.apache.jena.query.QueryParseException;
 import org.apache.jena.query.QuerySolution;
@@ -119,6 +129,7 @@ public class GraphMatching {
 	static String propFrNS = "http://fr.dbpedia.org/property/";
 	static String rlspNS = "http://data.ign.fr/def/relationsspatiales#";
 	static String dboNS = "http://dbpedia.org/ontology/";
+	static String geoNS = "http://www.w3.org/2003/01/geo/wgs84_pos#";
 	static Property rdfType = ModelFactory.createDefaultModel().createProperty(rdfNS + "type");
 	static Property rdfsLabel = ModelFactory.createDefaultModel().createProperty(rdfsNS + "label");
 	static Property linkSameRoute = ModelFactory.createDefaultModel().createProperty(ignNS + "linkSameRoute");
@@ -140,6 +151,10 @@ public class GraphMatching {
 	static Property rlspSouthWestOf = ModelFactory.createDefaultModel().createProperty(rlspNS + "southWestOf");
 	static Property rlspEastOf = ModelFactory.createDefaultModel().createProperty(rlspNS + "eastOf");
 	static Property rlspWestOf = ModelFactory.createDefaultModel().createProperty(rlspNS + "westOf");
+	static Property propLat = ModelFactory.createDefaultModel().createProperty(propFrNS + "latitude");
+	static Property propLong = ModelFactory.createDefaultModel().createProperty(propFrNS + "longitude");
+	static Property geoLat = ModelFactory.createDefaultModel().createProperty(geoNS + "lat");
+	static Property geoLong = ModelFactory.createDefaultModel().createProperty(geoNS + "long");
 	/**
 	 * Instantiates a new graph matching.
 	 */
@@ -152,10 +167,21 @@ public class GraphMatching {
 	 *
 	 * @return the sets the
 	 */
-	public static Set<Toponym> nodeSelection() {
+	public static Set<Toponym> nodeSelection() {		
 		Integer numberOfCandidate = 10;
 		float threshold = 0.6f;
-		String dbPediaRdfFilePath = "D:\\dbpedia_fr_with_rlsp.n3";		
+		String dbPediaRdfFilePath = "D:\\dbpedia_fr_with_rlsp.n3";	
+		final Model kbSource2 = ModelFactory.createDefaultModel().read(dbPediaRdfFilePath);	
+		float test = getLatitude(kbSource2.createResource("http://fr.dbpedia.org/resource/Aulnay-sous-Bois"), kbSource2);
+		float test2 = getLongitude(kbSource2.createResource("http://fr.dbpedia.org/resource/Aulnay-sous-Bois"), kbSource2);
+		float test3 = getLatitude(kbSource2.createResource("http://fr.dbpedia.org/resource/Paris"), kbSource2);
+		float test4 = getLongitude(kbSource2.createResource("http://fr.dbpedia.org/resource/Paris"), kbSource2);
+		logger.info(test);
+		logger.info(test2);
+		logger.info(test3);
+		logger.info(test4);
+		logger.info(distance(test, test2, test3, test4));
+//		saveModelToFile("D:\\dbpedia_fr_with_rlsp.ttl", kbSource2, "TURTLE");
 
 		logger.info("Chargement du TEI");
 		Document teiSource = XMLUtil.createDocumentFromFile(TEI_PATH);
@@ -199,7 +225,7 @@ public class GraphMatching {
 //			} else 
 				if (alts.size() == 1) {
 				Model miniGraph = alts.get(0);
-				List<IPathMatching> path = graphMatching(kbSubgraph, miniGraph, toponymsTEI, 0.4f, 0.4f, 0.2f);
+				List<IPathMatching> path = graphMatchingV2(kbSubgraph, miniGraph, toponymsTEI, 0.4f, 0.4f, 0.2f);
 				logger.info(totalCostPath(path));
 			}
 			v++;
@@ -761,47 +787,17 @@ public class GraphMatching {
 				candidatesByType.put(type, candidates);
 			}
 		}
-		Criterion criterion = Criterion.scoreText;
 		Set<Toponym> result = Collections.synchronizedSet(new HashSet<>());
 		final AtomicInteger count = new AtomicInteger();
-		StringComparisonDamLev sc = new StringComparisonDamLev();
 		// calculs des scores pour chaque candidat de chaque toponyme
 		// aggrégation des toponymes sur leur labal
 		Map<String, List<Toponym>> toponymsByLabel = toponymsTEI.stream().collect(Collectors.groupingBy((Toponym s) -> s.getName()));
 		final int total = toponymsByLabel.size();
-		//for (Entry<String, List<Toponym>> entry : toponymsByLabel.entrySet()) {
-		toponymsByLabel.entrySet().parallelStream().forEach(entry -> {
+		toponymsByLabel.entrySet().parallelStream().forEach(toponymsWithLabel -> {
 			// toponymes de l'entry aggrégés par type
-			Map<ToponymType, List<Toponym>> toponymsByType = entry.getValue().stream().collect(Collectors.groupingBy((Toponym s) -> s.getType()));
-			Map<String, Float> scoreByLabel = new ConcurrentHashMap<>(); // utilisés pour stocker les scores déjà calculés
-			for (Entry<ToponymType, List<Toponym>> toponymsTyped : toponymsByType.entrySet()) {
-				String keyType = getTEITypeToKBType(toponymsTyped.getKey().toString());
-				List<Candidate> candidatesToCheck = candidatesByType.get(keyType);
-				if (candidatesToCheck != null && !candidatesToCheck.isEmpty()) {
-					candidatesToCheck.parallelStream().forEach(candidate -> {
-						float score = 0f;
-						if (candidate.getName() != null && scoreByLabel.containsKey(candidate.getName())) {
-							score = scoreByLabel.get(candidate.getName());
-						} else if (candidate.getLabel() != null && scoreByLabel.containsKey(candidate.getLabel())) {
-							score = scoreByLabel.get(candidate.getLabel());
-						} else {
-							float score1 = sc.computeSimilarity(entry.getKey(), candidate.getName());
-							float score2 = sc.computeSimilarity(entry.getKey(), candidate.getLabel());
-							if (score1 > score2 && candidate.getName() != null) {
-								score = score1;
-								scoreByLabel.put(candidate.getName(), score1);
-							} else if (candidate.getLabel() != null) {
-								score = score2;
-								scoreByLabel.put(candidate.getLabel(), score2);
-							}
-						}
-						for (Toponym toponym : toponymsTyped.getValue()) {
-							toponym.addScoreCriterionToponymCandidate(new CriterionToponymCandidate(toponym, candidate,	score, criterion));
-						}
-					});				
-				}
-			}
-			entry.getValue().stream().forEach(toponym -> {
+			Map<ToponymType, List<Toponym>> toponymsByType = toponymsWithLabel.getValue().stream().collect(Collectors.groupingBy((Toponym s) -> s.getType()));
+			computeCandidates(toponymsWithLabel, toponymsByType.entrySet(), candidatesByType);			
+			toponymsWithLabel.getValue().stream().forEach(toponym -> {
 				toponym.clearAndAddAllScoreCriterionToponymCandidate(toponym.getScoreCriterionToponymCandidate().stream()
 						.filter(s -> s != null).sorted(Comparator.comparing(CriterionToponymCandidate::getValue).reversed())
 						.filter(t -> t.getValue() >= threshold)
@@ -830,7 +826,38 @@ public class GraphMatching {
 //		});
 		return result;
 	}
-
+	static void computeCandidates(Entry<String, List<Toponym>> toponymsWithLabel, Set<Entry<ToponymType, List<Toponym>>> entries, Map<String, List<Candidate>> candidatesByType) {
+		Criterion criterion = Criterion.scoreText;
+		StringComparisonDamLev sc = new StringComparisonDamLev();
+		Map<String, Float> scoreByLabel = new ConcurrentHashMap<>(); // utilisés pour stocker les scores déjà calculés
+		for (Entry<ToponymType, List<Toponym>> toponymsTyped : entries) {
+			String keyType = getTEITypeToKBType(toponymsTyped.getKey().toString());
+			List<Candidate> candidatesToCheck = candidatesByType.get(keyType);
+			if (candidatesToCheck != null && !candidatesToCheck.isEmpty()) {
+				candidatesToCheck.parallelStream().forEach(candidate -> {
+					float score = 0f;
+					if (candidate.getName() != null && scoreByLabel.containsKey(candidate.getName())) {
+						score = scoreByLabel.get(candidate.getName());
+					} else if (candidate.getLabel() != null && scoreByLabel.containsKey(candidate.getLabel())) {
+						score = scoreByLabel.get(candidate.getLabel());
+					} else {
+						float score1 = sc.computeSimilarity(toponymsWithLabel.getKey(), candidate.getName());
+						float score2 = sc.computeSimilarity(toponymsWithLabel.getKey(), candidate.getLabel());
+						if (score1 > score2 && candidate.getName() != null) {
+							score = score1;
+							scoreByLabel.put(candidate.getName(), score1);
+						} else if (candidate.getLabel() != null) {
+							score = score2;
+							scoreByLabel.put(candidate.getLabel(), score2);
+						}
+					}
+					for (Toponym toponym : toponymsTyped.getValue()) {
+						toponym.addScoreCriterionToponymCandidate(new CriterionToponymCandidate(toponym, candidate,	score, criterion));
+					}
+				});				
+			}
+		}
+	}
 	/**
 	 * Return true if the type to check is contained in the set of types.
 	 *
@@ -879,7 +906,7 @@ public class GraphMatching {
 		for (QuerySolution querySolution : qSolutionsTEI) {
 			String label = RDFUtil.getURIOrLexicalForm(querySolution, "label");
 			String type = RDFUtil.getURIOrLexicalForm(querySolution, "type");
-			String resource = RDFUtil.getURIOrLexicalForm(querySolution, "s");
+			Resource resource = teiRdf.createResource(RDFUtil.getURIOrLexicalForm(querySolution, "s"));
 			Integer id = Integer.parseInt(RDFUtil.getURIOrLexicalForm(querySolution, "id"));
 			results.add(new Toponym(resource, id, label, ToponymType.where(type)));
 		}
@@ -933,7 +960,7 @@ public class GraphMatching {
 				.collect(Collectors.groupingBy((String[] s) -> s[0]));
 		logger.info("Traitement des candidats de la KB");
 		qSolutionsKB.parallelStream().forEach(querySolution -> {
-			String candidateResource = RDFUtil.getURIOrLexicalForm(querySolution, "s");
+			Resource candidateResource = kbSource.createResource(RDFUtil.getURIOrLexicalForm(querySolution, "s"));
 			String candidateLabel = RDFUtil.getURIOrLexicalForm(querySolution, "label");
 			String candidateName = RDFUtil.getURIOrLexicalForm(querySolution, "name");
 			Set<String> types = new HashSet<>();
@@ -979,10 +1006,15 @@ public class GraphMatching {
 		// sub(n,m)=a.(1 - scoreLabel(n,m))+b.rlsp(n,m)+c.link(n,m)
 		return labelWeight * (1 - scoreLabel(nodeToRemove, nodeToInsert, toponymsTEI)) + rlspWeight * scoreRlsp(nodeToRemove, nodeToInsert, teiRdf, toponymsTEI, kbWithInterestingProperties) + linkWeight * scoreLink(nodeToRemove, nodeToInsert, teiRdf, toponymsTEI, kbWithInterestingProperties);
 	}
+	static float getSubstitutionCostV2(Toponym nodeToRemove, CriterionToponymCandidate candidateCriterion, float labelWeight, float rlspWeight, float linkWeight, Set<Toponym> toponymsTEI, Model teiRdf, Model kbWithInterestingProperties) {
+		return labelWeight * (1 - candidateCriterion.getValue()) 
+				//+ rlspWeight * scoreRlsp(nodeToRemove.getResource(), candidateCriterion.getCandidate().getResource(), teiRdf, toponymsTEI, kbWithInterestingProperties) 
+				+ linkWeight * scoreLinkV2(nodeToRemove, candidateCriterion, teiRdf, toponymsTEI, kbWithInterestingProperties);
+	}
 	static float scoreLabel(Resource nodeToRemove, Resource nodeToInsert, Set<Toponym> toponymsTEI) {
 		List<CriterionToponymCandidate> candidates = getCandidates(nodeToInsert, toponymsTEI);
 		if (!candidates.isEmpty()) {
-			Optional<CriterionToponymCandidate> candidate = candidates.stream().filter(t -> t.getCandidate().getResource().equals(nodeToRemove.toString())).findFirst();
+			Optional<CriterionToponymCandidate> candidate = candidates.stream().filter(t -> areResourcesEqual(t.getCandidate().getResource(), nodeToRemove)).findFirst();
 			if (candidate.isPresent()) {
 				return candidate.get().getValue();
 			}
@@ -1008,7 +1040,7 @@ public class GraphMatching {
 			Map<Resource, Integer> pathLength = new HashMap<>();
 			List<CriterionToponymCandidate> candidates = getCandidates(nodeToInsert, toponymsTEI);
 			for (CriterionToponymCandidate criterionToponymCandidate : candidates) {
-				Resource end = kbWithInterestingProperties.getResource(criterionToponymCandidate.getCandidate().getResource());
+				Resource end = criterionToponymCandidate.getCandidate().getResource();
 				OntTools.Path path = OntTools.findShortestPath(kbWithInterestingProperties, nodeToRemove, end, filter);
 				if (path != null) { // à revoir
 					pathLength.put(end, path.size());
@@ -1105,7 +1137,7 @@ public class GraphMatching {
 			List<CriterionToponymCandidate> candidates = getCandidates(nodeToInsert, toponymsTEI);
 			Map<Resource, Integer> pathLength = new HashMap<>();
 			for (CriterionToponymCandidate criterionToponymCandidate : candidates) {
-				Resource end = kbWithInterestingProperties.getResource(criterionToponymCandidate.getCandidate().getResource());
+				Resource end = criterionToponymCandidate.getCandidate().getResource();
 				OntTools.Path path = OntTools.findShortestPath(kbWithInterestingProperties, nodeToRemove, end, filter);
 				pathLength.put(end, path.size());
 			}
@@ -1120,9 +1152,94 @@ public class GraphMatching {
 		
 		return result / ((float)statements.size());
 	}
+	static float scoreLinkV2(Toponym toponym, CriterionToponymCandidate criterion, Model teiRdf, Set<Toponym> toponymsTEI, Model kbWithInterestingProperties) {
+		Resource nodeToRemove = toponym.getResource();
+		Resource nodeToInsert = criterion.getCandidate().getResource();
+		float result = 0f;
+		List<Statement> statements = getProperties(nodeToRemove, teiRdf);
+		statements = removeRLSP(statements);
+		if (statements.isEmpty())
+			return result;
+		
+		List<Property> properties = new ArrayList<>();
+		properties.add(propNord);
+		properties.add(propNordEst);
+		properties.add(propNordOuest);
+		properties.add(propSud);
+		properties.add(propSudEst);
+		properties.add(propSudOuest);
+		properties.add(propEst);
+		properties.add(propOuest);
+		PredicatesFilter filter = new PredicatesFilter(properties);
+		for (Statement statement : statements) {
+			Resource m;
+			if (areResourcesEqual(statement.getSubject(), nodeToRemove)) {
+				m = (Resource) statement.getObject();
+			} else {
+				m = statement.getSubject();
+			}
+			List<CriterionToponymCandidate> candidates = getCandidates(m, toponymsTEI);
+			Map<Resource, Integer> pathLength = new HashMap<>();
+			for (CriterionToponymCandidate criterionToponymCandidate : candidates) {
+				Resource end = criterionToponymCandidate.getCandidate().getResource();
+				if (scoresLinkTmp.containsKey(end) && scoresLinkTmp.get(end).containsKey(nodeToInsert)) {
+					pathLength.put(end, scoresLinkTmp.get(end).get(nodeToInsert));
+				} else {
+					OntTools.Path path = findShortestPath(kbWithInterestingProperties, nodeToInsert, end, filter);//null;
+//					try {
+//						ExecutorService executor = Executors.newSingleThreadExecutor();
+//						SearchPathThread t = new SearchPathThread(kbWithInterestingProperties, nodeToInsert, end, filter);
+//						Future<OntTools.Path> f = executor.submit(t);
+//						executor.shutdown();
+//						path = f.get(2, TimeUnit.SECONDS);
+//					} catch (InterruptedException | ExecutionException | TimeoutException e) {
+//						logger.error(e);
+//					}
+					if (path != null) {
+						pathLength.put(end, path.size());
+						recordLinkPath(scoresLinkTmp, nodeToInsert, end, path.size());
+					} else {
+						recordLinkPath(scoresLinkTmp, nodeToInsert, end, 10000); // valeur arbitraire pr signifier que le chemin est trop long
+					}
+				}
+			}
+			Optional<Integer> maxPathLength = pathLength.values().stream().max(Integer::compare);
+			if (maxPathLength.isPresent()) {
+				result += pathLength.keySet().stream().map(key -> {
+					Integer sp = pathLength.get(key);
+					return (1 - scoreLabel(key, m, toponymsTEI)) * ((float)sp) / ((float)maxPathLength.get());
+				}).min(Float::compareTo).get();
+			}
+		}
+		
+		return result / ((float)statements.size());
+	}
+	static void recordLinkPath(Map<Resource, Map<Resource, Integer>> scoresLinkTmp, Resource r1, Resource r2, Integer value) {
+		if (scoresLinkTmp.containsKey(r1)) { // r1 a déjà été traité
+			Map<Resource, Integer> scoreR1 = scoresLinkTmp.get(r1);
+			if (!scoreR1.containsKey(r2)) { // r1 et r2 n'ont jamais été traités ensemble
+				scoreR1.put(r2, value);
+			}
+		} else { // r1 n'a jamais été traité
+			Map<Resource, Integer> scoreR1 = new HashMap<>();
+			scoreR1.put(r2, value);
+			scoresLinkTmp.put(r1, scoreR1);
+		}
+		if (scoresLinkTmp.containsKey(r2)) { // r2 a déjà été traité
+			Map<Resource, Integer> scoreR2 = scoresLinkTmp.get(r2);
+			if (!scoreR2.containsKey(r1)) { // r1 et r2 n'ont jamais été traités ensemble
+				scoreR2.put(r1, value);
+			}
+		} else {// r2 n'a jamais été traité
+			Map<Resource, Integer> scoreR2 = new HashMap<>();
+			scoreR2.put(r1, value);
+			scoresLinkTmp.put(r2, scoreR2);
+		}
+	}
+	static Map<Resource, Map<Resource, Integer>> scoresLinkTmp = new HashMap<>();
 	static List<CriterionToponymCandidate> getCandidates(Resource r, Set<Toponym> toponymsTEI) {
 		List<CriterionToponymCandidate> results = new ArrayList<>();
-		Optional<Toponym> toponym = toponymsTEI.stream().filter(t -> t.getResource().equals(r.toString())).findFirst();
+		Optional<Toponym> toponym = toponymsTEI.stream().filter(t -> areResourcesEqual(t.getResource(), r)).findFirst();
 		if (toponym.isPresent()) {
 			return toponym.get().getScoreCriterionToponymCandidate();
 			
@@ -1139,7 +1256,7 @@ public class GraphMatching {
 	static List<Statement> removeRLSP(List<Statement>statements) {
 		if (statements == null || statements.isEmpty())
 			return new ArrayList<>();
-		return statements.stream().filter(s -> s.getPredicate().getNameSpace().equals(rlspNS)).collect(Collectors.toList());
+		return statements.stream().filter(s -> !s.getPredicate().getNameSpace().equals(rlspNS)).collect(Collectors.toList());
 	}
 	static List<Statement> keepOnlyRLSP(List<Statement>statements) {
 		if (statements == null || statements.isEmpty())
@@ -1155,13 +1272,13 @@ public class GraphMatching {
 		Set<Resource> targetNodes = new HashSet<>(miniGraph.listSubjects().toList());
 		targetNodes.addAll(miniGraph.listObjects().toList().stream().filter(o -> o.isResource()).map(m -> (Resource)m).collect(Collectors.toList()));
 		// On commence par ne garder que les toponyms présents dans ce mini graphe
-		Set<Toponym> toponymsSeq = new HashSet<>(toponymsTEI.stream().filter(p -> targetNodes.stream().anyMatch(res -> p.getResource().equals(res.toString()))).collect(Collectors.toList()));
+		Set<Toponym> toponymsSeq = new HashSet<>(toponymsTEI.stream().filter(p -> targetNodes.stream().anyMatch(res -> areResourcesEqual(p.getResource(), res))).collect(Collectors.toList()));
 		
 		// on récupère les noeuds de dbpedia à traiter
 		Set<Resource> sourceNodes = new HashSet<>(
 				toponymsSeq.stream()
 				.map(m -> m.getScoreCriterionToponymCandidate().stream()
-						.map(l -> kbSubgraph.createResource(l.getCandidate().getResource())).collect(Collectors.toList()))
+						.map(l -> l.getCandidate().getResource()).collect(Collectors.toList()))
 			        .flatMap(l -> l.stream()).distinct()
 			        .collect(Collectors.toList()));
 		List<List<IPathMatching>> open = new ArrayList<>();
@@ -1213,57 +1330,69 @@ public class GraphMatching {
 		
 		return pMin;
 	}
-	
+	static boolean areResourcesEqual(Resource r1, Resource r2) {
+		String uri1 = r1.getURI();
+		String uri2 = r2.getURI();
+		return uri1.equalsIgnoreCase(uri2);
+	}
 	static List<IPathMatching> graphMatchingV2(Model kbSubgraph, Model miniGraph, Set<Toponym> toponymsTEI, float labelWeight, float rlspWeight, float linkWeight) {
 		// on récupère les noeuds du mini graphe
-		Set<Resource> targetNodes = new HashSet<>(miniGraph.listSubjects().toList());
-		targetNodes.addAll(miniGraph.listObjects().toList().stream().filter(o -> o.isResource()).map(m -> (Resource)m).collect(Collectors.toList()));
-		// On commence par ne garder que les toponyms présents dans ce mini graphe
-		Set<Toponym> toponymsSeq = new HashSet<>(toponymsTEI.stream().filter(p -> targetNodes.stream().anyMatch(res -> p.getResource().equals(res.toString()))).collect(Collectors.toList()));
-		
+		Set<Resource> sourceNodes = new HashSet<>(miniGraph.listSubjects().toList());
+		sourceNodes.addAll(miniGraph.listObjects().toList().stream().filter(o -> o.isResource()).map(m -> (Resource)m).collect(Collectors.toList()));
+		// On ne garde que les toponyms présents dans ce mini graphe
+		Set<Toponym> toponymsSeq = new HashSet<>(toponymsTEI.stream().filter(p -> sourceNodes.stream().anyMatch(res -> areResourcesEqual(p.getResource(), res))).collect(Collectors.toList()));
+		List<Resource> usedSourceNodes = new ArrayList<>();
 		// on récupère les noeuds de dbpedia à traiter
-		Set<Resource> sourceNodes = new HashSet<>(
+		Set<Resource> targetNodes = new HashSet<>(
 				toponymsSeq.stream()
 				.map(m -> m.getScoreCriterionToponymCandidate().stream()
-						.map(l -> kbSubgraph.createResource(l.getCandidate().getResource())).collect(Collectors.toList()))
+						.map(l -> l.getCandidate().getResource()).collect(Collectors.toList()))
 			        .flatMap(l -> l.stream()).distinct()
 			        .collect(Collectors.toList()));
 		List<List<IPathMatching>> open = new ArrayList<>();
-		Resource firstSourceNode = kbSubgraph.createResource(toponymsSeq.stream().sorted((a, b) -> Integer.compare(a.getScoreCriterionToponymCandidate().size(), b.getScoreCriterionToponymCandidate().size())).findFirst().get().getScoreCriterionToponymCandidate().get(0).getCandidate().getResource());// null; // Définir comment on choisit ce noeud
-		for (Resource targetNode : targetNodes) {
-			float cost = getSubstitutionCost(firstSourceNode, targetNode, labelWeight, rlspWeight, linkWeight, toponymsSeq, miniGraph, kbSubgraph);
-			List<IPathMatching> path = new ArrayList<>();
-			path.add(new Substitution(firstSourceNode, targetNode, cost));
-			open.add(path);
-		}
+		Toponym firstToponym = getNextNodeToProcess(usedSourceNodes, toponymsSeq);
+		Resource firstSourceNode = firstToponym.getResource();
 		List<IPathMatching> pathDeletion = new ArrayList<>();
-		pathDeletion.add(new Deletion(firstSourceNode, 1));
+		float deletionCostFirstToponym = 1f;
+		if (firstToponym.getScoreCriterionToponymCandidate().isEmpty()) 
+			deletionCostFirstToponym = 0f;
+		else { // ce toponym n'a pas de candidat, on va le supprimer, il ne sera pas désambiguisé
+			for (CriterionToponymCandidate candidateCriterion : firstToponym.getScoreCriterionToponymCandidate()) {
+				Resource targetNode = candidateCriterion.getCandidate().getResource();
+				float cost = getSubstitutionCostV2(firstToponym, candidateCriterion, labelWeight, rlspWeight, linkWeight, toponymsSeq, miniGraph, kbSubgraph);
+				List<IPathMatching> path = new ArrayList<>();
+				path.add(new Substitution(firstSourceNode, targetNode, cost));
+				open.add(path);
+			}
+		}
+		pathDeletion.add(new Deletion(firstSourceNode, deletionCostFirstToponym));
 		open.add(pathDeletion);
 		List<IPathMatching> pMin = null;
 		while (true) {
-			pMin = open.stream().min((a,b) -> Float.compare(totalCostPath(a) + 
-					heuristicCostPath(a,  kbSubgraph, miniGraph, toponymsSeq, labelWeight, rlspWeight, linkWeight, getSourceUnusedResources(a, sourceNodes), getTargetUnusedResources(a, targetNodes)), 
-					totalCostPath(b) + 
-					heuristicCostPath(b,  kbSubgraph, miniGraph, toponymsSeq, labelWeight, rlspWeight, linkWeight, getSourceUnusedResources(b, sourceNodes), getTargetUnusedResources(b, targetNodes)))).get(); // définir pmin g + h
-			open.remove(pMin);
+			// FONCTIOn getMinCostPath à revoir
+			pMin = getMinCostPath(open, kbSubgraph, miniGraph, toponymsSeq, labelWeight, rlspWeight, linkWeight, sourceNodes, targetNodes);
 			if (isCompletePath(pMin, sourceNodes, targetNodes)) {
 				break;
 			} else {
-				//Set<Resource> usedResourcesFromTarget = getTargetUsedResources(pMin); // resources du graphe cible utilisées dans ce chemin
+				// resources du graphe cible non utilisées dans ce chemin
 				Set<Resource> unusedResourcesFromTarget = getTargetUnusedResources(pMin, targetNodes);
 				if (pMin.size() < sourceNodes.size()) {
-					final List<IPathMatching> pMinFinal = new ArrayList<>(pMin);
-					Resource currentSourceNode = kbSubgraph.createResource(toponymsSeq.stream()
-							.filter(p -> getTargetUnusedResources(pMinFinal, targetNodes).stream().anyMatch(t -> t.toString().equals(p)))
-							.sorted((a, b) -> Integer.compare(a.getScoreCriterionToponymCandidate().size(), b.getScoreCriterionToponymCandidate().size())).findFirst().get().getScoreCriterionToponymCandidate().get(0).getCandidate().getResource());//null; // Définir comment on choisit ce noeud
-					for (Resource resource : unusedResourcesFromTarget) {
-						List<IPathMatching> newPath = new ArrayList<>(pMin);
-						float cost = getSubstitutionCost(currentSourceNode, resource, labelWeight, rlspWeight, linkWeight, toponymsSeq, miniGraph, kbSubgraph);
-						newPath.add(new Substitution(currentSourceNode, resource, cost));
-						open.add(newPath);
+					Toponym currentToponym = getNextNodeToProcess(usedSourceNodes, toponymsSeq);
+					Resource currentSourceNode = currentToponym.getResource();
+					float deletionCost = 1f;
+					if (currentToponym.getScoreCriterionToponymCandidate().isEmpty()) 
+						deletionCost = 0f;
+					else {
+						for (CriterionToponymCandidate candidateCriterion : currentToponym.getScoreCriterionToponymCandidate()) {
+							Resource resourceFromTarget = candidateCriterion.getCandidate().getResource();
+							List<IPathMatching> newPath = new ArrayList<>(pMin);
+							float cost = getSubstitutionCostV2(currentToponym, candidateCriterion, labelWeight, rlspWeight, linkWeight, toponymsSeq, miniGraph, kbSubgraph);
+							newPath.add(new Substitution(currentSourceNode, resourceFromTarget, cost));
+							open.add(newPath);
+						}
 					}
 					List<IPathMatching> newPathDeletion = new ArrayList<>(pMin);
-					newPathDeletion.add(new Deletion(currentSourceNode, 1));
+					newPathDeletion.add(new Deletion(currentSourceNode, deletionCost));
 					open.add(newPathDeletion);
 				} else {
 					for (Resource resource : unusedResourcesFromTarget) {
@@ -1276,6 +1405,40 @@ public class GraphMatching {
 		}
 		
 		return pMin;
+	}
+	
+	/**
+	 * Gets the path that costs the less and remove it from OPEN.
+	 *
+	 * @param open the open
+	 * @return the min cost path
+	 */
+	static List<IPathMatching> getMinCostPath(List<List<IPathMatching>> open, Model kbSubgraph, Model miniGraph, Set<Toponym> toponymsSeq,
+			float labelWeight, float rlspWeight, float linkWeight, Set<Resource> sourceNodes, Set<Resource> targetNodes) {
+		List<IPathMatching> pMin = open.stream().min((a,b) -> Float.compare(totalCostPath(a) + 
+				heuristicCostPathV2(a,  kbSubgraph, miniGraph, toponymsSeq, labelWeight, rlspWeight, linkWeight, getSourceUnusedResources(a, sourceNodes), getTargetUnusedResources(a, targetNodes)), 
+				totalCostPath(b) + 
+				heuristicCostPathV2(b,  kbSubgraph, miniGraph, toponymsSeq, labelWeight, rlspWeight, linkWeight, getSourceUnusedResources(b, sourceNodes), getTargetUnusedResources(b, targetNodes)))).get(); // définir pmin g + h
+		open.remove(pMin);
+		return pMin;
+	}
+	/**
+	 * Gets the next node of the source graph to process.
+	 *
+	 * @param open the open
+	 * @param toponymsSeq the toponyms seq
+	 * @return the next node to process
+	 */
+	static Toponym getNextNodeToProcess(List<Resource> usedSourceNodes, Set<Toponym> toponymsSeq) {
+		List<Toponym> sortedToponyms = toponymsSeq.stream().sorted((t1, t2) -> Integer.compare(t1.getScoreCriterionToponymCandidate().size(), t2.getScoreCriterionToponymCandidate().size())).collect(Collectors.toList());
+		for (Toponym toponym : sortedToponyms) {
+			Resource resourceToCheck = toponym.getResource();
+			if (!usedSourceNodes.contains(resourceToCheck)) {
+				usedSourceNodes.add(resourceToCheck);
+				return toponym;
+			}
+		}
+		return null;
 	}
 	
 	/**
@@ -1331,9 +1494,15 @@ public class GraphMatching {
 	static boolean isCompletePath(List<IPathMatching> path, Set<Resource> sourceNodes, Set<Resource> targetNodes) {
 		Set<Resource> usedNodesFromTarget = getTargetUsedResources(path);
 		Set<Resource> usedNodesFromSource = getSourceUsedResources(path);
-		return sourceNodes.stream().allMatch(sn -> usedNodesFromSource.contains(sn)) && targetNodes.stream().allMatch(tn -> usedNodesFromTarget.contains(tn));
+		return sourceNodes.stream().allMatch(usedNodesFromSource::contains) && targetNodes.stream().allMatch(usedNodesFromTarget::contains);
 	}
 	static interface IPathMatching {
+		
+		/**
+		 * Gets the cost of the path.
+		 *
+		 * @return the cost
+		 */
 		float getCost();
 	}
 	static class Insertion implements IPathMatching {
@@ -1428,6 +1597,30 @@ public class GraphMatching {
 		result += (float)Integer.max(0, n1 - 2) + (float)Integer.max(0, n2 - n1);
 		return result;
 	}
+	static float heuristicCostPathV2(List<IPathMatching> path,  Model kbSubgraph, Model miniGraph, Set<Toponym> toponymsTEI, float labelWeight, float rlspWeight, float linkWeight, Set<Resource> unusedSourceNodes, Set<Resource> unusedTargetNodes) {
+		float result = 0f;
+		/*
+		 * h(o)=
+		 * somme des min{n1, n2} substitutions les moins chères + 
+		 * max{0, n1 − n2} suppression + 
+		 * max{0, n2 − n1} insertions (si l’on pose n1=nombre de noeuds non traités du graphe source et n2=nombre de noeuds non traités du graphe cible).
+		 */
+		Integer n1 = unusedSourceNodes.size();
+		Integer n2 = unusedTargetNodes.size();
+		List<Float> substitutionCosts = new ArrayList<>();
+		for (Resource unusedSourceNode : unusedSourceNodes) {
+			List<Float> substitutionCostsCurrentToponym = new ArrayList<>();
+			Toponym unusedToponym = toponymsTEI.stream().filter(t -> areResourcesEqual(t.getResource(), unusedSourceNode)).findFirst().get();
+			for (CriterionToponymCandidate criterion : unusedToponym.getScoreCriterionToponymCandidate()) {
+				substitutionCostsCurrentToponym.add(
+						getSubstitutionCostV2(unusedToponym, criterion, labelWeight, rlspWeight, linkWeight, toponymsTEI, miniGraph, kbSubgraph));
+			}
+			substitutionCosts.add(substitutionCosts.stream().sorted((a, b) -> Float.compare(b, a)).findFirst().get());
+		}
+		result += substitutionCosts.stream().sorted((a, b) -> Float.compare(b, a)).limit(Integer.min(n1, n2)).mapToDouble(i -> i).sum();
+		result += (float)Integer.max(0, n1 - 2) + (float)Integer.max(0, n2 - n1);
+		return result;
+	}
 	static class CustomPropertyComparator implements Comparator<Property>{
 
 	    @Override
@@ -1496,4 +1689,124 @@ public class GraphMatching {
 			return this.id;
 		}
 	}
+	static class SearchPathThread implements Callable<OntTools.Path> {
+		private Model kbWithInterestingProperties; 
+		private Resource nodeToInsert; 
+		private Resource end; 
+		private Predicate<Statement> filter;
+		private OntTools.Path path;
+		public SearchPathThread(Model kbWithInterestingProperties, Resource nodeToInsert, Resource end, Predicate<Statement> filter){
+			this.kbWithInterestingProperties = kbWithInterestingProperties;
+			this.nodeToInsert = nodeToInsert;
+			this.end = end;
+			this.filter = filter;
+			this.path = null;
+	    }
+		
+		@Override
+		public OntTools.Path call() {
+			this.path = OntTools.findShortestPath(kbWithInterestingProperties, nodeToInsert, end, filter);
+			return this.path;
+		}
+	}
+	static float getLatitude(Resource r, Model m) {
+		float result = 0f;
+		Statement s = m.getProperty(r, propLat);
+		
+		if (s == null) {
+			 s = m.getProperty(r, geoLat);			 
+		}
+		if (s != null) {
+			RDFNode latNode = s.getObject();
+			if (latNode.isLiteral()) {
+				Literal latLiteral = (Literal)latNode;
+				Object latObject = latLiteral.getValue();
+				if (latObject != null) {
+					String latString = latObject.toString();
+					if (latString != null) {
+						try {
+							result = Float.parseFloat(latString);
+						} catch (NumberFormatException e) {
+							logger.error(e);
+						}
+					}
+				}
+			}
+		}
+		return result;
+	}
+	static float getLongitude(Resource r, Model m) {
+		float result = 0f;
+		Statement s = m.getProperty(r, propLong);
+		
+		if (s == null) {
+			 s = m.getProperty(r, geoLong);			 
+		}
+		if (s != null) {
+			RDFNode latNode = s.getObject();
+			if (latNode.isLiteral()) {
+				Literal latLiteral = (Literal)latNode;
+				Object latObject = latLiteral.getValue();
+				if (latObject != null) {
+					String latString = latObject.toString();
+					if (latString != null) {
+						try {
+							result = Float.parseFloat(latString);
+						} catch (NumberFormatException e) {
+							logger.error(e);
+						}
+					}
+				}
+			}
+		}
+		return result;
+	}
+	static float distance(float latX, float longX, float latY, float longY) {
+	    float latDist = Math.abs(latX - latY);
+	    float longDist = Math.abs(longX - longY);  
+	    double distance = Math.sqrt(longDist*longDist +latDist*latDist);
+	    return (float)distance; 
+	}
+	
+	public static Path findShortestPath( Model m, Resource start, Resource end, Predicate<Statement> onPath ) {
+		// On récupère les latitudes et longitudes des points de départ et d'arrivées
+		
+		
+        List<Path> bfs = new LinkedList<>();
+        Set<Resource> seen = new HashSet<>();
+        
+        // initialise the paths
+        for (Iterator<Statement> i = m.listStatements( start, null, (RDFNode) null ).filterKeep( onPath ); i.hasNext(); ) {
+            bfs.add( new Path().append( i.next() ) );
+        }
+
+        // search
+        Path solution = null;
+        while (solution == null && !bfs.isEmpty()) {
+            Path candidate = bfs.remove( 0 );
+
+            if (candidate.hasTerminus( end )) {
+                solution = candidate;
+            }
+            else {
+                Resource terminus = candidate.getTerminalResource();
+                if (terminus != null) {
+                    seen.add( terminus );
+
+                    // breadth-first expansion
+                    for (Iterator<Statement> i = terminus.listProperties().filterKeep( onPath ); i.hasNext(); ) {
+                        Statement link = i.next();
+
+                        // no looping allowed, so we skip this link if it takes us to a node we've seen
+                        if (!seen.contains( link.getObject() )) {
+                            bfs.add( candidate.append( link ) );
+                        }
+                    }
+                }
+            }
+        }
+
+        return solution;
+    }
+
 }

@@ -2,13 +2,15 @@ package fr.ign.georeden.algorithms.graph.matching;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import org.apache.jena.rdf.model.Resource;
 /**
  * Represent a candidate from the KB.
  * @author PHParis
  *
  */
 public class Candidate {
-	private String resource;
+	private Resource resource;
 	private String label;
 	private String name;
 	private Set<String> types;
@@ -22,7 +24,7 @@ public class Candidate {
 	 * @param name the name
 	 * @param types the types
 	 */
-	public Candidate(String resource, String label, String name, Set<String> types) {
+	public Candidate(Resource resource, String label, String name, Set<String> types) {
 		this.resource = resource;
 		this.label = label;
 		this.name = name;
@@ -37,7 +39,7 @@ public class Candidate {
 	 * @param name the name
 	 * @param type the type
 	 */
-	public Candidate(String resource, String label, String name, String type) {
+	public Candidate(Resource resource, String label, String name, String type) {
 		this.resource = resource;
 		this.label = label;
 		this.name = name;
@@ -51,7 +53,7 @@ public class Candidate {
 	 *
 	 * @return the resource
 	 */
-	public String getResource() {
+	public Resource getResource() {
 		return resource;
 	}
 	
