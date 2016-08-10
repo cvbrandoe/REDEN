@@ -1152,17 +1152,17 @@ public class GraphMatching {
 			List<CriterionToponymCandidate> candidates = getCandidates(m, toponymsTEI);
 			for (CriterionToponymCandidate criterionToponymCandidate : candidates) {
 				Resource end = criterionToponymCandidate.getCandidate().getResource();
-				if (scoresRlspTmp.containsKey(statementProperty) && scoresRlspTmp.get(statementProperty).containsKey(end) 
-						&& scoresRlspTmp.get(statementProperty).get(end).containsKey(nodeToInsert)) {
-					pathLength.put(criterionToponymCandidate, scoresRlspTmp.get(statementProperty).get(end).get(nodeToInsert));
+				if (scoresRlspTmp.containsKey(statementProperty.toString()) && scoresRlspTmp.get(statementProperty.toString()).containsKey(end) 
+						&& scoresRlspTmp.get(statementProperty.toString()).get(end).containsKey(nodeToInsert.getCandidate().getResource())) {
+					pathLength.put(criterionToponymCandidate, scoresRlspTmp.get(statementProperty.toString()).get(end).get(nodeToInsert.getCandidate().getResource()));
 				} else {
 					OntTools.Path path = findShortestPathWithFilter(kbWithInterestingProperties, nodeToInsert.getCandidate().getResource(), end, filter, completeKB);
 					if (path != null) { 
 						pathLength.put(criterionToponymCandidate, path.size());
-						recordRlspPath(scoresRlspTmp, nodeToInsert.getCandidate().getResource(), end, path.size(), statementProperty);
+						recordRlspPath(scoresRlspTmp, nodeToInsert.getCandidate().getResource(), end, path.size(), statementProperty.toString());
 					} else {
 						pathLength.put(criterionToponymCandidate, -1);
-						recordRlspPath(scoresRlspTmp, nodeToInsert.getCandidate().getResource(), end, -1, statementProperty);
+						recordRlspPath(scoresRlspTmp, nodeToInsert.getCandidate().getResource(), end, -1, statementProperty.toString());
 					}
 				}
 			}
@@ -1182,15 +1182,15 @@ public class GraphMatching {
 		
 		return result / ((float)statements.size());
 	}
-	static void recordRlspPath(Map<Property, Map<Resource, Map<Resource, Integer>>> scoresRlspTmp, Resource r1, Resource r2, Integer value, Property p) {
-		Map<Resource, Map<Resource, Integer>> scoresLinkTmp;
+	static void recordRlspPath(Map<String, Map<Resource, Map<Resource, Integer>>> scoresRlspTmp, Resource r1, Resource r2, Integer value, String p) {
+		Map<Resource, Map<Resource, Integer>> scoresRlspTmp2;
 		if (scoresRlspTmp.containsKey(p)) {
-			scoresLinkTmp = scoresRlspTmp.get(p);
+			scoresRlspTmp2 = scoresRlspTmp.get(p);
 		} else {
-			scoresLinkTmp = new HashMap<>();
-			scoresRlspTmp.put(p, scoresLinkTmp);
+			scoresRlspTmp2 = new HashMap<>();
+			scoresRlspTmp.put(p, scoresRlspTmp2);
 		}
-		recordLinkPath(scoresLinkTmp, r1, r2, value);
+		recordLinkPath(scoresRlspTmp2, r1, r2, value);
 //		if (scoresLinkTmp.containsKey(r1)) { // r1 a déjà été traité
 //			Map<Resource, Integer> scoreR1 = scoresLinkTmp.get(r1);
 //			if (!scoreR1.containsKey(r2)) { // r1 et r2 n'ont jamais été traités ensemble
@@ -1212,7 +1212,7 @@ public class GraphMatching {
 //			scoresLinkTmp.put(r2, scoreR2);
 //		}
 	}
-	static Map<Property, Map<Resource, Map<Resource, Integer>>> scoresRlspTmp = new HashMap<>();
+	static Map<String, Map<Resource, Map<Resource, Integer>>> scoresRlspTmp = new HashMap<>();
 	
 	/**
 	 * Gets the corresponding DBpedia properties from the TEI's one.
