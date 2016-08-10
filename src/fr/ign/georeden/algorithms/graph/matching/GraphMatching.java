@@ -1081,7 +1081,7 @@ public class GraphMatching {
 	static float getSubstitutionCostV2(Toponym nodeToRemove, CriterionToponymCandidate candidateCriterion, float labelWeight, float rlspWeight, float linkWeight, Set<Toponym> toponymsTEI, Model teiRdf, Model kbWithInterestingProperties, Model completeKB) {
 		float scoreLabel = (1 - candidateCriterion.getValue());
 		float scoreLink = scoreLinkV2(nodeToRemove, candidateCriterion, teiRdf, toponymsTEI, kbWithInterestingProperties, completeKB);
-		float scoreRlsp = 1;//scoreRlspV2(nodeToRemove, candidateCriterion, teiRdf, toponymsTEI, kbWithInterestingProperties, completeKB);
+		float scoreRlsp = scoreRlspV2(nodeToRemove, candidateCriterion, teiRdf, toponymsTEI, kbWithInterestingProperties, completeKB);
 		logger.info(nodeToRemove.getResource() + " -> " + candidateCriterion.getCandidate().getResource() + " (" + scoreLabel + "/" + scoreLink + "/" + scoreRlsp + ")");
 		return labelWeight * scoreLabel	+ rlspWeight * scoreRlsp + linkWeight * scoreLink;
 	}
@@ -1315,9 +1315,9 @@ public class GraphMatching {
 		statements = removeRLSP(statements);
 		if (statements.isEmpty())
 			return result;
-		
+		// pour chaque statement (non RLSP) du noeud du TEI
 		for (Statement statement : statements) {
-			Resource m;
+			Resource m; // resource liée au noeud à supprimer
 			if (areResourcesEqual(statement.getSubject(), nodeToRemove)) {
 				m = (Resource) statement.getObject();
 			} else {
@@ -1526,7 +1526,7 @@ public class GraphMatching {
 		while (true) {
 			// FONCTIOn getMinCostPath à revoir
 			pMin = getMinCostPath(open, kbSubgraph, miniGraph, toponymsSeq, labelWeight, rlspWeight, linkWeight, sourceNodes, targetNodes, completeKB);
-			updateToponyms(pMin, toponymsSeq);
+			//updateToponyms(pMin, toponymsSeq);
 			if (isCompletePath(pMin, sourceNodes, targetNodes)) {
 				break;
 			} else {
