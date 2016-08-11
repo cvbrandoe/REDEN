@@ -18,6 +18,8 @@ public class Toponym {
 //	private List<ToponymType> types;
 	private List<CriterionToponymCandidate> scoreCriterionToponymCandidate;
 	private List<CriterionToponymCandidate> typeCriterionToponymCandidate;
+
+	private Resource referent;
 	
 	/**
 	 * Instantiates a new toponym.
@@ -55,6 +57,12 @@ public class Toponym {
 	
 	public Resource getResource() {
 		return this.resource;
+	}
+	public Resource getReferent() {
+		return this.referent;
+	}
+	public void setReferent(Resource referent) {
+		this.referent = referent;
 	}
 	public String getName() {
 		return this.name;
