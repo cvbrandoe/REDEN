@@ -335,7 +335,8 @@ public class GraphMatching {
 			List<Model> alts = explodeAlts(currentModel);
 			Map<Float, List<IPathMatching>> resultsForCurrentSeq = new HashMap<>();
 			logger.info(alts.size() + " mini graphes à traiter pour cette séquence.");
-			for (Model miniGraph : alts) {
+			for (Model miniGraph : alts
+					.stream().sorted((a, b) -> Long.compare(a.size(), b.size())).collect(Collectors.toList())) {
 				List<IPathMatching> path = graphMatchingV2(kbSubgraph, miniGraph, toponymsTEI, 0.4f, 0.4f, 0.2f,
 						kbSource);
 				resultsForCurrentSeq.put(totalCostPath(path), path);
