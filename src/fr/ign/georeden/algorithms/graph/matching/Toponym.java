@@ -80,6 +80,8 @@ public class Toponym {
 	 * @param score the score
 	 */
 	public void addScoreCriterionToponymCandidate(CriterionToponymCandidate score) {
+		if (this.scoreCriterionToponymCandidate == null)
+			this.scoreCriterionToponymCandidate = new ArrayList<>();
 		this.scoreCriterionToponymCandidate.add(score);
 	}
 	public void clearAndAddAllScoreCriterionToponymCandidate(List<CriterionToponymCandidate> scores) {

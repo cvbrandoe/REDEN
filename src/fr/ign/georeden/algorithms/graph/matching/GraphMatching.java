@@ -74,7 +74,8 @@ public class GraphMatching {
 	/** The logger. */
 	private static Logger logger = Logger.getLogger(GraphMatching.class);
 
-	public static final String TEI_PATH = "D:\\temp7.rdf";
+	public static final String TEI_PATH = "C:\\temp7.rdf";
+	public static final String dbPediaRdfFilePath = "C:\\dbpedia_fr_with_rlsp.n3";
 
 	static Comparator<QuerySolutionEntry> comparatorQuerySolutionEntry = (a, b) -> {
 		// return Integer.compare(a.getId(), b.getId());
@@ -175,7 +176,6 @@ public class GraphMatching {
 	public static Set<Toponym> nodeSelection() {
 		Integer numberOfCandidate = 5;
 		float threshold = 0.6f;
-		String dbPediaRdfFilePath = "D:\\dbpedia_fr_with_rlsp.n3";
 		// final Model kbSource2 =
 		// ModelFactory.createDefaultModel().read(dbPediaRdfFilePath);
 		// float test =
@@ -253,10 +253,10 @@ public class GraphMatching {
 		
 		// test algo SP
 //		byte[][] test = floydWarshallAPSP(kbSubgraph); // trop long
-//		Resource gien = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Gien-sur-Cure");
-//		Resource barret = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Pont-de-Barret");
-		
-		
+//		Resource Ruffec = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Lille");
+//		Resource Pamiers = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Marseille");
+//		Path path = findShortestPathV2(kbSubgraph, Ruffec, Pamiers, kbSource);
+//		logger.info(path.size());
 		
 		deleteUselessAlts(result, teiRdf);
 		
@@ -1323,7 +1323,7 @@ public class GraphMatching {
 				kbWithInterestingProperties, completeKB);
 		// rlsp : on utilise le fait que le chemin a déjà potentiellement été étudié, on vérifie que toutes les propriétés
 		// des statements sont biens compatibles avec la direction de la rlsp
-		float scoreRlsp = scoreRlspV2(nodeToRemove, candidateCriterion, teiRdf, toponymsTEI, kbWithInterestingProperties, completeKB);
+		float scoreRlsp = 1.0f;//scoreRlspV2(nodeToRemove, candidateCriterion, teiRdf, toponymsTEI, kbWithInterestingProperties, completeKB);
 		rlspCalculous.add(nodeToRemove.getResource() + " (" + nodeToRemove.getName() + ")" + " -> " + candidateCriterion.getCandidate().getResource() + " ("
 				+ scoreLabel + "/" + scoreLink + "/" + scoreRlsp + ")");
 		return labelWeight * scoreLabel + rlspWeight * scoreRlsp + linkWeight * scoreLink;
@@ -1619,10 +1619,12 @@ public class GraphMatching {
 			}
 			List<CriterionToponymCandidate> candidates = getCandidates(m, toponymsTEI); // ici il faut prendre les candidats seulement si le topo n'a pas été désambiguisé, sinon on utilise son référent
 			Map<CriterionToponymCandidate, Integer> pathLength = new HashMap<>();
-			for (CriterionToponymCandidate criterionToponymCandidate : candidates) {
+			candidates.parallelStream().forEach(criterionToponymCandidate -> {
+			//for (CriterionToponymCandidate criterionToponymCandidate : candidates) {
 				Resource end = criterionToponymCandidate.getCandidate().getResource();
-				if (scoresLinkTmp.containsKey(end) && scoresLinkTmp.get(end).containsKey(nodeToInsert)) {
-					pathLength.put(criterionToponymCandidate, scoresLinkTmp.get(end).get(nodeToInsert));
+				final Resource nodeToInsertCopy = nodeToInsert;
+				if (scoresLinkTmp.containsKey(end) && scoresLinkTmp.get(end).containsKey(nodeToInsertCopy)) {
+					pathLength.put(criterionToponymCandidate, scoresLinkTmp.get(end).get(nodeToInsertCopy));
 				} else {
 					OntTools.Path path = null;
 //					if (dijkstras.containsKey(nodeToInsert)) {
@@ -1640,20 +1642,21 @@ public class GraphMatching {
 //							path = path2;
 //						}
 //					}
-					ExecutorService service = Executors.newSingleThreadExecutor();
-					SearchPathThread spt = new SearchPathThread(kbWithInterestingProperties, nodeToInsert, end, null, completeKB);
-					try {
-						path = service.submit(spt).get(timeout, TimeUnit.SECONDS);
-					} catch (InterruptedException | ExecutionException | TimeoutException e) {
-						logger.error(e + " : " + nodeToInsert + " -> " + end);
-					}
+//					ExecutorService service = Executors.newSingleThreadExecutor();
+//					SearchPathThread spt = new SearchPathThread(kbWithInterestingProperties, nodeToInsert, end, null, completeKB);
+//					try {
+//						path = service.submit(spt).get(timeout, TimeUnit.SECONDS);
+//					} catch (InterruptedException | ExecutionException | TimeoutException e) {
+//						logger.error(e + " : " + nodeToInsert + " -> " + end);
+//					}
+					path = findShortestPathV2(kbWithInterestingProperties, nodeToInsertCopy, end, completeKB);
 //					//findShortestPath(kbWithInterestingProperties, nodeToInsert, end, completeKB)
 					if (path != null) {
 						pathLength.put(criterionToponymCandidate, path.size());
-						recordLinkPath(scoresLinkTmp, nodeToInsert, end, path.size());
+						recordLinkPath(scoresLinkTmp, nodeToInsertCopy, end, path.size());
 					} else {
 						pathLength.put(criterionToponymCandidate, -1);
-						recordLinkPath(scoresLinkTmp, nodeToInsert, end, 10000); // valeur
+						recordLinkPath(scoresLinkTmp, nodeToInsertCopy, end, 10000); // valeur
 																					// arbitraire
 																					// pr
 																					// signifier
@@ -1665,7 +1668,7 @@ public class GraphMatching {
 																					// long
 					}
 				}
-			}
+			});
 			Integer maxPathLength = getMaxValue(pathLength);
 			float min = 1f;
 			for (Entry<CriterionToponymCandidate, Integer> entry : pathLength.entrySet()) {
@@ -2421,7 +2424,7 @@ public class GraphMatching {
 		@Override
 		public OntTools.Path call() {
 			if (this.filter == null) {
-				this.path = findShortestPath(kbWithInterestingProperties, nodeToInsert, end, comleteModel);
+				this.path = findShortestPathV2(kbWithInterestingProperties, nodeToInsert, end, comleteModel);
 			} else {
 				this.path = findShortestPathWithFilter(kbWithInterestingProperties, nodeToInsert, end, filter, comleteModel);
 			}
@@ -2454,6 +2457,18 @@ public class GraphMatching {
 			}
 		}
 		return result;
+	}
+	
+	static boolean hasLatAndLong(Resource r, Model m) {
+		Statement sLat = m.getProperty(r, propLat);
+		if (sLat == null) {
+			sLat = m.getProperty(r, geoLat);
+		}
+		Statement sLong = m.getProperty(r, propLong);
+		if (sLong == null) {
+			sLong = m.getProperty(r, geoLong);
+		}
+		return sLat != null && sLong != null;
 	}
 
 	static float getLongitude(Resource r, Model m) {
@@ -2518,7 +2533,7 @@ public class GraphMatching {
 		List<Path> bfs = new LinkedList<>();
 		Set<Resource> seen = new HashSet<>();
 
-		// initialise the paths
+		// initialise the paths {
 		for (Iterator<Statement> i = m.listStatements(start, null, (RDFNode) null); i.hasNext();) {
 			bfs.add(new Path().append(i.next()));
 		}
@@ -2527,7 +2542,7 @@ public class GraphMatching {
 		Path solution = null;
 		
 		while (solution == null && !bfs.isEmpty()) {
-			Path candidate = SelectMostPromisingPath(bfs, m, endLat, endLong, seen, mComplete);
+			Path candidate = selectMostPromisingPath(bfs, m, endLat, endLong, seen, mComplete);
 			if (candidate.hasTerminus(end)) {
 				solution = candidate;
 			} else {
@@ -2557,7 +2572,206 @@ public class GraphMatching {
 
 		return solution;
 	}
+	public static Path findShortestPathV2(Model m, Resource start, Resource end, Model mComplete) {
+		// search
+		Path solution = null;
+		// On récupère les latitudes et longitudes des points d'arrivées
+		Resource startResource = start;
+		Resource endResource = end;
+		boolean endHasCoords = hasLatAndLong(endResource, mComplete);
+		boolean startHasCoords = hasLatAndLong(startResource, mComplete);
+		float endLat = 0.0f;
+		float endLong = 0.0f;
+		float startLat = 0.0f;
+		float startLong = 0.0f;
+		float distanceBetweendStartAndEnd = -1.0f; // distance between start and end points
+		if (endHasCoords && startHasCoords) {
+			//logger.info("les 2 ont des coordonnées")
+			endLat = getLatitude(endResource, mComplete);
+			endLong = getLongitude(endResource, mComplete);
+			startLat = getLatitude(startResource, mComplete);
+			startLong = getLongitude(startResource, mComplete);
+			distanceBetweendStartAndEnd = distance(endLat, endLong, startLat, startLong);
+		} else  if (startHasCoords) {
+			logger.info("start a des coordonnées"); // OBSOLETE -> mais pas end, donc on inverse la recherche de chemin pour pouvoir utiliser l'heuristique malgré tout
+//			endLat = getLatitude(startResource, mComplete);
+//			endLong = getLongitude(startResource, mComplete);
+//			startResource = end;
+//			endResource = start;
+			startLat = getLatitude(startResource, mComplete);
+			startLong = getLongitude(startResource, mComplete);
+			// il faut s'occuper de end
+			Resource closestEnd = getClosestResourceWithCoordinates(m, endResource, mComplete);
+			if (closestEnd != null) {
+				endLat = getLatitude(closestEnd, mComplete);
+				endLong = getLongitude(closestEnd, mComplete);
+				distanceBetweendStartAndEnd = distance(endLat, endLong, startLat, startLong);
+			}
+			
+		} else  if (endHasCoords) {
+			logger.info("end a des coordonnées");
+			endLat = getLatitude(endResource, mComplete);
+			endLong = getLongitude(endResource, mComplete);
+			// il faut s'occuper de start
+			Resource closestStart = getClosestResourceWithCoordinates(m, startResource, mComplete);
+			if (closestStart != null) {
+				startLat = getLatitude(closestStart, mComplete);
+				startLong = getLongitude(closestStart, mComplete);
+				distanceBetweendStartAndEnd = distance(endLat, endLong, startLat, startLong);
+			}
+			
+		} else {
+			// aucun n'a de topo, il faut s'occuper start et end
+			logger.info("aucun n'a de coordonnées");
+			Resource closestEnd = getClosestResourceWithCoordinates(m, endResource, mComplete);
+			if (closestEnd != null) {
+				endLat = getLatitude(closestEnd, mComplete);
+				endLong = getLongitude(closestEnd, mComplete);
+			}
+			Resource closestStart = getClosestResourceWithCoordinates(m, startResource, mComplete);
+			if (closestStart != null) {
+				startLat = getLatitude(closestStart, mComplete);
+				startLong = getLongitude(closestStart, mComplete);
+			}
+			if (closestEnd != null && closestStart != null) {
+				distanceBetweendStartAndEnd = distance(endLat, endLong, startLat, startLong);
+			}
+		}
+		
+//		float epsilon = 0.00000001f;
+//
+//		float minDistance = distance(endLat, endLong, startLat, startLong);
+		
+		List<Path> forwardStatements = new LinkedList<>();
+		List<Path> backwardStatements = new LinkedList<>();
+		Set<Resource> forwardSeen = new HashSet<>();
+		Set<Resource> backwardSeen = new HashSet<>();
 
+		// initialise the paths
+		for (Iterator<Statement> i = m.listStatements(startResource, null, (RDFNode) null); i.hasNext();) {
+			forwardStatements.add(new Path().append(i.next()));
+		}
+		for (Iterator<Statement> i = m.listStatements(null, null, (RDFNode) endResource); i.hasNext();) {
+			backwardStatements.add(new Path().append(i.next()));
+		}
+
+		
+		while (solution == null && !forwardStatements.isEmpty() && !backwardStatements.isEmpty()) {
+			Path forwardCandidate = selectMostPromisingPath(forwardStatements, m, endLat, endLong, forwardSeen, mComplete);
+			Path backwardCandidate = selectMostPromisingPathBackward(backwardStatements, m, startLat, startLong, backwardSeen, mComplete); 
+			if (forwardCandidate != null && endResource != null && forwardCandidate.hasTerminus(endResource)) {
+				solution = forwardCandidate;
+			} else if(backwardCandidate != null && ! backwardCandidate.isEmpty() && backwardCandidate.get(0) != null && backwardCandidate.get(0).getSubject() != null  
+					&& areResourcesEqual(backwardCandidate.get(0).getSubject(), startResource)) {
+				solution = backwardCandidate;
+			} else if (forwardSeen.stream().anyMatch(p -> backwardSeen.contains(p))) { 
+				// les frontières se touchent
+				// il faut trouver le bon chemin et le renvoyer
+				//logger.info("Fusion de frontières")
+				forwardSeen.retainAll(backwardSeen);
+				Optional<Resource> optRes = forwardSeen.stream().findFirst();
+				if (optRes.isPresent()) {
+					Resource r = optRes.get();
+					Optional<Path> pF = forwardStatements.stream().filter(l -> l.stream().anyMatch(p -> areResourcesEqual(p.getSubject(), r ) || (p.getObject().isResource() && areResourcesEqual((Resource)p.getObject(), r )))).limit(1).findFirst();
+					Optional<Path> pB = backwardStatements.stream().filter(l -> l.stream().anyMatch(p -> areResourcesEqual(p.getSubject(), r ) || (p.getObject().isResource() && areResourcesEqual((Resource)p.getObject(), r )))).limit(1).findFirst();
+					if (pF.isPresent() && pB.isPresent()) {
+						Path pathForward = pF.get();
+						Path pathBackward = pB.get();
+						Path newPath = new Path();
+						for (Statement statement : pathForward) {
+							newPath.add(statement);
+							if (areResourcesEqual(statement.getSubject(), r))
+								break;
+						}
+						boolean seen = false; // tant que l'élément commun r n'a pas été vu dans pathBackward, on n'insere pas les statements
+						for (Statement statement : pathBackward) {
+							if (seen)
+								newPath.add(statement);
+							if (statement.getObject().isResource() && areResourcesEqual((Resource)statement.getObject(), r))
+								seen = true;
+						}
+						solution = newPath;
+					}
+				}
+			}
+			else {
+				Resource terminus = forwardCandidate.getTerminalResource();
+				if (terminus != null) {					
+					if (wrongDistance(distanceBetweendStartAndEnd, startLat, startLong, terminus, mComplete)) {
+						break;
+					}
+					forwardSeen.add(terminus);
+					
+					// breadth-first expansion
+					for (Iterator<Statement> i = terminus.listProperties(); i.hasNext();) {
+						Statement link = i.next();
+
+						// no looping allowed, so we skip this link if it takes
+						// us to a node we've seen
+						if (!forwardSeen.contains(link.getObject()) && forwardCandidate.size() < maxLengthForSP) {
+							forwardStatements.add(forwardCandidate.append(link));
+						}
+					}
+				}
+				Resource subject = backwardCandidate.get(0).getSubject();
+				if (subject != null) {
+					if (wrongDistance(distanceBetweendStartAndEnd, endLat, endLong, subject, mComplete)) {
+						break;
+					}
+					backwardSeen.add(subject);
+					
+					// breadth-first expansion
+					for (Iterator<Statement> i = m.listStatements(null, null, (RDFNode)subject); i.hasNext();) {
+						Statement link = i.next();
+
+						// no looping allowed, so we skip this link if it takes
+						// us to a node we've seen
+						if (!backwardSeen.contains(link.getSubject()) && backwardCandidate.size() < maxLengthForSP) {
+							Path newPath = new Path();
+							newPath.add(link);
+							backwardCandidate.forEach(p -> newPath.add(p));
+							backwardStatements.add(newPath);
+						}
+					}
+				}
+			}
+		}
+		return solution;
+	}
+	static boolean wrongDistance(float distanceBetweendStartAndEnd, float aLat, float aLong, Resource r, Model mComplete) {
+		if (distanceBetweendStartAndEnd > 0.0f && hasLatAndLong(r, mComplete)) { // si distanceBetweendStartAndEnd < 0.0f, on ne peut pas s'en servir. Cela veut qu'il nous a manqué une distance d'un des points de départ ou d'arrivée
+			float bLat = getLatitude(r, mComplete);
+			float bLong = getLongitude(r, mComplete);
+			float distanceToCompare = distance(aLat, aLong, bLat, bLong);
+			if (distanceBetweendStartAndEnd * 1.5 < distanceToCompare) 
+				return true;
+		}
+		return false;
+	}
+	static boolean wrongDistance(float distanceBetweendStartAndEnd, float aLat, float aLong, float bLat, float bLong) {
+		if (distanceBetweendStartAndEnd > 0.0f) { // si distanceBetweendStartAndEnd < 0.0f, on ne peut pas s'en servir. Cela veut qu'il nous a manqué une distance d'un des points de départ ou d'arrivée
+			float distanceToCompare = distance(aLat, aLong, bLat, bLong);
+			if (distanceBetweendStartAndEnd * 1.5 < distanceToCompare) 
+				return true;
+		}
+		return false;
+	}
+	static Resource getClosestResourceWithCoordinates(Model m, Resource r, Model mComplete) {
+		List<Statement> properties = m.listStatements(r, null, (RDFNode)null).toList();
+		for (Statement statement : properties) {
+			RDFNode n = statement.getObject();
+			if (n.isResource() && hasLatAndLong((Resource)n, mComplete))
+				return (Resource)n;
+		}
+		properties = m.listStatements(null, null, (RDFNode)r).toList();
+		for (Statement statement : properties) {
+			Resource n = statement.getSubject();
+			if (hasLatAndLong(n, mComplete))
+				return n;
+		}
+		return null;
+	}
+	static int maxLengthForSP = 100; // longueur maximale qu'un chemin peut atteindre. S'il dépasse ce nombre, on s'en désintéresse
 	public static Path findShortestPathWithFilter(Model m, Resource start, Resource end, Predicate<Statement> onPath,
 			Model mComplete) {
 		// On récupère les latitudes et longitudes des points de départ et
@@ -2582,7 +2796,7 @@ public class GraphMatching {
 		// search
 		Path solution = null;
 		while (solution == null && !bfs.isEmpty()) {
-			Path candidate = SelectMostPromisingPath(bfs, m, endLat, endLong, seen, mComplete);
+			Path candidate = selectMostPromisingPath(bfs, m, endLat, endLong, seen, mComplete);
 			if (candidate.hasTerminus(end)) {
 				solution = candidate;
 			} else {
@@ -2624,22 +2838,50 @@ public class GraphMatching {
 	 *            the m complete
 	 * @return the path
 	 */
-	static Path SelectMostPromisingPath(List<Path> bfs, Model m, float endLat, float endLong, Set<Resource> seen,
-			Model mComplete) {
+	static Path selectMostPromisingPath(List<Path> bfs, Model m, float endLat, float endLong, Set<Resource> seen, Model mComplete) {
 		Path result = null;
-		float shortestDistance = 1000000000f;
+		float shortestDistance = Float.MAX_VALUE;
 		for (Path path : bfs) {
 			Statement lastStatement = path.get(path.size() - 1);
 			RDFNode object = lastStatement.getObject();
 			if (!seen.contains(object) && object.isResource()) {
 				Resource r = (Resource) object;
-				float rLat = getLatitude(r, mComplete); // il faudrait vérifier
-														// que la lat et long
-														// sont différentes de 0
-				float rLong = getLongitude(r, mComplete);
-				float distance = distance(endLat, endLong, rLat, rLong);
-				if (shortestDistance > distance) {
-					shortestDistance = distance;
+				if (hasLatAndLong(r, mComplete)) {
+					float rLat = getLatitude(r, mComplete);
+					float rLong = getLongitude(r, mComplete);
+					float distance = distance(endLat, endLong, rLat, rLong);
+					if (shortestDistance > distance) {
+						shortestDistance = distance;
+						result = path;
+					}
+				} else if (result == null) {
+					// r n'a pas de l'attititude. On sélectionne son chemin seulement si result est null
+					result = path;
+				}
+			}
+		}
+		if (result != null) {
+			bfs.remove(result);
+		}
+		return result;
+	}
+	static Path selectMostPromisingPathBackward(List<Path> bfs, Model m, float startLat, float startLong, Set<Resource> seen, Model mComplete) {
+		Path result = null;
+		float shortestDistance = Float.MAX_VALUE;
+		for (Path path : bfs) {
+			Statement firstStatement = path.get(0);
+			Resource r = firstStatement.getSubject();
+			if (!seen.contains(r)) {
+				if (hasLatAndLong(r, mComplete)) {
+					float rLat = getLatitude(r, mComplete);
+					float rLong = getLongitude(r, mComplete);
+					float distance = distance(startLat, startLong, rLat, rLong);
+					if (shortestDistance > distance) {
+						shortestDistance = distance;
+						result = path;
+					}
+				} else if (result == null) {
+					// r n'a pas de l'attititude. On sélectionne son chemin seulement si result est null
 					result = path;
 				}
 			}
