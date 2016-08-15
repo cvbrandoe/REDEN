@@ -268,7 +268,8 @@ public class GraphMatching {
 				.collect(Collectors.toList());
 
 		//V1(sequences, querySolutionEntries, teiRdf, kbSubgraph, kbSource, toponymsTEI);
-		V2(sequences, querySolutionEntries, teiRdf, kbSubgraph, kbSource, toponymsTEI);
+		//V2(sequences, querySolutionEntries, teiRdf, kbSubgraph, kbSource, toponymsTEI);
+		V3(sequences, querySolutionEntries, teiRdf, kbSubgraph, kbSource, toponymsTEI);
 
 		return result;
 	}
@@ -337,6 +338,51 @@ public class GraphMatching {
 			logger.info(alts.size() + " mini graphes à traiter pour cette séquence.");
 			for (Model miniGraph : alts
 					.stream().sorted((a, b) -> Long.compare(a.size(), b.size())).collect(Collectors.toList())) {
+				List<IPathMatching> path = graphMatchingV2(kbSubgraph, miniGraph, toponymsTEI, 0.4f, 0.4f, 0.2f,
+						kbSource);
+				resultsForCurrentSeq.put(totalCostPath(path), path);
+			}
+			if (!resultsForCurrentSeq.isEmpty()) {
+				rlspCalculous.stream().sorted().forEach(logger::info);
+				rlspCalculous.clear();
+				Entry<Float, List<IPathMatching>> bestPath = getBestPath(resultsForCurrentSeq);
+				logger.info(bestPath.getKey());
+				bestPath.getValue().forEach(logger::info);
+			}
+		}
+	}
+	static void V3(List<Resource> sequences, List<QuerySolutionEntry> querySolutionEntries, Model teiRdf, Model kbSubgraph, Model kbSource, Set<Toponym> toponymsTEI) {
+		logger.info("V3");
+		logger.info("Traitement des mini graphes des séquences");
+		int seqCount = 1;
+		List<List<Model>> altsBySeq = new ArrayList<>();
+		for (Resource sequence : sequences
+				//.stream().limit(1).collect(Collectors.toList())
+				) {
+			logger.info("Traitement de la séquence " + seqCount + "/" + sequences.size());
+			seqCount++;
+			Model currentModel = getModelsFromSequenceV2(querySolutionEntries, sequence);
+			currentModel = addRlsp(currentModel, teiRdf);
+			// currentModel = oneSensePerDiscourseFusion(currentModel,
+			// teiRdf);// ajouter ici la fusion des noeuds identiques (one sence
+			// per discourse)
+			// Il faudrait en fait réaliser la fusion des noeuds identiques
+			// avant (au moment des transformations XSLT), amsi attention car la
+			// création
+			// des mini graphes devra être adaptée (l'ordonancement des
+			// QuerySolutionEntry devra être géré d'une manière différente)
+			List<Model> alts = explodeAlts(currentModel);
+			altsBySeq.add(alts);			
+		}
+		seqCount = 1;
+		for (List<Model> alts : altsBySeq.stream()
+				.sorted((l1, l2) -> Integer.compare(l1.get(0).listStatements().toList().size(), l2.get(0).listStatements().toList().size())).collect(Collectors.toList())) {
+			logger.info("Traitement de la séquence " + seqCount + "/" + altsBySeq.size());
+			seqCount++;
+			Map<Float, List<IPathMatching>> resultsForCurrentSeq = new HashMap<>();
+			logger.info(alts.size() + " mini graphes à traiter pour cette séquence.");
+			for (Model miniGraph : alts) {
+					//.stream().sorted((a, b) -> Long.compare(a.size(), b.size())).collect(Collectors.toList())) {
 				List<IPathMatching> path = graphMatchingV2(kbSubgraph, miniGraph, toponymsTEI, 0.4f, 0.4f, 0.2f,
 						kbSource);
 				resultsForCurrentSeq.put(totalCostPath(path), path);
@@ -1399,7 +1445,8 @@ public class GraphMatching {
 			PredicatesFilter filter = new PredicatesFilter(properties);
 			Map<CriterionToponymCandidate, Integer> pathLength = new HashMap<>();
 			List<CriterionToponymCandidate> candidates = getCandidates(m, toponymsTEI); // ici il faut prendre les candidats seulement si le topo n'a pas été désambiguisé, sinon on utilise son référent
-			for (CriterionToponymCandidate criterionToponymCandidate : candidates) {
+			candidates.parallelStream().forEach(criterionToponymCandidate -> {
+			//for (CriterionToponymCandidate criterionToponymCandidate : candidates) {
 				Resource end = criterionToponymCandidate.getCandidate().getResource();
 				if (scoresRlspTmp.containsKey(statementProperty.toString())
 						&& scoresRlspTmp.get(statementProperty.toString()).containsKey(end)
@@ -1408,7 +1455,22 @@ public class GraphMatching {
 					pathLength.put(criterionToponymCandidate, scoresRlspTmp.get(statementProperty.toString()).get(end)
 							.get(nodeToInsert.getCandidate().getResource()));
 				} else {
+//				if (scoresLinkTmp.containsKey(end) && scoresLinkTmp.get(end).containsKey(nodeToInsertCopy)) {
+//					pathLength.put(criterionToponymCandidate, scoresLinkTmp.get(end).get(nodeToInsertCopy)); // pb ici, il faut tenir compte du filtre
+//				} else {
+					final Resource nodeToInsertCopy = nodeToInsert.getCandidate().getResource();
 					OntTools.Path path = null;
+					path = findShortestPathV2(kbWithInterestingProperties, nodeToInsertCopy, end, completeKB);
+					boolean erasePath = false;
+					if (path != null) {
+						for (Statement statement2 : path) {
+							Property p = statement2.getPredicate();
+							if (!properties.stream().anyMatch(p2 -> p2.getURI().equals(p.getURI()))) {
+								erasePath = true;
+								break;
+							}
+						}
+					}
 //					if (dijkstras.containsKey(nodeToInsert.getCandidate().getResource())) {
 //						DijkstraSP sp = dijkstras.get(nodeToInsert.getCandidate().getResource());
 //						if (sp.hasPathTo(end)) {
@@ -1427,26 +1489,46 @@ public class GraphMatching {
 //					if (!path.stream().allMatch(s -> properties.contains(s.getPredicate()))) {
 //						path = null;
 //					}
-					ExecutorService service = Executors.newSingleThreadExecutor();
-					SearchPathThread spt = new SearchPathThread(kbWithInterestingProperties, nodeToInsert.getCandidate().getResource(), end, filter, completeKB);
-					try {
-						path = service.submit(spt).get(timeout, TimeUnit.SECONDS);
-					} catch (InterruptedException | ExecutionException | TimeoutException e) {
-						logger.error(e + " : " + nodeToInsert.getCandidate().getResource() + " -> " + end);
-					}
+//					ExecutorService service = Executors.newSingleThreadExecutor();
+//					SearchPathThread spt = new SearchPathThread(kbWithInterestingProperties, nodeToInsert.getCandidate().getResource(), end, filter, completeKB);
+//					try {
+//						path = service.submit(spt).get(timeout, TimeUnit.SECONDS);
+//					} catch (InterruptedException | ExecutionException | TimeoutException e) {
+//						logger.error(e + " : " + nodeToInsert.getCandidate().getResource() + " -> " + end);
+//					}
 ////					OntTools.Path path = findShortestPathWithFilter(kbWithInterestingProperties,
 ////							nodeToInsert.getCandidate().getResource(), end, filter, completeKB);
+//					if (path != null) {
+//						recordLinkPath(scoresLinkTmp, nodeToInsertCopy, end, path.size());
+//						if (!erasePath) {
+//							pathLength.put(criterionToponymCandidate, path.size());
+//						} else pathLength.put(criterionToponymCandidate, -1);
+//					} else {
+//						pathLength.put(criterionToponymCandidate, -1);
+//						recordLinkPath(scoresLinkTmp, nodeToInsertCopy, end, 10000); // valeur
+//																					// arbitraire
+//																					// pr
+//																					// signifier
+//																					// que
+//																					// le
+//																					// chemin
+//																					// est
+//																					// trop
+//																					// long
+//					}
 					if (path != null) {
-						pathLength.put(criterionToponymCandidate, path.size());
-						recordRlspPath(scoresRlspTmp, nodeToInsert.getCandidate().getResource(), end, path.size(),
+						if (!erasePath) {
+							pathLength.put(criterionToponymCandidate, path.size());
+						} else pathLength.put(criterionToponymCandidate, -1);
+						recordRlspPath(scoresRlspTmp, nodeToInsertCopy, end, path.size(),
 								statementProperty.toString());
 					} else {
 						pathLength.put(criterionToponymCandidate, -1);
-						recordRlspPath(scoresRlspTmp, nodeToInsert.getCandidate().getResource(), end, -1,
+						recordRlspPath(scoresRlspTmp, nodeToInsertCopy, end, -1,
 								statementProperty.toString());
 					}
 				}
-			}
+			});
 			Integer maxPathLength = getMaxValue(pathLength);
 			float min = 1f;
 			for (Entry<CriterionToponymCandidate, Integer> entry : pathLength.entrySet()) {
@@ -1610,7 +1692,8 @@ public class GraphMatching {
 		if (statements.isEmpty())
 			return result;
 		// pour chaque statement (non RLSP) du noeud du TEI
-		for (Statement statement : statements) {
+		for (Statement s : statements) {
+			final Statement statement = s;
 			Resource m; // resource liée au noeud à supprimer
 			if (areResourcesEqual(statement.getSubject(), nodeToRemove)) {
 				m = (Resource) statement.getObject();
@@ -1911,9 +1994,9 @@ public class GraphMatching {
 																					// traiter
 		Resource firstSourceNode = firstToponym.getResource();
 		List<IPathMatching> pathDeletion = new ArrayList<>();
-		float deletionCostFirstToponym = 1f;
+		float deletionCostFirstToponym = 1f; // si le topo n'a paas de candidats, il faut lui mettre 1 en cout de suppression
 		if (firstToponym.getScoreCriterionToponymCandidate().isEmpty())
-			deletionCostFirstToponym = 0f;
+			deletionCostFirstToponym = 1f;
 		else { // ce toponym n'a pas de candidat, on va le supprimer, il ne sera
 				// pas désambiguisé
 			for (CriterionToponymCandidate candidateCriterion : firstToponym.getScoreCriterionToponymCandidate()) {
@@ -2658,8 +2741,10 @@ public class GraphMatching {
 		
 		while (solution == null && !forwardStatements.isEmpty() && !backwardStatements.isEmpty()) {
 			Path forwardCandidate = selectMostPromisingPath(forwardStatements, m, endLat, endLong, forwardSeen, mComplete);
-			Path backwardCandidate = selectMostPromisingPathBackward(backwardStatements, m, startLat, startLong, backwardSeen, mComplete); 
-			if (forwardCandidate != null && endResource != null && forwardCandidate.hasTerminus(endResource)) {
+			Path backwardCandidate = selectMostPromisingPathBackward(backwardStatements, m, startLat, startLong, backwardSeen, mComplete);
+			if (forwardCandidate == null || backwardCandidate == null) {
+				break;
+			} else if (forwardCandidate != null && endResource != null && forwardCandidate.hasTerminus(endResource)) {
 				solution = forwardCandidate;
 			} else if(backwardCandidate != null && ! backwardCandidate.isEmpty() && backwardCandidate.get(0) != null && backwardCandidate.get(0).getSubject() != null  
 					&& areResourcesEqual(backwardCandidate.get(0).getSubject(), startResource)) {
@@ -2693,6 +2778,7 @@ public class GraphMatching {
 						solution = newPath;
 					}
 				}
+				break;
 			}
 			else {
 				Resource terminus = forwardCandidate.getTerminalResource();
