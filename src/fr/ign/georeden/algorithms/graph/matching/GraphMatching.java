@@ -74,8 +74,8 @@ public class GraphMatching {
 	/** The logger. */
 	private static Logger logger = Logger.getLogger(GraphMatching.class);
 
-	public static final String TEI_PATH = "C:\\temp7.rdf";
-	public static final String dbPediaRdfFilePath = "C:\\dbpedia_fr_with_rlsp.n3";
+	public static final String TEI_PATH = "D:\\temp7.rdf";
+	public static final String dbPediaRdfFilePath = "D:\\dbpedia_fr_with_rlsp.n3";
 
 	static Comparator<QuerySolutionEntry> comparatorQuerySolutionEntry = (a, b) -> {
 		// return Integer.compare(a.getId(), b.getId());
@@ -1369,7 +1369,7 @@ public class GraphMatching {
 				kbWithInterestingProperties, completeKB);
 		// rlsp : on utilise le fait que le chemin a déjà potentiellement été étudié, on vérifie que toutes les propriétés
 		// des statements sont biens compatibles avec la direction de la rlsp
-		float scoreRlsp = 1.0f;//scoreRlspV2(nodeToRemove, candidateCriterion, teiRdf, toponymsTEI, kbWithInterestingProperties, completeKB);
+		float scoreRlsp = scoreRlspV2(nodeToRemove, candidateCriterion, teiRdf, toponymsTEI, kbWithInterestingProperties, completeKB);
 		rlspCalculous.add(nodeToRemove.getResource() + " (" + nodeToRemove.getName() + ")" + " -> " + candidateCriterion.getCandidate().getResource() + " ("
 				+ scoreLabel + "/" + scoreLink + "/" + scoreRlsp + ")");
 		return labelWeight * scoreLabel + rlspWeight * scoreRlsp + linkWeight * scoreLink;
@@ -1444,7 +1444,9 @@ public class GraphMatching {
 			List<Property> properties = getCorrespondingProperties(statementProperty);
 			PredicatesFilter filter = new PredicatesFilter(properties);
 			Map<CriterionToponymCandidate, Integer> pathLength = new HashMap<>();
-			List<CriterionToponymCandidate> candidates = getCandidates(m, toponymsTEI); // ici il faut prendre les candidats seulement si le topo n'a pas été désambiguisé, sinon on utilise son référent
+			List<CriterionToponymCandidate> candidates = getReferent(m, toponymsTEI);
+			if (candidates.isEmpty())
+				candidates.addAll(getCandidates(m, toponymsTEI)); // ici il faut prendre les candidats seulement si le topo n'a pas été désambiguisé, sinon on utilise son référent
 			candidates.parallelStream().forEach(criterionToponymCandidate -> {
 			//for (CriterionToponymCandidate criterionToponymCandidate : candidates) {
 				Resource end = criterionToponymCandidate.getCandidate().getResource();
@@ -1700,7 +1702,9 @@ public class GraphMatching {
 			} else {
 				m = statement.getSubject();
 			}
-			List<CriterionToponymCandidate> candidates = getCandidates(m, toponymsTEI); // ici il faut prendre les candidats seulement si le topo n'a pas été désambiguisé, sinon on utilise son référent
+			List<CriterionToponymCandidate> candidates = getReferent(m, toponymsTEI);
+			if (candidates.isEmpty())
+				candidates.addAll(getCandidates(m, toponymsTEI)); // ici il faut prendre les candidats seulement si le topo n'a pas été désambiguisé, sinon on utilise son référent
 			Map<CriterionToponymCandidate, Integer> pathLength = new HashMap<>();
 			candidates.parallelStream().forEach(criterionToponymCandidate -> {
 			//for (CriterionToponymCandidate criterionToponymCandidate : candidates) {
@@ -1819,6 +1823,19 @@ public class GraphMatching {
 //			}
 //			else 
 				return toponym.get().getScoreCriterionToponymCandidate();
+
+		}
+		return results;
+	}
+	static List<CriterionToponymCandidate> getReferent(Resource r, Set<Toponym> toponymsTEI) {
+		List<CriterionToponymCandidate> results = new ArrayList<>();
+		Optional<Toponym> toponym = toponymsTEI.stream().filter(t -> areResourcesEqual(t.getResource(), r)).findFirst();
+		if (toponym.isPresent()) {
+			if (toponym.get().getReferent() != null) {
+				Resource ref = toponym.get().getReferent();
+				results.addAll(toponym.get().getScoreCriterionToponymCandidate().stream().
+						filter(p -> areResourcesEqual(ref, p.getCandidate().getResource())).collect(Collectors.toList()));
+			}
 
 		}
 		return results;
