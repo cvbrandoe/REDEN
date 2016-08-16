@@ -11,10 +11,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Stack;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
-import org.apache.jena.ontology.OntTools.Path;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Statement;
@@ -26,7 +26,10 @@ public class FloydWarshallAPSP implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	private static Logger logger = Logger.getLogger(FloydWarshallAPSP.class);
+	
 	private Map<String, Map<String, Float>> dist;
+	private Map<String, Map<String, SerializableStatement>> next; // supprimer le transient une fois Statement remplacé par StatementSerializable
+	
 	private transient List<Statement> statements;
 	private transient Set<String> nodes;
 	private int nbVertex;
@@ -69,30 +72,23 @@ public class FloydWarshallAPSP implements Serializable {
 			String n2 = s.getObject().toString();
 			Map<String, Float> mapToChange = dist.get(n1);
 			mapToChange.put(n2, 1.0f);
-			Map<String, String> mapNext = new HashMap<>();
-			mapNext.put(n2, n2);
+			Map<String, SerializableStatement> mapNext;
+			if (next.containsKey(n1))
+				mapNext = next.get(n1);
+			else				
+				mapNext= new HashMap<>();
+			mapNext.put(n2, new SerializableStatement(s));
 			next.put(n1, mapNext);
 		});
 	}
-	void compute() {
-		/*
-		  	1 let dist be a |V| × |V| array of minimum distances initialized to ∞ (infinity)
-			2 for each vertex v
-			3    dist[v][v] ← 0
-			4 for each edge (u,v)
-			5    dist[u][v] ← w(u,v)  // the weight of the edge (u,v)
-			6 for k from 1 to |V|
-			7    for i from 1 to |V|
-			8       for j from 1 to |V|
-			9          if dist[i][j] > dist[i][k] + dist[k][j] 
-			10             dist[i][j] ← dist[i][k] + dist[k][j]
-			11         end if
-		*/
+	void compute() {		
+		int k = 1;		
 		
-		int k = 1;
 		for (String nodeK : dist.keySet()) {
 			logger.info("étape " + k + " sur " + nbVertex);
 			for (String nodeI : dist.keySet()) {
+				if (!next.containsKey(nodeK) || !next.get(nodeK).containsKey(nodeI)) 
+					continue;  // optimization
 				for (String nodeJ : dist.keySet()) {
 					if (dist.get(nodeI).containsKey(nodeK) && dist.get(nodeK).containsKey(nodeJ)) {
 						// cela veut dire que dist[i][k] et dist[k][j] ont une valeur différente de l'infini, donc on regarde
@@ -102,9 +98,16 @@ public class FloydWarshallAPSP implements Serializable {
 							// ou que dist[i][j] n'est pas à l'infini, mais qd meme plus élevé que value
 							Map<String, Float> mapToChange = dist.get(nodeI);
 							mapToChange.put(nodeJ, value);
-							Map<String, String> nextTochange = next.get(nodeI);
-							if (nextTochange.containsKey(nodeK)) 
-								nextTochange.put(nodeJ, nextTochange.get(nodeK));
+							Map<String, SerializableStatement> nextTochange = next.get(nodeI);
+							//if (nextTochange.containsKey(nodeK))
+							SerializableStatement ss = null;
+							if (next.get(nodeK).containsKey(nodeJ)) {
+								ss = next.get(nodeK).get(nodeJ);
+							} else if (next.get(nodeI).containsKey(nodeK)) {
+								ss = next.get(nodeI).get(nodeK);
+							}
+							if (ss != null)
+								nextTochange.put(nodeJ, ss);
 						}
 					}
 				}
@@ -130,7 +133,7 @@ public class FloydWarshallAPSP implements Serializable {
 				&& dist.get(startString).get(endString) < Float.POSITIVE_INFINITY;
 	}
 	
-	public Path getPath(RDFNode start, RDFNode end) {
+	public Iterable<Statement> getPath(RDFNode start, RDFNode end, Model graph) {
 		/* A AJOUTER DANS LA FONCTION compute §§§§§§§§§§§§§
 		 * procedure FloydWarshallWithPathReconstruction ()
 			   for each edge (u,v)
@@ -143,10 +146,12 @@ public class FloydWarshallAPSP implements Serializable {
 			               dist[i][j] ← dist[i][k] + dist[k][j]
 			               next[i][j] ← next[i][k] §§§§§§§§§§§§§§§§§§§§§§§
 		 * */
-		Path path = null;
-		if (hasPath(start, end)) {
-			path = new Path();
-		}
+		if (!hasPath(start, end)) 
+			return null;
+		Stack<Statement> path = new Stack<>();
+        for (SerializableStatement e = next.get(start.toString()).get(end.toString()); e != null; e = next.get(start.toString()).get(e.getSubject())) {
+            path.push(e.toStatement(graph));
+        }
 		return path;
 		
 		/*procedure Path(u, v)
@@ -159,7 +164,6 @@ public class FloydWarshallAPSP implements Serializable {
 		   return path
 		 */
 	}
-	private Map<String, Map<String, String>> next; // supprimer le transient une fois Statement remplacé par StatementSerializable
 	
 	/**
 	 * Serialize.

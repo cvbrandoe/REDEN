@@ -81,8 +81,8 @@ public class GraphMatching {
 	/** The logger. */
 	private static Logger logger = Logger.getLogger(GraphMatching.class);
 
-	public static final String TEI_PATH = "D:\\temp7.rdf";
-	public static final String dbPediaRdfFilePath = "D:\\dbpedia_fr_with_rlsp.n3";
+	public static final String TEI_PATH = "C:\\temp7.rdf";
+	public static final String dbPediaRdfFilePath = "C:\\dbpedia_fr_with_rlsp.n3";
 
 	static Comparator<QuerySolutionEntry> comparatorQuerySolutionEntry = (a, b) -> {
 		// return Integer.compare(a.getId(), b.getId());
@@ -263,6 +263,7 @@ public class GraphMatching {
 //		floydW.serialize("D:\\testSerialization.txt");
 //		FloydWarshallAPSP floydW2 = FloydWarshallAPSP.deserialize("D:\\testSerialization.txt");
 		floydW.compute(); // sérialiser une fois le contenu calculer. Ajouter une methode pr sérialiser dans floyW class et une méthode statique pour désérialiser (tjs dans la classe)
+		floydW.serialize("C:\\FloydWarshallAPSP.txt");
 		Resource Lille = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Lille");
 		Resource Marseille = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Marseille");
 		logger.info(floydW.hasPath(Lille, Marseille));

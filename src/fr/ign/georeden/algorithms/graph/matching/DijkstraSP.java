@@ -41,7 +41,7 @@ public class DijkstraSP implements Serializable {
     private transient double weight = 1.0;
 	//private static Logger logger = Logger.getLogger(DijkstraSP.class)
     private Map<String, Double> distTo;          // distTo[v] = distance  of shortest s->v path
-    private Map<String, StatementDijkstra> edgeTo;    // edgeTo[v] = last edge on shortest s->v path
+    private Map<String, SerializableStatement> edgeTo;    // edgeTo[v] = last edge on shortest s->v path
     private transient IndexMinPQ<Double> pq;    // priority queue of vertices
     private transient List<String> nodes; // nodes of the graph
     private String node;
@@ -117,7 +117,7 @@ public class DijkstraSP implements Serializable {
         RDFNode w = e.getObject();
         if (distTo.get(w.toString()) > distTo.get(v.toString()) + weight) {
             distTo.put(w.toString(), distTo.get(v.toString()) + weight);
-            edgeTo.put(w.toString(), new StatementDijkstra(e));
+            edgeTo.put(w.toString(), new SerializableStatement(e));
             if (pq.contains(nodes.indexOf(w.toString()))) 
             	pq.decreaseKey(nodes.indexOf(w.toString()), distTo.get(w.toString()));
             else
@@ -161,46 +161,13 @@ public class DijkstraSP implements Serializable {
         if (!hasPathTo(v)) 
         	return null;
         Stack<Statement> path = new Stack<>();
-        for (StatementDijkstra e = edgeTo.get(v.toString()); e != null; e = edgeTo.get(e.getSubject())) {
+        for (SerializableStatement e = edgeTo.get(v.toString()); e != null; e = edgeTo.get(e.getSubject())) {
             path.push(e.toStatement(graph));
         }
         return path;
     }
     
-    public class StatementDijkstra implements Serializable {
-    	/**
-		 * 
-		 */
-		private static final long serialVersionUID = 1L;
-		private String subject;
-    	private String predicate;
-    	private String object;
-    	
-    	public StatementDijkstra(Statement s) {
-    		this.subject = s.getSubject().toString();
-    		this.predicate = s.getPredicate().toString();
-    		this.object = s.getObject().toString();
-    	}
-    	
-    	/**
-	     * To statement.
-	     *
-	     * @param graph the graph
-	     * @return the statement
-	     */
-	    public Statement toStatement(Model graph) {
-    		return graph.createStatement(graph.getResource(subject), graph.getProperty(predicate), graph.getResource(object));
-    	}
-    	public String getSubject() {
-    		return this.subject;
-    	}
-    	public String getPredicate() {
-    		return this.predicate;
-    	}
-    	public String getObject() {
-    		return this.object;
-    	}
-    }
+   
 
 }
 
