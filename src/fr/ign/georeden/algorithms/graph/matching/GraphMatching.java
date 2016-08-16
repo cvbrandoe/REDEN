@@ -1,7 +1,12 @@
 package fr.ign.georeden.algorithms.graph.matching;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -32,6 +37,7 @@ import javax.naming.spi.DirStateFactory.Result;
 import org.apache.http.conn.HttpHostConnectException;
 import org.apache.jena.atlas.lib.NotImplemented;
 import org.apache.jena.atlas.web.HttpException;
+import org.apache.jena.base.Sys;
 import org.apache.jena.riot.RiotException;
 import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
@@ -56,6 +62,7 @@ import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.sparql.function.library.e;
 import org.apache.jena.util.iterator.Filter;
 
+import fr.ign.georeden.algorithms.string.DamerauLevenshteinAlgorithm;
 import fr.ign.georeden.algorithms.string.StringComparisonDamLev;
 import fr.ign.georeden.graph.LabeledEdge;
 //import fr.ign.georeden.graph.Toponym;
@@ -174,8 +181,8 @@ public class GraphMatching {
 	 * @return the sets the
 	 */
 	public static Set<Toponym> nodeSelection() {
-		Integer numberOfCandidate = 5;
-		float threshold = 0.6f;
+		Integer numberOfCandidate = 10;
+		float threshold = 0.5f;
 		// final Model kbSource2 =
 		// ModelFactory.createDefaultModel().read(dbPediaRdfFilePath);
 		// float test =
@@ -213,6 +220,13 @@ public class GraphMatching {
 		Document teiSource = XMLUtil.createDocumentFromFile(TEI_PATH);
 		Model teiRdf = RDFUtil.getModel(teiSource);//ModelFactory.createDefaultModel().read("D:\\temp7.n3");// RDFUtil.getModel(teiSource)
 		logger.info("Model TEI vide : " + teiRdf.isEmpty());
+//		Map<Resource, String> listS = new HashMap<>();
+//		for (Statement s : teiRdf.listStatements().toList()) {
+//			if (s.getPredicate().getURI().equals(rdfsLabel.getURI())) {
+//				listS.put(s.getSubject(), s.getSubject() + " -> "+ s.getObject());
+//			}
+//		}
+//		listS.keySet().stream().sorted(comparatorResourcePlace).forEach(s -> System.out.println(listS.get(s)));
 		Set<Toponym> toponymsTEI = getToponymsFromTei(teiRdf);
 		logger.info(toponymsTEI.size() + " toponymes dans le TEI");
 
@@ -220,31 +234,95 @@ public class GraphMatching {
 		final Model kbSource = ModelFactory.createDefaultModel().read(dbPediaRdfFilePath);
 		logger.info("Création du sous graphe de la KB contenant uniquement les relations spatiales");
 		Model kbSubgraph = getSubGraphWithResources(kbSource);
-		for (Statement s : kbSubgraph.listStatements().toList()) {
-			Property p = s.getPredicate();
-			Property newProperty = p;
-			if (p.getURI().equalsIgnoreCase(propNord.getURI())) {
-				newProperty = propSud;
-			} else if (p.getURI().equalsIgnoreCase(propNordEst.getURI())) {
-				newProperty = propSudOuest;
-			} else if (p.getURI().equalsIgnoreCase(propNordOuest.getURI())) {
-				newProperty = propSudEst;
-			} else if (p.getURI().equalsIgnoreCase(propSud.getURI())) {
-				newProperty = propNord;
-			} else if (p.getURI().equalsIgnoreCase(propSudEst.getURI())) {
-				newProperty = propNordOuest;
-			} else if (p.getURI().equalsIgnoreCase(propSudOuest.getURI())) {
-				newProperty = propNordEst;
-			} else if (p.getURI().equalsIgnoreCase(propEst.getURI())) {
-				newProperty = propOuest;
-			} else if (p.getURI().equalsIgnoreCase(propOuest.getURI())) {
-				newProperty = propEst;
-			}
-			kbSubgraph.add(kbSubgraph.createStatement((Resource) s.getObject(), newProperty, s.getSubject()));
-		}
-		
-		
-		
+		// // Inversion des statements
+//		for (Statement s : kbSubgraph.listStatements().toList()) {
+//			Property p = s.getPredicate();
+//			Property newProperty = p;
+//			if (p.getURI().equalsIgnoreCase(propNord.getURI())) {
+//				newProperty = propSud;
+//			} else if (p.getURI().equalsIgnoreCase(propNordEst.getURI())) {
+//				newProperty = propSudOuest;
+//			} else if (p.getURI().equalsIgnoreCase(propNordOuest.getURI())) {
+//				newProperty = propSudEst;
+//			} else if (p.getURI().equalsIgnoreCase(propSud.getURI())) {
+//				newProperty = propNord;
+//			} else if (p.getURI().equalsIgnoreCase(propSudEst.getURI())) {
+//				newProperty = propNordOuest;
+//			} else if (p.getURI().equalsIgnoreCase(propSudOuest.getURI())) {
+//				newProperty = propNordEst;
+//			} else if (p.getURI().equalsIgnoreCase(propEst.getURI())) {
+//				newProperty = propOuest;
+//			} else if (p.getURI().equalsIgnoreCase(propOuest.getURI())) {
+//				newProperty = propEst;
+//			}
+//			kbSubgraph.add(kbSubgraph.createStatement((Resource) s.getObject(), newProperty, s.getSubject()));
+//		}
+
+		//short[][] test = floydWarshallAPSP(kbSubgraph); // trop long
+		FloydWarshallAPSP floydW = new FloydWarshallAPSP(kbSubgraph);
+//		floydW.serialize("D:\\testSerialization.txt");
+//		FloydWarshallAPSP floydW2 = FloydWarshallAPSP.deserialize("D:\\testSerialization.txt");
+		floydW.compute(); // sérialiser une fois le contenu calculer. Ajouter une methode pr sérialiser dans floyW class et une méthode statique pour désérialiser (tjs dans la classe)
+		Resource Lille = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Lille");
+		Resource Marseille = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Marseille");
+		logger.info(floydW.hasPath(Lille, Marseille));
+		logger.info(floydW.hasPath(Marseille, Lille));
+		//floydWarshallAPSPV2(kbSubgraph); 
+//		logger.info("Dijkstra");
+//		List<Resource> nodesForSP = kbSubgraph.listStatements().toList().stream().map(s -> s.getSubject()).distinct()
+//				.limit(1)
+//				.collect(Collectors.toList());
+//		int count = 1;
+//		DijkstraSP dijkstraSerialized = null;
+//		for (Resource r : nodesForSP) {
+//			logger.info(count + " / " + nodesForSP.size());
+//			DijkstraSP dijkstra = new DijkstraSP(kbSubgraph, r);
+//			dijkstras.put(r, dijkstra);
+//			dijkstraSerialized = dijkstra;
+//			try (FileOutputStream fout = new FileOutputStream("D:\\dijkstraSerialisationTest.txt")) {
+//
+//				try (ObjectOutputStream oos = new ObjectOutputStream(fout)) {
+//					oos.writeObject(dijkstra);
+//				}
+//				logger.info("Done");
+//
+//			} catch (Exception e) {
+//				logger.error(e);
+//			}
+//			count++;
+//		}
+//		DijkstraSP dijkstraDeserialized = null;
+//		try (FileInputStream fis = new FileInputStream("D:\\dijkstraSerialisationTest.txt")) {
+//			try (ObjectInputStream objectInputStream = new ObjectInputStream(fis)) {
+//				dijkstraDeserialized = (DijkstraSP) objectInputStream.readObject();
+//			} catch (ClassNotFoundException e) {
+//				logger.error(e);
+//			}
+//		} catch (IOException e) {
+//			logger.error(e);
+//		}
+//		if (dijkstraSerialized != null && dijkstraDeserialized != null) {
+//			logger.info(dijkstraSerialized.getNode().toString());
+//			if (dijkstraDeserialized.getNode().toString().equals(dijkstraSerialized.getNode().toString())) {
+//				logger.info("noeuds identiques");
+//			}
+//			Resource Lille = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Lille");
+//			Resource Marseille = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Marseille");
+//			logger.info(dijkstraDeserialized.hasPathTo(Marseille));
+//			logger.info(dijkstraSerialized.hasPathTo(Marseille));
+//			logger.info(dijkstraDeserialized.hasPathTo(Marseille) ? dijkstraDeserialized.pathTo(Marseille, kbSubgraph) : "KO");
+//			logger.info(dijkstraSerialized.hasPathTo(Marseille) ? dijkstraSerialized.pathTo(Marseille, kbSubgraph) : "KO");
+//			logger.info(dijkstraDeserialized.hasPathTo(Lille));
+//			logger.info(dijkstraSerialized.hasPathTo(Lille));
+//			logger.info(dijkstraDeserialized.hasPathTo(Lille) ? dijkstraDeserialized.pathTo(Lille, kbSubgraph) : "KO");
+//			logger.info(dijkstraSerialized.hasPathTo(Lille) ? dijkstraSerialized.pathTo(Lille, kbSubgraph) : "KO");
+//		} else {
+//			if (dijkstraSerialized == null)
+//				logger.info("dijkstraSerialized null");
+//			if (dijkstraDeserialized == null)
+//				logger.info("dijkstraDeserialized null");
+//		}
+		////FIN DIJKSTRA
 		//saveModelToFile("subgraphWithRLSP.n3", kbSubgraph, "N3")
 		logger.info("Récupérations des candidats de la KB");
 		final List<Candidate> candidatesFromKB = getCandidatesFromKB(kbSource);
@@ -252,7 +330,6 @@ public class GraphMatching {
 		Set<Toponym> result = getCandidatesSelection(toponymsTEI, candidatesFromKB, numberOfCandidate, threshold);
 		
 		// test algo SP
-//		byte[][] test = floydWarshallAPSP(kbSubgraph); // trop long
 //		Resource Ruffec = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Lille");
 //		Resource Pamiers = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Marseille");
 //		Path path = findShortestPathV2(kbSubgraph, Ruffec, Pamiers, kbSource);
@@ -1851,8 +1928,7 @@ public class GraphMatching {
 	static List<Statement> removeRLSP(List<Statement> statements) {
 		if (statements == null || statements.isEmpty())
 			return new ArrayList<>();
-		return statements.stream().filter(s -> !s.getPredicate().getNameSpace().equals(rlspNS))
-				.collect(Collectors.toList());
+		return statements.stream().filter(s -> !s.getPredicate().getNameSpace().equals(rlspNS)).collect(Collectors.toList());
 	}
 
 	static List<Statement> keepOnlyRLSP(List<Statement> statements) {
@@ -2046,7 +2122,7 @@ public class GraphMatching {
 					Resource currentSourceNode = currentToponym.getResource();
 					float deletionCost = 1f;
 					if (currentToponym.getScoreCriterionToponymCandidate().isEmpty())
-						deletionCost = 0f;
+						deletionCost = 1f;
 					else {
 						for (CriterionToponymCandidate candidateCriterion : currentToponym
 								.getScoreCriterionToponymCandidate()) {
@@ -2130,7 +2206,7 @@ public class GraphMatching {
 	static List<IPathMatching> getMinCostPath(List<List<IPathMatching>> open, Model kbSubgraph, Model miniGraph,
 			Set<Toponym> toponymsSeq, float labelWeight, float rlspWeight, float linkWeight, Set<Resource> sourceNodes,
 			Set<Resource> targetNodes, Model completeKB) {
-		float min = 100000000f;
+		float min = Float.MAX_VALUE;
 		List<IPathMatching> pMin = null;
 		for (List<IPathMatching> path : open) {
 			Set<Resource> unusedSourceNodes = getSourceUnusedResources(path, sourceNodes);
@@ -3039,7 +3115,7 @@ public class GraphMatching {
 		}
 	}
 	
-	static byte[][] floydWarshallAPSP(Model model) {
+	static short[][] floydWarshallAPSP(Model model) {
 		/*
 		  	1 let dist be a |V| × |V| array of minimum distances initialized to ∞ (infinity)
 			2 for each vertex v
@@ -3065,7 +3141,7 @@ public class GraphMatching {
 			resourcesOfIndex.put(index, rdfNode);
 			index++;
 		}
-		byte[][] dist = new byte[nbVertex][nbVertex];
+		short[][] dist = new short[nbVertex][nbVertex];
 		for (int i = 0; i < nbVertex; i++) {
 			for (int j = 0; j < nbVertex; j++) {
 				if (i == j) {
@@ -3092,6 +3168,107 @@ public class GraphMatching {
 		}
 		return dist;
 	}
+	static void floydWarshallAPSPV2(Model model) {
+		/*
+		  	1 let dist be a |V| × |V| array of minimum distances initialized to ∞ (infinity)
+			2 for each vertex v
+			3    dist[v][v] ← 0
+			4 for each edge (u,v)
+			5    dist[u][v] ← w(u,v)  // the weight of the edge (u,v)
+			6 for k from 1 to |V|
+			7    for i from 1 to |V|
+			8       for j from 1 to |V|
+			9          if dist[i][j] > dist[i][k] + dist[k][j] 
+			10             dist[i][j] ← dist[i][k] + dist[k][j]
+			11         end if
+		*/
+		logger.info("Algo Floyd-Warshall V2");
+		logger.info("Récupération des statements");
+		List<Statement> statements = model.listStatements().toList();// statements = tous les statements du graph dans lequel on veut les chemins
+		Set<String> nodes = new HashSet<>(model.listSubjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));
+		nodes.addAll(model.listObjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));
+		int nbVertex = nodes.size(); 
+		logger.info("Création de la structure");
+		Map<String, Map<String, Float>> dist2 = new ConcurrentHashMap<>(nbVertex);
+//		nodes.parallelStream().forEach(n1 -> {
+//			Map<String, Float> mapSecondNode = new ConcurrentHashMap<>(nbVertex);
+//			nodes.parallelStream().forEach(n2 -> mapSecondNode.put(n2, n1.equals(n2) ? 0.0f : Float.POSITIVE_INFINITY));
+//			dist2.put(n1, mapSecondNode);
+//		});
+		Map<String, Float> mapSecondNode = new ConcurrentHashMap<>(nbVertex);
+		logger.info("Création de la structure 1");
+		nodes.parallelStream().forEach(n2 -> mapSecondNode.put(n2, Float.POSITIVE_INFINITY));
+		logger.info("Création de la structure 2");
+		nodes.parallelStream().forEach(n1 -> {
+			Map<String, Float> mapToAdd = new HashMap<>(mapSecondNode);
+			mapToAdd.put(n1, 0.0f);
+			dist2.put(n1, mapToAdd);
+		});
+
+		logger.info("Initialisation des voisins");
+		// on initialise les voisins à 1
+		statements.parallelStream().forEach(s -> {
+			String n1 = s.getSubject().toString();
+			String n2 = s.getObject().toString();
+			Map<String, Float> mapToChange = dist2.get(n1);
+			mapToChange.put(n2, 1.0f);
+		});
+		float v = dist2.get(statements.get(0).getSubject().toString()).get(statements.get(0).getObject().toString());
+		logger.info(v);
+		
+		int k = 1;
+		for (String nodeK : dist2.keySet()) {
+			logger.info("étape " + k + " sur " + nbVertex);
+			for (String nodeI : dist2.keySet()) {
+				for (String nodeJ : dist2.keySet()) {
+					float value = dist2.get(nodeI).get(nodeK) + dist2.get(nodeK).get(nodeJ);
+					if (dist2.get(nodeI).get(nodeJ) > value) {
+						Map<String, Float> mapToChange = dist2.get(nodeI);
+						mapToChange.put(nodeJ, value);
+					}
+				}
+			}
+			k++;
+		}
+		
+//		for (int k = 0; k < nbVertex; k++) {
+//			logger.info("étape " + k + " sur " + nbVertex);
+//			for (int i = 0; i < nbVertex; i++) {
+//				for (int j = 0; j < nbVertex; j++) {
+//					if (dist[i][j] > dist[i][k] + dist[k][j]) {
+//						dist[i][j] = (byte) (dist[i][k] + dist[k][j]);
+//					} 
+//				}
+//			}
+//		}
+//		
+//		short[][] dist = new short[nbVertex][nbVertex];
+//		for (int i = 0; i < nbVertex; i++) {
+//			for (int j = 0; j < nbVertex; j++) {
+//				if (i == j) {
+//					dist[i][j] = 0; // un noeud a un parcours de 0 à faire avec lui même
+//				} else {
+//					dist[i][j] = 127; // Integer.MAX_VALUE équivalant ici à plus l'infini
+//				}
+//			}
+//		}
+//		for (Statement s : statements) {
+//			int index1 = indexesOfResource.get(s.getSubject());
+//			int index2 = indexesOfResource.get(s.getObject());
+//			dist[index1][index2] = 1; // on initialise les voisins à 1
+//		}
+//		for (int k = 0; k < nbVertex; k++) {
+//			logger.info("étape " + k + " sur " + nbVertex);
+//			for (int i = 0; i < nbVertex; i++) {
+//				for (int j = 0; j < nbVertex; j++) {
+//					if (dist[i][j] > dist[i][k] + dist[k][j]) {
+//						dist[i][j] = (byte) (dist[i][k] + dist[k][j]);
+//					} 
+//				}
+//			}
+//		}
+	}
+	
 	static Map<RDFNode, Integer> indexesOfResource = new HashMap<>(); // Pour chaque resource du graphe, contient son index
 	static Map<Integer, RDFNode> resourcesOfIndex = new HashMap<>(); // Pour chaque index , contient la resource correspondante
 	
