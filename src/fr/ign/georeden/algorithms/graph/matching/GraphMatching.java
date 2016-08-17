@@ -261,7 +261,9 @@ public class GraphMatching {
 		//short[][] test = floydWarshallAPSP(kbSubgraph); // trop long
 		Resource lille = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Lille");
 		Resource marseille = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Marseille");
+//		logger.info("DijkstraSP");
 //		DijkstraSP dspTest = new DijkstraSP(kbSubgraph, lille);
+//		logger.info(dspTest.hasPathTo(marseille));
 //		Map<String, DijkstraSP> apsp = new ConcurrentHashMap<>();
 //		final AtomicInteger countSP = new AtomicInteger();
 //		List<Resource> nodes = kbSubgraph.listSubjects().toList().stream().distinct().collect(Collectors.toList());

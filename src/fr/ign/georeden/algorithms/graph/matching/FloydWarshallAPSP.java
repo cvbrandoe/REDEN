@@ -51,8 +51,8 @@ public class FloydWarshallAPSP implements Serializable {
 		//this.nodes.addAll(model.listObjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));		
 		this.nbVertex = nodes.size(); 
 		logger.info("Number of vertex : " + this.nbVertex);
-		this.dist = new ConcurrentHashMap<>(nbVertex);
-		this.next = new ConcurrentHashMap<>();
+		this.dist = new HashMap<>();
+		this.next = new HashMap<>();
 		createStructures();
 	}
 	
@@ -71,10 +71,10 @@ public class FloydWarshallAPSP implements Serializable {
 		statements.stream().forEach(s -> {
 			String n1 = s.getSubject().toString();
 			String n2 = s.getObject().toString();
-			Map<String, Short> mapToChange = dist.containsKey(n1) ? dist.get(n1) : new ConcurrentHashMap<>();
+			Map<String, Short> mapToChange = dist.containsKey(n1) ? dist.get(n1) : new HashMap<>();
 			mapToChange.put(n2, (short)1);
 			dist.put(n1, mapToChange);
-			Map<String, SerializableStatement> mapNext = next.containsKey(n1) ? next.get(n1) : new ConcurrentHashMap<>();
+			Map<String, SerializableStatement> mapNext = next.containsKey(n1) ? next.get(n1) : new HashMap<>();
 			mapNext.put(n2, new SerializableStatement(s));
 			next.put(n1, mapNext);
 		});
@@ -90,7 +90,7 @@ public class FloydWarshallAPSP implements Serializable {
 		
 		for (String nodeK : dist.keySet()) {
 			logger.info("étape " + k + " sur " + nbVertex);
-			dist.keySet().parallelStream().forEach(nodeI -> {
+			for (String nodeI : dist.keySet()) {
 				if (next.containsKey(nodeK) && next.get(nodeK).containsKey(nodeI)) {// optimization
 					for (String nodeJ : dist.keySet()) {
 						if (dist.containsKey(nodeI) && dist.containsKey(nodeK) && dist.get(nodeI).containsKey(nodeK) && dist.get(nodeK).containsKey(nodeJ)) {// cela veut dire que dist[i][k] et dist[k][j] ont une valeur différente de l'infini, donc on regarde							
@@ -111,7 +111,7 @@ public class FloydWarshallAPSP implements Serializable {
 						}
 					}
 				}
-			});
+			}
 			k++;
 		}
 	}

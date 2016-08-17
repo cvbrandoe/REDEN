@@ -112,6 +112,7 @@ public class DijkstraSP implements Serializable {
 		pq.insert(nodes.indexOf(s), distTo.get(node));
 		while (!pq.isEmpty()) {
 			int v = pq.delMin();
+			//graph.listStatements((Resource)nodes.get(v), null, (RDFNode) null).toList().parallelStream().forEach(e -> relax(e))
 			for (Statement e : graph.listStatements((Resource)nodes.get(v), null, (RDFNode) null).toList())
 				relax(e);
 		}
