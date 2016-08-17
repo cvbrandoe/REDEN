@@ -272,7 +272,7 @@ public class GraphMatching {
 //			}
 //			logger.info((countSP.getAndIncrement() + 1) + " / " + nodes.size());
 //		});
-		FloydWarshallAPSP floydW = new FloydWarshallAPSP(kbSubgraph);
+		FloydWarshallAPSPV2 floydW = new FloydWarshallAPSPV2(kbSubgraph);
 //		floydW.serialize("D:\\testSerialization.txt");
 //		FloydWarshallAPSP floydW2 = FloydWarshallAPSP.deserialize("D:\\testSerialization.txt");
 		floydW.compute(); // sérialiser une fois le contenu calculer. Ajouter une methode pr sérialiser dans floyW class et une méthode statique pour désérialiser (tjs dans la classe)
