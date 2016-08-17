@@ -81,9 +81,9 @@ public class GraphMatching {
 	/** The logger. */
 	private static Logger logger = Logger.getLogger(GraphMatching.class);
 
-	public static final String TEI_PATH = "C:\\temp7.rdf";
-	public static final String dbPediaRdfFilePath = "C:\\dbpedia_fr_with_rlsp.n3";
-	public static final String serializePath = "C:\\serializations\\";
+	public static final String TEI_PATH = "D:\\temp7.rdf";
+	public static final String dbPediaRdfFilePath = "D:\\dbpedia_fr_with_rlsp.n3";
+	public static final String serializePath = "D:\\serializations\\";
 
 	static Comparator<QuerySolutionEntry> comparatorQuerySolutionEntry = (a, b) -> {
 		// return Integer.compare(a.getId(), b.getId());
@@ -216,6 +216,7 @@ public class GraphMatching {
 		// test.add(s1);
 		// test.add(s2);
 		// saveModelToFile("t.n3", test, "N3");
+		DijkstraSP te = DijkstraSP.deserialize(serializePath + 3);
 
 		logger.info("Chargement du TEI : " + TEI_PATH);
 		Document teiSource = XMLUtil.createDocumentFromFile(TEI_PATH);

@@ -1,5 +1,8 @@
 package fr.ign.georeden.algorithms.graph.matching;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -16,6 +19,7 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
+import org.apache.log4j.Logger;
 //import org.apache.log4j.Logger
 /**
  *  The <tt>DijkstraSP</tt> class represents a data type for solving the
@@ -38,9 +42,7 @@ import org.apache.jena.rdf.model.Statement;
  */
 
 public class DijkstraSP implements Serializable {
-	/**
-	 * 
-	 */
+	private static Logger logger = Logger.getLogger(DijkstraSP.class);
 	private static final long serialVersionUID = 1L;
     private transient double weight = 1.0;
 	//private static Logger logger = Logger.getLogger(DijkstraSP.class)
@@ -218,9 +220,22 @@ public class DijkstraSP implements Serializable {
 			}
 
 		} catch (Exception e) {
+			logger.error(e);
 		}
 	}
-   
+	public static DijkstraSP deserialize(String path) {
+		DijkstraSP result = null;
+		try (FileInputStream fis = new FileInputStream(path)) {
+			try (ObjectInputStream objectInputStream = new ObjectInputStream(fis)) {
+				result = (DijkstraSP) objectInputStream.readObject();
+			} catch (ClassNotFoundException e) {
+				logger.error(e);
+			}
+		} catch (IOException e) {
+			logger.error(e);
+		}
+		return result;
+	}
 
 }
 
