@@ -216,7 +216,7 @@ public class GraphMatching {
 		// test.add(s1);
 		// test.add(s2);
 		// saveModelToFile("t.n3", test, "N3");
-		DijkstraSP te = DijkstraSP.deserialize(serializePath + 3);
+//		DijkstraSP te = DijkstraSP.deserialize(serializePath + 3);
 
 		logger.info("Chargement du TEI : " + TEI_PATH);
 		Document teiSource = XMLUtil.createDocumentFromFile(TEI_PATH);
@@ -270,7 +270,7 @@ public class GraphMatching {
 //		}
 
 		//short[][] test = floydWarshallAPSP(kbSubgraph); // trop long
-		List<Resource> subjects = kbSubgraph.listSubjects().toList().stream().sorted((a, b) -> a.toString().compareTo(b.toString())).collect(Collectors.toList());
+		List<Resource> subjects = kbSubgraph.listSubjects().toList().stream().sorted((a, b) -> b.toString().compareTo(a.toString())).collect(Collectors.toList());
 		File folder = new File(serializePath);
 		File[] listOfFiles = folder.listFiles();
 		List<Integer> resourcesProcessed = new ArrayList<>();
@@ -278,10 +278,10 @@ public class GraphMatching {
 			resourcesProcessed.add(Integer.parseInt(file.getName()));
 		}
 		logger.info("Resources déjà traitées : " + resourcesProcessed.size());
-		final AtomicInteger countSP = new AtomicInteger();
+		final AtomicInteger countSP = new AtomicInteger(subjects.size());
 		subjects.parallelStream().forEachOrdered(subject -> {
 		//for (Resource subject : subjects) {			
-			int counter = countSP.getAndIncrement() + 1;
+			int counter = countSP.getAndDecrement();
 			if (!resourcesProcessed.contains(counter)) {
 				DijkstraSP dspTest = new DijkstraSP(kbSubgraph, subject);
 				dspTest.serialize(serializePath + counter);

@@ -105,7 +105,7 @@ public class DijkstraSP implements Serializable {
 		Set<RDFNode> set = new HashSet<>(graph.listObjects().toList());
 				//.stream().map(m -> m.toString()).collect(Collectors.toList()));
 //				graph.listSubjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));
-		//set.addAll(graph.listSubjects().toList());
+		set.addAll(graph.listSubjects().toList());
 		this.nodes = new HashMap<>();
 		this.nodesIndexs = new HashMap<>();
 		int ind = 0;
