@@ -20,6 +20,9 @@ import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.log4j.Logger;
 
+/**
+ * The Class FloydWarshall (All Pairs Shortest Path).
+ */
 public class FloydWarshallAPSP implements Serializable {
 	/**
 	 * 
@@ -27,91 +30,95 @@ public class FloydWarshallAPSP implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private static Logger logger = Logger.getLogger(FloydWarshallAPSP.class);
 	
-	private Map<String, Map<String, Float>> dist;
+	private Map<String, Map<String, Short>> dist;
 	private Map<String, Map<String, SerializableStatement>> next; // supprimer le transient une fois Statement remplacé par StatementSerializable
 	
 	private transient List<Statement> statements;
 	private transient Set<String> nodes;
 	private int nbVertex;
 	
+	/**
+	 * Instantiates a new floyd warshall APSP.
+	 *
+	 * @param model the model
+	 */
 	public FloydWarshallAPSP(Model model) {
 		logger.info("Algo Floyd-Warshall");
 		logger.info("Récupération des statements");
 		this.statements = model.listStatements().toList();// statements = tous les statements du graph dans lequel on veut les chemins
+		logger.info("Number of statements : " + statements.size());
 		this.nodes = new HashSet<>(model.listSubjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));
-		this.nodes.addAll(model.listObjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));
+		//this.nodes.addAll(model.listObjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));		
 		this.nbVertex = nodes.size(); 
+		logger.info("Number of vertex : " + this.nbVertex);
 		this.dist = new ConcurrentHashMap<>(nbVertex);
-		this.next = new ConcurrentHashMap<>(nbVertex);
+		this.next = new ConcurrentHashMap<>();
 		createStructures();
 	}
 	
 	private void createStructures() {
 		logger.info("Création de la structure");
+//		Map<String, Map<String, Short>> distTmp = new ConcurrentHashMap<>(nbVertex);
+//		Map<String, Map<String, SerializableStatement>> nextTmp = new ConcurrentHashMap<>();
 		nodes.parallelStream().forEach(n1 -> {
-			Map<String, Float> mapSecondNode = new ConcurrentHashMap<>();
-			mapSecondNode.put(n1, 0.0f);
+			Map<String, Short> mapSecondNode = new ConcurrentHashMap<>();
+			mapSecondNode.put(n1, (short) 0);
 			dist.put(n1, mapSecondNode);
 		});
-		
-		// !!!!!!!!!!! Pour prendre moins de place, on ne met que quand pas infini
-//		Map<String, Float> mapSecondNode = new ConcurrentHashMap<>(nbVertex);
-//		logger.info("Création de la structure 1");
-//		nodes.parallelStream().forEach(n2 -> mapSecondNode.put(n2, Float.POSITIVE_INFINITY));
-//		logger.info("Création de la structure 2");
-//		nodes.parallelStream().forEach(n1 -> {
-//			Map<String, Float> mapToAdd = new HashMap<>(mapSecondNode);
-//			mapToAdd.put(n1, 0.0f);
-//			dist.put(n1, mapToAdd);
-//		});
 
 		logger.info("Initialisation des voisins");
 		// on initialise les voisins à 1
-		statements.parallelStream().forEach(s -> {
+		statements.stream().forEach(s -> {
 			String n1 = s.getSubject().toString();
 			String n2 = s.getObject().toString();
-			Map<String, Float> mapToChange = dist.get(n1);
-			mapToChange.put(n2, 1.0f);
+			Map<String, Short> mapToChange = dist.get(n1);
+			mapToChange.put(n2, (short)1);
 			Map<String, SerializableStatement> mapNext;
 			if (next.containsKey(n1))
 				mapNext = next.get(n1);
 			else				
-				mapNext= new HashMap<>();
+				mapNext= new ConcurrentHashMap<>();
 			mapNext.put(n2, new SerializableStatement(s));
 			next.put(n1, mapNext);
 		});
+//		this.dist.putAll(distTmp);
+//		this.next.putAll(nextTmp);
 	}
+	
+	/**
+	 * Compute the algorithm.
+	 */
 	void compute() {		
 		int k = 1;		
 		
 		for (String nodeK : dist.keySet()) {
 			logger.info("étape " + k + " sur " + nbVertex);
-			for (String nodeI : dist.keySet()) {
-				if (!next.containsKey(nodeK) || !next.get(nodeK).containsKey(nodeI)) 
-					continue;  // optimization
-				for (String nodeJ : dist.keySet()) {
-					if (dist.get(nodeI).containsKey(nodeK) && dist.get(nodeK).containsKey(nodeJ)) {
-						// cela veut dire que dist[i][k] et dist[k][j] ont une valeur différente de l'infini, donc on regarde
-						float value = dist.get(nodeI).get(nodeK) + dist.get(nodeK).get(nodeJ);
-						if (!dist.get(nodeI).containsKey(nodeJ) || dist.get(nodeI).get(nodeJ) > value) {
-							// cela veut dire que dist[i][j] est à l'infini. Donc updater la valeur est forcément intéressant
-							// ou que dist[i][j] n'est pas à l'infini, mais qd meme plus élevé que value
-							Map<String, Float> mapToChange = dist.get(nodeI);
-							mapToChange.put(nodeJ, value);
-							Map<String, SerializableStatement> nextTochange = next.get(nodeI);
-							//if (nextTochange.containsKey(nodeK))
-							SerializableStatement ss = null;
-							if (next.get(nodeK).containsKey(nodeJ)) {
-								ss = next.get(nodeK).get(nodeJ);
-							} else if (next.get(nodeI).containsKey(nodeK)) {
-								ss = next.get(nodeI).get(nodeK);
+			dist.keySet().parallelStream().forEach(nodeI -> {
+			//for (String nodeI : dist.keySet()) {
+				if (next.containsKey(nodeK) && next.get(nodeK).containsKey(nodeI)) {// optimization
+					for (String nodeJ : dist.keySet()) {
+						if (dist.get(nodeI).containsKey(nodeK) && dist.get(nodeK).containsKey(nodeJ)) {
+							// cela veut dire que dist[i][k] et dist[k][j] ont une valeur différente de l'infini, donc on regarde
+							short value = (short) (dist.get(nodeI).get(nodeK) + dist.get(nodeK).get(nodeJ));
+							if (!dist.get(nodeI).containsKey(nodeJ) || dist.get(nodeI).get(nodeJ) > value) {
+								// cela veut dire que dist[i][j] est à l'infini. Donc updater la valeur est forcément intéressant
+								// ou que dist[i][j] n'est pas à l'infini, mais qd meme plus élevé que value
+								Map<String, Short> mapToChange = dist.get(nodeI);
+								mapToChange.put(nodeJ, value);
+								Map<String, SerializableStatement> nextTochange = next.get(nodeI);
+								SerializableStatement ss = null;
+								if (next.get(nodeK).containsKey(nodeJ)) {
+									ss = next.get(nodeK).get(nodeJ);
+								} else if (next.get(nodeI).containsKey(nodeK)) {
+									ss = next.get(nodeI).get(nodeK);
+								}
+								if (ss != null)
+									nextTochange.put(nodeJ, ss);
 							}
-							if (ss != null)
-								nextTochange.put(nodeJ, ss);
 						}
 					}
 				}
-			}
+			});
 			k++;
 		}
 	}
@@ -130,22 +137,18 @@ public class FloydWarshallAPSP implements Serializable {
 		String endString = end.toString();
 		return dist.containsKey(startString) 
 				&& dist.get(startString).containsKey(endString) 
-				&& dist.get(startString).get(endString) < Float.POSITIVE_INFINITY;
+				&& dist.get(startString).get(endString) < Short.MAX_VALUE;
 	}
 	
+	/**
+	 * Gets the path between the two nodes if it exists.
+	 *
+	 * @param start the start
+	 * @param end the end
+	 * @param graph the graph
+	 * @return the path
+	 */
 	public Iterable<Statement> getPath(RDFNode start, RDFNode end, Model graph) {
-		/* A AJOUTER DANS LA FONCTION compute §§§§§§§§§§§§§
-		 * procedure FloydWarshallWithPathReconstruction ()
-			   for each edge (u,v)
-			      dist[u][v] ← w(u,v)  // the weight of the edge (u,v)
-			      next[u][v] ← v §§§§§§§§§§§§§§§§§§§§§§§§§
-			   for k from 1 to |V| // standard Floyd-Warshall implementation
-			      for i from 1 to |V|
-			         for j from 1 to |V|
-			            if dist[i][k] + dist[k][j] < dist[i][j] then
-			               dist[i][j] ← dist[i][k] + dist[k][j]
-			               next[i][j] ← next[i][k] §§§§§§§§§§§§§§§§§§§§§§§
-		 * */
 		if (!hasPath(start, end)) 
 			return null;
 		Stack<Statement> path = new Stack<>();
@@ -153,16 +156,6 @@ public class FloydWarshallAPSP implements Serializable {
             path.push(e.toStatement(graph));
         }
 		return path;
-		
-		/*procedure Path(u, v)
-		   if next[u][v] = null then
-		       return []
-		   path = [u]
-		   while u ≠ v
-		       u ← next[u][v]
-		       path.append(u)
-		   return path
-		 */
 	}
 	
 	/**
@@ -202,4 +195,5 @@ public class FloydWarshallAPSP implements Serializable {
 		}
 		return result;
 	}
+	
 }

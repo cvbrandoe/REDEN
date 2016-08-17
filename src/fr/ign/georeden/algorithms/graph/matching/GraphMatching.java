@@ -259,15 +259,26 @@ public class GraphMatching {
 //		}
 
 		//short[][] test = floydWarshallAPSP(kbSubgraph); // trop long
+		Resource lille = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Lille");
+		Resource marseille = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Marseille");
+//		DijkstraSP dspTest = new DijkstraSP(kbSubgraph, lille);
+//		Map<String, DijkstraSP> apsp = new ConcurrentHashMap<>();
+//		final AtomicInteger countSP = new AtomicInteger();
+//		List<Resource> nodes = kbSubgraph.listSubjects().toList().stream().distinct().collect(Collectors.toList());
+//		nodes.parallelStream().forEach(n -> {
+//			if (!apsp.containsKey(n.toString())) {
+//				DijkstraSP dsp = new DijkstraSP(kbSubgraph, n);
+//				apsp.put(n.toString(), dsp);
+//			}
+//			logger.info((countSP.getAndIncrement() + 1) + " / " + nodes.size());
+//		});
 		FloydWarshallAPSP floydW = new FloydWarshallAPSP(kbSubgraph);
 //		floydW.serialize("D:\\testSerialization.txt");
 //		FloydWarshallAPSP floydW2 = FloydWarshallAPSP.deserialize("D:\\testSerialization.txt");
 		floydW.compute(); // sérialiser une fois le contenu calculer. Ajouter une methode pr sérialiser dans floyW class et une méthode statique pour désérialiser (tjs dans la classe)
 		floydW.serialize("C:\\FloydWarshallAPSP.txt");
-		Resource Lille = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Lille");
-		Resource Marseille = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Marseille");
-		logger.info(floydW.hasPath(Lille, Marseille));
-		logger.info(floydW.hasPath(Marseille, Lille));
+		logger.info(floydW.hasPath(lille, marseille));
+		logger.info(floydW.hasPath(marseille, lille));
 		//floydWarshallAPSPV2(kbSubgraph); 
 //		logger.info("Dijkstra");
 //		List<Resource> nodesForSP = kbSubgraph.listStatements().toList().stream().map(s -> s.getSubject()).distinct()

@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;
+import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
 //import org.apache.log4j.Logger
 /**
@@ -43,7 +44,7 @@ public class DijkstraSP implements Serializable {
     private Map<String, Double> distTo;          // distTo[v] = distance  of shortest s->v path
     private Map<String, SerializableStatement> edgeTo;    // edgeTo[v] = last edge on shortest s->v path
     private transient IndexMinPQ<Double> pq;    // priority queue of vertices
-    private transient List<String> nodes; // nodes of the graph
+    private transient List<RDFNode> nodes; // nodes of the graph
     private String node;
 
     /**
@@ -55,33 +56,34 @@ public class DijkstraSP implements Serializable {
      * @param nodesToVisitBeforeStop the nodes to visit before stop
      * @throws IllegalArgumentException unless 0 &le; <tt>s</tt> &le; <tt>V</tt> - 1
      */
+    @Deprecated
     public DijkstraSP(Model graph, RDFNode s, Set<RDFNode> nodesToVisitBeforeStop) {
-    	node = s.toString();
-    	Set<Integer> indexesToVisitBeforeStop = new HashSet<>(); // utilisées pour savoir quelle index on doit visiter avant d'arrêter
-    	Set<Integer> indexesVisited = new HashSet<>(); // utilisées pour savoir quelle index on doit visiter avant d'arrêter
-    	Set<String> set = new HashSet<>(graph.listSubjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));
-    	set.addAll(graph.listObjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));
-    	nodes = new ArrayList<>(set);
-        distTo = new HashMap<>();
-        edgeTo = new HashMap<>();
-        for (int v = 0; v < nodes.size(); v++) {
-            distTo.put(nodes.get(v), Double.POSITIVE_INFINITY);
-            if (nodesToVisitBeforeStop.contains(nodes.get(v)))
-            	indexesToVisitBeforeStop.add(v);
-        }
-        distTo.put(node, 0.0);
-
-        // relax vertices in order of distance from s
-        pq = new IndexMinPQ<>(nodes.size());
-        pq.insert(nodes.indexOf(node), distTo.get(node));
-        while (!pq.isEmpty()) {
-            int v = pq.delMin();
-            indexesVisited.add(v);
-            if (indexesVisited.containsAll(indexesToVisitBeforeStop))
-            	break;
-            for (Statement e : graph.listStatements(graph.getResource(nodes.get(v)), null, (RDFNode)null).toList())
-                relax(e);
-        }
+//    	node = s.toString();
+//    	Set<Integer> indexesToVisitBeforeStop = new HashSet<>(); // utilisées pour savoir quelle index on doit visiter avant d'arrêter
+//    	Set<Integer> indexesVisited = new HashSet<>(); // utilisées pour savoir quelle index on doit visiter avant d'arrêter
+//    	Set<String> set = new HashSet<>(graph.listSubjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));
+//    	set.addAll(graph.listObjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));
+//    	nodes = new ArrayList<>();//set
+//        distTo = new HashMap<>();
+//        edgeTo = new HashMap<>();
+//        for (int v = 0; v < nodes.size(); v++) {
+//            distTo.put(nodes.get(v), Double.POSITIVE_INFINITY);
+//            if (nodesToVisitBeforeStop.contains(nodes.get(v)))
+//            	indexesToVisitBeforeStop.add(v);
+//        }
+//        distTo.put(node, 0.0);
+//
+//        // relax vertices in order of distance from s
+//        pq = new IndexMinPQ<>(nodes.size());
+//        pq.insert(nodes.indexOf(node), distTo.get(node));
+//        while (!pq.isEmpty()) {
+//            int v = pq.delMin();
+//            indexesVisited.add(v);
+//            if (indexesVisited.containsAll(indexesToVisitBeforeStop))
+//            	break;
+//            for (Statement e : graph.listStatements(graph.getResource(nodes.get(v)), null, (RDFNode)null).toList())
+//                relax(e);
+//        }
     }
     
 	/**
@@ -92,22 +94,25 @@ public class DijkstraSP implements Serializable {
 	 */
 	public DijkstraSP(Model graph, RDFNode s) {
     	node = s.toString();
-		Set<String> set = new HashSet<>(graph.listSubjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));
-		set.addAll(graph.listObjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));
+    	// on récupère tous les noeuds objets d'un statement
+		Set<RDFNode> set = new HashSet<>(graph.listObjects().toList());
+				//.stream().map(m -> m.toString()).collect(Collectors.toList()));
+//				graph.listSubjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));
+		set.addAll(graph.listSubjects().toList());
 		nodes = new ArrayList<>(set);
 		distTo = new HashMap<>();
 		edgeTo = new HashMap<>();
-		for (int v = 0; v < nodes.size(); v++) {
-			distTo.put(nodes.get(v), Double.POSITIVE_INFINITY);
-		}
+//		for (int v = 0; v < nodes.size(); v++) {
+//			distTo.put(nodes.get(v), Double.POSITIVE_INFINITY);
+//		}
 		distTo.put(node, 0.0);
 
 		// relax vertices in order of distance from s
 		pq = new IndexMinPQ<>(nodes.size());
-		pq.insert(nodes.indexOf(node), distTo.get(node));
+		pq.insert(nodes.indexOf(s), distTo.get(node));
 		while (!pq.isEmpty()) {
 			int v = pq.delMin();
-			for (Statement e : graph.listStatements(graph.getResource(nodes.get(v)), null, (RDFNode) null).toList())
+			for (Statement e : graph.listStatements((Resource)nodes.get(v), null, (RDFNode) null).toList())
 				relax(e);
 		}
 	}
@@ -115,18 +120,19 @@ public class DijkstraSP implements Serializable {
     private void relax(Statement e) {
         RDFNode v = e.getSubject();
         RDFNode w = e.getObject();
-        if (distTo.get(w.toString()) > distTo.get(v.toString()) + weight) {
+        // si w n'est pas dans distTo (ça valeur est donc infini) ou si sa distance est plus grande, on la met à jour
+        if (!distTo.containsKey(w.toString()) || distTo.get(w.toString()) > distTo.get(v.toString()) + weight) {
             distTo.put(w.toString(), distTo.get(v.toString()) + weight);
             edgeTo.put(w.toString(), new SerializableStatement(e));
-            if (pq.contains(nodes.indexOf(w.toString()))) 
-            	pq.decreaseKey(nodes.indexOf(w.toString()), distTo.get(w.toString()));
+            if (pq.contains(nodes.indexOf(w))) 
+            	pq.decreaseKey(nodes.indexOf(w), distTo.get(w.toString()));
             else
-            	pq.insert(nodes.indexOf(w.toString()), distTo.get(w.toString()));
+            	pq.insert(nodes.indexOf(w), distTo.get(w.toString()));
         }
     }
 
-	public String getNode() {
-		return this.node;
+	public Resource getNode(Model source) {
+		return source.getResource(this.node);
 	}
     /**
      * Returns the length of a shortest path from the source vertex <tt>s</tt> to vertex <tt>v</tt>.
@@ -146,7 +152,7 @@ public class DijkstraSP implements Serializable {
      *         <tt>s</tt> to vertex <tt>v</tt>; <tt>false</tt> otherwise
      */
     public boolean hasPathTo(RDFNode v) {
-        return distTo.get(v.toString()) < Double.POSITIVE_INFINITY;
+        return distTo.containsKey(v.toString()) && distTo.get(v.toString()) < Double.POSITIVE_INFINITY;
     }
 
     /**
