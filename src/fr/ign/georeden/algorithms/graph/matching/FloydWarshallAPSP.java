@@ -91,15 +91,11 @@ public class FloydWarshallAPSP implements Serializable {
 		for (String nodeK : dist.keySet()) {
 			logger.info("étape " + k + " sur " + nbVertex);
 			dist.keySet().parallelStream().forEach(nodeI -> {
-			//for (String nodeI : dist.keySet()) {
 				if (next.containsKey(nodeK) && next.get(nodeK).containsKey(nodeI)) {// optimization
 					for (String nodeJ : dist.keySet()) {
-						if (dist.containsKey(nodeI) && dist.containsKey(nodeK) && dist.get(nodeI).containsKey(nodeK) && dist.get(nodeK).containsKey(nodeJ)) {
-							// cela veut dire que dist[i][k] et dist[k][j] ont une valeur différente de l'infini, donc on regarde
+						if (dist.containsKey(nodeI) && dist.containsKey(nodeK) && dist.get(nodeI).containsKey(nodeK) && dist.get(nodeK).containsKey(nodeJ)) {// cela veut dire que dist[i][k] et dist[k][j] ont une valeur différente de l'infini, donc on regarde							
 							short value = (short) (dist.get(nodeI).get(nodeK) + dist.get(nodeK).get(nodeJ));
-							if (!dist.get(nodeI).containsKey(nodeJ) || dist.get(nodeI).get(nodeJ) > value) {
-								// cela veut dire que dist[i][j] est à l'infini. Donc updater la valeur est forcément intéressant
-								// ou que dist[i][j] n'est pas à l'infini, mais qd meme plus élevé que value
+							if (!dist.get(nodeI).containsKey(nodeJ) || dist.get(nodeI).get(nodeJ) > value) {// cela veut dire que dist[i][j] est à l'infini. Donc updater la valeur est forcément intéressant ou que dist[i][j] n'est pas à l'infini, mais qd meme plus élevé que value								
 								Map<String, Short> mapToChange = dist.get(nodeI);
 								mapToChange.put(nodeJ, value);
 								Map<String, SerializableStatement> nextTochange = next.get(nodeI);
