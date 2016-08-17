@@ -51,8 +51,8 @@ public class FloydWarshallAPSP implements Serializable {
 		//this.nodes.addAll(model.listObjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));		
 		this.nbVertex = nodes.size(); 
 		logger.info("Number of vertex : " + this.nbVertex);
-		this.dist = new HashMap<>();
-		this.next = new HashMap<>();
+		this.dist = new HashMap<>(nbVertex);
+		this.next = new HashMap<>(nbVertex);
 		createStructures();
 	}
 	

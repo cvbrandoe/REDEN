@@ -83,6 +83,7 @@ public class GraphMatching {
 
 	public static final String TEI_PATH = "C:\\temp7.rdf";
 	public static final String dbPediaRdfFilePath = "C:\\dbpedia_fr_with_rlsp.n3";
+	public static final String serializePath = "C:\\serializations\\";
 
 	static Comparator<QuerySolutionEntry> comparatorQuerySolutionEntry = (a, b) -> {
 		// return Integer.compare(a.getId(), b.getId());
@@ -234,6 +235,15 @@ public class GraphMatching {
 		final Model kbSource = ModelFactory.createDefaultModel().read(dbPediaRdfFilePath);
 		logger.info("Création du sous graphe de la KB contenant uniquement les relations spatiales");
 		Model kbSubgraph = getSubGraphWithResources(kbSource);
+//		Set<Resource> subjects = new HashSet<>(kbSubgraph.listSubjects().toList());
+//		int c = 0;
+//		for (RDFNode o : kbSubgraph.listObjects().toList()) {
+//			if (!subjects.contains(o)) {
+//				logger.info(o);
+//				c++;
+//			}
+//		}
+//		logger.info(c);
 		// // Inversion des statements
 //		for (Statement s : kbSubgraph.listStatements().toList()) {
 //			Property p = s.getPredicate();
@@ -259,11 +269,30 @@ public class GraphMatching {
 //		}
 
 		//short[][] test = floydWarshallAPSP(kbSubgraph); // trop long
+		List<Resource> subjects = kbSubgraph.listSubjects().toList().stream().sorted((a, b) -> a.toString().compareTo(b.toString())).collect(Collectors.toList());
+		File folder = new File(serializePath);
+		File[] listOfFiles = folder.listFiles();
+		List<Integer> resourcesProcessed = new ArrayList<>();
+		for (File file : listOfFiles) {
+			resourcesProcessed.add(Integer.parseInt(file.getName()));
+		}
+		logger.info("Resources déjà traitées : " + resourcesProcessed.size());
+		final AtomicInteger countSP = new AtomicInteger();
+		subjects.parallelStream().forEachOrdered(subject -> {
+		//for (Resource subject : subjects) {			
+			int counter = countSP.getAndIncrement() + 1;
+			if (!resourcesProcessed.contains(counter)) {
+				DijkstraSP dspTest = new DijkstraSP(kbSubgraph, subject);
+				dspTest.serialize(serializePath + counter);
+			}
+			logger.info(counter + " / " + subjects.size());
+		});
 		Resource lille = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Lille");
 		Resource marseille = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Marseille");
-//		logger.info("DijkstraSP");
-//		DijkstraSP dspTest = new DijkstraSP(kbSubgraph, lille);
-//		logger.info(dspTest.hasPathTo(marseille));
+//		logger.info(kbSubgraph.listStatements().toList().size());
+		logger.info("DijkstraSP");
+		DijkstraSP dspTest = new DijkstraSP(kbSubgraph, lille);
+		logger.info(dspTest.hasPathTo(marseille));
 //		Map<String, DijkstraSP> apsp = new ConcurrentHashMap<>();
 //		final AtomicInteger countSP = new AtomicInteger();
 //		List<Resource> nodes = kbSubgraph.listSubjects().toList().stream().distinct().collect(Collectors.toList());
@@ -274,7 +303,7 @@ public class GraphMatching {
 //			}
 //			logger.info((countSP.getAndIncrement() + 1) + " / " + nodes.size());
 //		});
-		FloydWarshallAPSP floydW = new FloydWarshallAPSP(kbSubgraph);
+		FloydWarshallAPSPV2 floydW = new FloydWarshallAPSPV2(kbSubgraph);
 //		floydW.serialize("D:\\testSerialization.txt");
 //		FloydWarshallAPSP floydW2 = FloydWarshallAPSP.deserialize("D:\\testSerialization.txt");
 		floydW.compute(); // sérialiser une fois le contenu calculer. Ajouter une methode pr sérialiser dans floyW class et une méthode statique pour désérialiser (tjs dans la classe)

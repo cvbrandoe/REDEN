@@ -33,7 +33,7 @@ public class FloydWarshallAPSPV2 implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private static Logger logger = Logger.getLogger(FloydWarshallAPSP.class);
 	
-	private short[][] dist;
+	private byte[][] dist;
 	private SerializableStatement[][] next; // supprimer le transient une fois Statement remplacé par StatementSerializable
 	
 	private transient List<Statement> statements;
@@ -54,19 +54,19 @@ public class FloydWarshallAPSPV2 implements Serializable {
 		//this.nodes.addAll(model.listObjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));		
 		this.nbVertex = nodes.size(); 
 		logger.info("Number of vertex : " + this.nbVertex);
-		this.dist = new short[nbVertex][nbVertex];
+		this.dist = new byte[nbVertex][nbVertex];
 		this.next = new SerializableStatement[nbVertex][nbVertex];
 		createStructures();
 	}
 	
 	private void createStructures() {
 		logger.info("Création de la structure");
-		Arrays.fill(dist, Short.MAX_VALUE);
+		Arrays.fill(dist, Byte.MAX_VALUE);
 		Arrays.fill(next, null);
 		
 		nodes.parallelStream().forEach(n1 -> {
 			int index = nodes.indexOf(n1);
-			dist[index][index] = (short) 0;
+			dist[index][index] = (byte) 0;
 		});
 
 		logger.info("Initialisation des voisins");
@@ -76,7 +76,7 @@ public class FloydWarshallAPSPV2 implements Serializable {
 			String n2 = s.getObject().toString();
 			int indexN1 = nodes.indexOf(n1);
 			int indexN2 = nodes.indexOf(n2);
-			dist[indexN1][indexN2] = (short)1;
+			dist[indexN1][indexN2] = (byte)1;
 			next[indexN1][indexN2] = new SerializableStatement(s);
 		});
 	}
@@ -93,9 +93,9 @@ public class FloydWarshallAPSPV2 implements Serializable {
 			IntStream.range(0, nbVertex).parallel().forEach(i -> {
 				if (next[kFinal][i] != null) {// optimization
 					for (int j = 0; j < nbVertex; j++) {
-						if (dist[i][kFinal] < Short.MAX_VALUE && dist[kFinal][j] < Short.MAX_VALUE) {
+						if (dist[i][kFinal] < Byte.MAX_VALUE && dist[kFinal][j] < Byte.MAX_VALUE) {
 							// cela veut dire que dist[i][k] et dist[k][j] ont une valeur différente de l'infini, donc on regarde
-							short value = (short) (dist[i][kFinal] + dist[kFinal][j]);
+							byte value = (byte) (dist[i][kFinal] + dist[kFinal][j]);
 							if (dist[i][j] > value) {
 								// cela veut dire que dist[i][j] est à l'infini. Donc updater la valeur est forcément intéressant
 								// ou que dist[i][j] n'est pas à l'infini, mais qd meme plus élevé que value
@@ -124,7 +124,7 @@ public class FloydWarshallAPSPV2 implements Serializable {
 		String endString = end.toString();
 		int indexN1 = nodes.indexOf(startString);
 		int indexN2 = nodes.indexOf(endString);
-		return dist[indexN1][indexN2] < Short.MAX_VALUE;
+		return dist[indexN1][indexN2] < Byte.MAX_VALUE;
 	}
 	
 	/**

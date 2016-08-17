@@ -1,10 +1,13 @@
 package fr.ign.georeden.algorithms.graph.matching;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.Set;
 import java.util.Stack;
 import java.util.stream.Collectors;
@@ -44,7 +47,9 @@ public class DijkstraSP implements Serializable {
     private Map<String, Double> distTo;          // distTo[v] = distance  of shortest s->v path
     private Map<String, SerializableStatement> edgeTo;    // edgeTo[v] = last edge on shortest s->v path
     private transient IndexMinPQ<Double> pq;    // priority queue of vertices
-    private transient List<RDFNode> nodes; // nodes of the graph
+    private transient Map<RDFNode, Integer> nodes; // nodes of the graph
+    private transient Map<Integer, RDFNode> nodesIndexs; // indexes of nodes of the graph
+    private transient Map<RDFNode, List<Statement>> statementsByNodes; // indexes of nodes of the graph
     private String node;
 
     /**
@@ -98,8 +103,23 @@ public class DijkstraSP implements Serializable {
 		Set<RDFNode> set = new HashSet<>(graph.listObjects().toList());
 				//.stream().map(m -> m.toString()).collect(Collectors.toList()));
 //				graph.listSubjects().toList().stream().map(m -> m.toString()).collect(Collectors.toList()));
-		set.addAll(graph.listSubjects().toList());
-		nodes = new ArrayList<>(set);
+		//set.addAll(graph.listSubjects().toList());
+		this.nodes = new HashMap<>();
+		this.nodesIndexs = new HashMap<>();
+		int ind = 0;
+		for (RDFNode rdfNode : set) {
+			nodes.put(rdfNode, ind);
+			nodesIndexs.put(ind, rdfNode);
+			ind++;
+		}
+		this.statementsByNodes = new HashMap<>();
+		for (Statement statement : graph.listStatements().toList()) {
+			Resource subject = statement.getSubject();
+			List<Statement> statements = statementsByNodes.containsKey(subject) ? statementsByNodes.get(subject) : new ArrayList<>();
+			statements.add(statement);
+			statementsByNodes.put(subject, statements);
+		}
+		
 		distTo = new HashMap<>();
 		edgeTo = new HashMap<>();
 //		for (int v = 0; v < nodes.size(); v++) {
@@ -109,14 +129,30 @@ public class DijkstraSP implements Serializable {
 
 		// relax vertices in order of distance from s
 		pq = new IndexMinPQ<>(nodes.size());
-		pq.insert(nodes.indexOf(s), distTo.get(node));
+		pq.insert(nodes.get(s), distTo.get(node));
 		while (!pq.isEmpty()) {
 			int v = pq.delMin();
 			//graph.listStatements((Resource)nodes.get(v), null, (RDFNode) null).toList().parallelStream().forEach(e -> relax(e))
-			for (Statement e : graph.listStatements((Resource)nodes.get(v), null, (RDFNode) null).toList())
-				relax(e);
+			RDFNode minNode = nodesIndexs.get(v);
+			List<Statement> statements = statementsByNodes.get(minNode);
+			if (statements != null) {
+				for (Statement e : statements) {//graph.listStatements((Resource)nodesIndexs.get(v), null, (RDFNode) null).toList())
+					relax(e);
+				}
+			}
 		}
 	}
+	
+//	private double calculateAverage(List<Long> marks) {
+//		double sum = 0;
+//		  if(!marks.isEmpty()) {
+//		    for (long mark : marks) {
+//		        sum += mark;
+//		    }
+//		    return sum / marks.size();
+//		  }
+//		  return sum;
+//		}
     // relax edge e and update pq if changed
     private void relax(Statement e) {
         RDFNode v = e.getSubject();
@@ -125,10 +161,10 @@ public class DijkstraSP implements Serializable {
         if (!distTo.containsKey(w.toString()) || distTo.get(w.toString()) > distTo.get(v.toString()) + weight) {
             distTo.put(w.toString(), distTo.get(v.toString()) + weight);
             edgeTo.put(w.toString(), new SerializableStatement(e));
-            if (pq.contains(nodes.indexOf(w))) 
-            	pq.decreaseKey(nodes.indexOf(w), distTo.get(w.toString()));
+            if (pq.contains(nodes.get(w))) 
+            	pq.decreaseKey(nodes.get(w), distTo.get(w.toString()));
             else
-            	pq.insert(nodes.indexOf(w), distTo.get(w.toString()));
+            	pq.insert(nodes.get(w), distTo.get(w.toString()));
         }
     }
 
@@ -174,6 +210,16 @@ public class DijkstraSP implements Serializable {
         return path;
     }
     
+    public void serialize(String path) {
+		try (FileOutputStream fout = new FileOutputStream(path)) {
+
+			try (ObjectOutputStream oos = new ObjectOutputStream(fout)) {
+				oos.writeObject(this);
+			}
+
+		} catch (Exception e) {
+		}
+	}
    
 
 }
