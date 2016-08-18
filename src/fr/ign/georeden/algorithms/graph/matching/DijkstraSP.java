@@ -1,4 +1,5 @@
 package fr.ign.georeden.algorithms.graph.matching;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -6,6 +7,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -13,8 +15,10 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 import java.util.Stack;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
+import org.apache.jena.ontology.OntTools.Path;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
@@ -45,7 +49,6 @@ public class DijkstraSP implements Serializable {
 	private static Logger logger = Logger.getLogger(DijkstraSP.class);
 	private static final long serialVersionUID = 1L;
     private transient double weight = 1.0;
-	//private static Logger logger = Logger.getLogger(DijkstraSP.class)
     private Map<String, Double> distTo;          // distTo[v] = distance  of shortest s->v path
     private Map<String, SerializableStatement> edgeTo;    // edgeTo[v] = last edge on shortest s->v path
     private transient IndexMinPQ<Double> pq;    // priority queue of vertices
@@ -144,18 +147,12 @@ public class DijkstraSP implements Serializable {
 			}
 		}
 	}
-	
-//	private double calculateAverage(List<Long> marks) {
-//		double sum = 0;
-//		  if(!marks.isEmpty()) {
-//		    for (long mark : marks) {
-//		        sum += mark;
-//		    }
-//		    return sum / marks.size();
-//		  }
-//		  return sum;
-//		}
-    // relax edge e and update pq if changed
+
+    /**
+     * relax edge e and update pq if changed
+     *
+     * @param e the statement
+     */
     private void relax(Statement e) {
         RDFNode v = e.getSubject();
         RDFNode w = e.getObject();
@@ -170,6 +167,12 @@ public class DijkstraSP implements Serializable {
         }
     }
 
+	/**
+	 * Gets the node.
+	 *
+	 * @param source the source
+	 * @return the node
+	 */
 	public Resource getNode(Model source) {
 		return source.getResource(this.node);
 	}
@@ -179,8 +182,8 @@ public class DijkstraSP implements Serializable {
      * @return the length of a shortest path from the source vertex <tt>s</tt> to vertex <tt>v</tt>;
      *         <tt>Double.POSITIVE_INFINITY</tt> if no such path
      */
-    public double distTo(RDFNode v) {
-        return distTo.get(v.toString());
+    public int distTo(RDFNode v) {
+        return distTo.get(v.toString()).intValue();
     }
 
     /**
@@ -202,13 +205,26 @@ public class DijkstraSP implements Serializable {
      * @return a shortest path from the source vertex <tt>s</tt> to vertex <tt>v</tt>
      *         as an iterable of edges, and <tt>null</tt> if no such path
      */
-    public Iterable<Statement> pathTo(RDFNode v, Model graph) {
+    public Path pathTo(RDFNode v, Model graph) {
         if (!hasPathTo(v)) 
         	return null;
-        Stack<Statement> path = new Stack<>();
+//        Stack<Statement> path = new Stack<>();
+//        for (SerializableStatement e = edgeTo.get(v.toString()); e != null; e = edgeTo.get(e.getSubject())) {
+//            path.push(e.toStatement(graph));
+//        }
+//        return path;
+        List<Statement> list = new ArrayList<>();
         for (SerializableStatement e = edgeTo.get(v.toString()); e != null; e = edgeTo.get(e.getSubject())) {
-            path.push(e.toStatement(graph));
+        	list.add(e.toStatement(graph));
         }
+        Path path = null;
+        if (!list.isEmpty()) {
+            path = new Path();
+            Collections.reverse(list);
+            for (Statement statement : list) {
+            	path.add(statement);
+    		}
+		}
         return path;
     }
     
@@ -235,6 +251,56 @@ public class DijkstraSP implements Serializable {
 			logger.error(e);
 		}
 		return result;
+	}
+	
+	/**
+	 * Compute and serialize all pair shortest path.
+	 *
+	 * @param subjects the subjects of the statements of the graph subgraph
+	 * @param resourcesIndexProcessed the indexes of the resources already processed
+	 * @param kbSubgraph the kb subgraph where the paths are computed
+	 * @param serializationDirectory the serialization directory where the paths are stored
+	 */
+	public static void computeAndSerializeAllPairShortestPath(List<Resource> subjects, List<Integer> resourcesIndexProcessed, Model kbSubgraph, String serializationDirectory) {
+		final AtomicInteger countSP = new AtomicInteger();
+		subjects.parallelStream().forEachOrdered(subject -> {	
+			int counter = countSP.getAndIncrement() + 1;
+			if (!resourcesIndexProcessed.contains(counter)) {
+				DijkstraSP dspTest = new DijkstraSP(kbSubgraph, subject);
+				dspTest.serialize(serializationDirectory + counter);
+			}
+			logger.info(counter + " / " + subjects.size());
+		});
+		logger.info("Computation and serialazation done !");
+	}
+	
+	/**
+	 * Gets the indexes of the resources already processed.
+	 *
+	 * @param serializationDirectory the serialization directory
+	 * @return the resources index processed
+	 */
+	public static List<Integer> getResourcesIndexProcessed(String serializationDirectory) {
+		File folder = new File(serializationDirectory);
+		File[] listOfFiles = folder.listFiles();
+		List<Integer> resourcesIndexProcessed = new ArrayList<>();
+		for (File file : listOfFiles) {
+			if (tryParseInt(file.getName()))
+				resourcesIndexProcessed.add(Integer.parseInt(file.getName()));
+		}
+		for (int i = 0; i < 9556; i++) { // boucle for à supprimer. Juste présente le temps de finir un test
+			resourcesIndexProcessed.add(i);
+		}
+		return resourcesIndexProcessed;
+	}
+	
+	private static boolean tryParseInt(String value) {  
+	     try {  
+	         Integer.parseInt(value);  
+	         return true;  
+	      } catch (NumberFormatException e) {  
+	         return false;  
+	      }  
 	}
 
 }

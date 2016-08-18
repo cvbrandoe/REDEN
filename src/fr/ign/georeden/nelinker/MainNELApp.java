@@ -27,6 +27,7 @@ import org.apache.jena.query.QuerySolution;
 import org.apache.jena.rdf.model.Model;
 
 import fr.ign.georeden.algorithms.graph.matching.GraphMatching;
+import fr.ign.georeden.algorithms.graph.matching.GraphMatchingClean;
 import fr.ign.georeden.algorithms.string.DamerauLevenshteinAlgorithm;
 import fr.ign.georeden.algorithms.string.IStringComparison;
 import fr.ign.georeden.algorithms.string.StringComparisonDamLev;
@@ -89,7 +90,11 @@ public class MainNELApp {
 //		StringComparisonDamLev sc = new StringComparisonDamLev();
 //		System.out.println(sc.computeSimilarity("Limousin", "Haut-Limousin"));
 		
-		GraphMatching.nodeSelection();
+		GraphMatchingClean graphMatching = new GraphMatchingClean("D:\\temp7.rdf", "D:\\dbpedia_fr_with_rlsp.n3", 10, 0.5f, "D:\\serializations\\");
+		graphMatching.compute();
+		//graphMatching.test();
+		
+		//GraphMatching.nodeSelection();
 
 //		 // TRANSFORMATION TEI VERS RDF
 //		 Document document = XMLUtil.createDocumentFromFile(teiSource);

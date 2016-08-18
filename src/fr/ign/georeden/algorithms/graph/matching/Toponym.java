@@ -97,12 +97,14 @@ public class Toponym {
 	 *
 	 * @param type the type
 	 */
+	@Deprecated
 	public void addTypeCriterionToponymCandidate(CriterionToponymCandidate type) {
 		this.typeCriterionToponymCandidate.add(type);
 	}
 	public List<CriterionToponymCandidate> getScoreCriterionToponymCandidate() {
 		return this.scoreCriterionToponymCandidate;
 	}
+	@Deprecated
 	public List<CriterionToponymCandidate> getTypeCriterionToponymCandidate() {
 		return this.typeCriterionToponymCandidate;
 	}

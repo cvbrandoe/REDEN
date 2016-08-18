@@ -76,6 +76,7 @@ import org.jgrapht.graph.SimpleDirectedGraph;
 /**
  * The Class GraphMatching.
  */
+@Deprecated
 public class GraphMatching {
 
 	/** The logger. */
@@ -83,7 +84,7 @@ public class GraphMatching {
 
 	public static final String TEI_PATH = "D:\\temp7.rdf";
 	public static final String dbPediaRdfFilePath = "D:\\dbpedia_fr_with_rlsp.n3";
-	public static final String serializePath = "D:\\serializations\\";
+	public static final String serializationDirectory = "E:\\serializations\\";
 
 	static Comparator<QuerySolutionEntry> comparatorQuerySolutionEntry = (a, b) -> {
 		// return Integer.compare(a.getId(), b.getId());
@@ -220,7 +221,7 @@ public class GraphMatching {
 
 		logger.info("Chargement du TEI : " + TEI_PATH);
 		Document teiSource = XMLUtil.createDocumentFromFile(TEI_PATH);
-		Model teiRdf = RDFUtil.getModel(teiSource);//ModelFactory.createDefaultModel().read("D:\\temp7.n3");// RDFUtil.getModel(teiSource)
+		Model teiRdf = ModelFactory.createDefaultModel().read("D:\\temp7.n3");//RDFUtil.getModel(teiSource);//ModelFactory.createDefaultModel().read("D:\\temp7.n3");// RDFUtil.getModel(teiSource)
 		logger.info("Model TEI vide : " + teiRdf.isEmpty());
 //		Map<Resource, String> listS = new HashMap<>();
 //		for (Statement s : teiRdf.listStatements().toList()) {
@@ -270,24 +271,17 @@ public class GraphMatching {
 //		}
 
 		//short[][] test = floydWarshallAPSP(kbSubgraph); // trop long
-		List<Resource> subjects = kbSubgraph.listSubjects().toList().stream().sorted((a, b) -> b.toString().compareTo(a.toString())).collect(Collectors.toList());
-		File folder = new File(serializePath);
-		File[] listOfFiles = folder.listFiles();
-		List<Integer> resourcesProcessed = new ArrayList<>();
-		for (File file : listOfFiles) {
-			resourcesProcessed.add(Integer.parseInt(file.getName()));
+		
+		
+		List<Resource> subjects = kbSubgraph.listSubjects().toList().stream().sorted((a, b) -> a.toString().compareTo(b.toString())).collect(Collectors.toList());
+		Map<Resource, Integer> resourcesIndexAPSP = new HashMap<>();
+		for (int i = 0; i < subjects.size(); i++) {
+			resourcesIndexAPSP.put(subjects.get(i), i + 1);
 		}
-		logger.info("Resources déjà traitées : " + resourcesProcessed.size());
-		final AtomicInteger countSP = new AtomicInteger(subjects.size());
-		subjects.parallelStream().forEachOrdered(subject -> {
-		//for (Resource subject : subjects) {			
-			int counter = countSP.getAndDecrement();
-			if (!resourcesProcessed.contains(counter)) {
-				DijkstraSP dspTest = new DijkstraSP(kbSubgraph, subject);
-				dspTest.serialize(serializePath + counter);
-			}
-			logger.info(counter + " / " + subjects.size());
-		});
+		List<Integer> resourcesIndexProcessed = DijkstraSP.getResourcesIndexProcessed(serializationDirectory);
+		logger.info("Resources déjà traitées : " + resourcesIndexProcessed.size());//resourcesIndexProcessed serializationDirectory
+		DijkstraSP.computeAndSerializeAllPairShortestPath(subjects, resourcesIndexProcessed, kbSubgraph, serializationDirectory);
+		if (true) return null;
 		Resource lille = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Lille");
 		Resource marseille = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Marseille");
 //		logger.info(kbSubgraph.listStatements().toList().size());
@@ -2378,94 +2372,6 @@ public class GraphMatching {
 				&& targetNodes.stream().allMatch(usedNodesFromTarget::contains);
 	}
 
-	static interface IPathMatching {
-
-		/**
-		 * Gets the cost of the path.
-		 *
-		 * @return the cost
-		 */
-		float getCost();
-	}
-
-	static class Insertion implements IPathMatching {
-		private Resource insertedNode;
-		private float cost;
-
-		public Insertion(Resource insertedNode, float cost) {
-			this.insertedNode = insertedNode;
-			this.cost = cost;
-		}
-
-		public Resource getInsertedNode() {
-			return this.insertedNode;
-		}
-
-		@Override
-		public float getCost() {
-			return this.cost;
-		}
-
-		@Override
-		public String toString() {
-			return "Insertion : " + this.insertedNode + " (" + this.cost + ")";
-		}
-	}
-
-	static class Deletion implements IPathMatching {
-		private Resource deletedNode;
-		private float cost;
-
-		public Deletion(Resource deletedNode, float cost) {
-			this.deletedNode = deletedNode;
-			this.cost = cost;
-		}
-
-		public Resource getDeletedNode() {
-			return this.deletedNode;
-		}
-
-		@Override
-		public float getCost() {
-			return this.cost;
-		}
-
-		@Override
-		public String toString() {
-			return "Deletion : " + this.deletedNode + " (" + this.cost + ")";
-		}
-	}
-
-	static class Substitution implements IPathMatching {
-		private Resource deletedNode;
-		private Resource insertedNode;
-		private float cost;
-
-		public Substitution(Resource deletedNode, Resource insertedNode, float cost) {
-			this.deletedNode = deletedNode;
-			this.insertedNode = insertedNode;
-			this.cost = cost;
-		}
-
-		public Resource getDeletedNode() {
-			return this.deletedNode;
-		}
-
-		public Resource getInsertedNode() {
-			return this.insertedNode;
-		}
-
-		@Override
-		public float getCost() {
-			return this.cost;
-		}
-
-		@Override
-		public String toString() {
-			return "Substitution : " + this.deletedNode + " -> " + this.insertedNode + " (" + this.cost + ")";
-		}
-	}
-
 	/**
 	 * Total cost path. (g)
 	 *
@@ -2574,54 +2480,6 @@ public class GraphMatching {
 		}
 	}
 
-	static class QuerySolutionEntry {
-		private Resource sequence;
-		private Resource route;
-		private Resource bag;
-		private Resource waypoint;
-		private Resource spatialReference;
-		private Resource spatialReferenceAlt;
-		private Integer id;
-
-		public QuerySolutionEntry(Resource sequence, Resource route, Resource bag, Resource waypoint,
-				Resource spatialReference, Resource spatialReferenceAlt, Integer id) {
-			this.sequence = sequence;
-			this.route = route;
-			this.bag = bag;
-			this.waypoint = waypoint;
-			this.spatialReference = spatialReference;
-			this.spatialReferenceAlt = spatialReferenceAlt;
-			this.id = id;
-		}
-
-		public Resource getSequence() {
-			return this.sequence;
-		}
-
-		public Resource getRoute() {
-			return this.route;
-		}
-
-		public Resource getBag() {
-			return this.bag;
-		}
-
-		public Resource getWaypoint() {
-			return this.waypoint;
-		}
-
-		public Resource getSpatialReference() {
-			return this.spatialReference;
-		}
-
-		public Resource getSpatialReferenceAlt() {
-			return this.spatialReferenceAlt;
-		}
-
-		public Integer getId() {
-			return this.id;
-		}
-	}
 
 	static class SearchPathThread implements Callable<OntTools.Path> {
 		private Model kbWithInterestingProperties;
@@ -3365,4 +3223,6 @@ public class GraphMatching {
 		});
 	}
 	static Map<RDFNode, Set<RDFNode>> nodesToVisit = new HashMap<>();
+	
+	
 }
