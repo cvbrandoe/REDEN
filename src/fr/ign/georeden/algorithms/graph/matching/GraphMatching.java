@@ -1145,7 +1145,8 @@ public class GraphMatching {
 	 */
 	private Toponym getNextNodeToProcess(List<Resource> usedSourceNodes, Set<Toponym> toponymsSeq, Model miniGraph) {
 		List<Statement> statements = miniGraph.listStatements().toList();
-		// on veut choisir le noeud qui a le plus de liens car cela augmente les chances de trouver le bon candidat
+		// on veut choisir le noeud qui a le moins de liens pour accélérer les calculs 
+		// OBSOLETE -> plus de liens car cela augmente les chances de trouver le bon candidat
 		Map<RDFNode, Integer> nbLinks = new HashMap<>();
 		for (Statement statement : statements) {
 			Resource s = statement.getSubject();
@@ -1162,7 +1163,7 @@ public class GraphMatching {
 			} else nbLinks.put(o, 1);
 		}
 		RDFNode n = nbLinks.entrySet().stream().filter(p -> !usedSourceNodes.contains(p.getKey())).sorted((a, b) ->
-				Integer.compare(b.getValue(), a.getValue())).limit(1).findFirst().get().getKey();
+				Integer.compare(a.getValue(), b.getValue())).limit(1).findFirst().get().getKey();
 		for (Toponym toponym : toponymsSeq) {
 			Resource resourceToCheck = toponym.getResource();
 			if (areResourcesEqual(resourceToCheck, (Resource)n)) {
