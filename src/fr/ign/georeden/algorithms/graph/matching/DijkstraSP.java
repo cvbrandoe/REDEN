@@ -288,9 +288,6 @@ public class DijkstraSP implements Serializable {
 			if (tryParseInt(file.getName()))
 				resourcesIndexProcessed.add(Integer.parseInt(file.getName()));
 		}
-		for (int i = 0; i < 9556; i++) { // boucle for à supprimer. Juste présente le temps de finir un test
-			resourcesIndexProcessed.add(i);
-		}
 		return resourcesIndexProcessed;
 	}
 	

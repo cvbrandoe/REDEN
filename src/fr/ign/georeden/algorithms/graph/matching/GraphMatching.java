@@ -156,8 +156,8 @@ public class GraphMatching {
 		this.serializationDirectory = serializationDirectory;
 		logger.info("Chargement du TEI : " + teiRdfPath);
 		Document teiSource = XMLUtil.createDocumentFromFile(teiRdfPath);
-		// this.teiRdf = RDFUtil.getModel(teiSource); BUG EN RELEASE
-		this.teiRdf = ModelFactory.createDefaultModel().read("D:\\temp7.n3");
+		this.teiRdf = RDFUtil.getModel(teiSource); //BUG EN RELEASE
+		//this.teiRdf = ModelFactory.createDefaultModel().read("D:\\temp7.n3");
 		this.toponymsTEI = getToponymsFromTei(teiRdf);
 		logger.info(toponymsTEI.size() + " toponyms in the TEI RDF graph");
 
@@ -165,6 +165,9 @@ public class GraphMatching {
 		this.kbSource = ModelFactory.createDefaultModel().read(dbPediaRdfFilePath);
 		logger.info("Création du sous graphe de la KB contenant uniquement les relations spatiales");
 		this.kbSubgraph = getSubGraphWithResources(kbSource);
+		logger.info(this.kbSubgraph.listStatements().toList().size());
+		completeWithSymetricsRLSP();
+		logger.info(this.kbSubgraph.listStatements().toList().size());
 		// completeWithSymetricsRLSP() // OPTIONEL. Augmente le nombre de statement, et facilite le la vérification des chemains, mais le nombre de fichier stockés va exploser
 		logger.info("Création de l'index des plus courts chemins.");
 		this.subjectsOfSubgraph = kbSubgraph.listSubjects().toList().stream().sorted((a, b) -> a.toString().compareTo(b.toString())).collect(Collectors.toList());
