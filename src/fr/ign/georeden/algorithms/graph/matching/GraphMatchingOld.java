@@ -466,6 +466,7 @@ public class GraphMatchingOld {
 			}
 		}
 	}
+	
 	static void V3(List<Resource> sequences, List<QuerySolutionEntry> querySolutionEntries, Model teiRdf, Model kbSubgraph, Model kbSource, Set<Toponym> toponymsTEI) {
 		logger.info("V3");
 		logger.info("Traitement des mini graphes des séquences");
@@ -588,7 +589,7 @@ public class GraphMatchingOld {
 	 * Dbpedia alltodbpedia fr. Transforme le model contenant toutes les places
 	 * en ne gardant que celles en France
 	 */
-	static void dbpediaAlltodbpediaFr() {
+	public static void dbpediaAlltodbpediaFr() {
 		String dbPediaRdfFilePath = "D:\\dbpedia_all_with_rlsp.n3";
 		String queryString = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>   "
 				+ "PREFIX dbpedia-fr: <http://fr.dbpedia.org/resource/>   "
@@ -1095,7 +1096,7 @@ public class GraphMatchingOld {
 		}
 	}
 
-	static void saveModelToFile(String fileName, Model model, String lang) {
+	public static void saveModelToFile(String fileName, Model model, String lang) {
 		File file = new File(fileName);
 		try {
 			model.write(new java.io.FileOutputStream(file), lang);

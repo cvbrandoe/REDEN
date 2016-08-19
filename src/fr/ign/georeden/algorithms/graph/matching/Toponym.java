@@ -20,6 +20,7 @@ public class Toponym {
 	private List<CriterionToponymCandidate> typeCriterionToponymCandidate;
 
 	private Resource referent;
+	private SubstitutionCostResult scr;
 	
 	/**
 	 * Instantiates a new toponym.
@@ -36,6 +37,8 @@ public class Toponym {
 		this.type = type;
 		this.scoreCriterionToponymCandidate = new ArrayList<>();
 		this.typeCriterionToponymCandidate = new ArrayList<>();
+		this.referent = null;
+		this.scr = null;
 	}
 	
 //	/**
@@ -58,11 +61,17 @@ public class Toponym {
 	public Resource getResource() {
 		return this.resource;
 	}
+	public SubstitutionCostResult getSubstitutionCostResult() {
+		return this.scr;
+	}
 	public Resource getReferent() {
 		return this.referent;
 	}
 	public void setReferent(Resource referent) {
 		this.referent = referent;
+	}
+	public void setSubstitutionCostResult(SubstitutionCostResult scr) {
+		this.scr = scr;
 	}
 	public String getName() {
 		return this.name;

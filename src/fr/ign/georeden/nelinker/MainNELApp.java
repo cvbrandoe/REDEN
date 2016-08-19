@@ -5,9 +5,12 @@ import java.net.MalformedURLException;
 import java.util.Dictionary;
 import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -25,6 +28,10 @@ import org.w3c.dom.Document;
 import org.apache.jena.query.QueryParseException;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.RDFNode;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.Statement;
 
 import fr.ign.georeden.algorithms.graph.matching.GraphMatchingOld;
 import fr.ign.georeden.algorithms.graph.matching.GraphMatching;
@@ -90,9 +97,9 @@ public class MainNELApp {
 //		StringComparisonDamLev sc = new StringComparisonDamLev();
 //		System.out.println(sc.computeSimilarity("Limousin", "Haut-Limousin"));
 		
-		GraphMatching graphMatching = new GraphMatching("C:\\temp7.rdf", "C:\\dbpedia_fr_with_rlsp.n3", 10, 0.5f, "E:\\serializations\\");
-		graphMatching.allPairShortestPathPreProcessing();
-		//graphMatching.compute();
+		GraphMatching graphMatching = new GraphMatching("D:\\temp7.rdf", "D:\\dbpedia_fr_with_rlsp_V2.n3", 10, 0.5f, "D:\\serializations\\");
+		//graphMatching.allPairShortestPathPreProcessing();
+		graphMatching.compute();
 		//graphMatching.test();
 		
 		//GraphMatching.nodeSelection();
@@ -188,6 +195,18 @@ public class MainNELApp {
 		return result;
 	}
 
-	
+	static void completeDbpedia() {
+		Model kbSource = ModelFactory.createDefaultModel().read("D:\\dbpedia_fr_with_rlsp.n3");
+		Model kbSourceAll = ModelFactory.createDefaultModel().read("D:\\dbpedia\\dbpedia_all.n3");
+		List<Resource> subjectsKBAll = kbSourceAll.listStatements(null, kbSourceAll.createProperty("http://dbpedia.org/ontology/wikiPageWikiLink"), (RDFNode)null).toList().stream().map(s -> s.getObject()).filter(o -> o.isResource()).distinct().map(o -> (Resource)o).collect(Collectors.toList());
+		Set<Resource> subjects = new HashSet<>(kbSource.listSubjects().toList());
+		for (Resource resource : subjectsKBAll) {
+			if (!subjects.contains(resource)) {
+				List<Statement> statementsToAdd = kbSourceAll.listStatements(resource, null, (RDFNode)null).toList();
+				kbSource.add(statementsToAdd);
+			}
+		}
+		GraphMatchingOld.saveModelToFile("D:\\dbpedia_fr_with_rlsp_V2.n3", kbSource, "N3");
+	}
 
 }
