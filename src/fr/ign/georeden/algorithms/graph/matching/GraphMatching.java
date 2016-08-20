@@ -288,8 +288,8 @@ public class GraphMatching {
 		List<MatchingResult> results = new ArrayList<>();
 		seqCount = 1;
 		for (List<Model> alts : altsBySeq.stream()
-//				.sorted((l1, l2) -> Integer
-//						.compare(l1.get(0).listStatements().toList().size(), l2.get(0).listStatements().toList().size()))
+				.sorted((l1, l2) -> Integer
+						.compare(l1.get(0).listStatements().toList().size(), l2.get(0).listStatements().toList().size()))
 				//.limit(1)
 				.collect(Collectors.toList())) {
 			logger.info("Traitement de la séquence " + seqCount + "/" + altsBySeq.size());
