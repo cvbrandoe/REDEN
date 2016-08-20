@@ -199,8 +199,8 @@ public class GraphMatching {
 		this.serializationDirectory = serializationDirectory;
 		logger.info("Chargement du TEI : " + teiRdfPath);
 		Document teiSource = XMLUtil.createDocumentFromFile(teiRdfPath);
-		this.teiRdf = RDFUtil.getModel(teiSource); // BUG EN RELEASE
-		// this.teiRdf = ModelFactory.createDefaultModel().read("D:\\temp7.n3");
+		//this.teiRdf = RDFUtil.getModel(teiSource); // BUG EN RELEASE
+		this.teiRdf = ModelFactory.createDefaultModel().read("C:\\temp7.n3");
 		this.toponymsTEI = getToponymsFromTei(teiRdf);
 		logger.info(toponymsTEI.size() + " toponyms in the TEI RDF graph");
 
@@ -208,12 +208,15 @@ public class GraphMatching {
 		this.kbSource = ModelFactory.createDefaultModel().read(dbPediaRdfFilePath);
 
 		logger.info("Création du sous graphe de la KB contenant uniquement les relations spatiales");
+		
 		this.kbSubgraph = getSubGraphWithResources(kbSource);
-//		logger.info(this.kbSubgraph.listStatements().toList().size());
-//		completeWithSymetricsRLSP();
-//		logger.info(this.kbSubgraph.listStatements().toList().size());
+//		Model ville = ModelFactory.createDefaultModel().read("C:\\dev\\java\\calculRelationsSpatialesAcRivieres\\rivieresEtVilles.rdf");
+//		Model sourceCopy = cloneModel(kbSource);
+//		sourceCopy.add(this.kbSubgraph.listStatements().toList());
+//		sourceCopy.add(ville.listStatements().toList());
 //		// completeWithSymetricsRLSP() // OPTIONEL. Augmente le nombre de
 //		// statement, et facilite le la vérification des chemains
+//		saveModelToFile("C:\\dbpedia_fr_with_rlsp_V3.n3", sourceCopy, "N3")
 		logger.info("Création de l'index des plus courts chemins.");
 		this.subjectsOfSubgraph = kbSubgraph.listSubjects().toList().stream()
 				.sorted((a, b) -> a.toString().compareTo(b.toString())).collect(Collectors.toList());
@@ -305,11 +308,9 @@ public class GraphMatching {
 				resultsForCurrentSeq.add(new MatchingResult(miniGraph, path, totalCostPath(path)));
 			}
 			if (!resultsForCurrentSeq.isEmpty()) {
-				rlspCalculous.stream().sorted().forEach(logger::info);
-				rlspCalculous.clear();
 				MatchingResult bestPath = getBestPath(resultsForCurrentSeq);
-				saveModelToFile("d:\\seq_original_" + seqCount +".n3", bestPath.getModel(), "N3");
-				updateAndSaveModelWithResults(bestPath.getModel(), "d:\\seq_" + seqCount +".n3");
+				saveModelToFile("C:\\seq_original_" + seqCount +".n3", bestPath.getModel(), "N3");
+				updateAndSaveModelWithResults(bestPath.getModel(), "C:\\seq_" + seqCount +".n3");
 				results.add(bestPath);
 //				logger.info(bestPath.getCostEdition());
 //				bestPath.getEditionPath().forEach(step -> {
@@ -322,6 +323,7 @@ public class GraphMatching {
 			shortestPaths.clear();
 			seqCount++;
 		}
+		rlspCalculous.stream().sorted().forEach(logger::info);
 		Model teiCopy = cloneModel(teiRdf);
 		for (Toponym toponym : toponymsTEI) {
 			String score = "";
@@ -331,7 +333,7 @@ public class GraphMatching {
 			}
 			logger.info(toponym.getResource() + " -> " + toponym.getReferent() + " " + score);
 		}
-		updateAndSaveModelWithResults(teiCopy, "d:\\teiCopy.n3");
+		updateAndSaveModelWithResults(teiCopy, "C:\\teiCopy.n3");
 		Map<String, String> choosenUris = new HashMap<>();
 		Map<String, Double> choosenScoresperMention = new HashMap<>();
 		for (Toponym t : toponymsTEI) {
@@ -342,9 +344,10 @@ public class GraphMatching {
 				.put(t.getResource().toString(), t.getSubstitutionCostResult() != null ? (double) t.getSubstitutionCostResult().getTotalCost() : 0);
 		}
 		
+		
 //		ResultsAndEvaluationNEL.produceResults(
-//				"D:\\peurSudOuestAnnote11_Corrigee_paragraphes.xml", 
-//				"placeName", choosenUris, null, e, XMLUtil.createDocumentFromFile("D:\\peurSudOuestAnnote11_Corrigee_paragraphes.xml"), "D:\\", "ref", choosenScoresperMention, "true");
+//				"C:\\peurSudOuestAnnote11_Corrigee_paragraphes.xml", 
+//				"placeName", choosenUris, null, e, XMLUtil.createDocumentFromFile("C:\\peurSudOuestAnnote11_Corrigee_paragraphes.xml"), "C:\\", "ref", choosenScoresperMention, "true");
 	}
 	
 	private void updateAndSaveModelWithResults(Model graph, String fileName) {
@@ -1461,7 +1464,7 @@ public class GraphMatching {
 			candidates.parallelStream().forEach(criterionToponymCandidate -> {
 				Resource end = criterionToponymCandidate.getCandidate().getResource();
 				final Resource nodeToInsertCopy = nodeToInsert;
-				int pathLength = getLinkPathLength(nodeToInsertCopy, end);
+				int pathLength = getLinkPathLength(nodeToInsertCopy, end, 0);
 				pathLengths.put(criterionToponymCandidate, pathLength);
 			});
 			Integer maxPathLength = getMaxValue(pathLengths);
@@ -1477,8 +1480,10 @@ public class GraphMatching {
 
 		return result / ((float) statements.size());
 	}
-	private int getLinkPathLength(Resource nodeToInsertCopy, Resource end) {
+	private int getLinkPathLength(Resource nodeToInsertCopy, Resource end, int recursiveCounter) {
 		int pathLength = -1;
+		if (recursiveCounter > 3)
+			return pathLength;
 		if (shortestPaths.containsKey(nodeToInsertCopy)) {
 			DijkstraSP sp = getSP(nodeToInsertCopy);
 			if (sp != null && sp.hasPathTo(end)) {
@@ -1494,13 +1499,13 @@ public class GraphMatching {
 			if (shortestPaths.containsKey(nodeToInsertCopy)) {
 				Resource deptOrRegion = getDepartementOrRegion(end);
 				if (deptOrRegion != null) {
-					pathLength = getLinkPathLength(nodeToInsertCopy, deptOrRegion);
+					pathLength = getLinkPathLength(nodeToInsertCopy, deptOrRegion, recursiveCounter + 1);
 				}
 			}
 			if (pathLength == -1 && shortestPaths.containsKey(end)) {
 				Resource deptOrRegion = getDepartementOrRegion(nodeToInsertCopy);
 				if (deptOrRegion != null) {
-					pathLength = getLinkPathLength(deptOrRegion, end);
+					pathLength = getLinkPathLength(deptOrRegion, end, recursiveCounter + 1);
 				}
 			}
 		}
@@ -1509,6 +1514,8 @@ public class GraphMatching {
 	
 	private Resource getDepartementOrRegion(Resource r) {
 		List<Statement> statements = kbSource.listStatements(r, null, (RDFNode)null).toList();
+		if (statements == null || statements.isEmpty())
+			return null;
 		Stream<Statement> stream = null;
 		if (statements.stream().anyMatch(s -> s.getPredicate().getURI().equals(propDepartement.getURI()))) {
 			stream = statements.stream().filter(s -> s.getPredicate().getURI().equals(propDepartement.getURI()));

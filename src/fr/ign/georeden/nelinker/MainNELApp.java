@@ -97,7 +97,7 @@ public class MainNELApp {
 //		StringComparisonDamLev sc = new StringComparisonDamLev();
 //		System.out.println(sc.computeSimilarity("Limousin", "Haut-Limousin"));
 		
-		GraphMatching graphMatching = new GraphMatching("D:\\temp7.rdf", "D:\\dbpedia_fr_with_rlsp_V2.n3", 10, 0.5f, "D:\\serializations\\");
+		GraphMatching graphMatching = new GraphMatching("C:\\temp7.rdf", "C:\\dbpedia_fr_with_rlsp_V3.n3", 10, 0.5f, "C:\\serializations\\");
 		//graphMatching.allPairShortestPathPreProcessing();
 		graphMatching.compute();
 		//graphMatching.test();
