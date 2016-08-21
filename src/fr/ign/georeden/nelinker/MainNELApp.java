@@ -93,24 +93,26 @@ public class MainNELApp {
 		}
 
 		teiSource = optionManager.getOptionValue("teiSource");
+	
 		
-//		StringComparisonDamLev sc = new StringComparisonDamLev();
-//		System.out.println(sc.computeSimilarity("Limousin", "Haut-Limousin"));
+		//GraphMatching.nodeSelection();
+
+		 // TRANSFORMATION TEI VERS RDF
+		 Document document = XMLUtil.createDocumentFromFile(teiSource);
+		 if (document == null) {
+		 optionManager.help();
+		 return;
+		 }
+		 document = applyXSLTTransformations(document);
 		
-		GraphMatching graphMatching = new GraphMatching("C:\\temp7.rdf", "C:\\dbpedia_fr_with_rlsp_V3.n3", 10, 0.5f, "C:\\serializations\\");
+		
+		
+		GraphMatching graphMatching = new GraphMatching(document, "C:\\dbpedia_fr_with_rlsp_V3.n3", 10, 0.5f, "C:\\serializations\\");
 		//graphMatching.allPairShortestPathPreProcessing();
 		graphMatching.compute();
 		//graphMatching.test();
 		
-		//GraphMatching.nodeSelection();
-
-//		 // TRANSFORMATION TEI VERS RDF
-//		 Document document = XMLUtil.createDocumentFromFile(teiSource);
-//		 if (document == null) {
-//		 optionManager.help();
-//		 return;
-//		 }
-//		 document = applyXSLTTransformations(document);
+		
 
 		// String query =
 		// "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
