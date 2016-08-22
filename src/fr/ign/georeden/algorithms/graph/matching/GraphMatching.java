@@ -1744,9 +1744,9 @@ public class GraphMatching {
 				if (entry.getValue() > 0) {
 					float scoreTmp = ((float) entry.getValue()) / ((float) maxPathLength);
 					min = scoreTmp < min ? scoreTmp : min;
-					if (areResourcesEqual(entry.getKey().getCandidate().getResource(), kbWithInterestingProperties.createResource("http://fr.dbpedia.org/resource/Ruffec_(Charente)"))) {
+					if (areResourcesEqual(nodeToInsert.getCandidate().getResource(), kbWithInterestingProperties.createResource("http://fr.dbpedia.org/resource/Ruffec_(Charente)"))) {
 						logger.info("RLSP -> " + nodeToInsert.getCandidate().getResource() + " -> " + entry.getKey().getCandidate().getResource() + " : " + entry.getValue() + " / " + maxPathLength + " (" + scoreTmp +")");
-					} else  if (areResourcesEqual(entry.getKey().getCandidate().getResource(), kbWithInterestingProperties.createResource("http://fr.dbpedia.org/resource/Ruffec_(Indre)"))) {
+					} else  if (areResourcesEqual(nodeToInsert.getCandidate().getResource(), kbWithInterestingProperties.createResource("http://fr.dbpedia.org/resource/Ruffec_(Indre)"))) {
 						logger.info("RLSP -> " + nodeToInsert.getCandidate().getResource() + " -> " + entry.getKey().getCandidate().getResource() + " : " + entry.getValue() + " / " + maxPathLength + " (" + scoreTmp +")");
 					}
 				}
