@@ -1320,10 +1320,10 @@ public class GraphMatching {
 		while (true) {
 			pMin = getMinCostPath(open, kbSubgraph, miniGraph, toponymsSeq, 
 					sourceNodes, targetNodes, completeKB);
-			if (!pMin.isEmpty() && pMin.get(pMin.size() - 1).getClass() == Substitution.class && 
-					((Substitution)pMin.get(pMin.size() - 1)).getDeletedNode().toString().equals("http://data.ign.fr/id/propagation/Place/29")) {
-				logger.info("Confolens qui pose problème");
-			}
+//			if (!pMin.isEmpty() && pMin.get(pMin.size() - 1).getClass() == Substitution.class && 
+//					((Substitution)pMin.get(pMin.size() - 1)).getDeletedNode().toString().equals("http://data.ign.fr/id/propagation/Place/29")) {
+//				logger.info("Confolens qui pose problème");
+//			}
 			updateToponyms(pMin, toponymsSeq);
 			if (isCompletePath(pMin, sourceNodes, targetNodes)) {
 				break;
@@ -1333,9 +1333,9 @@ public class GraphMatching {
 				if (pMin.size() < sourceNodes.size()) {
 					Toponym currentToponym = getNextNodeToProcess(usedSourceNodes, toponymsSeq, miniGraph);
 					Resource currentSourceNode = currentToponym.getResource();
-					if (currentSourceNode.toString().equals("http://data.ign.fr/id/propagation/Place/29")) {
-						logger.info("Confolens qui pose problème");
-					}
+//					if (currentSourceNode.toString().equals("http://data.ign.fr/id/propagation/Place/29")) {
+//						logger.info("Confolens qui pose problème");
+//					}
 					float deletionCost = 1f;
 					for (CriterionToponymCandidate candidateCriterion : currentToponym
 							.getScoreCriterionToponymCandidate()) {
