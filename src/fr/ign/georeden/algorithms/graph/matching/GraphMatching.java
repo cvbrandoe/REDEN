@@ -313,10 +313,9 @@ public class GraphMatching {
 			List<MatchingResult> resultsForCurrentSeq = new ArrayList<>();
 			logger.info("Chemins chargé.");
 			for (Model miniGraph : alts) {
-				miniGraph.listStatements().toList().stream().forEach(logger::info);
 				List<IPathMatching> path = graphMatching(kbSubgraph, miniGraph, toponymsTEI,
 						kbSource);
-				if (path != null)
+				if (path != null && !path.isEmpty())
 					resultsForCurrentSeq.add(new MatchingResult(miniGraph, path, totalCostPath(path)));
 			}
 			if (!resultsForCurrentSeq.isEmpty()) {
@@ -1300,7 +1299,7 @@ public class GraphMatching {
 		// sélection du premier noeud à traiter
 		Toponym firstToponym = getNextNodeToProcess(usedSourceNodes, toponymsSeq, miniGraph);
 		if (firstToponym == null)
-			return null;
+			return new ArrayList<>();
 		Resource firstSourceNode = firstToponym.getResource();
 		List<IPathMatching> pathDeletion = new ArrayList<>();
 		// le topo doit avoir 1 en cout de suppression.
@@ -1321,6 +1320,10 @@ public class GraphMatching {
 		while (true) {
 			pMin = getMinCostPath(open, kbSubgraph, miniGraph, toponymsSeq, 
 					sourceNodes, targetNodes, completeKB);
+			if (!pMin.isEmpty() && pMin.get(pMin.size() - 1).getClass() == Substitution.class && 
+					((Substitution)pMin.get(pMin.size() - 1)).getDeletedNode().toString() == "http://data.ign.fr/id/propagation/Place/29") {
+				logger.info("Confolens qui pose problème");
+			}
 			updateToponyms(pMin, toponymsSeq);
 			if (isCompletePath(pMin, sourceNodes, targetNodes)) {
 				break;
