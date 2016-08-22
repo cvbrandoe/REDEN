@@ -1333,6 +1333,7 @@ public class GraphMatching {
 				if (pMin.size() < sourceNodes.size()) {
 					Toponym currentToponym = getNextNodeToProcess(usedSourceNodes, toponymsSeq, miniGraph);
 					Resource currentSourceNode = currentToponym.getResource();
+					logger.info("Noeud sélectionné : " + currentSourceNode);
 //					if (currentSourceNode.toString().equals("http://data.ign.fr/id/propagation/Place/29")) {
 //						logger.info("Confolens qui pose problème");
 //					}
@@ -1385,8 +1386,10 @@ public class GraphMatching {
 			.filter(t -> !usedSourceNodes.stream().anyMatch(r -> areResourcesEqual(r, t.getResource())))
 			.sorted(byRLSPSize.thenComparing(byNonRLSPSize))			
 			.findFirst();
-		if (optTopo.isPresent())
+		if (optTopo.isPresent()) {
+			usedSourceNodes.add(optTopo.get().getResource());
 			return optTopo.get();
+		}
 			//getProperties(place, miniGraph)
 		List<Statement> statements = miniGraph.listStatements().toList();
 		// on veut choisir le noeud qui a le moins de liens pour accélérer les
