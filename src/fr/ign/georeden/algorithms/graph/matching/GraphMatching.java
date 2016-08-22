@@ -1302,7 +1302,7 @@ public class GraphMatching {
 		pathDeletion.add(new Deletion(firstSourceNode, deletionCostFirstToponym));
 		open.add(pathDeletion);
 		List<IPathMatching> pMin = null;
-		//logger.info("Noeud sélectionné : " + firstSourceNode);
+		logger.info("Noeud sélectionné : " + firstSourceNode);
 		while (true) {
 			pMin = getMinCostPath(open, kbSubgraph, miniGraph, toponymsSeq, sourceNodes, targetNodes, completeKB);
 			// if (!pMin.isEmpty() && pMin.get(pMin.size() - 1).getClass() ==
@@ -1321,7 +1321,7 @@ public class GraphMatching {
 				if (pMin.size() < sourceNodes.size()) {
 					Toponym currentToponym = getNextNodeToProcess(usedSourceNodes, toponymsSeq, miniGraph);
 					Resource currentSourceNode = currentToponym.getResource();
-					logger.info("Noeud sélectionné : " + currentSourceNode);
+					//logger.info("Noeud sélectionné : " + currentSourceNode);
 					// if
 					// (currentSourceNode.toString().equals("http://data.ign.fr/id/propagation/Place/29"))
 					// {
