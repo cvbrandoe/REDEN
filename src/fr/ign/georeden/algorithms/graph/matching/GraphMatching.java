@@ -299,7 +299,7 @@ public class GraphMatching {
 		for (List<Model> alts : altsBySeq.stream()
 //				.sorted((l1, l2) -> Integer
 //						.compare(l2.get(0).listStatements().toList().size(), l1.get(0).listStatements().toList().size()))
-				.skip(2)
+//				.skip(2)
 				.limit(1)
 				.collect(Collectors.toList())) {
 			logger.info("Traitement de la séquence " + seqCount + "/" + altsBySeq.size());
@@ -1375,6 +1375,19 @@ public class GraphMatching {
 	 * @return the next node to process
 	 */
 	private Toponym getNextNodeToProcess(List<Resource> usedSourceNodes, Set<Toponym> toponymsSeq, Model miniGraph) {
+		Comparator<Toponym> byRLSPSize = (t1, t2) -> Integer.compare(
+				keepOnlyRLSP(getProperties(t2.getResource(), miniGraph)).size(), 
+				keepOnlyRLSP(getProperties(t1.getResource(), miniGraph)).size());
+		Comparator<Toponym> byNonRLSPSize = (t1, t2) -> Integer.compare(
+				removeRLSP(getProperties(t2.getResource(), miniGraph)).size(), 
+				removeRLSP(getProperties(t1.getResource(), miniGraph)).size());
+		Optional<Toponym> optTopo = toponymsSeq.stream()
+			.filter(t -> !usedSourceNodes.stream().anyMatch(r -> areResourcesEqual(r, t.getResource())))
+			.sorted(byRLSPSize.thenComparing(byNonRLSPSize))			
+			.findFirst();
+		if (optTopo.isPresent())
+			return optTopo.get();
+			//getProperties(place, miniGraph)
 		List<Statement> statements = miniGraph.listStatements().toList();
 		// on veut choisir le noeud qui a le moins de liens pour accélérer les
 		// calculs
