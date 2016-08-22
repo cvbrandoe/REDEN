@@ -1631,7 +1631,10 @@ public class GraphMatching {
 		}
 		result += substitutionCosts.stream().sorted((a, b) -> Float.compare(b, a)).limit(Integer.min(n1, n2))
 				.mapToDouble(i -> i).sum();
-		result += (float) Integer.max(0, n1 - n2) + (float) Integer.max(0, n2 - n1);
+		// On suprime le cout des insertions, car lorsqu'il y a un doublon ds la sequence,
+		// un seul candidat est utilisé pr 2 topo et donc il faut ajouter une insertion de plus que
+		// si 2 candidats étaient utilisé. Or on veut priviligié le meme candidat pour 2 topo dans la gestion des doublons.
+		//result += (float) Integer.max(0, n1 - n2) + (float) Integer.max(0, n2 - n1);
 		return result;
 	}
 
