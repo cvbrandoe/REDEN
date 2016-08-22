@@ -1476,14 +1476,13 @@ public class GraphMatching {
 																	// son
 																	// référent
 			Map<CriterionToponymCandidate, Integer> pathLengths = new ConcurrentHashMap<>();
-			for (CriterionToponymCandidate criterionToponymCandidate : candidates) {
-				// candidates.parallelStream().forEach(criterionToponymCandidate
-				// -> {
+			//for (CriterionToponymCandidate criterionToponymCandidate : candidates) {
+				 candidates.parallelStream().forEach(criterionToponymCandidate -> {
 				Resource end = criterionToponymCandidate.getCandidate().getResource();
 				final Resource nodeToInsertCopy = nodeToInsert;
 				int pathLength = getLinkPathLength(nodeToInsertCopy, end, 0);
 				pathLengths.put(criterionToponymCandidate, pathLength);
-			} // );
+			}  );
 			Integer maxPathLength = getMaxValue(pathLengths);
 			float min = 1f;
 			for (Entry<CriterionToponymCandidate, Integer> entry : pathLengths.entrySet()) {
@@ -1741,13 +1740,14 @@ public class GraphMatching {
 		
 		for (Statement statement : rlspStatements) {
 			Resource m;
-			boolean reverse = false;
+			boolean reverseTmp = false;
 			if (areResourcesEqual(statement.getSubject(), nodeToRemove.getResource())) {
 				m = (Resource) statement.getObject();
 			} else {
 				m = statement.getSubject();
-				reverse = true;
+				reverseTmp = true;
 			}
+			final boolean reverse = reverseTmp;
 			Property statementProperty = statement.getPredicate();
 			List<Property> properties = getCorrespondingProperties(statementProperty);
 			List<Property> reversedProperties = getCorrespondingReversedProperties(statementProperty);
@@ -1755,9 +1755,8 @@ public class GraphMatching {
 			List<CriterionToponymCandidate> candidates = getReferent(m, toponymsTEI);
 			if (candidates.isEmpty())
 				candidates.addAll(getCandidates(m, toponymsTEI));
-			for (CriterionToponymCandidate criterionToponymCandidate : candidates) {
-				// candidates.parallelStream().forEach(criterionToponymCandidate
-				// -> {
+			//for (CriterionToponymCandidate criterionToponymCandidate : candidates) {
+				 candidates.parallelStream().forEach(criterionToponymCandidate -> {
 //				if (areResourcesEqual(criterionToponymCandidate.getCandidate().getResource(), kbWithInterestingProperties.getResource("http://fr.dbpedia.org/resource/Rochefort_(Charente-Maritime)")) && 
 //						areResourcesEqual(nodeToInsert.getCandidate().getResource(), kbWithInterestingProperties.getResource("http://fr.dbpedia.org/resource/Ruffec_(Charente)"))) {
 //					logger.info("Bingo");
@@ -1769,7 +1768,7 @@ public class GraphMatching {
 						kbWithInterestingProperties, reverse);
 
 				pathLengths.put(criterionToponymCandidate, pathLength);
-			} // );
+			}  );
 			Integer maxPathLength = getMaxValue(pathLengths);
 			float min = 1f;
 			for (Entry<CriterionToponymCandidate, Integer> entry : pathLengths.entrySet()) {
