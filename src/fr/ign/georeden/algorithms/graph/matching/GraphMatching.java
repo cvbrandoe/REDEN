@@ -297,9 +297,10 @@ public class GraphMatching {
 		List<MatchingResult> results = new ArrayList<>();
 		seqCount = 1;
 		for (List<Model> alts : altsBySeq.stream()
-				.sorted((l1, l2) -> Integer
-						.compare(l2.get(0).listStatements().toList().size(), l1.get(0).listStatements().toList().size()))
-//				.limit(1)
+//				.sorted((l1, l2) -> Integer
+//						.compare(l2.get(0).listStatements().toList().size(), l1.get(0).listStatements().toList().size()))
+				.skip(2)
+				.limit(1)
 				.collect(Collectors.toList())) {
 			logger.info("Traitement de la séquence " + seqCount + "/" + altsBySeq.size());
 			logger.info(alts.size() + " mini graphes à traiter pour cette séquence.");
@@ -312,6 +313,7 @@ public class GraphMatching {
 			List<MatchingResult> resultsForCurrentSeq = new ArrayList<>();
 			logger.info("Chemins chargé.");
 			for (Model miniGraph : alts) {
+				miniGraph.listStatements().toList().stream().forEach(logger::info);
 				List<IPathMatching> path = graphMatching(kbSubgraph, miniGraph, toponymsTEI,
 						kbSource);
 				if (path != null)
@@ -343,16 +345,7 @@ public class GraphMatching {
 			}
 			logger.info(toponym.getResource() + " (" + toponym.getName() + ")" + " -> " + toponym.getReferent() + " " + score);
 		}
-		updateAndSaveModelWithResults(teiCopy, workingDirectory + "teiCopy.n3");
-		Map<String, String> choosenUris = new HashMap<>();
-		Map<String, Double> choosenScoresperMention = new HashMap<>();
-		for (Toponym t : toponymsTEI) {
-			// ATTENTION IL FAUT MODIFIER LA CLE CI DESSOUS
-			// elle ne pourra pas être utilisée
-			choosenUris.put(t.getResource().toString(), t.getReferent() != null ? t.getReferent().toString() : "nil");
-			choosenScoresperMention
-				.put(t.getResource().toString(), t.getSubstitutionCostResult() != null ? (double) t.getSubstitutionCostResult().getTotalCost() : 0);
-		}		
+		updateAndSaveModelWithResults(teiCopy, workingDirectory + "teiCopy.n3");		
 	}
 	
 	private void updateAndSaveModelWithResults(Model graph, String fileName) {
@@ -1316,8 +1309,7 @@ public class GraphMatching {
 		float deletionCostFirstToponym = 1f;
 		for (CriterionToponymCandidate candidateCriterion : firstToponym.getScoreCriterionToponymCandidate()) {
 			Resource targetNode = candidateCriterion.getCandidate().getResource();
-			SubstitutionCostResult cost = getSubstitutionCost(firstToponym, candidateCriterion, labelWeight, rlspWeight,
-					linkWeight, toponymsSeq, miniGraph, kbSubgraph, completeKB);
+			SubstitutionCostResult cost = getSubstitutionCost(firstToponym, candidateCriterion, toponymsSeq, miniGraph, kbSubgraph, completeKB);
 			List<IPathMatching> path = new ArrayList<>();
 			path.add(new Substitution(firstSourceNode, targetNode, cost.getTotalCost()));
 			open.add(path);
@@ -1327,7 +1319,7 @@ public class GraphMatching {
 		List<IPathMatching> pMin = null;
 		logger.info("Noeud sélectionné : " + firstSourceNode);
 		while (true) {
-			pMin = getMinCostPath(open, kbSubgraph, miniGraph, toponymsSeq, labelWeight, rlspWeight, linkWeight,
+			pMin = getMinCostPath(open, kbSubgraph, miniGraph, toponymsSeq, 
 					sourceNodes, targetNodes, completeKB);
 			updateToponyms(pMin, toponymsSeq);
 			if (isCompletePath(pMin, sourceNodes, targetNodes)) {
@@ -1335,8 +1327,6 @@ public class GraphMatching {
 			} else {
 				open.clear(); // on vide la liste, car le chemin pMin est
 								// forcément le meilleur
-				// resources du graphe cible non utilisées dans ce chemin
-				Set<Resource> unusedResourcesFromTarget = getTargetUnusedResources(pMin, targetNodes);
 				if (pMin.size() < sourceNodes.size()) {
 					Toponym currentToponym = getNextNodeToProcess(usedSourceNodes, toponymsSeq, miniGraph);
 					Resource currentSourceNode = currentToponym.getResource();
@@ -1346,7 +1336,7 @@ public class GraphMatching {
 						Resource resourceFromTarget = candidateCriterion.getCandidate().getResource();
 						List<IPathMatching> newPath = new ArrayList<>(pMin);
 						SubstitutionCostResult cost = getSubstitutionCost(currentToponym, candidateCriterion,
-								labelWeight, rlspWeight, linkWeight, toponymsSeq, miniGraph, kbSubgraph, completeKB);
+								toponymsSeq, miniGraph, kbSubgraph, completeKB);
 						newPath.add(new Substitution(currentSourceNode, resourceFromTarget, cost.getTotalCost()));
 						open.add(newPath);
 					}
@@ -1354,6 +1344,8 @@ public class GraphMatching {
 					newPathDeletion.add(new Deletion(currentSourceNode, deletionCost));
 					open.add(newPathDeletion);
 				} else {
+					// resources du graphe cible non utilisées dans ce chemin
+					Set<Resource> unusedResourcesFromTarget = getTargetUnusedResources(pMin, targetNodes);
 					for (Resource resource : unusedResourcesFromTarget) {
 						List<IPathMatching> newPath = new ArrayList<>(pMin);
 						newPath.add(new Insertion(resource, getInsertionCost(resource)));
@@ -1415,7 +1407,7 @@ public class GraphMatching {
 	}
 
 	private SubstitutionCostResult getSubstitutionCost(Toponym nodeToRemove,
-			CriterionToponymCandidate candidateCriterion, float labelWeight, float rlspWeight, float linkWeight,
+			CriterionToponymCandidate candidateCriterion, 
 			Set<Toponym> toponymsTEI, Model teiRdf, Model kbWithInterestingProperties, Model completeKB) {
 		SubstitutionCostResult scr;
 		if (SubstitutionCostResult.contains(scrList, nodeToRemove.getResource(),
@@ -1586,7 +1578,7 @@ public class GraphMatching {
 	 * @return the min cost path
 	 */
 	private List<IPathMatching> getMinCostPath(List<List<IPathMatching>> open, Model kbSubgraph, Model miniGraph,
-			Set<Toponym> toponymsSeq, float labelWeight, float rlspWeight, float linkWeight, Set<Resource> sourceNodes,
+			Set<Toponym> toponymsSeq, Set<Resource> sourceNodes,
 			Set<Resource> targetNodes, Model completeKB) {
 		float min = Float.MAX_VALUE;
 		List<IPathMatching> pMin = null;
@@ -1594,7 +1586,7 @@ public class GraphMatching {
 			Set<Resource> unusedSourceNodes = getSourceUnusedResources(path, sourceNodes);
 			Set<Resource> unusedTargetNodes = getTargetUnusedResources(path, targetNodes);
 			float g = totalCostPath(path);
-			float h = heuristicCostPath(path, kbSubgraph, miniGraph, toponymsSeq, labelWeight, rlspWeight, linkWeight,
+			float h = heuristicCostPath(path, kbSubgraph, miniGraph, toponymsSeq, 
 					unusedSourceNodes, unusedTargetNodes, completeKB);
 			if (g + h < min) {
 				min = g + h;
@@ -1607,7 +1599,7 @@ public class GraphMatching {
 	}
 
 	private float heuristicCostPath(List<IPathMatching> path, Model kbSubgraph, Model miniGraph,
-			Set<Toponym> toponymsTEI, float labelWeight, float rlspWeight, float linkWeight,
+			Set<Toponym> toponymsTEI, 
 			Set<Resource> unusedSourceNodes, Set<Resource> unusedTargetNodes, Model completeKB) {
 		float result = 0f;
 		/*
@@ -1624,8 +1616,7 @@ public class GraphMatching {
 			Toponym unusedToponym = toponymsTEI.stream()
 					.filter(t -> areResourcesEqual(t.getResource(), unusedSourceNode)).findFirst().get();
 			for (CriterionToponymCandidate criterion : unusedToponym.getScoreCriterionToponymCandidate()) {
-				SubstitutionCostResult scr = getSubstitutionCost(unusedToponym, criterion, labelWeight, rlspWeight,
-						linkWeight, toponymsTEI, miniGraph, kbSubgraph, completeKB);
+				SubstitutionCostResult scr = getSubstitutionCost(unusedToponym, criterion, toponymsTEI, miniGraph, kbSubgraph, completeKB);
 				substitutionCostsCurrentToponym.add(scr.getTotalCost());
 			}
 			if (!substitutionCostsCurrentToponym.isEmpty())
@@ -1634,7 +1625,7 @@ public class GraphMatching {
 		}
 		result += substitutionCosts.stream().sorted((a, b) -> Float.compare(b, a)).limit(Integer.min(n1, n2))
 				.mapToDouble(i -> i).sum();
-		result += (float) Integer.max(0, n1 - 2) + (float) Integer.max(0, n2 - n1);
+		result += (float) Integer.max(0, n1 - n2) + (float) Integer.max(0, n2 - n1);
 		return result;
 	}
 
