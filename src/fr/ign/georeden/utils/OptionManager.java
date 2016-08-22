@@ -27,6 +27,7 @@ public class OptionManager {
 				.build();
 		options.addOption(teiSource);
 		options.addOption("h", "help", false, "print this message");
+		options.addOption("sp", "shortestPaths", false, "Compute all the shortest paths");
 	}
 	
 	/**

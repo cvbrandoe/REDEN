@@ -9,6 +9,9 @@ import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -21,10 +24,14 @@ import org.apache.http.conn.HttpHostConnectException;
 import org.apache.jena.atlas.web.HttpException;
 import org.apache.jena.riot.RiotException;
 import org.apache.log4j.Logger;
+import org.dom4j.Attribute;
 import org.jgrapht.graph.SimpleDirectedGraph;
 import org.json.JSONException;
 import org.w3c.dom.Document;
-
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.apache.jena.query.QueryParseException;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.rdf.model.Model;
@@ -40,7 +47,8 @@ import fr.ign.georeden.algorithms.string.IStringComparison;
 import fr.ign.georeden.algorithms.string.StringComparisonDamLev;
 import fr.ign.georeden.algorithms.string.StringComparisonMetaphone;
 import fr.ign.georeden.graph.LabeledEdge;
-import fr.ign.georeden.graph.Toponym;
+//import fr.ign.georeden.graph.Toponym;
+import fr.ign.georeden.algorithms.graph.matching.Toponym;
 import fr.ign.georeden.kb.SpatialRelationship;
 import fr.ign.georeden.nelinker.tei.ITEIHandler;
 import fr.ign.georeden.nelinker.tei.TEIHandler;
@@ -56,6 +64,9 @@ import fr.ign.georeden.utils.XMLUtil;
 public class MainNELApp {
 
 	private static Logger logger = Logger.getLogger(MainNELApp.class);
+	
+
+	static final String workingDirectory = "C:\\";
 
 	private static String teiSource;
 
@@ -73,7 +84,7 @@ public class MainNELApp {
 
 		// try {
 		// TalismaneManager talismaneManager = new
-		// TalismaneManager("D:/PH/outputTalismane.txt");
+		// TalismaneManager(workingDirectory + "PH/outputTalismane.txt");
 		// talismaneManager.displayGraph();
 		// } catch (IOException e) {
 		// logger.error(e);
@@ -93,25 +104,31 @@ public class MainNELApp {
 		}
 
 		teiSource = optionManager.getOptionValue("teiSource");
-	
 		
-		//GraphMatching.nodeSelection();
 
 		 // TRANSFORMATION TEI VERS RDF
 		 Document document = XMLUtil.createDocumentFromFile(teiSource);
 		 if (document == null) {
-		 optionManager.help();
-		 return;
+			 optionManager.help();
+			 return;
 		 }
 		 document = applyXSLTTransformations(document);
 		
 		
+		GraphMatching graphMatching = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3"
+				, 10, 0.5f, workingDirectory + "serializations\\", 0.5f, 0.4f, 0.1f, workingDirectory);
+		if (optionManager.hasOption("shortestPaths")) {
+			graphMatching.allPairShortestPathPreProcessing();
+		}
+		Set<Toponym> results = graphMatching.compute();
 		
-		GraphMatching graphMatching = new GraphMatching(document, "C:\\dbpedia_fr_with_rlsp_V3.n3", 10, 0.5f, "C:\\serializations\\");
-		//graphMatching.allPairShortestPathPreProcessing();
-		graphMatching.compute();
-		//graphMatching.test();
-		
+		final Document teiSourceDocument = XMLUtil.createDocumentFromFile(teiSource);
+		Document teiResults =  fillXmlWithResults(teiSourceDocument, results);
+		try {
+			XMLUtil.displayXml(teiResults, workingDirectory + "teiResult.xml", false);
+		} catch (TransformerException e) {
+			logger.info(e);
+		}
 		
 
 		// String query =
@@ -174,11 +191,48 @@ public class MainNELApp {
 		// if (graph != null && !graph.vertexSet().isEmpty()) {
 		// GraphVisualisation<Toponym, LabeledEdge<Toponym,
 		// SpatialRelationship>> window = new GraphVisualisation<>(graph);
-		// window.init(1024, 768);
+		// window.init(1024, 768);et
 		// }
 	}
+	
+	private static Document fillXmlWithResults(Document teiSource, Set<Toponym> toponymsTEI) {
+		NodeList names = teiSource.getElementsByTagName("name");
+		Map<String, List<Toponym>> toponymsById = toponymsTEI.stream()
+				.collect(Collectors.groupingBy((Toponym t) -> t.getXmlId().toString()));
+		for (int i = 0; i < names.getLength(); i++) {
+			Element name = (Element)names.item(i);
+			NamedNodeMap attributes = name.getAttributes();
+			for (int j = 0; j < attributes.getLength(); j++) {
+				Node currentNode = attributes.item(j); 
+				if ("xml:id".equals(currentNode.getNodeName())) {
+					String xmlId = currentNode.getNodeValue();
+					if (xmlId != null && toponymsById.containsKey(xmlId)) {
+						Optional<fr.ign.georeden.algorithms.graph.matching.Toponym> optTopo = toponymsById.get(xmlId).stream()
+								.filter(t -> t.getSubstitutionCostResult() != null)
+								.sorted((t1, t2) -> Float.compare(t1.getSubstitutionCostResult().getTotalCost(), t2.getSubstitutionCostResult().getTotalCost()))
+								.findFirst();
+						String value = "nil";
+						if (optTopo.isPresent()) {
+							value = optTopo.get().getReferent().toString();
+						}
+						Element placeName = (Element)name.getParentNode();
+						placeName.setAttribute("ref", value);						
+					}
+				}
+			}
+			
+		}
+		return teiSource;
+	}
 
+	/**
+	 * Apply XSLT transformations to the document.
+	 *
+	 * @param source the source
+	 * @return the document
+	 */
 	private static Document applyXSLTTransformations(Document source) {
+		logger.info("XSLT transformations");
 		String[] files = null;
 		Document result = source;
 		try {
@@ -198,8 +252,8 @@ public class MainNELApp {
 	}
 
 	static void completeDbpedia() {
-		Model kbSource = ModelFactory.createDefaultModel().read("D:\\dbpedia_fr_with_rlsp.n3");
-		Model kbSourceAll = ModelFactory.createDefaultModel().read("D:\\dbpedia\\dbpedia_all.n3");
+		Model kbSource = ModelFactory.createDefaultModel().read(workingDirectory + "dbpedia_fr_with_rlsp.n3");
+		Model kbSourceAll = ModelFactory.createDefaultModel().read(workingDirectory + "dbpedia\\dbpedia_all.n3");
 		List<Resource> subjectsKBAll = kbSourceAll.listStatements(null, kbSourceAll.createProperty("http://dbpedia.org/ontology/wikiPageWikiLink"), (RDFNode)null).toList().stream().map(s -> s.getObject()).filter(o -> o.isResource()).distinct().map(o -> (Resource)o).collect(Collectors.toList());
 		Set<Resource> subjects = new HashSet<>(kbSource.listSubjects().toList());
 		for (Resource resource : subjectsKBAll) {
@@ -208,7 +262,7 @@ public class MainNELApp {
 				kbSource.add(statementsToAdd);
 			}
 		}
-		GraphMatchingOld.saveModelToFile("D:\\dbpedia_fr_with_rlsp_V2.n3", kbSource, "N3");
+		GraphMatchingOld.saveModelToFile(workingDirectory + "dbpedia_fr_with_rlsp_V2.n3", kbSource, "N3");
 	}
 
 }

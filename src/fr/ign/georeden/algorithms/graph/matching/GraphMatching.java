@@ -182,8 +182,13 @@ public class GraphMatching {
 	private final Set<Resource> resourcesToUseForSP;
 	private final List<SubstitutionCostResult> scrList;
 
+	private final float labelWeight;
+	private final float rlspWeight;
+	private final float linkWeight;
+	private final String workingDirectory;
+
 	/**
-	 * Instantiates a new graph matching clean.
+	 * Instantiates a new graph matching.
 	 *
 	 * @param teiRdfPath
 	 *            the tei rdf path
@@ -193,56 +198,16 @@ public class GraphMatching {
 	 *            the number of candidate
 	 * @param candidateSelectionThreshold
 	 *            the candidate selection threshold
-	 */
-	public GraphMatching(String teiRdfPath, String dbPediaRdfFilePath, int numberOfCandidate,
-			float candidateSelectionThreshold, String serializationDirectory) {
-		this.serializationDirectory = serializationDirectory;
-		logger.info("Chargement du TEI : " + teiRdfPath);
-		Document teiSource = XMLUtil.createDocumentFromFile(teiRdfPath);
-		//this.teiRdf = RDFUtil.getModel(teiSource); // BUG EN RELEASE
-		this.teiRdf = ModelFactory.createDefaultModel().read("C:\\temp7.n3");
-		this.toponymsTEI = getToponymsFromTei(teiRdf);
-		logger.info(toponymsTEI.size() + " toponyms in the TEI RDF graph");
-
-		logger.info("Chargement de la KB : " + dbPediaRdfFilePath);
-		this.kbSource = ModelFactory.createDefaultModel().read(dbPediaRdfFilePath);
-
-		logger.info("Création du sous graphe de la KB contenant uniquement les relations spatiales");
-		
-		this.kbSubgraph = getSubGraphWithResources(kbSource);
-//		Model ville = ModelFactory.createDefaultModel().read("C:\\dev\\java\\calculRelationsSpatialesAcRivieres\\rivieresEtVilles.rdf");
-//		Model sourceCopy = cloneModel(kbSource);
-//		sourceCopy.add(this.kbSubgraph.listStatements().toList());
-//		sourceCopy.add(ville.listStatements().toList());
-//		// completeWithSymetricsRLSP() // OPTIONEL. Augmente le nombre de
-//		// statement, et facilite le la vérification des chemains
-//		saveModelToFile("C:\\dbpedia_fr_with_rlsp_V3.n3", sourceCopy, "N3")
-		logger.info("Création de l'index des plus courts chemins.");
-		this.subjectsOfSubgraph = kbSubgraph.listSubjects().toList().stream()
-				.sorted((a, b) -> a.toString().compareTo(b.toString())).collect(Collectors.toList());
-		this.resourcesIndexAPSP = new ConcurrentHashMap<>();
-		for (int i = 0; i < subjectsOfSubgraph.size(); i++) {
-			resourcesIndexAPSP.put(subjectsOfSubgraph.get(i), i + 1);
-		}
-
-		logger.info("Récupérations des candidats de la KB");
-		final List<Candidate> candidatesFromKB = getCandidatesFromKB(this.kbSource);
-
-		this.toponyms = getCandidatesSelection(this.toponymsTEI, candidatesFromKB, numberOfCandidate,
-				candidateSelectionThreshold);
-
-		this.shortestPaths = new ConcurrentHashMap<>();
-
-		this.rlspCalculous = new HashSet<>(); // utilié à revoir
-		this.resourcesToUseForSP = new HashSet<>();
-		this.scrList = new ArrayList<>();
-	}
-	
+	 */	
 	public GraphMatching(Document teiSource, String dbPediaRdfFilePath, int numberOfCandidate,
-			float candidateSelectionThreshold, String serializationDirectory) {
+			float candidateSelectionThreshold, String serializationDirectory, float labelWeight, float rlspWeight, float linkWeight, String workingDirectory) {
 		this.serializationDirectory = serializationDirectory;
+		this.workingDirectory = workingDirectory;
+		this.labelWeight = labelWeight;
+		this.rlspWeight = rlspWeight;
+		this.linkWeight = linkWeight;
 		this.teiRdf = RDFUtil.getModel(teiSource); // BUG EN RELEASE
-		//this.teiRdf = ModelFactory.createDefaultModel().read("C:\\temp7.n3");
+		//this.teiRdf = ModelFactory.createDefaultModel().read(workingDirectory + "temp7.n3");
 		this.toponymsTEI = getToponymsFromTei(teiRdf);
 		logger.info(toponymsTEI.size() + " toponyms in the TEI RDF graph");
 
@@ -252,13 +217,13 @@ public class GraphMatching {
 		logger.info("Création du sous graphe de la KB contenant uniquement les relations spatiales");
 		
 		this.kbSubgraph = getSubGraphWithResources(kbSource);
-//		Model ville = ModelFactory.createDefaultModel().read("C:\\dev\\java\\calculRelationsSpatialesAcRivieres\\rivieresEtVilles.rdf");
+//		Model ville = ModelFactory.createDefaultModel().read(workingDirectory + "dev\\java\\calculRelationsSpatialesAcRivieres\\rivieresEtVilles.rdf");
 //		Model sourceCopy = cloneModel(kbSource);
 //		sourceCopy.add(this.kbSubgraph.listStatements().toList());
 //		sourceCopy.add(ville.listStatements().toList());
 //		// completeWithSymetricsRLSP() // OPTIONEL. Augmente le nombre de
 //		// statement, et facilite le la vérification des chemains
-//		saveModelToFile("C:\\dbpedia_fr_with_rlsp_V3.n3", sourceCopy, "N3")
+//		saveModelToFile(workingDirectory + "dbpedia_fr_with_rlsp_V3.n3", sourceCopy, "N3")
 		logger.info("Création de l'index des plus courts chemins.");
 		this.subjectsOfSubgraph = kbSubgraph.listSubjects().toList().stream()
 				.sorted((a, b) -> a.toString().compareTo(b.toString())).collect(Collectors.toList());
@@ -283,7 +248,7 @@ public class GraphMatching {
 	/**
 	 * Compute.
 	 */
-	public void compute() {
+	public Set<Toponym> compute() {
 		deleteUselessAlts(toponyms, teiRdf);
 
 		logger.info("Préparation de la création des mini graphes pour chaques séquences");
@@ -294,6 +259,8 @@ public class GraphMatching {
 				.collect(Collectors.toList());
 
 		computeAlgorithm(sequences, querySolutionEntries, teiRdf, kbSubgraph, kbSource, toponymsTEI);
+		
+		return toponymsTEI;
 	}
 
 	/**
@@ -332,7 +299,7 @@ public class GraphMatching {
 		for (List<Model> alts : altsBySeq.stream()
 				.sorted((l1, l2) -> Integer
 						.compare(l2.get(0).listStatements().toList().size(), l1.get(0).listStatements().toList().size()))
-				//.limit(1)
+//				.limit(1)
 				.collect(Collectors.toList())) {
 			logger.info("Traitement de la séquence " + seqCount + "/" + altsBySeq.size());
 			logger.info(alts.size() + " mini graphes à traiter pour cette séquence.");
@@ -345,15 +312,15 @@ public class GraphMatching {
 			List<MatchingResult> resultsForCurrentSeq = new ArrayList<>();
 			logger.info("Chemins chargé.");
 			for (Model miniGraph : alts) {
-				List<IPathMatching> path = graphMatching(kbSubgraph, miniGraph, toponymsTEI, 0.4f, 0.4f, 0.2f,
+				List<IPathMatching> path = graphMatching(kbSubgraph, miniGraph, toponymsTEI,
 						kbSource);
 				if (path != null)
 					resultsForCurrentSeq.add(new MatchingResult(miniGraph, path, totalCostPath(path)));
 			}
 			if (!resultsForCurrentSeq.isEmpty()) {
 				MatchingResult bestPath = getBestPath(resultsForCurrentSeq);
-				saveModelToFile("C:\\seq_original_" + seqCount +".n3", bestPath.getModel(), "N3");
-				updateAndSaveModelWithResults(bestPath.getModel(), "C:\\seq_" + seqCount +".n3");
+				saveModelToFile(workingDirectory + "seq_original_" + seqCount +".n3", bestPath.getModel(), "N3");
+				updateAndSaveModelWithResults(bestPath.getModel(), workingDirectory + "seq_" + seqCount +".n3");
 				results.add(bestPath);
 //				logger.info(bestPath.getCostEdition());
 //				bestPath.getEditionPath().forEach(step -> {
@@ -376,7 +343,7 @@ public class GraphMatching {
 			}
 			logger.info(toponym.getResource() + " (" + toponym.getName() + ")" + " -> " + toponym.getReferent() + " " + score);
 		}
-		updateAndSaveModelWithResults(teiCopy, "C:\\teiCopy.n3");
+		updateAndSaveModelWithResults(teiCopy, workingDirectory + "teiCopy.n3");
 		Map<String, String> choosenUris = new HashMap<>();
 		Map<String, Double> choosenScoresperMention = new HashMap<>();
 		for (Toponym t : toponymsTEI) {
@@ -385,12 +352,7 @@ public class GraphMatching {
 			choosenUris.put(t.getResource().toString(), t.getReferent() != null ? t.getReferent().toString() : "nil");
 			choosenScoresperMention
 				.put(t.getResource().toString(), t.getSubstitutionCostResult() != null ? (double) t.getSubstitutionCostResult().getTotalCost() : 0);
-		}
-		
-		
-//		ResultsAndEvaluationNEL.produceResults(
-//				"C:\\peurSudOuestAnnote11_Corrigee_paragraphes.xml", 
-//				"placeName", choosenUris, null, e, XMLUtil.createDocumentFromFile("C:\\peurSudOuestAnnote11_Corrigee_paragraphes.xml"), "C:\\", "ref", choosenScoresperMention, "true");
+		}		
 	}
 	
 	private void updateAndSaveModelWithResults(Model graph, String fileName) {
@@ -1323,8 +1285,7 @@ public class GraphMatching {
 		}
 	}
 
-	private List<IPathMatching> graphMatching(Model kbSubgraph, Model miniGraph, Set<Toponym> toponymsTEI,
-			float labelWeight, float rlspWeight, float linkWeight, Model completeKB) {
+	private List<IPathMatching> graphMatching(Model kbSubgraph, Model miniGraph, Set<Toponym> toponymsTEI, Model completeKB) {
 		// on récupère les noeuds du mini graphe
 		Set<Resource> sourceNodes = new HashSet<>(miniGraph.listSubjects().toList());
 		sourceNodes.addAll(miniGraph.listObjects().toList().stream().filter(o -> o.isResource()).map(m -> (Resource) m)

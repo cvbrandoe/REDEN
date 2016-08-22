@@ -3,6 +3,7 @@ package fr.ign.georeden.utils;
 import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
@@ -104,8 +105,11 @@ public final class XMLUtil {
 		// output
 		if (displayInConsole)
 			transformer.transform(source, new StreamResult(System.out));
-		if (fullFileName != null)
-			transformer.transform(source, new StreamResult(fullFileName));
+		if (fullFileName != null) {
+			File f = new File(fullFileName);	
+			URI uri = f.toURI();
+			transformer.transform(source, new StreamResult(uri.toString()));
+		}
 	}
 	
 	/**
