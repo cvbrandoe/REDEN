@@ -120,6 +120,7 @@ public class MainNELApp {
 		if (optionManager.hasOption("shortestPaths")) {
 			graphMatching.allPairShortestPathPreProcessing();
 		}
+		//graphMatching.test2();
 		Set<Toponym> results = graphMatching.compute();
 		
 		final Document teiSourceDocument = XMLUtil.createDocumentFromFile(teiSource);

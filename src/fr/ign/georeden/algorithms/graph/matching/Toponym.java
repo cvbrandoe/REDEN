@@ -1,6 +1,7 @@
 package fr.ign.georeden.algorithms.graph.matching;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.jena.rdf.model.Resource;
@@ -35,7 +36,7 @@ public class Toponym {
 		this.name = name;
 		this.xmlId = xmlId;
 		this.type = type;
-		this.scoreCriterionToponymCandidate = new ArrayList<>();
+		this.scoreCriterionToponymCandidate = Collections.synchronizedList(new ArrayList<>());
 		this.typeCriterionToponymCandidate = new ArrayList<>();
 		this.referent = null;
 		this.scr = null;
@@ -89,8 +90,6 @@ public class Toponym {
 	 * @param score the score
 	 */
 	public void addScoreCriterionToponymCandidate(CriterionToponymCandidate score) {
-		if (this.scoreCriterionToponymCandidate == null)
-			this.scoreCriterionToponymCandidate = new ArrayList<>();
 		this.scoreCriterionToponymCandidate.add(score);
 	}
 	public void clearAndAddAllScoreCriterionToponymCandidate(List<CriterionToponymCandidate> scores) {
