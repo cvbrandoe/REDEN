@@ -114,6 +114,8 @@ public class MainNELApp {
 		 }
 		 document = applyXSLTTransformations(document);
 		
+//		 StringComparisonDamLev sc = new StringComparisonDamLev();
+//		 logger.info(sc.computeSimilarity("Gentioux", "Gentioux-Pigerolles"));
 		
 		GraphMatching graphMatching = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3"
 				, 10, 0.5f, workingDirectory + "serializations\\", 0.5f, 0.4f, 0.1f, workingDirectory);

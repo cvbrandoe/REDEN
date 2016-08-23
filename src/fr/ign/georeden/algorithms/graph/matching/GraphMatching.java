@@ -984,7 +984,7 @@ public class GraphMatching {
 				.filter(c -> c != null && c.getTypes() != null && (c.getName() != null || c.getLabel() != null))
 				.collect(Collectors.toList());
 
-		Map<String, List<Candidate>> candidatesByType = new HashMap<>();
+		Map<String, List<Candidate>> candidatesByType = new ConcurrentHashMap<>();
 		for (Candidate candidate2 : candidatesFromKBCleared) {
 			for (String type : candidate2.getTypes()) {
 				List<Candidate> candidates;
@@ -1007,20 +1007,24 @@ public class GraphMatching {
 		final int total = toponymsByLabel.size();
 		toponymsByLabel.entrySet().parallelStream().forEach(toponymsWithLabel -> {
 			// toponymes de l'entry aggrégés par type
-			Map<ToponymType, List<Toponym>> toponymsByType = toponymsWithLabel.getValue().stream()
+			final Map<ToponymType, List<Toponym>> toponymsByType = toponymsWithLabel.getValue().stream()
 					.collect(Collectors.groupingBy((Toponym s) -> s.getType()));
 			computeCandidates(toponymsWithLabel, toponymsByType.entrySet(), candidatesByType);
-			toponymsWithLabel.getValue().stream().forEach(toponym -> {
+			for (Toponym toponym : toponymsWithLabel.getValue()) {
 				toponym.clearAndAddAllScoreCriterionToponymCandidate(
 						toponym.getScoreCriterionToponymCandidate().stream().filter(s -> s != null)
-								.sorted(Comparator.comparing(CriterionToponymCandidate::getValue).reversed())
 								.filter(t -> t.getValue() >= threshold)
+								.sorted((a, b) -> Float.compare(b.getValue(), a.getValue()))
 								.limit(Math.min(numberOfCandidate, toponym.getScoreCriterionToponymCandidate().size()))
 								.collect(Collectors.toList()));
 				result.add(toponym);
-			});
+			}
 			logger.info((count.getAndIncrement() + 1) + " / " + total);
 		});
+		
+//		Toponym topo = result.stream().filter(r -> r.getXmlId() == 4).findFirst().get();
+//		topo.getScoreCriterionToponymCandidate().forEach(p -> logger.info(p.getCandidate().getResource() + " " +p.getValue()));
+		
 		return result;
 	}
 
@@ -1049,7 +1053,8 @@ public class GraphMatching {
 			String keyType = getTEITypeToKBType(toponymsTyped.getKey().toString());
 			List<Candidate> candidatesToCheck = candidatesByType.get(keyType);
 			if (candidatesToCheck != null && !candidatesToCheck.isEmpty()) {
-				candidatesToCheck.parallelStream().forEach(candidate -> {
+				for (Candidate candidate : candidatesToCheck) {
+				//candidatesToCheck.parallelStream().forEach(candidate -> {
 					float score = 0f;
 					if (candidate.getName() != null && scoreByLabel.containsKey(candidate.getName())) {
 						score = scoreByLabel.get(candidate.getName());
@@ -1070,7 +1075,7 @@ public class GraphMatching {
 						toponym.addScoreCriterionToponymCandidate(
 								new CriterionToponymCandidate(toponym, candidate, score, criterion));
 					}
-				});
+				}//);
 			}
 		}
 	}
