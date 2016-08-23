@@ -665,7 +665,7 @@ public class GraphMatching {
 		
 	}
 	private List<Model> explodeAltsV5(Model model) {
-		saveModelToFile(workingDirectory + "original.n3", model, "N3");
+		//saveModelToFile(workingDirectory + "original.n3", model, "N3");
 		List<Model> results = new ArrayList<>();
 		results.add(model);
 		List<Resource> alts = model.listStatements(null, null, model.createResource("http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt")).toList().stream().map(s -> s.getSubject()).collect(Collectors.toList());
@@ -693,11 +693,11 @@ public class GraphMatching {
 			results.addAll(resultsTmp);
 		}
 		
-		int i = 0;
-		for (Model model2 : results) {
-			saveModelToFile(workingDirectory + i + ".n3", model2, "N3");
-			i++;
-		}
+//		int i = 0;
+//		for (Model model2 : results) {
+//			saveModelToFile(workingDirectory + i + ".n3", model2, "N3");
+//			i++;
+//		}
 		
 		return results;
 	}
