@@ -88,7 +88,7 @@ public class GraphMatching {
 																// chemins
 
 	/** The toponyms. */
-	private final Set<Toponym> toponyms; // toponyms du TEI avec leurs candidats
+	//private final Set<Toponym> toponyms; // toponyms du TEI avec leurs candidats
 
 	/** The prop fr NS. */
 	private static final String PROP_FR_NS = "http://fr.dbpedia.org/property/";
@@ -188,6 +188,8 @@ public class GraphMatching {
 	private final float rlspWeight;
 	private final float linkWeight;
 	private final String workingDirectory;
+	
+	private final Resource nil;
 
 	/**
 	 * Instantiates a new graph matching.
@@ -242,7 +244,8 @@ public class GraphMatching {
 		logger.info("Récupérations des candidats de la KB");
 		final List<Candidate> candidatesFromKB = getCandidatesFromKB(this.kbSource);
 
-		this.toponyms = getCandidatesSelection(this.toponymsTEI, candidatesFromKB, numberOfCandidate,
+		//this.toponyms = 
+		getCandidatesSelection(this.toponymsTEI, candidatesFromKB, numberOfCandidate,
 				candidateSelectionThreshold);
 
 		this.shortestPaths = new ConcurrentHashMap<>();
@@ -250,13 +253,14 @@ public class GraphMatching {
 		this.rlspCalculous = new HashSet<>(); // utilié à revoir
 		this.resourcesToUseForSP = new HashSet<>();
 		this.scrList = new ArrayList<>();
+		this.nil = kbSubgraph.createResource("http://data.ign.fr/id/propagation/Place/nil");
 	}
 
 	/**
 	 * Compute.
 	 */
 	public Set<Toponym> compute() {
-		deleteUselessAlts(toponyms, teiRdf);
+		deleteUselessAlts(toponymsTEI, teiRdf);
 
 		logger.info("Préparation de la création des mini graphes pour chaques séquences");
 		List<QuerySolution> querySolutions = getGraphTuples(teiRdf);
@@ -296,8 +300,14 @@ public class GraphMatching {
 			logger.info("Traitement de la séquence " + seqCount + "/" + sequences.size());
 			seqCount++;
 			Model currentModel = getModelsFromSequence(querySolutionEntries, sequence);
+			saveModelToFile(workingDirectory + "testAlt_" + seqCount + "_original.n3", currentModel, "N3");
 			currentModel = addRlsp(currentModel, teiRdf);
-			List<Model> alts = explodeAlts(currentModel);
+			List<Model> alts = explodeAltsV2(currentModel);
+			int g = 0;
+			for (Model model : alts) {
+				saveModelToFile(workingDirectory + "testAlt_" + seqCount + "_" + g + ".n3", model, "N3");
+				g++;
+			}
 			altsBySeq.add(alts);
 		}
 
@@ -327,8 +337,36 @@ public class GraphMatching {
 			}
 			if (!resultsForCurrentSeq.isEmpty()) {
 				MatchingResult bestPath = getBestPath(resultsForCurrentSeq);
+				// On corrige les référents, car les rdf:Alt peuvent poser problème
+				List<IPathMatching> path = bestPath.getEditionPath();
+				for (IPathMatching iPathMatching : path) {
+					if (iPathMatching.getClass() == Substitution.class) {
+						// on récupère le toponym
+						// on récupère son éventuel jumeau d'alt
+						// on met le referent du jumeau à null
+						Substitution sub = (Substitution)iPathMatching;
+						Toponym resolvedTopo = toponymsTEI.stream().filter(t -> areResourcesEqual(t.getResource(), sub.getDeletedNode())).findFirst().get();
+						if (toponymsTEI.stream().filter(t -> t.getXmlId() == resolvedTopo.getXmlId()).count() > 1) {
+							// il a un jumeau
+							Toponym twin = toponymsTEI.stream().filter(t -> t.getXmlId() == resolvedTopo.getXmlId() && !areResourcesEqual(t.getResource(), sub.getDeletedNode())).findFirst().get();
+							twin.setReferent(null);
+							twin.setSubstitutionCostResult(null);
+						}
+					} else if (iPathMatching.getClass() == Deletion.class) {
+						// on met le referent à nil
+						Deletion del = (Deletion)iPathMatching;
+						Toponym resolvedTopo = toponymsTEI.stream().filter(t -> areResourcesEqual(t.getResource(), del.getDeletedNode())).findFirst().get();
+						resolvedTopo.setReferent(nil);
+						if (toponymsTEI.stream().filter(t -> t.getXmlId() == resolvedTopo.getXmlId()).count() > 1) {
+							// il a un jumeau
+							Toponym twin = toponymsTEI.stream().filter(t -> t.getXmlId() == resolvedTopo.getXmlId() && !areResourcesEqual(t.getResource(), del.getDeletedNode())).findFirst().get();
+							twin.setReferent(null);
+							twin.setSubstitutionCostResult(null);
+						}
+					}
+				}
 				saveModelToFile(workingDirectory + "seq_original_" + seqCount + ".n3", bestPath.getModel(), "N3");
-				updateAndSaveModelWithResults(bestPath.getModel(), workingDirectory + "seq_" + seqCount + ".n3");
+				updateAndSaveModelWithResultsV2(bestPath.getModel(), workingDirectory + "seq_" + seqCount + ".n3");
 				results.add(bestPath);
 				// logger.info(bestPath.getCostEdition());
 				// bestPath.getEditionPath().forEach(step -> {
@@ -355,12 +393,52 @@ public class GraphMatching {
 		updateAndSaveModelWithResults(teiCopy, workingDirectory + "teiCopy.n3");
 	}
 
+	/**
+	 * Update and save the model the with results.
+	 *
+	 * @param graph the graph
+	 * @param fileName the file name
+	 */
 	private void updateAndSaveModelWithResults(Model graph, String fileName) {
 		Model graphCopy = cloneModel(graph);
 		for (Toponym toponym : toponymsTEI) {
 			if (toponym.getReferent() != null)
 				renameResource(graphCopy, toponym.getResource(), toponym.getReferent().toString());
 		}
+		
+		
+		saveModelToFile(fileName, graphCopy, "N3");
+	}
+	private void updateAndSaveModelWithResultsV2(Model graph, String fileName) {
+		Model graphCopy = cloneModel(graph);
+		Map<String, List<Toponym>> toponymsById = toponymsTEI.stream()
+				.collect(Collectors.groupingBy((Toponym t) -> t.getXmlId().toString()));
+		for (Entry<String, List<Toponym>> entry : toponymsById.entrySet()) {
+			if (entry.getValue().size() == 1 && entry.getValue().get(0).getReferent() != null)
+				renameResource(graphCopy, entry.getValue().get(0).getResource(), entry.getValue().get(0).getReferent().toString());
+			else {
+				Optional<Toponym> toponym = entry.getValue().stream().filter(t -> t.getReferent() != null).findFirst();
+				Optional<Toponym> toponymToRemove = entry.getValue().stream().filter(t -> t.getReferent() == null).findFirst();
+				if (toponym.isPresent() && toponym.get().getReferent() != null) {
+					deleteResource(graphCopy, toponymToRemove.get().getResource());
+					List<Statement> sToreplace = graphCopy.listStatements(null, graphCopy.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1"), (RDFNode)toponym.get()).toList();
+					sToreplace.addAll(graphCopy.listStatements(null, graphCopy.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2"), (RDFNode)toponym.get()).toList());
+					List<Statement> sToAdd = new ArrayList<>();
+					for (Statement statement : sToreplace) {
+						sToAdd.add(graphCopy.createStatement(statement.getSubject(), statement.getPredicate(), toponym.get().getResource()));
+					}
+					renameResource(graphCopy, toponym.get().getResource(), toponym.get().getReferent().toString());
+					graphCopy.remove(sToreplace);
+					graphCopy.add(sToAdd);
+				}
+			}
+		}
+		for (Toponym toponym : toponymsTEI) {
+			if (toponym.getReferent() != null)
+				renameResource(graphCopy, toponym.getResource(), toponym.getReferent().toString());
+		}
+		
+		
 		saveModelToFile(fileName, graphCopy, "N3");
 	}
 
@@ -455,6 +533,70 @@ public class GraphMatching {
 			result += iPathMatching.getCost();
 		}
 		return result;
+	}
+	
+	private List<Model> explodeAltsV2(Model currentModel) {
+		Model currentModelClone = cloneModel(currentModel);
+		List<Model> results = new ArrayList<>();
+		List<Resource> alts = currentModelClone
+				.listStatements(null, null,
+						currentModelClone.createResource("http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt"))
+				.toList().stream().map(s -> s.getSubject()).collect(Collectors.toList());
+		if (alts.isEmpty()) {
+			results.add(currentModelClone);
+			return results;
+		}
+		results.add(currentModelClone);
+		Map<String, List<Resource>> altsByR1 = new HashMap<>();
+		for (Resource alt : alts) {
+			Resource r1 = (Resource) currentModelClone.getProperty(alt, currentModelClone.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1")).getObject();
+			String r1S = r1.toString();
+			List<Resource> altsTmp = altsByR1.containsKey(r1S) ? altsByR1.get(r1S) : new ArrayList<>();
+			altsTmp.add(alt);
+			altsByR1.put(r1S, altsTmp);
+		}
+		for (Entry<String, List<Resource>> entry : altsByR1.entrySet()) {
+			Set<String> resourcesAlt = new HashSet<>();
+			List<Statement> statementsWithAltOnObject = new ArrayList<>();
+			String r1S = null;
+			String r2S = null;
+			for (Resource alt : entry.getValue()) {
+				Resource r1 = (Resource) currentModelClone.getProperty(alt, currentModelClone.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1")).getObject();
+				Resource r2 = (Resource) currentModelClone.getProperty(alt, currentModelClone.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2")).getObject();
+				r1S = r1.toString();
+				r2S = r2.toString();
+				resourcesAlt.add(r1.toString());
+				resourcesAlt.add(r2.toString());
+				statementsWithAltOnObject.addAll(currentModelClone.listStatements(null, null, (RDFNode)alt).toList());
+			}
+			List<Model> resultsTmp  = new ArrayList<>();
+			for (String resourceToKeepString : resourcesAlt) {
+				Resource resourceToKeep = currentModelClone.createResource(resourceToKeepString);
+				List<Statement> statementsToKeep = currentModelClone.listStatements(resourceToKeep, null, (RDFNode)null).toList();
+				statementsToKeep.addAll(currentModelClone.listStatements(null, null, (RDFNode)resourceToKeep).toList());
+				statementsToKeep = statementsToKeep.stream().filter(s -> !s.getPredicate().getURI().equals(currentModelClone.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1").getURI())
+						&& !s.getPredicate().getURI().equals(currentModelClone.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2").getURI())).collect(Collectors.toList());
+				for (Statement statement : statementsWithAltOnObject) {
+					Statement newStatement = currentModelClone.createStatement(statement.getSubject(), statement.getPredicate(), resourceToKeep);
+					statementsToKeep.add(newStatement);
+				}
+				String resourceToDeleteString = resourceToKeep.equals(r1S) ? r2S : r1S;
+				Resource resourceToDelete = currentModelClone.createResource(resourceToDeleteString);
+				for (Model model : results) {
+					Model currentClone = cloneModel(model);
+					deleteResource(currentClone, resourceToDelete);
+					deleteResource(currentClone, resourceToKeep);
+					for (Resource alt : entry.getValue()) {
+						deleteResource(currentClone, alt);
+					}
+					currentClone.add(statementsToKeep);
+					resultsTmp.add(currentClone);
+				}
+			}
+			results.clear();
+			results.addAll(resultsTmp);
+		}
+		return results;
 	}
 
 	/**
