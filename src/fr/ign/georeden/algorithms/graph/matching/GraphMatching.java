@@ -302,7 +302,7 @@ public class GraphMatching {
 			Model currentModel = getModelsFromSequence(querySolutionEntries, sequence);
 			saveModelToFile(workingDirectory + "testAlt_" + seqCount + "_original.n3", currentModel, "N3");
 			currentModel = addRlsp(currentModel, teiRdf);
-			List<Model> alts = explodeAltsV2(currentModel);
+			List<Model> alts = explodeAltsV5(currentModel);
 			int g = 0;
 			for (Model model : alts) {
 				saveModelToFile(workingDirectory + "testAlt_" + seqCount + "_" + g + ".n3", model, "N3");
@@ -337,6 +337,7 @@ public class GraphMatching {
 			}
 			if (!resultsForCurrentSeq.isEmpty()) {
 				MatchingResult bestPath = getBestPath(resultsForCurrentSeq);
+				
 				// On corrige les référents, car les rdf:Alt peuvent poser problème
 				List<IPathMatching> path = bestPath.getEditionPath();
 				for (IPathMatching iPathMatching : path) {
@@ -365,6 +366,7 @@ public class GraphMatching {
 						}
 					}
 				}
+				
 				saveModelToFile(workingDirectory + "seq_original_" + seqCount + ".n3", bestPath.getModel(), "N3");
 				updateAndSaveModelWithResultsV2(bestPath.getModel(), workingDirectory + "seq_" + seqCount + ".n3");
 				results.add(bestPath);
@@ -406,8 +408,21 @@ public class GraphMatching {
 				renameResource(graphCopy, toponym.getResource(), toponym.getReferent().toString());
 		}
 		
+		graphCopy = removesAltFromFinalTei(graphCopy);
 		
 		saveModelToFile(fileName, graphCopy, "N3");
+	}
+	private Model removesAltFromFinalTei(Model tei) {
+		Model model = cloneModel(tei);
+		
+		List<Resource> alts = model.listStatements(null, null, (RDFNode)model.createResource("http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt")).toList().stream().map(s -> s.getSubject()).collect(Collectors.toList());
+		//TODO A FINIR, ne fait rien pour l'instant
+		for (Resource alt : alts) {
+			List<Statement> altSubject = model.listStatements(alt, null, (RDFNode)null).toList();
+			List<Statement> altObject = model.listStatements(alt, null, (RDFNode)alt).toList();
+		}
+		
+		return model;
 	}
 	private void updateAndSaveModelWithResultsV2(Model graph, String fileName) {
 		Model graphCopy = cloneModel(graph);
@@ -463,11 +478,14 @@ public class GraphMatching {
 		// statement) qu'il faudra calculer à un moment ou un autre
 		List<Statement> statementsToProcess = new ArrayList<>();
 		for (Statement statement : statements) {
-			Toponym subject = toponymsTEI.stream()
-					.filter(t -> areResourcesEqual(t.getResource(), statement.getSubject())).findFirst().get();
-			Toponym object = toponymsTEI.stream()
-					.filter(t -> areResourcesEqual(t.getResource(), (Resource) statement.getObject())).findFirst()
-					.get();
+			Optional<Toponym> subjectOpt = toponymsTEI.stream()
+					.filter(t -> areResourcesEqual(t.getResource(), statement.getSubject())).findFirst();
+			Optional<Toponym> objectOpt = toponymsTEI.stream()
+					.filter(t -> areResourcesEqual(t.getResource(), (Resource) statement.getObject())).findFirst();
+			if (!subjectOpt.isPresent() || ! objectOpt.isPresent())
+				continue;
+			Toponym subject = subjectOpt.get();
+			Toponym object = objectOpt.get();
 			for (CriterionToponymCandidate critSubj : subject.getScoreCriterionToponymCandidate()) {
 				for (CriterionToponymCandidate critObj : object.getScoreCriterionToponymCandidate()) {
 					statementsToProcess.add(kbSubgraph.createStatement(critSubj.getCandidate().getResource(),
@@ -534,6 +552,388 @@ public class GraphMatching {
 		}
 		return result;
 	}
+	public GraphMatching(String workingDirectory) {
+		this.workingDirectory = workingDirectory;
+		toponymsTEI = null;
+		teiRdf = null;
+		subjectsOfSubgraph = null;
+		shortestPaths = null;
+		serializationDirectory = null;
+		scrList = null;
+		rlspWeight = 0f;
+		rlspCalculous = null;
+		resourcesToUseForSP = null;
+		resourcesIndexAPSP = null;
+		nil = null;
+		linkWeight = 0f;
+		labelWeight = 0f;
+		kbSubgraph = null;
+		kbSource = null;
+		Model model = ModelFactory.createDefaultModel().read("C:\\modelOriginal - Copie.n3");		
+		explodeAltsV5(model);
+	}
+	
+	private Model transformModelByKeepingR1(Model original, String r1, String r2) {
+		// F(model, r1, r2, altsR1R2)
+		//  clone <- clone de model
+		Model model = cloneModel(original);
+		// on supprime de clone tous les statements de r2
+		Resource r2Resource = model.getResource(r2);
+		List<Statement> statementsToRemove = model.listStatements(r2Resource, null, (RDFNode)null).toList();
+		statementsToRemove.addAll(model.listStatements(null, null, (RDFNode)r2Resource).toList());
+		model.remove(statementsToRemove);
+		// on récupère les statements des alts de r1
+		Resource r1Resource = model.getResource(r1);
+		List<Resource> alts = model.listStatements(null, model.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1"), (RDFNode)r1Resource).toList().stream().map(s -> s.getSubject()).collect(Collectors.toList());
+		List<Statement> altsSubject = new ArrayList<>();
+		for (Resource alt : alts) {
+			altsSubject.addAll(model.listStatements(alt, null, (RDFNode)null).toList());
+		}
+		List<Statement> altsObject = new ArrayList<>();
+		for (Resource alt : alts) {
+			altsObject.addAll(model.listStatements(null, null, (RDFNode)alt).toList());
+		}
+		// il faut garder uniquement les statements de altsSubject et altsObject qui nous intéressent (qui sont lié à d'autres resources) et supprimer les autres
+		List<Statement> newStatements = new ArrayList<>();
+		for (Statement statement : altsSubject) {
+			if (statement.getPredicate().getNameSpace().equals(IGN_NS)) {
+				Statement newStatement = model.createStatement(r1Resource, statement.getPredicate(), statement.getObject());
+				newStatements.add(newStatement);
+			}
+		}
+		for (Statement statement : altsObject) {
+			if (statement.getPredicate().getNameSpace().equals(IGN_NS)) {
+				Statement newStatement = model.createStatement(statement.getSubject(), statement.getPredicate(), r1Resource);
+				newStatements.add(newStatement);
+			}
+		}
+		// par mesure de sécurité on remet les statements qui impliquent r1 ? 		
+		// on supprime ces statements de clone et on les rajoute en changeant le sujet ou l'objet (l'alt) par r1
+		model.remove(altsObject);
+		model.remove(altsSubject);
+		model.add(newStatements);
+		// on supprime r1 type alt de clone
+		
+		
+		return model;
+		
+	}
+	
+	private Model transformModelByKeepingR2(Model original, String r1, String r2) {
+		// F(model, r1, r2, altsR1R2)
+		//  clone <- clone de model
+		Model model = cloneModel(original);
+		// on supprime de clone tous les statements de r2
+		Resource r1Resource = model.getResource(r1);
+		List<Statement> statementsToRemove = model.listStatements(r1Resource, null, (RDFNode)null).toList();
+		statementsToRemove.addAll(model.listStatements(null, null, (RDFNode)r1Resource).toList());
+		model.remove(statementsToRemove);
+		// on récupère les statements des alts de r1
+		Resource r2Resource = model.getResource(r2);
+		List<Resource> alts = model.listStatements(null, model.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2"), (RDFNode)r2Resource).toList().stream().map(s -> s.getSubject()).collect(Collectors.toList());
+		List<Statement> altsSubject = new ArrayList<>();
+		for (Resource alt : alts) {
+			altsSubject.addAll(model.listStatements(alt, null, (RDFNode)null).toList());
+		}
+		List<Statement> altsObject = new ArrayList<>();
+		for (Resource alt : alts) {
+			altsObject.addAll(model.listStatements(null, null, (RDFNode)alt).toList());
+		}
+		// il faut garder uniquement les statements de altsSubject et altsObject qui nous intéressent (qui sont lié à d'autres resources) et supprimer les autres
+		List<Statement> newStatements = new ArrayList<>();
+		for (Statement statement : altsSubject) {
+			if (statement.getPredicate().getNameSpace().equals(IGN_NS)) {
+				Statement newStatement = model.createStatement(r2Resource, statement.getPredicate(), statement.getObject());
+				newStatements.add(newStatement);
+			}
+		}
+		for (Statement statement : altsObject) {
+			if (statement.getPredicate().getNameSpace().equals(IGN_NS)) {
+				Statement newStatement = model.createStatement(statement.getSubject(), statement.getPredicate(), r2Resource);
+				newStatements.add(newStatement);
+			}
+		}
+		// par mesure de sécurité on remet les statements qui impliquent r1 ? 		
+		// on supprime ces statements de clone et on les rajoute en changeant le sujet ou l'objet (l'alt) par r1
+		model.remove(altsObject);
+		model.remove(altsSubject);
+		model.add(newStatements);
+		// on supprime r1 type alt de clone
+		
+		
+		return model;
+		
+	}
+	private List<Model> explodeAltsV5(Model model) {
+		saveModelToFile(workingDirectory + "original.n3", model, "N3");
+		List<Model> results = new ArrayList<>();
+		results.add(model);
+		List<Resource> alts = model.listStatements(null, null, model.createResource("http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt")).toList().stream().map(s -> s.getSubject()).collect(Collectors.toList());
+		if (alts == null || alts.isEmpty())
+			return results;
+		Map<String, String> r1AndR2 = new HashMap<>();
+		for (Resource alt : alts) {
+			Resource r1 = (Resource) model.listStatements(alt, model.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1"), (RDFNode)null).toList().stream().findFirst().get().getObject();
+			Resource r2 = (Resource) model.listStatements(alt, model.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2"), (RDFNode)null).toList().stream().findFirst().get().getObject();
+			r1AndR2.put(r1.toString(), r2.toString());
+		}
+		for (Entry<String, String> entry : r1AndR2.entrySet()) {
+			String r1 = entry.getKey();
+			String r2 = entry.getValue();
+			List<Model> resultsTmp = new ArrayList<>();
+			for (Model model2 : results) {
+				Model newModel = transformModelByKeepingR1(model2, r1, r2);		
+				resultsTmp.add(newModel);
+			}
+			for (Model model2 : results) {
+				Model newModel = transformModelByKeepingR2(model2, r1, r2);				
+				resultsTmp.add(newModel);		
+			}
+			results.clear();
+			results.addAll(resultsTmp);
+		}
+		
+		int i = 0;
+		for (Model model2 : results) {
+			saveModelToFile(workingDirectory + i + ".n3", model2, "N3");
+			i++;
+		}
+		
+		return results;
+	}
+	private List<Model> explodeAltsV4(Model model) {
+		// Pour chaque Alt on récupère les couples (r1, r2)
+		// on passe dans une fonction F(model, r1, r2) -> newModel1 qui supprime r2, et remplace les alts de altsR1R2 par r1
+		// on recommence F(model, r2, r1) -> newModel2
+		// pour newModel1 et newModel2 on relance le tout et on fusionne
+		
+		
+		saveModelToFile(workingDirectory + "original.n3", model, "N3");
+		List<Model> results = new ArrayList<>();
+		results.add(model);
+		List<Resource> alts = model
+				.listStatements(null, null,
+						model.createResource("http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt"))
+				.toList().stream().map(s -> s.getSubject()).collect(Collectors.toList());
+		if (alts == null || alts.isEmpty())
+			return results;
+		Map<String, Map<String, Set<Resource>>> altsByR1ThenR2 = new HashMap<>();
+		String r1STmp = null;
+		String r2STmp = null;
+		for (Resource alt : alts) {
+			Resource r1 = (Resource) model.getProperty(alt, model.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1")).getObject();
+			Resource r2 = (Resource) model.getProperty(alt, model.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2")).getObject();
+			r1STmp = r1.toString();
+			r2STmp = r2.toString();
+			Map<String, Set<Resource>> mapTmp = altsByR1ThenR2.containsKey(r1STmp) ? altsByR1ThenR2.get(r1STmp) : new HashMap<>();
+			Set<Resource> altsTmp = mapTmp.containsKey(r2STmp) ? mapTmp.get(r2STmp) : new HashSet<>();
+			altsTmp.add(alt);
+			mapTmp.put(r2STmp, altsTmp);
+			altsByR1ThenR2.put(r1STmp, mapTmp);
+		}
+//		final String r1S = r1STmp;
+//		final String r2S = r2STmp;
+		for (Entry<String, Map<String, Set<Resource>>> entry : altsByR1ThenR2.entrySet()) {
+			String r1S = entry.getKey();
+			String r2S = entry.getValue().keySet().stream().findFirst().get();
+			Set<Resource> alts2 = entry.getValue().get(r2S);
+			List<Model> newModels = new ArrayList<>();
+			for (Model model2 : results) {
+				for (Resource alt : alts2) {
+					renameResource(model2, alt, r1S);
+					deleteResource(model2, alt);
+					deleteResource(model2, model2.getResource(r2S));
+				}
+				newModels.add(cloneModel(model2));
+			}
+
+			for (Model model2 : results) {
+				for (Resource alt : alts2) {
+					renameResource(model2, alt, r2S);
+					deleteResource(model2, alt);
+					deleteResource(model2, model2.getResource(r1S));
+				}
+				newModels.add(cloneModel(model2));
+			}
+			results.clear();
+			results.addAll(newModels);
+		}
+		int i = 0;
+		for (Model model2 : results) {
+			saveModelToFile(workingDirectory + i + ".n3", model2, "N3");
+			i++;
+		}
+		return results;
+		
+//		List<Model> models = new ArrayList<>();
+//		List<Statement> statements = model.listStatements().toList();
+//		Set<Resource> altsFromR1AndR2 = altsByR1ThenR2.get(r1S).get(r2S);
+//		Model modelR1 = ModelFactory.createDefaultModel(); // ajouter NS
+//		model.getNsPrefixMap().keySet()
+//		.forEach(prefix -> modelR1.setNsPrefix(prefix, model.getNsPrefixMap().get(prefix)));
+//		// on supprime R2
+//		List<Statement> statementsR1  = statements.stream().filter(s -> !s.getSubject().toString().equals(r2S) && !s.getObject().toString().equals(r2S) && !s.getPredicate().getURI().equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#type")).collect(Collectors.toList());
+//		// on élimine le lien entre l'alt et R1
+//		statementsR1 = statementsR1.stream().filter(s -> !s.getPredicate().getURI().equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1") || !altsFromR1AndR2.stream().anyMatch(a -> a.toString().equals(s.getSubject().toString()))).collect(Collectors.toList());
+//		List<Statement> statementToChange = new ArrayList<>();
+//		for (Statement statement : statementsR1) {
+//			if (altsFromR1AndR2.stream().anyMatch(a -> a.toString().equals(statement.getSubject().toString()) || a.toString().equals(statement.getObject().toString()))) {
+//				statementToChange.add(statement);				
+//			}
+//		}
+//		for (Statement statement : statementToChange) {
+//			statementsR1.remove(statement);
+//			Statement newStatement;
+//			if (altsFromR1AndR2.stream().anyMatch(a -> a.toString().equals(statement.getSubject().toString()))) {
+//				newStatement = modelR1.createStatement(modelR1.createResource(r1S), statement.getPredicate(), statement.getObject());
+//			} else {
+//				newStatement = modelR1.createStatement(statement.getSubject(), statement.getPredicate(), modelR1.createResource(r1S));
+//			}
+//			statementsR1.add(newStatement);
+//		}
+//		modelR1.add(statementsR1);
+//		models.add(modelR1);
+//		
+//		
+//		
+//		Model modelR2 = ModelFactory.createDefaultModel(); // ajouter NS
+//		model.getNsPrefixMap().keySet()
+//				.forEach(prefix -> modelR2.setNsPrefix(prefix, model.getNsPrefixMap().get(prefix)));
+//		// on supprime R1
+//		List<Statement> statementsR2  = statements.stream().filter(s -> !s.getSubject().toString().equals(r1S) && !s.getObject().toString().equals(r1S) && !s.getPredicate().getURI().equals("http://www.w2.org/2999/01/11-rdf-syntax-ns#type")).collect(Collectors.toList());
+//		// on élimine le lien entre l'alt et R2
+//		statementsR2 = statementsR2.stream().filter(s -> !s.getPredicate().getURI().equals("http://www.w2.org/2999/01/11-rdf-syntax-ns#_2") || !altsFromR1AndR2.stream().anyMatch(a -> a.toString().equals(s.getSubject().toString()))).collect(Collectors.toList());
+//		statementToChange.clear();
+//		for (Statement statement : statementsR2) {
+//			if (altsFromR1AndR2.stream().anyMatch(a -> a.toString().equals(statement.getSubject().toString()) || a.toString().equals(statement.getObject().toString()))) {
+//				statementToChange.add(statement);				
+//			}
+//		}
+//		for (Statement statement : statementToChange) {
+//			statementsR2.remove(statement);
+//			Statement newStatement;
+//			if (altsFromR1AndR2.stream().anyMatch(a -> a.toString().equals(statement.getSubject().toString()))) {
+//				newStatement = modelR2.createStatement(modelR2.createResource(r2S), statement.getPredicate(), statement.getObject());
+//			} else {
+//				newStatement = modelR2.createStatement(statement.getSubject(), statement.getPredicate(), modelR2.createResource(r2S));
+//			}
+//			statementsR2.add(newStatement);
+//		}
+//		modelR2.add(statementsR2);
+//		models.add(modelR2);
+//		
+//		
+//		List<Model> newModels = new ArrayList<>();
+//		for (Model m : models) {
+//			newModels.addAll(explodeAltsV4(m));
+//		}
+//		return newModels;
+	}
+//	private List<Model> explodeAltsV3(Model currentModel) {
+//		Model currentModelClone = cloneModel(currentModel);
+//		List<Model> results = new ArrayList<>();
+//		List<Resource> alts = currentModelClone
+//				.listStatements(null, null,
+//						currentModelClone.createResource("http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt"))
+//				.toList().stream().map(s -> s.getSubject()).collect(Collectors.toList());
+//		results.add(currentModelClone);
+//		if (alts.isEmpty()) 
+//			return results;
+//		List<Statement> allStatements = currentModelClone.listStatements().toList();
+//		List<Statement> statementsToKeepWhatever = allStatements.stream().filter(s -> !s.getSubject().isAnon() && !s.getObject().isAnon()).collect(Collectors.toList());
+//		Set<Statement> statementsToRemoveOrTransform = new HashSet<>(allStatements);
+//		statementsToRemoveOrTransform.removeAll(statementsToKeepWhatever);
+//		Map<String, Map<String, Set<Resource>>> altsByR1ThenR2 = new HashMap<>();
+//		for (Resource alt : alts) {
+//			Resource r1 = (Resource) currentModelClone.getProperty(alt, currentModelClone.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1")).getObject();
+//			Resource r2 = (Resource) currentModelClone.getProperty(alt, currentModelClone.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2")).getObject();
+//			String r1S = r1.toString();
+//			String r2S = r2.toString();
+//			Map<String, Set<Resource>> mapTmp = altsByR1ThenR2.containsKey(r1S) ? altsByR1ThenR2.get(r1S) : new HashMap<>();
+//			Set<Resource> altsTmp = mapTmp.containsKey(r2S) ? mapTmp.get(r2S) : new HashSet<>();
+//			altsTmp.add(alt);
+//			mapTmp.put(r2S, altsTmp);
+//			altsByR1ThenR2.put(r1S, mapTmp);
+//		}
+//		List<List<Statement>> statementsFinal = new ArrayList<>(2^altsByR1ThenR2.size());
+//		for (Entry<String, Map<String, Set<Resource>>> entry : altsByR1ThenR2.entrySet()) {
+//			String r1S = entry.getKey();
+//			String r2S = entry.getValue().keySet().toArray(new String[1])[0];
+//			List<Statement> statementsToAdd = new ArrayList<>(statementsToKeepWhatever);
+//			
+//		}
+////		for (Entry<String, List<Resource>> entry : altsByR1.entrySet()) {
+////			Resource r1 = statementsToRemoveOrTransform.stream().filter(s -> s.)
+////		}
+//		saveModelToFile(workingDirectory + "modelOriginal.n3", currentModelClone, "N3");
+////		for (Resource alt : alts) {
+////			deleteResource(currentModelClone, alt);
+////		}
+//////		currentModelClone.listStatements().toList().forEach(s -> logger.info(s));
+//		int i = 0;
+//		for (Entry<String, List<Resource>> entry : altsByR1.entrySet()) {
+//			String r1S = null;
+//			String r2S = null;
+//			Set<String> resourcesAlt = new HashSet<>();
+//			List<Statement> statementsWithAltOnObject = new ArrayList<>();
+//			List<Statement> statementsWithAltOnSubject = new ArrayList<>();
+//			for (Resource alt : entry.getValue()) {
+//				Resource r1 = (Resource) currentModelClone.getProperty(alt, currentModelClone.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1")).getObject();
+//				Resource r2 = (Resource) currentModelClone.getProperty(alt, currentModelClone.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2")).getObject();
+//				r1S = r1.toString();
+//				r2S = r2.toString();
+//				resourcesAlt.add(r1.toString());
+//				resourcesAlt.add(r2.toString());
+//				statementsWithAltOnObject.addAll(currentModelClone.listStatements(null, null, (RDFNode)alt).toList());
+//				statementsWithAltOnSubject.addAll(currentModelClone.listStatements(alt, linkSameBag, (RDFNode)null).toList());
+//				statementsWithAltOnSubject.addAll(currentModelClone.listStatements(alt, linkSameRoute, (RDFNode)null).toList());
+//				statementsWithAltOnSubject.addAll(currentModelClone.listStatements(alt, linkSameSequence, (RDFNode)null).toList());
+//			}
+//			List<Model> modelsToadd = new ArrayList<>();
+//			for (String resourceToKeepString : resourcesAlt) {
+//				String resourceToDeleteString = resourceToKeepString.equals(r1S) ? r2S : r1S;
+//				for (Model model : results) {
+//					saveModelToFile(workingDirectory + "model_" + i + "_Original.n3", model, "N3");
+//					List<Statement> allStatements = model.listStatements().toList();
+//					Model newModel = ModelFactory.createDefaultModel();
+//					 //ajouter names spaces
+//					currentModelClone.getNsPrefixMap().keySet()
+//					.forEach(prefix -> newModel.setNsPrefix(prefix, currentModelClone.getNsPrefixMap().get(prefix)));
+//					// on filtre les statements de allStatements
+//					// on supprime les propriétés dont le noeud a supprimmer est sujet ou objet
+//					// et on supprime la propriété qui lie l'alt et le noeud a garder
+//					allStatements = allStatements.stream()
+//							.filter(s -> !(s.getObject().toString().equals(resourceToDeleteString) || s.getSubject().toString().equals(resourceToDeleteString) || 
+//									(s.getObject().toString().equals(resourceToDeleteString) && (s.getPredicate().getURI().equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1") || s.getPredicate().getURI().equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2")))))
+//							.collect(Collectors.toList());
+//					// on supprime les propriétés des alts
+//					for (Resource alt : entry.getValue()) {
+//						allStatements = allStatements.stream().filter(s -> !(s.getObject().toString().equals(alt.toString()) || s.getSubject().toString().equals(alt.toString()))).collect(Collectors.toList());
+//					}
+//					// on ajoute à all statement les statements de type : S P alt
+//					Resource resourceToKeep = newModel.createResource(resourceToKeepString);
+//					for (Statement statement : statementsWithAltOnObject) {
+//						Statement newStatement = newModel.createStatement(statement.getSubject(), statement.getPredicate(), resourceToKeep);
+//						allStatements.add(newStatement);
+//					}
+//					for (Statement statement : statementsWithAltOnSubject) {
+//						Statement newStatement = newModel.createStatement(resourceToKeep, statement.getPredicate(), statement.getObject());
+//						allStatements.add(newStatement);
+//					}
+//					newModel.add(allStatements);
+//					// on modifie les statements de statementsWithAltOnObject
+//					
+//					modelsToadd.add(newModel);
+//					saveModelToFile(workingDirectory + "model_" + i + ".n3", currentModelClone, "N3");
+//					i++;
+//				}
+//			}
+//			results.clear();
+//			results.addAll(modelsToadd);
+//		}
+//		
+//		return results;
+//	}
 	
 	private List<Model> explodeAltsV2(Model currentModel) {
 		Model currentModelClone = cloneModel(currentModel);

@@ -2,6 +2,7 @@ package fr.ign.georeden.nelinker;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -74,7 +75,8 @@ public class MainNELApp {
 	}
 
 	public static void main(String[] args) {
-
+		GraphMatching graphMatching2 = new GraphMatching(workingDirectory);
+		
 		// Xpath pour bag (différencier bag et séq)
 		// //*[@xml:id and following-sibling::*[1][@lemma='et'] and
 		// (following-sibling::*[2][@xml:id] or (
