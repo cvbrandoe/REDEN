@@ -153,11 +153,12 @@ public class MainNELApp {
 			Optional<Toponym> topoOpt = currentToponyms.stream().filter(t -> t.getReferent() != null).findFirst();
 			if (!topoOpt.isPresent())
 				topoOpt = currentToponyms.stream().findFirst();
-			Toponym topo = topoOpt.get();
+			Toponym topo = topoOpt.isPresent() ? topoOpt.get() : null;
 			Map<String, List<List<String>>> allMentionsWithURIs = new HashMap<>();
 			List<List<String>> listTmp = new ArrayList<>();
-			listTmp.add(topo.getScoreCriterionToponymCandidate().stream().map(s -> s.getCandidate().getResource().toString()).collect(Collectors.toList()));
-			allMentionsWithURIs.put(topo.getName(), listTmp);
+			if (topo != null)
+				listTmp.add(topo.getScoreCriterionToponymCandidate().stream().map(s -> s.getCandidate().getResource().toString()).collect(Collectors.toList()));
+			allMentionsWithURIs.put(topo != null ? topo.getName() : "", listTmp);
 			allMentionsWithUrisPerContextinText.add(allMentionsWithURIs);
 		}
 		

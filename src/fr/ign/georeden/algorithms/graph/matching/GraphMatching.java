@@ -409,8 +409,8 @@ public class GraphMatching {
 				 .sorted((l1, l2) -> Integer
 				 .compare(l2.get(0).listStatements().toList().size(),
 				 l1.get(0).listStatements().toList().size()))
-//				 .skip(18)
-//				 .limit(1)
+//				 .skip(8)
+//				 .limit(2)
 				 .collect(Collectors.toList())) {
 			logger.info("Traitement de la séquence " + seqCount + "/" + altsBySeq.size());
 			logger.info(alts.size() + " mini graphes à traiter pour cette séquence.");
