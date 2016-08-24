@@ -388,14 +388,14 @@ public class GraphMatching {
 			logger.info("Traitement de la séquence " + seqCount + "/" + sequences.size());
 			seqCount++;
 			Model currentModel = getModelsFromSequence(querySolutionEntries, sequence);
-			saveModelToFile(workingDirectory + "testAlt_" + seqCount + "_original.n3", currentModel, "N3");
+//			saveModelToFile(workingDirectory + "testAlt_" + seqCount + "_original.n3", currentModel, "N3");
 			currentModel = addRlsp(currentModel, teiRdf);
 			List<Model> alts = explodeAltsV5(currentModel);
-			int g = 0;
-			for (Model model : alts) {
-				saveModelToFile(workingDirectory + "testAlt_" + seqCount + "_" + g + ".n3", model, "N3");
-				g++;
-			}
+//			int g = 0;
+//			for (Model model : alts) {
+//				saveModelToFile(workingDirectory + "testAlt_" + seqCount + "_" + g + ".n3", model, "N3");
+//				g++;
+//			}
 			altsBySeq.add(alts);
 		}
 
@@ -405,8 +405,8 @@ public class GraphMatching {
 				 .sorted((l1, l2) -> Integer
 				 .compare(l2.get(0).listStatements().toList().size(),
 				 l1.get(0).listStatements().toList().size()))
-				// .skip(2)
-				.limit(1)
+//				 .skip(10)
+//				 .limit(1)
 				 .collect(Collectors.toList())) {
 			logger.info("Traitement de la séquence " + seqCount + "/" + altsBySeq.size());
 			logger.info(alts.size() + " mini graphes à traiter pour cette séquence.");
@@ -455,8 +455,8 @@ public class GraphMatching {
 					}
 				}
 				
-				saveModelToFile(workingDirectory + "seq_original_" + seqCount + ".n3", bestPath.getModel(), "N3");
-				updateAndSaveModelWithResultsV2(bestPath.getModel(), workingDirectory + "seq_" + seqCount + ".n3");
+				//saveModelToFile(workingDirectory + "seq_original_" + seqCount + ".n3", bestPath.getModel(), "N3");
+				//updateAndSaveModelWithResultsV2(bestPath.getModel(), workingDirectory + "seq_" + seqCount + ".n3");
 				results.add(bestPath);
 				// logger.info(bestPath.getCostEdition());
 				// bestPath.getEditionPath().forEach(step -> {
@@ -491,6 +491,9 @@ public class GraphMatching {
 	 */
 	private void updateAndSaveModelWithResults(Model graph, String fileName) {
 		Model graphCopy = cloneModel(graph);
+		
+		graphCopy = removesAltFromFinalTei(graphCopy);
+		
 		for (Toponym toponym : toponymsTEI) {
 			if (toponym.getReferent() != null) {
 				renameResource(graphCopy, toponym.getResource(), toponym.getReferent().toString());
@@ -498,7 +501,6 @@ public class GraphMatching {
 			}
 		}
 		
-		graphCopy = removesAltFromFinalTei(graphCopy);
 		
 		saveModelToFile(fileName, graphCopy, "N3");
 	}
@@ -510,6 +512,8 @@ public class GraphMatching {
 	 * @param fileName the file name
 	 */
 	private void updateAndSaveModelWithResultsV2(Model graph, String fileName) {
+		//TODO fonction non utilisée pour le moment car ne marche pas
+		// elle censé remplacer les resources place/0 etc par le leur référent et supprimer dans les alts ceux qui ne sont pas sélectionnés
 		Model graphCopy = cloneModel(graph);
 		Map<String, List<Toponym>> toponymsById = toponymsTEI.stream()
 				.collect(Collectors.groupingBy((Toponym t) -> t.getXmlId().toString()));
@@ -525,6 +529,7 @@ public class GraphMatching {
 					List<Statement> sToreplace = graphCopy.listStatements(null, graphCopy.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1"), (RDFNode)toponym.get().getResource()).toList();
 					sToreplace.addAll(graphCopy.listStatements(null, graphCopy.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2"), (RDFNode)toponym.get().getResource()).toList());
 					List<Statement> sToAdd = new ArrayList<>();
+					//TODO modifier sToreplace car tjs vide
 					for (Statement statement : sToreplace) {
 						sToAdd.add(graphCopy.createStatement(statement.getSubject(), statement.getPredicate(), toponym.get().getReferent()));
 					}
@@ -710,6 +715,53 @@ public class GraphMatching {
 		return model;
 		
 	}
+	private Model transformModelByKeepingWaypoint1(Model original, String r1, String r2) {
+		// F(model, r1, r2, altsR1R2)
+		//  clone <- clone de model
+		Model model = cloneModel(original);
+		// on supprime de clone tous les statements de r2
+		Resource r2Resource = model.getResource(r2);
+		List<Statement> statementsToRemove = model.listStatements(r2Resource, null, (RDFNode)null).toList();
+		statementsToRemove.addAll(model.listStatements(null, null, (RDFNode)r2Resource).toList());
+		model.remove(statementsToRemove);
+		// on récupère les statements des alts de r1
+		Resource r1Resource = model.getResource(r1);
+		Resource waypoint1 = model.listStatements(null, spatialReference, (RDFNode)r1Resource).toList().stream().map(s -> s.getSubject()).findFirst().get();//.collect(Collectors.toList());
+		List<Resource> alts = model.listStatements(null, model.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1"), (RDFNode)waypoint1).toList().stream().map(s -> s.getSubject()).collect(Collectors.toList());
+		List<Statement> altsSubject = new ArrayList<>();
+		for (Resource alt : alts) {
+			altsSubject.addAll(model.listStatements(alt, null, (RDFNode)null).toList());
+		}
+		List<Statement> altsObject = new ArrayList<>();
+		for (Resource alt : alts) {
+			altsObject.addAll(model.listStatements(null, null, (RDFNode)alt).toList());
+		}
+		// il faut garder uniquement les statements de altsSubject et altsObject qui nous intéressent (qui sont lié à d'autres resources) et supprimer les autres
+		List<Statement> newStatements = new ArrayList<>();
+//		for (Statement statement : altsSubject) {
+//			if (statement.getPredicate().getNameSpace().equals(IGN_NS)) {
+//				Statement newStatement = model.createStatement(waypoint1, statement.getPredicate(), statement.getObject());
+//				newStatements.add(newStatement);
+//			}
+//		}
+		for (Statement statement : altsObject) {
+			if (statement.getPredicate().getURI().equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1") || statement.getPredicate().getURI().equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2")) {
+				Statement newStatement = model.createStatement(statement.getSubject(), statement.getPredicate(), waypoint1);
+				newStatements.add(newStatement);
+			}
+		}
+		// par mesure de sécurité on remet les statements qui impliquent r1 ? 		
+		// on supprime ces statements de clone et on les rajoute en changeant le sujet ou l'objet (l'alt) par r1
+		model.remove(altsObject);
+		model.remove(altsSubject);
+		model.add(newStatements);
+		// on supprime r1 type alt de clone
+		
+		
+		return model;
+		
+	}
+	
 	
 	private Model transformModelByKeepingR2(Model original, String r1, String r2) {
 		// F(model, r1, r2, altsR1R2)
@@ -756,6 +808,52 @@ public class GraphMatching {
 		return model;
 		
 	}
+	private Model transformModelByKeepingWaypoint2(Model original, String r1, String r2) {
+		// F(model, r1, r2, altsR1R2)
+		//  clone <- clone de model
+		Model model = cloneModel(original);
+		// on supprime de clone tous les statements de r2
+		Resource r1Resource = model.getResource(r1);
+		List<Statement> statementsToRemove = model.listStatements(r1Resource, null, (RDFNode)null).toList();
+		statementsToRemove.addAll(model.listStatements(null, null, (RDFNode)r1Resource).toList());
+		model.remove(statementsToRemove);
+		// on récupère les statements des alts de r1
+		Resource r2Resource = model.getResource(r2);
+		Resource waypoint2 = model.listStatements(null, spatialReference, (RDFNode)r2Resource).toList().stream().map(s -> s.getSubject()).findFirst().get();//.collect(Collectors.toList());
+		List<Resource> alts = model.listStatements(null, model.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2"), (RDFNode)waypoint2).toList().stream().map(s -> s.getSubject()).collect(Collectors.toList());
+		List<Statement> altsSubject = new ArrayList<>();
+		for (Resource alt : alts) {
+			altsSubject.addAll(model.listStatements(alt, null, (RDFNode)null).toList());
+		}
+		List<Statement> altsObject = new ArrayList<>();
+		for (Resource alt : alts) {
+			altsObject.addAll(model.listStatements(null, null, (RDFNode)alt).toList());
+		}
+		// il faut garder uniquement les statements de altsSubject et altsObject qui nous intéressent (qui sont lié à d'autres resources) et supprimer les autres
+		List<Statement> newStatements = new ArrayList<>();
+//		for (Statement statement : altsSubject) {
+//			if (statement.getPredicate().getNameSpace().equals(IGN_NS)) {
+//				Statement newStatement = model.createStatement(waypoint2, statement.getPredicate(), statement.getObject());
+//				newStatements.add(newStatement);
+//			}
+//		}
+		for (Statement statement : altsObject) {
+			if (statement.getPredicate().getURI().equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1") || statement.getPredicate().getURI().equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2")) {
+				Statement newStatement = model.createStatement(statement.getSubject(), statement.getPredicate(), waypoint2);
+				newStatements.add(newStatement);
+			}
+		}
+		// par mesure de sécurité on remet les statements qui impliquent r1 ? 		
+		// on supprime ces statements de clone et on les rajoute en changeant le sujet ou l'objet (l'alt) par r1
+		model.remove(altsObject);
+		model.remove(altsSubject);
+		model.add(newStatements);
+		// on supprime r1 type alt de clone
+		
+		
+		return model;
+		
+	}
 
 	/**
 	 * Removes alt from final tei.
@@ -765,31 +863,43 @@ public class GraphMatching {
 	 */
 	private Model removesAltFromFinalTei(Model tei) {
 		Model model = cloneModel(tei);
-		
+		saveModelToFile(workingDirectory + "TEIbeforeRemovingAlts.n3", model, "N3");
 		List<Resource> alts = model.listStatements(null, null, (RDFNode)model.createResource("http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt")).toList().stream().map(s -> s.getSubject()).collect(Collectors.toList());
 		if (alts == null || alts.isEmpty())
 			return model;
 		Map<String, String> r1AndR2 = new HashMap<>();
+		Map<String, Resource> r1Alt = new HashMap<>();
 		for (Resource alt : alts) {
-			Resource r1 = (Resource) model.listStatements(alt, model.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1"), (RDFNode)null).toList().stream().findFirst().get().getObject();
-			Resource r2 = (Resource) model.listStatements(alt, model.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2"), (RDFNode)null).toList().stream().findFirst().get().getObject();
-			r1AndR2.put(r1.toString(), r2.toString());
+			Resource waypoint1 = (Resource) model.listStatements(alt, model.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1"), (RDFNode)null).toList().stream().findFirst().get().getObject();
+			Resource waypoint2 = (Resource) model.listStatements(alt, model.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2"), (RDFNode)null).toList().stream().findFirst().get().getObject();
+			
+			if (waypoint1.hasProperty(spatialReference) && waypoint2.hasProperty(spatialReference)) {
+				Resource r1 = (Resource) model.listStatements(waypoint1, spatialReference, (RDFNode)null).toList().stream().findFirst().get().getObject();
+				Resource r2 = (Resource) model.listStatements(waypoint2, spatialReference, (RDFNode)null).toList().stream().findFirst().get().getObject();
+				r1AndR2.put(r1.toString(), r2.toString());
+				r1Alt.put(r1.toString(), alt);
+			}
 		}
 		for (Entry<String, String> entry : r1AndR2.entrySet()) {
 			String r1 = entry.getKey();
 			String r2 = entry.getValue();
+			if (r1 == null || r1.isEmpty())
+				continue;
 			// il faut savoir qui de r1 ou de r2 on gardera et donc rechercher parmis les topo du tei
-			Toponym t1 = toponymsTEI.stream().filter(t -> t.getResource().toString().equals(r1)).findFirst().get();
+			//logger.info(r1);
+			Toponym t1 = toponymsTEI.stream().filter(t -> t.getResource() != null && t.getResource().toString().equals(r1)).findFirst().get();
 //			Toponym t2 = toponymsTEI.stream().filter(t -> t.getResource().toString().equals(r2)).findFirst().get();
 			boolean keepR1RemoveR2;
+			//TODO vérifier que c'est bien r1 et r2 (resource du topo) qu'il faut mettre et pas le référent
 			if (t1.getReferent() != null)
 				keepR1RemoveR2 = true;
 			else
-				keepR1RemoveR2 = true;
-			if (keepR1RemoveR2)
-				model = transformModelByKeepingR1(model, r1, r2);
-			else
-				model = transformModelByKeepingR2(model, r1, r2);
+				keepR1RemoveR2 = false;
+			if (keepR1RemoveR2) {
+				model = transformModelByKeepingWaypoint1(model, r1, r2);
+			} else {
+				model = transformModelByKeepingWaypoint2(model, r1, r2);
+			}
 		}
 		return model;
 	}
