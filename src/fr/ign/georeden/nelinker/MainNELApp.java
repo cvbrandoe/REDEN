@@ -61,6 +61,8 @@ import fr.ign.georeden.utils.JSONUtil;
 import fr.ign.georeden.utils.OptionManager;
 import fr.ign.georeden.utils.RDFUtil;
 import fr.ign.georeden.utils.XMLUtil;
+import fr.lip6.reden.nelinker.EvalInfo;
+import fr.lip6.reden.nelinker.ResultsAndEvaluationNEL;
 
 public class MainNELApp {
 
@@ -131,9 +133,38 @@ public class MainNELApp {
 		Document teiResults =  fillXmlWithResults(teiSourceDocument, results);
 		try {
 			XMLUtil.displayXml(teiResults, workingDirectory + "teiResult.xml", false);
+			XMLUtil.displayXml(teiResults, workingDirectory + "goldRes\\" + "teiResult-outV3.xml", false);
 		} catch (TransformerException e) {
 			logger.info(e);
 		}
+		// namedEntityTag corresponds to the name of the tag identifying a named-entity in the TEI-XML
+		String annotationTag = "placeName";
+		// xpathExpresion is the XPATH expression which enables the customization of the size of the context 
+		String xpathExpresion = "//p"; // //body/div
+		String outDir = workingDirectory + "goldRes\\";
+		// propertyTagRef is the property name of the TEI-XML named-entity tag where REDEN will store the URIs for each mention
+		String propertyTagRef = "ref_auto";
+		List<Map<String, List<List<String>>>> allMentionsWithUrisPerContextinText = new ArrayList<>();
+		int max = results.stream().mapToInt(t -> t.getXmlId().intValue()).distinct().max().getAsInt();
+		
+		for (int i = 0; i <= max; i++) {
+			final int index = i;
+			List<Toponym> currentToponyms = results.stream().filter(t -> t.getXmlId() == index).collect(Collectors.toList());
+			Optional<Toponym> topoOpt = currentToponyms.stream().filter(t -> t.getReferent() != null).findFirst();
+			if (!topoOpt.isPresent())
+				topoOpt = currentToponyms.stream().findFirst();
+			Toponym topo = topoOpt.get();
+			Map<String, List<List<String>>> allMentionsWithURIs = new HashMap<>();
+			List<List<String>> listTmp = new ArrayList<>();
+			listTmp.add(topo.getScoreCriterionToponymCandidate().stream().map(s -> s.getCandidate().getResource().toString()).collect(Collectors.toList()));
+			allMentionsWithURIs.put(topo.getName(), listTmp);
+			allMentionsWithUrisPerContextinText.add(allMentionsWithURIs);
+		}
+		
+		List<EvalInfo> collectedResults = ResultsAndEvaluationNEL.compareResultsWithGold("teiResult.xml", 
+				annotationTag, xpathExpresion, outDir, propertyTagRef, allMentionsWithUrisPerContextinText);
+		//compute final results
+		ResultsAndEvaluationNEL.computeFinalResults(collectedResults);
 		
 
 		// String query =
@@ -213,7 +244,7 @@ public class MainNELApp {
 					String xmlId = currentNode.getNodeValue();
 					if (xmlId != null && toponymsById.containsKey(xmlId)) {
 						Optional<fr.ign.georeden.algorithms.graph.matching.Toponym> optTopo = toponymsById.get(xmlId).stream()
-								.filter(t -> t.getSubstitutionCostResult() != null)
+								.filter(t -> t.getReferent() != null && t.getSubstitutionCostResult() != null)
 								.sorted((t1, t2) -> Float.compare(t1.getSubstitutionCostResult().getTotalCost(), t2.getSubstitutionCostResult().getTotalCost()))
 								.findFirst();
 						String value = "nil";
@@ -221,7 +252,7 @@ public class MainNELApp {
 							value = optTopo.get().getReferent().toString();
 						}
 						Element placeName = (Element)name.getParentNode();
-						placeName.setAttribute("ref", value);						
+						placeName.setAttribute("ref_auto", value);						
 					}
 				}
 			}
