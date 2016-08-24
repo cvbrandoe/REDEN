@@ -318,7 +318,7 @@ public class GraphMatching {
 				 .compare(l2.get(0).listStatements().toList().size(),
 				 l1.get(0).listStatements().toList().size()))
 				// .skip(2)
-//				.limit(1)
+				.limit(1)
 				 .collect(Collectors.toList())) {
 			logger.info("Traitement de la séquence " + seqCount + "/" + altsBySeq.size());
 			logger.info(alts.size() + " mini graphes à traiter pour cette séquence.");
@@ -412,18 +412,6 @@ public class GraphMatching {
 		
 		saveModelToFile(fileName, graphCopy, "N3");
 	}
-	private Model removesAltFromFinalTei(Model tei) {
-		Model model = cloneModel(tei);
-		
-		List<Resource> alts = model.listStatements(null, null, (RDFNode)model.createResource("http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt")).toList().stream().map(s -> s.getSubject()).collect(Collectors.toList());
-		//TODO A FINIR, ne fait rien pour l'instant
-		for (Resource alt : alts) {
-			List<Statement> altSubject = model.listStatements(alt, null, (RDFNode)null).toList();
-			List<Statement> altObject = model.listStatements(alt, null, (RDFNode)alt).toList();
-		}
-		
-		return model;
-	}
 	private void updateAndSaveModelWithResultsV2(Model graph, String fileName) {
 		Model graphCopy = cloneModel(graph);
 		Map<String, List<Toponym>> toponymsById = toponymsTEI.stream()
@@ -434,7 +422,7 @@ public class GraphMatching {
 			else {
 				Optional<Toponym> toponym = entry.getValue().stream().filter(t -> t.getReferent() != null).findFirst();
 				Optional<Toponym> toponymToRemove = entry.getValue().stream().filter(t -> t.getReferent() == null).findFirst();
-				if (toponym.isPresent() && toponym.get().getReferent() != null) {
+				if (toponym.isPresent() && toponym.get().getReferent() != null && toponymToRemove.isPresent() && toponymToRemove.get().getResource() != null) {
 					deleteResource(graphCopy, toponymToRemove.get().getResource());
 					List<Statement> sToreplace = graphCopy.listStatements(null, graphCopy.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1"), (RDFNode)toponym.get()).toList();
 					sToreplace.addAll(graphCopy.listStatements(null, graphCopy.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2"), (RDFNode)toponym.get()).toList());
@@ -552,6 +540,12 @@ public class GraphMatching {
 		}
 		return result;
 	}
+	
+	/**
+	 * !!!! Instantiates a new graph matching. This constructor is used only for tests purpose. !!!!
+	 *
+	 * @param workingDirectory the working directory
+	 */
 	public GraphMatching(String workingDirectory) {
 		this.workingDirectory = workingDirectory;
 		toponymsTEI = null;
@@ -663,6 +657,43 @@ public class GraphMatching {
 		
 		return model;
 		
+	}
+
+	/**
+	 * Removes alt from final tei.
+	 *
+	 * @param tei the tei
+	 * @return the model
+	 */
+	private Model removesAltFromFinalTei(Model tei) {
+		Model model = cloneModel(tei);
+		
+		List<Resource> alts = model.listStatements(null, null, (RDFNode)model.createResource("http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt")).toList().stream().map(s -> s.getSubject()).collect(Collectors.toList());
+		if (alts == null || alts.isEmpty())
+			return model;
+		Map<String, String> r1AndR2 = new HashMap<>();
+		for (Resource alt : alts) {
+			Resource r1 = (Resource) model.listStatements(alt, model.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1"), (RDFNode)null).toList().stream().findFirst().get().getObject();
+			Resource r2 = (Resource) model.listStatements(alt, model.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2"), (RDFNode)null).toList().stream().findFirst().get().getObject();
+			r1AndR2.put(r1.toString(), r2.toString());
+		}
+		for (Entry<String, String> entry : r1AndR2.entrySet()) {
+			String r1 = entry.getKey();
+			String r2 = entry.getValue();
+			// il faut savoir qui de r1 ou de r2 on gardera et donc rechercher parmis les topo du tei
+			Toponym t1 = toponymsTEI.stream().filter(t -> t.getResource().toString().equals(r1)).findFirst().get();
+//			Toponym t2 = toponymsTEI.stream().filter(t -> t.getResource().toString().equals(r2)).findFirst().get();
+			boolean keepR1RemoveR2;
+			if (t1.getReferent() != null)
+				keepR1RemoveR2 = true;
+			else
+				keepR1RemoveR2 = true;
+			if (keepR1RemoveR2)
+				model = transformModelByKeepingR1(model, r1, r2);
+			else
+				model = transformModelByKeepingR2(model, r1, r2);
+		}
+		return model;
 	}
 	private List<Model> explodeAltsV5(Model model) {
 		//saveModelToFile(workingDirectory + "original.n3", model, "N3");
