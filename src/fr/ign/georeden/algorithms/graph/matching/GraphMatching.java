@@ -92,6 +92,7 @@ public class GraphMatching {
 
 	/** The prop fr NS. */
 	private static final String PROP_FR_NS = "http://fr.dbpedia.org/property/";
+	private static final String GEO_NS = "http://www.w3.org/2003/01/geo/wgs84_pos#";
 
 	/** The dbo NS. */
 	private static final String DBO_NS = "http://dbpedia.org/ontology/";
@@ -156,6 +157,11 @@ public class GraphMatching {
 	private static final Property linkSameBag = ModelFactory.createDefaultModel()
 			.createProperty(IGN_NS + "linkSameBag");
 
+	private static final Property propLat = ModelFactory.createDefaultModel().createProperty(PROP_FR_NS + "latitude");
+	private static final Property propLong = ModelFactory.createDefaultModel().createProperty(PROP_FR_NS + "longitude");
+	private static final Property geoLat = ModelFactory.createDefaultModel().createProperty(GEO_NS + "lat");
+	private static final Property geoLong = ModelFactory.createDefaultModel().createProperty(GEO_NS + "long");
+	
 	private static final String PREFIXES = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
 			+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
 			+ "PREFIX prop-fr: <http://fr.dbpedia.org/property/>" + "PREFIX foaf: <http://xmlns.com/foaf/0.1/>"
@@ -274,6 +280,88 @@ public class GraphMatching {
 		return toponymsTEI;
 	}
 
+	private Model addCoordinates(Model original, String resource) {
+		Resource r = original.getResource(resource); 
+		return addCoordinates(original, r);
+	}
+	private float getLatitude(Resource r) {
+		float result = 0f;
+		Statement s = kbSource.getProperty(r, propLat);
+
+		if (s == null) {
+			s = kbSource.getProperty(r, geoLat);
+		}
+		if (s != null) {
+			RDFNode latNode = s.getObject();
+			if (latNode.isLiteral()) {
+				Literal latLiteral = (Literal) latNode;
+				Object latObject = latLiteral.getValue();
+				if (latObject != null) {
+					String latString = latObject.toString();
+					if (latString != null) {
+						try {
+							result = Float.parseFloat(latString);
+						} catch (NumberFormatException e) {
+							logger.error(e);
+						}
+					}
+				}
+			}
+		}
+		return result;
+	}
+	
+	private boolean hasLatAndLong(Resource r) {
+		Statement sLat = kbSource.getProperty(r, propLat);
+		if (sLat == null) {
+			sLat = kbSource.getProperty(r, geoLat);
+		}
+		Statement sLong = kbSource.getProperty(r, propLong);
+		if (sLong == null) {
+			sLong = kbSource.getProperty(r, geoLong);
+		}
+		return sLat != null && sLong != null;
+	}
+
+	private float getLongitude(Resource r) {
+		float result = 0f;
+		Statement s = kbSource.getProperty(r, propLong);
+
+		if (s == null) {
+			s = kbSource.getProperty(r, geoLong);
+		}
+		if (s != null) {
+			RDFNode latNode = s.getObject();
+			if (latNode.isLiteral()) {
+				Literal latLiteral = (Literal) latNode;
+				Object latObject = latLiteral.getValue();
+				if (latObject != null) {
+					String latString = latObject.toString();
+					if (latString != null) {
+						try {
+							result = Float.parseFloat(latString);
+						} catch (NumberFormatException e) {
+							logger.error(e);
+						}
+					}
+				}
+			}
+		}
+		return result;
+	}
+	private Model addCoordinates(Model original, Resource resource) {
+		if (!hasLatAndLong(resource))
+			return original;
+		float lat = getLatitude(resource);
+		float longitude = getLongitude(resource);
+		Model model = cloneModel(original);
+		Statement latStatement = model.createLiteralStatement(resource, propLat, lat);
+		Statement longStatement = model.createLiteralStatement(resource, propLong, lat);
+		model.add(latStatement);
+		model.add(longStatement);
+		return model;
+	}
+	
 	/**
 	 * Compute the heart of the algorithm. Main function.
 	 *
@@ -404,14 +492,23 @@ public class GraphMatching {
 	private void updateAndSaveModelWithResults(Model graph, String fileName) {
 		Model graphCopy = cloneModel(graph);
 		for (Toponym toponym : toponymsTEI) {
-			if (toponym.getReferent() != null)
+			if (toponym.getReferent() != null) {
 				renameResource(graphCopy, toponym.getResource(), toponym.getReferent().toString());
+				graphCopy = addCoordinates(graphCopy, toponym.getReferent());
+			}
 		}
 		
 		graphCopy = removesAltFromFinalTei(graphCopy);
 		
 		saveModelToFile(fileName, graphCopy, "N3");
 	}
+	
+	/**
+	 * Update and save the mini graph model with the results of the desambiguisation. V 2.
+	 *
+	 * @param graph the graph
+	 * @param fileName the file name
+	 */
 	private void updateAndSaveModelWithResultsV2(Model graph, String fileName) {
 		Model graphCopy = cloneModel(graph);
 		Map<String, List<Toponym>> toponymsById = toponymsTEI.stream()
@@ -420,15 +517,16 @@ public class GraphMatching {
 			if (entry.getValue().size() == 1 && entry.getValue().get(0).getReferent() != null)
 				renameResource(graphCopy, entry.getValue().get(0).getResource(), entry.getValue().get(0).getReferent().toString());
 			else {
+				//TODO revoir cette fonction elle pose pb
 				Optional<Toponym> toponym = entry.getValue().stream().filter(t -> t.getReferent() != null).findFirst();
 				Optional<Toponym> toponymToRemove = entry.getValue().stream().filter(t -> t.getReferent() == null).findFirst();
-				if (toponym.isPresent() && toponym.get().getReferent() != null && toponymToRemove.isPresent() && toponymToRemove.get().getResource() != null) {
+				if (toponym.isPresent() && toponym.get().getReferent() != null && toponymToRemove.isPresent()) {
 					deleteResource(graphCopy, toponymToRemove.get().getResource());
-					List<Statement> sToreplace = graphCopy.listStatements(null, graphCopy.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1"), (RDFNode)toponym.get()).toList();
-					sToreplace.addAll(graphCopy.listStatements(null, graphCopy.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2"), (RDFNode)toponym.get()).toList());
+					List<Statement> sToreplace = graphCopy.listStatements(null, graphCopy.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_1"), (RDFNode)toponym.get().getResource()).toList();
+					sToreplace.addAll(graphCopy.listStatements(null, graphCopy.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#_2"), (RDFNode)toponym.get().getResource()).toList());
 					List<Statement> sToAdd = new ArrayList<>();
 					for (Statement statement : sToreplace) {
-						sToAdd.add(graphCopy.createStatement(statement.getSubject(), statement.getPredicate(), toponym.get().getResource()));
+						sToAdd.add(graphCopy.createStatement(statement.getSubject(), statement.getPredicate(), toponym.get().getReferent()));
 					}
 					renameResource(graphCopy, toponym.get().getResource(), toponym.get().getReferent().toString());
 					graphCopy.remove(sToreplace);
