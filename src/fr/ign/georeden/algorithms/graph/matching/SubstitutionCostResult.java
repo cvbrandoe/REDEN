@@ -11,14 +11,16 @@ public class SubstitutionCostResult {
 	private float linkCost;
 	private float rlspCost;
 	private float totalCost;
+	private float typeCost;
 	
-	public SubstitutionCostResult(Resource r1, Resource r2, float labelCost, float linkCost, float rlspCost, float totalCost) {
+	public SubstitutionCostResult(Resource r1, Resource r2, float labelCost, float linkCost, float rlspCost, float totalCost, float typeCost) {
 		this.r1 = r1;
 		this.r2 = r2;
 		this.labelCost = labelCost;
 		this.linkCost = linkCost;
 		this.rlspCost = rlspCost;
 		this.totalCost = totalCost;
+		this.typeCost = typeCost;
 	}
 	
 	public Resource getResourceR1() {
@@ -38,6 +40,9 @@ public class SubstitutionCostResult {
 	}
 	public float getTotalCost() {
 		return this.totalCost;
+	}
+	public float getTypeCost() {
+		return this.typeCost;
 	}
 	
 	public boolean contains(Resource r1, Resource r2) {

@@ -6,7 +6,6 @@ package fr.ign.georeden.algorithms.graph.matching;
 public class CriterionToponymCandidate {
 	private float value;
 	private Candidate candidate;
-	private Toponym toponym;
 	private Criterion criterion;
 	
 	/**
@@ -17,8 +16,7 @@ public class CriterionToponymCandidate {
 	 * @param value the value
 	 * @param criterion the criterion
 	 */
-	public CriterionToponymCandidate(Toponym toponym, Candidate candidate, float value, Criterion criterion) {
-		this.toponym = toponym;
+	public CriterionToponymCandidate(Candidate candidate, float value, Criterion criterion) {
 		this.candidate = candidate;
 		this.value = value;
 		this.criterion = criterion;
@@ -26,9 +24,6 @@ public class CriterionToponymCandidate {
 	
 	public Criterion getCriterion() {
 		return this.criterion;
-	}
-	public Toponym getToponym() {
-		return this.toponym;
 	}
 	public Candidate getCandidate() {
 		return this.candidate;

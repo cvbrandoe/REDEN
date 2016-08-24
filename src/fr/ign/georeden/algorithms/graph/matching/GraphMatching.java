@@ -193,6 +193,7 @@ public class GraphMatching {
 	private final float labelWeight;
 	private final float rlspWeight;
 	private final float linkWeight;
+	private final float typeWeight;
 	private final String workingDirectory;
 	
 	private final Resource nil;
@@ -211,12 +212,13 @@ public class GraphMatching {
 	 */
 	public GraphMatching(Document teiSource, String dbPediaRdfFilePath, int numberOfCandidate,
 			float candidateSelectionThreshold, String serializationDirectory, float labelWeight, float rlspWeight,
-			float linkWeight, String workingDirectory) {
+			float linkWeight, float typeWeight, String workingDirectory) {
 		this.serializationDirectory = serializationDirectory;
 		this.workingDirectory = workingDirectory;
 		this.labelWeight = labelWeight;
 		this.rlspWeight = rlspWeight;
 		this.linkWeight = linkWeight;
+		this.typeWeight = typeWeight;
 		this.teiRdf = RDFUtil.getModel(teiSource); // BUG EN RELEASE
 		// this.teiRdf = ModelFactory.createDefaultModel().read(workingDirectory
 		// + "temp7.n3");
@@ -251,9 +253,17 @@ public class GraphMatching {
 		final List<Candidate> candidatesFromKB = getCandidatesFromKB(this.kbSource);
 
 		//this.toponyms = 
-		getCandidatesSelection(this.toponymsTEI, candidatesFromKB, numberOfCandidate,
+		getCandidatesSelectionV2(this.toponymsTEI, candidatesFromKB, numberOfCandidate,
 				candidateSelectionThreshold);
-
+		
+//		toponymsTEI.forEach(t -> {
+//			logger.info(t.getName());
+//			if (t.getScoreCriterionToponymCandidate() == null || t.getScoreCriterionToponymCandidate().isEmpty())
+//				logger.info("Pas de candidat");
+//			else
+//				t.getScoreCriterionToponymCandidate().forEach(s -> logger.info(s.getCandidate().getResource() + " (" + s.getValue() + ")"));
+//		});
+		
 		this.shortestPaths = new ConcurrentHashMap<>();
 
 		this.rlspCalculous = new HashSet<>(); // utilié à revoir
@@ -664,6 +674,7 @@ public class GraphMatching {
 		nil = null;
 		linkWeight = 0f;
 		labelWeight = 0f;
+		typeWeight = 0f;
 		kbSubgraph = null;
 		kbSource = null;
 		Model model = ModelFactory.createDefaultModel().read("C:\\modelOriginal - Copie.n3");		
@@ -1808,6 +1819,79 @@ public class GraphMatching {
 		
 		return result;
 	}
+	
+	/**
+	 * Gets the candidates selection for each toponym. V 2. -> don't use the type
+	 *
+	 * @param toponymsTEI the toponyms TEI
+	 * @param candidatesFromKB the candidates from KB
+	 * @param numberOfCandidate the number of candidate
+	 * @param threshold the threshold
+	 * @return the candidates selection V 2
+	 */
+	private Set<Toponym> getCandidatesSelectionV2(Set<Toponym> toponymsTEI, List<Candidate> candidatesFromKB,
+			Integer numberOfCandidate, float threshold) {
+		logger.info("Sélection des candidats (nombre de candidats : " + numberOfCandidate + ")");
+		List<Candidate> candidatesFromKBCleared = Collections.synchronizedList(candidatesFromKB.stream()
+				.filter(c -> c != null && c.getTypes() != null && (c.getName() != null || c.getLabel() != null))
+				.collect(Collectors.toList()));
+
+		Set<Toponym> result = Collections.synchronizedSet(new HashSet<>());
+		final AtomicInteger count = new AtomicInteger();
+		// calculs des scores pour chaque candidat de chaque toponyme
+		// aggrégation des toponymes sur leur labal
+		Map<String, List<Toponym>> toponymsByLabel = Collections.synchronizedMap(toponymsTEI.stream()
+				.collect(Collectors.groupingBy((Toponym s) -> s.getName())));
+		Criterion criterion = Criterion.scoreText;
+		final int total = toponymsByLabel.size();
+		toponymsByLabel.entrySet().parallelStream().forEach(toponymsWithLabel -> {
+			List<CriterionToponymCandidate> criterionToponymCandidateList = new ArrayList<>();
+			final String topoLabel = toponymsWithLabel.getKey();
+			Map<String, Float> scoreByLabel = new ConcurrentHashMap<>();
+			for (Candidate candidate : candidatesFromKBCleared) {
+				// candidatesToCheck.parallelStream().forEach(candidate -> {
+				StringComparisonDamLev sc = new StringComparisonDamLev();
+				float score = 0f;
+				if (candidate.getName() != null && scoreByLabel.containsKey(candidate.getName())) {
+					score = scoreByLabel.get(candidate.getName());
+				} else if (candidate.getLabel() != null && scoreByLabel.containsKey(candidate.getLabel())) {
+					score = scoreByLabel.get(candidate.getLabel());
+				} else {
+					float score1 = sc.computeSimilarity(topoLabel, candidate.getName());
+					float score2 = sc.computeSimilarity(topoLabel, candidate.getLabel());
+					if (score1 > score2 && candidate.getName() != null) {
+						score = score1;
+						scoreByLabel.put(candidate.getName(), score1);
+					} else if (candidate.getLabel() != null) {
+						score = score2;
+						scoreByLabel.put(candidate.getLabel(), score2);
+					}
+				}
+				criterionToponymCandidateList.add(new CriterionToponymCandidate(candidate, score, criterion));
+			}
+			criterionToponymCandidateList = criterionToponymCandidateList.stream().filter(s -> s != null).filter(t -> t.getValue() >= threshold)
+					.sorted((a, b) -> Float.compare(b.getValue(), a.getValue()))
+					.limit(numberOfCandidate)
+					.collect(Collectors.toList());
+			for (Toponym toponym : toponymsWithLabel.getValue()) {
+				for (CriterionToponymCandidate crit : criterionToponymCandidateList) {
+					toponym.addScoreCriterionToponymCandidate(crit);
+				}
+			}
+//			for (Toponym toponym : toponymsWithLabel.getValue()) {
+//				toponym.clearAndAddAllScoreCriterionToponymCandidate(toponym.getScoreCriterionToponymCandidate()
+//						.stream().filter(s -> s != null).filter(t -> t.getValue() >= threshold)
+//						.sorted((a, b) -> Float.compare(b.getValue(), a.getValue()))
+//						.limit(Math.min(numberOfCandidate, toponym.getScoreCriterionToponymCandidate().size()))
+//						.collect(Collectors.toList()));
+//				result.add(toponym);
+//			}
+			logger.info((count.getAndIncrement() + 1) + " / " + total);
+		});
+
+
+		return result;
+	}
 
 	/**
 	 * Compute candidates.
@@ -1854,7 +1938,7 @@ public class GraphMatching {
 					}
 					for (Toponym toponym : toponymsTyped.getValue()) {
 						toponym.addScoreCriterionToponymCandidate(
-								new CriterionToponymCandidate(toponym, candidate, score, criterion));
+								new CriterionToponymCandidate(candidate, score, criterion));
 					}
 				}//);
 			}
@@ -2213,21 +2297,30 @@ public class GraphMatching {
 			scr = SubstitutionCostResult.get(scrList, nodeToRemove.getResource(),
 					candidateCriterion.getCandidate().getResource());
 		} else {
+			float scoreType = scoreType(nodeToRemove, candidateCriterion);
 			float scoreLabel = 1 - candidateCriterion.getValue();
 			float scoreLink = scoreLink(nodeToRemove, candidateCriterion, teiRdf, toponymsTEI);
 			float scoreRlsp = scoreRlsp(nodeToRemove, candidateCriterion, teiRdf, toponymsTEI,
 					kbWithInterestingProperties, completeKB);
 			rlspCalculous.add(nodeToRemove.getResource() + " (" + nodeToRemove.getName() + ")" + " -> "
 					+ candidateCriterion.getCandidate().getResource() + " (" + scoreLabel + "/" + scoreLink + "/"
-					+ scoreRlsp + ")");
-			float totalCost = labelWeight * scoreLabel + rlspWeight * scoreRlsp + linkWeight * scoreLink;
+					+ scoreRlsp + "/" + scoreType + ")");
+			float totalCost = labelWeight * scoreLabel + rlspWeight * scoreRlsp + linkWeight * scoreLink + typeWeight * scoreType;
 			scr = new SubstitutionCostResult(nodeToRemove.getResource(),
-					candidateCriterion.getCandidate().getResource(), scoreLabel, scoreLink, scoreRlsp, totalCost);
+					candidateCriterion.getCandidate().getResource(), scoreLabel, scoreLink, scoreRlsp, totalCost, scoreType);
 			scrList.add(scr);
 		}
 		return scr;
 	}
-
+	private float scoreType(Toponym nodeToRemove, CriterionToponymCandidate candidateCriterion) {
+		// on récupère le type du topo au format de la KB
+		if (nodeToRemove.getType().toString().endsWith("Place"))
+			return 0f;
+		String topoType = getTEITypeToKBType(nodeToRemove.getType().toString());
+		if (candidateCriterion.getCandidate().getTypes().contains(topoType))
+			return 0f;
+		return 1f;
+	}
 	private float scoreLink(Toponym toponym, CriterionToponymCandidate criterion, Model teiRdf,
 			Set<Toponym> toponymsTEI) {
 		Resource nodeToRemove = toponym.getResource();

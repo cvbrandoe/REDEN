@@ -1270,7 +1270,7 @@ public class GraphMatchingOld {
 					}
 					for (Toponym toponym : toponymsTyped.getValue()) {
 						toponym.addScoreCriterionToponymCandidate(
-								new CriterionToponymCandidate(toponym, candidate, score, criterion));
+								new CriterionToponymCandidate(candidate, score, criterion));
 					}
 				});
 			}
