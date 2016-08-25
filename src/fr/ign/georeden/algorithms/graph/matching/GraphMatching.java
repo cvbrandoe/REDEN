@@ -305,9 +305,9 @@ public class GraphMatching {
 						}
 						if (candidateName != null) {
 							StringComparisonDamLev scdl = new StringComparisonDamLev();
-							tmp.scoreDamLev = Double.min(scdl.computeSimilarity(topoName, candidateName), tmp.scoreDamLev);
+							tmp.scoreDamLev = Double.max(scdl.computeSimilarity(topoName, candidateName), tmp.scoreDamLev);
 							TokenWiseSimilarity tws = new TokenWiseSimilarity(topoName, candidateName, slev);
-							tmp.scoreToken = Double.min(tws.calcule(), tmp.scoreToken);
+							tmp.scoreToken = Double.max(tws.calcule(), tmp.scoreToken);
 						}
 						tmpList.add(tmp);
 					}
