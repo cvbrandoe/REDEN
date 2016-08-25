@@ -72,7 +72,7 @@ public class MainNELApp {
 	private static Logger logger = Logger.getLogger(MainNELApp.class);
 	
 
-	static final String workingDirectory = "P:\\";
+	static final String workingDirectory = "D:\\";
 
 	private static String teiSource;
 
@@ -80,7 +80,6 @@ public class MainNELApp {
 	}
 	
 	public static void main(String[] args) {
-		
 		
 		//GraphMatching graphMatching2 = new GraphMatching(workingDirectory);
 		
@@ -126,9 +125,9 @@ public class MainNELApp {
 //		 StringComparisonDamLev sc = new StringComparisonDamLev();
 //		 logger.info(sc.computeSimilarity("Gentioux", "Gentioux-Pigerolles"));
 
-//		 GraphMatching g = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3");
-//			if (true)
-//				return;
+		 GraphMatching g = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3");
+			if (true)
+				return;
 		GraphMatching graphMatching = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3"
 				, 10, 0.5f, workingDirectory + "serializations\\", 0.4f, 0.4f, 0.1f, 0.1f, workingDirectory);
 		if (optionManager.hasOption("shortestPaths")) {

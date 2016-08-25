@@ -311,13 +311,13 @@ public class GraphMatching {
 						tmp.scoreToken = Double.NEGATIVE_INFINITY;
 						tmp.scoreDamLev = Double.NEGATIVE_INFINITY;
 						if (candidateLabel != null && !candidateLabel.isEmpty()) {
-							StringComparisonDamLev scdl = new StringComparisonDamLev();
+							IStringComparison scdl = new CustomStringComparison();
 							tmp.scoreDamLev = scdl.computeSimilarity(topoName, candidateLabel);
 							TokenWiseSimilarity tws = new TokenWiseSimilarity(topoName, candidateLabel, slev);
 							tmp.scoreToken = tws.calcule();
 						}
 						if (candidateName != null && !candidateName.isEmpty()) {
-							StringComparisonDamLev scdl = new StringComparisonDamLev();
+							IStringComparison scdl = new CustomStringComparison();
 							tmp.scoreDamLev = Double.max(scdl.computeSimilarity(topoName, candidateName), tmp.scoreDamLev);
 							TokenWiseSimilarity tws = new TokenWiseSimilarity(topoName, candidateName, slev);
 							tmp.scoreToken = Double.max(tws.calcule(), tmp.scoreToken);
