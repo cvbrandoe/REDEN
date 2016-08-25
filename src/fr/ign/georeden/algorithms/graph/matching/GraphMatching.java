@@ -293,8 +293,8 @@ public class GraphMatching {
 					if (candidateLabel != null || candidateName != null) {
 						Tmp tmp = new Tmp();
 						tmp.candidateResource = candidate.getResource().toString();
-						tmp.candidateLabel = candidate.getLabel().toString();
-						tmp.candidateName = candidate.getName().toString();
+						tmp.candidateLabel = candidate.getLabel();
+						tmp.candidateName = candidate.getName();
 						tmp.scoreToken = Double.POSITIVE_INFINITY;
 						tmp.scoreDamLev = Double.POSITIVE_INFINITY;
 						if (candidateLabel != null) {
