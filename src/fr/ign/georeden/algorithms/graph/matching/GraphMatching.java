@@ -318,8 +318,8 @@ public class GraphMatching {
 		}
 		long limit = 100;
 		for (Entry<String, List<Tmp>> e : map.entrySet()) {
-			List<Tmp> listDamLev = e.getValue().stream().sorted((a, b) -> Double.compare(a.scoreDamLev, b.scoreDamLev)).limit(limit).collect(Collectors.toList());
-			List<Tmp> listToken = e.getValue().stream().sorted((a, b) -> Double.compare(a.scoreToken, b.scoreToken)).limit(limit).collect(Collectors.toList());
+			List<Tmp> listDamLev = e.getValue().stream().sorted((a, b) -> Double.compare(b.scoreDamLev, a.scoreDamLev)).limit(limit).collect(Collectors.toList());
+			List<Tmp> listToken = e.getValue().stream().sorted((a, b) -> Double.compare(b.scoreToken, a.scoreToken)).limit(limit).collect(Collectors.toList());
 			for (int i = 0; i < limit; i++) {
 				Tmp damLev = listDamLev.get(i);
 				Tmp token = listToken.get(i);
