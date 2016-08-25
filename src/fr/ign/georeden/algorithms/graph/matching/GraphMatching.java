@@ -194,7 +194,7 @@ public class GraphMatching {
 	private final float typeWeight;
 	private final String workingDirectory;
 	
-	rivate final List<Candidate> candidatesFromKB;
+	private final List<Candidate> candidatesFromKB;
 	
 	private final Resource nil;
 
@@ -661,6 +661,7 @@ public class GraphMatching {
 	 * @param workingDirectory the working directory
 	 */
 	public GraphMatching(String workingDirectory) {
+		this.candidatesFromKB = null;
 		this.workingDirectory = workingDirectory;
 		toponymsTEI = null;
 		teiRdf = null;
