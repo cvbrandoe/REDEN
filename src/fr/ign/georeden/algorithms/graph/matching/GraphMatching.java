@@ -194,6 +194,8 @@ public class GraphMatching {
 	private final float typeWeight;
 	private final String workingDirectory;
 	
+	rivate final List<Candidate> candidatesFromKB;
+	
 	private final Resource nil;
 
 	/**
@@ -248,7 +250,7 @@ public class GraphMatching {
 		}
 
 		logger.info("Récupérations des candidats de la KB");
-		final List<Candidate> candidatesFromKB = getCandidatesFromKB(this.kbSource);
+		this.candidatesFromKB = getCandidatesFromKB(this.kbSource);
 
 		//this.toponyms = 
 		getCandidatesSelectionV2(this.toponymsTEI, candidatesFromKB, numberOfCandidate,
@@ -269,7 +271,12 @@ public class GraphMatching {
 		this.scrList = new ArrayList<>();
 		this.nil = kbSubgraph.createResource("http://data.ign.fr/id/propagation/Place/nil");
 	}
-
+	
+	public void TestFunction() {
+		List<String> topNames = toponymsTEI.stream().map(t -> t.getName()).distinct().collect(Collectors.toList());
+//		List<String> candidatesNames = candidatesFromKB.stream().map(c -> c.)
+	}
+	
 	/**
 	 * Compute.
 	 */
@@ -360,7 +367,7 @@ public class GraphMatching {
 		float longitude = getLongitude(resource);
 		Model model = cloneModel(original);
 		Statement latStatement = model.createLiteralStatement(resource, propLat, lat);
-		Statement longStatement = model.createLiteralStatement(resource, propLong, lat);
+		Statement longStatement = model.createLiteralStatement(resource, propLong, longitude);
 		model.add(latStatement);
 		model.add(longStatement);
 		return model;

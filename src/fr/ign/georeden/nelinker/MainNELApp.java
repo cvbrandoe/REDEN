@@ -69,7 +69,7 @@ public class MainNELApp {
 	private static Logger logger = Logger.getLogger(MainNELApp.class);
 	
 
-	static final String workingDirectory = "C:\\";
+	static final String workingDirectory = "D:\\";
 
 	private static String teiSource;
 
@@ -122,7 +122,7 @@ public class MainNELApp {
 //		 logger.info(sc.computeSimilarity("Gentioux", "Gentioux-Pigerolles"));
 		
 		GraphMatching graphMatching = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3"
-				, 10, 0.5f, workingDirectory + "serializations\\", 0.4f, 0.4f, 0.1f, 0.1f, workingDirectory);
+				, 10, 0.5f,  "P:\\serializations\\", 0.4f, 0.4f, 0.1f, 0.1f, workingDirectory);
 		if (optionManager.hasOption("shortestPaths")) {
 			graphMatching.allPairShortestPathPreProcessing();
 		}
