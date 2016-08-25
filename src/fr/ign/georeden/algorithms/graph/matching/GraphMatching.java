@@ -40,6 +40,8 @@ import org.apache.jena.util.ResourceUtils;
 import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 
+import fr.ign.georeden.algorithms.string.CustomStringComparison;
+import fr.ign.georeden.algorithms.string.IStringComparison;
 import fr.ign.georeden.algorithms.string.StringComparisonDamLev;
 import fr.ign.georeden.algorithms.string.TokenWiseSimilarity;
 import fr.ign.georeden.kb.ToponymType;
@@ -280,6 +282,17 @@ public class GraphMatching {
 		double scoreToken;
 		double scoreDamLev;
 	}
+	public void TestFunctionSimilarite() {
+		String nomTopo = "";
+		List<String> listCandidats = new ArrayList<>();
+		// on découpe le nom du topo en token (espace, tiret, apostrophe)
+		//nomTopo.split(regex)
+		// avec une liste de stop words on supprime les parties inutiles (le, la, les, l', sur) 
+		// (traitement particulier pour Saint et Sainte ?)
+		// Pour chaque candidat, on le découpe de la même manière tout en supprimant les token inutiles avec des stopword
+		// si un des token du candidat correspond exactement à un des token du topo, on le sélectionne automatiquement avec un haut score (1.0 ou 0.9 ?)
+		// sinon on utilise une mesure et on sélectionne en fonction de cette mesure
+	}
 	public void TestFunction() {
 		Map<String, List<Tmp>> map = new HashMap<>();
 		double slev = 0.0;
@@ -290,20 +303,20 @@ public class GraphMatching {
 				for (Candidate candidate : candidatesFromKB) {
 					String candidateName = candidate.getName();
 					String candidateLabel = candidate.getLabel();
-					if (candidateLabel != null || candidateName != null) {
+					if ((candidateLabel != null && !candidateLabel.isEmpty()) || (candidateName != null && !candidateName.isEmpty())) {
 						Tmp tmp = new Tmp();
 						tmp.candidateResource = candidate.getResource().toString();
 						tmp.candidateLabel = candidate.getLabel();
 						tmp.candidateName = candidate.getName();
-						tmp.scoreToken = Double.POSITIVE_INFINITY;
-						tmp.scoreDamLev = Double.POSITIVE_INFINITY;
-						if (candidateLabel != null) {
+						tmp.scoreToken = Double.NEGATIVE_INFINITY;
+						tmp.scoreDamLev = Double.NEGATIVE_INFINITY;
+						if (candidateLabel != null && !candidateLabel.isEmpty()) {
 							StringComparisonDamLev scdl = new StringComparisonDamLev();
 							tmp.scoreDamLev = scdl.computeSimilarity(topoName, candidateLabel);
 							TokenWiseSimilarity tws = new TokenWiseSimilarity(topoName, candidateLabel, slev);
 							tmp.scoreToken = tws.calcule();
 						}
-						if (candidateName != null) {
+						if (candidateName != null && !candidateName.isEmpty()) {
 							StringComparisonDamLev scdl = new StringComparisonDamLev();
 							tmp.scoreDamLev = Double.max(scdl.computeSimilarity(topoName, candidateName), tmp.scoreDamLev);
 							TokenWiseSimilarity tws = new TokenWiseSimilarity(topoName, candidateName, slev);
@@ -1632,7 +1645,8 @@ public class GraphMatching {
 			Map<String, Float> scoreByLabel = new ConcurrentHashMap<>();
 			for (Candidate candidate : candidatesFromKBCleared) {
 				// candidatesToCheck.parallelStream().forEach(candidate -> {
-				StringComparisonDamLev sc = new StringComparisonDamLev();
+				//IStringComparison sc = new StringComparisonDamLev();
+				IStringComparison sc = new CustomStringComparison();
 				float score = 0f;
 				if (candidate.getName() != null && scoreByLabel.containsKey(candidate.getName())) {
 					score = scoreByLabel.get(candidate.getName());

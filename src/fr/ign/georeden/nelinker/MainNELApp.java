@@ -3,6 +3,7 @@ package fr.ign.georeden.nelinker;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Dictionary;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -43,6 +44,7 @@ import org.apache.jena.rdf.model.Statement;
 
 import fr.ign.georeden.algorithms.graph.matching.GraphMatchingOld;
 import fr.ign.georeden.algorithms.graph.matching.GraphMatching;
+import fr.ign.georeden.algorithms.string.CustomStringComparison;
 import fr.ign.georeden.algorithms.string.DamerauLevenshteinAlgorithm;
 import fr.ign.georeden.algorithms.string.IStringComparison;
 import fr.ign.georeden.algorithms.string.StringComparisonDamLev;
@@ -70,16 +72,15 @@ public class MainNELApp {
 	private static Logger logger = Logger.getLogger(MainNELApp.class);
 	
 
-	static final String workingDirectory = "D:\\";
+	static final String workingDirectory = "P:\\";
 
 	private static String teiSource;
 
 	private MainNELApp() {
 	}
-
+	
 	public static void main(String[] args) {
 		
-	
 		
 		//GraphMatching graphMatching2 = new GraphMatching(workingDirectory);
 		
@@ -125,11 +126,11 @@ public class MainNELApp {
 //		 StringComparisonDamLev sc = new StringComparisonDamLev();
 //		 logger.info(sc.computeSimilarity("Gentioux", "Gentioux-Pigerolles"));
 
-		 GraphMatching g = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3");
-			if (true)
-				return;
+//		 GraphMatching g = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3");
+//			if (true)
+//				return;
 		GraphMatching graphMatching = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3"
-				, 10, 0.5f,  "P:\\serializations\\", 0.4f, 0.4f, 0.1f, 0.1f, workingDirectory);
+				, 10, 0.5f, workingDirectory + "serializations\\", 0.4f, 0.4f, 0.1f, 0.1f, workingDirectory);
 		if (optionManager.hasOption("shortestPaths")) {
 			graphMatching.allPairShortestPathPreProcessing();
 		}
