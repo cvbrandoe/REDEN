@@ -1252,14 +1252,14 @@ public class GraphMatchingOld {
 			List<Candidate> candidatesToCheck = candidatesByType.get(keyType);
 			if (candidatesToCheck != null && !candidatesToCheck.isEmpty()) {
 				candidatesToCheck.parallelStream().forEach(candidate -> {
-					float score = 0f;
+					float score = 0.0f;
 					if (candidate.getName() != null && scoreByLabel.containsKey(candidate.getName())) {
 						score = scoreByLabel.get(candidate.getName());
 					} else if (candidate.getLabel() != null && scoreByLabel.containsKey(candidate.getLabel())) {
 						score = scoreByLabel.get(candidate.getLabel());
 					} else {
-						float score1 = sc.computeSimilarity(toponymsWithLabel.getKey(), candidate.getName());
-						float score2 = sc.computeSimilarity(toponymsWithLabel.getKey(), candidate.getLabel());
+						float score1 = (float) sc.computeSimilarity(toponymsWithLabel.getKey(), candidate.getName());
+						float score2 = (float) sc.computeSimilarity(toponymsWithLabel.getKey(), candidate.getLabel());
 						if (score1 > score2 && candidate.getName() != null) {
 							score = score1;
 							scoreByLabel.put(candidate.getName(), score1);
@@ -1480,7 +1480,7 @@ public class GraphMatchingOld {
 	static float getSubstitutionCostV2(Toponym nodeToRemove, CriterionToponymCandidate candidateCriterion,
 			float labelWeight, float rlspWeight, float linkWeight, Set<Toponym> toponymsTEI, Model teiRdf,
 			Model kbWithInterestingProperties, Model completeKB) {
-		float scoreLabel = (1 - candidateCriterion.getValue());
+		float scoreLabel = (float) (1 - candidateCriterion.getValue());
 		float scoreLink = scoreLinkV2(nodeToRemove, candidateCriterion, teiRdf, toponymsTEI,
 				kbWithInterestingProperties, completeKB);
 		// rlsp : on utilise le fait que le chemin a déjà potentiellement été étudié, on vérifie que toutes les propriétés
@@ -1497,7 +1497,7 @@ public class GraphMatchingOld {
 			Optional<CriterionToponymCandidate> candidate = candidates.stream()
 					.filter(t -> areResourcesEqual(t.getCandidate().getResource(), nodeToRemove)).findFirst();
 			if (candidate.isPresent()) {
-				return candidate.get().getValue();
+				return (float) candidate.get().getValue();
 			}
 		}
 		return 0f;

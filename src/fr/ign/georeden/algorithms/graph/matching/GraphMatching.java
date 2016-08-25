@@ -41,6 +41,7 @@ import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 
 import fr.ign.georeden.algorithms.string.StringComparisonDamLev;
+import fr.ign.georeden.algorithms.string.TokenWiseSimilarity;
 import fr.ign.georeden.kb.ToponymType;
 import fr.ign.georeden.utils.RDFUtil;
 
@@ -271,10 +272,61 @@ public class GraphMatching {
 		this.scrList = new ArrayList<>();
 		this.nil = kbSubgraph.createResource("http://data.ign.fr/id/propagation/Place/nil");
 	}
-	
+	private class Tmp{
+		String candidateResource;
+		String candidateName;
+		String candidateLabel;
+		
+		double scoreToken;
+		double scoreDamLev;
+	}
 	public void TestFunction() {
-		List<String> topNames = toponymsTEI.stream().map(t -> t.getName()).distinct().collect(Collectors.toList());
-//		List<String> candidatesNames = candidatesFromKB.stream().map(c -> c.)
+		Map<String, List<Tmp>> map = new HashMap<>();
+		double slev = 0.0;
+		for (Toponym topo : toponymsTEI) {		
+			String topoName = topo.getName();	
+			if (!map.containsKey(topoName)) {
+				List<Tmp> tmpList = new ArrayList<>();
+				for (Candidate candidate : candidatesFromKB) {
+					String candidateName = candidate.getName();
+					String candidateLabel = candidate.getLabel();
+					if (candidateLabel != null || candidateName != null) {
+						Tmp tmp = new Tmp();
+						tmp.candidateResource = candidate.getResource().toString();
+						tmp.candidateLabel = candidate.getLabel().toString();
+						tmp.candidateName = candidate.getName().toString();
+						tmp.scoreToken = Double.POSITIVE_INFINITY;
+						tmp.scoreDamLev = Double.POSITIVE_INFINITY;
+						if (candidateLabel != null) {
+							StringComparisonDamLev scdl = new StringComparisonDamLev();
+							tmp.scoreDamLev = scdl.computeSimilarity(topoName, candidateLabel);
+							TokenWiseSimilarity tws = new TokenWiseSimilarity(topoName, candidateLabel, slev);
+							tmp.scoreToken = tws.calcule();
+						}
+						if (candidateName != null) {
+							StringComparisonDamLev scdl = new StringComparisonDamLev();
+							tmp.scoreDamLev = Double.min(scdl.computeSimilarity(topoName, candidateName), tmp.scoreDamLev);
+							TokenWiseSimilarity tws = new TokenWiseSimilarity(topoName, candidateName, slev);
+							tmp.scoreToken = Double.min(tws.calcule(), tmp.scoreToken);
+						}
+						tmpList.add(tmp);
+					}
+				}
+				if (!tmpList.isEmpty())
+					map.put(topoName, tmpList);
+			}
+		}
+		long limit = 100;
+		for (Entry<String, List<Tmp>> e : map.entrySet()) {
+			List<Tmp> listDamLev = e.getValue().stream().sorted((a, b) -> Double.compare(a.scoreDamLev, b.scoreDamLev)).limit(limit).collect(Collectors.toList());
+			List<Tmp> listToken = e.getValue().stream().sorted((a, b) -> Double.compare(a.scoreToken, b.scoreToken)).limit(limit).collect(Collectors.toList());
+			for (int i = 0; i < limit; i++) {
+				Tmp damLev = listDamLev.get(i);
+				Tmp token = listToken.get(i);
+				logger.info(e.getKey() + " : " + damLev.candidateResource + "(" + damLev.scoreDamLev + "/" + damLev.scoreToken + ")" + "\t "
+						 + token.candidateResource + "(" + token.scoreDamLev + "/" + token.scoreToken + ")");
+			}
+		}
 	}
 	
 	/**
@@ -681,6 +733,29 @@ public class GraphMatching {
 		kbSource = null;
 		Model model = ModelFactory.createDefaultModel().read("C:\\modelOriginal - Copie.n3");		
 		explodeAltsV5(model);
+	}
+	public GraphMatching(Document teiSource, String dbPediaRdfFilePath) {
+		this.teiRdf = RDFUtil.getModel(teiSource); // BUG EN RELEASE
+		// this.teiRdf = ModelFactory.createDefaultModel().read(workingDirectory
+		// + "temp7.n3");
+		this.toponymsTEI = getToponymsFromTei(teiRdf);
+		this.kbSource = ModelFactory.createDefaultModel().read(dbPediaRdfFilePath);
+		this.candidatesFromKB = getCandidatesFromKB(this.kbSource);
+		this.workingDirectory = null;
+		subjectsOfSubgraph = null;
+		shortestPaths = null;
+		serializationDirectory = null;
+		scrList = null;
+		rlspWeight = 0f;
+		rlspCalculous = null;
+		resourcesToUseForSP = null;
+		resourcesIndexAPSP = null;
+		nil = null;
+		linkWeight = 0f;
+		labelWeight = 0f;
+		typeWeight = 0f;
+		kbSubgraph = null;
+		TestFunction();
 	}
 	
 	private Model transformModelByKeepingR1(Model original, String r1, String r2) {
@@ -1564,8 +1639,8 @@ public class GraphMatching {
 				} else if (candidate.getLabel() != null && scoreByLabel.containsKey(candidate.getLabel())) {
 					score = scoreByLabel.get(candidate.getLabel());
 				} else {
-					float score1 = sc.computeSimilarity(topoLabel, candidate.getName());
-					float score2 = sc.computeSimilarity(topoLabel, candidate.getLabel());
+					float score1 = (float) sc.computeSimilarity(topoLabel, candidate.getName());
+					float score2 = (float) sc.computeSimilarity(topoLabel, candidate.getLabel());
 					if (score1 > score2 && candidate.getName() != null) {
 						score = score1;
 						scoreByLabel.put(candidate.getName(), score1);
@@ -1633,8 +1708,8 @@ public class GraphMatching {
 					} else if (candidate.getLabel() != null && scoreByLabel.containsKey(candidate.getLabel())) {
 						score = scoreByLabel.get(candidate.getLabel());
 					} else {
-						float score1 = sc.computeSimilarity(toponymsWithLabel.getKey(), candidate.getName());
-						float score2 = sc.computeSimilarity(toponymsWithLabel.getKey(), candidate.getLabel());
+						float score1 = (float) sc.computeSimilarity(toponymsWithLabel.getKey(), candidate.getName());
+						float score2 = (float) sc.computeSimilarity(toponymsWithLabel.getKey(), candidate.getLabel());
 						if (score1 > score2 && candidate.getName() != null) {
 							score = score1;
 							scoreByLabel.put(candidate.getName(), score1);
