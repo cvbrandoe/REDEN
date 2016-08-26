@@ -72,7 +72,7 @@ public class MainNELApp {
 	private static Logger logger = Logger.getLogger(MainNELApp.class);
 	
 
-	static final String workingDirectory = "C:\\";
+	static final String workingDirectory = "D:\\";
 
 	private static String teiSource;
 
@@ -125,9 +125,9 @@ public class MainNELApp {
 //		 StringComparisonDamLev sc = new StringComparisonDamLev();
 //		 logger.info(sc.computeSimilarity("Gentioux", "Gentioux-Pigerolles"));
 
-//		 GraphMatching g = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3");
-//			if (true)
-//				return;
+		 GraphMatching g = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3", workingDirectory);
+			if (true)
+				return;
 		GraphMatching graphMatching = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3"
 				, 10, 0.5f, workingDirectory + "serializations\\", 0.4f, 0.4f, 0.1f, 0.1f, workingDirectory);
 		if (optionManager.hasOption("shortestPaths")) {
@@ -225,7 +225,7 @@ public class MainNELApp {
 		// propertyTagRef is the property name of the TEI-XML named-entity tag where REDEN will store the URIs for each mention
 		String propertyTagRef = "ref_auto";
 		//List<Map<String, List<List<String>>>> allMentionsWithUrisPerContextinText = new ArrayList<>();
-		int max = results.stream().mapToInt(t -> t.getXmlId().intValue()).distinct().max().getAsInt();
+		//int max = results.stream().mapToInt(t -> t.getXmlId().intValue()).distinct().max().getAsInt();
 
 		Map<Integer, List<String>> allMentionsWithUrisPerContextinText = new HashMap<>();
 		for (Toponym toponym : results) {

@@ -183,6 +183,13 @@ public class CustomStringComparison implements IStringComparison {
 	private static final Set<String> STOP_WORDS = new HashSet<>(Arrays.asList(SET_VALUES));
 	@Override
 	public double computeSimilarity(String string1, String string2) {
+		// on découpe le nom du topo en token (espace, tiret, apostrophe)
+		//nomTopo.split(regex)
+		// avec une liste de stop words on supprime les parties inutiles (le, la, les, l', sur) 
+		// (traitement particulier pour Saint et Sainte ?)
+		// Pour chaque candidat, on le découpe de la même manière tout en supprimant les token inutiles avec des stopword
+		// si un des token du candidat correspond exactement à un des token du topo, on le sélectionne automatiquement avec un haut score (1.0 ou 0.9 ?)
+		// sinon on utilise une mesure et on sélectionne en fonction de cette mesure
 		if (string1 == null || string2 == null)
 			return 0.0;
 		// si la chaine est du type Ville sur Rivière (ex: Neuilly sur Seine ou Availles-en-Châtellerault ou 

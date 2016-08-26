@@ -19,6 +19,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+
 import org.apache.http.conn.HttpHostConnectException;
 import org.apache.jena.atlas.web.HttpException;
 import org.apache.jena.ontology.OntTools.Path;
@@ -39,6 +44,10 @@ import org.apache.jena.riot.RiotException;
 import org.apache.jena.util.ResourceUtils;
 import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import fr.ign.georeden.algorithms.string.CustomStringComparison;
 import fr.ign.georeden.algorithms.string.IStringComparison;
@@ -46,6 +55,21 @@ import fr.ign.georeden.algorithms.string.StringComparisonDamLev;
 import fr.ign.georeden.algorithms.string.TokenWiseSimilarity;
 import fr.ign.georeden.kb.ToponymType;
 import fr.ign.georeden.utils.RDFUtil;
+import fr.ign.georeden.utils.XMLUtil;
+import info.debatty.java.stringsimilarity.Cosine;
+import info.debatty.java.stringsimilarity.Damerau;
+import info.debatty.java.stringsimilarity.Jaccard;
+import info.debatty.java.stringsimilarity.JaroWinkler;
+import info.debatty.java.stringsimilarity.KShingling;
+import info.debatty.java.stringsimilarity.Levenshtein;
+import info.debatty.java.stringsimilarity.LongestCommonSubsequence;
+import info.debatty.java.stringsimilarity.MetricLCS;
+import info.debatty.java.stringsimilarity.NGram;
+import info.debatty.java.stringsimilarity.NormalizedLevenshtein;
+import info.debatty.java.stringsimilarity.QGram;
+import info.debatty.java.stringsimilarity.SorensenDice;
+import info.debatty.java.stringsimilarity.WeightedLevenshtein;
+import info.debatty.java.stringsimilarity.interfaces.MetricStringDistance;
 
 /**
  * The graph matching class.
@@ -234,6 +258,13 @@ public class GraphMatching {
 		logger.info("Création du sous graphe de la KB contenant uniquement les relations spatiales");
 
 		this.kbSubgraph = getSubGraphWithResources(kbSource);
+//		Resource champ = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Champagne_(province)");
+//		for (Statement s : kbSubgraph.listStatements(champ, null, (RDFNode)null).toList()) {
+//			logger.info(s);
+//		}
+//		for (Statement s : kbSubgraph.listStatements(null, null, (RDFNode)champ).toList()) {
+//			logger.info(s);
+//		}
 		// Model ville = ModelFactory.createDefaultModel().read(workingDirectory
 		// +
 		// "dev\\java\\calculRelationsSpatialesAcRivieres\\rivieresEtVilles.rdf");
@@ -283,15 +314,178 @@ public class GraphMatching {
 		double scoreDamLev;
 	}
 	public void TestFunctionSimilarite() {
-		String nomTopo = "";
-		List<String> listCandidats = new ArrayList<>();
-		// on découpe le nom du topo en token (espace, tiret, apostrophe)
-		//nomTopo.split(regex)
-		// avec une liste de stop words on supprime les parties inutiles (le, la, les, l', sur) 
-		// (traitement particulier pour Saint et Sainte ?)
-		// Pour chaque candidat, on le découpe de la même manière tout en supprimant les token inutiles avec des stopword
-		// si un des token du candidat correspond exactement à un des token du topo, on le sélectionne automatiquement avec un haut score (1.0 ou 0.9 ?)
-		// sinon on utilise une mesure et on sélectionne en fonction de cette mesure
+		Document docgold = XMLUtil.createDocumentFromFile(workingDirectory + "goldRes\\teiResult-gold.xml");
+		XPath xPathGold = XPathFactory.newInstance().newXPath();
+		NodeList nodesGold = null;
+		try {
+			nodesGold = (NodeList) xPathGold.evaluate(
+					"//placeName[@ref]",
+					docgold.getDocumentElement(), XPathConstants.NODESET);
+		} catch (XPathExpressionException e) {
+			logger.error(e);
+		}
+		if (nodesGold == null)
+			return;
+		Map<String, String> refByMention = new HashMap<>();
+		logger.info("Nb ref dans gold : " + nodesGold.getLength());
+		for (int i = 0; i < nodesGold.getLength(); i++) {
+			Element childGold = (Element)nodesGold.item(i);
+			String ref = childGold.getAttribute("ref");
+			String mention = childGold.getTextContent().trim();
+			if (mention.startsWith("l' "))
+				mention = mention.substring(3);
+			else if (mention.startsWith("de la "))
+				mention = mention.substring(6);
+			else if (mention.startsWith("de "))
+				mention = mention.substring(3);
+			else if (mention.startsWith("du "))
+				mention = mention.substring(3);
+			else if (mention.startsWith("d' "))
+				mention = mention.substring(3);
+			else if (mention.startsWith("De "))
+				mention = mention.substring(3);
+			else if (mention.startsWith("le "))
+				mention = mention.substring(3);
+			else if (mention.startsWith("Le "))
+				mention = mention.substring(3);
+			else if (mention.startsWith("la "))
+				mention = mention.substring(3);
+			else if (mention.startsWith("La ") && !mention.startsWith("La Chari") && !mention.startsWith("La capi"))
+				mention = mention.substring(3);
+			else if (mention.startsWith("la vallée de la "))
+				mention = mention.substring(16);
+			refByMention.put(mention, ref);
+		}
+		Map<Integer, String> refById = new HashMap<>();
+		for (Toponym topo : toponymsTEI) {
+			Optional<Entry<String, String>> entry = refByMention.entrySet().stream().filter(e -> e.getKey().equalsIgnoreCase(topo.getName())).findFirst();
+			if (entry.isPresent()) {
+				refById.put(topo.getXmlId(), entry.get().getValue());
+			}
+		}
+		//Map<String, List<Toponym>> toponymsByName = toponymsTEI.stream().collect(Collectors.groupingBy((Toponym t) -> t.getName()));
+		List<Candidate> candidates = candidatesFromKB.stream()
+				.filter(c -> c != null && c.getResource() != null && ((c.getName() != null && !c.getName().isEmpty()) || (c.getLabel() != null && !c.getLabel().isEmpty())))
+				.collect(Collectors.toList());
+
+//		String t1 = "test";
+//		String t2 = "test";
+//		String t3= "jambon";
+		Cosine cosine = new Cosine();
+//		logger.info("cosine ->" + t1 + ":" + t2 + " (" + cosine.distance(t1, t2) + ")");
+//		logger.info("cosine ->" + t1 + ":" + t3 + " (" + cosine.distance(t1, t3) + ")");
+		Jaccard jaccard = new Jaccard();
+//		logger.info("jaccard ->" + t1 + ":" + t2 + " (" + jaccard.distance(t1, t2) + ")");
+//		logger.info("jaccard ->" + t1 + ":" + t3 + " (" + jaccard.distance(t1, t3) + ")");
+		JaroWinkler jaroWinkler = new JaroWinkler();
+//		logger.info("jaroWinkler ->" + t1 + ":" + t2 + " (" + jaroWinkler.distance(t1, t2) + ")");
+//		logger.info("jaroWinkler ->" + t1 + ":" + t3 + " (" + jaroWinkler.distance(t1, t3) + ")");
+		MetricLCS metricLCS = new MetricLCS();
+//		logger.info("metricLCS ->" + t1 + ":" + t2 + " (" + metricLCS.distance(t1, t2) + ")");
+//		logger.info("metricLCS ->" + t1 + ":" + t3 + " (" + metricLCS.distance(t1, t3) + ")");
+		NormalizedLevenshtein normalizedLevenshtein = new NormalizedLevenshtein();
+//		logger.info("normalizedLevenshtein ->" + t1 + ":" + t2 + " (" + normalizedLevenshtein.distance(t1, t2) + ")");
+//		logger.info("normalizedLevenshtein ->" + t1 + ":" + t3 + " (" + normalizedLevenshtein.distance(t1, t3) + ")");
+		SorensenDice sorensenDice = new SorensenDice();
+//		logger.info("SorensenDice ->" + t1 + ":" + t2 + " (" + sorensenDice.distance(t1, t2) + ")");
+//		logger.info("SorensenDice ->" + t1 + ":" + t3 + " (" + sorensenDice.distance(t1, t3) + ")");
+		
+//		Damerau damerau = new Damerau();
+//		logger.info("damerau ->" + t1 + ":" + t2 + " (" + damerau.distance(t1, t2) + ")");
+//		logger.info("damerau ->" + t1 + ":" + t3 + " (" + damerau.distance(t1, t3) + ")");
+//		Levenshtein levenshtein = new Levenshtein(); // pas borné
+//		logger.info("levenshtein ->" + t1 + ":" + t2 + " (" + levenshtein.distance(t1, t2) + ")");
+//		logger.info("levenshtein ->" + t1 + ":" + t3 + " (" + levenshtein.distance(t1, t3) + ")");
+//		LongestCommonSubsequence longestCommonSubsequence = new LongestCommonSubsequence(); // pas borné
+//		logger.info("longestCommonSubsequence ->" + t1 + ":" + t2 + " (" + longestCommonSubsequence.distance(t1, t2) + ")");
+//		logger.info("longestCommonSubsequence ->" + t1 + ":" + t3 + " (" + longestCommonSubsequence.distance(t1, t3) + ")");
+//		NGram nGram = new NGram(); // inversé
+//		logger.info("nGram ->" + t1 + ":" + t2 + " (" + nGram.distance(t1, t2) + ")");
+//		logger.info("nGram ->" + t1 + ":" + t3 + " (" + nGram.distance(t1, t3) + ")");
+//		QGram qGram = new QGram(); // pas borné
+//		logger.info("qGram ->" + t1 + ":" + t2 + " (" + qGram.distance(t1, t2) + ")");
+//		logger.info("qGram ->" + t1 + ":" + t3 + " (" + qGram.distance(t1, t3) + ")");
+		int limit = 100;
+		double counterCosine = 0;
+		double counterJaccard = 0;
+		double counterJaroWinkler = 0;
+		double counterMetricLCS = 0;
+		double counterNormalizedLevenshtein = 0;
+		double counterSorensenDice = 0;
+		
+		for (Toponym toponym : toponymsTEI) {
+			String topoName = toponym.getName();
+			String ref = refById.get(toponym.getXmlId());
+			List<ScoreStringComparison> scoreStringComparison = new ArrayList<>();
+			for (Candidate candidate : candidates) {
+				String candidateLabel = candidate.getLabel();
+				String candidateName = candidate.getName();
+				double distanceCosine = Double.POSITIVE_INFINITY;
+				double distanceJaccard = Double.POSITIVE_INFINITY;
+				double distanceJaroWinkler = Double.POSITIVE_INFINITY;
+				double distanceMetricLCS = Double.POSITIVE_INFINITY;
+				double distanceNormalizedLevenshtein = Double.POSITIVE_INFINITY;
+				double distanceSorensenDice = Double.POSITIVE_INFINITY;
+				if (candidateLabel != null && !candidateLabel.isEmpty()) {
+					distanceCosine = cosine.distance(topoName, candidateLabel);
+					distanceJaccard = jaccard.distance(topoName, candidateLabel);
+					distanceJaroWinkler = jaroWinkler.distance(topoName, candidateLabel);
+					distanceMetricLCS = metricLCS.distance(topoName, candidateLabel);
+					distanceNormalizedLevenshtein = normalizedLevenshtein.distance(topoName, candidateLabel);
+					distanceSorensenDice = sorensenDice.distance(topoName, candidateLabel);
+				} 
+				if (candidateName != null && !candidateName.isEmpty()) {
+					distanceCosine = Double.min(cosine.distance(candidateName, candidateName), distanceCosine);
+					distanceJaccard = Double.min(jaccard.distance(candidateName, candidateName), distanceJaccard);
+					distanceJaroWinkler = Double.min(jaroWinkler.distance(candidateName, candidateName), distanceJaroWinkler);
+					distanceMetricLCS = Double.min(metricLCS.distance(candidateName, candidateName), distanceMetricLCS);
+					distanceNormalizedLevenshtein = Double.min(normalizedLevenshtein.distance(candidateName, candidateName), distanceNormalizedLevenshtein);
+					distanceSorensenDice = Double.min(sorensenDice.distance(candidateName, candidateName), distanceSorensenDice);
+				}
+				ScoreStringComparison ssc = new ScoreStringComparison();
+				ssc.candidateResource = candidate.getResource().toString();
+				ssc.distanceCosine = distanceCosine;
+				ssc.distanceJaccard = distanceJaccard;
+				ssc.distanceJaroWinkler = distanceJaroWinkler;
+				ssc.distanceMetricLCS = distanceMetricLCS;
+				ssc.distanceNormalizedLevenshtein = distanceNormalizedLevenshtein;
+				ssc.distanceSorensenDice = distanceSorensenDice;
+				scoreStringComparison.add(ssc);
+			}
+			if (scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceCosine, b.distanceCosine)).limit(limit)
+				.anyMatch(s -> ref.equals(s.candidateResource)))
+				counterCosine++;
+			if (scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceJaccard, b.distanceJaccard)).limit(limit)
+					.anyMatch(s -> ref.equalsIgnoreCase(s.candidateResource)))
+				counterJaccard++;
+			if (scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceJaroWinkler, b.distanceJaroWinkler)).limit(limit)
+					.anyMatch(s -> ref.equalsIgnoreCase(s.candidateResource)))
+				counterJaroWinkler++;
+			if (scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceMetricLCS, b.distanceMetricLCS)).limit(limit)
+					.anyMatch(s -> ref.equalsIgnoreCase(s.candidateResource)))
+				counterMetricLCS++;
+			if (scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceNormalizedLevenshtein, b.distanceNormalizedLevenshtein)).limit(limit)
+					.anyMatch(s -> ref.equalsIgnoreCase(s.candidateResource)))
+				counterNormalizedLevenshtein++;
+			if (scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceSorensenDice, b.distanceSorensenDice)).limit(limit)
+					.anyMatch(s -> ref.equalsIgnoreCase(s.candidateResource)))
+				counterSorensenDice++;
+		}
+		logger.info("Cosine : " + counterCosine / (double)toponymsTEI.size());
+		logger.info("Jaccard : " + counterJaccard / (double)toponymsTEI.size());
+		logger.info("JaroWinkler : " + counterJaroWinkler / (double)toponymsTEI.size());
+		logger.info("MetricLCS : " + counterMetricLCS / (double)toponymsTEI.size());
+		logger.info("NormalizedLevenshtein : " + counterNormalizedLevenshtein / (double)toponymsTEI.size());
+		logger.info("SorensenDice : " + counterSorensenDice / (double)toponymsTEI.size());
+	}
+	class ScoreStringComparison {
+		String candidateResource;
+		double distanceCosine;
+		double distanceJaccard;
+		double distanceJaroWinkler;
+		double distanceMetricLCS;
+		double distanceNormalizedLevenshtein;
+		double distanceSorensenDice;
 	}
 	public void TestFunction() {
 		Map<String, List<Tmp>> map = new HashMap<>();
@@ -481,8 +675,8 @@ public class GraphMatching {
 				 .sorted((l1, l2) -> Integer
 				 .compare(l2.get(0).listStatements().toList().size(),
 				 l1.get(0).listStatements().toList().size()))
-//				 .skip(8)
-//				 .limit(2)
+				 .skip(8)
+				 .limit(2)
 				 .collect(Collectors.toList())) {
 			logger.info("Traitement de la séquence " + seqCount + "/" + altsBySeq.size());
 			logger.info(alts.size() + " mini graphes à traiter pour cette séquence.");
@@ -747,14 +941,14 @@ public class GraphMatching {
 		Model model = ModelFactory.createDefaultModel().read("C:\\modelOriginal - Copie.n3");		
 		explodeAltsV5(model);
 	}
-	public GraphMatching(Document teiSource, String dbPediaRdfFilePath) {
+	public GraphMatching(Document teiSource, String dbPediaRdfFilePath, String workingDirectory) {
 		this.teiRdf = RDFUtil.getModel(teiSource); // BUG EN RELEASE
 		// this.teiRdf = ModelFactory.createDefaultModel().read(workingDirectory
 		// + "temp7.n3");
 		this.toponymsTEI = getToponymsFromTei(teiRdf);
 		this.kbSource = ModelFactory.createDefaultModel().read(dbPediaRdfFilePath);
 		this.candidatesFromKB = getCandidatesFromKB(this.kbSource);
-		this.workingDirectory = null;
+		this.workingDirectory = workingDirectory;
 		subjectsOfSubgraph = null;
 		shortestPaths = null;
 		serializationDirectory = null;
@@ -768,7 +962,7 @@ public class GraphMatching {
 		labelWeight = 0f;
 		typeWeight = 0f;
 		kbSubgraph = null;
-		TestFunction();
+		TestFunctionSimilarite();
 	}
 	
 	private Model transformModelByKeepingR1(Model original, String r1, String r2) {
