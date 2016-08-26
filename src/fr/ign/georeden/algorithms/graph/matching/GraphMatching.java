@@ -413,6 +413,7 @@ public class GraphMatching {
 		double counterNormalizedLevenshtein = 0;
 		double counterSorensenDice = 0;
 		
+		int counter = 1;
 		for (Toponym toponym : toponymsTEI) {
 			String topoName = toponym.getName();
 			String ref = refById.get(toponym.getXmlId());
@@ -470,6 +471,8 @@ public class GraphMatching {
 			if (scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceSorensenDice, b.distanceSorensenDice)).limit(limit)
 					.anyMatch(s -> ref.equalsIgnoreCase(s.candidateResource)))
 				counterSorensenDice++;
+			logger.info(counter + " / " + toponymsTEI.size());
+			counter++;
 		}
 		logger.info("Cosine : " + counterCosine / (double)toponymsTEI.size());
 		logger.info("Jaccard : " + counterJaccard / (double)toponymsTEI.size());
