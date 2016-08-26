@@ -1644,8 +1644,6 @@ public class GraphMatching {
 			final String topoLabel = toponymsWithLabel.getKey();
 			Map<String, Float> scoreByLabel = new ConcurrentHashMap<>();
 			for (Candidate candidate : candidatesFromKBCleared) {
-				// candidatesToCheck.parallelStream().forEach(candidate -> {
-				//IStringComparison sc = new StringComparisonDamLev();
 				IStringComparison sc = new CustomStringComparison();
 				float score = 0f;
 				if (candidate.getName() != null && scoreByLabel.containsKey(candidate.getName())) {
@@ -1665,23 +1663,18 @@ public class GraphMatching {
 				}
 				criterionToponymCandidateList.add(new CriterionToponymCandidate(candidate, score, criterion));
 			}
-			criterionToponymCandidateList = criterionToponymCandidateList.stream().filter(s -> s != null).filter(t -> t.getValue() >= threshold)
+			List<CriterionToponymCandidate> selected = criterionToponymCandidateList.stream()
+					.filter(s -> s != null).filter(t -> t.getValue() >= 0.99f).collect(Collectors.toList());
+			selected.addAll(criterionToponymCandidateList.stream().filter(s -> s != null).filter(t -> t.getValue() >= threshold && t.getValue() < 0.99f)
 					.sorted((a, b) -> Float.compare(b.getValue(), a.getValue()))
 					.limit(numberOfCandidate)
-					.collect(Collectors.toList());
+					.collect(Collectors.toList()));
+			selected = selected.stream().distinct().collect(Collectors.toList());
 			for (Toponym toponym : toponymsWithLabel.getValue()) {
-				for (CriterionToponymCandidate crit : criterionToponymCandidateList) {
+				for (CriterionToponymCandidate crit : selected) {
 					toponym.addScoreCriterionToponymCandidate(crit);
 				}
 			}
-//			for (Toponym toponym : toponymsWithLabel.getValue()) {
-//				toponym.clearAndAddAllScoreCriterionToponymCandidate(toponym.getScoreCriterionToponymCandidate()
-//						.stream().filter(s -> s != null).filter(t -> t.getValue() >= threshold)
-//						.sorted((a, b) -> Float.compare(b.getValue(), a.getValue()))
-//						.limit(Math.min(numberOfCandidate, toponym.getScoreCriterionToponymCandidate().size()))
-//						.collect(Collectors.toList()));
-//				result.add(toponym);
-//			}
 			logger.info((count.getAndIncrement() + 1) + " / " + total);
 		});
 

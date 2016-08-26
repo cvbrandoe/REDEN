@@ -72,7 +72,7 @@ public class MainNELApp {
 	private static Logger logger = Logger.getLogger(MainNELApp.class);
 	
 
-	static final String workingDirectory = "D:\\";
+	static final String workingDirectory = "C:\\";
 
 	private static String teiSource;
 
@@ -125,9 +125,9 @@ public class MainNELApp {
 //		 StringComparisonDamLev sc = new StringComparisonDamLev();
 //		 logger.info(sc.computeSimilarity("Gentioux", "Gentioux-Pigerolles"));
 
-		 GraphMatching g = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3");
-			if (true)
-				return;
+//		 GraphMatching g = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3");
+//			if (true)
+//				return;
 		GraphMatching graphMatching = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3"
 				, 10, 0.5f, workingDirectory + "serializations\\", 0.4f, 0.4f, 0.1f, 0.1f, workingDirectory);
 		if (optionManager.hasOption("shortestPaths")) {
@@ -136,44 +136,7 @@ public class MainNELApp {
 		//graphMatching.test2();
 		Set<Toponym> results = graphMatching.compute();
 		
-		final Document teiSourceDocument = XMLUtil.createDocumentFromFile(teiSource);
-		Document teiResults =  fillXmlWithResults(teiSourceDocument, results);
-		try {
-			XMLUtil.displayXml(teiResults, workingDirectory + "teiResult.xml", false);
-			XMLUtil.displayXml(teiResults, workingDirectory + "goldRes\\" + "teiResult-outV3.xml", false);
-		} catch (TransformerException e) {
-			logger.info(e);
-		}
-		// namedEntityTag corresponds to the name of the tag identifying a named-entity in the TEI-XML
-		String annotationTag = "placeName";
-		// xpathExpresion is the XPATH expression which enables the customization of the size of the context 
-		String xpathExpresion = "//p"; // //body/div
-		String outDir = workingDirectory + "goldRes\\";
-		// propertyTagRef is the property name of the TEI-XML named-entity tag where REDEN will store the URIs for each mention
-		String propertyTagRef = "ref_auto";
-		List<Map<String, List<List<String>>>> allMentionsWithUrisPerContextinText = new ArrayList<>();
-		int max = results.stream().mapToInt(t -> t.getXmlId().intValue()).distinct().max().getAsInt();
-		
-		for (int i = 0; i <= max; i++) {
-			final int index = i;
-			List<Toponym> currentToponyms = results.stream().filter(t -> t.getXmlId() == index).collect(Collectors.toList());
-			Optional<Toponym> topoOpt = currentToponyms.stream().filter(t -> t.getReferent() != null).findFirst();
-			if (!topoOpt.isPresent())
-				topoOpt = currentToponyms.stream().findFirst();
-			Toponym topo = topoOpt.isPresent() ? topoOpt.get() : null;
-			Map<String, List<List<String>>> allMentionsWithURIs = new HashMap<>();
-			List<List<String>> listTmp = new ArrayList<>();
-			if (topo != null)
-				listTmp.add(topo.getScoreCriterionToponymCandidate().stream().map(s -> s.getCandidate().getResource().toString()).collect(Collectors.toList()));
-			allMentionsWithURIs.put(topo != null ? topo.getName() : "", listTmp);
-			allMentionsWithUrisPerContextinText.add(allMentionsWithURIs);
-		}
-		
-		List<EvalInfo> collectedResults = ResultsAndEvaluationNEL.compareResultsWithGold("teiResult.xml", 
-				annotationTag, xpathExpresion, outDir, propertyTagRef, allMentionsWithUrisPerContextinText);
-		//compute final results
-		ResultsAndEvaluationNEL.computeFinalResults(collectedResults);
-		
+		evaluation(results);
 
 		// String query =
 		// "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
@@ -239,6 +202,54 @@ public class MainNELApp {
 		// }
 	}
 	
+	/**
+	 * Evaluation of the results.
+	 *
+	 * @param results the results
+	 */
+	private static void evaluation(Set<Toponym> results) {
+
+		final Document teiSourceDocument = XMLUtil.createDocumentFromFile(teiSource);
+		Document teiResults =  fillXmlWithResults(teiSourceDocument, results);
+		try {
+			XMLUtil.displayXml(teiResults, workingDirectory + "teiResult.xml", false);
+			XMLUtil.displayXml(teiResults, workingDirectory + "goldRes\\" + "teiResult-outV3.xml", false);
+		} catch (TransformerException e) {
+			logger.info(e);
+		}
+		// namedEntityTag corresponds to the name of the tag identifying a named-entity in the TEI-XML
+		String annotationTag = "placeName";
+		// xpathExpresion is the XPATH expression which enables the customization of the size of the context 
+		String xpathExpresion = "//p"; // //body/div
+		String outDir = workingDirectory + "goldRes\\";
+		// propertyTagRef is the property name of the TEI-XML named-entity tag where REDEN will store the URIs for each mention
+		String propertyTagRef = "ref_auto";
+		//List<Map<String, List<List<String>>>> allMentionsWithUrisPerContextinText = new ArrayList<>();
+		int max = results.stream().mapToInt(t -> t.getXmlId().intValue()).distinct().max().getAsInt();
+
+		Map<Integer, List<String>> allMentionsWithUrisPerContextinText = new HashMap<>();
+		for (Toponym toponym : results) {
+			List<String> candidates = toponym.getScoreCriterionToponymCandidate().stream().map(c -> c.getCandidate().getResource().toString()).collect(Collectors.toList());
+			allMentionsWithUrisPerContextinText.put(toponym.getXmlId(), candidates);
+		}
+//		for (int i = 0; i <= max; i++) {
+//			final int index = i;
+//			List<Toponym> currentToponyms = results.stream().filter(t -> t.getXmlId() == index).collect(Collectors.toList());
+//			Optional<Toponym> topoOpt = currentToponyms.stream().filter(t -> t.getReferent() != null).findFirst();
+//			if (!topoOpt.isPresent())
+//				topoOpt = currentToponyms.stream().findFirst();
+//			Toponym topo = topoOpt.isPresent() ? topoOpt.get() : null;
+//			List<List<String>> listTmp = new ArrayList<>();
+//			if (topo != null)
+//				listTmp.add(topo.getScoreCriterionToponymCandidate().stream().map(s -> s.getCandidate().getResource().toString()).collect(Collectors.toList()));
+//			allMentionsWithUrisPerContextinText.put(topo != null ? topo.getName() : "", listTmp);
+//		}
+		
+		List<EvalInfo> collectedResults = ResultsAndEvaluationNEL.compareResultsWithGold("teiResult.xml", 
+				annotationTag, xpathExpresion, outDir, propertyTagRef, allMentionsWithUrisPerContextinText);
+		//compute final results
+		ResultsAndEvaluationNEL.computeFinalResults(collectedResults);
+	}
 	private static Document fillXmlWithResults(Document teiSource, Set<Toponym> toponymsTEI) {
 		NodeList names = teiSource.getElementsByTagName("name");
 		Map<String, List<Toponym>> toponymsById = toponymsTEI.stream()

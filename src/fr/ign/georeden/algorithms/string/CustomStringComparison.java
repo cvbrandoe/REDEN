@@ -171,34 +171,39 @@ public class CustomStringComparison implements IStringComparison {
 			"quelles", 
 			"sans", 
 			"soi",
-			"marie"};
+			"marie",
+			"saint",
+			"sainte",
+			"forêt",
+			"mont",
+			"ville",
+			"bourg",
+			"grand",
+			"blanc"};
 	private static final Set<String> STOP_WORDS = new HashSet<>(Arrays.asList(SET_VALUES));
 	@Override
 	public double computeSimilarity(String string1, String string2) {
 		if (string1 == null || string2 == null)
 			return 0.0;
-		// si la chaine est du type Ville sur Rivière (ex: Neuilly sur Seine), on effectue un traitement à part
+		// si la chaine est du type Ville sur Rivière (ex: Neuilly sur Seine ou Availles-en-Châtellerault ou 
+		// Bonchamp-lès-Laval, Monestier-de-Clermont), on effectue un traitement à part
 		String s1 = string1.toLowerCase();
 		String s2 = string2.toLowerCase();
-		if (s1.contains(" sur")) {
-			int index = s1.indexOf(" sur");
-			s1 = s1.substring(0, index);
-		} else if (s1.contains("-sur")) {
-			int index = s1.indexOf("-sur");
-			s1 = s1.substring(0, index);
-		}
-		if (s2.contains(" sur")) {
-			int index = s2.indexOf(" sur");
-			s2 = s2.substring(0, index);
-		} else if (s2.contains("-sur")) {
-			int index = s2.indexOf("-sur");
-			s2 = s2.substring(0, index);
-		}
-		// On vérifie si les bags ont un élément en commun
-		Set<String> token1 = tokenize(s1);
-		Set<String> token2 = tokenize(s2);
-		if (token1.removeAll(token2))
-			return 1.0;
+		//if (!s1.startsWith("saint") && !s2.startsWith("saint")) {
+			s1 = removeSuffix(s1, "sur");
+			s2 = removeSuffix(s2, "sur");
+			s1 = removeSuffix(s1, "en");
+			s2 = removeSuffix(s2, "en");
+			s1 = removeSuffix(s1, "lès");
+			s2 = removeSuffix(s2, "lès");
+			s1 = removeSuffix(s1, "de");
+			s2 = removeSuffix(s2, "de");
+			// On vérifie si les bags ont un élément en commun
+			Set<String> token1 = tokenize(s1);
+			Set<String> token2 = tokenize(s2);
+			if (!token1.isEmpty() && !token2.isEmpty() && token1.removeAll(token2))
+				return 1.0;
+		//}
 		
 		// on vérifie si le nom n'a pas été concaténé (ex: Donne-marie -> Donnemarie)
 		String newS1 = string1.replace("-", "").replace(" ", "").replace("'", "").toLowerCase();
@@ -209,6 +214,25 @@ public class CustomStringComparison implements IStringComparison {
 		double slev = 0;
 		TokenWiseSimilarity tws = new TokenWiseSimilarity(string1, string2, slev);		
 		return tws.calcule();
+	}
+	
+	/**
+	 * Removes the suffix and the later part from the string s if the suffix preceded by a white space or a hyphen is present in s.
+	 *
+	 * @param stringToCheck the string to check
+	 * @param suffix the suffix
+	 * @return the string
+	 */
+	private String removeSuffix(String stringToCheck, String suffix) {
+		String s = stringToCheck;
+		int index = -1;
+		if (s.contains(" " + suffix + " "))
+			index = s.indexOf(" " + suffix + " ");
+		else if (s.contains("-" + suffix + " "))
+			index = s.indexOf("-" + suffix + "-");
+		if (index > -1 && s.length() > index)
+			s = s.substring(0, index);
+		return s;
 	}
 	
 	private Set<String> tokenize(String s) {

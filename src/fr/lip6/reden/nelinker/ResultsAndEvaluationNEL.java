@@ -32,6 +32,8 @@ import javax.xml.xpath.XPathFactory;
 
 import org.apache.log4j.Logger;
 import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -259,7 +261,7 @@ public class ResultsAndEvaluationNEL {
 						
 						String ref = childGold.getAttribute("ref"); //single manual URI
 						String ref_autoList = child.getAttribute(propertyTagRef); //chosen candidate URIs
-						String mention = child.getTextContent();
+						String mention = child.getTextContent().trim();
 						
 						EvalInfo evalInfo = new EvalInfo();	
 						evalInfo.setMention(mention);
@@ -361,6 +363,198 @@ public class ResultsAndEvaluationNEL {
 		return collectedResults;
 
 	}
+	
+	public static List<EvalInfo> compareResultsWithGold(String namefile, String annotationTag, String xpathExpresion, String outDir, String propertyTagRef, 
+			Map<Integer, List<String>> allMentionsWithUrisPerContextinText) {
+		
+		List<EvalInfo> collectedResults = new ArrayList<EvalInfo>();
+		
+		HashMap<String, Integer> countOccurenceCorrectMentions = new HashMap<String, Integer>();
+		float manualkeys = 0, correctkey = 0, emptyChoice = 0, emptyManualAnnot = 0;
+		try {
+			String namefileA[] = namefile.split("/");
+			
+			PrintWriter writer = new PrintWriter(outDir+namefileA[namefileA.length-1].replace(".xml",
+					"-resEvalV3.txt"), "UTF-8");
+			
+			PrintWriter writerCE = new PrintWriter(outDir+namefileA[namefileA.length-1].replace(".xml",
+					"-resCorrectMentionsV3.txt"), "UTF-8");
+						
+			// output file
+			DocumentBuilder b = DocumentBuilderFactory.newInstance()
+					.newDocumentBuilder();
+			org.w3c.dom.Document doc = b.parse(new FileInputStream(outDir+namefileA[namefileA.length-1]
+					.replace(".xml", "-outV3.xml")));
+
+			XPath xPath = XPathFactory.newInstance().newXPath();
+			NodeList nodes = (NodeList) xPath.evaluate(
+					xpathExpresion,
+					doc.getDocumentElement(), XPathConstants.NODESET);
+
+			// gold file
+			String goldName = namefile.replace(".xml", "-gold.xml");
+			DocumentBuilder bgold = DocumentBuilderFactory.newInstance()
+					.newDocumentBuilder();
+			org.w3c.dom.Document docgold = bgold.parse(new FileInputStream(
+					goldName));
+			XPath xPathGold = XPathFactory.newInstance().newXPath();
+			NodeList nodesGold = (NodeList) xPathGold.evaluate(
+					xpathExpresion,
+					docgold.getDocumentElement(), XPathConstants.NODESET);
+			
+			Integer countParagraph = 0;
+			for (int i = 0; i < nodes.getLength(); ++i) {
+				
+				Element e = (Element) nodes.item(i);
+				String otherMentions = "";
+				writer.println("Text portion# "+countParagraph);
+				for (String annoTag : annotationTag.split(",")) {
+
+					NodeList nodesChild = (NodeList) xPath.evaluate(".//"
+							+ annoTag.trim(), e, XPathConstants.NODESET);
+					
+					// gold file
+					Element eGold = (Element) nodesGold.item(i);
+					NodeList nodesChildGold = (NodeList) xPathGold.evaluate(".//"
+							+ annoTag.trim(), eGold, XPathConstants.NODESET);
+					
+					for (int k = 0; k < nodesChild.getLength(); ++k) {
+						Element child = (Element) nodesChild.item(k);
+						Element childGold = (Element) nodesChildGold.item(k);
+						otherMentions += child.getTextContent() + ",";
+						
+						String ref = childGold.getAttribute("ref"); //single manual URI
+						String ref_autoList = child.getAttribute(propertyTagRef); //chosen candidate URIs
+						String mention = "";
+						int id = -1;
+						NodeList childs = child.getChildNodes();
+						for (int j = 0; j < childs.getLength(); j++) {
+							Node n = childs.item(j);
+							String nodeName = n.getNodeName();
+							if ("name".equals(nodeName) && n.hasAttributes()) {
+								NamedNodeMap attributes = n.getAttributes();
+								for (int l = 0; l < attributes.getLength(); l++) {
+									if ("xml:id".equals(attributes.item(l).getNodeName()))
+									id = Integer.parseInt(attributes.item(l).getNodeValue());
+								}
+								NodeList childs2 = n.getChildNodes();
+								for (int m = 0; m < childs2.getLength(); m++) {
+									Node n2 = childs2.item(m);
+									String nodeName2 = n2.getNodeName();
+									if ("w".equals(nodeName2) && n2.getTextContent() != null) {
+										mention += n2.getTextContent().trim() + " ";
+									}
+								}
+								break;
+							}
+						}
+						mention = mention.trim();
+						EvalInfo evalInfo = new EvalInfo();	
+						evalInfo.setMention(mention);
+						List<String> candidates = allMentionsWithUrisPerContextinText.get(id);
+						if (candidates != null && !candidates.isEmpty()) {
+							List<List<String>> list = new ArrayList<>();
+							list.add(candidates);
+							evalInfo.setCandUris(list);
+						}
+						
+						writer.println("");
+						writer.println("Mention: "
+								+ child.getTextContent());
+						
+						writer.println("Manual was: "+ref);
+						writer.println("REDEN chose: "+ref_autoList);
+						
+						if (ref != null && !ref.equals("")) { // gold has manual ref						
+							evalInfo.setManualURI(ref);
+							manualkeys++;
+							//the good URI is in the candidate set (not necessarily the chosen one)
+							if (evalInfo.getCandUris() != null) {
+								for (List<String> cand : evalInfo.getCandUris()) {
+									for (String uri : cand) {
+										if (uri.toLowerCase().contains(ref.toLowerCase())) {
+											evalInfo.setCorrectURIisInCandSet(true);
+										}
+									}								
+								}
+							}
+								
+							if (ref_autoList != null && !ref_autoList.equals("")) { // nel chose something
+								evalInfo.setChosenUri(ref_autoList);								
+								if (ref_autoList.contains(ref)) {
+									writer.println("Good choice");
+									correctkey++;
+									evalInfo.setChoiceIsCorrect(true); //the good URI was chosen
+									if (countOccurenceCorrectMentions.get(mention) == null) {
+										countOccurenceCorrectMentions.put(mention, 1);
+									} else {
+										Integer count = countOccurenceCorrectMentions.get(mention);
+										count++;
+										countOccurenceCorrectMentions.put(mention, count);
+									}
+								} else {
+									writer.println("Wrong choice");
+								}
+							} else {
+								//writer.println("REDEN chose nothing");
+								emptyChoice++;
+								evalInfo.setChosenUri(null);
+							}						
+						} else {
+							emptyManualAnnot++;
+							evalInfo.setManualURI(null);
+							writer.println("No manual annotation");
+						}	
+						collectedResults.add(evalInfo);
+						if (evalInfo.getCorrectURIisInCandSet() && !evalInfo.getChoiceIsCorrect()) {
+							writer.println("Right referent in candidate set but REDEN choose the wrong one");
+						}
+						//print candidate set
+						writer.println("The candidate set is: ");						
+						if (evalInfo.getCandUris() != null) {
+							for (List<String> cand : evalInfo.getCandUris()) {
+								writer.println(cand.toString());
+							}
+						}
+					}
+				}
+				countParagraph++;				
+				writer.println("Context was: "+otherMentions);
+				writer.println("______________");
+			}
+			
+			//print occurrences of correctly identified mentions
+			Set<String> keys = countOccurenceCorrectMentions.keySet();
+			for (String k : keys) {
+				writerCE.println("mention: "+k + " count: "+countOccurenceCorrectMentions.get(k));
+			}
+			writer.println();
+			/* Old evaluation procedure
+			 * writer.println("Manually annotated keys:" + manualkeys);
+			writer.println("Correctly annotated keys:" + correctkey);
+			writer.println("NEL didn't make choice:" + emptyChoice);
+			writer.println("Manual annotation was missing:" + emptyManualAnnot);
+			writer.println("Evaluation: " + correctkey / manualkeys);*/
+			writer.close();
+			writerCE.close();
+			logger.info("Check results in "
+					+ outDir+namefileA[namefileA.length-1].replace(".xml", "-resEvalV3.txt"));			
+		} catch (ParserConfigurationException e1) {
+			e1.printStackTrace();
+		} catch (XPathExpressionException e1) {
+			e1.printStackTrace();
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		} catch (SAXException e1) {
+			e1.printStackTrace();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+		
+		return collectedResults;
+
+	}
+	
 	
 	/**
 	 * Print the number of times a predicate (edge) appears in the graph.
