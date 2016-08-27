@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+import info.debatty.java.stringsimilarity.Cosine;
+
 public class CustomStringComparison implements IStringComparison {
 
 	private static final String[] SET_VALUES = new String[] { "au", 
@@ -196,7 +198,7 @@ public class CustomStringComparison implements IStringComparison {
 		// Bonchamp-lès-Laval, Monestier-de-Clermont), on effectue un traitement à part
 		String s1 = string1.toLowerCase();
 		String s2 = string2.toLowerCase();
-		//if (!s1.startsWith("saint") && !s2.startsWith("saint")) {
+		if (!s1.startsWith("saint") && !s2.startsWith("saint")) {
 			s1 = removeSuffix(s1, "sur");
 			s2 = removeSuffix(s2, "sur");
 			s1 = removeSuffix(s1, "en");
@@ -210,17 +212,18 @@ public class CustomStringComparison implements IStringComparison {
 			Set<String> token2 = tokenize(s2);
 			if (!token1.isEmpty() && !token2.isEmpty() && token1.removeAll(token2))
 				return 1.0;
-		//}
+		}
 		
 		// on vérifie si le nom n'a pas été concaténé (ex: Donne-marie -> Donnemarie)
 		String newS1 = string1.replace("-", "").replace(" ", "").replace("'", "").toLowerCase();
 		String newS2 = string2.replace("-", "").replace(" ", "").replace("'", "").toLowerCase();
 		if (newS1.equals(newS2))
 			return 1.0;
-		
-		double slev = 0;
-		TokenWiseSimilarity tws = new TokenWiseSimilarity(string1, string2, slev);		
-		return tws.calcule();
+		Cosine cosine = new Cosine();
+		return cosine.similarity(string1, string2);
+//		double slev = 0;
+//		TokenWiseSimilarity tws = new TokenWiseSimilarity(string1, string2, slev);		
+//		return tws.calcule();
 	}
 	
 	/**

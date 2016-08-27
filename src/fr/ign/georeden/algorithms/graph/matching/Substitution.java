@@ -5,9 +5,9 @@ import org.apache.jena.rdf.model.Resource;
 public class Substitution implements IPathMatching {
 	private Resource deletedNode;
 	private Resource insertedNode;
-	private float cost;
+	private double cost;
 
-	public Substitution(Resource deletedNode, Resource insertedNode, float cost) {
+	public Substitution(Resource deletedNode, Resource insertedNode, double cost) {
 		this.deletedNode = deletedNode;
 		this.insertedNode = insertedNode;
 		this.cost = cost;
@@ -22,7 +22,7 @@ public class Substitution implements IPathMatching {
 	}
 
 	@Override
-	public float getCost() {
+	public double getCost() {
 		return this.cost;
 	}
 

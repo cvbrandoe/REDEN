@@ -6,5 +6,5 @@ public interface IPathMatching {
 	 *
 	 * @return the cost
 	 */
-	float getCost();
+	double getCost();
 }

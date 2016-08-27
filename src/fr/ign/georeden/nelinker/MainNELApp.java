@@ -91,11 +91,11 @@ public class MainNELApp {
 //		 StringComparisonDamLev sc = new StringComparisonDamLev();
 //		 logger.info(sc.computeSimilarity("Gentioux", "Gentioux-Pigerolles"));
 
-		 GraphMatching g = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3", workingDirectory);
-			if (true)
-				return;
+//		 GraphMatching g = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3", workingDirectory);
+//			if (true)
+//				return;
 		GraphMatching graphMatching = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3"
-				, 10, 0.5f, workingDirectory + "serializations\\", 0.4f, 0.4f, 0.1f, 0.1f, workingDirectory);
+				, 15, 0.3f, workingDirectory + "serializations\\", 0.4f, 0.4f, 0.1f, 0.1f, workingDirectory);
 		if (optionManager.hasOption("shortestPaths")) {
 			graphMatching.allPairShortestPathPreProcessing();
 		}
@@ -200,7 +200,7 @@ public class MainNELApp {
 					if (xmlId != null && toponymsById.containsKey(xmlId)) {
 						Optional<fr.ign.georeden.algorithms.graph.matching.Toponym> optTopo = toponymsById.get(xmlId).stream()
 								.filter(t -> t.getReferent() != null && t.getSubstitutionCostResult() != null)
-								.sorted((t1, t2) -> Float.compare(t1.getSubstitutionCostResult().getTotalCost(), t2.getSubstitutionCostResult().getTotalCost()))
+								.sorted((t1, t2) -> Double.compare(t1.getSubstitutionCostResult().getTotalCost(), t2.getSubstitutionCostResult().getTotalCost()))
 								.findFirst();
 						String value = "nil";
 						if (optTopo.isPresent()) {

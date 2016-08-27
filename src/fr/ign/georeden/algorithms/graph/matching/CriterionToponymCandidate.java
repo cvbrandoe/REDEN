@@ -4,7 +4,7 @@ package fr.ign.georeden.algorithms.graph.matching;
  * The Class CriterionToponymCandidate. Represents the score of toponym's candidate.
  */
 public class CriterionToponymCandidate {
-	private float value;
+	private double value;
 	private Candidate candidate;
 	private Criterion criterion;
 	
@@ -16,7 +16,7 @@ public class CriterionToponymCandidate {
 	 * @param value the value
 	 * @param criterion the criterion
 	 */
-	public CriterionToponymCandidate(Candidate candidate, float value, Criterion criterion) {
+	public CriterionToponymCandidate(Candidate candidate, double value, Criterion criterion) {
 		this.candidate = candidate;
 		this.value = value;
 		this.criterion = criterion;
@@ -28,7 +28,7 @@ public class CriterionToponymCandidate {
 	public Candidate getCandidate() {
 		return this.candidate;
 	}
-	public float getValue() {
+	public double getValue() {
 		return this.value;
 	}
 }

@@ -5,17 +5,17 @@ import java.util.List;
 import org.apache.jena.rdf.model.Model;
 
 public class MatchingResult {
-	private float costEdition;
+	private double costEdition;
 	private Model model;
 	private List<IPathMatching> editionPath;
 	
-	public MatchingResult(Model model, List<IPathMatching> editionPath, float costEdition) {
+	public MatchingResult(Model model, List<IPathMatching> editionPath, double costEdition) {
 		this.costEdition = costEdition;
 		this.model = model;
 		this.editionPath = editionPath;
 	}
 	
-	public float getCostEdition() {
+	public double getCostEdition() {
 		return this.costEdition;
 	}
 	public Model getModel() {

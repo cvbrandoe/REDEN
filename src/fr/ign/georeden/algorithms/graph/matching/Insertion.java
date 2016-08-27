@@ -4,9 +4,9 @@ import org.apache.jena.rdf.model.Resource;
 
 public class Insertion implements IPathMatching {
 	private Resource insertedNode;
-	private float cost;
+	private double cost;
 
-	public Insertion(Resource insertedNode, float cost) {
+	public Insertion(Resource insertedNode, double cost) {
 		this.insertedNode = insertedNode;
 		this.cost = cost;
 	}
@@ -16,7 +16,7 @@ public class Insertion implements IPathMatching {
 	}
 
 	@Override
-	public float getCost() {
+	public double getCost() {
 		return this.cost;
 	}
 

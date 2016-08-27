@@ -4,9 +4,9 @@ import org.apache.jena.rdf.model.Resource;
 
 public class Deletion implements IPathMatching {
 	private Resource deletedNode;
-	private float cost;
+	private double cost;
 
-	public Deletion(Resource deletedNode, float cost) {
+	public Deletion(Resource deletedNode, double cost) {
 		this.deletedNode = deletedNode;
 		this.cost = cost;
 	}
@@ -16,7 +16,7 @@ public class Deletion implements IPathMatching {
 	}
 
 	@Override
-	public float getCost() {
+	public double getCost() {
 		return this.cost;
 	}
 

@@ -201,11 +201,11 @@ public class GraphMatching {
 		Resource r2 = b.getSpatialReference() != null ? b.getSpatialReference() : b.getSpatialReferenceAlt();
 		String subR1 = r1.toString().substring(r1.toString().lastIndexOf('/') + 1);
 		String subR2 = r2.toString().substring(r2.toString().lastIndexOf('/') + 1);
-		float fR1 = subR1.indexOf('_') != -1 ? Float.parseFloat(subR1.substring(0, subR1.indexOf('_'))) + 0.1f
-				: Float.parseFloat(subR1);
-		float fR2 = subR2.indexOf('_') != -1 ? Float.parseFloat(subR2.substring(0, subR2.indexOf('_'))) + 0.1f
-				: Float.parseFloat(subR2);
-		return Float.compare(fR1, fR2);
+		double fR1 = subR1.indexOf('_') != -1 ? Double.parseDouble(subR1.substring(0, subR1.indexOf('_'))) + 0.1
+				: Double.parseDouble(subR1);
+		double fR2 = subR2.indexOf('_') != -1 ? Double.parseDouble(subR2.substring(0, subR2.indexOf('_'))) + 0.1
+				: Double.parseDouble(subR2);
+		return Double.compare(fR1, fR2);
 	};
 
 	private final String serializationDirectory;
@@ -216,10 +216,10 @@ public class GraphMatching {
 	private final Set<Resource> resourcesToUseForSP;
 	private final List<SubstitutionCostResult> scrList;
 
-	private final float labelWeight;
-	private final float rlspWeight;
-	private final float linkWeight;
-	private final float typeWeight;
+	private final double labelWeight;
+	private final double rlspWeight;
+	private final double linkWeight;
+	private final double typeWeight;
 	private final String workingDirectory;
 	
 	private final List<Candidate> candidatesFromKB;
@@ -239,8 +239,8 @@ public class GraphMatching {
 	 *            the candidate selection threshold
 	 */
 	public GraphMatching(Document teiSource, String dbPediaRdfFilePath, int numberOfCandidate,
-			float candidateSelectionThreshold, String serializationDirectory, float labelWeight, float rlspWeight,
-			float linkWeight, float typeWeight, String workingDirectory) {
+			double candidateSelectionThreshold, String serializationDirectory, double labelWeight, double rlspWeight,
+			double linkWeight, double typeWeight, String workingDirectory) {
 		this.serializationDirectory = serializationDirectory;
 		this.workingDirectory = workingDirectory;
 		this.labelWeight = labelWeight;
@@ -314,7 +314,7 @@ public class GraphMatching {
 		double scoreToken;
 		double scoreDamLev;
 	}
-	public void TestFunctionSimilarite() {
+	public void benchmarkStringSimilarity() {
 		Document docgold = XMLUtil.createDocumentFromFile(workingDirectory + "goldRes\\teiResult-gold.xml");
 		XPath xPathGold = XPathFactory.newInstance().newXPath();
 		NodeList nodesGold = null;
@@ -369,7 +369,7 @@ public class GraphMatching {
 				.filter(c -> c != null && c.getResource() != null && ((c.getName() != null && !c.getName().isEmpty()) || (c.getLabel() != null && !c.getLabel().isEmpty())))
 				.collect(Collectors.toList());
 
-		int limit = 50;
+		int limit = 15;
 		long counterCosine = 0;
 		long counterJaccard = 0;
 		long counterJaroWinkler = 0;
@@ -482,6 +482,107 @@ public class GraphMatching {
 		logger.info("CustomStringComparison : " + (double)counterCsc / (double)toponymsTEI.size());
 		logger.info("TokenWise : " + (double)counterTokenWise / (double)toponymsTEI.size());
 	}
+	public void benchmarkStringSimilarityV2() {
+		Document docgold = XMLUtil.createDocumentFromFile(workingDirectory + "goldRes\\teiResult-gold.xml");
+		XPath xPathGold = XPathFactory.newInstance().newXPath();
+		NodeList nodesGold = null;
+		try {
+			nodesGold = (NodeList) xPathGold.evaluate(
+					"//placeName[@ref]",
+					docgold.getDocumentElement(), XPathConstants.NODESET);
+		} catch (XPathExpressionException e) {
+			logger.error(e);
+		}
+		if (nodesGold == null)
+			return;
+		Map<String, String> refByMention = new HashMap<>();
+		logger.info("Nb ref dans gold : " + nodesGold.getLength());
+		for (int i = 0; i < nodesGold.getLength(); i++) {
+			Element childGold = (Element)nodesGold.item(i);
+			String ref = childGold.getAttribute("ref");
+			String mention = childGold.getTextContent().trim();
+			if (mention.startsWith("l' "))
+				mention = mention.substring(3);
+			else if (mention.startsWith("de la "))
+				mention = mention.substring(6);
+			else if (mention.startsWith("de "))
+				mention = mention.substring(3);
+			else if (mention.startsWith("du "))
+				mention = mention.substring(3);
+			else if (mention.startsWith("d' "))
+				mention = mention.substring(3);
+			else if (mention.startsWith("De "))
+				mention = mention.substring(3);
+			else if (mention.startsWith("le "))
+				mention = mention.substring(3);
+			else if (mention.startsWith("Le "))
+				mention = mention.substring(3);
+			else if (mention.startsWith("la "))
+				mention = mention.substring(3);
+			else if (mention.startsWith("La ") && !mention.startsWith("La Chari") && !mention.startsWith("La capi"))
+				mention = mention.substring(3);
+			else if (mention.startsWith("la vallée de la "))
+				mention = mention.substring(16);
+			refByMention.put(mention, ref);
+		}
+		Map<Integer, String> refById = new HashMap<>();
+		for (Toponym topo : toponymsTEI) {
+			Optional<Entry<String, String>> entry = refByMention.entrySet().stream().filter(e -> e.getKey().equalsIgnoreCase(topo.getName())).findFirst();
+			if (entry.isPresent()) {
+				refById.put(topo.getXmlId(), entry.get().getValue());
+			}
+		}
+		List<Candidate> candidates = candidatesFromKB.stream()
+				.filter(c -> c != null && c.getResource() != null && ((c.getName() != null && !c.getName().isEmpty()) || (c.getLabel() != null && !c.getLabel().isEmpty())))
+				.collect(Collectors.toList());
+		
+		int limit = 15;
+		long counterCosine = 0;
+		long counterCsc = 0;
+		List<Boolean> listCosine = new CopyOnWriteArrayList<>();
+		List<Boolean> listCsc = new CopyOnWriteArrayList<>();
+		
+		final AtomicInteger count = new AtomicInteger();
+		toponymsTEI.parallelStream().forEach(toponym -> {
+			
+			String topoName = toponym.getName();
+			String ref = refById.get(toponym.getXmlId());
+			if (ref != null) {
+				Cosine cosine = new Cosine();
+				CustomStringComparison csc = new CustomStringComparison();
+				List<ScoreStringComparison> scoreStringComparison = new ArrayList<>();
+				for (Candidate candidate : candidates) {
+					String candidateLabel = candidate.getLabel();
+					String candidateName = candidate.getName();
+					double distanceCosine = Double.POSITIVE_INFINITY;
+					double distanceCsc = Double.POSITIVE_INFINITY;
+					if (candidateLabel != null && !candidateLabel.isEmpty()) {
+						distanceCosine = cosine.distance(topoName, candidateLabel);
+						distanceCsc = 1.0 - csc.computeSimilarity(topoName, candidateLabel);
+					} 
+					if (candidateName != null && !candidateName.isEmpty()) {
+						distanceCosine = Double.min(cosine.distance(topoName, candidateName), distanceCosine);
+						distanceCsc = Double.min(1.0 - csc.computeSimilarity(topoName, candidateName), distanceCsc);
+						TokenWiseSimilarity tws = new TokenWiseSimilarity(topoName, candidateName, 0.0);
+					}
+					ScoreStringComparison ssc = new ScoreStringComparison();
+					ssc.candidateResource = candidate.getResource().toString();
+					ssc.distanceCosine = distanceCosine;
+					ssc.distanceCsc = distanceCsc;
+					scoreStringComparison.add(ssc);
+				}
+				listCosine.add(scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceCosine, b.distanceCosine)).limit(limit)
+						.anyMatch(s -> ref.equals(s.candidateResource)));
+				listCsc.add(scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceCsc, b.distanceCsc)).limit(limit)
+						.anyMatch(s -> ref.equals(s.candidateResource)));
+			}
+			logger.info((count.getAndIncrement() + 1) + " / " + toponymsTEI.size());
+		});
+		counterCosine = listCosine.stream().filter(b -> b).count();
+		counterCsc = listCsc.stream().filter(b -> b).count();
+		logger.info("Cosine : " + (double)counterCosine / (double)toponymsTEI.size());
+		logger.info("CustomStringComparison : " + (double)counterCsc / (double)toponymsTEI.size());
+	}
 	class ScoreStringComparison {
 		String candidateResource;
 		double distanceCosine;
@@ -560,8 +661,8 @@ public class GraphMatching {
 		return toponymsTEI;
 	}
 
-	private float getLatitude(Resource r) {
-		float result = 0f;
+	private double getLatitude(Resource r) {
+		double result = 0.0;
 		Statement s = kbSource.getProperty(r, propLat);
 
 		if (s == null) {
@@ -576,7 +677,7 @@ public class GraphMatching {
 					String latString = latObject.toString();
 					if (latString != null) {
 						try {
-							result = Float.parseFloat(latString);
+							result = Double.parseDouble(latString);
 						} catch (NumberFormatException e) {
 							logger.error(e);
 						}
@@ -599,8 +700,8 @@ public class GraphMatching {
 		return sLat != null && sLong != null;
 	}
 
-	private float getLongitude(Resource r) {
-		float result = 0f;
+	private double getLongitude(Resource r) {
+		double result = 0.0;
 		Statement s = kbSource.getProperty(r, propLong);
 
 		if (s == null) {
@@ -615,7 +716,7 @@ public class GraphMatching {
 					String latString = latObject.toString();
 					if (latString != null) {
 						try {
-							result = Float.parseFloat(latString);
+							result = Double.parseDouble(latString);
 						} catch (NumberFormatException e) {
 							logger.error(e);
 						}
@@ -628,8 +729,8 @@ public class GraphMatching {
 	private Model addCoordinates(Model original, Resource resource) {
 		if (!hasLatAndLong(resource))
 			return original;
-		float lat = getLatitude(resource);
-		float longitude = getLongitude(resource);
+		double lat = getLatitude(resource);
+		double longitude = getLongitude(resource);
 		Model model = cloneModel(original);
 		Statement latStatement = model.createLiteralStatement(resource, propLat, lat);
 		Statement longStatement = model.createLiteralStatement(resource, propLong, longitude);
@@ -892,15 +993,15 @@ public class GraphMatching {
 		return resourcesToUseForSP;
 	}
 
-	// private Entry<Float, List<IPathMatching>> getBestPath(Map<Float,
+	// private Entry<Double, List<IPathMatching>> getBestPath(Map<Double,
 	// List<IPathMatching>> resultsForCurrentSeq) {
-	// Float min =
-	// resultsForCurrentSeq.keySet().stream().min(Float::compare).get();
+	// Double min =
+	// resultsForCurrentSeq.keySet().stream().min(Double::compare).get();
 	// return resultsForCurrentSeq.entrySet().stream().filter(e -> e.getKey() ==
 	// min).findFirst().get();
 	// }
 	private MatchingResult getBestPath(List<MatchingResult> matchingResults) {
-		return matchingResults.stream().min((a, b) -> Float.compare(a.getCostEdition(), b.getCostEdition())).get();
+		return matchingResults.stream().min((a, b) -> Double.compare(a.getCostEdition(), b.getCostEdition())).get();
 	}
 
 	/**
@@ -908,10 +1009,10 @@ public class GraphMatching {
 	 *
 	 * @param path
 	 *            the path
-	 * @return the float
+	 * @return the double
 	 */
-	private float totalCostPath(List<IPathMatching> path) {
-		float result = 0f;
+	private double totalCostPath(List<IPathMatching> path) {
+		double result = 0.0;
 		if (path == null)
 			return result;
 		for (IPathMatching iPathMatching : path) {
@@ -934,14 +1035,14 @@ public class GraphMatching {
 		shortestPaths = null;
 		serializationDirectory = null;
 		scrList = null;
-		rlspWeight = 0f;
+		rlspWeight = 0.0;
 		rlspCalculous = null;
 		resourcesToUseForSP = null;
 		resourcesIndexAPSP = null;
 		nil = null;
-		linkWeight = 0f;
-		labelWeight = 0f;
-		typeWeight = 0f;
+		linkWeight = 0.0;
+		labelWeight = 0.0;
+		typeWeight = 0.0;
 		kbSubgraph = null;
 		kbSource = null;
 		Model model = ModelFactory.createDefaultModel().read("C:\\modelOriginal - Copie.n3");		
@@ -959,16 +1060,16 @@ public class GraphMatching {
 		shortestPaths = null;
 		serializationDirectory = null;
 		scrList = null;
-		rlspWeight = 0f;
+		rlspWeight = 0.0;
 		rlspCalculous = null;
 		resourcesToUseForSP = null;
 		resourcesIndexAPSP = null;
 		nil = null;
-		linkWeight = 0f;
-		labelWeight = 0f;
-		typeWeight = 0f;
+		linkWeight = 0.0;
+		labelWeight = 0.0;
+		typeWeight = 0.0;
 		kbSubgraph = null;
-		TestFunctionSimilarite();
+		benchmarkStringSimilarityV2();
 	}
 	
 	private Model transformModelByKeepingR1(Model original, String r1, String r2) {
@@ -1764,7 +1865,7 @@ public class GraphMatching {
 	 * @return the candidates selection
 	 */
 	private Set<Toponym> getCandidatesSelection(Set<Toponym> toponymsTEI, List<Candidate> candidatesFromKB,
-			Integer numberOfCandidate, float threshold) {
+			Integer numberOfCandidate, double threshold) {
 		logger.info("Sélection des candidats (nombre de candidats : " + numberOfCandidate + ")");
 		List<Candidate> candidatesFromKBCleared = candidatesFromKB.stream()
 				.filter(c -> c != null && c.getTypes() != null && (c.getName() != null || c.getLabel() != null))
@@ -1800,7 +1901,7 @@ public class GraphMatching {
 				toponym.clearAndAddAllScoreCriterionToponymCandidate(
 						toponym.getScoreCriterionToponymCandidate().stream().filter(s -> s != null)
 								.filter(t -> t.getValue() >= threshold)
-								.sorted((a, b) -> Float.compare(b.getValue(), a.getValue()))
+								.sorted((a, b) -> Double.compare(b.getValue(), a.getValue()))
 								.limit(Math.min(numberOfCandidate, toponym.getScoreCriterionToponymCandidate().size()))
 								.collect(Collectors.toList()));
 				result.add(toponym);
@@ -1824,7 +1925,7 @@ public class GraphMatching {
 	 * @return the candidates selection V 2
 	 */
 	private Set<Toponym> getCandidatesSelectionV2(Set<Toponym> toponymsTEI, List<Candidate> candidatesFromKB,
-			Integer numberOfCandidate, float threshold) {
+			Integer numberOfCandidate, double threshold) {
 		//TODO j'ai l'impression que certains candidats continuent de passer à la trape. Problème dû au parallélisme ?
 		logger.info("Sélection des candidats (nombre de candidats : " + numberOfCandidate + ")");
 		List<Candidate> candidatesFromKBCleared = Collections.synchronizedList(candidatesFromKB.stream()
@@ -1842,34 +1943,20 @@ public class GraphMatching {
 		toponymsByLabel.entrySet().parallelStream().forEach(toponymsWithLabel -> {
 			List<CriterionToponymCandidate> criterionToponymCandidateList = new ArrayList<>();
 			final String topoLabel = toponymsWithLabel.getKey();
-			Map<String, Float> scoreByLabel = new ConcurrentHashMap<>();
 			for (Candidate candidate : candidatesFromKBCleared) {
-				IStringComparison sc = new CustomStringComparison();
-				float score = 0f;
-				if (candidate.getName() != null && scoreByLabel.containsKey(candidate.getName())) {
-					score = scoreByLabel.get(candidate.getName());
-				} else if (candidate.getLabel() != null && scoreByLabel.containsKey(candidate.getLabel())) {
-					score = scoreByLabel.get(candidate.getLabel());
-				} else {
-					float score1 = (float) sc.computeSimilarity(topoLabel, candidate.getName());
-					float score2 = (float) sc.computeSimilarity(topoLabel, candidate.getLabel());
-					if (score1 > score2 && candidate.getName() != null) {
-						score = score1;
-						scoreByLabel.put(candidate.getName(), score1);
-					} else if (candidate.getLabel() != null) {
-						score = score2;
-						scoreByLabel.put(candidate.getLabel(), score2);
-					}
-				}
+				Cosine sc = new Cosine();
+				double score = 0.0;
+				if (candidate.getName() != null && !candidate.getName().isEmpty())
+					score = sc.similarity(topoLabel, candidate.getName());
+				if (candidate.getLabel() != null && !candidate.getLabel().isEmpty())
+					score = Double.max(sc.similarity(topoLabel, candidate.getLabel()), score);
 				criterionToponymCandidateList.add(new CriterionToponymCandidate(candidate, score, criterion));
 			}
-			List<CriterionToponymCandidate> selected = criterionToponymCandidateList.stream()
-					.filter(s -> s != null).filter(t -> t.getValue() >= 0.99f).collect(Collectors.toList());
-			selected.addAll(criterionToponymCandidateList.stream().filter(s -> s != null).filter(t -> t.getValue() >= threshold && t.getValue() < 0.99f)
-					.sorted((a, b) -> Float.compare(b.getValue(), a.getValue()))
+			List<CriterionToponymCandidate> selected = criterionToponymCandidateList.stream().filter(s -> s != null && s.getValue() >= threshold)
+					.distinct()
+					.sorted((a, b) -> Double.compare(b.getValue(), a.getValue()))
 					.limit(numberOfCandidate)
-					.collect(Collectors.toList()));
-			selected = selected.stream().distinct().collect(Collectors.toList());
+					.collect(Collectors.toList());
 			for (Toponym toponym : toponymsWithLabel.getValue()) {
 				for (CriterionToponymCandidate crit : selected) {
 					toponym.addScoreCriterionToponymCandidate(crit);
@@ -1896,7 +1983,7 @@ public class GraphMatching {
 			Set<Entry<ToponymType, List<Toponym>>> entries, Map<String, List<Candidate>> candidatesByType) {
 		Criterion criterion = Criterion.scoreText;
 		StringComparisonDamLev sc = new StringComparisonDamLev();
-		Map<String, Float> scoreByLabel = new ConcurrentHashMap<>(); // utilisés
+		Map<String, Double> scoreByLabel = new ConcurrentHashMap<>(); // utilisés
 																		// pour
 																		// stocker
 																		// les
@@ -1909,14 +1996,14 @@ public class GraphMatching {
 			if (candidatesToCheck != null && !candidatesToCheck.isEmpty()) {
 				for (Candidate candidate : candidatesToCheck) {
 				//candidatesToCheck.parallelStream().forEach(candidate -> {
-					float score = 0f;
+					double score = 0.0;
 					if (candidate.getName() != null && scoreByLabel.containsKey(candidate.getName())) {
 						score = scoreByLabel.get(candidate.getName());
 					} else if (candidate.getLabel() != null && scoreByLabel.containsKey(candidate.getLabel())) {
 						score = scoreByLabel.get(candidate.getLabel());
 					} else {
-						float score1 = (float) sc.computeSimilarity(toponymsWithLabel.getKey(), candidate.getName());
-						float score2 = (float) sc.computeSimilarity(toponymsWithLabel.getKey(), candidate.getLabel());
+						double score1 = (double) sc.computeSimilarity(toponymsWithLabel.getKey(), candidate.getName());
+						double score2 = (double) sc.computeSimilarity(toponymsWithLabel.getKey(), candidate.getLabel());
 						if (score1 > score2 && candidate.getName() != null) {
 							score = score1;
 							scoreByLabel.put(candidate.getName(), score1);
@@ -2149,7 +2236,7 @@ public class GraphMatching {
 		// le topo doit avoir 1 en cout de suppression.
 		// Si on mettais 0 en cas d'absence de candidats et s'il est dans une
 		// alt, l'autre alt ne sera jamais choisie
-		float deletionCostFirstToponym = 1f;
+		double deletionCostFirstToponym = 1.0;
 		for (CriterionToponymCandidate candidateCriterion : firstToponym.getScoreCriterionToponymCandidate()) {
 			Resource targetNode = candidateCriterion.getCandidate().getResource();
 			SubstitutionCostResult cost = getSubstitutionCost(firstToponym, candidateCriterion, toponymsSeq, miniGraph,
@@ -2186,7 +2273,7 @@ public class GraphMatching {
 					// {
 					// logger.info("Confolens qui pose problème");
 					// }
-					float deletionCost = 1f;
+					double deletionCost = 1.0;
 					for (CriterionToponymCandidate candidateCriterion : currentToponym
 							.getScoreCriterionToponymCandidate()) {
 						Resource resourceFromTarget = candidateCriterion.getCandidate().getResource();
@@ -2286,39 +2373,39 @@ public class GraphMatching {
 			scr = SubstitutionCostResult.get(scrList, nodeToRemove.getResource(),
 					candidateCriterion.getCandidate().getResource());
 		} else {
-			float scoreType = scoreType(nodeToRemove, candidateCriterion);
-			float scoreLabel = 1 - candidateCriterion.getValue();
-			float scoreLink = scoreLink(nodeToRemove, candidateCriterion, teiRdf, toponymsTEI);
-			float scoreRlsp = scoreRlsp(nodeToRemove, candidateCriterion, teiRdf, toponymsTEI,
+			double scoreType = scoreType(nodeToRemove, candidateCriterion);
+			double scoreLabel = 1 - candidateCriterion.getValue();
+			double scoreLink = scoreLink(nodeToRemove, candidateCriterion, teiRdf, toponymsTEI);
+			double scoreRlsp = scoreRlsp(nodeToRemove, candidateCriterion, teiRdf, toponymsTEI,
 					kbWithInterestingProperties, completeKB);
 			rlspCalculous.add(nodeToRemove.getResource() + " (" + nodeToRemove.getName() + ")" + " -> "
 					+ candidateCriterion.getCandidate().getResource() + " (" + scoreLabel + "/" + scoreLink + "/"
 					+ scoreRlsp + "/" + scoreType + ")");
-			float totalCost = labelWeight * scoreLabel + rlspWeight * scoreRlsp + linkWeight * scoreLink + typeWeight * scoreType;
+			double totalCost = labelWeight * scoreLabel + rlspWeight * scoreRlsp + linkWeight * scoreLink + typeWeight * scoreType;
 			scr = new SubstitutionCostResult(nodeToRemove.getResource(),
 					candidateCriterion.getCandidate().getResource(), scoreLabel, scoreLink, scoreRlsp, totalCost, scoreType);
 			scrList.add(scr);
 		}
 		return scr;
 	}
-	private float scoreType(Toponym nodeToRemove, CriterionToponymCandidate candidateCriterion) {
+	private double scoreType(Toponym nodeToRemove, CriterionToponymCandidate candidateCriterion) {
 		// on récupère le type du topo au format de la KB
 		if (nodeToRemove.getType().toString().endsWith("Place"))
-			return 0f;
+			return 0.0;
 		String topoType = getTEITypeToKBType(nodeToRemove.getType().toString());
 		if (candidateCriterion.getCandidate().getTypes().contains(topoType))
-			return 0f;
-		return 1f;
+			return 0.0;
+		return 1.0;
 	}
-	private float scoreLink(Toponym toponym, CriterionToponymCandidate criterion, Model teiRdf,
+	private double scoreLink(Toponym toponym, CriterionToponymCandidate criterion, Model teiRdf,
 			Set<Toponym> toponymsTEI) {
 		Resource nodeToRemove = toponym.getResource();
 		Resource nodeToInsert = criterion.getCandidate().getResource();
-		float result = 0f;
+		double result = 0.0;
 		List<Statement> statements = getProperties(nodeToRemove, teiRdf);
 		statements = removeRLSP(statements);
 		if (statements.isEmpty())
-			return 1f;
+			return 1.0;
 		// pour chaque statement (non RLSP) du noeud du TEI
 		for (Statement s : statements) {
 			final Statement statement = s;
@@ -2352,17 +2439,17 @@ public class GraphMatching {
 				pathLengths.put(criterionToponymCandidate, pathLength);
 			}  );
 			Integer maxPathLength = getMaxValue(pathLengths);
-			float min = 1f;
+			double min = 1.0;
 			for (Entry<CriterionToponymCandidate, Integer> entry : pathLengths.entrySet()) {
 				if (entry.getValue() > 0) {
-					float scoreTmp = ((float) entry.getValue()) / ((float) maxPathLength);
+					double scoreTmp = ((double) entry.getValue()) / ((double) maxPathLength);
 					min = scoreTmp < min ? scoreTmp : min;
 				}
 			}
 			result += min;
 		}
 
-		return result / ((float) statements.size());
+		return result / ((double) statements.size());
 	}
 
 	private int getLinkPathLength(Resource nodeToInsertCopy, Resource end, int recursiveCounter) {
@@ -2463,13 +2550,13 @@ public class GraphMatching {
 	 */
 	private List<IPathMatching> getMinCostPath(List<List<IPathMatching>> open, Model kbSubgraph, Model miniGraph,
 			Set<Toponym> toponymsSeq, Set<Resource> sourceNodes, Set<Resource> targetNodes, Model completeKB) {
-		float min = Float.MAX_VALUE;
+		double min = Double.MAX_VALUE;
 		List<IPathMatching> pMin = null;
 		for (List<IPathMatching> path : open) {
 			Set<Resource> unusedSourceNodes = getSourceUnusedResources(path, sourceNodes);
 			Set<Resource> unusedTargetNodes = getTargetUnusedResources(path, targetNodes);
-			float g = totalCostPath(path);
-			float h = heuristicCostPath(path, kbSubgraph, miniGraph, toponymsSeq, unusedSourceNodes, unusedTargetNodes,
+			double g = totalCostPath(path);
+			double h = heuristicCostPath(path, kbSubgraph, miniGraph, toponymsSeq, unusedSourceNodes, unusedTargetNodes,
 					completeKB);
 			if (g + h < min) {
 				min = g + h;
@@ -2481,10 +2568,10 @@ public class GraphMatching {
 		return pMin;
 	}
 
-	private float heuristicCostPath(List<IPathMatching> path, Model kbSubgraph, Model miniGraph,
+	private double heuristicCostPath(List<IPathMatching> path, Model kbSubgraph, Model miniGraph,
 			Set<Toponym> toponymsTEI, Set<Resource> unusedSourceNodes, Set<Resource> unusedTargetNodes,
 			Model completeKB) {
-		float result = 0f;
+		double result = 0.0;
 		/*
 		 * h(o)= somme des min{n1, n2} substitutions les moins chères + max{0,
 		 * n1 − n2} suppression + max{0, n2 − n1} insertions (si l’on pose
@@ -2493,9 +2580,9 @@ public class GraphMatching {
 		 */
 		Integer n1 = unusedSourceNodes.size();
 		Integer n2 = unusedTargetNodes.size();
-		List<Float> substitutionCosts = new ArrayList<>();
+		List<Double> substitutionCosts = new ArrayList<>();
 		for (Resource unusedSourceNode : unusedSourceNodes) {
-			List<Float> substitutionCostsCurrentToponym = new ArrayList<>();
+			List<Double> substitutionCostsCurrentToponym = new ArrayList<>();
 			Toponym unusedToponym = toponymsTEI.stream()
 					.filter(t -> areResourcesEqual(t.getResource(), unusedSourceNode)).findFirst().get();
 			for (CriterionToponymCandidate criterion : unusedToponym.getScoreCriterionToponymCandidate()) {
@@ -2504,10 +2591,10 @@ public class GraphMatching {
 				substitutionCostsCurrentToponym.add(scr.getTotalCost());
 			}
 			if (!substitutionCostsCurrentToponym.isEmpty())
-				substitutionCosts.add(substitutionCostsCurrentToponym.stream().sorted((a, b) -> Float.compare(b, a))
+				substitutionCosts.add(substitutionCostsCurrentToponym.stream().sorted((a, b) -> Double.compare(b, a))
 						.findFirst().get());
 		}
-		result += substitutionCosts.stream().sorted((a, b) -> Float.compare(b, a)).limit(Integer.min(n1, n2))
+		result += substitutionCosts.stream().sorted((a, b) -> Double.compare(b, a)).limit(Integer.min(n1, n2))
 				.mapToDouble(i -> i).sum();
 		// On suprime le cout des insertions, car lorsqu'il y a un doublon ds la
 		// sequence,
@@ -2515,7 +2602,7 @@ public class GraphMatching {
 		// insertion de plus que
 		// si 2 candidats étaient utilisé. Or on veut priviligié le meme
 		// candidat pour 2 topo dans la gestion des doublons.
-		// result += (float) Integer.max(0, n1 - n2) + (float) Integer.max(0, n2
+		// result += (double) Integer.max(0, n1 - n2) + (double) Integer.max(0, n2
 		// - n1);
 		return result;
 	}
@@ -2598,13 +2685,13 @@ public class GraphMatching {
 //				candidates.addAll(getCandidates(m, toponymsTEI));
 //		}
 //	}
-	private float scoreRlsp(Toponym nodeToRemove, CriterionToponymCandidate nodeToInsert, Model teiRdf,
+	private double scoreRlsp(Toponym nodeToRemove, CriterionToponymCandidate nodeToInsert, Model teiRdf,
 			Set<Toponym> toponymsTEI, Model kbWithInterestingProperties, Model completeKB) {
 		List<Statement> statements = getProperties(nodeToRemove.getResource(), teiRdf);
 		List<Statement> rlspStatements = keepOnlyRLSP(statements);
 		if (rlspStatements.isEmpty())
-			return 1f;
-		float result = 0f;
+			return 1.0;
+		double result = 0.0;
 		
 		for (Statement statement : rlspStatements) {
 			Resource m;
@@ -2638,10 +2725,10 @@ public class GraphMatching {
 				pathLengths.put(criterionToponymCandidate, pathLength);
 			}  );
 			Integer maxPathLength = getMaxValue(pathLengths);
-			float min = 1f;
+			double min = 1.0;
 			for (Entry<CriterionToponymCandidate, Integer> entry : pathLengths.entrySet()) {
 				if (entry.getValue() > 0) {
-					float scoreTmp = ((float) entry.getValue()) / ((float) maxPathLength);
+					double scoreTmp = ((double) entry.getValue()) / ((double) maxPathLength);
 					min = scoreTmp < min ? scoreTmp : min;
 					if (areResourcesEqual(nodeToInsert.getCandidate().getResource(), kbWithInterestingProperties
 							.createResource("http://fr.dbpedia.org/resource/Ruffec_(Charente)"))) {
@@ -2662,7 +2749,7 @@ public class GraphMatching {
 
 		}
 
-		return result / ((float) rlspStatements.size());
+		return result / ((double) rlspStatements.size());
 	}
 
 	private int getRLSPPathLength(Resource nodeToInsertCopy, Resource end, List<Property> properties,
@@ -2835,8 +2922,8 @@ public class GraphMatching {
 				.collect(Collectors.toList());
 	}
 
-	private float getInsertionCost(Resource nodeToInsert) {
-		return 1f;
+	private double getInsertionCost(Resource nodeToInsert) {
+		return 1.0;
 	}
 
 	private void updateToponyms(List<IPathMatching> pMin, Set<Toponym> toponymsSeq) {

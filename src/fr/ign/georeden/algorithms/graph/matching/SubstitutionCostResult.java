@@ -7,13 +7,13 @@ import org.apache.jena.rdf.model.Resource;
 public class SubstitutionCostResult {
 	private Resource r1;
 	private Resource r2;
-	private float labelCost;
-	private float linkCost;
-	private float rlspCost;
-	private float totalCost;
-	private float typeCost;
+	private double labelCost;
+	private double linkCost;
+	private double rlspCost;
+	private double totalCost;
+	private double typeCost;
 	
-	public SubstitutionCostResult(Resource r1, Resource r2, float labelCost, float linkCost, float rlspCost, float totalCost, float typeCost) {
+	public SubstitutionCostResult(Resource r1, Resource r2, double labelCost, double linkCost, double rlspCost, double totalCost, double typeCost) {
 		this.r1 = r1;
 		this.r2 = r2;
 		this.labelCost = labelCost;
@@ -29,19 +29,19 @@ public class SubstitutionCostResult {
 	public Resource getResourceR2() {
 		return this.r2;
 	}
-	public float getLabelCost() {
+	public double getLabelCost() {
 		return this.labelCost;
 	}
-	public float getLinkCost() {
+	public double getLinkCost() {
 		return this.linkCost;
 	}
-	public float getRLSPCost() {
+	public double getRLSPCost() {
 		return this.rlspCost;
 	}
-	public float getTotalCost() {
+	public double getTotalCost() {
 		return this.totalCost;
 	}
-	public float getTypeCost() {
+	public double getTypeCost() {
 		return this.typeCost;
 	}
 	
