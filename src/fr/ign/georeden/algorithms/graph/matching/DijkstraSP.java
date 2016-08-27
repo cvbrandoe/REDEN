@@ -261,7 +261,7 @@ public class DijkstraSP implements Serializable {
 	 * @param kbSubgraph the kb subgraph where the paths are computed
 	 * @param serializationDirectory the serialization directory where the paths are stored
 	 */
-	public static void computeAndSerializeAllPairShortestPath(List<Resource> subjects, List<Integer> resourcesIndexProcessed, Model kbSubgraph, String serializationDirectory) {
+	public static void computeAndSerializeAllPairShortestPath(List<Resource> subjects, final List<Integer> resourcesIndexProcessed, Model kbSubgraph, String serializationDirectory) {
 		final AtomicInteger countSP = new AtomicInteger();
 		subjects.parallelStream().forEachOrdered(subject -> {	
 			int counter = countSP.getAndIncrement() + 1;

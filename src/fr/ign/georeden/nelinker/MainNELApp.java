@@ -1,68 +1,34 @@
 package fr.ign.georeden.nelinker;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Dictionary;
-import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Hashtable;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
-import javax.xml.xpath.XPathExpressionException;
-
 import org.apache.commons.cli.ParseException;
-import org.apache.http.conn.HttpHostConnectException;
-import org.apache.jena.atlas.web.HttpException;
-import org.apache.jena.riot.RiotException;
 import org.apache.log4j.Logger;
-import org.dom4j.Attribute;
-import org.jgrapht.graph.SimpleDirectedGraph;
 import org.json.JSONException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.apache.jena.query.QueryParseException;
-import org.apache.jena.query.QuerySolution;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
 
-import fr.ign.georeden.algorithms.graph.matching.GraphMatchingOld;
 import fr.ign.georeden.algorithms.graph.matching.GraphMatching;
-import fr.ign.georeden.algorithms.string.CustomStringComparison;
-import fr.ign.georeden.algorithms.string.DamerauLevenshteinAlgorithm;
-import fr.ign.georeden.algorithms.string.IStringComparison;
-import fr.ign.georeden.algorithms.string.StringComparisonDamLev;
-import fr.ign.georeden.algorithms.string.StringComparisonMetaphone;
-import fr.ign.georeden.algorithms.string.TokenWiseSimilarity;
-import fr.ign.georeden.graph.LabeledEdge;
 //import fr.ign.georeden.graph.Toponym;
 import fr.ign.georeden.algorithms.graph.matching.Toponym;
-import fr.ign.georeden.kb.SpatialRelationship;
-import fr.ign.georeden.nelinker.tei.ITEIHandler;
-import fr.ign.georeden.nelinker.tei.TEIHandler;
-import fr.ign.georeden.nelinker.tei.TEIHandlerV2;
-import fr.ign.georeden.nelinker.tei.TEIUtil;
-import fr.ign.georeden.talismane.TalismaneManager;
-import fr.ign.georeden.utils.GraphVisualisation;
 import fr.ign.georeden.utils.JSONUtil;
 import fr.ign.georeden.utils.OptionManager;
-import fr.ign.georeden.utils.RDFUtil;
 import fr.ign.georeden.utils.XMLUtil;
 import fr.lip6.reden.nelinker.EvalInfo;
 import fr.lip6.reden.nelinker.ResultsAndEvaluationNEL;
@@ -169,36 +135,6 @@ public class MainNELApp {
 		// RiotException | MalformedURLException
 		// | HttpException e) {
 		// logger.error(e);
-		// }
-
-		// ANCIENNE VERSION
-		// try {
-		// XMLUtil.displayXml(document, null, true);
-		// } catch (TransformerException e) {
-		// logger.error(e);
-		// }
-
-		// TEIHandlerV2 teiHandler;
-		// SimpleDirectedGraph<Toponym, LabeledEdge<Toponym,
-		// SpatialRelationship>> graph = null;
-		// try {
-		// teiHandler = new TEIHandlerV2(document);
-		//
-		//// List<String> sentencesWithOrientation =
-		// teiHandler.getSentencesWithOrientation();
-		//// for (String string : sentencesWithOrientation) {
-		//// System.out.println(string);
-		//// }
-		// graph = teiHandler.createGraphFromTEI();
-		// } catch (XPathExpressionException | JSONException |
-		// ParserConfigurationException | IOException e) {
-		// logger.error(e);
-		// }
-		//
-		// if (graph != null && !graph.vertexSet().isEmpty()) {
-		// GraphVisualisation<Toponym, LabeledEdge<Toponym,
-		// SpatialRelationship>> window = new GraphVisualisation<>(graph);
-		// window.init(1024, 768);et
 		// }
 	}
 	
@@ -317,7 +253,7 @@ public class MainNELApp {
 				kbSource.add(statementsToAdd);
 			}
 		}
-		GraphMatchingOld.saveModelToFile(workingDirectory + "dbpedia_fr_with_rlsp_V2.n3", kbSource, "N3");
+		//GraphMatching.saveModelToFile(workingDirectory + "dbpedia_fr_with_rlsp_V2.n3", kbSource, "N3");
 	}
 
 }
