@@ -15,6 +15,7 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -368,118 +369,118 @@ public class GraphMatching {
 				.filter(c -> c != null && c.getResource() != null && ((c.getName() != null && !c.getName().isEmpty()) || (c.getLabel() != null && !c.getLabel().isEmpty())))
 				.collect(Collectors.toList());
 
-//		String t1 = "test";
-//		String t2 = "test";
-//		String t3= "jambon";
-		Cosine cosine = new Cosine();
-//		logger.info("cosine ->" + t1 + ":" + t2 + " (" + cosine.distance(t1, t2) + ")");
-//		logger.info("cosine ->" + t1 + ":" + t3 + " (" + cosine.distance(t1, t3) + ")");
-		Jaccard jaccard = new Jaccard();
-//		logger.info("jaccard ->" + t1 + ":" + t2 + " (" + jaccard.distance(t1, t2) + ")");
-//		logger.info("jaccard ->" + t1 + ":" + t3 + " (" + jaccard.distance(t1, t3) + ")");
-		JaroWinkler jaroWinkler = new JaroWinkler();
-//		logger.info("jaroWinkler ->" + t1 + ":" + t2 + " (" + jaroWinkler.distance(t1, t2) + ")");
-//		logger.info("jaroWinkler ->" + t1 + ":" + t3 + " (" + jaroWinkler.distance(t1, t3) + ")");
-		MetricLCS metricLCS = new MetricLCS();
-//		logger.info("metricLCS ->" + t1 + ":" + t2 + " (" + metricLCS.distance(t1, t2) + ")");
-//		logger.info("metricLCS ->" + t1 + ":" + t3 + " (" + metricLCS.distance(t1, t3) + ")");
-		NormalizedLevenshtein normalizedLevenshtein = new NormalizedLevenshtein();
-//		logger.info("normalizedLevenshtein ->" + t1 + ":" + t2 + " (" + normalizedLevenshtein.distance(t1, t2) + ")");
-//		logger.info("normalizedLevenshtein ->" + t1 + ":" + t3 + " (" + normalizedLevenshtein.distance(t1, t3) + ")");
-		SorensenDice sorensenDice = new SorensenDice();
-//		logger.info("SorensenDice ->" + t1 + ":" + t2 + " (" + sorensenDice.distance(t1, t2) + ")");
-//		logger.info("SorensenDice ->" + t1 + ":" + t3 + " (" + sorensenDice.distance(t1, t3) + ")");
+		int limit = 50;
+		long counterCosine = 0;
+		long counterJaccard = 0;
+		long counterJaroWinkler = 0;
+		long counterMetricLCS = 0;
+		long counterNormalizedLevenshtein = 0;
+		long counterSorensenDice = 0;
+		long counterCsc = 0;
+		long counterTokenWise = 0;
+		List<Boolean> listCosine = new CopyOnWriteArrayList<>();
+		List<Boolean> listJaccard = new CopyOnWriteArrayList<>();
+		List<Boolean> listMetricLCS = new CopyOnWriteArrayList<>();
+		List<Boolean> listNormalizedLevenshtein = new CopyOnWriteArrayList<>();
+		List<Boolean> listJaroWinkler = new CopyOnWriteArrayList<>();
+		List<Boolean> listSorensenDice = new CopyOnWriteArrayList<>();
+		List<Boolean> listCsc = new CopyOnWriteArrayList<>();
+		List<Boolean> listTokenWise = new CopyOnWriteArrayList<>();
 		
-//		Damerau damerau = new Damerau();
-//		logger.info("damerau ->" + t1 + ":" + t2 + " (" + damerau.distance(t1, t2) + ")");
-//		logger.info("damerau ->" + t1 + ":" + t3 + " (" + damerau.distance(t1, t3) + ")");
-//		Levenshtein levenshtein = new Levenshtein(); // pas borné
-//		logger.info("levenshtein ->" + t1 + ":" + t2 + " (" + levenshtein.distance(t1, t2) + ")");
-//		logger.info("levenshtein ->" + t1 + ":" + t3 + " (" + levenshtein.distance(t1, t3) + ")");
-//		LongestCommonSubsequence longestCommonSubsequence = new LongestCommonSubsequence(); // pas borné
-//		logger.info("longestCommonSubsequence ->" + t1 + ":" + t2 + " (" + longestCommonSubsequence.distance(t1, t2) + ")");
-//		logger.info("longestCommonSubsequence ->" + t1 + ":" + t3 + " (" + longestCommonSubsequence.distance(t1, t3) + ")");
-//		NGram nGram = new NGram(); // inversé
-//		logger.info("nGram ->" + t1 + ":" + t2 + " (" + nGram.distance(t1, t2) + ")");
-//		logger.info("nGram ->" + t1 + ":" + t3 + " (" + nGram.distance(t1, t3) + ")");
-//		QGram qGram = new QGram(); // pas borné
-//		logger.info("qGram ->" + t1 + ":" + t2 + " (" + qGram.distance(t1, t2) + ")");
-//		logger.info("qGram ->" + t1 + ":" + t3 + " (" + qGram.distance(t1, t3) + ")");
-		int limit = 100;
-		double counterCosine = 0;
-		double counterJaccard = 0;
-		double counterJaroWinkler = 0;
-		double counterMetricLCS = 0;
-		double counterNormalizedLevenshtein = 0;
-		double counterSorensenDice = 0;
-		
-		int counter = 1;
-		for (Toponym toponym : toponymsTEI) {
+		final AtomicInteger count = new AtomicInteger();
+		toponymsTEI.parallelStream().forEach(toponym -> {
+
 			String topoName = toponym.getName();
 			String ref = refById.get(toponym.getXmlId());
-			List<ScoreStringComparison> scoreStringComparison = new ArrayList<>();
-			for (Candidate candidate : candidates) {
-				String candidateLabel = candidate.getLabel();
-				String candidateName = candidate.getName();
-				double distanceCosine = Double.POSITIVE_INFINITY;
-				double distanceJaccard = Double.POSITIVE_INFINITY;
-				double distanceJaroWinkler = Double.POSITIVE_INFINITY;
-				double distanceMetricLCS = Double.POSITIVE_INFINITY;
-				double distanceNormalizedLevenshtein = Double.POSITIVE_INFINITY;
-				double distanceSorensenDice = Double.POSITIVE_INFINITY;
-				if (candidateLabel != null && !candidateLabel.isEmpty()) {
-					distanceCosine = cosine.distance(topoName, candidateLabel);
-					distanceJaccard = jaccard.distance(topoName, candidateLabel);
-					distanceJaroWinkler = jaroWinkler.distance(topoName, candidateLabel);
-					distanceMetricLCS = metricLCS.distance(topoName, candidateLabel);
-					distanceNormalizedLevenshtein = normalizedLevenshtein.distance(topoName, candidateLabel);
-					distanceSorensenDice = sorensenDice.distance(topoName, candidateLabel);
-				} 
-				if (candidateName != null && !candidateName.isEmpty()) {
-					distanceCosine = Double.min(cosine.distance(candidateName, candidateName), distanceCosine);
-					distanceJaccard = Double.min(jaccard.distance(candidateName, candidateName), distanceJaccard);
-					distanceJaroWinkler = Double.min(jaroWinkler.distance(candidateName, candidateName), distanceJaroWinkler);
-					distanceMetricLCS = Double.min(metricLCS.distance(candidateName, candidateName), distanceMetricLCS);
-					distanceNormalizedLevenshtein = Double.min(normalizedLevenshtein.distance(candidateName, candidateName), distanceNormalizedLevenshtein);
-					distanceSorensenDice = Double.min(sorensenDice.distance(candidateName, candidateName), distanceSorensenDice);
+			if (ref != null) {
+				Cosine cosine = new Cosine();
+				Jaccard jaccard = new Jaccard();
+				JaroWinkler jaroWinkler = new JaroWinkler();
+				MetricLCS metricLCS = new MetricLCS();
+				NormalizedLevenshtein normalizedLevenshtein = new NormalizedLevenshtein();
+				SorensenDice sorensenDice = new SorensenDice();
+				CustomStringComparison csc = new CustomStringComparison();
+				List<ScoreStringComparison> scoreStringComparison = new ArrayList<>();
+				for (Candidate candidate : candidates) {
+					String candidateLabel = candidate.getLabel();
+					String candidateName = candidate.getName();
+					double distanceCosine = Double.POSITIVE_INFINITY;
+					double distanceJaccard = Double.POSITIVE_INFINITY;
+					double distanceJaroWinkler = Double.POSITIVE_INFINITY;
+					double distanceMetricLCS = Double.POSITIVE_INFINITY;
+					double distanceNormalizedLevenshtein = Double.POSITIVE_INFINITY;
+					double distanceSorensenDice = Double.POSITIVE_INFINITY;
+					double distanceCsc = Double.POSITIVE_INFINITY;
+					double distanceTws = Double.POSITIVE_INFINITY;
+					if (candidateLabel != null && !candidateLabel.isEmpty()) {
+						distanceCosine = cosine.distance(topoName, candidateLabel);
+						distanceJaccard = jaccard.distance(topoName, candidateLabel);
+						distanceJaroWinkler = jaroWinkler.distance(topoName, candidateLabel);
+						distanceMetricLCS = metricLCS.distance(topoName, candidateLabel);
+						distanceNormalizedLevenshtein = normalizedLevenshtein.distance(topoName, candidateLabel);
+						distanceSorensenDice = sorensenDice.distance(topoName, candidateLabel);
+						distanceCsc = 1.0 - csc.computeSimilarity(topoName, candidateLabel);
+						TokenWiseSimilarity tws = new TokenWiseSimilarity(topoName, candidateLabel, 0.0);
+						distanceTws = 1.0 - tws.calcule();
+					} 
+					if (candidateName != null && !candidateName.isEmpty()) {
+						distanceCosine = Double.min(cosine.distance(topoName, candidateName), distanceCosine);
+						distanceJaccard = Double.min(jaccard.distance(topoName, candidateName), distanceJaccard);
+						distanceJaroWinkler = Double.min(jaroWinkler.distance(topoName, candidateName), distanceJaroWinkler);
+						distanceMetricLCS = Double.min(metricLCS.distance(topoName, candidateName), distanceMetricLCS);
+						distanceNormalizedLevenshtein = Double.min(normalizedLevenshtein.distance(topoName, candidateName), distanceNormalizedLevenshtein);
+						distanceSorensenDice = Double.min(sorensenDice.distance(topoName, candidateName), distanceSorensenDice);
+						distanceCsc = Double.min(1.0 - csc.computeSimilarity(topoName, candidateName), distanceCsc);
+						TokenWiseSimilarity tws = new TokenWiseSimilarity(topoName, candidateName, 0.0);
+						distanceTws = Double.min(1.0 - tws.calcule(), distanceTws);
+					}
+					ScoreStringComparison ssc = new ScoreStringComparison();
+					ssc.candidateResource = candidate.getResource().toString();
+					ssc.distanceCosine = distanceCosine;
+					ssc.distanceJaccard = distanceJaccard;
+					ssc.distanceJaroWinkler = distanceJaroWinkler;
+					ssc.distanceMetricLCS = distanceMetricLCS;
+					ssc.distanceNormalizedLevenshtein = distanceNormalizedLevenshtein;
+					ssc.distanceSorensenDice = distanceSorensenDice;
+					ssc.distanceCsc = distanceCsc;
+					ssc.distanceTws = distanceTws;
+					scoreStringComparison.add(ssc);
 				}
-				ScoreStringComparison ssc = new ScoreStringComparison();
-				ssc.candidateResource = candidate.getResource().toString();
-				ssc.distanceCosine = distanceCosine;
-				ssc.distanceJaccard = distanceJaccard;
-				ssc.distanceJaroWinkler = distanceJaroWinkler;
-				ssc.distanceMetricLCS = distanceMetricLCS;
-				ssc.distanceNormalizedLevenshtein = distanceNormalizedLevenshtein;
-				ssc.distanceSorensenDice = distanceSorensenDice;
-				scoreStringComparison.add(ssc);
+				listCosine.add(scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceCosine, b.distanceCosine)).limit(limit)
+						.anyMatch(s -> ref.equals(s.candidateResource)));
+				listJaccard.add(scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceJaccard, b.distanceJaccard)).limit(limit)
+						.anyMatch(s -> ref.equals(s.candidateResource)));
+				listJaroWinkler.add(scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceJaroWinkler, b.distanceJaroWinkler)).limit(limit)
+						.anyMatch(s -> ref.equals(s.candidateResource)));
+				listMetricLCS.add(scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceMetricLCS, b.distanceMetricLCS)).limit(limit)
+						.anyMatch(s -> ref.equals(s.candidateResource)));
+				listNormalizedLevenshtein.add(scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceNormalizedLevenshtein, b.distanceNormalizedLevenshtein)).limit(limit)
+						.anyMatch(s -> ref.equals(s.candidateResource)));
+				listSorensenDice.add(scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceSorensenDice, b.distanceSorensenDice)).limit(limit)
+						.anyMatch(s -> ref.equals(s.candidateResource)));
+				listCsc.add(scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceCsc, b.distanceCsc)).limit(limit)
+						.anyMatch(s -> ref.equals(s.candidateResource)));
+				listTokenWise.add(scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceTws, b.distanceTws)).limit(limit)
+						.anyMatch(s -> ref.equals(s.candidateResource)));
 			}
-			if (scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceCosine, b.distanceCosine)).limit(limit)
-				.anyMatch(s -> ref.equals(s.candidateResource)))
-				counterCosine++;
-			if (scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceJaccard, b.distanceJaccard)).limit(limit)
-					.anyMatch(s -> ref.equalsIgnoreCase(s.candidateResource)))
-				counterJaccard++;
-			if (scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceJaroWinkler, b.distanceJaroWinkler)).limit(limit)
-					.anyMatch(s -> ref.equalsIgnoreCase(s.candidateResource)))
-				counterJaroWinkler++;
-			if (scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceMetricLCS, b.distanceMetricLCS)).limit(limit)
-					.anyMatch(s -> ref.equalsIgnoreCase(s.candidateResource)))
-				counterMetricLCS++;
-			if (scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceNormalizedLevenshtein, b.distanceNormalizedLevenshtein)).limit(limit)
-					.anyMatch(s -> ref.equalsIgnoreCase(s.candidateResource)))
-				counterNormalizedLevenshtein++;
-			if (scoreStringComparison.stream().sorted((a, b) -> Double.compare(a.distanceSorensenDice, b.distanceSorensenDice)).limit(limit)
-					.anyMatch(s -> ref.equalsIgnoreCase(s.candidateResource)))
-				counterSorensenDice++;
-			logger.info(counter + " / " + toponymsTEI.size());
-			counter++;
-		}
-		logger.info("Cosine : " + counterCosine / (double)toponymsTEI.size());
-		logger.info("Jaccard : " + counterJaccard / (double)toponymsTEI.size());
-		logger.info("JaroWinkler : " + counterJaroWinkler / (double)toponymsTEI.size());
-		logger.info("MetricLCS : " + counterMetricLCS / (double)toponymsTEI.size());
-		logger.info("NormalizedLevenshtein : " + counterNormalizedLevenshtein / (double)toponymsTEI.size());
-		logger.info("SorensenDice : " + counterSorensenDice / (double)toponymsTEI.size());
+			logger.info((count.getAndIncrement() + 1) + " / " + toponymsTEI.size());
+		});
+		counterCosine = listCosine.stream().filter(b -> b).count();
+		counterJaccard = listJaccard.stream().filter(b -> b).count();
+		counterJaroWinkler = listJaroWinkler.stream().filter(b -> b).count();
+		counterMetricLCS = listMetricLCS.stream().filter(b -> b).count();
+		counterNormalizedLevenshtein = listNormalizedLevenshtein.stream().filter(b -> b).count();
+		counterSorensenDice = listSorensenDice.stream().filter(b -> b).count();
+		counterCsc = listCsc.stream().filter(b -> b).count();
+		counterTokenWise = listTokenWise.stream().filter(b -> b).count();
+		logger.info("Cosine : " + (double)counterCosine / (double)toponymsTEI.size());
+		logger.info("Jaccard : " + (double)counterJaccard / (double)toponymsTEI.size());
+		logger.info("JaroWinkler : " + (double)counterJaroWinkler / (double)toponymsTEI.size());
+		logger.info("MetricLCS : " + (double)counterMetricLCS / (double)toponymsTEI.size());
+		logger.info("NormalizedLevenshtein : " + (double)counterNormalizedLevenshtein / (double)toponymsTEI.size());
+		logger.info("SorensenDice : " + (double)counterSorensenDice / (double)toponymsTEI.size());
+		logger.info("CustomStringComparison : " + (double)counterCsc / (double)toponymsTEI.size());
+		logger.info("TokenWise : " + (double)counterTokenWise / (double)toponymsTEI.size());
 	}
 	class ScoreStringComparison {
 		String candidateResource;
@@ -489,6 +490,8 @@ public class GraphMatching {
 		double distanceMetricLCS;
 		double distanceNormalizedLevenshtein;
 		double distanceSorensenDice;
+		double distanceCsc;
+		double distanceTws;
 	}
 	public void TestFunction() {
 		Map<String, List<Tmp>> map = new HashMap<>();

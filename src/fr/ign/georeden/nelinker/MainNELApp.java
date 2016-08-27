@@ -72,7 +72,7 @@ public class MainNELApp {
 	private static Logger logger = Logger.getLogger(MainNELApp.class);
 	
 
-	static final String workingDirectory = "D:\\";
+	static final String workingDirectory = "C:\\";
 
 	private static String teiSource;
 
