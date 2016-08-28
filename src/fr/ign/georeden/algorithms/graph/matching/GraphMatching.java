@@ -2430,6 +2430,8 @@ public class GraphMatching {
 																	// utilise
 																	// son
 																	// référent
+//			else
+//				logger.info("Référent utilisé");
 			Map<CriterionToponymCandidate, Integer> pathLengths = new ConcurrentHashMap<>();
 			//for (CriterionToponymCandidate criterionToponymCandidate : candidates) {
 				 candidates.parallelStream().forEach(criterionToponymCandidate -> {
@@ -2710,6 +2712,8 @@ public class GraphMatching {
 			List<CriterionToponymCandidate> candidates = getReferent(m, toponymsTEI);
 			if (candidates.isEmpty())
 				candidates.addAll(getCandidates(m, toponymsTEI));
+//			else
+//				logger.info("Référent utilisé dans RLSP");
 			//for (CriterionToponymCandidate criterionToponymCandidate : candidates) {
 				 candidates.parallelStream().forEach(criterionToponymCandidate -> {
 //				if (areResourcesEqual(criterionToponymCandidate.getCandidate().getResource(), kbWithInterestingProperties.getResource("http://fr.dbpedia.org/resource/Rochefort_(Charente-Maritime)")) && 

@@ -454,7 +454,12 @@ public class ResultsAndEvaluationNEL {
 						List<String> candidates = allMentionsWithUrisPerContextinText.get(id);
 						if (candidates != null && !candidates.isEmpty()) {
 							List<List<String>> list = new ArrayList<>();
-							list.add(candidates);
+							for (String c : candidates) {
+								List<String> candidateList = new ArrayList<>();
+								candidateList.add(c);
+								list.add(candidateList);
+							}
+							//list.add(candidates);
 							evalInfo.setCandUris(list);
 						}
 						
