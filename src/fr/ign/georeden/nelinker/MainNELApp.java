@@ -25,6 +25,7 @@ import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
 
 import fr.ign.georeden.algorithms.graph.matching.GraphMatching;
+import fr.ign.georeden.algorithms.graph.matching.SubstitutionCostResult;
 //import fr.ign.georeden.graph.Toponym;
 import fr.ign.georeden.algorithms.graph.matching.Toponym;
 import fr.ign.georeden.utils.JSONUtil;

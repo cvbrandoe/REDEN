@@ -214,7 +214,7 @@ public class GraphMatching {
 	private final Set<String> rlspCalculous;
 
 	private final Set<Resource> resourcesToUseForSP;
-	private final List<SubstitutionCostResult> scrList;
+	private final Set<SubstitutionCostResult> scrList;
 
 	private final double labelWeight;
 	private final double rlspWeight;
@@ -258,7 +258,8 @@ public class GraphMatching {
 
 		logger.info("Création du sous graphe de la KB contenant uniquement les relations spatiales");
 
-		this.kbSubgraph = getSubGraphWithResources(kbSource);
+		this.kbSubgraph = getSubGraphWithResources(kbSource);		
+		
 //		Resource champ = kbSubgraph.getResource("http://fr.dbpedia.org/resource/Champagne_(province)");
 //		for (Statement s : kbSubgraph.listStatements(champ, null, (RDFNode)null).toList()) {
 //			logger.info(s);
@@ -303,7 +304,7 @@ public class GraphMatching {
 
 		this.rlspCalculous = new HashSet<>(); // utilié à revoir
 		this.resourcesToUseForSP = new HashSet<>();
-		this.scrList = new ArrayList<>();
+		this.scrList = new HashSet<>();
 		this.nil = kbSubgraph.createResource("http://data.ign.fr/id/propagation/Place/nil");
 	}
 	private class Tmp{
@@ -782,8 +783,8 @@ public class GraphMatching {
 				 .sorted((l1, l2) -> Integer
 				 .compare(l2.get(0).listStatements().toList().size(),
 				 l1.get(0).listStatements().toList().size()))
-//				 .skip(8)
-//				 .limit(2)
+				 .skip(1)
+				 .limit(1)
 				 .collect(Collectors.toList())) {
 			logger.info("Traitement de la séquence " + seqCount + "/" + altsBySeq.size());
 			logger.info(alts.size() + " mini graphes à traiter pour cette séquence.");
@@ -976,7 +977,7 @@ public class GraphMatching {
 		// statementsBySubject contient maintenant les statements dont la clé
 		// est sujet ou objet
 		resourcesToUseForSP.clear();
-		Set<Statement> statementsToProcessSet = new HashSet<>(statementsToProcess);
+		Set<StatementForSet> statementsToProcessSet = new HashSet<>(toStatementForSet(statementsToProcess));
 		// on suprime de statementsToProcess les statements des resources qui en
 		// ont le plus à celles qui en ont le moins, pour voir combien on doit
 		// en charger en mémoire pour avoir accès à tout
@@ -986,11 +987,47 @@ public class GraphMatching {
 			if (statementsToProcessSet.isEmpty())
 				break; // on a terminé
 			List<Statement> statementsToRemove = e.getValue();
-			if (statementsToProcessSet.removeAll(statementsToRemove)) {
+			if (statementsToProcessSet.removeAll(toStatementForSet(statementsToRemove))) {
 				resourcesToUseForSP.add(e.getKey());
 			}
 		}
 		return resourcesToUseForSP;
+	}
+	private List<StatementForSet> toStatementForSet(List<Statement> statements) {
+		List<StatementForSet> out = new ArrayList<>();
+		for (Statement statement : statements) {
+			out.add(new StatementForSet(statement));
+		}
+		return out;
+	}	
+	class StatementForSet {
+		String subject;
+		String property;
+		String object;
+		public StatementForSet(Statement s) {
+			subject = s.getSubject().toString();
+			property = s.getPredicate().toString();
+			object = s.getObject().toString();
+		}
+		
+		
+		
+		@Override
+		public int hashCode() {
+			return subject.hashCode() + property.hashCode() + object.hashCode();
+		}
+		
+		@Override
+		public boolean equals(Object other) {
+			if (other == null) 
+				return false;
+		    if (other == this) 
+		    	return true;
+		    if (!(other instanceof StatementForSet))
+		    	return false;
+		    StatementForSet otherStatementForSet = (StatementForSet)other;
+		    return subject.equals(otherStatementForSet.subject) && property.equals(otherStatementForSet.property) && object.equals(otherStatementForSet.object);
+		}
 	}
 
 	// private Entry<Double, List<IPathMatching>> getBestPath(Map<Double,
@@ -2367,11 +2404,20 @@ public class GraphMatching {
 	private SubstitutionCostResult getSubstitutionCost(Toponym nodeToRemove,
 			CriterionToponymCandidate candidateCriterion, Set<Toponym> toponymsTEI, Model teiRdf,
 			Model kbWithInterestingProperties, Model completeKB) {
-		SubstitutionCostResult scr;
-		if (SubstitutionCostResult.contains(scrList, nodeToRemove.getResource(),
-				candidateCriterion.getCandidate().getResource())) {
-			scr = SubstitutionCostResult.get(scrList, nodeToRemove.getResource(),
-					candidateCriterion.getCandidate().getResource());
+		// on initialise scr avec de faux score. On en a juste besoin pour chercher dans le set. S'il y est on prend sa vraie valeur, sinon on le créé ac les bonnes. 
+		SubstitutionCostResult scr = null;
+		SubstitutionCostResult tmp = new SubstitutionCostResult(nodeToRemove.getResource(), candidateCriterion.getCandidate().getResource(), 0, 0, 0, 0, 0);
+		if (scrList.contains(tmp)) {//SubstitutionCostResult.contains(scrList, nodeToRemove.getResource(),
+				//candidateCriterion.getCandidate().getResource())) {			
+			for (Iterator<SubstitutionCostResult> it = scrList.iterator(); it.hasNext(); ) {
+				SubstitutionCostResult f = it.next();
+		        if (f.equals(tmp)) {
+		        	scr = f;
+		        	break;
+		        }
+		    }
+			//scr = scrList.stream().filter(l -> l.equals(new SubstitutionCostResult(nodeToRemove.getResource(), candidateCriterion.getCandidate().getResource(), 0, 0, 0, 0, 0))).findFirst().get();//SubstitutionCostResult.get(scrList, nodeToRemove.getResource(),
+					//candidateCriterion.getCandidate().getResource());
 		} else {
 			double scoreType = scoreType(nodeToRemove, candidateCriterion);
 			double scoreLabel = 1 - candidateCriterion.getValue();
@@ -2943,7 +2989,15 @@ public class GraphMatching {
 												// limiter les calculs de
 												// chemins qui implique ce noeud
 												// par la suite
-				SubstitutionCostResult scr = SubstitutionCostResult.get(scrList, deletedNode, insertedNode);
+				SubstitutionCostResult scr = null;//SubstitutionCostResult.get(scrList, deletedNode, insertedNode);
+				SubstitutionCostResult tmp = new SubstitutionCostResult(deletedNode, insertedNode, 0, 0, 0, 0, 0);			
+				for (Iterator<SubstitutionCostResult> it = scrList.iterator(); it.hasNext(); ) {
+					SubstitutionCostResult f = it.next();
+			        if (f.equals(tmp)) {
+			        	scr = f;
+			        	break;
+			        }
+			    }
 				topo.setSubstitutionCostResult(scr);
 			}
 		}

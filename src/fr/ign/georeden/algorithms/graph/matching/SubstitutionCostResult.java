@@ -45,6 +45,26 @@ public class SubstitutionCostResult {
 		return this.typeCost;
 	}
 	
+	
+	@Override
+	public int hashCode() {
+		return r1.hashCode() + r2.hashCode();
+	}
+	
+	
+	@Override
+	public boolean equals(Object other) {
+		if (other == null) 
+			return false;
+	    if (other == this) 
+	    	return true;
+	    if (!(other instanceof SubstitutionCostResult))
+	    	return false;
+	    SubstitutionCostResult otherSubstitutionCostResult = (SubstitutionCostResult)other;
+	    return (r1.equals(otherSubstitutionCostResult.r1) && r2.equals(otherSubstitutionCostResult.r2))
+	    		|| (r1.equals(otherSubstitutionCostResult.r2) && r2.equals(otherSubstitutionCostResult.r1));
+	}
+	
 	public boolean contains(Resource r1, Resource r2) {
 		if (r1 == null || r2 == null)
 			return false;
@@ -52,11 +72,17 @@ public class SubstitutionCostResult {
 				(this.r1.toString().equals(r2.toString()) && this.r2.toString().equals(r1.toString()));
 	}
 	public static boolean contains(List<SubstitutionCostResult> list, Resource r1, Resource r2) {
-		return list.stream().anyMatch(l -> l.contains(r1, r2));
+		SubstitutionCostResult tmp = new SubstitutionCostResult(r1, r2, 0, 0, 0, 0, 0);
+		return list.contains(tmp);
+		//return list.stream().anyMatch(l -> l.contains(r1, r2));
 	}
 	public static SubstitutionCostResult get(List<SubstitutionCostResult> list, Resource r1, Resource r2) {
-		if (contains(list, r1, r2))
-			return list.stream().filter(l -> l.contains(r1, r2)).findFirst().get();
+		SubstitutionCostResult tmp = new SubstitutionCostResult(r1, r2, 0, 0, 0, 0, 0);
+		int index = list.indexOf(tmp);
+		if (index > -1)
+			return list.get(index);
+//		if (contains(list, r1, r2))
+//			return list.stream().filter(l -> l.contains(r1, r2)).findFirst().get();
 		return null;
 	}
 }
