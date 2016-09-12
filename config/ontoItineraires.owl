@@ -1,0 +1,107 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix iti: <http://data.ign.fr/def/itineraires#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tisc: <http://observedchange.com/tisc/ns/#> .
+@prefix owl-time: <http://www.w3.org/2006/time#> .
+@prefix transit: <http://vocab.org/transit/terms/> .
+
+
+# ---- Ontology metadata -----
+<http://data.ign.fr/def/itineraires> a owl:Ontology;
+	dcterms:description "Ontologie des itinéraires."@fr;
+	dcterms:title "Ontologie des itinéraires"@fr;
+    cc:license <http://www.data.gouv.fr/Licence-Ouverte-Open-Licence> ;
+	cc:license <http://creativecommons.org/licenses/by/2.0/> ;
+	cc:license <http://opendatacommons.org/licenses/by/> ;
+    dcterms:creator <https://fr.linkedin.com/in/pierre-henri-paris-08925083> ;
+    dcterms:contributor <http://recherche.ign.fr/labos/cogit/cv.php?prenom=Nathalie&nom=Abadie> ;
+	dcterms:issued "2016-06-13"^^xsd:date ;
+	dcterms:modified "2016-06-16"^^xsd:date ;
+    dcterms:publisher <http://fr.dbpedia.org/resource/Institut_national_de_l%27information_g%C3%A9ographique_et_foresti%C3%A8re> ;
+	dcterms:rights "Copyright 2014, IGN" ;
+    vann:preferredNamespacePrefix "itinerary" ;
+    vann:preferredNamespaceUri <http://data.ign.fr/def/itinerary#> ;
+    owl:versionInfo "Version 1.0 - 2016-06-13" .
+
+# ---- Contributors ----
+<https://fr.linkedin.com/in/pierre-henri-paris-08925083> a foaf:Person.
+<http://recherche.ign.fr/labos/cogit/cv.php?prenom=Nathalie&nom=Abadie> a foaf:Person.
+
+# ---- Classes definition ----
+iti:Waypoint a owl:class;
+	rdfs:label "point de cheminement"@fr, "waypoint"@en;
+	rdfs:comment "classe pour définir un lieu de passage dans un itinéraire"@fr;
+	rdfs:isDefinedBy iti:Waypoint.
+	
+iti:Landmark a owl:class;
+	rdfs:label "point de vue"@fr, "landmark"@en;
+	rdfs:comment "Classe pour définir un point de vue dans un itinéraire"@fr;
+	rdfs:isDefinedBy iti:Landmark.
+    
+iti:Route a owl:Class;
+    rdfs:comment "Liste ordonnée des points de cheminement."@fr, "Ordered list of waypoints."@en;
+    rdfs:label "List of waypoints"@en, "Liste des points de cheminements"@fr;
+    rdfs:isDefinedBy iti:Route;
+    rdfs:subClassOf 
+        [ 
+            a owl:Class;
+            owl:intersectionOf 
+            (
+                rdf:List
+                [ 
+                    a owl:Restriction;
+                    owl:allValuesFrom iti:Waypoint;
+                    owl:onProperty rdf:first
+                ]
+                                                                                                           
+                [ 
+                    a owl:Restriction;
+                    owl:allValuesFrom iti:Route;
+                    owl:onProperty rdf:rest
+                ]
+            )
+        ] .
+    
+
+# ---- Properties definition ----
+iti:departureDate a owl:ObjectProperty;
+    rdfs:label "date de départ de"@fr, "departure date of"@en;
+    rdfs:comment "Propriété pour définir la date de départ de quelque part."@fr;
+    rdfs:isDefinedBy iti:departureDate;
+	rdfs:subPropertyOf transit:departureTime;
+    rdfs:domain iti:Waypoint;
+    rdfs:range owl-time:TemporalEntity.
+
+iti:arrivalDate a owl:ObjectProperty;
+    rdfs:label "date d'arrivée de"@fr, "arrival date of"@en;
+    rdfs:comment "Propriété pour définir la date d'arrivée quelque part."@fr;
+    rdfs:isDefinedBy iti:arrivalDate;
+	rdfs:subPropertyOf transit:arrivalTime;
+    rdfs:domain iti:Waypoint;
+    rdfs:range owl-time:TemporalEntity.
+
+iti:spatialReference a owl:ObjectProperty;
+    rdfs:label "lieu attaché au point de cheminement"@fr, "place attached to the waypoint"@en;
+    rdfs:comment "Propriété pour définir le lieu attaché au point de cheminement."@fr;
+    rdfs:isDefinedBy iti:spatialReference;
+    rdfs:domain iti:Waypoint.
+    
+iti:near a owl:ObjectProperty;
+    rdfs:label "proche de"@fr, "near of"@en;
+    rdfs:comment "Propriété pour définir qu'un point de cheminement est proche d'un point remarquable."@fr;
+    rdfs:isDefinedBy iti:near;
+    rdfs:domain iti:Waypoint;
+    rdfs:range owl-time:Landmark.
+    
+iti:waypoints a owl:ObjectProperty;
+    rdfs:label "liste des points de cheminement"@fr, "list of waypoints"@en;
+    rdfs:comment "Liste des points de cheminement."@fr;
+    rdfs:domain iti:Route;
+    rdfs:range rdf:List.

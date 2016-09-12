@@ -95,10 +95,10 @@ public class MainNELApp {
 //		 GraphMatching g = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3", workingDirectory);
 //			if (true)
 //				return;
-		 double labelWeight = 0.3;//0.35;// 0.2; // 0.4
-		 double rlspWeight = 0.4; // 0.4;  // 0.4
-		 double linkWeight = 0.1;//0.05; //0.2;  // 0.1
-		 double typeWeight = 0.2;  // 0.1
+		 double labelWeight = 0.3;//0.3
+		 double rlspWeight = 0.4; // 0.4
+		 double linkWeight = 0.1;//0.1
+		 double typeWeight = 0.2;  // 0.2
 		 logger.info("weights : " + "label=" + labelWeight + " / rlsp=" + rlspWeight + " / link=" + linkWeight + " / type=" + typeWeight);
 		GraphMatching graphMatching = new GraphMatching(document, workingDirectory + "dbpedia_fr_with_rlsp_V3.n3"
 				, 15, 0.3f, workingDirectory + "serializations\\", labelWeight, rlspWeight, linkWeight, typeWeight, workingDirectory);

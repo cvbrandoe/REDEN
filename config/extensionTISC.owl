@@ -1,0 +1,115 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rlsp: <http://data.ign.fr/def/relationsspatiales#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tisc: <http://observedchange.com/tisc/ns/#> .
+@prefix osspr: <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+
+# ---- Ontology metadata -----
+<http://data.ign.fr/def/relationsspatiales> a owl:Ontology;
+	dcterms:description "Ontologie des relations spatiales entre entités topographiques."@fr;
+	dcterms:title "Ontologie des relations spatiales"@fr;
+    cc:license <http://www.data.gouv.fr/Licence-Ouverte-Open-Licence> ;
+	cc:license <http://creativecommons.org/licenses/by/2.0/> ;
+	cc:license <http://opendatacommons.org/licenses/by/> ;
+    dcterms:creator <https://fr.linkedin.com/in/pierre-henri-paris-08925083> ;
+    dcterms:contributor <http://recherche.ign.fr/labos/cogit/cv.php?prenom=Nathalie&nom=Abadie> ;
+	dcterms:issued "2016-04-20"^^xsd:date ;
+	dcterms:modified "2016-07-07"^^xsd:date ;
+    dcterms:publisher <http://fr.dbpedia.org/resource/Institut_national_de_l%27information_g%C3%A9ographique_et_foresti%C3%A8re> ;
+	dcterms:rights "Copyright 2014, IGN" ;
+    vann:preferredNamespacePrefix "rlsp" ;
+    vann:preferredNamespaceUri <http://data.ign.fr/def/relationsspatiales#> ;
+    owl:versionInfo "Version 1.1 - 2016-07-07" .
+
+# ---- Contributors ----
+<https://fr.linkedin.com/in/pierre-henri-paris-08925083> a foaf:Person.
+<http://recherche.ign.fr/labos/cogit/cv.php?prenom=Nathalie&nom=Abadie> a foaf:Person.
+
+# ---- Classes definition ----
+
+
+# ---- Properties definition ----
+rlsp:northOf a owl:ObjectProperty;
+    rdfs:label "au nord de"@fr, "north of"@en;
+    rdfs:comment "Propriété pour définir la position relative d'un objet topographique situé au nord d'un autre objet topographique."@fr;
+    rdfs:isDefinedBy rlsp:northOf;
+	rdfs:subPropertyOf tisc:northOf;
+	owl:inverseOf rlsp:southOf.
+	
+rlsp:southOf a owl:ObjectProperty;
+    rdfs:label "au sud de"@fr, "south of"@en;
+    rdfs:comment "Propriété pour définir la position relative d'un objet topographique situé au sud d'un autre objet topographique."@fr;
+    rdfs:isDefinedBy rlsp:southOf;
+	rdfs:subPropertyOf tisc:southOf;
+	owl:inverseOf rlsp:northOf.
+	
+rlsp:eastOf a owl:ObjectProperty;
+    rdfs:label "à l'est de"@fr, "east of"@en;
+    rdfs:comment "Propriété pour définir la position relative d'un objet topographique situé à l'est d'un autre objet topographique."@fr;
+    rdfs:isDefinedBy rlsp:eastOf;
+	rdfs:subPropertyOf tisc:eastOf;
+	owl:inverseOf rlsp:westOf.
+	
+rlsp:westOf a owl:ObjectProperty;
+    rdfs:label "à l'ouest de"@fr, "west of"@en;
+    rdfs:comment "Propriété pour définir la position relative d'un objet topographique situé à l'ouest d'un autre objet topographique."@fr;
+    rdfs:isDefinedBy rlsp:westOf;
+	rdfs:subPropertyOf tisc:westOf;
+	owl:inverseOf rlsp:eastOf.
+  
+rlsp:northEastOf a owl:ObjectProperty;
+    rdfs:label "au nord-est de"@fr, "north-east of"@en;
+    rdfs:comment "Propriété pour définir la position relative d'un objet topographique situé au nord-est d'un autre objet topographique."@fr;
+    rdfs:isDefinedBy rlsp:northEastOf;
+	rdfs:subPropertyOf tisc:northEastOf;
+	rdfs:subPropertyOf rlsp:northOf;
+	rdfs:subPropertyOf rlsp:eastOf;
+	owl:inverseOf rlsp:southWestOf.
+  
+rlsp:northWestOf a owl:ObjectProperty;
+    rdfs:label "au nord-ouest de"@fr, "north-west of"@en;
+    rdfs:comment "Propriété pour définir la position relative d'un objet topographique situé au nord-ouest d'un autre objet topographique."@fr;
+    rdfs:isDefinedBy rlsp:northWestOf;
+	rdfs:subPropertyOf tisc:northWestOf;
+	rdfs:subPropertyOf rlsp:nortOf;
+	rdfs:subPropertyOf rlsp:westOf;
+	owl:inverseOf rlsp:southEastOf.
+	
+rlsp:southEastOf a owl:ObjectProperty;
+    rdfs:label "au sud-est de"@fr, "south-east of"@en;
+    rdfs:comment "Propriété pour définir la position relative d'un objet topographique situé au sud-est d'un autre objet topographique."@fr;
+    rdfs:isDefinedBy rlsp:southEastOf;
+	rdfs:subPropertyOf tisc:southEastOf;
+	rdfs:subPropertyOf rlsp:southOf;
+	rdfs:subPropertyOf rlsp:eastOf;
+	owl:inverseOf rlsp:northWestOf.
+	
+rlsp:southWestOf a owl:ObjectProperty;
+    rdfs:label "au sud-ouest de"@fr, "south-west of"@en;
+    rdfs:comment "Propriété pour définir la position relative d'un objet topographique situé au sud-ouest d'un autre objet topographique."@fr;
+    rdfs:isDefinedBy rlsp:southWestOf;
+	rdfs:subPropertyOf tisc:southWestOf;
+	rdfs:subPropertyOf rlsp:southOf;
+	rdfs:subPropertyOf rlsp:westOf;
+	owl:inverseOf rlsp:northEastOf.
+  
+rlsp:near a owl:SymmetricProperty;
+    rdfs:label "proche de"@fr, "near to"@en;
+    rdfs:comment "Propriété pour définir la proximité de deux objets topographiques."@fr;
+    rdfs:isDefinedBy rlsp:near;
+	rdfs:subPropertyOf tisc:near. 
+    
+rlsp:contains a owl:ObjectProperty;
+    rdfs:label "contient"@fr, "contains"@en;
+    rdfs:comment "Propriété pour définir qu'un objet topographique contient un objet topographique cible."@fr;
+    rdfs:isDefinedBy rlsp:contains;
+    rdfs:subPropertyOf osspr:contains;
+	owl:inverseOf tisc:insideOf.  
+  
