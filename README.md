@@ -37,9 +37,17 @@ config-file.properties tei-fileName-withURIs.xml -produceData4Visu=output.json -
  
 ###### How to cite this work
 
+Brando, C., Frontini, F., Ganascia, J.G. (2016) REDEN: Named-Entity Linking in digital Literary Editions using Linked Data Sets, Complex Systems Informatics and Modeling Quarterly CSIMQ, Issue 7, June/July 2016, pp. 60-79, published online by RTU Press, https://csimq-journals.rtu.lv, http://dx.doi.org/10.7250/csimq.2016-7.04 ISSN: 2255-9922 online
+
 Brando, C., Frontini, F., Ganascia, J.G. (2015): Disambiguation of named entities in cultural heritage texts using linked data sets. In: Proceedings of the First International Workshop on Semantic Web for Cultural Heritage in Conjunction with 19th East-European Conference on Advances in Databases and Information Systems, New Trends in Databases and Information Systems, Springer, 539, Poitiers, France, http://link.springer.com/chapter/10.1007%2F978-3-319-23201-0_51 
 
 Frontini F, Brando C, Ganascia J-G, (2015) Semantic Web based Named Entity Linking for digital humanities and heritage texts, in Proceedings of the First International Workshop Semantic Web for Scientific Heritage at the 12th ESWC 2015 Conference, Portorož, Slovenia, June 1st, 2015, pp. 77-88, URL: http://ceur-ws.org/Vol-1364/paper9.pdf 
+
+Frontini, F., Brando, C., Ganascia, J.G. (2015): Domain-adapted named-entity linker using linked data. In: Proceedings of the 1st Workshop on Natural Language Applications: completing the puzzle in conjunction with the 20th International Conference on Applications of Natural Language to Information Systems, Passau, Germany, June 17-19, http://ceur-ws.org/Vol-1386/named_entity.pdf 
+
+Brando, C., Frontini, F., Ganascia, J.G. (2015). Linked data for toponym linking in French literary texts. In Proceedings of the 9th Workshop on Geographic Information Retrieval (GIR '15), Ross S. Purves and Christopher B. Jones (Eds.). ACM, New York, NY, USA, Article 3 , 2 pages. DOI=http://dx.doi.org/10.1145/2837689.2837699
+
+
 
 REDEN uses the following frameworks: 
 - indexes are implemented with Lucene (https://lucene.apache.org/core/)
