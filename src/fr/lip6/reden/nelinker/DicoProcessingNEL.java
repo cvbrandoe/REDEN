@@ -36,10 +36,12 @@ import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.IndexWriterConfig.OpenMode;
+import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.RegexpQuery;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
@@ -187,7 +189,7 @@ public class DicoProcessingNEL {
 	 * @param indexDirStr, index folder
 	 * @param dataDirStr, dictionary data
 	 */
-	public static void createIndex(String indexDirStr, String dataDirStr) {
+	public static void createIndex(String indexDirStr, String dataDirStr, String indexField) {
 
 		final Path docDir = Paths.get(dataDirStr);
 		if (!Files.isReadable(docDir)) {
@@ -213,7 +215,7 @@ public class DicoProcessingNEL {
 			// iwc.setRAMBufferSizeMB(256.0);
 
 			IndexWriter writer = new IndexWriter(dir, iwc);
-			indexDocs(writer, docDir);
+			indexDocs(writer, docDir, indexField);
 
 			writer.close();
 			Date end = new Date();
@@ -232,7 +234,7 @@ public class DicoProcessingNEL {
 	 * @param path
 	 * @throws IOException
 	 */
-	static void indexDocs(final IndexWriter writer, Path path)
+	static void indexDocs(final IndexWriter writer, Path path, final String indexField)
 			throws IOException {
 		if (Files.isDirectory(path)) {
 			Files.walkFileTree(path, new SimpleFileVisitor<Path>() {
@@ -241,8 +243,7 @@ public class DicoProcessingNEL {
 						BasicFileAttributes attrs) throws IOException {
 					try {
 						if (!file.toFile().isHidden()) {
-							indexDoc(writer, file, attrs.lastModifiedTime()
-								.toMillis());
+							indexDoc(writer, file, attrs.lastModifiedTime().toMillis(), indexField);
 						}
 					} catch (IOException ignore) {
 						// don't index files that can't be read.
@@ -251,7 +252,7 @@ public class DicoProcessingNEL {
 				}
 			});
 		} else {
-			indexDoc(writer, path, Files.getLastModifiedTime(path).toMillis());
+			indexDoc(writer, path, Files.getLastModifiedTime(path).toMillis(), indexField);
 		}
 	}
 
@@ -263,7 +264,7 @@ public class DicoProcessingNEL {
 	 * @param lastModified
 	 * @throws IOException
 	 */
-	static void indexDoc(IndexWriter writer, Path file, long lastModified)
+	static void indexDoc(IndexWriter writer, Path file, long lastModified, String indexField)
 			throws IOException {
 		try (InputStream stream = Files.newInputStream(file)) {
 
@@ -275,7 +276,7 @@ public class DicoProcessingNEL {
 			while ((line = reader.readNext()) != null) {
 				// make a new, empty document
 				Document doc = new Document();
-				Field pathField = new StringField("nameForm",
+				Field pathField = new StringField(indexField,
 						replaceNonAlphabeticCharacters(line[0]),
 						Field.Store.YES);
 				doc.add(pathField);
@@ -331,6 +332,45 @@ public class DicoProcessingNEL {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
+		return results;
+	}
+	
+	/**
+	 * Method to search for a phrase in the index built from the dictionary using regexp.
+	 * This is used for computing population completeness
+	 * @param index, name of the index
+	 * @param field, name of the field to search within the index
+	 * @param queryString, the phrase to search for
+	 * @return the results
+	 */
+	public static Set<String> searchIndexWithRegexp(String index, String field,
+			String queryString) {
+		Set<String> results = new HashSet<String>();
+		try {
+			IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths
+					.get(index)));
+
+			IndexSearcher searcher = new IndexSearcher(reader);
+			RegexpQuery query = new RegexpQuery(new Term(field, queryString));
+			
+			// Date start = new Date();
+			TopDocs hits = searcher.search(query, 20000000);
+			// Date end = new Date();
+			// System.out.println("Time: " + (end.getTime() - start.getTime())
+			// + "ms");
+			ScoreDoc[] scoreDocs = hits.scoreDocs;
+			for (int n = 0; n < scoreDocs.length; ++n) {
+				ScoreDoc sd = scoreDocs[n];
+				int docId = sd.doc;
+				Document d = searcher.doc(docId);
+				results.add(d.get(field).split("\\t")[0].replaceAll("#foaf:Person", "")); //particular fix for BNF, actually I should fix the Sparql query to bnf to get proper URIs
+				//System.out.println(d.get(field).split("\\t")[0]);
+				//System.out.println("URIs found: " + d.get("uris"));
+			}
+			reader.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
 		return results;
 	}
 	

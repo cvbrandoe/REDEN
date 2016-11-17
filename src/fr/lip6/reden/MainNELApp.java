@@ -174,7 +174,7 @@ public class MainNELApp {
 				int ind = 0;
 				for (String indexDirName : indexDir.split(",")) { 
 					FileUtils.deleteDirectory(new File(indexDirName.trim()));
-					DicoProcessingNEL.createIndex(indexDir, nameMainFolderDico.split(",")[ind].trim());
+					DicoProcessingNEL.createIndex(indexDir, nameMainFolderDico.split(",")[ind].trim(), "nameForm");
 				}
 			}
 			int countMention = 0;
