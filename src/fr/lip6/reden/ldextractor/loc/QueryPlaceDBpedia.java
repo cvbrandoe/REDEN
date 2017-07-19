@@ -8,10 +8,10 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.hp.hpl.jena.query.Query;
-import com.hp.hpl.jena.query.QueryFactory;
-import com.hp.hpl.jena.query.QuerySolution;
-import com.hp.hpl.jena.query.ResultSet;
+import org.apache.jena.query.Query;
+import org.apache.jena.query.QueryFactory;
+import org.apache.jena.query.QuerySolution;
+import org.apache.jena.query.ResultSet;
 import com.opencsv.CSVWriter;
 
 import fr.lip6.reden.ldextractor.QuerySource;
@@ -139,7 +139,7 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 			return; //file exists, skip processing
 		} else {
 			logger.info("entering DBpedia: processResults");
-			List<PlaceDBpediaFr> results = new ArrayList<PlaceDBpediaFr>();
+			List<PlaceEntry> results = new ArrayList<PlaceEntry>();
 			if (letter != null) {
 				prefixDictionnaireFile += letter;
 			}
@@ -161,7 +161,7 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 						contains = true;
 				}
 				if (!contains) {
-					PlaceDBpediaFr tri = new PlaceDBpediaFr();
+					PlaceEntry tri = new PlaceEntry();
 					tri.setLabelstandard(sol.getLiteral("labelfr").getLexicalForm());
 					tri.setUri(sol.getResource("val").getURI());
 					if (sol.getLiteral("labelred") != null ) {
@@ -181,7 +181,7 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 						contains = true;
 				}
 				if (!contains) {
-					PlaceDBpediaFr tri2 = new PlaceDBpediaFr();
+					PlaceEntry tri2 = new PlaceEntry();
 					tri2.setLabelstandard(sol.getLiteral("labelfr").getLexicalForm());
 					tri2.setUri(sol.getResource("val").getURI());
 					tri2.setLabelalternative(sol.getLiteral("labelfr").getLexicalForm());
@@ -202,7 +202,7 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 	 * @param filename, the name of the TSV file
 	 * @param outDictionnaireDir, the name of the folder where the TSV file will be stored
 	 */
-	public static void writeToFile(List<PlaceDBpediaFr> results, String filename, String outDictionnaireDir) {
+	public static void writeToFile(List<PlaceEntry> results, String filename, String outDictionnaireDir) {
 		try {
 			FileWriter mFileWriter = new FileWriter(outDictionnaireDir+"/"+filename+".tsv", true); //append true
 			CSVWriter writer = new CSVWriter(mFileWriter, '\t', 

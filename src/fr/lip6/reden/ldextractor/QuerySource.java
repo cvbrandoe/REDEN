@@ -2,11 +2,11 @@ package fr.lip6.reden.ldextractor;
 
 import java.util.List;
 
-import com.hp.hpl.jena.query.Query;
-import com.hp.hpl.jena.query.QueryExecution;
-import com.hp.hpl.jena.query.QueryExecutionFactory;
-import com.hp.hpl.jena.query.ResultSet;
-import com.hp.hpl.jena.query.ResultSetFactory;
+import org.apache.jena.query.Query;
+import org.apache.jena.query.QueryExecution;
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.ResultSet;
+import org.apache.jena.query.ResultSetFactory;
 
 /**
  * Class for querying a particular source. New queries per source must extend this class.
@@ -25,7 +25,7 @@ public class QuerySource implements QuerySourceInterface {
 			String outDictionnaireDir) {
 		return null;
 	}
-
+	
 	/**
 	 * Execute query in SPARQL endpoint. 
 	 * Same methods for all children.
@@ -39,7 +39,7 @@ public class QuerySource implements QuerySourceInterface {
 		
 		try {
 			// wait 20 seconds for every query
-			Thread.sleep(10000);
+			Thread.sleep(10000); 
 			try (QueryExecution qexec = QueryExecutionFactory.sparqlService(sparqlendpoint, query)) {
 			      ResultSet results = qexec.execSelect() ;
 			      results = ResultSetFactory.copyResults(results) ;

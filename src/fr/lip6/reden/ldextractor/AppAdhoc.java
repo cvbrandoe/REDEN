@@ -12,10 +12,11 @@ import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
-import com.hp.hpl.jena.query.Query;
-import com.hp.hpl.jena.query.ResultSet;
+import org.apache.jena.query.Query;
+import org.apache.jena.query.ResultSet;
 
 import fr.lip6.reden.ldextractor.loc.QueryPlaceDBpedia;
+import fr.lip6.reden.ldextractor.loc.QueryPlaceLinkedGeoData;
 import fr.lip6.reden.ldextractor.per.QueryArtPersonalityGetty;
 import fr.lip6.reden.ldextractor.per.QueryAuthorBNE;
 import fr.lip6.reden.ldextractor.per.QueryAuthorBNEAll;
@@ -223,6 +224,30 @@ public class AppAdhoc
 					Query qdb = dbp.formulateSPARQLQuery(domainParams, letter, "");
 					ResultSet rsdbp = dbp.executeQuery(qdb, dbp.TIMEOUT.toString(), dbp.SPARQL_END_POINT, "", "");
 					dbp.processResults(rsdbp, outDictionnaireDir, letter, domainParams);
+					
+					counter++;
+				}
+			}
+			if (dicLabel.equalsIgnoreCase("LGD-loc") || dicLabel.equalsIgnoreCase("all")) {
+				// QUERY PLACES IN LinkedGeoData
+				counter = 0;
+				out = false;
+				while (counter < let.length && !out) {
+					QueryPlaceLinkedGeoData pl = new QueryPlaceLinkedGeoData();
+					Boolean lr = pl.LARGE_REPO;
+					
+					String letter = null;
+					if (!lr) {
+						out = true; //enters once
+					} else {
+						letter = let[counter];
+						logger.info("processing letter:" +letter);
+					}
+					
+					//LGD 
+					String qdb = pl.formulateSPARQLQueryString(domainParams, letter, "");
+					ResultSet rsdbp = pl.executeQuery(qdb, pl.TIMEOUT.toString(), pl.SPARQL_END_POINT, "", "");
+					pl.processResults(rsdbp, outDictionnaireDir, letter, domainParams);
 					
 					counter++;
 				}

@@ -30,7 +30,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import com.hp.hpl.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Model;
 
 import fr.lip6.reden.enrichne.AuthorsEnrichment;
 import fr.lip6.reden.enrichne.GeodataGeneration;
@@ -64,7 +64,7 @@ public class MainNELApp {
 		} else {
 			System.out.println("Three modes possible for providing arguments: "
 					+ "1) <config_file> <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
-					+ "2) <config_file> -createDico=bnf|bnf-all|dbpediafr|dbpediafr-author|getty-per|bne|bne-all|all"
+					+ "2) <config_file> -createDico=bnf|bnf-all|dbpediafr|dbpediafr-author|getty-per|bne|bne-all|all|LGD-loc"
 					+ "3) <config_file> <tei-fileName-withURIs.xml> -produceData4Visu=<output.json> -propsFile=<config_ld_properties>");
 		}
 	}
@@ -95,7 +95,7 @@ public class MainNELApp {
 			if (!argsMap.containsKey("tei")) { //there is no TEI file
 				System.out.println("Three modes possible for providing arguments: "
 						+ "1) <config_file> <tei-fileName.xml> [-printEval] [-createIndex] [-relsFile=<file>] [-outDir=<dir>] or"
-						+ "2) <config_file> -createDico=bnf|bnf-all|dbpediafr|dbpediafr-author|getty-per|bne|bne-all|all"
+						+ "2) <config_file> -createDico=bnf|bnf-all|dbpediafr|dbpediafr-author|getty-per|bne|bne-all|all|LGD-loc"
 						+ "3) <config_file> <tei-fileName-withURIs.xml> -produceData4Visu=<output.json> -propsFile=<config_ld_properties>");
 				return;
 			}

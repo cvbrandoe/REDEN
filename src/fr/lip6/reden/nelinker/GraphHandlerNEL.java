@@ -21,15 +21,15 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.Property;
-import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.SimpleSelector;
-import com.hp.hpl.jena.rdf.model.Statement;
-import com.hp.hpl.jena.util.FileManager;
-import com.hp.hpl.jena.util.iterator.ExtendedIterator;
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.RDFNode;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.SimpleSelector;
+import org.apache.jena.rdf.model.Statement;
+import org.apache.jena.util.FileManager;
+import org.apache.jena.util.iterator.ExtendedIterator;
 
 /**
  * This class implements the method for RDF data retrieval and graph fusion.

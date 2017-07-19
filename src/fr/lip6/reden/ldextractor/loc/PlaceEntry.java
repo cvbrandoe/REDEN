@@ -1,6 +1,6 @@
 package fr.lip6.reden.ldextractor.loc;
 
-public class PlaceDBpediaFr {
+public class PlaceEntry {
 	private String labelstandard;
 	private String labelalternative;
 	private String uri;
