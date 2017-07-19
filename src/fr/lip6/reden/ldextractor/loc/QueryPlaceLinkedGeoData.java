@@ -8,9 +8,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
-import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFactory;
@@ -18,8 +16,6 @@ import org.apache.jena.sparql.engine.http.QueryEngineHTTP;
 
 import com.opencsv.CSVWriter;
 
-import fr.lip6.reden.ldextractor.QuerySource;
-import fr.lip6.reden.ldextractor.QuerySourceInterface;
 import fr.lip6.reden.ldextractor.TopicExtent;
 
 /**
@@ -83,7 +79,7 @@ public class QueryPlaceLinkedGeoData {
 	        		                  + "?spatial geom:geometry ?node . "
 	         		                  + "?node ogc:asWKT ?geo ."
 	         		                //  + " Filter(bif:st_intersects (?geo, bif:st_point (41.836944, -87.684722), 0.25)) . " //	         		                 
-	        		                  + "} "; /*OFFSET 50000 limit 50000 */   
+	        		                  + "} OFFSET 50000 limit 50000 ";     
 			logger.info(queryString);
 			logger.info("exiting LinkedGeoData: formulateSPARQLQueryString");
 			return queryString;			
@@ -133,15 +129,10 @@ public class QueryPlaceLinkedGeoData {
 			
 			while (res.hasNext()) {
 				QuerySolution sol = res.next();
-				//redirect pages
 				PlaceEntry tri = new PlaceEntry();
-					tri.setLabelstandard(sol.getLiteral("pref").getLexicalForm());
-					tri.setUri(sol.getResource("spatial").getURI());
-					/*if (sol.getLiteral("alt") != null ) {
-						tri.setLabelalternative(sol.getLiteral("alt").getLexicalForm());
-					} else {
-						tri.setLabelalternative(sol.getLiteral("pref").getLexicalForm());	
-					}*/
+				tri.setLabelstandard(sol.getLiteral("pref").getLexicalForm());
+				tri.setUri(sol.getResource("spatial").getURI());
+				tri.setLabelalternative(sol.getLiteral("pref").getLexicalForm());
 				places.add(tri);
 				
 			}
@@ -166,19 +157,12 @@ public class QueryPlaceLinkedGeoData {
 					CSVWriter.NO_QUOTE_CHARACTER);
 			int count = 0;
 			for (int k = 0; k < results.size(); k++) {
-				/*if (results.get(k).getLabelalternative().contains("(")) {
-					String[] entry = { results.get(k).getLabelalternative().substring(0, results.get(k).getLabelalternative().indexOf("(")).trim(), results.get(k).getLabelstandard(), 
-					results.get(k).getUri()};
-					writer.writeNext(entry);
-					count++;
-				} else {*/
-					String[] entry = { /*results.get(k).getLabelalternative(),*/ results.get(k).getLabelstandard(),
+				String[] entry = {results.get(k).getLabelalternative(), results.get(k).getLabelstandard(),
 							results.get(k).getUri()};
-					writer.writeNext(entry);
-					count++;
-				//}
+				writer.writeNext(entry);
+				count++;				
 			}			
-			System.out.println("Total count places (entities and their alternative names): "+count);
+			System.out.println("Total count places: "+count);
 			writer.close();
 		} catch (IOException e) {
 			e.printStackTrace();
