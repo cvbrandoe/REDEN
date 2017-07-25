@@ -37,6 +37,8 @@ config-file.properties tei-fileName-withURIs.xml -produceData4Visu=output.json -
 
 In the config-file.properties, the parameter addScores must be set to false.
  
+If you clone this repository and update the source code, then you may need to regenerate the JAR file, for that, you just need to install Maven and run the command 'mvn package'. Do not forget to modify the pom.xml to add the path to your local JDK install.
+
 ###### How to cite this work
 
 Brando, C., Frontini, F., Ganascia, J.G. (2016) REDEN: Named-Entity Linking in digital Literary Editions using Linked Data Sets, Complex Systems Informatics and Modeling Quarterly CSIMQ, Issue 7, June/July 2016, pp. 60-79, published online by RTU Press, https://csimq-journals.rtu.lv, http://dx.doi.org/10.7250/csimq.2016-7.04 ISSN: 2255-9922 online
