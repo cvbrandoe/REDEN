@@ -1,0 +1,12 @@
+How to recreate REDEN jar file (18/02/2018) :
+
+1. mvn package (will create the jar file inside the target directory)
+
+2. mvn install dependency:copy-dependencies (will create target/dependency with jars, for unknown reasons, the REDEN with dependencies jar does not work, we thus need to create the dependency folder)
+
+3. do not forget to execute REDEN using the following command (change it to your local JDK installation): 
+
+/usr/java/jdk-9.0.4/bin/java -cp "target/REDEN.jar:target/dependency/*" fr.lip6.reden.MainNELApp config/config-authors-bnf.properties -createDico=bnf (to create the dictionary from data.bnf)
+
+/usr/java/jdk-9.0.4/bin/java -cp "target/REDEN.jar:target/dependency/*" fr.lip6.reden.MainNELApp config/config-authors-bnf.properties input/thibaudet_reflexions.xml -printEval -outDir=output/ (to annotation the thibaudet tei)
+

@@ -4,7 +4,7 @@ import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.sparql.engine.http.QueryEngineHTTP;
 
-class Test {
+class TestLGD {
 
      public static void main(String [] args) {
 

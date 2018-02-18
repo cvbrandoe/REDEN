@@ -266,8 +266,9 @@ public class DicoProcessingNEL {
 	 */
 	static void indexDoc(IndexWriter writer, Path file, long lastModified, String indexField)
 			throws IOException {
-		try (InputStream stream = Files.newInputStream(file)) {
+		try {
 
+			InputStream stream = Files.newInputStream(file);
 			CSVReader reader = new CSVReader(new InputStreamReader(
 					new FileInputStream(file.toFile()), "UTF-8"), '\t',
 					CSVWriter.NO_QUOTE_CHARACTER);
@@ -289,6 +290,8 @@ public class DicoProcessingNEL {
 			}
 			logger.info("file processed " + file);
 			reader.close();
+		} catch (Exception e) {
+			System.err.println("error building index");
 		}
 	}
 

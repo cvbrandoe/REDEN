@@ -9,23 +9,26 @@ import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFactory;
 
 /**
- * Class for querying a particular source. New queries per source must extend this class.
+ * Class for querying a particular source. New queries per source must extend
+ * this class.
+ * 
  * @author @author Brando & Frontini
  */
 public class QuerySource implements QuerySourceInterface {
 
 	/**
-	 * Prepare the SPARQL statement.
-	 * Children must implement their own queries.
-	 * @param domain configuration
-	 * @param firstleter, optional filtering for queries
+	 * Prepare the SPARQL statement. Children must implement their own queries.
+	 * 
+	 * @param domain
+	 *            configuration
+	 * @param firstleter,
+	 *            optional filtering for queries
 	 * @return
 	 */
-	public Query formulateSPARQLQuery(List<TopicExtent> domainParams, String firstleter, 
-			String outDictionnaireDir) {
+	public Query formulateSPARQLQuery(List<TopicExtent> domainParams, String firstleter, String outDictionnaireDir) {
 		return null;
 	}
-	
+
 	/**
 	 * Execute query in SPARQL endpoint. 
 	 * Same methods for all children.
@@ -40,11 +43,14 @@ public class QuerySource implements QuerySourceInterface {
 		try {
 			// wait 20 seconds for every query
 			Thread.sleep(10000); 
-			try (QueryExecution qexec = QueryExecutionFactory.sparqlService(sparqlendpoint, query)) {
-			      ResultSet results = qexec.execSelect() ;
+			try {
+				QueryExecution qexec = QueryExecutionFactory.sparqlService(sparqlendpoint, query);
+				ResultSet results = qexec.execSelect() ;
 			      results = ResultSetFactory.copyResults(results) ;
 			      qexec.close();
 			      return results ;    // Passes the result set out of the try-resources			     
+			} catch (Exception e){
+				System.err.println("error in sparql query execution");
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -53,15 +59,21 @@ public class QuerySource implements QuerySourceInterface {
 	}
 
 	/**
-	 * Process and write results.
-	 * Children must implement their own result processing.
-	 * @param res, query results
-	 * @param outDictionnaireDir, name of the folder where to write the dictionary file
-	 * @param prefixDictionnaireFile, prefix of the dico files
-	 * @param letter, optional parameter for large repos
+	 * Process and write results. Children must implement their own result
+	 * processing.
+	 * 
+	 * @param res,
+	 *            query results
+	 * @param outDictionnaireDir,
+	 *            name of the folder where to write the dictionary file
+	 * @param prefixDictionnaireFile,
+	 *            prefix of the dico files
+	 * @param letter,
+	 *            optional parameter for large repos
 	 */
-	
-	public void processResults(ResultSet res, String outDictionnaireDir, String letter, List<TopicExtent> domainParams) {
+
+	public void processResults(ResultSet res, String outDictionnaireDir, String letter,
+			List<TopicExtent> domainParams) {
 	}
 
 }
