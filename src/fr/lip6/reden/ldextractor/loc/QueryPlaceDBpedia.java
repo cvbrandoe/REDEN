@@ -97,7 +97,7 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 					 * dbpedia-owl:region -- idem
 					*/
 					+ " ?val rdf:type db-owl:Place ."
-					+ " ?val prop-fr:régions ?reg ."
+					//+ " ?val prop-fr:régions ?reg ."
 					+ " ?val rdfs:label ?labelfr . "
 					+ " filter(langMatches(lang(?labelfr),'FR')) ."
 					+ filterRegex
