@@ -1,5 +1,6 @@
 package fr.lip6.reden.ldextractor;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -57,6 +58,9 @@ public class AppAdhoc
 			String greaterThan = prop.getProperty("greaterThan");
 			String lesserThan = prop.getProperty("lesserThan");
 			String spatialExtent = prop.getProperty("spatialExtent");
+			
+			//Create the folder
+			new File(outDictionnaireDir).mkdirs();
 			
 			//prepare domain-adaptation parameters from config file
 			List<TopicExtent> domainParams = loadDomainParams(greaterThan, lesserThan, spatialExtent);

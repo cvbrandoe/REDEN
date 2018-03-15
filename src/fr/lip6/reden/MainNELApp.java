@@ -87,6 +87,7 @@ public class MainNELApp {
 			
 			//only builds the dico, skips NEL
 			if (argsMap.containsKey("createDico")) {
+				
 				AppAdhoc.crawlsLinkedData(argsMap.get("config"), argsMap.get("createDico"));
 				logger.info("Building dictionary for NEL");
 				return;
@@ -174,6 +175,7 @@ public class MainNELApp {
 				int ind = 0;
 				for (String indexDirName : indexDir.split(",")) { 
 					FileUtils.deleteDirectory(new File(indexDirName.trim()));
+					new File(indexDirName.trim()).mkdirs(); 
 					DicoProcessingNEL.createIndex(indexDir, nameMainFolderDico.split(",")[ind].trim(), "nameForm");
 				}
 			}
