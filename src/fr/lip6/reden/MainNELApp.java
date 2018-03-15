@@ -169,16 +169,14 @@ public class MainNELApp {
 				outDir += "/";
 			}
 						
-			// checking if we need to create an index
-			if (argsMap.containsKey("createIndex")) {
+			// we create the indexed dictionary in any case 
+			if (argsMap.containsKey("createIndex") || !new File(indexDir.trim()).exists()) {
 				logger.info("(Re-)create index");
 				int ind = 0;
-				for (String indexDirName : indexDir.split(",")) { 
-					FileUtils.deleteDirectory(new File(indexDirName.trim()));
-					new File(indexDirName.trim()).mkdirs(); 
-					DicoProcessingNEL.createIndex(indexDir, nameMainFolderDico.split(",")[ind].trim(), "nameForm");
-				}
-			}
+				new File(indexDir.trim()).mkdirs(); 
+				DicoProcessingNEL.createIndex(indexDir, nameMainFolderDico.split(",")[ind].trim(), "nameForm");
+			}	
+			
 			int countMention = 0;
 			int countParagraph = 0;
 
