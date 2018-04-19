@@ -275,8 +275,7 @@ public class AppAdhoc
 					
 					//Wikidata
 					String qdb = pl.formulateSPARQLQueryString(domainParams, letter, "");
-					ResultSet rsdbp = pl.executeQuery(qdb, pl.TIMEOUT.toString(), pl.SPARQL_END_POINT, "", "");
-					pl.processResults(rsdbp, outDictionnaireDir, letter, domainParams);
+					ResultSet rsdbp = pl.executeQuery(qdb, pl.TIMEOUT.toString(), pl.SPARQL_END_POINT, outDictionnaireDir, letter);
 					
 					counter++;
 				}
