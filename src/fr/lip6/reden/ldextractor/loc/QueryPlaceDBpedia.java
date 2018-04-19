@@ -82,6 +82,7 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 					+ "PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> "
 					+ "PREFIX  prop-fr: <http://fr.dbpedia.org/property/> "
 					+ "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/> "
+					+ "PREFIX dcterms: <http://purl.org/dc/terms/>" 
 					+ "select distinct ?val ?labelfr ?labelred ?otherLinks where { "					
 					/*
 					 * Other predicates to filter places:
@@ -96,7 +97,7 @@ public class QueryPlaceDBpedia extends QuerySource implements QuerySourceInterfa
 					 * prop-fr:régions -- idem
 					 * dbpedia-owl:region -- idem
 					*/
-					+ " ?val rdf:type db-owl:Place ."
+					+ " {?val rdf:type db-owl:Place} UNION {?val dcterms:subject <http://fr.dbpedia.org/resource/Catégorie:Ville_de_fiction>} ."
 					//+ " ?val prop-fr:régions ?reg ."
 					+ " ?val rdfs:label ?labelfr . "
 					+ " filter(langMatches(lang(?labelfr),'FR')) ."

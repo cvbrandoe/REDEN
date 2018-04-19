@@ -23,25 +23,25 @@ import fr.lip6.reden.ldextractor.TopicExtent;
  * 
  * @author Brando & Frontini
  */
-public class QueryPlaceLinkedGeoData {
+public class QueryPlaceWikiData {
 
-	private static Logger logger = Logger.getLogger(QueryPlaceLinkedGeoData.class);
+	private static Logger logger = Logger.getLogger(QueryPlaceWikiData.class);
 	
 	/**
 	 * Mandatory fields
 	 */
-	public String SPARQL_END_POINT = "http://linkedgeodata.org/sparql";
+	public String SPARQL_END_POINT = "https://query.wikidata.org/sparql";
 	
 	public Integer TIMEOUT = 200000;
 	
 	public Boolean LARGE_REPO = true;
 	
-	public String prefixDictionnaireFile = "placeLGD";
+	public String prefixDictionnaireFile = "placeWikidata";
 	
 	/**
 	 * Default constructor.
 	 */
-	public QueryPlaceLinkedGeoData () {
+	public QueryPlaceWikiData () {
 		super();
 	}
 	
@@ -55,60 +55,45 @@ public class QueryPlaceLinkedGeoData {
 		File fexists = new File(outDictionnaireDir+"/"+prefixDictionnaireFile+firstLetter+".tsv");
 		
 		if (fexists.exists() && fexists.length() > 0) {
-			System.out.println("entering LinkedGeoData: skip, file exists - "+
+			System.out.println("entering Wikidata: skip, file exists - "+
 					outDictionnaireDir+"/"+prefixDictionnaireFile+firstLetter+".tsv");
 			return null; //skip processing
 		} else {
-			logger.info("entering LinkedGeoData: formulateSPARQLQuery");
+			logger.info("entering WikiData: formulateSPARQLQuery");
 			String filterRegex = "";
 			if (firstLetter.equalsIgnoreCase("other")) {
-				filterRegex = "FILTER (!regex(STR(?pref), '^a|^b|^c|^d|^e|^f|^g|^h|^i|^j|^k|^l|^m|^n|^o|^p|^q|^r|^s|^t|^u|^v|^w|^x|^y|^z', 'i')) . ";			
+				filterRegex = "FILTER (!regex(?itemLabel, '^a|^b|^c|^d|^e|^f|^g|^h|^i|^j|^k|^l|^m|^n|^o|^p|^q|^r|^s|^t|^u|^v|^w|^x|^y|^z', 'i')) . ";			
 			} else {
-				filterRegex = "FILTER (regex(STR(?pref), '^"+firstLetter+"', 'i')) . ";			
+				filterRegex = "FILTER regex(?itemLabel, '^"+firstLetter+"', 'i') . ";			
 			}
-			String queryString = " Prefix geom: <http://geovocab.org/geometry#>" 
-	        		 + " Prefix lgdo: <http://linkedgeodata.org/ontology/>"       
-	        		 + " Prefix ogc: <http://www.opengis.net/ont/geosparql#>"
-	        		 + " Prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
-	        		 + " select ?spatial ?pref "
-	        		 + "From <http://linkedgeodata.org> "
-	        		                  + "where { "
-	         		                  + "?spatial rdfs:label ?pref . "	         		                  
-	         		                  + filterRegex
-	         		                  + " filter(langMatches(lang(?pref),'FR')) . "
-	         		                  + " filter(! regex(?pref, '^francais$', 'i' )) . "
-	        		                  + "?spatial geom:geometry ?node . "
-	         		                  + "?node ogc:asWKT ?geo ."
-	         		                //  + " Filter(bif:st_intersects (?geo, bif:st_point (48.8464021, 2.332417), 0.25)) . " //this does not work	         		                 
-	        		                  + "} ";
-									//OFFSET 50000 limit 50000 
+			String queryString = "SELECT ?item ?itemLabel WHERE {\n" +
+	                "  ?item wdt:P625 ?coord . \n" +
+	                "  ?item rdfs:label ?itemLabel .\n" +
+	               filterRegex +
+	                "  filter(langMatches(lang(?itemLabel),'FR')) .\n" +
+	                "} limit 10000";
+
 			logger.info(queryString);
-			logger.info("exiting LinkedGeoData: formulateSPARQLQueryString");
+			logger.info("exiting WikiData: formulateSPARQLQueryString");
 			return queryString;			
 		}		
 	}
 	
 	public ResultSet executeQuery(String queryString, String timeout, String sparqlendpoint, 
 			String outDictionnaireDir, String letter) {
-		try {
-			Thread.sleep(20000); //20 seconds
-			File fexists = new File(outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
-			if (fexists.exists() && fexists.length() > 0) {
-				System.out.println("entering LinkedGeoData: skip, file exists - "+outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
-				return null; //file exists, skip processing
-			} else {
-				logger.info("entering LinkedGeoData: executeQuery");			
-				QueryExecution vqe = new QueryEngineHTTP(SPARQL_END_POINT, queryString);
-				ResultSet results = vqe.execSelect();
-				results = ResultSetFactory.copyResults(results) ;		      
-				vqe.close();
-				logger.info("exiting LinkedGeoData: executeQuery");
-				return results;			
-			}
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+		File fexists = new File(outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
+		if (fexists.exists() && fexists.length() > 0) {
+			System.out.println("entering WikiData: skip, file exists - "+outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
+			return null; //file exists, skip processing
+		} else {
+			logger.info("entering WikiData: executeQuery");			
+			QueryExecution vqe = new QueryEngineHTTP(SPARQL_END_POINT, queryString);
+			ResultSet results = vqe.execSelect();
+			results = ResultSetFactory.copyResults(results) ;		      
+			vqe.close();
+			logger.info("exiting WikiData: executeQuery");
+			return results;			
 		}
-		return null;
 	}
 	
 	/**
@@ -119,10 +104,10 @@ public class QueryPlaceLinkedGeoData {
 		File fexists = new File(outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
 	
 		if (fexists.exists() && fexists.length() > 0) {
-			System.out.println("entering LinkedGeoData: skip, file exists - "+outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
+			System.out.println("entering WikiData: skip, file exists - "+outDictionnaireDir+"/"+prefixDictionnaireFile+letter+".tsv");
 			return; //file exists, skip processing
 		} else {
-			logger.info("entering LinkedGeoData: processResults");
+			logger.info("entering WikiData: processResults");
 			if (letter != null) {
 				prefixDictionnaireFile += letter;
 			}
@@ -138,16 +123,15 @@ public class QueryPlaceLinkedGeoData {
 			while (res.hasNext()) {
 				QuerySolution sol = res.next();
 				PlaceEntry tri = new PlaceEntry();
-				tri.setLabelstandard(sol.getLiteral("pref").getLexicalForm());
-				tri.setUri(sol.getResource("spatial").getURI());
-				tri.setLabelalternative(sol.getLiteral("pref").getLexicalForm());
+				tri.setLabelstandard(sol.getLiteral("itemLabel").getLexicalForm());
+				tri.setUri(sol.getResource("item").getURI());
 				places.add(tri);
 				
 			}
 			if (places != null) {
 				writeToFile(places, prefixDictionnaireFile, outDictionnaireDir);
 			}
-			logger.info("exiting LinkedGeoData: processResults");
+			logger.info("exiting WikiData: processResults");
 		}
 	}
 

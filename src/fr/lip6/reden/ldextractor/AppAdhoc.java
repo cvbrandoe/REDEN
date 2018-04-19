@@ -18,6 +18,7 @@ import org.apache.jena.query.ResultSet;
 
 import fr.lip6.reden.ldextractor.loc.QueryPlaceDBpedia;
 import fr.lip6.reden.ldextractor.loc.QueryPlaceLinkedGeoData;
+import fr.lip6.reden.ldextractor.loc.QueryPlaceWikiData;
 import fr.lip6.reden.ldextractor.per.QueryArtPersonalityGetty;
 import fr.lip6.reden.ldextractor.per.QueryAuthorBNE;
 import fr.lip6.reden.ldextractor.per.QueryAuthorBNEAll;
@@ -249,6 +250,30 @@ public class AppAdhoc
 					}
 					
 					//LGD 
+					String qdb = pl.formulateSPARQLQueryString(domainParams, letter, "");
+					ResultSet rsdbp = pl.executeQuery(qdb, pl.TIMEOUT.toString(), pl.SPARQL_END_POINT, "", "");
+					pl.processResults(rsdbp, outDictionnaireDir, letter, domainParams);
+					
+					counter++;
+				}
+			}
+			if (dicLabel.equalsIgnoreCase("wd-loc") || dicLabel.equalsIgnoreCase("all")) {
+				// QUERY PLACES IN Wikidata
+				counter = 0;
+				out = false;
+				while (counter < let.length && !out) {
+					QueryPlaceWikiData pl = new QueryPlaceWikiData();
+					Boolean lr = pl.LARGE_REPO;
+					
+					String letter = null;
+					if (!lr) {
+						out = true; //enters once
+					} else {
+						letter = let[counter];
+						logger.info("processing letter:" +letter);
+					}
+					
+					//Wikidata
 					String qdb = pl.formulateSPARQLQueryString(domainParams, letter, "");
 					ResultSet rsdbp = pl.executeQuery(qdb, pl.TIMEOUT.toString(), pl.SPARQL_END_POINT, "", "");
 					pl.processResults(rsdbp, outDictionnaireDir, letter, domainParams);
