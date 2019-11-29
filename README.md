@@ -1,5 +1,5 @@
 # REDEN
-Unsupervised graph-based tool for disambiguation and linking of named entities to Linked Data sets for digital editions in XML-TEI, it includes a Linked Data data extractor for building the dictionary of potential NE candidates
+Graph-based tool for disambiguation and linking of named entities to Linked Data sets for digital editions in XML-TEI, it includes a Linked Data data extractor for building the dictionary of potential NE candidates
 
 The main Java class to launch REDEN is fr.lip6.reden.MainNELApp.java, REDEN configuration file is located in config/config.properties, it should be properly configured before execution. There are two modes to launch REDEN 
 
